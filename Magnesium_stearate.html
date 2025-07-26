@@ -310,11 +310,19 @@ td {
 <div class="flex flex-col gap-2 justify-center items-center text-gray-700 text-sm mt-4">
     <div class="math-input-group">
         <label for="chlorideInput">نتیجه کلرید:</label>
-        <input class="math-input" id="chlorideInput" type="text" value="" onchange="updateCOAImpurityResult('chloride', this.value)">
+        <select class="math-input" id="chlorideInput" onchange="updateCOAImpurityResult('chloride', this.value)">
+            <option value="">---</option>
+            <option value="Pass">Pass</option>
+            <option value="Fail">Fail</option>
+        </select>
     </div>
     <div class="math-input-group">
         <label for="sulfateInput">نتیجه سولفات:</label>
-        <input class="math-input" id="sulfateInput" type="text" value="" onchange="updateCOAImpurityResult('sulfate', this.value)">
+        <select class="math-input" id="sulfateInput" onchange="updateCOAImpurityResult('sulfate', this.value)">
+            <option value="">---</option>
+            <option value="Pass">Pass</option>
+            <option value="Fail">Fail</option>
+        </select>
     </div>
 </div>
 </div>
@@ -490,7 +498,11 @@ td {
 <div class="flex flex-col gap-2 justify-center items-center text-gray-700 text-sm mt-4">
     <div class="math-input-group">
         <label for="microbialTestsInput">نتیجه آزمایشات میکروبی:</label>
-        <input class="math-input" id="microbialTestsInput" type="text" value="" onchange="updateCOAImpurityResult('microbialTests', this.value)">
+        <select class="math-input" id="microbialTestsInput" onchange="updateCOAImpurityResult('microbialTests', this.value)">
+            <option value="">---</option>
+            <option value="Pass">Pass</option>
+            <option value="Fail">Fail</option>
+        </select>
     </div>
 </div>
 </div>
@@ -501,7 +513,11 @@ td {
 <div class="flex flex-col gap-2 justify-center items-center text-gray-700 text-sm mt-4">
     <div class="math-input-group">
         <label for="acidityAlkalinityInput">نتیجه اسیدیته یا قلیائیت:</label>
-        <input class="math-input" id="acidityAlkalinityInput" type="text" value="" onchange="updateCOAImpurityResult('acidityAlkalinity', this.value)">
+        <select class="math-input" id="acidityAlkalinityInput" onchange="updateCOAImpurityResult('acidityAlkalinity', this.value)">
+            <option value="">---</option>
+            <option value="Pass">Pass</option>
+            <option value="Fail">Fail</option>
+        </select>
     </div>
 </div>
 </div>
@@ -512,7 +528,11 @@ td {
 <div class="flex flex-col gap-2 justify-center items-center text-gray-700 text-sm mt-4">
     <div class="math-input-group">
         <label for="specificSurfaceAreaInput">نتیجه مساحت سطح ویژه:</label>
-        <input class="math-input" id="specificSurfaceAreaInput" type="text" value="" onchange="updateCOAImpurityResult('specificSurfaceArea', this.value)">
+        <select class="math-input" id="specificSurfaceAreaInput" onchange="updateCOAImpurityResult('specificSurfaceArea', this.value)">
+            <option value="">---</option>
+            <option value="Pass">Pass</option>
+            <option value="Fail">Fail</option>
+        </select>
     </div>
 </div>
 </div>

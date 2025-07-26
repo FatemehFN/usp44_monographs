@@ -98,8 +98,8 @@ body {
 
 /* Specific styles for the COA section to help with rendering */
 #coa-content-to-pdf {
-    /* direction and text-align handled by JS for LTR */
-    /* Add some general padding/margin to ensure space around content */
+    direction: ltr; /* COA is LTR */
+    text-align: left; /* Default text alignment for LTR */
     padding: 1.5rem;
 }
 
@@ -116,7 +116,6 @@ body {
     word-spacing: normal;
     letter-spacing: normal;
     white-space: normal;
-    /* Ensure sufficient vertical space for text */
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
 }
@@ -124,45 +123,41 @@ body {
 /* Specific adjustments for input fields in the COA section */
 #coa-content-to-pdf input[type="text"],
 #coa-content-to-pdf input[type="date"] {
-    /* Increase vertical padding to give more internal space */
-    padding-top: 0.75rem; /* Increased from 0.5rem */
-    padding-bottom: 0.75rem; /* Increased from 0.5rem */
-    /* Ensure min-height to prevent squishing */
-    min-height: 2.8rem; /* A reasonable minimum height */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    min-height: 2.8rem;
+    box-sizing: border-box;
 }
 
 /* Adjustments for the input labels in the COA info section */
 .grid.grid-cols-1.md\:grid-cols-2.gap-4.mb-6.text-gray-700.text-sm .flex.items-center.gap-2 {
-    /* Ensure flex items distribute space correctly */
-    align-items: flex-start; /* Align labels and inputs at the top of their row */
+    align-items: flex-start;
 }
 
 /* Adjustments for the signature inputs */
 .grid.grid-cols-1.md\:grid-cols-3.gap-4.mb-6.text-gray-700.text-sm .flex.flex-col.items-center {
-    /* Ensure enough space for the label and input field */
-    min-height: 5rem; /* Give adequate height for both label and input */
-    justify-content: flex-start; /* Align content to the top */
+    min-height: 5rem;
+    justify-content: flex-start;
 }
 .grid.grid-cols-1.md\:grid-cols-3.gap-4.mb-6.text-gray-700.text-sm input[type="text"] {
-    min-height: 2.8rem; /* Consistent height for signature inputs */
+    min-height: 2.8rem;
 }
 
 /* For table cells, add more padding to avoid text touching borders */
 #coa-results-table-body td, #coa-results-table-body th {
-    padding-top: 0.75rem; /* Increased vertical padding */
-    padding-bottom: 0.75rem; /* Increased vertical padding */
-    box-sizing: border-box; /* Ensure padding is included in element's total dimensions */
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    box-sizing: border-box;
 }
 
 /* Remove internal borders from COA table cells */
 #coa-content-to-pdf table th {
     border: none;
-    padding-top: 1rem;       /* Increase vertical padding */
+    padding-top: 1rem;
     padding-bottom: 1rem;
     font-size: 0.95rem;
-    font-weight: 700;        /* Make it bold */
-    background-color: #e5e7eb; /* Slightly darker gray than #f3f4f6 */
+    font-weight: 700;
+    background-color: #e5e7eb;
 }
 
 #coa-content-to-pdf table td {
@@ -279,11 +274,19 @@ body {
 <div class="flex flex-col gap-2 justify-center items-center text-gray-700 text-sm mt-4">
     <div class="math-input-group">
         <label for="chlorideInput">نتیجه کلرید:</label>
-        <input class="math-input" id="chlorideInput" type="text" value="" onchange="updateCOAImpurityResult('chloride', this.value)">
+        <select class="math-input" id="chlorideInput" onchange="updateCOAImpurityResult('chloride', this.value)">
+            <option value="">---</option>
+            <option value="Pass">Pass</option>
+            <option value="Fail">Fail</option>
+        </select>
     </div>
     <div class="math-input-group">
         <label for="sulfateInput">نتیجه سولفات:</label>
-        <input class="math-input" id="sulfateInput" type="text" value="" onchange="updateCOAImpurityResult('sulfate', this.value)">
+        <select class="math-input" id="sulfateInput" onchange="updateCOAImpurityResult('sulfate', this.value)">
+            <option value="">---</option>
+            <option value="Pass">Pass</option>
+            <option value="Fail">Fail</option>
+        </select>
     </div>
 </div>
 </div>
@@ -293,7 +296,11 @@ body {
 <div class="flex flex-col gap-2 justify-center items-center text-gray-700 text-sm mt-4">
     <div class="math-input-group">
         <label for="arsenicInput">نتیجه آرسنیک:</label>
-        <input class="math-input" id="arsenicInput" type="text" value="" onchange="updateCOAImpurityResult('arsenic', this.value)">
+        <select class="math-input" id="arsenicInput" onchange="updateCOAImpurityResult('arsenic', this.value)">
+            <option value="">---</option>
+            <option value="Pass">Pass</option>
+            <option value="Fail">Fail</option>
+        </select>
     </div>
 </div>
 </div>
@@ -306,7 +313,11 @@ body {
 <div class="flex flex-col gap-2 justify-center items-center text-gray-700 text-sm mt-4">
     <div class="math-input-group">
         <label for="ironInput">نتیجه آهن:</label>
-        <input class="math-input" id="ironInput" type="text" value="" onchange="updateCOAImpurityResult('iron', this.value)">
+        <select class="math-input" id="ironInput" onchange="updateCOAImpurityResult('iron', this.value)">
+            <option value="">---</option>
+            <option value="Pass">Pass</option>
+            <option value="Fail">Fail</option>
+        </select>
     </div>
 </div>
 </div>
@@ -359,7 +370,11 @@ body {
 <div class="flex flex-col gap-2 justify-center items-center text-gray-700 text-sm mt-4">
     <div class="math-input-group">
         <label for="pHInput">نتیجه pH:</label>
-        <input class="math-input" id="pHInput" type="text" value="" onchange="updateCOAImpurityResult('pH', this.value)">
+        <select class="math-input" id="pHInput" onchange="updateCOAImpurityResult('pH', this.value)">
+            <option value="">---</option>
+            <option value="Pass">Pass</option>
+            <option value="Fail">Fail</option>
+        </select>
     </div>
 </div>
 </div>
@@ -507,7 +522,7 @@ function updateCOATab() {
             let valueContent;
             let valueClass = ''; // Initialize valueClass
 
-            // Check if the field is user-editable (initial status or previously user-entered)
+            // Determine content and class based on status
             if (resultData.status === 'initial' || resultData.status === 'user-entered') {
                 valueContent = resultData.value; // Display the raw value from calculationResults
                 valueClass = 'text-gray-700'; // Default text color for editable input
@@ -625,7 +640,7 @@ window.exportCOAPDF = function() {
         exportButton.style.display = 'none';
     }
 
-    document.fonts.ready.then(() => {
+    document.fonts.ready().then(() => {
         html2canvas(element, {
             scale: 3, // Increased scale for higher resolution
             logging: true,

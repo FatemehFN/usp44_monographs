@@ -52,7 +52,6 @@ td {
 }
 
 /* Specific override for the results column in COA */
-/* This is now the default for RTL, but explicit for clarity */
 #coa-results-table-body td:last-child {
     text-align: left !important; /* Align results content to the left, important for override */
     direction: ltr; /* Ensure LTR for numbers/results */
@@ -104,8 +103,8 @@ td {
 
 /* Specific styles for the COA section to help with rendering */
 #coa-content-to-pdf {
-    direction: rtl; /* Explicitly set for the capture area */
-    text-align: right; /* Default text alignment for RTL */
+    direction: ltr; /* COA is LTR */
+    text-align: left; /* Default text alignment for LTR */
     padding: 1.5rem;
 }
 
@@ -173,6 +172,22 @@ td {
 /* Ensure the table itself has collapsed borders */
 #coa-content-to-pdf table {
     border-collapse: collapse;
+}
+
+/* Specific LTR styles for the COA tab's table */
+#coa-content-to-pdf table {
+    direction: ltr; /* Ensure the entire table is LTR */
+    text-align: left; /* Align general table content to left */
+}
+
+#coa-content-to-pdf table thead th {
+    text-align: left; /* Align headers to the left within LTR table */
+    direction: ltr; /* Explicitly set LTR for headers */
+}
+
+#coa-results-table-body td {
+    text-align: left; /* Align body cells to the left within LTR table */
+    direction: ltr; /* Explicitly set LTR for body cells */
 }
 
 </style>
@@ -292,7 +307,11 @@ td {
 <div class="flex flex-col gap-2 justify-center items-center text-gray-700 text-sm mt-4">
     <div class="math-input-group">
         <label for="arsenicInput">نتیجه آرسنیک:</label>
-        <input class="math-input" id="arsenicInput" type="text" value="" onchange="updateCOAImpurityResult('arsenic', this.value)">
+        <select class="math-input" id="arsenicInput" onchange="updateCOAImpurityResult('arsenic', this.value)">
+            <option value="">---</option>
+            <option value="Pass">Pass</option>
+            <option value="Fail">Fail</option>
+        </select>
     </div>
 </div>
 </div>
@@ -305,7 +324,11 @@ td {
 <div class="flex flex-col gap-2 justify-center items-center text-gray-700 text-sm mt-4">
     <div class="math-input-group">
         <label for="leadInput">نتیجه سرب:</label>
-        <input class="math-input" id="leadInput" type="text" value="" onchange="updateCOAImpurityResult('lead', this.value)">
+        <select class="math-input" id="leadInput" onchange="updateCOAImpurityResult('lead', this.value)">
+            <option value="">---</option>
+            <option value="Pass">Pass</option>
+            <option value="Fail">Fail</option>
+        </select>
     </div>
 </div>
 </div>
@@ -351,7 +374,11 @@ td {
 <div class="flex flex-col gap-2 justify-center items-center text-gray-700 text-sm mt-4">
     <div class="math-input-group">
         <label for="acidInsolubleInput">نتیجه مواد نامحلول در اسید:</label>
-        <input class="math-input" id="acidInsolubleInput" type="text" value="" onchange="updateCOAImpurityResult('acidInsoluble', this.value)">
+        <select class="math-input" id="acidInsolubleInput" onchange="updateCOAImpurityResult('acidInsoluble', this.value)">
+            <option value="">---</option>
+            <option value="Pass">Pass</option>
+            <option value="Fail">Fail</option>
+        </select>
     </div>
 </div>
 </div>
@@ -410,46 +437,46 @@ td {
 
 <div id="coa" class="tab-content hidden space-y-8">
 <div class="card">
-<h2 class="text-2xl font-bold mb-4 text-gray-800">گواهی تجزیه و تحلیل (COA)</h2>
-<p class="text-gray-600 mb-6">این بخش نتایج آزمایشات و محاسبات انجام شده طبق مونوگراف را خلاصه می‌کند.</p>
+<h2 class="text-2xl font-bold mb-4 text-gray-800">Certificate of Analysis (COA)</h2>
+<p class="text-gray-600 mb-6">This section summarizes the results of tests and calculations performed according to the monograph.</p>
 </div>
-<div class="card" id="coa-content-to-pdf" dir="rtl">
-<h3 class="text-xl font-bold mb-4">اطلاعات محصول</h3>
+<div class="card" id="coa-content-to-pdf" dir="ltr">
+<h3 class="text-xl font-bold mb-4">Product Information</h3>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 text-gray-700 text-sm">
 <div class="flex items-center gap-2">
-<label for="coaProductName" class="font-bold">نام محصول:</label>
-<span id="coaProductNameDisplay" class="w-full p-2 border border-gray-300 rounded-md bg-gray-100 text-gray-700">سیترات کلسیم</span>
+<label for="coaProductName" class="font-bold">Product Name:</label>
+<span id="coaProductNameDisplay" class="w-full p-2 border border-gray-300 rounded-md bg-gray-100 text-gray-700">Calcium Citrate</span>
 </div>
 <div class="flex items-center gap-2">
-<label for="coaBatchNumber" class="font-bold">شماره بچ:</label>
+<label for="coaBatchNumber" class="font-bold">Batch Number:</label>
 <input type="text" id="coaBatchNumber" class="w-full p-2 border border-gray-300 rounded-md" value="">
 </div>
 <div class="flex items-center gap-2">
-<label for="coaMfgDate" class="font-bold">تاریخ تولید:</label>
+<label for="coaMfgDate" class="font-bold">Mfg. Date:</label>
 <input type="date" id="coaMfgDate" class="w-full p-2 border border-gray-300 rounded-md" value="">
 </div>
 <div class="flex items-center gap-2">
-<label for="coaProductCode" class="font-bold">کد محصول:</label>
+<label for="coaProductCode" class="font-bold">Product Code:</label>
 <input type="text" id="coaProductCode" class="w-full p-2 border border-gray-300 rounded-md" value="">
 </div>
 <div class="flex items-center gap-2">
-<label for="coaRetestDate" class="font-bold">تاریخ آزمایش مجدد:</label>
+<label for="coaRetestDate" class="font-bold">Retest Date:</label>
 <input type="date" id="coaRetestDate" class="w-full p-2 border border-gray-300 rounded-md" value="">
 </div>
 <div class="flex items-center gap-2">
-<label for="coaAnalysisNumber" class="font-bold">شماره آنالیز:</label>
+<label for="coaAnalysisNumber" class="font-bold">Analysis Number:</label>
 <input type="text" id="coaAnalysisNumber" class="w-full p-2 border border-gray-300 rounded-md" value="">
 </div>
 </div>
 
-<h3 class="text-xl font-bold mb-4">نتایج آزمایش</h3>
+<h3 class="text-xl font-bold mb-4">Test Results</h3>
 <div class="overflow-x-auto mb-6">
 <table class="min-w-full bg-white border border-gray-200">
 <thead class="bg-gray-100">
 <tr>
-<th class="py-3 px-4 font-bold text-sm text-gray-600 uppercase tracking-wider text-right">آزمایش‌ها</th>
-<th class="py-3 px-4 font-bold text-sm text-gray-600 uppercase tracking-wider text-right">مشخصات (USP)</th>
-<th class="py-3 px-4 font-bold text-sm text-gray-600 uppercase tracking-wider text-left">نتایج</th>
+<th class="py-3 px-4 font-bold text-sm text-gray-600 uppercase tracking-wider text-left">Tests</th>
+<th class="py-3 px-4 font-bold text-sm text-gray-600 uppercase tracking-wider text-left">Specification (USP)</th>
+<th class="py-3 px-4 font-bold text-sm text-gray-600 uppercase tracking-wider text-left">Results</th>
 </tr>
 </thead>
 <tbody id="coa-results-table-body">
@@ -457,24 +484,24 @@ td {
 </table>
 </div>
 
-<h3 class="text-xl font-bold mb-4">امضاها</h3>
+<h3 class="text-xl font-bold mb-4">Signatures</h3>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 text-gray-700 text-sm">
 <div class="flex flex-col items-center">
-<label for="coaAnalyst" class="font-bold mb-1">آنالیزور:</label>
+<label for="coaAnalyst" class="font-bold mb-1">Analyst:</label>
 <input type="text" id="coaAnalyst" class="w-full p-2 border border-gray-300 rounded-md text-center" value="">
 </div>
 <div class="flex flex-col items-center">
-<label for="coaSupervisor" class="font-bold mb-1">سرپرست آزمایشگاه QC:</label>
+<label for="coaSupervisor" class="font-bold mb-1">QC Lab Supervisor:</label>
 <input type="text" id="coaSupervisor" class="w-full p-2 border border-gray-300 rounded-md text-center" value="">
 </div>
 <div class="flex flex-col items-center">
-<label for="coaQCManager" class="font-bold mb-1">مدیر QC:</label>
+<label for="coaQCManager" class="font-bold mb-1">QC Manager:</label>
 <input type="text" id="coaQCManager" class="w-full p-2 border border-gray-300 rounded-md text-center" value="">
 </div>
 </div>
 
 <div class="flex justify-center">
-<button onclick="exportCOAPDF()" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded mt-4">ذخیره COA به صورت PDF</button>
+<button onclick="exportCOAPDF()" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded mt-4">Save COA as PDF</button>
 </div>
 </div>
 </div>
@@ -484,12 +511,12 @@ td {
 <script>
 // Object to store calculation results for COA
 let calculationResults = {
-    assay: { label: 'سنجش', value: '--', unit: '%', status: 'initial', spec: '97.5%-100.5%' },
-    arsenic: { label: 'آرسنیک', value: '', unit: '', status: 'initial', spec: 'NMT 3 ppm' },
-    lead: { label: 'سرب', value: '', unit: '', status: 'initial', spec: 'NMT 10 ppm' },
-    limitOfFluoride: { label: 'حد فلوراید', value: '--', unit: '%', status: 'initial', spec: 'NMT 0.003%' },
-    acidInsoluble: { label: 'مواد نامحلول در اسید', value: '', unit: '', status: 'initial', spec: 'NMT 10 mg (0.2%)' },
-    lod: { label: 'افت وزن در اثر خشک شدن (LOD)', value: '--', unit: '%', status: 'initial', spec: '10.0%-13.3%' },
+    assay: { label: 'Assay', value: '--', unit: '%', status: 'initial', spec: '97.5%-100.5%' },
+    arsenic: { label: 'Arsenic', value: '', unit: '', status: 'initial', spec: 'NMT 3 ppm' },
+    lead: { label: 'Lead', value: '', unit: '', status: 'initial', spec: 'NMT 10 ppm' },
+    limitOfFluoride: { label: 'Limit of Fluoride', value: '--', unit: '%', status: 'initial', spec: 'NMT 0.003%' },
+    acidInsoluble: { label: 'Acid-Insoluble Substances', value: '', unit: '', status: 'initial', spec: 'NMT 10 mg (0.2%)' },
+    lod: { label: 'Loss on Drying (LOD)', value: '--', unit: '%', status: 'initial', spec: '10.0%-13.3%' },
 };
 
 // Function to update the COA tab content dynamically
@@ -506,7 +533,7 @@ function updateCOATab() {
             let valueContent;
             let valueClass = ''; // Initialize valueClass
 
-            // Check if the field is user-editable (initial status or previously user-entered)
+            // Determine content and class based on status
             if (resultData.status === 'initial' || resultData.status === 'user-entered') {
                 valueContent = resultData.value; // Display the raw value from calculationResults
                 valueClass = 'text-gray-700'; // Default text color for editable input
@@ -521,7 +548,7 @@ function updateCOATab() {
             tableRow.innerHTML = `
                 <td class="py-2 px-3">${resultData.label}</td>
                 <td class="py-2 px-3">${resultData.spec}</td>
-                <td class="py-2 px-3 font-bold ${valueClass}" dir="ltr">
+                <td class="py-2 px-3 font-bold ${valueClass}">
                     <span style="display: inline-block; width: 100%; text-align: left;">
                         ${valueContent}
                     </span>
@@ -645,7 +672,7 @@ window.exportCOAPDF = function() {
         exportButton.style.display = 'none';
     }
 
-    document.fonts.ready.then(() => {
+    document.fonts.ready().then(() => {
         html2canvas(element, {
             scale: 3, // Increased scale for higher resolution
             logging: true,
