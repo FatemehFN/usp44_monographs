@@ -1,0 +1,806 @@
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مونوگراف آدیپیک اسید (USP)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- Include FileSaver.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+            word-spacing: normal;
+            letter-spacing: normal;
+        }
+        .tab-active { border-color: #3b82f6; color: #3b82f6; background-color: #eff6ff; }
+        .tab-inactive { border-color: transparent; color: #6b7280; }
+        .chart-container { position: relative; width: 100%; max-width: 800px; margin-right: auto; margin-left: auto; height: 350px; max-height: 40vh; }
+        table {
+            direction: rtl;
+            text-align: right;
+        }
+        th {
+            text-align: right;
+            vertical-align: top;
+        }
+        td {
+            text-align: right;
+            vertical-align: middle;
+        }
+
+        /* Ensure vertical alignment for all headers in COA table */
+        #coa-content-to-pdf table thead th {
+            vertical-align: top !important;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            padding: 1.5rem;
+            line-height: inherit;
+            word-spacing: inherit;
+            letter-spacing: inherit;
+            white-space: normal;
+        }
+        .ltr-text {
+            direction: ltr;
+            display: inline-block;
+            unicode-bidi: isolate;
+        }
+        .math-input {
+            appearance: none;
+            -moz-appearance: textfield;
+            padding: 0.5rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.375rem;
+            width: 100px;
+            text-align: left;
+            direction: ltr;
+        }
+        .math-input-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        #coa-content-to-pdf {
+            direction: ltr;
+            text-align: left;
+            padding: 1.5rem;
+        }
+        #coa-content-to-pdf p,
+        #coa-content-to-pdf h1,
+        #coa-content-to-pdf h2,
+        #coa-content-to-pdf h3,
+        #coa-content-to-pdf th,
+        #coa-content-to-pdf td,
+        #coa-content-to-pdf label {
+            font-family: 'Vazirmatn', sans-serif;
+            line-height: 1.6;
+            word-spacing: normal;
+            letter-spacing: normal;
+            white-space: normal;
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem;
+        }
+        #coa-content-to-pdf input[type="text"],
+        #coa-content-to-pdf input[type="date"] {
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            min-height: 2.8rem;
+            box-sizing: border-box;
+        }
+        .grid.grid-cols-1.md\:grid-cols-2.gap-4.mb-6.text-gray-700.text-sm .flex.items-center.gap-2 {
+            align-items: flex-start;
+        }
+        .grid.grid-cols-1.md\:grid-cols-3.gap-4.mb-6.text-gray-700.text-sm .flex.flex-col.items-center {
+            min-height: 5rem;
+            justify-content: flex-start;
+        }
+        .grid.grid-cols-1.md\:grid-cols-3.gap-4.mb-6.text-gray-700.text-sm input[type="text"] {
+            min-height: 2.8rem;
+        }
+        #coa-results-table-body td, #coa-results-table-body th {
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            box-sizing: border-box;
+        }
+        #coa-content-to-pdf table th {
+            border: none;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            font-size: 0.95rem;
+            font-weight: 700;
+            background-color: #e5e7eb;
+        }
+        #coa-content-to-pdf table td {
+            border: none;
+        }
+        #coa-content-to-pdf table {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900">مونوگراف آدیپیک اسید (USP)</h1>
+            <p class="mt-2 text-lg text-gray-600">بررسی مشخصات دارویی طبق مونوگراف USP</p>
+        </header>
+
+        <nav class="mb-8 bg-white p-2 rounded-xl shadow-sm">
+            <div class="flex justify-center border-b border-gray-200 flex-wrap">
+                <button data-tab="definition" class="tab-button text-sm md:text-base font-medium py-3 px-4 md:px-6 border-b-2 tab-active">تعریف</button>
+                <button data-tab="identification" class="tab-button text-sm md:text-base font-medium py-3 px-4 md:px-6 border-b-2 tab-inactive">شناسایی</button>
+                <button data-tab="assay" class="tab-button text-sm md:text-base font-medium py-3 px-4 md:px-6 border-b-2 tab-inactive">سنجش</button>
+                <button data-tab="impurities" class="tab-button text-sm md:text-base font-medium py-3 px-4 md:px-6 border-b-2 tab-inactive">ناخالصی‌ها</button>
+                <button data-tab="specific-tests" class="tab-button text-sm md:text-base font-medium py-3 px-4 md:px-6 border-b-2 tab-inactive">آزمایشات خاص</button>
+                <button data-tab="additional-requirements" class="tab-button text-sm md:text-base font-medium py-3 px-4 md:px-6 border-b-2 tab-inactive">الزامات اضافی</button>
+                <button data-tab="moa" class="tab-button text-sm md:text-base font-medium py-3 px-4 md:px-6 border-b-2 tab-inactive">MOA</button>
+                <button data-tab="coa" class="tab-button text-sm md:text-base font-medium py-3 px-4 md:px-6 border-b-2 tab-inactive">COA</button>
+            </div>
+        </nav>
+
+        <main>
+            <div id="definition" class="tab-content space-y-8">
+                <div class="card">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-800">تعریف آدیپیک اسید</h2>
+                    <p class="text-gray-600 mb-6">آدیپیک اسید حاوی حداقل <span class="ltr-text">99.0%</span> و حداکثر <span class="ltr-text">101.0%</span> از <span class="ltr-text">$C_{6}H_{10}O_{4}$</span>، محاسبه شده بر اساس ماده خشک است.</p>
+                    <p class="text-gray-700 mt-4">نام شیمیایی: هگزان‌دیوئیک اسید؛ <span class="ltr-text">1,4-Butanedicarboxylic acid [124-04-9]</span>.</p>
+                    <p class="text-gray-700">فرمول شیمیایی: <span class="ltr-text">$C_{6}H_{10}O_{4}$</span></p>
+                    <p class="text-gray-700">وزن مولکولی: <span class="ltr-text">146.14</span></p>
+                </div>
+            </div>
+
+            <div id="identification" class="tab-content hidden space-y-8">
+                <div class="card">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-800">شناسایی</h2>
+                    <p class="text-gray-600 mb-6">این بخش شامل معیارهای شناسایی آدیپیک اسید است.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4">A. آزمایشات شناسایی طیف‌سنجی (<a href="General chapters/〈197〉 SPECTROSCOPIC IDENTIFICATION TESTS.pdf" class="text-blue-600 hover:underline" target="_blank">197</a>)، طیف‌سنجی فروسرخ:</h3>
+                    <p class="text-gray-700">معیار پذیرش: <span class="ltr-text">197K</span></p>
+                    <div class="flex flex-col gap-2 justify-center items-center text-gray-700 text-sm mt-4">
+                        <div class="math-input-group">
+                            <label for="irIdentificationInput">نتیجه شناسایی IR:</label>
+                            <select class="math-input" id="irIdentificationInput" onchange="updateCOAImpurityResult('irIdentification', this.value)">
+                                <option value="">---</option>
+                                <option value="Pass">Pass</option>
+                                <option value="Fail">Fail</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="assay" class="tab-content hidden space-y-8">
+                <div class="card">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-800">سنجش</h2>
+                    <p class="text-gray-600 mb-6">این بخش جزئیات روش سنجش برای تعیین مقدار آدیپیک اسید (<span class="ltr-text">$C_{6}H_{10}O_{4}$</span>) را توضیح می‌دهد. می‌توانید مقادیر را برای محاسبه درصد وارد کنید.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4">روش کار:</h3>
+                    <p class="text-gray-700 mb-4">نمونه: <span class="ltr-text">60 mg</span></p>
+                    <p class="text-gray-700 mb-2"><span class="font-bold">سیستم تیترسنجی:</span> (به تیترسنجی (<a href="General chapters/〈541〉 TITRIMETRY.pdf" class="text-blue-600 hover:underline" target="_blank">541</a>) مراجعه کنید.)</p>
+                    <ul class="list-circle list-inside ml-5">
+                        <li>حالت: تیترسنجی مستقیم</li>
+                        <li>تیترانت: <span class="ltr-text">0.1 N</span> هیدروکسید سدیم <span class="ltr-text">VS</span></li>
+                        <li>بلانک: <span class="ltr-text">50.0 mL</span> آب</li>
+                        <li>تشخیص نقطه پایانی: رنگ‌سنجی</li>
+                    </ul>
+                    <p class="text-gray-700 mb-4"><span class="font-bold">تجزیه و تحلیل:</span> نمونه را در <span class="ltr-text">50 mL</span> آب حل کنید. <span class="ltr-text">0.2 mL</span> از <span class="ltr-text">TS</span> فنل‌فتالئین را اضافه کنید و با <span class="ltr-text">0.1 N</span> هیدروکسید سدیم <span class="ltr-text">VS</span> تا نقطه پایانی صورتی کم‌رنگ دائمی تیتر کنید. تعیین بلانک را انجام دهید. درصد آدیپیک اسید (<span class="ltr-text">$C_{6}H_{10}O_{4}$</span>) را در نمونه گرفته شده محاسبه کنید:</p>
+                    <p class="font-mono text-center text-lg mb-4">$$Result = [(V-B) \times N \times F \times 100] / W$$</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1 mb-6">
+                        <li>$V$ = حجم تیترانت مصرفی توسط نمونه (<span class="ltr-text">mL</span>)</li>
+                        <li>$B$ = حجم تیترانت مصرفی توسط بلانک (<span class="ltr-text">mL</span>)</li>
+                        <li>$N$ = نرمالیته واقعی تیترانت (<span class="ltr-text">mEq/mL</span>)</li>
+                        <li>$F$ = فاکتور معادل، <span class="ltr-text">73.1 mg/mEq</span></li>
+                        <li>$W$ = وزن نمونه (<span class="ltr-text">mg</span>)</li>
+                    </ul>
+                    <div class="flex flex-col gap-2 justify-center items-center text-gray-700 text-sm">
+                        <div class="math-input-group">
+                            <label for="assayV">\(V\):</label>
+                            <input class="math-input" id="assayV" type="number" value="">
+                        </div>
+                        <div class="math-input-group">
+                            <label for="assayB">\(B\):</label>
+                            <input class="math-input" id="assayB" type="number" value="">
+                        </div>
+                        <div class="math-input-group">
+                            <label for="assayN">\(N\):</label>
+                            <input class="math-input" id="assayN" type="number" value="">
+                        </div>
+                        <div class="math-input-group">
+                            <label for="assayF">\(F\):</label>
+                            <input class="math-input" id="assayF" type="number" value="73.1" readonly>
+                        </div>
+                        <div class="math-input-group">
+                            <label for="assayW">\(W\):</label>
+                            <input class="math-input" id="assayW" type="number" value="60" readonly>
+                        </div>
+                        <button onclick="calculateAssay()" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded mt-4">محاسبه سنجش</button>
+                    </div>
+                    <div class="text-center mt-4">
+                        <p class="text-gray-700">نتیجه سنجش: <span id="assayResult" class="font-bold text-blue-700">--</span>%</p>
+                    </div>
+                    <p class="text-gray-700 mt-4">معیار پذیرش: <span class="ltr-text">99.0%-101.0%</span> بر اساس ماده خشک.</p>
+                </div>
+            </div>
+
+            <div id="impurities" class="tab-content hidden space-y-8">
+                <div class="card">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-800">ناخالصی‌ها</h2>
+                    <p class="text-gray-600 mb-6">این بخش شامل آزمایشات مربوط به ناخالصی‌ها در آدیپیک اسید است.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="card">
+                        <h3 class="text-xl font-bold mb-4">باقی‌مانده پس از احتراق (<a href="General chapters/〈281〉 RESIDUE ON IGNITION.pdf" class="text-blue-600 hover:underline" target="_blank">281</a>)</h3>
+                        <p class="text-gray-700">معیار پذیرش: <span class="ltr-text">NMT 0.1%</span></p>
+                        <div class="flex flex-col gap-2 justify-center items-center text-gray-700 text-sm mt-4">
+                            <div class="math-input-group">
+                                <label for="roiInput">نتیجه باقی‌مانده پس از احتراق:</label>
+                                <select class="math-input" id="roiInput" onchange="updateCOAImpurityResult('residueOnIgnition', this.value)">
+                                    <option value="">---</option>
+                                    <option value="Pass">Pass</option>
+                                    <option value="Fail">Fail</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold mb-4">حد نیترات‌ها</h3>
+                        <p class="text-gray-700 mb-2"><span class="font-bold">محلول ذخیره استاندارد:</span> <span class="ltr-text">1.63 mg/mL</span> نیترات پتاسیم</p>
+                        <p class="text-gray-700 mb-2"><span class="font-bold">محلول استاندارد:</span> <span class="ltr-text">1 mL</span> از محلول ذخیره استاندارد را با آب تا <span class="ltr-text">10 mL</span> رقیق کنید. <span class="ltr-text">1 mL</span> از این محلول را با آب تا <span class="ltr-text">50 mL</span> رقیق کنید تا محلولی حاوی <span class="ltr-text">2 µg/mL</span> نیترات به دست آید. تمام محلول‌های نیترات را در ظروف پلاستیکی تهیه و نگهداری کنید.</p>
+                        <p class="text-gray-700 mb-2"><span class="font-bold">محلول نمونه:</span> <span class="ltr-text">5 g</span> آدیپیک اسید را به یک فلاسک حجمی <span class="ltr-text">50-mL</span> منتقل کنید. در آب، با حرارت دادن، حل کنید و با آب به حجم برسانید. اجازه دهید خنک شود و بلوری شود، سپس از یک فیلتر شیشه‌ای سینتر شده عبور دهید. فیلتر را با آب بشویید و فیلتر و شستشوها را جمع‌آوری کنید تا حجم <span class="ltr-text">50 mL</span> به دست آید. [توجه—این محلول برای کلرید، سولفات و آهن نیز استفاده می‌شود.]</p>
+                        <p class="text-gray-700 mb-2"><span class="font-bold">کنترل:</span> <span class="ltr-text">2 mg/L</span> پرمنگنات پتاسیم</p>
+                        <p class="text-gray-700 mb-4"><span class="font-text">تجزیه و تحلیل:</span> <span class="ltr-text">1.0 mL</span> از محلول نمونه، <span class="ltr-text">1.5 mL</span> از محلول استاندارد و <span class="ltr-text">1 mL</span> آب (بلانک) را به سه فلاسک جداگانه منتقل کنید. به هر فلاسک <span class="ltr-text">2 mL</span> آمونیاک غلیظ، <span class="ltr-text">0.5 mL</span> سولفات منگنز <span class="ltr-text">10 mg/mL</span> و <span class="ltr-text">1 mL</span> سولفانیل‌آمید <span class="ltr-text">0 mg/mL</span> را اضافه کنید و هر محلول را با آب تا <span class="ltr-text">20 mL</span> رقیق کنید. <span class="ltr-text">100 mg</span> پودر روی را به هر سه فلاسک اضافه کنید و به مدت <span class="ltr-text">30 min</span> در حمام یخ خنک کنید، محلول‌ها را به صورت دوره‌ای تکان دهید. به صورت جداگانه <span class="ltr-text">10 mL</span> از هر محلول را فیلتر کنید، در حمام یخ خنک کنید، سپس <span class="ltr-text">2.5 mL</span> اسید کلریدریک و <span class="ltr-text">1 mL</span> دی‌هیدروکلرید نفتیل‌اتیلن‌دی‌آمین <span class="ltr-text">10 mg/mL</span> را اضافه کنید. اجازه دهید محلول‌ها به مدت <span class="ltr-text">15 min</span> در دمای اتاق بمانند. مناسب بودن سیستم: آزمایش نامعتبر است اگر محلول بلانک تهیه شده همزمان تیره‌تر از کنترل باشد.</p>
+                        <p class="text-gray-700 mt-4">معیار پذیرش: رنگ محلول حاوی محلول نمونه تیره‌تر از محلول تهیه شده همزمان حاوی محلول استاندارد (<span class="ltr-text">NMT 30 ppm</span>) نیست.</p>
+                        <div class="flex flex-col gap-2 justify-center items-center text-gray-700 text-sm mt-4">
+                            <div class="math-input-group">
+                                <label for="nitratesInput">نتیجه حد نیترات‌ها:</label>
+                                <select class="math-input" id="nitratesInput" onchange="updateCOAImpurityResult('nitrates', this.value)">
+                                    <option value="">---</option>
+                                    <option value="Pass">Pass</option>
+                                    <option value="Fail">Fail</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold mb-4">کلرید و سولفات، کلرید (<a href="General chapters/〈221〉 CHLORIDE AND SULFATE.pdf" class="text-blue-600 hover:underline" target="_blank">221</a>)</h3>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>نمونه: یک بخش <span class="ltr-text">5-mL</span> از محلول نمونه از حد نیترات‌ها.</li>
+                            <li>تجزیه و تحلیل: طبق دستورالعمل فصل عمل کنید.</li>
+                            <li>معیار پذیرش: نمونه بیش از کلرید معادل <span class="ltr-text">0.14-mL</span> اسید کلریدریک <span class="ltr-text">0.020 N</span> (<span class="ltr-text">NMT 0.02%</span>) را نشان نمی‌دهد.</li>
+                        </ul>
+                        <div class="flex flex-col gap-2 justify-center items-center text-gray-700 text-sm mt-4">
+                            <div class="math-input-group">
+                                <label for="chlorideInput">نتیجه کلرید:</label>
+                                <select class="math-input" id="chlorideInput" onchange="updateCOAImpurityResult('chloride', this.value)">
+                                    <option value="">---</option>
+                                    <option value="Pass">Pass</option>
+                                    <option value="Fail">Fail</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold mb-4">کلرید و سولفات، سولفات (<a href="General chapters/〈221〉 CHLORIDE AND SULFATE.pdf" class="text-blue-600 hover:underline" target="_blank">221</a>)</h3>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>نمونه: یک بخش <span class="ltr-text">5-mL</span> از محلول نمونه از حد نیترات‌ها.</li>
+                            <li>تجزیه و تحلیل: طبق دستورالعمل فصل عمل کنید.</li>
+                            <li>معیار پذیرش: نمونه بیش از سولفات معادل <span class="ltr-text">0.26-mL</span> اسید سولفوریک <span class="ltr-text">0.020 N</span> (<span class="ltr-text">NMT 0.05%</span>) را نشان نمی‌دهد.</li>
+                        </ul>
+                        <div class="flex flex-col gap-2 justify-center items-center text-gray-700 text-sm mt-4">
+                            <div class="math-input-group">
+                                <label for="sulfateInput">نتیجه سولفات:</label>
+                                <select class="math-input" id="sulfateInput" onchange="updateCOAImpurityResult('sulfate', this.value)">
+                                    <option value="">---</option>
+                                    <option value="Pass">Pass</option>
+                                    <option value="Fail">Fail</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold mb-4">آهن (<a href="General chapters/〈241〉 IRON.pdf" class="text-blue-600 hover:underline" target="_blank">241</a>)</h3>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>نمونه: یک بخش <span class="ltr-text">10-mL</span> از محلول نمونه از حد نیترات‌ها.</li>
+                            <li>تجزیه و تحلیل: طبق دستورالعمل فصل عمل کنید.</li>
+                            <li>معیار پذیرش: <span class="ltr-text">NMT 10 ppm</span></li>
+                        </ul>
+                        <div class="flex flex-col gap-2 justify-center items-center text-gray-700 text-sm mt-4">
+                            <div class="math-input-group">
+                                <label for="ironInput">نتیجه آهن:</label>
+                                <select class="math-input" id="ironInput" onchange="updateCOAImpurityResult('iron', this.value)">
+                                    <option value="">---</option>
+                                    <option value="Pass">Pass</option>
+                                    <option value="Fail">Fail</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="specific-tests" class="tab-content hidden space-y-8">
+                <div class="card">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-800">آزمایشات خاص</h2>
+                    <p class="text-gray-600 mb-6">این بخش شامل آزمایشات خاصی است که برای اطمینان از کیفیت و خلوص آدیپیک اسید انجام می‌شود.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="card">
+                        <h3 class="text-xl font-bold mb-4">محدوده ذوب یا دما (<a href="General chapters/〈741〉 MELTING RANGE OR TEMPERATURE.pdf" class="text-blue-600 hover:underline" target="_blank">741</a>)</h3>
+                        <p class="text-gray-700">معیار پذیرش: <span class="ltr-text">151°C-154°C</span></p>
+                        <div class="flex flex-col gap-2 justify-center items-center text-gray-700 text-sm mt-4">
+                            <div class="math-input-group">
+                                <label for="meltingRangeInput">نتیجه محدوده ذوب:</label>
+                                <select class="math-input" id="meltingRangeInput" onchange="updateCOAImpurityResult('meltingRange', this.value)">
+                                    <option value="">---</option>
+                                    <option value="Pass">Pass</option>
+                                    <option value="Fail">Fail</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3 class="text-xl font-bold mb-4">افت وزن در اثر خشک شدن (LOD) (<a href="General chapters/〈731〉 LOSS ON DRYING.pdf" class="text-blue-600 hover:underline" target="_blank">731</a>)</h3>
+                        <p class="text-gray-700 mb-4">نمونه‌ای را در دمای <span class="ltr-text">105°C</span> تا وزن ثابت خشک کنید؛ بیش از <span class="ltr-text">0.2%</span> از وزن خود را از دست نمی‌دهد.</p>
+                        <h4 class="font-bold text-gray-800 mt-6 mb-2">محاسبه افت وزن در اثر خشک شدن (LOD):</h4>
+                        <p class="font-mono text-center text-lg mb-4">$$LOD = \frac{(W_{initial} - W_{final})}{W_{initial}} \times 100$$</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1 mb-6">
+                            <li>$W_{initial}$ = وزن اولیه نمونه (<span class="ltr-text">g</span>)</li>
+                            <li>$W_{final}$ = وزن نهایی نمونه پس از خشک شدن (<span class="ltr-text">g</span>)</li>
+                        </ul>
+                        <div class="flex flex-col gap-2 justify-center items-center text-gray-700 text-sm">
+                            <div class="math-input-group">
+                                <label for="lodInitialWeight">\(W_{initial}\):</label>
+                                <input class="math-input" id="lodInitialWeight" type="number" value="">
+                            </div>
+                            <div class="math-input-group">
+                                <label for="lodFinalWeight">\(W_{final}\):</label>
+                                <input class="math-input" id="lodFinalWeight" type="number" value="">
+                            </div>
+                            <button onclick="calculateLOD()" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded mt-4">محاسبه LOD</button>
+                        </div>
+                        <div class="text-center mt-4">
+                            <p class="text-gray-700">نتیجه LOD: <span id="lodResult" class="font-bold text-blue-700">--</span>%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="additional-requirements" class="tab-content hidden space-y-8">
+                <div class="card">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-800">الزامات اضافی</h2>
+                    <p class="text-gray-600 mb-6">این بخش شامل اطلاعات مهم در مورد بسته‌بندی و نگهداری آدیپیک اسید است.</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4">بسته‌بندی و نگهداری</h3>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>در ظروف محکم نگهداری شود.</li>
+                        <li>هیچ الزامات نگهداری مشخصی وجود ندارد.</li>
+                    </ul>
+                    <h3 class="text-xl font-bold mb-4 mt-6">استانداردهای مرجع USP (<a href="General chapters/〈11〉 USP REFERENCE STANDARDS.pdf" class="text-blue-600 hover:underline" target="_blank">11</a>)</h3>
+                    <ul class="list-circle list-inside text-gray-700">
+                        <li><span class="ltr-text">USP Adipic Acid RS</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="moa" class="tab-content hidden space-y-8">
+                <div class="card">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-800">روش تجزیه و تحلیل (MOA)</h2>
+                    <p class="text-gray-600 mb-6">این بخش اطلاعات روش تجزیه و تحلیل را از تمام بخش‌های مونوگراف گردآوری می‌کند.</p>
+                    <button onclick="generateMOADocument()" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded mt-4">تولید سند MOA (Word)</button>
+                </div>
+            </div>
+
+            <div id="coa" class="tab-content hidden space-y-8">
+                <div class="card">
+                    <h2 class="text-2xl font-bold mb-4 text-gray-800">Certificate of Analysis (COA)</h2>
+                    <p class="text-gray-600 mb-6">This section summarizes the results of tests and calculations performed according to the monograph.</p>
+                </div>
+                <div class="card" id="coa-content-to-pdf" dir="ltr">
+                    <h3 class="text-xl font-bold mb-4">Product Information</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 text-gray-700 text-sm">
+                        <div class="flex items-center gap-2">
+                            <label for="coaProductName" class="font-bold">Product Name:</label>
+                            <span id="coaProductNameDisplay" class="w-full p-2 border border-gray-300 rounded-md bg-gray-100 text-gray-700">Adipic Acid</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <label for="coaBatchNumber" class="font-bold">Batch Number:</label>
+                            <input type="text" id="coaBatchNumber" class="w-full p-2 border border-gray-300 rounded-md" value="">
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <label for="coaMfgDate" class="font-bold">Mfg. Date:</label>
+                            <input type="date" id="coaMfgDate" class="w-full p-2 border border-gray-300 rounded-md" value="">
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <label for="coaProductCode" class="font-bold">Product Code:</label>
+                            <input type="text" id="coaProductCode" class="w-full p-2 border border-gray-300 rounded-md" value="">
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <label for="coaRetestDate" class="font-bold">Retest Date:</label>
+                            <input type="date" id="coaRetestDate" class="w-full p-2 border border-gray-300 rounded-md" value="">
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <label for="coaAnalysisNumber" class="font-bold">Analysis Number:</label>
+                            <input type="text" id="coaAnalysisNumber" class="w-full p-2 border border-gray-300 rounded-md" value="">
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-4">Test Results</h3>
+                    <div class="overflow-x-auto mb-6">
+                        <table class="min-w-full bg-white border border-gray-200">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th class="py-3 px-4 font-bold text-sm text-gray-600 uppercase tracking-wider text-left">Tests</th>
+                                    <th class="py-3 px-4 font-bold text-sm text-gray-600 uppercase tracking-wider text-left">Specification (USP)</th>
+                                    <th class="py-3 px-4 font-bold text-sm text-gray-600 uppercase tracking-wider text-left">Results</th>
+                                </tr>
+                            </thead>
+                            <tbody id="coa-results-table-body">
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-4">Signatures</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 text-gray-700 text-sm">
+                        <div class="flex flex-col items-center">
+                            <label for="coaAnalyst" class="font-bold mb-1">Analyst:</label>
+                            <input type="text" id="coaAnalyst" class="w-full p-2 border border-gray-300 rounded-md text-center" value="">
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <label for="coaSupervisor" class="font-bold mb-1">QC Lab Supervisor:</label>
+                            <input type="text" id="coaSupervisor" class="w-full p-2 border border-gray-300 rounded-md text-center" value="">
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <label for="coaQCManager" class="font-bold mb-1">QC Manager:</label>
+                            <input type="text" id="coaQCManager" class="w-full p-2 border border-gray-300 rounded-md text-center" value="">
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center">
+                        <button onclick="exportCOAPDF()" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded mt-4">Save COA as PDF</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Object to store calculation results for COA
+        let calculationResults = {
+            assay: { label: 'Assay', value: '--', unit: '%', status: 'initial', spec: '99.0%-101.0%' },
+            irIdentification: { label: 'IR Identification', value: '', unit: '', status: 'initial', spec: '197K' },
+            residueOnIgnition: { label: 'Residue on Ignition', value: '', unit: '%', status: 'initial', spec: 'NMT 0.1%' },
+            nitrates: { label: 'Limit of Nitrates', value: '', unit: '', status: 'initial', spec: 'NMT 30 ppm' },
+            chloride: { label: 'Chloride', value: '', unit: '%', status: 'initial', spec: 'NMT 0.02%' },
+            sulfate: { label: 'Sulfate', value: '', unit: '%', status: 'initial', spec: 'NMT 0.05%' },
+            iron: { label: 'Iron', value: '', unit: ' ppm', status: 'initial', spec: 'NMT 10 ppm' },
+            meltingRange: { label: 'Melting Range or Temperature', value: '', unit: '°C', status: 'initial', spec: '151°C-154°C' },
+            lod: { label: 'Loss on Drying (LOD)', value: '--', unit: '%', status: 'initial', spec: 'NMT 0.2%' },
+        };
+
+        // Function to update the COA tab content dynamically
+        function updateCOATab() {
+            const coaResultsTableBody = document.getElementById('coa-results-table-body');
+            if (!coaResultsTableBody) return;
+
+            coaResultsTableBody.innerHTML = '';
+
+            for (const key in calculationResults) {
+                if (calculationResults.hasOwnProperty(key)) {
+                    const resultData = calculationResults[key];
+                    const tableRow = document.createElement('tr');
+                    let valueContent;
+                    let valueClass = '';
+
+                    if (resultData.status === 'initial' || resultData.status === 'user-entered') {
+                        valueContent = resultData.value;
+                        valueClass = 'text-gray-700';
+                    } else if (resultData.status === 'error') {
+                        valueContent = resultData.value + resultData.unit;
+                        valueClass = 'text-red-500';
+                    } else { // 'calculated'
+                        valueContent = resultData.value + resultData.unit;
+                        valueClass = 'text-blue-700';
+                    }
+
+                    tableRow.innerHTML = `
+                        <td class="py-2 px-3" style="direction: ltr; text-align: left;">${resultData.label}</td>
+                        <td class="py-2 px-3" style="direction: ltr; text-align: left;">${resultData.spec}</td>
+                        <td class="py-2 px-3 font-bold ${valueClass}">
+                            <span style="display: inline-block; width: 100%; text-align: left;">
+                                ${valueContent}
+                            </span>
+                        </td>
+                    `;
+                    coaResultsTableBody.appendChild(tableRow);
+                }
+            }
+        }
+
+        // Function to update user-entered impurity results
+        window.updateCOAImpurityResult = function(key, value) {
+            calculationResults[key].value = value;
+            calculationResults[key].status = 'user-entered';
+            updateCOATab();
+        };
+
+        // Helper function to update a specific calculation result and then the COA tab
+        function setCalculationResult(key, value, unit = '', status = 'calculated', spec = null) {
+            calculationResults[key].value = value;
+            calculationResults[key].unit = unit;
+            calculationResults[key].status = status;
+            if (spec !== null) {
+                calculationResults[key].spec = spec;
+            }
+            updateCOATab();
+        };
+
+        // Calculation function for Assay
+        window.calculateAssay = function() {
+            const V = parseFloat(document.getElementById('assayV').value);
+            const B = parseFloat(document.getElementById('assayB').value);
+            const N = parseFloat(document.getElementById('assayN').value);
+            const F = parseFloat(document.getElementById('assayF').value); // Fixed at 73.1
+
+            const W = parseFloat(document.getElementById('assayW').value); // Fixed at 60
+
+
+            const resultElement = document.getElementById('assayResult');
+
+            if (isNaN(V) || isNaN(B) || isNaN(N) || isNaN(F) || isNaN(W)) {
+                resultElement.textContent = "Error: Please fill all fields with valid numbers.";
+                resultElement.classList.remove('text-blue-700');
+                resultElement.classList.add('text-red-500');
+                setCalculationResult('assay', 'Error', '', 'error');
+                return;
+            }
+            if (W === 0) {
+                resultElement.textContent = "Error: Sample weight (W) cannot be zero.";
+                resultElement.classList.remove('text-blue-700');
+                resultElement.classList.add('text-red-500');
+                setCalculationResult('assay', 'Error', '', 'error');
+                return;
+            }
+
+            const result = ((V - B) * N * F * 100) / W;
+            resultElement.textContent = result.toFixed(2) + '%';
+            resultElement.classList.remove('text-red-500');
+            resultElement.classList.add('text-blue-700');
+
+            setCalculationResult('assay', result.toFixed(2), '%', 'calculated', '99.0%-101.0%');
+        };
+
+        // Calculation for Loss on Drying (LOD)
+        window.calculateLOD = function() {
+            const initialWeight = parseFloat(document.getElementById('lodInitialWeight').value);
+            const finalWeight = parseFloat(document.getElementById('lodFinalWeight').value);
+            const resultElement = document.getElementById('lodResult');
+
+            if (isNaN(initialWeight) || isNaN(finalWeight)) {
+                resultElement.textContent = "Error: Please fill all fields with valid numbers.";
+                resultElement.classList.remove('text-blue-700');
+                resultElement.classList.add('text-red-500');
+                setCalculationResult('lod', 'Error', '', 'error');
+                return;
+            }
+            if (initialWeight === 0) {
+                resultElement.textContent = "Error: Initial weight (W_initial) cannot be zero.";
+                resultElement.classList.remove('text-blue-700');
+                resultElement.classList.add('text-red-500');
+                setCalculationResult('lod', 'Error', '', 'error');
+                return;
+            }
+
+            const result = ((initialWeight - finalWeight) / initialWeight) * 100;
+            resultElement.textContent = result.toFixed(2) + '%';
+            resultElement.classList.remove('text-red-500');
+            resultElement.classList.add('text-blue-700');
+
+            setCalculationResult('lod', result.toFixed(2), '%', 'calculated', 'NMT 0.2%');
+        };
+
+        // Function to export COA as a PDF
+        window.exportCOAPDF = function() {
+            const element = document.getElementById('coa-content-to-pdf');
+            const exportButton = element.querySelector('button');
+
+            if (exportButton) {
+                exportButton.style.display = 'none';
+            }
+
+            document.fonts.ready().then(() => {
+                html2canvas(element, {
+                    scale: 3,
+                    logging: true,
+                    useCORS: true,
+                }).then(function(canvas) {
+                    const imgData = canvas.toDataURL('image/png');
+                    const { jsPDF } = window.jspdf;
+                    const pdf = new jsPDF('p', 'mm', 'a4');
+
+                    const imgWidth = 210;
+                    const pageHeight = 297;
+                    const imgHeight = canvas.height * imgWidth / canvas.width;
+                    let heightLeft = imgHeight;
+
+                    let position = 0;
+
+                    pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                    heightLeft -= pageHeight;
+
+                    while (heightLeft >= 0) {
+                        position = heightLeft - imgHeight;
+                        pdf.addPage();
+                        pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                        heightLeft -= pageHeight;
+                    }
+
+                    pdf.save(`COA_Adipic_Acid_${new Date().toISOString().slice(0, 10)}.pdf`);
+
+                }).catch(error => {
+                    console.error("Error capturing screenshot or generating PDF:", error);
+                    alert("Error capturing screenshot or generating PDF: " + error.message);
+                }).finally(() => {
+                    if (exportButton) {
+                        exportButton.style.display = '';
+                    }
+                });
+            }).catch(error => {
+                console.error("Font loading error:", error);
+                alert("Font loading error. PDF may not display correctly.");
+                if (exportButton) {
+                    exportButton.style.display = '';
+                }
+            });
+        };
+
+        // Function to generate MOA document
+        window.generateMOADocument = function() {
+            let moaHtmlContent = `
+                <html lang="fa" dir="rtl">
+                <head>
+                    <meta charset="UTF-8">
+                    <title>روش تجزیه و تحلیل (MOA) - آدیپیک اسید</title>
+                    <style>
+                        body { font-family: 'Vazirmatn', sans-serif; line-height: 1.6; direction: rtl; text-align: right; }
+                        h1, h2, h3, h4 { color: #333; margin-top: 1.5em; margin-bottom: 0.5em; }
+                        h1 { font-size: 2em; text-align: center; }
+                        h2 { font-size: 1.5em; border-bottom: 2px solid #ccc; padding-bottom: 5px; }
+                        h3 { font-size: 1.2em; }
+                        ul { list-style-type: disc; margin-right: 20px; }
+                        ol { list-style-type: decimal; margin-right: 20px; }
+                        .ltr-section { direction: ltr; text-align: left; }
+                        .ltr-text { direction: ltr; display: inline-block; unicode-bidi: isolate; }
+                        table { width: 100%; border-collapse: collapse; margin-top: 1em; direction: ltr; text-align: left;}
+                        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; direction: ltr;}
+                        th { background-color: #f2f2f2; }
+                    </style>
+                </head>
+                <body>
+                    <h1>روش تجزیه و تحلیل (MOA) - آدیپیک اسید</h1>
+            `;
+
+            const tabs = ['definition', 'identification', 'assay', 'impurities', 'specific-tests', 'additional-requirements'];
+
+            tabs.forEach(tabId => {
+                const tabElement = document.getElementById(tabId);
+                if (tabElement) {
+                    // Clone the content to avoid modifying the live DOM and to process it
+                    const clonedContent = tabElement.cloneNode(true);
+
+                    // Remove interactive elements and their associated labels/buttons
+                    clonedContent.querySelectorAll('.math-input-group, button').forEach(el => el.remove());
+
+                    // Replace input/select elements with their current display values
+                    clonedContent.querySelectorAll('input, select').forEach(inputEl => {
+                        const labelEl = inputEl.previousElementSibling; // Assuming label is sibling
+                        let value = inputEl.value;
+                        if (inputEl.tagName === 'SELECT' && inputEl.selectedOptions.length > 0) {
+                            value = inputEl.selectedOptions[0].text;
+                        }
+
+                        // Only include if value is not empty or default "---"
+                        if (value && value !== '---') {
+                            const p = document.createElement('p');
+                            p.innerHTML = `<span class="font-bold">${labelEl ? labelEl.textContent : ''}</span>: <span class="ltr-text">${value}</span>`;
+                            inputEl.replaceWith(p);
+                        } else {
+                            inputEl.remove(); // Remove empty input/select
+                            if (labelEl) labelEl.remove(); // Remove associated label if input is removed
+                        }
+                    });
+
+                    // Convert MathJax elements to their text representation for Word
+                    clonedContent.querySelectorAll('.MathJax_Display, .MathJax_CHTML').forEach(mathEl => {
+                        // This is a simplification. For true MathML/LaTeX in Word, a more complex conversion is needed.
+                        // For now, just get the raw text or a simplified version.
+                        const mathText = mathEl.textContent; // Gets the rendered text
+                        const p = document.createElement('p');
+                        p.textContent = mathText;
+                        mathEl.replaceWith(p);
+                    });
+
+
+                    // Append processed content, maintaining direction
+                    const sectionHtml = `<div dir="rtl">${clonedContent.innerHTML}</div>`;
+                    moaHtmlContent += sectionHtml;
+                }
+            });
+
+            moaHtmlContent += `</body></html>`;
+
+            const filename = `MOA_Adipic_Acid_${new Date().toISOString().slice(0, 10)}.doc`;
+            const blob = new Blob([moaHtmlContent], { type: 'application/msword;charset=utf-8' });
+            saveAs(blob, filename);
+        };
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const mainTabButtons = document.querySelectorAll('nav .tab-button');
+            const mainTabContents = document.querySelectorAll('main > .tab-content');
+
+            mainTabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    mainTabButtons.forEach(btn => {
+                        btn.classList.remove('tab-active');
+                        btn.classList.add('tab-inactive');
+                    });
+                    this.classList.add('tab-active');
+                    this.classList.remove('tab-inactive');
+
+                    mainTabContents.forEach(content => {
+                        content.classList.add('hidden');
+                    });
+                    document.getElementById(this.dataset.tab).classList.remove('hidden');
+
+                    if (typeof MathJax !== 'undefined') {
+                        MathJax.typeset([document.getElementById(this.dataset.tab)]);
+                    }
+
+                    if (this.dataset.tab === 'coa') {
+                        updateCOATab();
+                    }
+                });
+            });
+
+            if (typeof MathJax !== 'undefined') {
+                MathJax.typeset([document.getElementById('definition')]);
+            }
+
+            updateCOATab();
+        });
+    </script>
+</body>
+</html>
