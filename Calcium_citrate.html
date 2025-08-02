@@ -1,196 +1,158 @@
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>مونوگراف سیترات کلسیم (USP)</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
-<script type="text/javascript" id="MathJax-script" async
-src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
-<script>
-MathJax = {
-tex: {
-inlineMath: [['$', '$'], ['\\(', '\\)']],
-displayMath: [['$$', '$$'], ['\\[', '\\]']]
-},
-svg: {
-fontCache: 'global'
-}
-};
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<!-- Include jsPDF library -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مونوگراف سیترات کلسیم (USP)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 
-<style>
-body {
-    font-family: 'Vazirmatn', sans-serif;
-    background-color: #f8f9fa;
-    line-height: 1.6;
-    word-spacing: normal;
-    letter-spacing: normal;
-}
-.tab-active { border-color: #3b82f6; color: #3b82f6; background-color: #eff6ff; }
-.tab-inactive { border-color: transparent; color: #6b7280; }
-.chart-container { position: relative; width: 100%; max-width: 800px; margin-right: auto; margin-left: auto; height: 350px; max-height: 40vh; }
-/* Ensure all tables are RTL by default, with specific LTR for numbers/formulas */
-table {
-    direction: rtl;
-    text-align: right;
-}
-th {
-    text-align: right;
-    vertical-align: top;
-}
-td {
-    text-align: right;
-    vertical-align: middle;
-}
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+            word-spacing: normal;
+            letter-spacing: normal;
+        }
+        .tab-active { border-color: #3b82f6; color: #3b82f6; background-color: #eff6ff; }
+        .tab-inactive { border-color: transparent; color: #6b7280; }
+        .chart-container { position: relative; width: 100%; max-width: 800px; margin-right: auto; margin-left: auto; height: 350px; max-height: 40vh; }
+        table {
+            direction: rtl;
+            text-align: right;
+        }
+        th {
+            text-align: right;
+            vertical-align: top;
+        }
+        td {
+            text-align: right;
+            vertical-align: middle;
+        }
 
-/* Specific override for the results column in COA */
-#coa-results-table-body td:last-child {
-    text-align: left !important; /* Align results content to the left, important for override */
-    direction: ltr; /* Ensure LTR for numbers/results */
-}
+        /* Ensure vertical alignment for all headers in COA table */
+        #coa-content-to-pdf table thead th {
+            vertical-align: top !important;
+        }
 
-/* Specific override for the 'نتایج' header in COA */
-#coa-content-to-pdf table thead th:last-child {
-    text-align: left !important;
-}
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            padding: 1.5rem;
+            line-height: inherit;
+            word-spacing: inherit;
+            letter-spacing: inherit;
+            white-space: normal;
+        }
+        .ltr-text {
+            direction: ltr;
+            display: inline-block;
+            unicode-bidi: isolate;
+        }
+        .math-input {
+            appearance: none;
+            -moz-appearance: textfield;
+            padding: 0.5rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.375rem;
+            width: 100px;
+            text-align: left;
+            direction: ltr;
+        }
+        .math-input-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
 
-/* Ensure vertical alignment for all headers in COA table */
-#coa-content-to-pdf table thead th {
-    vertical-align: top !important;
-}
+        /* Styles for the COA tab content container */
+        #coa {
+            direction: ltr !important; /* Force LTR for the entire COA tab content */
+            text-align: left !important; /* Force left alignment for COA tab content */
+        }
 
-.card {
-    background-color: white;
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    padding: 1.5rem;
-    line-height: inherit;
-    word-spacing: inherit;
-    letter-spacing: inherit;
-    white-space: normal;
-}
-/* Ensure LTR for specific numerical/unit strings within RTL context */
-.ltr-text {
-    direction: ltr;
-    display: inline-block;
-    unicode-bidi: isolate;
-}
-/* Style for the math input fields to be text boxes */
-.math-input {
-    appearance: none;
-    -moz-appearance: textfield;
-    padding: 0.5rem;
-    border: 1px solid #d1d5db;
-    border-radius: 0.375rem;
-    width: 100px;
-    text-align: left;
-    direction: ltr;
-}
-.math-input-group {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-/* Specific styles for the COA section to help with rendering */
-#coa-content-to-pdf {
-    direction: ltr; /* COA is LTR */
-    text-align: left; /* Default text alignment for LTR */
-    padding: 1.5rem;
-}
-
-/* Ensure all relevant text within COA inherits proper text settings */
-#coa-content-to-pdf p,
-#coa-content-to-pdf h1,
-#coa-content-to-pdf h2,
-#coa-content-to-pdf h3,
-#coa-content-to-pdf th,
-#coa-content-to-pdf td,
-#coa-content-to-pdf label {
-    font-family: 'Vazirmatn', sans-serif;
-    line-height: 1.6;
-    word-spacing: normal;
-    letter-spacing: normal;
-    white-space: normal;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-}
-
-/* Specific adjustments for input fields in the COA section */
-#coa-content-to-pdf input[type="text"],
-#coa-content-to-pdf input[type="date"] {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    min-height: 2.8rem;
-    box-sizing: border-box;
-}
-
-/* Adjustments for the input labels in the COA info section */
-.grid.grid-cols-1.md\:grid-cols-2.gap-4.mb-6.text-gray-700.text-sm .flex.items-center.gap-2 {
-    align-items: flex-start;
-}
-
-/* Adjustments for the signature inputs */
-.grid.grid-cols-1.md\:grid-cols-3.gap-4.mb-6.text-gray-700.text-sm .flex.flex-col.items-center {
-    min-height: 5rem;
-    justify-content: flex-start;
-}
-.grid.grid-cols-1.md\:grid-cols-3.gap-4.mb-6.text-gray-700.text-sm input[type="text"] {
-    min-height: 2.8rem;
-}
-
-/* For table cells, add more padding to avoid text touching borders */
-#coa-results-table-body td, #coa-results-table-body th {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    box-sizing: border-box;
-}
-
-/* Remove internal borders from COA table cells */
-#coa-content-to-pdf table th {
-    border: none;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    font-size: 0.95rem;
-    font-weight: 700;
-    background-color: #e5e7eb;
-}
-
-#coa-content-to-pdf table td {
-    border: none;
-}
-
-/* Ensure the table itself has collapsed borders */
-#coa-content-to-pdf table {
-    border-collapse: collapse;
-}
-
-/* Specific LTR styles for the COA tab's table */
-#coa-content-to-pdf table {
-    direction: ltr; /* Ensure the entire table is LTR */
-    text-align: left; /* Align general table content to left */
-}
-
-#coa-content-to-pdf table thead th {
-    text-align: left; /* Align headers to the left within LTR table */
-    direction: ltr; /* Explicitly set LTR for headers */
-}
-
-#coa-results-table-body td {
-    text-align: left; /* Align body cells to the left within LTR table */
-    direction: ltr; /* Explicitly set LTR for body cells */
-}
-
-</style>
+        #coa-content-to-pdf {
+            direction: ltr;
+            text-align: left;
+            padding: 1.5rem;
+        }
+        #coa-content-to-pdf p,
+        #coa-content-to-pdf h1,
+        #coa-content-to-pdf h2,
+        #coa-content-to-pdf h3,
+        #coa-content-to-pdf th,
+        #coa-content-to-pdf td,
+        #coa-content-to-pdf label {
+            font-family: 'Vazirmatn', sans-serif;
+            line-height: 1.6;
+            word-spacing: normal;
+            letter-spacing: normal;
+            white-space: normal;
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem;
+        }
+        #coa-content-to-pdf input[type="text"],
+        #coa-content-to-pdf input[type="date"] {
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            min-height: 2.8rem;
+            box-sizing: border-box;
+        }
+        .grid.grid-cols-1.md\:grid-cols-2.gap-4.mb-6.text-gray-700.text-sm .flex.items-center.gap-2 {
+            align-items: flex-start;
+        }
+        .grid.grid-cols-1.md\:grid-cols-3.gap-4.mb-6.text-gray-700.text-sm .flex.flex-col.items-center {
+            min-height: 5rem;
+            justify-content: flex-start;
+        }
+        .grid.grid-cols-1.md\:grid-cols-3.gap-4.mb-6.text-gray-700.text-sm input[type="text"] {
+            min-height: 2.8rem;
+        }
+        #coa-results-table-body td, #coa-results-table-body th {
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            box-sizing: border-box;
+        }
+        #coa-content-to-pdf table th {
+            border: none;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            font-size: 0.95rem;
+            font-weight: 700;
+            background-color: #e5e7eb;
+        }
+        #coa-content-to-pdf table td {
+            border: none;
+        }
+        #coa-content-to-pdf table {
+            border-collapse: collapse;
+            /* Explicitly force LTR for the entire table */
+            direction: ltr !important;
+            text-align: left !important;
+        }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
@@ -209,6 +171,7 @@ td {
 <button data-tab="impurities" class="tab-button text-sm md:text-base font-medium py-3 px-4 md:px-6 border-b-2 tab-inactive">ناخالصی‌ها</button>
 <button data-tab="specific-tests" class="tab-button text-sm md:text-base font-medium py-3 px-4 md:px-6 border-b-2 tab-inactive">آزمایشات خاص</button>
 <button data-tab="packaging-storage" class="tab-button text-sm md:text-base font-medium py-3 px-4 md:px-6 border-b-2 tab-inactive">بسته‌بندی و نگهداری</button>
+<button data-tab="moa" class="tab-button text-sm md:text-base font-medium py-3 px-4 md:px-6 border-b-2 tab-inactive">MOA</button>
 <button data-tab="coa" class="tab-button text-sm md:text-base font-medium py-3 px-4 md:px-6 border-b-2 tab-inactive">COA</button>
 </div>
 </nav>
@@ -221,7 +184,7 @@ td {
 </div>
 <div class="card">
 <h3 class="text-xl font-bold mb-4">تعریف</h3>
-<p class="text-gray-700 mb-4">سیترات کلسیم حاوی چهار مولکول آب هیدراسیون است. هنگامی که در دمای <span class="ltr-text">150°C</span> تا وزن ثابت خشک شود، حاوی حداقل <span class="ltr-text">97.5%</span> و حداکثر <span class="ltr-text">100.5%</span> از <span class="ltr-text">$Ca_{3}(C_{6}H_{5}O_{7})_{2}$</span> است.</p>
+<p class="text-gray-700 mb-4">سیترات کلسیم حاوی چهار مولکول آب هیدراسیون است. هنگامی که در دمای <span class="ltr-text">150°C</span> تا وزن ثابت خشک شود، حاوی حداقل <span class="ltr-text">97.5%</span> و حداکثر <span class="ltr-text">100.5%</span> از <span class="ltr-text">$Ca_{3}(C_{6}\overline{H}_{5}O_{7})_{2}$</span> است.</p>
 <p class="text-gray-700 mt-4">فرمول شیمیایی: <span class="ltr-text">$C_{12}H_{10}Ca_{3}O_{14} \cdot 4H_{2}O$</span></p>
 <p class="text-gray-700">وزن مولکولی: <span class="ltr-text">570.49</span></p>
 </div>
@@ -260,7 +223,7 @@ td {
 <div class="card">
 <h3 class="text-xl font-bold mb-4">روش کار:</h3>
 <p class="text-gray-700 mb-4">محلول نمونه: <span class="ltr-text">350 mg</span> سیترات کلسیم را که قبلاً در دمای <span class="ltr-text">150°C</span> تا وزن ثابت خشک شده است، در <span class="ltr-text">12 mL</span> اسید کلریدریک <span class="ltr-text">0.5 M</span> حل کنید و با آب تا حدود <span class="ltr-text">100 mL</span> رقیق کنید.</p>
-<p class="text-gray-700 mb-4">تجزیه و تحلیل: در حالی که محلول نمونه را هم می‌زنید، <span class="ltr-text">30 mL</span> از <span class="ltr-text">0.05 M</span> تیترانت ادتات دی‌سدیم <span class="ltr-text">VS</span> را از یک بورت <span class="ltr-text">50 mL</span> اضافه کنید. <span class="ltr-text">15 mL</span> از هیدروکسید سدیم <span class="ltr-text">1 N</span> و <span class="ltr-text">300 mg</span> هیدروکسی نفتول بلو را اضافه کنید و تیترسنجی را تا نقطه پایانی آبی ادامه دهید. هر <span class="ltr-text">mL</span> از <span class="ltr-text">0.05 M</span> ادتات دی‌سدیم معادل <span class="ltr-text">8.307 mg</span> سیترات کلسیم (<span class="ltr-text">$Ca_{3}(C_{6}H_{5}O_{7})_{2}$</span>) است.</p>
+<p class="text-gray-700 mb-4">تجزیه و تحلیل: در حالی که محلول نمونه را هم می‌زنید، <span class="ltr-text">30 mL</span> از <span class="ltr-text">0.05 M</span> تیترانت ادتات دی‌سدیم <span class="ltr-text">VS</span> را از یک buret <span class="ltr-text">50 mL</span> اضافه کنید. <span class="ltr-text">15 mL</span> از هیدروکسید سدیم <span class="ltr-text">1 N</span> و <span class="ltr-text">300 mg</span> هیدروکسی نفتول بلو را اضافه کنید و تیترسنجی را تا نقطه پایانی آبی ادامه دهید. هر <span class="ltr-text">mL</span> از <span class="ltr-text">0.05 M</span> ادتات دی‌سدیم معادل <span class="ltr-text">8.307 mg</span> سیترات کلسیم (<span class="ltr-text">$Ca_{3}(C_{6}H_{5}O_{7})_{2}$</span>) است.</p>
 
 <h4 class="font-bold text-gray-800 mt-6 mb-2">محاسبه درصد <span class="ltr-text">$Ca_{3}(C_{6}H_{5}O_{7})_{2}$</span>:</h4>
 <p class="font-mono text-center text-lg mb-4">$$Result = \frac{V \times F}{W_{sample}} \times 100$$</p>
@@ -281,12 +244,17 @@ td {
 </div>
 <div class="math-input-group">
 <label for="assayWsample">\(W_{sample}\):</label>
-<input class="math-input" id="assayWsample" type="number" value="350" readonly>
+<input class="math-input" id="assayWsample" type="number" value="">
 </div>
 <button onclick="calculateAssay()" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded mt-4">محاسبه سنجش</button>
+<div class="math-input-group">
+    <label for="assayAdditionalSpec">مشخصات اضافی:</label>
+    <input class="math-input" id="assayAdditionalSpec" type="text" value="" onchange="updateCOAAdditionalSpec('assay', this.value)">
+</div>
 </div>
 <div class="text-center mt-4">
 <p class="text-gray-700">نتیجه سنجش: <span id="assayResult" class="font-bold text-blue-700">--</span>%</p>
+<p class="text-gray-700">نتیجه سنجش به ppm: <span id="assayResultPPM" class="font-bold text-blue-700">--</span> ppm</p>
 </div>
 <p class="text-gray-700 mt-4">معیار پذیرش: <span class="ltr-text">97.5%-100.5%</span> بر اساس ماده خشک.</p>
 </div>
@@ -313,6 +281,10 @@ td {
             <option value="Fail">Fail</option>
         </select>
     </div>
+    <div class="math-input-group">
+        <label for="arsenicAdditionalSpec">مشخصات اضافی:</label>
+        <input class="math-input" id="arsenicAdditionalSpec" type="text" value="" onchange="updateCOAAdditionalSpec('arsenic', this.value)">
+    </div>
 </div>
 </div>
 <div class="card">
@@ -330,13 +302,17 @@ td {
             <option value="Fail">Fail</option>
         </select>
     </div>
+    <div class="math-input-group">
+        <label for="leadAdditionalSpec">مشخصات اضافی:</label>
+        <input class="math-input" id="leadAdditionalSpec" type="text" value="" onchange="updateCOAAdditionalSpec('lead', this.value)">
+    </div>
 </div>
 </div>
 <div class="card">
 <h3 class="text-xl font-bold mb-4">حد فلوراید</h3>
 <p class="text-gray-700 mb-4">[توجه—تمام محلول‌ها را در ظروف پلاستیکی تهیه و نگهداری کنید.]</p>
 <p class="text-gray-700 mb-2"><span class="font-bold">محلول ذخیره استاندارد:</span> <span class="ltr-text">1000 µg/mL</span> یون فلوراید از <span class="ltr-text">USP Sodium Fluoride RS</span> در آب.</p>
-<p class="text-gray-700 mb-2"><span class="font-bold">محلول استاندارد:</span> <span class="ltr-text">5 µg/mL</span> یون فلوراید از محلول ذخیره استاندارد. [توجه—در روز استفاده تهیه شود.]</p>
+<p class="text-gray-700 mb-2"><span class="font-bold">محلول استاندارد:</span> <span class="ltr-text">5 µg/ml</span> یون فلوراید از محلول ذخیره استاندارد. [توجه—در روز استفاده تهیه شود.]</p>
 <p class="text-gray-700 mb-2"><span class="font-bold">محلول خطی بودن A:</span> <span class="ltr-text">1.0 mL</span> از محلول استاندارد را به یک بشر پلاستیکی <span class="ltr-text">250-mL</span> منتقل کنید. <span class="ltr-text">50 mL</span> آب، <span class="ltr-text">5 mL</span> اسید کلریدریک <span class="ltr-text">1 N</span>، <span class="ltr-text">10 mL</span> سیترات سدیم <span class="ltr-text">1.0 M</span> و <span class="ltr-text">10 mL</span> ادتات دی‌سدیم <span class="ltr-text">0.2 M</span> را اضافه کنید. در صورت لزوم، با هیدروکسید سدیم <span class="ltr-text">1 N</span> یا اسید کلریدریک <span class="ltr-text">1 N</span> تا <span class="ltr-text">pH 5.5</span> تنظیم کنید. به یک فلاسک حجمی <span class="ltr-text">100-mL</span> منتقل کرده و با آب به حجم برسانید. این محلول حاوی <span class="ltr-text">0.05 µg/mL</span> فلوراید است.</p>
 <p class="text-gray-700 mb-2"><span class="font-bold">محلول خطی بودن B:</span> <span class="ltr-text">5.0 mL</span> از محلول استاندارد را به یک بشر پلاستیکی <span class="ltr-text">250-mL</span> منتقل کنید و طبق دستورالعمل محلول خطی بودن A از "اضافه کردن <span class="ltr-text">50 mL</span> آب" ادامه دهید. این محلول حاوی <span class="ltr-text">0.25 µg/mL</span> فلوراید است.</p>
 <p class="text-gray-700 mb-2"><span class="font-bold">محلول خطی بودن C:</span> <span class="ltr-text">10.0 mL</span> از محلول استاندارد را به یک بشر پلاستیکی <span class="ltr-text">250-mL</span> منتقل کنید و طبق دستورالعمل محلول خطی بودن A از "اضافه کردن <span class="ltr-text">50 mL</span> آب" ادامه دهید. این محلول حاوی <span class="ltr-text">0.50 µg/mL</span> فلوراید است.</p>
@@ -346,7 +322,7 @@ td {
 <ul class="list-disc list-inside text-gray-700 space-y-1 mb-6">
     <li>نمونه‌ها: محلول خطی بودن A، محلول خطی بودن B، محلول خطی بودن C و محلول نمونه</li>
     <li><span class="ltr-text">50 mL</span> از هر یک از محلول‌های خطی بودن A، B و C را به بشرهای پلاستیکی <span class="ltr-text">250-mL</span> جداگانه منتقل کنید و پتانسیل هر محلول را با سیستم الکترود اندازه‌گیری کنید. بین هر بار خواندن، الکترودها را با آب بشویید و هرگونه آب باقیمانده را با خشک کردن الکترودها جذب کنید. لگاریتم غلظت‌های فلوراید (<span class="ltr-text">0.05، 0.25 و 0.50 µg/mL</span>، به ترتیب) را در برابر پتانسیل رسم کنید تا یک خط پاسخ استاندارد به دست آید.</li>
-    <li><span class="ltr-text">50 mL</span> از محلول نمونه را به یک بشر پلاستیکی <span class="ltr-text">250-mL</span> منتقل کنید و پتانسیل را با سیستم الکترود اندازه‌گیری کنید. از پتانسیل اندازه‌گیری شده و خط پاسخ استاندارد، غلظت <span class="ltr-text">C</span>، بر حسب <span class="ltr-text">µg/mL</span> یون فلوراید در محلول نمونه را تعیین کنید. درصد فلوراید در نمونه گرفته شده را با ضرب <span class="ltr-text">C</span> در <span class="ltr-text">0.01</span> محاسبه کنید.</li>
+    <li><span class="ltr-text">50 mL</span> از محلول نمونه را به یک بشر پلاستیکی <span class="ltr-text">250-mL</span> منتقل کنید و پتانسیل را با سیستم الکترود اندازه‌گیری کنید. از پتانسیل اندازه‌گیری شده و خط پاسخ استاندارد, غلظت <span class="ltr-text">C</span>، بر حسب <span class="ltr-text">µg/mL</span> یون فلوراید در محلول نمونه را تعیین کنید. درصد فلوراید در نمونه گرفته شده را با ضرب <span class="ltr-text">C</span> در <span class="ltr-text">0.01</span> محاسبه کنید.</li>
 </ul>
 <p class="font-mono text-center text-lg mb-4">$$Result = C \times 0.01$$</p>
 <ul class="list-disc list-inside text-gray-700 space-y-1 mb-6">
@@ -358,9 +334,14 @@ td {
 <input class="math-input" id="fluorideC" type="number" value="">
 </div>
 <button onclick="calculateFluorideLimit()" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded mt-4">محاسبه حد فلوراید</button>
+<div class="math-input-group">
+    <label for="fluorideAdditionalSpec">مشخصات اضافی:</label>
+    <input class="math-input" id="fluorideAdditionalSpec" type="text" value="" onchange="updateCOAAdditionalSpec('limitOfFluoride', this.value)">
+</div>
 </div>
 <div class="text-center mt-4">
 <p class="text-gray-700">نتیجه فلوراید: <span id="fluorideResult" class="font-bold text-blue-700">--</span>%</p>
+<p class="text-gray-700">نتیجه فلوراید به ppm: <span id="fluorideResultPPM" class="font-bold text-blue-700">--</span> ppm</p>
 </div>
 <p class="text-gray-700 mt-4">معیار پذیرش: <span class="ltr-text">NMT 0.003%</span></p>
 </div>
@@ -379,6 +360,10 @@ td {
             <option value="Pass">Pass</option>
             <option value="Fail">Fail</option>
         </select>
+    </div>
+    <div class="math-input-group">
+        <label for="acidInsolubleAdditionalSpec">مشخصات اضافی:</label>
+        <input class="math-input" id="acidInsolubleAdditionalSpec" type="text" value="" onchange="updateCOAAdditionalSpec('acidInsoluble', this.value)">
     </div>
 </div>
 </div>
@@ -410,9 +395,14 @@ td {
 <input class="math-input" id="lodFinalWeight" type="number" value="">
 </div>
 <button onclick="calculateLOD()" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded mt-4">محاسبه LOD</button>
+<div class="math-input-group">
+    <label for="lodAdditionalSpec">مشخصات اضافی:</label>
+    <input class="math-input" id="lodAdditionalSpec" type="text" value="" onchange="updateCOAAdditionalSpec('lod', this.value)">
+</div>
 </div>
 <div class="text-center mt-4">
 <p class="text-gray-700">نتیجه LOD: <span id="lodResult" class="font-bold text-blue-700">--</span>%</p>
+<p class="text-gray-700">نتیجه LOD به ppm: <span id="lodResultPPM" class="font-bold text-blue-700">--</span> ppm</p>
 </div>
 </div>
 </div>
@@ -435,10 +425,18 @@ td {
 </div>
 </div>
 
+<div id="moa" class="tab-content hidden space-y-8">
+    <div class="card">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">روش تجزیه و تحلیل (MOA)</h2>
+        <p class="text-gray-600 mb-6">این بخش اطلاعات روش تجزیه و تحلیل را از تمام بخش‌های مونوگراف گردآوری می‌کند.</p>
+        <button onclick="generateMOADocument()" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded mt-4">تولید سند MOA (Word)</button>
+    </div>
+</div>
+
 <div id="coa" class="tab-content hidden space-y-8">
 <div class="card">
-<h2 class="text-2xl font-bold mb-4 text-gray-800">Certificate of Analysis (COA)</h2>
-<p class="text-gray-600 mb-6">This section summarizes the results of tests and calculations performed according to the monograph.</p>
+<h2 class="text-2xl font-bold mb-4 text-gray-800" style="text-align: left; direction: ltr;">Certificate of Analysis (COA)</h2>
+<p class="text-gray-600 mb-6" style="text-align: left; direction: ltr;">This section summarizes the results of tests and calculations performed according to the monograph.</p>
 </div>
 <div class="card" id="coa-content-to-pdf" dir="ltr">
 <h3 class="text-xl font-bold mb-4">Product Information</h3>
@@ -475,7 +473,8 @@ td {
 <thead class="bg-gray-100">
 <tr>
 <th class="py-3 px-4 font-bold text-sm text-gray-600 uppercase tracking-wider text-left">Tests</th>
-<th class="py-3 px-4 font-bold text-sm text-gray-600 uppercase tracking-wider text-left">Specification (USP)</th>
+<th class="py-3 px-4 font-bold text-sm text-gray-600 uppercase tracking-wider text-left">Pharmacopoeia (USP 44)</th>
+<th class="py-3 px-4 font-bold text-sm text-gray-600 uppercase tracking-wider text-left">Additional Specifications</th>
 <th class="py-3 px-4 font-bold text-sm text-gray-600 uppercase tracking-wider text-left">Results</th>
 </tr>
 </thead>
@@ -511,12 +510,12 @@ td {
 <script>
 // Object to store calculation results for COA
 let calculationResults = {
-    assay: { label: 'Assay', value: '--', unit: '%', status: 'initial', spec: '97.5%-100.5%' },
-    arsenic: { label: 'Arsenic', value: '', unit: '', status: 'initial', spec: 'NMT 3 ppm' },
-    lead: { label: 'Lead', value: '', unit: '', status: 'initial', spec: 'NMT 10 ppm' },
-    limitOfFluoride: { label: 'Limit of Fluoride', value: '--', unit: '%', status: 'initial', spec: 'NMT 0.003%' },
-    acidInsoluble: { label: 'Acid-Insoluble Substances', value: '', unit: '', status: 'initial', spec: 'NMT 10 mg (0.2%)' },
-    lod: { label: 'Loss on Drying (LOD)', value: '--', unit: '%', status: 'initial', spec: '10.0%-13.3%' },
+    assay: { label: 'Assay', value: '--', unit: '%', status: 'initial', spec: '97.5%-100.5%', additionalSpec: '' },
+    arsenic: { label: 'Arsenic', value: '', unit: '', status: 'initial', spec: 'NMT 3 ppm', additionalSpec: '' },
+    lead: { label: 'Lead', value: '', unit: '', status: 'initial', spec: 'NMT 10 ppm', additionalSpec: '' },
+    limitOfFluoride: { label: 'Limit of Fluoride', value: '--', unit: '%', status: 'initial', spec: 'NMT 0.003%', additionalSpec: '' },
+    acidInsoluble: { label: 'Acid-Insoluble Substances', value: '', unit: '', status: 'initial', spec: 'NMT 10 mg (0.2%)', additionalSpec: '' },
+    lod: { label: 'Loss on Drying (LOD)', value: '--', unit: '%', status: 'initial', spec: '10.0%-13.3%', additionalSpec: '' },
 };
 
 // Function to update the COA tab content dynamically
@@ -535,19 +534,38 @@ function updateCOATab() {
 
             // Determine content and class based on status
             if (resultData.status === 'initial' || resultData.status === 'user-entered') {
-                valueContent = resultData.value; // Display the raw value from calculationResults
-                valueClass = 'text-gray-700'; // Default text color for editable input
+                valueContent = resultData.value;
+                valueClass = 'text-gray-700';
             } else if (resultData.status === 'error') {
                 valueContent = resultData.value + resultData.unit;
                 valueClass = 'text-red-500';
-            } else { // For calculated fields (status === 'calculated')
+            } else { // 'calculated'
                 valueContent = resultData.value + resultData.unit;
                 valueClass = 'text-blue-700';
             }
+            
+            // Special handling for LOD and Assay to check for color-coded results
+            if (key === 'lod' || key === 'assay') {
+                const resultPercentage = parseFloat(resultData.value);
+                let pass = false;
+                if (key === 'lod') {
+                    pass = resultPercentage >= 10.0 && resultPercentage <= 13.3;
+                } else if (key === 'assay') {
+                    pass = resultPercentage >= 97.5 && resultPercentage <= 100.5;
+                }
+
+                if (pass) {
+                    valueClass = 'text-green-500';
+                } else {
+                    valueClass = 'text-red-500';
+                }
+            }
+
 
             tableRow.innerHTML = `
-                <td class="py-2 px-3">${resultData.label}</td>
-                <td class="py-2 px-3">${resultData.spec}</td>
+                <td class="py-2 px-3" style="direction: ltr; text-align: left;">${resultData.label}</td>
+                <td class="py-2 px-3" style="direction: ltr; text-align: left;">${resultData.spec}</td>
+                <td class="py-2 px-3" style="direction: ltr; text-align: left;">${resultData.additionalSpec}</td>
                 <td class="py-2 px-3 font-bold ${valueClass}">
                     <span style="display: inline-block; width: 100%; text-align: left;">
                         ${valueContent}
@@ -566,6 +584,13 @@ window.updateCOAImpurityResult = function(key, value) {
     updateCOATab(); // Update COA tab after any calculation
 };
 
+// Function to update additional specifications
+window.updateCOAAdditionalSpec = function(key, value) {
+    calculationResults[key].additionalSpec = value;
+    updateCOATab(); // Update COA tab to reflect the new additional spec
+};
+
+
 // Helper function to update a specific calculation result and then the COA tab
 function setCalculationResult(key, value, unit = '', status = 'calculated', spec = null) {
     calculationResults[key].value = value;
@@ -575,37 +600,41 @@ function setCalculationResult(key, value, unit = '', status = 'calculated', spec
         calculationResults[key].spec = spec;
     }
     updateCOATab(); // Update COA tab after any calculation
-}
+};
 
 // Calculation function for Assay
 window.calculateAssay = function() {
     const V = parseFloat(document.getElementById('assayV').value);
-    const F = parseFloat(document.getElementById('assayF').value); // Fixed at 8.307
-    const W_sample = parseFloat(document.getElementById('assayWsample').value); // Fixed at 350
+    const F = parseFloat(document.getElementById('assayF').value);
+    const W_sample = parseFloat(document.getElementById('assayWsample').value);
 
     const resultElement = document.getElementById('assayResult');
+    const resultElementPPM = document.getElementById('assayResultPPM');
 
-    if (isNaN(V) || isNaN(F) || isNaN(W_sample)) {
-        resultElement.textContent = "خطا: لطفاً تمام فیلدها را با اعداد معتبر پر کنید.";
-        resultElement.classList.remove('text-blue-700');
-        resultElement.classList.add('text-red-500');
-        setCalculationResult('assay', 'خطا', '', 'error');
-        return;
-    }
-    if (W_sample === 0) {
-        resultElement.textContent = "خطا: وزن نمونه (W_sample) نمی‌تواند صفر باشد.";
-        resultElement.classList.remove('text-blue-700');
-        resultElement.classList.add('text-red-500');
-        setCalculationResult('assay', 'خطا', '', 'error');
+    if (isNaN(V) || isNaN(F) || isNaN(W_sample) || W_sample === 0) {
+        resultElement.textContent = "Error: Please fill all fields with valid numbers, and W_sample cannot be zero.";
+        resultElement.className = 'font-bold text-red-500';
+        resultElementPPM.textContent = "--";
+        resultElementPPM.className = 'font-bold text-red-500';
+        setCalculationResult('assay', 'Error', '', 'error');
         return;
     }
 
-    const result = (V * F * 100) / W_sample;
-    resultElement.textContent = result.toFixed(2) + '%';
-    resultElement.classList.remove('text-red-500');
-    resultElement.classList.add('text-blue-700');
+    const resultPercentage = (V * F * 100) / W_sample;
+    const resultPPM = resultPercentage * 10000; // 1% = 10,000 ppm
 
-    setCalculationResult('assay', result.toFixed(2), '%', 'calculated', '97.5%-100.5%');
+    resultElement.textContent = resultPercentage.toFixed(2);
+    resultElementPPM.textContent = resultPPM.toFixed(0);
+
+    // Check if the result is within the acceptance criteria (97.5% to 100.5%)
+    const isPassing = resultPercentage >= 97.5 && resultPercentage <= 100.5;
+    const colorClass = isPassing ? 'text-green-500' : 'text-red-500';
+
+    // Apply color to the results
+    resultElement.className = `font-bold ${colorClass}`;
+    resultElementPPM.className = `font-bold ${colorClass}`;
+
+    setCalculationResult('assay', resultPercentage.toFixed(2), '%', 'calculated', '97.5%-100.5%');
 };
 
 
@@ -614,21 +643,31 @@ window.calculateFluorideLimit = function() {
     const C = parseFloat(document.getElementById('fluorideC').value);
 
     const resultElement = document.getElementById('fluorideResult');
+    const resultElementPPM = document.getElementById('fluorideResultPPM');
 
     if (isNaN(C)) {
-        resultElement.textContent = "خطا: لطفاً تمام فیلدها را با اعداد معتبر پر کنید.";
+        resultElement.textContent = "Error: Please fill all fields with valid numbers.";
         resultElement.classList.remove('text-blue-700');
         resultElement.classList.add('text-red-500');
-        setCalculationResult('limitOfFluoride', 'خطا', '', 'error');
+        setCalculationResult('limitOfFluoride', 'Error', '', 'error');
         return;
     }
 
-    const result = C * 0.01;
-    resultElement.textContent = result.toFixed(3) + '%'; // Fluoride limit is usually to 3 decimal places
-    resultElement.classList.remove('text-red-500');
-    resultElement.classList.add('text-blue-700');
+    const resultPercentage = C * 0.01;
+    const resultPPM = resultPercentage * 10000;
 
-    setCalculationResult('limitOfFluoride', result.toFixed(3), '%', 'calculated', 'NMT 0.003%');
+    resultElement.textContent = resultPercentage.toFixed(3) + '%';
+    resultElementPPM.textContent = resultPPM.toFixed(2) + ' ppm';
+
+    const isPassing = resultPercentage <= 0.003;
+    const colorClass = isPassing ? 'text-green-500' : 'text-red-500';
+
+    resultElement.classList.remove('text-blue-700', 'text-red-500', 'text-green-500');
+    resultElement.classList.add(colorClass);
+    resultElementPPM.classList.remove('text-blue-700', 'text-red-500', 'text-green-500');
+    resultElementPPM.classList.add(colorClass);
+
+    setCalculationResult('limitOfFluoride', resultPercentage.toFixed(3), '%', 'calculated', 'NMT 0.003%');
 };
 
 
@@ -637,53 +676,88 @@ window.calculateLOD = function() {
     const initialWeight = parseFloat(document.getElementById('lodInitialWeight').value);
     const finalWeight = parseFloat(document.getElementById('lodFinalWeight').value);
     const resultElement = document.getElementById('lodResult');
+    const resultElementPPM = document.getElementById('lodResultPPM');
 
     if (isNaN(initialWeight) || isNaN(finalWeight)) {
-        resultElement.textContent = "خطا: لطفاً تمام فیلدها را با اعداد معتبر پر کنید.";
+        resultElement.textContent = "Error: Please fill all fields with valid numbers.";
         resultElement.classList.remove('text-blue-700');
         resultElement.classList.add('text-red-500');
-        setCalculationResult('lod', 'خطا', '', 'error');
+        resultElementPPM.textContent = "--";
+        resultElementPPM.classList.remove('text-blue-700');
+        resultElementPPM.classList.add('text-red-500');
+        setCalculationResult('lod', 'Error', '', 'error');
         return;
     }
     if (initialWeight === 0) {
-        resultElement.textContent = "خطا: وزن اولیه (W_initial) نمی‌تواند صفر باشد.";
+        resultElement.textContent = "Error: Initial weight (W_initial) cannot be zero.";
         resultElement.classList.remove('text-blue-700');
         resultElement.classList.add('text-red-500');
-        setCalculationResult('lod', 'خطا', '', 'error');
+        resultElementPPM.textContent = "--";
+        resultElementPPM.classList.remove('text-blue-700');
+        resultElementPPM.classList.add('text-red-500');
+        setCalculationResult('lod', 'Error', '', 'error');
         return;
     }
 
-    const result = ((initialWeight - finalWeight) / initialWeight) * 100;
-    resultElement.textContent = result.toFixed(2) + '%';
-    resultElement.classList.remove('text-red-500');
-    resultElement.classList.add('text-blue-700');
+    const resultPercentage = ((initialWeight - finalWeight) / initialWeight) * 100;
+    const resultPPM = resultPercentage * 10000; // Convert percentage to ppm (1% = 10,000 ppm)
 
-    setCalculationResult('lod', result.toFixed(2), '%', 'calculated', '10.0%-13.3%');
+    resultElement.textContent = resultPercentage.toFixed(2) + '%';
+    resultElementPPM.textContent = resultPPM.toFixed(0) + ' ppm';
+
+    // Check if the result is within the acceptance criteria (10.0% to 13.3%)
+    const isPassing = resultPercentage >= 10.0 && resultPercentage <= 13.3;
+    const colorClass = isPassing ? 'text-green-500' : 'text-red-500';
+
+    // Apply color to the results
+    resultElement.className = `font-bold ${colorClass}`;
+    resultElementPPM.className = `font-bold ${colorClass}`;
+
+    setCalculationResult('lod', resultPercentage.toFixed(2), '%', 'calculated', '10.0%-13.3%');
 };
 
 
 // Function to export COA as a PDF
 window.exportCOAPDF = function() {
-    const element = document.getElementById('coa-content-to-pdf');
-    const exportButton = element.querySelector('button'); // Get the specific button within the COA content
+    const coaContentElement = document.getElementById('coa-content-to-pdf');
+    const exportButton = coaContentElement.querySelector('button'); // Select the button within the COA div
 
     // Hide the button before capturing
     if (exportButton) {
         exportButton.style.display = 'none';
+        console.log("Export button hidden for PDF capture.");
     }
 
     document.fonts.ready().then(() => {
-        html2canvas(element, {
+        console.log("Fonts are ready. Starting html2canvas capture.");
+        html2canvas(coaContentElement, { // Capture the specific COA content div
             scale: 3, // Increased scale for higher resolution
-            logging: true,
-            useCORS: true, // Important if you have images from different origins
+            logging: true, // Enable logging for html2canvas
+            useCORS: true, // Important if you have images/fonts from different origins
         }).then(function(canvas) {
-            const imgData = canvas.toDataURL('image/png');
-            const { jsPDF } = window.jspdf; // Get jsPDF from the global window object
-            const pdf = new jsPDF('p', 'mm', 'a4'); // 'p' for portrait, 'mm' for millimeters, 'a4' for A4 size
+            console.log("html2canvas capture complete.");
+            // Check if the canvas actually has content
+            if (canvas.width === 0 || canvas.height === 0) {
+                console.error("Captured canvas is empty or has zero dimensions.");
+                alert("Error: Captured content is empty. Please ensure the COA tab is visible and fully loaded.");
+                return; // Stop execution if canvas is empty
+            }
 
-            const imgWidth = 210; // A4 width in mm
-            const pageHeight = 297; // A4 height in mm
+            const imgData = canvas.toDataURL('image/png');
+            console.log("Canvas converted to image data. Length:", imgData.length);
+
+            // Check if imgData is valid
+            if (!imgData || imgData.length < 100) { // Arbitrary small length check for validity
+                console.error("Generated image data is invalid or too small.");
+                alert("Error: Failed to convert content to image. The generated PDF might be empty.");
+                return;
+            }
+
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF('p', 'mm', 'a4');
+
+            const imgWidth = 210;
+            const pageHeight = 297;
             const imgHeight = canvas.height * imgWidth / canvas.width;
             let heightLeft = imgHeight;
 
@@ -700,29 +774,153 @@ window.exportCOAPDF = function() {
             }
 
             pdf.save(`COA_Calcium_Citrate_${new Date().toISOString().slice(0, 10)}.pdf`);
+            console.log("PDF save initiated.");
 
         }).catch(error => {
-            console.error("Error capturing screenshot or generating PDF:", error);
-            alert("خطا در گرفتن اسکرین‌شات یا تولید PDF: " + error.message);
+            console.error("Error during html2canvas capture or PDF generation:", error);
+            alert("Error capturing content or generating PDF: " + error.message + ". Check console for details.");
         }).finally(() => {
             // Show the button again after capture (whether successful or not)
             if (exportButton) {
                 exportButton.style.display = ''; // Reset to default display
+                console.log("Export button shown again.");
             }
         });
     }).catch(error => {
-        console.error("Font loading error:", error);
-        alert("خطا در بارگذاری فونت. ممکن است PDF به درستی نمایش داده نشود.");
-        // Ensure button is shown even if font loading fails
+        console.error("Font loading error (initial promise):", error);
+        alert("Font loading error. PDF may not display correctly.");
         if (exportButton) {
             exportButton.style.display = '';
         }
     });
 };
 
+// Function to generate MOA document
+window.generateMOADocument = function() {
+    let moaHtmlContent = `
+        <html lang="fa" dir="rtl">
+        <head>
+            <meta charset="UTF-8">
+            <title>روش تجزیه و تحلیل (MOA) - سیترات کلسیم</title>
+            <style>
+                body { font-family: 'Vazirmatn', sans-serif; line-height: 1.6; direction: rtl; text-align: right; }
+                h1, h2, h3, h4 { color: #333; margin-top: 1.5em; margin-bottom: 0.5em; }
+                h1 { font-size: 2em; text-align: center; }
+                h2 { font-size: 1.5em; border-bottom: 2px solid #ccc; padding-bottom: 5px; }
+                h3 { font-size: 1.2em; }
+                ul { list-style-type: disc; margin-right: 20px; }
+                ol { list-style-type: decimal; margin-right: 20px; }
+                .ltr-section { direction: ltr; text-align: left; }
+                .ltr-text { direction: ltr; display: inline-block; unicode-bidi: isolate; }
+                table { width: 100%; border-collapse: collapse; margin-top: 1em; direction: ltr; text-align: left;}
+                th, td { border: 1px solid #ddd; padding: 8px; text-align: left; direction: ltr;}
+                th { background-color: #f2f2f2; }
+            </style>
+        </head>
+        <body>
+            <h1>روش تجزیه و تحلیل (MOA) - سیترات کلسیم</h1>
+    `;
+
+    const tabsToProcess = [
+        { id: 'definition', title: 'تعریف' },
+        { id: 'identification', title: 'شناسایی' },
+        { id: 'assay', title: 'سنجش' },
+        { id: 'impurities', title: 'ناخالصی‌ها' },
+        { id: 'specific-tests', title: 'آزمایشات خاص' },
+        { id: 'packaging-storage', title: 'بسته‌بندی و نگهداری' }
+    ];
+
+    tabsToProcess.forEach(tabInfo => {
+        const tabElement = document.getElementById(tabInfo.id);
+        if (tabElement) {
+            console.log(`Processing tab: ${tabInfo.id}`);
+            moaHtmlContent += `<h2 style="direction: rtl; text-align: right;">${tabInfo.title}</h2>`;
+
+            const tempDiv = document.createElement('div');
+            tempDiv.setAttribute('dir', 'rtl');
+
+            Array.from(tabElement.children).forEach(childNode => {
+                if (childNode.classList.contains('card')) {
+                    const clonedCard = childNode.cloneNode(true);
+
+                    clonedCard.querySelectorAll('h3, h4, p, ul, ol, table').forEach(contentNode => {
+                        let contentHtml = '';
+                        if (contentNode.tagName === 'TABLE') {
+                            let tableHtml = `<table class="moa-table-ltr"><thead><tr>`;
+                            Array.from(contentNode.querySelectorAll('thead th')).forEach(th => {
+                                tableHtml += `<th style="direction: ltr; text-align: left;">${th.textContent}</th>`;
+                            });
+                            tableHtml += `</tr></thead><tbody>`;
+                            Array.from(contentNode.querySelectorAll('tbody tr')).forEach(tr => {
+                                tableHtml += `<tr>`;
+                                Array.from(tr.querySelectorAll('td')).forEach(td => {
+                                    tableHtml += `<td style="direction: ltr; text-align: left;">${td.innerHTML}</td>`;
+                                });
+                                tableHtml += `</tr>`;
+                            });
+                            tableHtml += `</tbody></table>`;
+                            contentHtml = tableHtml;
+
+                        } else if (contentNode.tagName === 'UL' || contentNode.tagName === 'OL') {
+                            let listHtml = `<${contentNode.tagName.toLowerCase()}>`;
+                            Array.from(contentNode.children).forEach(li => {
+                                listHtml += `<li style="direction: rtl; text-align: right;">${li.innerHTML}</li>`;
+                            });
+                            listHtml += `</${contentNode.tagName.toLowerCase()}>`;
+                            contentHtml = listHtml;
+
+                        } else {
+                            contentHtml = contentNode.outerHTML;
+                        }
+                        tempDiv.innerHTML += contentHtml;
+                    });
+
+                    clonedCard.querySelectorAll('.math-input-group').forEach(group => {
+                        const labelEl = group.querySelector('label');
+                        const inputEl = group.querySelector('input, select');
+                        if (inputEl && labelEl) {
+                            let value = inputEl.value;
+                            if (inputEl.tagName === 'SELECT' && inputEl.selectedOptions.length > 0) {
+                                value = inputEl.selectedOptions[0].text;
+                            }
+
+                            if (value && value !== '---') {
+                                const p = document.createElement('p');
+                                p.innerHTML = `<span style="direction: rtl; text-align: right; display: inline-block;">${labelEl.textContent}</span>: <span style="direction: ltr; display: inline-block; unicode-bidi: isolate;">${value}</span>`;
+                                tempDiv.appendChild(p);
+                            }
+                        }
+                    });
+                }
+            });
+            moaHtmlContent += tempDiv.innerHTML;
+        } else {
+            console.warn(`Tab element not found: ${tabInfo.id}`);
+        }
+    });
+
+    moaHtmlContent += `</body></html>`;
+
+    console.log("Generated MOA HTML content:", moaHtmlContent);
+
+    try {
+        if (typeof saveAs === 'function') {
+            const filename = `MOA_Calcium_Citrate_${new Date().toISOString().slice(0, 10)}.doc`;
+            const blob = new Blob([moaHtmlContent], { type: 'application/msword;charset=utf-8' });
+            saveAs(blob, filename);
+            console.log(`MOA document saved as ${filename}`);
+        } else {
+            console.error("FileSaver.js 'saveAs' function is not available.");
+            alert("Error: File saving functionality is not available. Please ensure FileSaver.js is loaded correctly.");
+        }
+    } catch (e) {
+        console.error("Error saving MOA document:", e);
+        alert("Error saving MOA document: " + e.message + ". Please check browser console for more details.");
+    }
+};
+
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Tab navigation for main tabs
     const mainTabButtons = document.querySelectorAll('nav .tab-button');
     const mainTabContents = document.querySelectorAll('main > .tab-content');
 
@@ -740,24 +938,20 @@ document.addEventListener('DOMContentLoaded', function () {
             });
             document.getElementById(this.dataset.tab).classList.remove('hidden');
 
-            // Re-run MathJax on the newly loaded content
             if (typeof MathJax !== 'undefined') {
                 MathJax.typeset([document.getElementById(this.dataset.tab)]);
             }
 
-            // If COA tab is clicked, update its content
             if (this.dataset.tab === 'coa') {
-                updateCOATab(); // Refresh COA tab content
+                updateCOATab();
             }
         });
     });
 
-    // Initial MathJax typesetting for the default visible tab (definition)
     if (typeof MathJax !== 'undefined') {
         MathJax.typeset([document.getElementById('definition')]);
     }
 
-    // Initial update of COA tab content on page load
     updateCOATab();
 });
 </script>
