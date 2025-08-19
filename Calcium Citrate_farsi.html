@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مونوگراف سیترات کلسیم (USP)</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .tab-active {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        .tab-inactive {
+            border-color: transparent;
+            color: #6b7280;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr; /* Ensure formula itself is LTR */
+        }
+        .pass-text {
+            color: #22c55e;
+        }
+        .fail-text {
+            color: #ef4444;
+        }
+        .interactive-card {
+            background-color: #e0f2fe;
+            border: 1px solid #90cdf4;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 0.5rem;
+        }
+        .calculation-button {
+            background-color: #2563eb;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">مونوگراف سیترات کلسیم (USP)</h1>
+
+        <div class="flex justify-center mb-6 border-b border-gray-200">
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" data-tab="definition">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="identification">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="assay">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="impurities">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="specific-tests">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="additional-requirements">الزامات اضافی</button>
+        </div>
+
+        <div id="definition" class="tab-content card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+            <p>سیترات کلسیم حاوی چهار مولکول آب هیدراتاسیون است. پس از خشک شدن در <span class="ltr-text">150°C</span> تا وزن ثابت، حاوی حداقل <span class="ltr-text">97.5%</span> و حداکثر <span class="ltr-text">100.5%</span> از <span class="ltr-text">Ca₃(C₆H₅O₇)₂</span> است.</p>
+        </div>
+
+        <div id="identification" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+            <div class="mb-4">
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">A.</h4>
+                <p><strong>تجزیه و تحلیل:</strong> <span class="ltr-text">0.5 g</span> را در مخلوطی از <span class="ltr-text">10 mL</span> آب و <span class="ltr-text">2.5 mL</span> اسید نیتریک <span class="ltr-text">2 N</span> حل کنید. <span class="ltr-text">1 mL</span> از <span class="ltr-text">TS</span> سولفات جیوه را اضافه کرده، تا جوشیدن حرارت دهید، و <span class="ltr-text">1 mL</span> از <span class="ltr-text">TS</span> پرمنگنات پتاسیم را اضافه کنید.</p>
+                <p><strong>معیارهای پذیرش:</strong> یک رسوب سفید تشکیل می‌شود.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">B.</h4>
+                <p><strong>نمونه:</strong> <span class="ltr-text">0.5 g</span> از سیترات کلسیم</p>
+                <p><strong>تجزیه و تحلیل:</strong> نمونه را در پایین‌ترین دمای ممکن کاملاً کلسینه کنید، سرد کنید، و با اسید استیک گلاسیال رقیق (<span class="ltr-text">1:10</span>) حل کنید. فیلتر کرده و <span class="ltr-text">10 mL</span> از <span class="ltr-text">TS</span> اگزالات آمونیوم را به فیلترات اضافه کنید.</p>
+                <p><strong>معیارهای پذیرش:</strong> یک رسوب سفید حجیم که در اسید کلریدریک محلول است، تشکیل می‌شود.</p>
+            </div>
+        </div>
+
+        <div id="assay" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش کار</h4>
+            <p><strong>محلول نمونه:</strong> <span class="ltr-text">350 mg</span> سیترات کلسیم را که قبلاً در <span class="ltr-text">150°C</span> تا وزن ثابت خشک شده است، در <span class="ltr-text">12 mL</span> اسید کلریدریک <span class="ltr-text">0.5 M</span> حل کرده و با آب تا حدود <span class="ltr-text">100 mL</span> رقیق کنید.</p>
+            <p><strong>تجزیه و تحلیل:</strong> در حین هم زدن محلول نمونه، <span class="ltr-text">30 mL</span> از <span class="ltr-text">VS</span> ادتات دی‌سدیم <span class="ltr-text">0.05 M</span> را از یک بورت <span class="ltr-text">50-mL</span> اضافه کنید. <span class="ltr-text">15 mL</span> هیدروکسید سدیم <span class="ltr-text">1 N</span> و <span class="ltr-text">300 mg</span> هیدروکسی نفتول آبی را اضافه کنید و تیتر کردن را تا رسیدن به نقطه پایانی آبی ادامه دهید. هر <span class="ltr-text">mL</span> از ادتات دی‌سدیم <span class="ltr-text">0.05 M</span> معادل با <span class="ltr-text">8.307 mg</span> سیترات کلسیم <span class="ltr-text">(Ca₃(C₆H₅O₇)₂)</span> است.</p>
+            <p><strong>معیارهای پذیرش:</strong> <span class="ltr-text">97.5%–100.5%</span> بر اساس خشک شده.</p>
+
+            <div class="interactive-card">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">محاسبه سنجش</h3>
+                <div class="formula-display">
+                    $$Result = \frac{V \times 8.307}{W} \times 100$$
+                </div>
+                <div class="flex flex-col mb-2">
+                    <label for="assay_V" class="mb-1 text-gray-700">حجم تیترانت (mL):</label>
+                    <input type="text" id="assay_V" name="assay_V" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                </div>
+                <div class="flex flex-col mb-2">
+                    <label for="assay_W" class="mb-1 text-gray-700">وزن نمونه (mg):</label>
+                    <input type="text" id="assay_W" name="assay_W" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                </div>
+                <button class="calculation-button" onclick="calculateAssay()">محاسبه</button>
+                <div class="mt-4">
+                    <p>نتیجه: <span id="assay_result" class="font-bold"></span></p>
+                    <p>وضعیت: <span id="assay_status" class="font-bold"></span></p>
+                </div>
+                <div class="mt-4">
+                    <label for="assay_additional_spec" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="assay_additional_spec" name="assay_additional_spec" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div id="impurities" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+
+            <div class="mb-4 card interactive-card">
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آرسنیک، روش I <span class="ltr-text">á<a href="General chapters/211.pdf" class="text-blue-600 hover:underline" target="_blank">211</a>ñ</span></h4>
+                <p><strong>آماده‌سازی تست:</strong> <span class="ltr-text">1 g</span> سیترات کلسیم را در <span class="ltr-text">5 mL</span> اسید کلریدریک <span class="ltr-text">3 N</span> حل کرده و با آب تا <span class="ltr-text">35 mL</span> رقیق کنید.</p>
+                <p><strong>معیارهای پذیرش:</strong> حداکثر <span class="ltr-text">3 ppm</span>.</p>
+                <div class="mt-4">
+                    <label for="arsenic_status" class="mb-1 text-gray-700">وضعیت:</label>
+                    <select id="arsenic_status" name="arsenic_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                        <option value=""></option>
+                        <option value="Pass">Pass</option>
+                        <option value="Fail">Fail</option>
+                    </select>
+                </div>
+                <div class="mt-4">
+                    <label for="arsenic_additional_spec" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="arsenic_additional_spec" name="arsenic_additional_spec" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+            </div>
+
+            <div class="mb-4 card interactive-card">
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سرب <span class="ltr-text">á<a href="General chapters/251.pdf" class="text-blue-600 hover:underline" target="_blank">251</a>ñ</span></h4>
+                <p><strong>آماده‌سازی تست:</strong> <span class="ltr-text">0.5 g</span> سیترات کلسیم را در <span class="ltr-text">20 mL</span> اسید کلریدریک <span class="ltr-text">3 N</span> حل کنید. این محلول را روی حمام بخار تا <span class="ltr-text">10 mL</span> تبخیر کرده، با آب تا <span class="ltr-text">20 mL</span> رقیق کرده و سرد کنید. برای آزمایش از <span class="ltr-text">5 mL</span> محلول استاندارد رقیق سرب (<span class="ltr-text">5 µg</span> از <span class="ltr-text">Pb</span>) استفاده کنید.</p>
+                <p><strong>معیارهای پذیرش:</strong> حداکثر <span class="ltr-text">10 ppm</span>.</p>
+                <div class="mt-4">
+                    <label for="lead_status" class="mb-1 text-gray-700">وضعیت:</label>
+                    <select id="lead_status" name="lead_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                        <option value=""></option>
+                        <option value="Pass">Pass</option>
+                        <option value="Fail">Fail</option>
+                    </select>
+                </div>
+                <div class="mt-4">
+                    <label for="lead_additional_spec" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="lead_additional_spec" name="lead_additional_spec" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+            </div>
+
+            <div class="mb-4 card interactive-card">
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد فلوراید</h4>
+                <p><span class="ltr-text">[NOTE—Prepare and store all solutions in plastic containers.]</span></p>
+                <p><strong>محلول ذخیره استاندارد:</strong> <span class="ltr-text">1000 µg/mL</span> از یون فلوراید از <span class="ltr-text">USP Sodium Fluoride RS</span> در آب</p>
+                <p><strong>محلول استاندارد:</strong> <span class="ltr-text">5 µg/mL</span> از یون فلوراید از محلول ذخیره استاندارد. <span class="ltr-text">[NOTE—Prepare on the day of use.]</span></p>
+                <p><strong>محلول خطی‌سازی A:</strong> <span class="ltr-text">1.0 mL</span> از محلول استاندارد را به یک بشر پلاستیکی <span class="ltr-text">250-mL</span> منتقل کنید. <span class="ltr-text">50 mL</span> آب، <span class="ltr-text">5 mL</span> اسید کلریدریک <span class="ltr-text">1 N</span>، <span class="ltr-text">10 mL</span> سیترات سدیم <span class="ltr-text">1.0 M</span>، و <span class="ltr-text">10 mL</span> ادتات دی‌سدیم <span class="ltr-text">0.2 M</span> را اضافه کنید. در صورت لزوم، با هیدروکسید سدیم <span class="ltr-text">1 N</span> یا اسید کلریدریک <span class="ltr-text">1 N</span> <span class="ltr-text">pH</span> را به <span class="ltr-text">5.5</span> تنظیم کنید. به یک بالن حجمی <span class="ltr-text">100-mL</span> منتقل کرده و با آب تا حجم برسانید. این محلول حاوی <span class="ltr-text">0.05 µg/mL</span> فلوراید است.</p>
+                <p><strong>محلول خطی‌سازی B:</strong> <span class="ltr-text">5.0 mL</span> از محلول استاندارد را به یک بشر پلاستیکی <span class="ltr-text">250-mL</span> منتقل کرده و مطابق با دستورالعمل محلول خطی‌سازی A از "اضافه کردن <span class="ltr-text">50 mL</span> آب" ادامه دهید. این محلول حاوی <span class="ltr-text">0.25 µg/mL</span> فلوراید است.</p>
+                <p><strong>محلول خطی‌سازی C:</strong> <span class="ltr-text">10.0 mL</span> از محلول استاندارد را به یک بشر پلاستیکی <span class="ltr-text">250-mL</span> منتقل کرده و مطابق با دستورالعمل محلول خطی‌سازی A از "اضافه کردن <span class="ltr-text">50 mL</span> آب" ادامه دهید. این محلول حاوی <span class="ltr-text">0.50 µg/mL</span> فلوراید است.</p>
+                <p><strong>محلول نمونه:</strong> <span class="ltr-text">1.0 g</span> سیترات کلسیم را به یک بشر <span class="ltr-text">100-mL</span> منتقل کنید. <span class="ltr-text">10 mL</span> آب و در حین هم زدن <span class="ltr-text">10 mL</span> اسید کلریدریک <span class="ltr-text">1 N</span> را اضافه کنید. پس از حل شدن، به سرعت برای <span class="ltr-text">1 min</span> بجوشانید، محلول را به یک بشر پلاستیکی <span class="ltr-text">250-mL</span> منتقل کرده و در آب یخ سرد کنید. <span class="ltr-text">15 mL</span> سیترات سدیم <span class="ltr-text">1.0 M</span> و <span class="ltr-text">10 mL</span> ادتات دی‌سدیم <span class="ltr-text">0.2 M</span> را اضافه کنید و با هیدروکسید سدیم <span class="ltr-text">1 N</span> یا اسید کلریدریک <span class="ltr-text">1 N</span> <span class="ltr-text">pH</span> را به <span class="ltr-text">5.5</span> تنظیم کنید. این محلول را به یک بالن حجمی <span class="ltr-text">100-mL</span> منتقل کرده و با آب تا حجم برسانید.</p>
+                <p><strong>سیستم الکترودی:</strong> از یک الکترود نشانگر یون مخصوص فلوراید و یک الکترود مرجع نقره-کلرید نقره متصل به <span class="ltr-text">pH</span> متر که قادر به اندازه‌گیری پتانسیل با حداقل بازتولیدپذیری <span class="ltr-text">±0.2 mV</span> است، استفاده کنید (به <span class="ltr-text">pH á<a href="General chapters/791.pdf" class="text-blue-600 hover:underline" target="_blank">791</a>ñ</span> مراجعه کنید).</p>
+                <p><strong>تجزیه و تحلیل:</strong></p>
+                <p><strong>نمونه‌ها:</strong> محلول خطی‌سازی A، محلول خطی‌سازی B، محلول خطی‌سازی C، و محلول نمونه</p>
+                <p><span class="ltr-text">50 mL</span> از هر یک از محلول‌های خطی‌سازی A، B، و C را به بشرهای پلاستیکی <span class="ltr-text">250-mL</span> جداگانه منتقل کرده و پتانسیل هر محلول را با سیستم الکترودی اندازه‌گیری کنید. بین هر قرائت، الکترودها را با آب بشویید و هر آب باقیمانده را با خشک کردن الکترودها با کاغذ جاذب جذب کنید. لگاریتم‌های غلظت‌های فلوراید (<span class="ltr-text">0.05, 0.25, 0.50 µg/mL</span> به ترتیب) را در مقابل پتانسیل رسم کنید تا یک خط پاسخ استاندارد بدست آید.</p>
+                <p><span class="ltr-text">50 mL</span> از محلول نمونه را به یک بشر پلاستیکی <span class="ltr-text">250-mL</span> منتقل کرده و پتانسیل را با سیستم الکترودی اندازه‌گیری کنید. از پتانسیل اندازه‌گیری شده و خط پاسخ استاندارد، غلظت <span class="ltr-text">C</span>، بر حسب <span class="ltr-text">µg/mL</span>، یون فلوراید در محلول نمونه را تعیین کنید. درصد فلوراید در نمونه گرفته شده را با ضرب <span class="ltr-text">C</span> در <span class="ltr-text">0.01</span> محاسبه کنید.</p>
+                <p><strong>معیارهای پذیرش:</strong> حداکثر <span class="ltr-text">0.003%</span>.</p>
+
+                <div class="interactive-card">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">محاسبه حد فلوراید</h3>
+                    <div class="formula-display">
+                        $$Result = C \times 0.01$$
+                    </div>
+                    <div class="flex flex-col mb-2">
+                        <label for="fluoride_C" class="mb-1 text-gray-700">غلظت فلوراید (µg/mL):</label>
+                        <input type="text" id="fluoride_C" name="fluoride_C" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                    </div>
+                    <button class="calculation-button" onclick="calculateFluoride()">محاسبه</button>
+                    <div class="mt-4">
+                        <p>نتیجه: <span id="fluoride_result" class="font-bold"></span></p>
+                        <p>وضعیت: <span id="fluoride_status" class="font-bold"></span></p>
+                    </div>
+                    <div class="mt-4">
+                        <label for="fluoride_additional_spec" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="fluoride_additional_spec" name="fluoride_additional_spec" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4 card interactive-card">
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد مواد نامحلول در اسید</h4>
+                <p><strong>محلول نمونه:</strong> <span class="ltr-text">5 g</span> سیترات کلسیم را با حرارت دادن با مخلوطی از اسید کلریدریک و آب (<span class="ltr-text">10:50</span>) برای <span class="ltr-text">30 min</span> حل کنید.</p>
+                <p><strong>تجزیه و تحلیل:</strong> باقیمانده بدست آمده را فیلتر، شستشو و در <span class="ltr-text">105°C</span> برای <span class="ltr-text">2 h</span> خشک کنید.</p>
+                <p><strong>معیارهای پذیرش:</strong> وزن باقیمانده حداکثر <span class="ltr-text">10 mg (0.2%)</span>.</p>
+
+                <div class="interactive-card">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">محاسبه حد مواد نامحلول در اسید</h3>
+                    <div class="formula-display">
+                        $$Result = (W_{2}-W_{1}) \times 1000$$
+                    </div>
+                    <div class="flex flex-col mb-2">
+                        <label for="acid_insoluble_W1" class="mb-1 text-gray-700">وزن کروزه خالی (g):</label>
+                        <input type="text" id="acid_insoluble_W1" name="acid_insoluble_W1" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                    </div>
+                    <div class="flex flex-col mb-2">
+                        <label for="acid_insoluble_W2" class="mb-1 text-gray-700">وزن کروزه با باقیمانده (g):</label>
+                        <input type="text" id="acid_insoluble_W2" name="acid_insoluble_W2" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                    </div>
+                    <button class="calculation-button" onclick="calculateAcidInsoluble()">محاسبه</button>
+                    <div class="mt-4">
+                        <p>نتیجه (mg): <span id="acid_insoluble_result_mg" class="font-bold"></span></p>
+                        <p>نتیجه (%): <span id="acid_insoluble_result_percent" class="font-bold"></span></p>
+                        <p>وضعیت: <span id="acid_insoluble_status" class="font-bold"></span></p>
+                    </div>
+                    <div class="mt-4">
+                        <label for="acid_insoluble_additional_spec" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="acid_insoluble_additional_spec" name="acid_insoluble_additional_spec" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="specific-tests" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+            <div class="mb-4 card interactive-card">
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">افت رطوبت <span class="ltr-text">á<a href="General chapters/731.pdf" class="text-blue-600 hover:underline" target="_blank">731</a>ñ</span></h4>
+                <p>نمونه‌ای را در <span class="ltr-text">150°C</span> به مدت <span class="ltr-text">4 h</span> خشک کنید: از <span class="ltr-text">10.0%</span> تا <span class="ltr-text">13.3%</span> از وزن خود را از دست می‌دهد.</p>
+
+                <div class="interactive-card">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">محاسبه افت رطوبت</h3>
+                    <div class="formula-display">
+                        $$LOD=\frac{(W_{1}+W_{sa})-W_2}{W_{sa}} \times 100$$
+                    </div>
+                    <div class="flex flex-col mb-2">
+                        <label for="lod_W1" class="mb-1 text-gray-700">وزن ظرف خالی (g):</label>
+                        <input type="text" id="lod_W1" name="lod_W1" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                    </div>
+                    <div class="flex flex-col mb-2">
+                        <label for="lod_Wsa" class="mb-1 text-gray-700">وزن نمونه (g):</label>
+                        <input type="text" id="lod_Wsa" name="lod_Wsa" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                    </div>
+                    <div class="flex flex-col mb-2">
+                        <label for="lod_W2" class="mb-1 text-gray-700">وزن ظرف با نمونه خشک (g):</label>
+                        <input type="text" id="lod_W2" name="lod_W2" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                    </div>
+                    <button class="calculation-button" onclick="calculateLossOnDrying()">محاسبه</button>
+                    <div class="mt-4">
+                        <p>نتیجه: <span id="lod_result" class="font-bold"></span></p>
+                        <p>وضعیت: <span id="lod_status" class="font-bold"></span></p>
+                    </div>
+                    <div class="mt-4">
+                        <label for="lod_additional_spec" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="lod_additional_spec" name="lod_additional_spec" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="additional-requirements" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+            <div class="mb-4">
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">بسته‌بندی و نگهداری</h4>
+                <p>در ظروف دربسته نگهداری شود.</p>
+            </div>
+            <div class="mb-4">
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">استانداردهای مرجع USP <span class="ltr-text">á<a href="General chapters/11.pdf" class="text-blue-600 hover:underline" target="_blank">11</a>ñ</span></h4>
+                <ul>
+                    <li><span class="ltr-text">USP Sodium Fluoride RS</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const targetTab = tab.dataset.tab;
+
+                    tabs.forEach(t => t.classList.remove('tab-active'));
+                    tabContents.forEach(content => content.classList.add('hidden'));
+
+                    tab.classList.add('tab-active');
+                    document.getElementById(targetTab).classList.remove('hidden');
+
+                    // Rerender MathJax when tab changes to ensure formulas are displayed correctly
+                    MathJax.typeset();
+                });
+            });
+
+            // Initial MathJax render
+            MathJax.typeset();
+        });
+
+        // Helper function to display results and status
+        function displayResult(resultSpanId, statusSpanId, result, lowerLimit, upperLimit, unit = '%', acceptanceType = 'range') {
+            const resultSpan = document.getElementById(resultSpanId);
+            const statusSpan = document.getElementById(statusSpanId);
+            
+            resultSpan.textContent = result.toFixed(3) + ' ' + unit;
+            statusSpan.classList.remove('pass-text', 'fail-text');
+
+            let passed = false;
+            if (acceptanceType === 'range') {
+                if (result >= lowerLimit && result <= upperLimit) {
+                    passed = true;
+                }
+            } else if (acceptanceType === 'NMT') { // Not More Than (<= upperLimit)
+                if (result <= upperLimit) {
+                    passed = true;
+                }
+            } else if (acceptanceType === 'NLT') { // Not Less Than (>= lowerLimit)
+                if (result >= lowerLimit) {
+                    passed = true;
+                }
+            }
+
+            if (passed) {
+                statusSpan.textContent = 'موفق';
+                statusSpan.classList.add('pass-text');
+            } else {
+                statusSpan.textContent = 'ناموفق';
+                statusSpan.classList.add('fail-text');
+            }
+        }
+
+        function calculateAssay() {
+            const V = parseFloat(document.getElementById('assay_V').value);
+            const W = parseFloat(document.getElementById('assay_W').value);
+
+            if (isNaN(V) || isNaN(W) || W === 0) {
+                alert('لطفاً مقادیر معتبر را برای حجم تیترانت و وزن نمونه وارد کنید.');
+                return;
+            }
+
+            // Each mL of 0.05 M edetate disodium is equivalent to 8.307 mg of calcium citrate
+            // Result = (Volume_Titrant * 8.307 / Sample_Weight) * 100
+            const result = (V * 8.307 / W) * 100;
+
+            displayResult('assay_result', 'assay_status', result, 97.5, 100.5, '%', 'range');
+        }
+
+        function calculateFluoride() {
+            const C = parseFloat(document.getElementById('fluoride_C').value);
+
+            if (isNaN(C)) {
+                alert('لطفاً مقدار معتبر برای غلظت فلوراید وارد کنید.');
+                return;
+            }
+
+            // Calculate the percentage
+            // "Calculate the percentage of fluoride in the specimen taken by multiplying C by 0.01."
+            const result_percent = C * 0.01; 
+
+            // Acceptance criteria: NMT 0.003%
+            displayResult('fluoride_result', 'fluoride_status', result_percent, undefined, 0.003, '%', 'NMT');
+        }
+
+        function calculateAcidInsoluble() {
+            const W1 = parseFloat(document.getElementById('acid_insoluble_W1').value);
+            const W2 = parseFloat(document.getElementById('acid_insoluble_W2').value);
+
+            if (isNaN(W1) || isNaN(W2)) {
+                alert('لطفاً مقادیر معتبر را برای وزن کروزه وارد کنید.');
+                return;
+            }
+            if (W2 < W1) {
+                alert('وزن کروزه با باقیمانده (W2) نمی‌تواند کمتر از وزن کروزه خالی (W1) باشد.');
+                return;
+            }
+
+            // Formula: Result = (W2-W1)*1000 (Result in mg if W1, W2 are in grams)
+            const result_mg = (W2 - W1) * 1000;
+            const sample_weight_mg = 5000; // 5g sample as per text (Dissolve 5 g of Calcium Citrate)
+            const result_percent = (result_mg / sample_weight_mg) * 100;
+
+            document.getElementById('acid_insoluble_result_mg').textContent = result_mg.toFixed(3) + ' mg';
+            document.getElementById('acid_insoluble_result_percent').textContent = result_percent.toFixed(3) + ' %';
+
+            const statusSpan = document.getElementById('acid_insoluble_status');
+            statusSpan.classList.remove('pass-text', 'fail-text');
+
+            const acceptance_mg = 10; // NMT 10 mg (0.2%)
+
+            if (result_mg <= acceptance_mg) {
+                statusSpan.textContent = 'موفق';
+                statusSpan.classList.add('pass-text');
+            } else {
+                statusSpan.textContent = 'ناموفق';
+                statusSpan.classList.add('fail-text');
+            }
+        }
+
+        function calculateLossOnDrying() {
+            const W1 = parseFloat(document.getElementById('lod_W1').value);
+            const Wsa = parseFloat(document.getElementById('lod_Wsa').value);
+            const W2 = parseFloat(document.getElementById('lod_W2').value);
+
+            if (isNaN(W1) || isNaN(Wsa) || isNaN(W2) || Wsa === 0) {
+                alert('لطفاً مقادیر معتبر را برای وزن‌ها وارد کنید.');
+                return;
+            }
+            if ((W1 + Wsa) < W2) {
+                 alert('وزن ظرف با نمونه خشک (W2) نمی‌تواند بیشتر از وزن ظرف خالی با نمونه اولیه باشد.');
+                 return;
+            }
+
+            // LOD = ((W1+Wsa)-W2)/Wsa*100
+            const result = ((W1 + Wsa) - W2) / Wsa * 100;
+
+            displayResult('lod_result', 'lod_status', result, 10.0, 13.3, '%', 'range');
+        }
+    </script>
+</body>
+</html>

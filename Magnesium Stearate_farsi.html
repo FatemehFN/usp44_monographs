@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مونوگراف استئارات منیزیم (USP)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vazirmatn Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax CDN -->
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .tab-active {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        .tab-inactive {
+            border-color: transparent;
+            color: #6b7280;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+        .pass-text {
+            color: #22c55e;
+        }
+        .fail-text {
+            color: #ef4444;
+        }
+        .interactive-card {
+            background-color: #e0f2fe;
+            border: 1px solid #90cdf4;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 0.5rem;
+        }
+        .calculation-button {
+            background-color: #2563eb;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">استئارات منیزیم</h1>
+
+        <div class="flex justify-center mb-6 border-b border-gray-200">
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" data-tab="definition">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="identification">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="assay">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="impurities">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="specific-tests">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="additional-requirements">الزامات اضافی</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div id="tab-definition" class="tab-content card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+            <p class="mb-4">
+                استئارات منیزیم ترکیبی از منیزیم با مخلوطی از اسیدهای آلی جامد است و عمدتاً از نسبت‌های متغیری از استئارات منیزیم و پالمیتات منیزیم تشکیل شده است. اسیدهای چرب از منابع خوراکی مشتق شده‌اند. این ماده بر اساس ماده خشک، حاوی کمتر از <span class="ltr-text">4.0%</span> و بیشتر از <span class="ltr-text">5.0%</span> منیزیم (<span class="ltr-text">Mg</span>) نیست.
+            </p>
+        </div>
+
+        <div id="tab-identification" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• A. آزمایش‌های شناسایی - عمومی <a href="General chapters/191.pdf" class="text-blue-600 hover:underline" target="_blank">191</a>، منیزیم</h4>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه:</h4>
+            <p class="mb-4">
+                <span class="ltr-text">5.0 g</span> را با <span class="ltr-text">50 mL</span> اتر بدون پراکسید، <span class="ltr-text">20 mL</span> اسید نیتریک رقیق شده و <span class="ltr-text">20 mL</span> آب در یک ارلن ته گرد مخلوط کنید. ارلن را به یک کندانسور رفلاکس متصل کرده و تا زمانی که انحلال کامل شود، رفلاکس کنید. اجازه دهید خنک شود و محتویات ارلن را به یک قیف جداکننده منتقل کنید. تکان دهید، اجازه دهید لایه‌ها جدا شوند و لایه آبی را به یک ارلن منتقل کنید. لایه اتری را با دو بخش <span class="ltr-text">4 mL</span> آب استخراج کنید و این عصاره‌های آبی را به عصاره آبی اصلی اضافه کنید. عصاره آبی را با <span class="ltr-text">15 mL</span> اتر بدون پراکسید شستشو دهید، عصاره آبی را به یک بالن حجمی <span class="ltr-text">50 mL</span> منتقل کرده و با آب به حجم برسانید. بخش استفاده نشده از این محلول را برای آزمایش‌های ناخالصی کلرید و سولفات نگه دارید.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
+            <p class="mb-4">
+                محلول نمونه الزامات را برآورده می‌کند.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• B.</h4>
+            <p class="mb-4">
+                زمان‌های نگهداری پیک‌های مربوط به اسید استئاریک و اسید پالمیتیک محلول نمونه با زمان‌های مربوط به محلول مناسب‌سازی سیستم، که در آزمایش محتوای نسبی اسید استئاریک و اسید پالمیتیک به دست آمده است، مطابقت دارد.
+            </p>
+        </div>
+
+        <div id="tab-assay" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• روش کار</h4>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">بافر:</h4>
+            <p class="mb-4">
+                <span class="ltr-text">5.4 g</span> کلرید آمونیوم را در آب حل کنید، <span class="ltr-text">20 mL</span> هیدروکسید آمونیوم اضافه کنید و با آب به حجم <span class="ltr-text">100 mL</span> برسانید.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه:</h4>
+            <p class="mb-4">
+                <span class="ltr-text">500 mg</span>
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز:</h4>
+            <p class="mb-4">
+                به نمونه، <span class="ltr-text">50 mL</span> از مخلوط بوتیل الکل و الکل بی‌آب (<span class="ltr-text">1:1</span>)، <span class="ltr-text">5 mL</span> هیدروکسید آمونیوم، <span class="ltr-text">3 mL</span> بافر، <span class="ltr-text">30.0 mL</span> از <span class="ltr-text">0.1 M</span> ادتات دی‌سدیم <span class="ltr-text">VS</span> و <span class="ltr-text">1</span> یا <span class="ltr-text">2</span> قطره اریکروم بلک <span class="ltr-text">TS</span> اضافه کنید. در دمای <span class="ltr-text">45°–50°</span> حرارت دهید تا محلول شفاف شود. خنک کنید و ادتات دی‌سدیم اضافی را با <span class="ltr-text">0.1 M</span> سولفات روی <span class="ltr-text">VS</span> تیتر کنید تا رنگ محلول از آبی به بنفش تغییر کند (به <a href="General chapters/541.pdf" class="text-blue-600 hover:underline" target="_blank">541</a> تیتریمتریک مراجعه کنید). یک تعیین بلانک انجام دهید و تصحیحات لازم را اعمال کنید. هر <span class="ltr-text">mL</span> از <span class="ltr-text">0.1 M</span> ادتات دی‌سدیم معادل <span class="ltr-text">2.431 mg</span> منیزیم (<span class="ltr-text">Mg</span>) است.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
+            <p class="mb-4">
+                <span class="ltr-text">4.0%–5.0%</span> بر اساس ماده خشک.
+            </p>
+
+            <div class="card interactive-card">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">ماشین حساب سنجش منیزیم (Mg)</h3>
+                <p>میزان منیزیم (<span class="ltr-text">Mg</span>) را بر حسب درصد محاسبه کنید:</p>
+                <div class="formula-display">
+                    $$Result = \frac{(V_B - V_S) \times 2.431}{W} \times 100$$
+                </div>
+                <div class="flex flex-col mb-4">
+                    <div class="flex items-center mb-2">
+                        <label for="assayMgVB" class="w-24 text-gray-700">VB (mL):</label>
+                        <input type="text" id="assayMgVB" name="assayMgVB" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <label for="assayMgVS" class="w-24 text-gray-700">VS (mL):</label>
+                        <input type="text" id="assayMgVS" name="assayMgVS" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <label for="assayMgW" class="w-24 text-gray-700">W (mg):</label>
+                        <input type="text" id="assayMgW" name="assayMgW" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                    </div>
+                </div>
+                <button class="calculation-button" onclick="calculateAssayMg()">محاسبه</button>
+                <div class="mt-4">
+                    <p>نتیجه: <span class="ltr-text font-bold" id="assayMgResult"></span></p>
+                    <p>وضعیت: <span class="font-bold" id="assayMgStatus"></span></p>
+                </div>
+                <div class="mt-4">
+                    <label for="assayMgSpecs" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="assayMgSpecs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-impurities" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+
+            <div class="card interactive-card">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">• کلرید و سولفات <a href="General chapters/221.pdf" class="text-blue-600 hover:underline" target="_blank">221</a>، کلرید</h3>
+                <p class="mb-4">
+                    یک بخش <span class="ltr-text">10.0 mL</span> از محلول نمونه تهیه شده در آزمایش شناسایی <span class="ltr-text">A</span>، کلریدی بیش از آنچه معادل <span class="ltr-text">1.4 mL</span> از <span class="ltr-text">0.020 N</span> اسید هیدروکلریک (<span class="ltr-text">0.1%</span>) است، نشان نمی‌دهد.
+                </p>
+                <div class="flex items-center mb-4">
+                    <label for="chlorideStatus" class="w-24 text-gray-700">وضعیت:</label>
+                    <select id="chlorideStatus" name="chlorideStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                        <option value=""></option>
+                        <option value="Pass">Pass</option>
+                        <option value="Fail">Fail</option>
+                    </select>
+                </div>
+                <div class="mt-4">
+                    <label for="chlorideSpecs" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="chlorideSpecs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+            </div>
+
+            <div class="card interactive-card mt-6">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">• کلرید و سولفات <a href="General chapters/221.pdf" class="text-blue-600 hover:underline" target="_blank">221</a>، سولفات</h3>
+                <p class="mb-4">
+                    یک بخش <span class="ltr-text">6.0 mL</span> از محلول نمونه تهیه شده در آزمایش شناسایی <span class="ltr-text">A</span>، سولفاتی بیش از آنچه معادل <span class="ltr-text">3.0 mL</span> از <span class="ltr-text">0.020 M</span> اسید سولفوریک (<span class="ltr-text">1.0%</span>) است، نشان نمی‌دهد.
+                </p>
+                <div class="flex items-center mb-4">
+                    <label for="sulfateStatus" class="w-24 text-gray-700">وضعیت:</label>
+                    <select id="sulfateStatus" name="sulfateStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                        <option value=""></option>
+                        <option value="Pass">Pass</option>
+                        <option value="Fail">Fail</option>
+                    </select>
+                </div>
+                <div class="mt-4">
+                    <label for="sulfateSpecs" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="sulfateSpecs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">• محدوده کادمیوم</h3>
+            <p class="mb-4">
+                [توجه—برای تهیه تمامی محلول‌های آبی و شستشوی ظروف شیشه‌ای قبل از استفاده، از آبی استفاده شود که از رزین تبادل یونی با بستر مخلوط (اسید قوی، باز قوی) عبور کرده باشد. تمامی معرف‌ها را با کمترین میزان کادمیوم، سرب و نیکل ممکن انتخاب کنید و تمامی محلول‌های معرف را در ظروف شیشه‌ای بوروسیلیکات نگهداری کنید. ظروف شیشه‌ای را قبل از استفاده با خیساندن در اسید نیتریک <span class="ltr-text">8 N</span> گرم به مدت <span class="ltr-text">30 min</span> تمیز کرده و با آب دیونیزه آبکشی کنید.]
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول اصلاح‌کننده ماتریس:</h4>
+            <p class="mb-4">
+                محلولی حاوی <span class="ltr-text">200 mg/mL</span> مونوبازیک آمونیوم فسفات و <span class="ltr-text">10 mg/mL</span> نیترات منیزیم تهیه کنید. به عنوان جایگزین، از یک اصلاح‌کننده ماتریس مناسب که توسط سازنده طیف‌سنج جذب اتمی کوره گرافیتی (<span class="ltr-text">GFAA</span>) توصیه شده است، استفاده کنید.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">بلانک:</h4>
+            <p class="mb-4">
+                اسید نیتریک در آب (<span class="ltr-text">1</span> در <span class="ltr-text">4</span>)
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استاندارد:</h4>
+            <p class="mb-4">
+                <span class="ltr-text">0.00825 µg/mL</span> کادمیوم نیترات تتراهیدرات در بلانک، معادل غلظت شناخته شده <span class="ltr-text">0.0030 µg/mL</span> کادمیوم
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استوک نمونه:</h4>
+            <p class="mb-4">
+                <span class="ltr-text">0.100 g</span> استئارات منیزیم را به یک بمب هضم اسیدی مناسب با پوشش پلی تترافلوئورواتیلن (<span class="ltr-text">PTFE</span>) منتقل کرده و <span class="ltr-text">2.5 mL</span> اسید نیتریک اضافه کنید. بمب را طبق دستورالعمل‌های عملیاتی سازنده ببندید و مهر و موم کنید. [احتیاط—هنگام استفاده از بمب هضم اسیدی، با دستورالعمل‌های ایمنی و عملیاتی کاملاً آشنا باشید. دستورالعمل‌های سازنده بمب را در مورد مراقبت و نگهداری این بمب‌های هضم اسیدی به دقت دنبال کنید. از بمب‌ها یا لاینرهای با روکش فلزی که با اسید هیدروکلریک استفاده شده‌اند، به دلیل آلودگی ناشی از خوردگی روکش فلزی توسط اسید هیدروکلریک، استفاده نکنید.] بمب را به مدت <span class="ltr-text">3 h</span> در فر در دمای <span class="ltr-text">170°</span> حرارت دهید. بمب را طبق دستورالعمل‌های سازنده بمب به آرامی در دمای اتاق خنک کنید. بمب را در هود قرار دهید و با احتیاط باز کنید زیرا گازهای خورنده ممکن است خارج شوند. باقیمانده را در یک بالن حجمی به حجم <span class="ltr-text">10.0 mL</span> با آب رقیق کنید.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول‌های نمونه:</h4>
+            <p class="mb-4">
+                محلول استوک نمونه را با بلانک (<span class="ltr-text">1</span> در <span class="ltr-text">10</span>) رقیق کنید. مخلوط‌هایی از این محلول، محلول استاندارد و بلانک را با ترکیب‌های نسبی حجمی (<span class="ltr-text">mL</span>) زیر تهیه کنید: <span class="ltr-text">1.0/0/1.0</span>، <span class="ltr-text">1.0/0.5/0.5</span> و <span class="ltr-text">1.0/1.0/0</span>. <span class="ltr-text">50 µL</span> از محلول اصلاح‌کننده ماتریس را به هر مخلوط اضافه کنید. این محلول‌های نمونه به ترتیب حاوی <span class="ltr-text">0</span>، <span class="ltr-text">0.00075</span> و <span class="ltr-text">0.0015 µg/mL</span> کادمیوم از محلول استاندارد هستند. [توجه—باقی‌مانده محلول استوک نمونه را برای استفاده در آزمایش‌های محدوده سرب و محدوده نیکل نگه دارید.]
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط دستگاهی:</h4>
+            <p class="mb-4">
+                (به طیف‌سنجی جذب اتمی <a href="General chapters/852.pdf" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید.)
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حالت:</h4>
+            <p class="mb-4">
+                طیف‌سنجی جذب اتمی (با استفاده از یک طیف‌سنج <span class="ltr-text">GFAA</span> مناسب مجهز به لوله پیرولیتیک با پلتفرم)
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">طول موج آنالیز:</h4>
+            <p class="mb-4">
+                خط انتشار کادمیوم در <span class="ltr-text">228.8 nm</span>
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">لامپ:</h4>
+            <p class="mb-4">
+                کادمیوم کاتد توخالی
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">دما:</h4>
+            <p class="mb-4">
+                از برنامه‌ریزی دمایی توصیه شده برای کادمیوم توسط سازنده <span class="ltr-text">GFAA</span> استفاده کنید (برای مثال‌هایی از پارامترهای دما برای آنالیز <span class="ltr-text">GFAA</span> کادمیوم، به جدول <span class="ltr-text">1</span> مراجعه کنید).
+            </p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">جدول 1</h3>
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th>مرحله خشک کردن</th>
+                        <th>مرحله خاکسترگیری</th>
+                        <th>مرحله اتمیزاسیون</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">110°</span></td>
+                        <td><span class="ltr-text">600°</span></td>
+                        <td><span class="ltr-text">1800°</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">10 s</span></td>
+                        <td><span class="ltr-text">10 s</span></td>
+                        <td><span class="ltr-text">0 s</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">20 s</span></td>
+                        <td><span class="ltr-text">30 s</span></td>
+                        <td><span class="ltr-text">5 s</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز:</h4>
+            <p class="mb-4">
+                از بلانک برای تنظیم دستگاه به صفر استفاده کنید. جذب محلول‌های نمونه را در برابر محتوای کادمیوم آن‌ها، بر حسب <span class="ltr-text">µg/mL</span>، که توسط محلول استاندارد فراهم شده است، ترسیم کنید، خط مستقیمی را که بهترین تطابق را با سه نقطه دارد، با استفاده از روش حداقل مربعات خطی رسم کنید و خط را تا زمانی که محور غلظت را در سمت منفی قطع کند، برون‌یابی کنید. از محل تقاطع، غلظت <span class="ltr-text">C</span> را بر حسب <span class="ltr-text">µg/mL</span> کادمیوم در محلول نمونه حاوی <span class="ltr-text">0 mL</span> از محلول استاندارد تعیین کنید.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">میزان کادمیوم در نمونه برداشت شده را بر حسب <span class="ltr-text">ppm</span> محاسبه کنید:</h4>
+            <div class="formula-display">
+                $$Result = (C/W) \times F$$
+            </div>
+            <ul class="list-disc pr-5 mb-4">
+                <li><span class="ltr-text">W =</span> وزن استئارات منیزیم گرفته شده برای تهیه محلول استوک نمونه (<span class="ltr-text">g</span>)</li>
+                <li><span class="ltr-text">F =</span> فاکتور رقیق‌سازی برای نمونه، <span class="ltr-text">200</span></li>
+            </ul>
+            <p class="mb-4">
+                به عنوان جایگزین، می‌توان از نرم‌افزار <span class="ltr-text">GFAA</span> برای محاسبه محتوای کادمیوم نمونه استفاده کرد. برای هر دو محاسبه، ضریب همبستگی (<span class="ltr-text">r</span>) نمودار افزون استاندارد باید حداقل <span class="ltr-text">0.99</span> باشد.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
+            <p class="mb-4">
+                حداکثر <span class="ltr-text">3 ppm</span>
+            </p>
+
+            <div class="card interactive-card">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">ماشین حساب محدوده کادمیوم</h3>
+                <p>میزان کادمیوم را بر حسب <span class="ltr-text">ppm</span> محاسبه کنید:</p>
+                <div class="formula-display">
+                    $$Result = (C/W) \times F$$
+                </div>
+                <div class="flex flex-col mb-4">
+                    <div class="flex items-center mb-2">
+                        <label for="cadmiumC" class="w-24 text-gray-700">C (µg/mL):</label>
+                        <input type="text" id="cadmiumC" name="cadmiumC" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <label for="cadmiumW" class="w-24 text-gray-700">W (g):</label>
+                        <input type="text" id="cadmiumW" name="cadmiumW" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <label for="cadmiumF" class="w-24 text-gray-700">F (Factor):</label>
+                        <input type="text" id="cadmiumF" name="cadmiumF" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2" value="200">
+                    </div>
+                </div>
+                <button class="calculation-button" onclick="calculateCadmium()">محاسبه</button>
+                <div class="mt-4">
+                    <p>نتیجه: <span class="ltr-text font-bold" id="cadmiumResult"></span> <span class="ltr-text">ppm</span></p>
+                    <p>وضعیت: <span class="font-bold" id="cadmiumStatus"></span></p>
+                </div>
+                <div class="mt-4">
+                    <label for="cadmiumSpecs" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="cadmiumSpecs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">• محدوده سرب</h3>
+            <p class="mb-4">
+                [توجه—برای تهیه تمامی محلول‌های آبی و شستشوی ظروف شیشه‌ای قبل از استفاده، از آبی استفاده شود که از رزین تبادل یونی با بستر مخلوط (اسید قوی، باز قوی) عبور کرده باشد. تمامی معرف‌ها را با کمترین میزان کادمیوم، سرب و نیکل ممکن انتخاب کنید و تمامی محلول‌های معرف را در ظروف شیشه‌ای بوروسیلیکات نگهداری کنید. ظروف شیشه‌ای را قبل از استفاده با خیساندن در اسید نیتریک <span class="ltr-text">8 N</span> گرم به مدت <span class="ltr-text">30 min</span> تمیز کرده و با آب دیونیزه آبکشی کنید.]
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول اصلاح‌کننده ماتریس:</h4>
+            <p class="mb-4">
+                طبق دستورالعمل برای محلول اصلاح‌کننده ماتریس در محدوده کادمیوم تهیه کنید.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">بلانک:</h4>
+            <p class="mb-4">
+                طبق دستورالعمل برای بلانک در محدوده کادمیوم تهیه کنید.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استاندارد:</h4>
+            <p class="mb-4">
+                <span class="ltr-text">0.1598 µg/mL</span> نیترات سرب در بلانک، معادل غلظت شناخته شده <span class="ltr-text">0.100 µg/mL</span> سرب. هر محلول نیترات سرب را در ظروف شیشه‌ای عاری از نمک‌های سرب محلول تهیه و نگهداری کنید.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استوک نمونه:</h4>
+            <p class="mb-4">
+                از بخشی از محلول استوک نمونه که از آزمایش محدوده کادمیوم نگه داشته شده است، استفاده کنید.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول‌های نمونه:</h4>
+            <p class="mb-4">
+                مخلوط‌هایی از محلول استوک نمونه، محلول استاندارد و بلانک را با ترکیب‌های نسبی حجمی (<span class="ltr-text">mL</span>) زیر تهیه کنید: <span class="ltr-text">1.0/0/1.0</span>، <span class="ltr-text">1.0/0.5/0.5</span> و <span class="ltr-text">1.0/1.0/0</span>. <span class="ltr-text">50 µL</span> از محلول اصلاح‌کننده ماتریس را به هر مخلوط اضافه کنید. این محلول‌های نمونه به ترتیب حاوی <span class="ltr-text">0</span>، <span class="ltr-text">0.025</span> و <span class="ltr-text">0.05 µg/mL</span> سرب از محلول استاندارد هستند.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط دستگاهی:</h4>
+            <p class="mb-4">
+                (به طیف‌سنجی جذب اتمی <a href="General chapters/852.pdf" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید.)
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حالت:</h4>
+            <p class="mb-4">
+                طیف‌سنجی جذب اتمی (با استفاده از یک طیف‌سنج <span class="ltr-text">GFAA</span> مناسب مجهز به لوله پیرولیتیک با پلتفرم)
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">طول موج آنالیز:</h4>
+            <p class="mb-4">
+                خط انتشار سرب در <span class="ltr-text">283.3 nm</span>
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">لامپ:</h4>
+            <p class="mb-4">
+                سرب کاتد توخالی
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">دما:</h4>
+            <p class="mb-4">
+                از برنامه‌ریزی دمایی توصیه شده برای سرب توسط سازنده <span class="ltr-text">GFAA</span> استفاده کنید (برای مثال‌هایی از پارامترهای دما برای آنالیز <span class="ltr-text">GFAA</span> سرب، به جدول <span class="ltr-text">1</span> مراجعه کنید).
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز:</h4>
+            <p class="mb-4">
+                از بلانک برای تنظیم دستگاه به صفر استفاده کنید. جذب محلول‌های نمونه را در برابر محتوای سرب آن‌ها، بر حسب <span class="ltr-text">µg/mL</span>، که توسط محلول استاندارد فراهم شده است، ترسیم کنید، خط مستقیمی را که بهترین تطابق را با سه نقطه دارد، با استفاده از روش حداقل مربعات خطی رسم کنید و خط را تا زمانی که محور غلظت را در سمت منفی قطع کند، برون‌یابی کنید. از محل تقاطع، غلظت <span class="ltr-text">C</span> را بر حسب <span class="ltr-text">µg/mL</span> سرب در محلول نمونه حاوی <span class="ltr-text">0 mL</span> از محلول استاندارد تعیین کنید.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">میزان سرب در نمونه برداشت شده را بر حسب <span class="ltr-text">ppm</span> محاسبه کنید:</h4>
+            <div class="formula-display">
+                $$Result = (C/W) \times F$$
+            </div>
+            <ul class="list-disc pr-5 mb-4">
+                <li><span class="ltr-text">W =</span> وزن استئارات منیزیم گرفته شده برای تهیه محلول استوک نمونه (<span class="ltr-text">g</span>)</li>
+                <li><span class="ltr-text">F =</span> فاکتور رقیق‌سازی برای نمونه، <span class="ltr-text">20</span></li>
+            </ul>
+            <p class="mb-4">
+                به عنوان جایگزین، می‌توان از نرم‌افزار <span class="ltr-text">GFAA</span> برای محاسبه محتوای سرب نمونه استفاده کرد. برای هر دو محاسبه، ضریب همبستگی (<span class="ltr-text">r</span>) نمودار افزون استاندارد باید حداقل <span class="ltr-text">0.99</span> باشد.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
+            <p class="mb-4">
+                حداکثر <span class="ltr-text">10 ppm</span>
+            </p>
+
+            <div class="card interactive-card">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">ماشین حساب محدوده سرب</h3>
+                <p>میزان سرب را بر حسب <span class="ltr-text">ppm</span> محاسبه کنید:</p>
+                <div class="formula-display">
+                    $$Result = (C/W) \times F$$
+                </div>
+                <div class="flex flex-col mb-4">
+                    <div class="flex items-center mb-2">
+                        <label for="leadC" class="w-24 text-gray-700">C (µg/mL):</label>
+                        <input type="text" id="leadC" name="leadC" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <label for="leadW" class="w-24 text-gray-700">W (g):</label>
+                        <input type="text" id="leadW" name="leadW" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <label for="leadF" class="w-24 text-gray-700">F (Factor):</label>
+                        <input type="text" id="leadF" name="leadF" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2" value="20">
+                    </div>
+                </div>
+                <button class="calculation-button" onclick="calculateLead()">محاسبه</button>
+                <div class="mt-4">
+                    <p>نتیجه: <span class="ltr-text font-bold" id="leadResult"></span> <span class="ltr-text">ppm</span></p>
+                    <p>وضعیت: <span class="font-bold" id="leadStatus"></span></p>
+                </div>
+                <div class="mt-4">
+                    <label for="leadSpecs" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="leadSpecs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">• محدوده نیکل</h3>
+            <p class="mb-4">
+                [توجه—برای تهیه تمامی محلول‌های آبی و شستشوی ظروف شیشه‌ای قبل از استفاده، از آبی استفاده شود که از رزین تبادل یونی با بستر مخلوط (اسید قوی، باز قوی) عبور کرده باشد. تمامی معرف‌ها را با کمترین میزان کادمیوم، سرب و نیکل ممکن انتخاب کنید و تمامی محلول‌های معرف را در ظروف شیشه‌ای بوروسیلیکات نگهداری کنید. ظروف شیشه‌ای را قبل از استفاده با خیساندن در اسید نیتریک <span class="ltr-text">8 N</span> گرم به مدت <span class="ltr-text">30 min</span> تمیز کرده و با آب دیونیزه آبکشی کنید.]
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول اصلاح‌کننده ماتریس:</h4>
+            <p class="mb-4">
+                طبق دستورالعمل برای محلول اصلاح‌کننده ماتریس در محدوده کادمیوم تهیه کنید.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">بلانک:</h4>
+            <p class="mb-4">
+                طبق دستورالعمل برای بلانک در محدوده کادمیوم تهیه کنید.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استاندارد:</h4>
+            <p class="mb-4">
+                <span class="ltr-text">0.2477 µg/mL</span> نیکل نیترات هگزاهیدرات در بلانک، معادل غلظت شناخته شده <span class="ltr-text">0.050 µg/mL</span> نیکل
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استوک نمونه:</h4>
+            <p class="mb-4">
+                از بخشی از محلول استوک نمونه که از آزمایش محدوده کادمیوم نگه داشته شده است، استفاده کنید.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول‌های نمونه:</h4>
+            <p class="mb-4">
+                مخلوط‌هایی از محلول استوک نمونه، محلول استاندارد و بلانک را با ترکیب‌های نسبی حجمی (<span class="ltr-text">mL</span>) زیر تهیه کنید: <span class="ltr-text">1.0/0/1.0</span>، <span class="ltr-text">1.0/0.5/0.5</span> و <span class="ltr-text">1.0/1.0/0</span>. <span class="ltr-text">50 µL</span> از محلول اصلاح‌کننده ماتریس را به هر مخلوط اضافه کنید. این محلول‌های نمونه به ترتیب حاوی <span class="ltr-text">0</span>، <span class="ltr-text">0.0125</span> و <span class="ltr-text">0.025 µg/mL</span> نیکل از محلول استاندارد هستند.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط دستگاهی:</h4>
+            <p class="mb-4">
+                (به طیف‌سنجی جذب اتمی <a href="General chapters/852.pdf" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید.)
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حالت:</h4>
+            <p class="mb-4">
+                طیف‌سنجی جذب اتمی (با استفاده از یک طیف‌سنج <span class="ltr-text">GFAA</span> مناسب مجهز به لوله پیرولیتیک با پلتفرم)
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">طول موج آنالیز:</h4>
+            <p class="mb-4">
+                خط انتشار نیکل در <span class="ltr-text">232.0 nm</span>
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">لامپ:</h4>
+            <p class="mb-4">
+                نیکل کاتد توخالی
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">دما:</h4>
+            <p class="mb-4">
+                از برنامه‌ریزی دمایی توصیه شده برای نیکل توسط سازنده <span class="ltr-text">GFAA</span> استفاده کنید (برای مثال‌هایی از پارامترهای دما برای آنالیز <span class="ltr-text">GFAA</span> نیکل، به جدول <span class="ltr-text">1</span> مراجعه کنید).
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز:</h4>
+            <p class="mb-4">
+                از بلانک برای تنظیم دستگاه به صفر استفاده کنید. جذب محلول‌های نمونه را در برابر محتوای نیکل آن‌ها، بر حسب <span class="ltr-text">µg/mL</span>، که توسط محلول استاندارد فراهم شده است، ترسیم کنید، خط مستقیمی را که بهترین تطابق را با سه نقطه دارد، با استفاده از روش حداقل مربعات خطی رسم کنید و خط را تا زمانی که محور غلظت را در سمت منفی قطع کند، برون‌یابی کنید. از محل تقاطع، غلظت <span class="ltr-text">C</span> را بر حسب <span class="ltr-text">µg/mL</span> نیکل در محلول نمونه حاوی <span class="ltr-text">0 mL</span> از محلول استاندارد تعیین کنید.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">میزان نیکل در نمونه برداشت شده را بر حسب <span class="ltr-text">ppm</span> محاسبه کنید:</h4>
+            <div class="formula-display">
+                $$Result = (C/W) \times F$$
+            </div>
+            <ul class="list-disc pr-5 mb-4">
+                <li><span class="ltr-text">W =</span> وزن استئارات منیزیم گرفته شده برای تهیه محلول استوک نمونه (<span class="ltr-text">g</span>)</li>
+                <li><span class="ltr-text">F =</span> فاکتور رقیق‌سازی برای نمونه، <span class="ltr-text">20</span></li>
+            </ul>
+            <p class="mb-4">
+                به عنوان جایگزین، می‌توان از نرم‌افزار <span class="ltr-text">GFAA</span> برای محاسبه محتوای نیکل نمونه استفاده کرد. برای هر دو محاسبه، ضریب همبستگی (<span class="ltr-text">r</span>) نمودار افزون استاندارد باید حداقل <span class="ltr-text">0.99</span> باشد.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
+            <p class="mb-4">
+                حداکثر <span class="ltr-text">5 ppm</span>
+            </p>
+
+            <div class="card interactive-card">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">ماشین حساب محدوده نیکل</h3>
+                <p>میزان نیکل را بر حسب <span class="ltr-text">ppm</span> محاسبه کنید:</p>
+                <div class="formula-display">
+                    $$Result = (C/W) \times F$$
+                </div>
+                <div class="flex flex-col mb-4">
+                    <div class="flex items-center mb-2">
+                        <label for="nickelC" class="w-24 text-gray-700">C (µg/mL):</label>
+                        <input type="text" id="nickelC" name="nickelC" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <label for="nickelW" class="w-24 text-gray-700">W (g):</label>
+                        <input type="text" id="nickelW" name="nickelW" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <label for="nickelF" class="w-24 text-gray-700">F (Factor):</label>
+                        <input type="text" id="nickelF" name="nickelF" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2" value="20">
+                    </div>
+                </div>
+                <button class="calculation-button" onclick="calculateNickel()">محاسبه</button>
+                <div class="mt-4">
+                    <p>نتیجه: <span class="ltr-text font-bold" id="nickelResult"></span> <span class="ltr-text">ppm</span></p>
+                    <p>وضعیت: <span class="font-bold" id="nickelStatus"></span></p>
+                </div>
+                <div class="mt-4">
+                    <label for="nickelSpecs" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="nickelSpecs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-specific-tests" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+
+            <div class="card interactive-card">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">• آزمایش‌های شمارش میکروبی <a href="General chapters/61.pdf" class="text-blue-600 hover:underline" target="_blank">61</a> و آزمایش‌های میکروارگانیسم‌های مشخص <a href="General chapters/62.pdf" class="text-blue-600 hover:underline" target="_blank">62</a></h3>
+                <p class="mb-4">
+                    تعداد کلی میکروب‌های هوازی از <span class="ltr-text">10³ cfu/g</span> تجاوز نمی‌کند، تعداد کلی کپک‌ها و مخمرها از <span class="ltr-text">5 × 10² cfu/g</span> تجاوز نمی‌کند. این ماده الزامات آزمایش‌های عدم وجود گونه‌های سالمونلا و اشریشیا کلی را برآورده می‌کند.
+                </p>
+                <div class="flex items-center mb-4">
+                    <label for="microbialStatus" class="w-24 text-gray-700">وضعیت:</label>
+                    <select id="microbialStatus" name="microbialStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                        <option value=""></option>
+                        <option value="Pass">Pass</option>
+                        <option value="Fail">Fail</option>
+                    </select>
+                </div>
+                <div class="mt-4">
+                    <label for="microbialSpecs" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="microbialSpecs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+            </div>
+
+            <div class="card interactive-card mt-6">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">• اسیدیته یا قلیائیت</h3>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه:</h4>
+                <p class="mb-4">
+                    به <span class="ltr-text">1.0 g</span>، <span class="ltr-text">20 mL</span> آب عاری از دی‌اکسید کربن اضافه کنید، به مدت <span class="ltr-text">1 min</span> با تکان دادن مداوم در حمام بخار بجوشانید، خنک کنید و فیلتر کنید. <span class="ltr-text">0.05 mL</span> از <span class="ltr-text">bromothymol blue TS</span> را به <span class="ltr-text">10 mL</span> از فیلتره اضافه کنید.
+                </p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
+                <p class="mb-4">
+                    برای تغییر رنگ شناساگر، نیازی به بیش از <span class="ltr-text">0.05 mL</span> از <span class="ltr-text">0.1 N</span> اسید هیدروکلریک یا <span class="ltr-text">0.1 N</span> هیدروکسید سدیم نیست.
+                </p>
+                <div class="flex items-center mb-4">
+                    <label for="acidityAlkalinityStatus" class="w-24 text-gray-700">وضعیت:</label>
+                    <select id="acidityAlkalinityStatus" name="acidityAlkalinityStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                        <option value=""></option>
+                        <option value="Pass">Pass</option>
+                        <option value="Fail">Fail</option>
+                    </select>
+                </div>
+                <div class="mt-4">
+                    <label for="acidityAlkalinitySpecs" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="acidityAlkalinitySpecs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+            </div>
+
+            <div class="card interactive-card mt-6">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">• سطح ویژه <a href="General chapters/846.pdf" class="text-blue-600 hover:underline" target="_blank">846</a></h3>
+                <p class="mb-4">
+                    [توجه—در مواردی که نگرانی‌های مرتبط با عملکرد در مورد سطح ویژه این مقاله وجود ندارد، این آزمایش ممکن است حذف شود.]
+                </p>
+                <p class="mb-4">
+                    در صورتی که برچسب سطح ویژه را ذکر کند، مقدار سطح ویژه را طبق دستورالعمل فصل در محدوده <span class="ltr-text">P/P₀</span> از <span class="ltr-text">0.05–0.15</span> و با استفاده از شرایط گاززدایی <span class="ltr-text">2 h</span> در <span class="ltr-text">40°</span> تعیین کنید. اگر نمودار برای مقادیر <span class="ltr-text">P/P₀</span> از <span class="ltr-text">0.05–0.15</span> از خطی بودن منحرف شد، آنگاه باید یک محدوده مناسب از مقادیر <span class="ltr-text">P/P₀</span> برای خطی بودن اعتبارسنجی شود. در این صورت، لازم است محدوده مقادیر <span class="ltr-text">P/P₀</span> اعتبارسنجی شده، افزایش مقادیر <span class="ltr-text">P/P₀</span> و شرایط گاززدایی مورد استفاده، ذکر شود.
+                </p>
+                <div class="flex items-center mb-4">
+                    <label for="surfaceAreaStatus" class="w-24 text-gray-700">وضعیت:</label>
+                    <select id="surfaceAreaStatus" name="surfaceAreaStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                        <option value=""></option>
+                        <option value="Pass">Pass</option>
+                        <option value="Fail">Fail</option>
+                    </select>
+                </div>
+                <div class="mt-4">
+                    <label for="surfaceAreaSpecs" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="surfaceAreaSpecs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+            </div>
+
+            <div class="card interactive-card mt-6">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">• افت وزنی در خشک کردن <a href="General chapters/731.pdf" class="text-blue-600 hover:underline" target="_blank">731</a></h3>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز:</h4>
+                <p class="mb-4">
+                    در دمای <span class="ltr-text">105°</span> تا وزن ثابت خشک کنید.
+                </p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
+                <p class="mb-4">
+                    حداکثر <span class="ltr-text">6.0%</span>
+                </p>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">ماشین حساب افت وزنی در خشک کردن (LOD)</h3>
+                <p>افت وزنی در خشک کردن (<span class="ltr-text">LOD</span>) را بر حسب درصد محاسبه کنید:</p>
+                <div class="formula-display">
+                    $$LOD=\frac{(W_{1}+W_{sa})-W_2}{W_{sa}} \times 100$$
+                </div>
+                <div class="flex flex-col mb-4">
+                    <div class="flex items-center mb-2">
+                        <label for="lodW1" class="w-24 text-gray-700">W1 (g):</label>
+                        <input type="text" id="lodW1" name="lodW1" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <label for="lodWsa" class="w-24 text-gray-700">Wsa (g):</label>
+                        <input type="text" id="lodWsa" name="lodWsa" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <label for="lodW2" class="w-24 text-gray-700">W2 (g):</label>
+                        <input type="text" id="lodW2" name="lodW2" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                    </div>
+                </div>
+                <button class="calculation-button" onclick="calculateLOD()">محاسبه</button>
+                <div class="mt-4">
+                    <p>نتیجه: <span class="ltr-text font-bold" id="lodResult"></span></p>
+                    <p>نتیجه (ppm): <span class="ltr-text font-bold" id="lodResultPPM"></span></p>
+                    <p>وضعیت: <span class="font-bold" id="lodStatus"></span></p>
+                </div>
+                <div class="mt-4">
+                    <label for="lodSpecs" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="lodSpecs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+            </div>
+
+            <div class="card interactive-card mt-6">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">• محتوای نسبی اسید استئاریک و اسید پالمیتیک</h3>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول مناسب‌سازی سیستم:</h4>
+                <p class="mb-4">
+                    <span class="ltr-text">50 mg</span> از <span class="ltr-text">USP Stearic Acid RS</span> و <span class="ltr-text">USP Palmitic Acid RS</span> را به یک ارلن مخروطی کوچک مجهز به کندانسور رفلاکس مناسب منتقل کنید. <span class="ltr-text">5.0 mL</span> از محلولی که با حل کردن <span class="ltr-text">14 g</span> تری‌فلورید بور در متانول برای تهیه <span class="ltr-text">100 mL</span> تهیه شده است، اضافه کنید، بچرخانید تا مخلوط شود و به مدت <span class="ltr-text">10 min</span> تا زمانی که جامدات حل شوند، رفلاکس کنید. <span class="ltr-text">4 mL</span> از <span class="ltr-text">n-heptane</span> کروماتوگرافی را از طریق کندانسور اضافه کنید و به مدت <span class="ltr-text">10 min</span> رفلاکس کنید. خنک کنید، <span class="ltr-text">20 mL</span> محلول کلرید سدیم اشباع شده اضافه کنید، تکان دهید و اجازه دهید لایه‌ها جدا شوند. لایه <span class="ltr-text">n-heptane</span> را از <span class="ltr-text">0.1 g</span> سولفات سدیم انیدروس (که قبلاً با <span class="ltr-text">n-heptane</span> کروماتوگرافی شسته شده است) به یک ارلن مناسب عبور دهید. <span class="ltr-text">1.0 mL</span> از این محلول را به یک بالن حجمی <span class="ltr-text">10 mL</span> منتقل کرده و با <span class="ltr-text">n-heptane</span> کروماتوگرافی به حجم برسانید.
+                </p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه:</h4>
+                <p class="mb-4">
+                    <span class="ltr-text">100 mg</span> استئارات منیزیم را به یک ارلن مخروطی کوچک مجهز به کندانسور رفلاکس مناسب منتقل کنید و طبق دستورالعمل محلول مناسب‌سازی سیستم، از "اضافه کردن <span class="ltr-text">5.0 mL</span> از محلولی که با حل کردن" ادامه دهید.
+                </p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم کروماتوگرافی:</h4>
+                <p class="mb-4">
+                    (به کروماتوگرافی <a href="General chapters/621.pdf" class="text-blue-600 hover:underline" target="_blank">621</a>، مناسب‌سازی سیستم مراجعه کنید.)
+                </p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حالت:</h4>
+                <p class="mb-4">
+                    <span class="ltr-text">GC</span>
+                </p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">دتکتور:</h4>
+                <p class="mb-4">
+                    یونیزاسیون شعله
+                </p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ستون:</h4>
+                <p class="mb-4">
+                    کاپیلاری سیلیس ذوب شده <span class="ltr-text">0.32-mm × 30-m</span>، با لایه <span class="ltr-text">0.5-µm</span> از فاز <span class="ltr-text">G16</span>
+                </p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">دماها:</h4>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">انژکتور:</h4>
+                <p class="mb-4">
+                    <span class="ltr-text">220°</span>
+                </p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">دتکتور:</h4>
+                <p class="mb-4">
+                    <span class="ltr-text">260°</span>
+                </p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ستون:</h4>
+                <p class="mb-4">
+                    به جدول <span class="ltr-text">2</span> مراجعه کنید.
+                </p>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">جدول 2</h3>
+                <table class="mb-4">
+                    <thead>
+                        <tr>
+                            <th>دمای اولیه (درجه سانتی‌گراد)</th>
+                            <th>شیب دما (درجه سانتی‌گراد در دقیقه)</th>
+                            <th>دمای نهایی (درجه سانتی‌گراد)</th>
+                            <th>زمان نگهداری در دمای نهایی (دقیقه)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="ltr-text">70</span></td>
+                            <td>—</td>
+                            <td><span class="ltr-text">70</span></td>
+                            <td><span class="ltr-text">2</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="ltr-text">70</span></td>
+                            <td><span class="ltr-text">5</span></td>
+                            <td><span class="ltr-text">240</span></td>
+                            <td><span class="ltr-text">5</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">گاز حامل:</h4>
+                <p class="mb-4">
+                    هلیوم
+                </p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نرخ جریان:</h4>
+                <p class="mb-4">
+                    <span class="ltr-text">2.4 mL/min</span>
+                </p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حجم تزریق:</h4>
+                <p class="mb-4">
+                    <span class="ltr-text">1 µL</span>
+                </p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نوع تزریق:</h4>
+                <p class="mb-4">
+                    سیستم تزریق بدون شکاف
+                </p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مناسب‌سازی سیستم:</h4>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه:</h4>
+                <p class="mb-4">
+                    محلول مناسب‌سازی سیستم
+                </p>
+                <p class="mb-4">
+                    [توجه—زمان‌های نگهداری نسبی برای متیل پالمیتات و متیل استئارات به ترتیب حدود <span class="ltr-text">0.9</span> و <span class="ltr-text">1.0</span> هستند.]
+                </p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">الزامات مناسب‌سازی:</h4>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تفکیک‌پذیری:</h4>
+                <p class="mb-4">
+                    کمتر از <span class="ltr-text">5.0</span> بین متیل پالمیتات و متیل استئارات نباشد.
+                </p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">انحراف معیار نسبی:</h4>
+                <p class="mb-4">
+                    بیشتر از <span class="ltr-text">3.0%</span> برای مساحت‌های پیک پالمیتات و استئارات از شش تزریق تکراری نباشد؛ بیشتر از <span class="ltr-text">1.0%</span> برای نسبت مساحت پیک پالمیتات به استئارات از شش تزریق تکراری نباشد.
+                </p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز:</h4>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه:</h4>
+                <p class="mb-4">
+                    محلول نمونه
+                </p>
+                <p class="mb-4">
+                    مساحت‌های پیک تمامی استرهای اسید چرب را در کروماتوگرام اندازه‌گیری کنید.
+                </p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">درصد اسید استئاریک در بخش اسید چرب از میزان استئارات منیزیم گرفته شده را محاسبه کنید:</h4>
+                <div class="formula-display">
+                    $$Result = (rU/rT) \times 100$$
+                </div>
+                <ul class="list-disc pr-5 mb-4">
+                    <li><span class="ltr-text">rU =</span> مساحت پیک متیل استئارات از محلول نمونه</li>
+                    <li><span class="ltr-text">rT =</span> مجموع مساحت پیک‌های تمامی استرهای اسید چرب از محلول نمونه</li>
+                </ul>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">به همین ترتیب، درصد اسید پالمیتیک در میزان استئارات منیزیم گرفته شده را محاسبه کنید.</h4>
+                <div class="formula-display">
+                    $$Result = (rP/rT) \times 100$$
+                </div>
+                <ul class="list-disc pr-5 mb-4">
+                    <li><span class="ltr-text">rP =</span> مساحت پیک متیل پالمیتات از محلول نمونه</li>
+                    <li><span class="ltr-text">rT =</span> مجموع مساحت پیک‌های تمامی استرهای اسید چرب از محلول نمونه</li>
+                </ul>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
+                <p class="mb-4">
+                    برای پیک استئارات کمتر از <span class="ltr-text">40%</span> نباشد. مجموع پیک‌های استئارات و پالمیتات کمتر از <span class="ltr-text">90%</span> از مجموع مساحت پیک‌های تمامی اسیدهای چرب نباشد.
+                </p>
+
+                <div class="card interactive-card">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">ماشین حساب محتوای نسبی اسید استئاریک و پالمیتیک</h3>
+                    <p>درصد اسید استئاریک و اسید پالمیتیک را محاسبه کنید:</p>
+                    <div class="flex flex-col mb-4">
+                        <div class="flex items-center mb-2">
+                            <label for="stearic_rU" class="w-40 text-gray-700">rU (مساحت پیک متیل استئارات):</label>
+                            <input type="text" id="stearic_rU" name="stearic_rU" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <label for="palmitic_rP" class="w-40 text-gray-700">rP (مساحت پیک متیل پالمیتات):</label>
+                            <input type="text" id="palmitic_rP" name="palmitic_rP" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <label for="total_rT" class="w-40 text-gray-700">rT (مجموع مساحت‌های پیک‌ها):</label>
+                            <input type="text" id="total_rT" name="total_rT" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                        </div>
+                    </div>
+                    <button class="calculation-button" onclick="calculateFattyAcids()">محاسبه</button>
+                    <div class="mt-4">
+                        <p>نتیجه اسید استئاریک: <span class="ltr-text font-bold" id="stearicAcidResult"></span></p>
+                        <p>نتیجه اسید پالمیتیک: <span class="ltr-text font-bold" id="palmiticAcidResult"></span></p>
+                        <p>وضعیت (استئاریک >= 40%): <span class="font-bold" id="stearicAcidStatus"></span></p>
+                        <p>وضعیت (مجموع >= 90%): <span class="font-bold" id="sumFattyAcidsStatus"></span></p>
+                    </div>
+                    <div class="mt-4">
+                        <label for="fattyAcidSpecs" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="fattyAcidSpecs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-additional-requirements" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• بسته‌بندی و نگهداری:</h4>
+            <p class="mb-4">
+                در ظروف محکم نگهداری شود.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• برچسب‌گذاری:</h4>
+            <p class="mb-4">
+                در صورتی که برچسب سطح ویژه را ذکر کند، همچنین نشان می‌دهد که کدام روش مشخص شده در سطح ویژه <a href="General chapters/846.pdf" class="text-blue-600 hover:underline" target="_blank">846</a> استفاده شده است. برچسب نشان دهد که اسیدهای چرب از منابع خوراکی مشتق شده‌اند.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• استانداردهای مرجع <span class="ltr-text">USP</span> <a href="General chapters/11.pdf" class="text-blue-600 hover:underline" target="_blank">11</a>:</h4>
+            <ul class="list-disc pr-5 mb-4">
+                <li>استاندارد مرجع <span class="ltr-text">USP</span> اسید پالمیتیک</li>
+                <li>استاندارد مرجع <span class="ltr-text">USP</span> اسید استئاریک</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Deactivate all tab buttons
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('tab-active');
+                        btn.classList.add('tab-inactive');
+                    });
+
+                    // Hide all tab contents
+                    tabContents.forEach(content => {
+                        content.classList.add('hidden');
+                    });
+
+                    // Activate clicked tab button
+                    button.classList.remove('tab-inactive');
+                    button.classList.add('tab-active');
+
+                    // Show corresponding tab content
+                    const targetTabId = button.dataset.tab;
+                    document.getElementById(`tab-${targetTabId}`).classList.remove('hidden');
+                });
+            });
+        });
+
+        function formatNumber(num) {
+            return parseFloat(num).toLocaleString('en-US', { maximumFractionDigits: 5 });
+        }
+
+        function displayResult(resultSpan, statusSpan, result, passCondition, failCondition, unit = '', isPPM = false) {
+            if (isNaN(result)) {
+                resultSpan.textContent = 'خطا در ورودی';
+                statusSpan.textContent = '';
+                resultSpan.classList.remove('pass-text', 'fail-text');
+                statusSpan.classList.remove('pass-text', 'fail-text');
+                return;
+            }
+
+            resultSpan.textContent = `${formatNumber(result)}${unit}`;
+            let passed = true;
+
+            if (passCondition) {
+                if (!passCondition(result)) {
+                    passed = false;
+                }
+            }
+            if (failCondition) {
+                if (failCondition(result)) {
+                    passed = false;
+                }
+            }
+
+            if (passed) {
+                statusSpan.textContent = 'پذیرفته شد';
+                statusSpan.classList.remove('fail-text');
+                statusSpan.classList.add('pass-text');
+            } else {
+                statusSpan.textContent = 'رد شد';
+                statusSpan.classList.remove('pass-text');
+                statusSpan.classList.add('fail-text');
+            }
+        }
+
+        function calculateAssayMg() {
+            const VB = parseFloat(document.getElementById('assayMgVB').value);
+            const VS = parseFloat(document.getElementById('assayMgVS').value);
+            const W = parseFloat(document.getElementById('assayMgW').value);
+
+            const resultSpan = document.getElementById('assayMgResult');
+            const statusSpan = document.getElementById('assayMgStatus');
+
+            if (isNaN(VB) || isNaN(VS) || isNaN(W) || W === 0) {
+                resultSpan.textContent = 'ورودی نامعتبر';
+                statusSpan.textContent = '';
+                return;
+            }
+
+            const result = ((VB - VS) * 2.431 / W) * 100;
+            
+            displayResult(resultSpan, statusSpan, result, 
+                (val) => val >= 4.0 && val <= 5.0, 
+                null, 
+                '%');
+        }
+
+        function calculateCadmium() {
+            const C = parseFloat(document.getElementById('cadmiumC').value);
+            const W = parseFloat(document.getElementById('cadmiumW').value);
+            const F = parseFloat(document.getElementById('cadmiumF').value);
+
+            const resultSpan = document.getElementById('cadmiumResult');
+            const statusSpan = document.getElementById('cadmiumStatus');
+
+            if (isNaN(C) || isNaN(W) || isNaN(F) || W === 0) {
+                resultSpan.textContent = 'ورودی نامعتبر';
+                statusSpan.textContent = '';
+                return;
+            }
+
+            const result = (C / W) * F;
+            
+            displayResult(resultSpan, statusSpan, result, 
+                (val) => val <= 3, 
+                null); // Unit PPM is already handled in text
+        }
+
+        function calculateLead() {
+            const C = parseFloat(document.getElementById('leadC').value);
+            const W = parseFloat(document.getElementById('leadW').value);
+            const F = parseFloat(document.getElementById('leadF').value);
+
+            const resultSpan = document.getElementById('leadResult');
+            const statusSpan = document.getElementById('leadStatus');
+
+            if (isNaN(C) || isNaN(W) || isNaN(F) || W === 0) {
+                resultSpan.textContent = 'ورودی نامعتبر';
+                statusSpan.textContent = '';
+                return;
+            }
+
+            const result = (C / W) * F;
+            
+            displayResult(resultSpan, statusSpan, result, 
+                (val) => val <= 10, 
+                null); // Unit PPM is already handled in text
+        }
+
+        function calculateNickel() {
+            const C = parseFloat(document.getElementById('nickelC').value);
+            const W = parseFloat(document.getElementById('nickelW').value);
+            const F = parseFloat(document.getElementById('nickelF').value);
+
+            const resultSpan = document.getElementById('nickelResult');
+            const statusSpan = document.getElementById('nickelStatus');
+
+            if (isNaN(C) || isNaN(W) || isNaN(F) || W === 0) {
+                resultSpan.textContent = 'ورودی نامعتبر';
+                statusSpan.textContent = '';
+                return;
+            }
+
+            const result = (C / W) * F;
+            
+            displayResult(resultSpan, statusSpan, result, 
+                (val) => val <= 5, 
+                null); // Unit PPM is already handled in text
+        }
+
+        function calculateLOD() {
+            const W1 = parseFloat(document.getElementById('lodW1').value);
+            const Wsa = parseFloat(document.getElementById('lodWsa').value);
+            const W2 = parseFloat(document.getElementById('lodW2').value);
+
+            const resultSpan = document.getElementById('lodResult');
+            const resultPPM = document.getElementById('lodResultPPM');
+            const statusSpan = document.getElementById('lodStatus');
+
+            if (isNaN(W1) || isNaN(Wsa) || isNaN(W2) || Wsa === 0) {
+                resultSpan.textContent = 'ورودی نامعتبر';
+                resultPPM.textContent = '';
+                statusSpan.textContent = '';
+                return;
+            }
+
+            const result = (((W1 + Wsa) - W2) / Wsa) * 100;
+            const ppm = (result / 100) * 1000000;
+            
+            displayResult(resultSpan, statusSpan, result, 
+                (val) => val <= 6.0, 
+                null, 
+                '%');
+            
+            resultPPM.textContent = `${formatNumber(ppm)} ppm`;
+        }
+
+        function calculateFattyAcids() {
+            const rU = parseFloat(document.getElementById('stearic_rU').value);
+            const rP = parseFloat(document.getElementById('palmitic_rP').value);
+            const rT = parseFloat(document.getElementById('total_rT').value);
+
+            const stearicResultSpan = document.getElementById('stearicAcidResult');
+            const palmiticResultSpan = document.getElementById('palmiticAcidResult');
+            const stearicStatusSpan = document.getElementById('stearicAcidStatus');
+            const sumFattyAcidsStatusSpan = document.getElementById('sumFattyAcidsStatus');
+
+            if (isNaN(rU) || isNaN(rP) || isNaN(rT) || rT === 0) {
+                stearicResultSpan.textContent = 'ورودی نامعتبر';
+                palmiticResultSpan.textContent = '';
+                stearicStatusSpan.textContent = '';
+                sumFattyAcidsStatusSpan.textContent = '';
+                return;
+            }
+
+            const stearicResult = (rU / rT) * 100;
+            const palmiticResult = (rP / rT) * 100;
+            const sumResults = stearicResult + palmiticResult;
+
+            stearicResultSpan.textContent = `${formatNumber(stearicResult)}%`;
+            palmiticResultSpan.textContent = `${formatNumber(palmiticResult)}%`;
+
+            // Stearic Acid Acceptance
+            if (stearicResult >= 40) {
+                stearicStatusSpan.textContent = 'پذیرفته شد';
+                stearicStatusSpan.classList.remove('fail-text');
+                stearicStatusSpan.classList.add('pass-text');
+            } else {
+                stearicStatusSpan.textContent = 'رد شد';
+                stearicStatusSpan.classList.remove('pass-text');
+                stearicStatusSpan.classList.add('fail-text');
+            }
+
+            // Sum of Stearic and Palmitic Acceptance
+            if (sumResults >= 90) {
+                sumFattyAcidsStatusSpan.textContent = 'پذیرفته شد';
+                sumFattyAcidsStatusSpan.classList.remove('fail-text');
+                sumFattyAcidsStatusSpan.classList.add('pass-text');
+            } else {
+                sumFattyAcidsStatusSpan.textContent = 'رد شد';
+                sumFattyAcidsStatusSpan.classList.remove('pass-text');
+                sumFattyAcidsStatusSpan.classList.add('fail-text');
+            }
+        }
+
+    </script>
+</body>
+</html>
