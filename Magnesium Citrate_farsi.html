@@ -6,11 +6,11 @@
     <title>مونوگراف سیترات منیزیم (USP)</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Vazirmatn -->
+    <!-- Vazirmatn Font -->
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
     <!-- MathJax -->
     <script type="text/javascript" id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
     <style>
         body {
@@ -90,7 +90,7 @@
 </head>
 <body>
     <div class="container mx-auto p-4 max-w-4xl">
-        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">مونوگراف سیترات منیزیم (USP)</h1>
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">سیترات منیزیم</h1>
 
         <div class="flex justify-center mb-6 border-b border-gray-200">
             <button class="tab-button py-2 px-4 border-b-2 tab-active" data-tab="definition">تعریف</button>
@@ -103,273 +103,244 @@
 
         <div id="definition" class="tab-content card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
-            <p class="mb-2"><span class="ltr-text">C₁₂H₁₀Mg₃O₁₄</span></p>
-            <p class="mb-2"><span class="ltr-text">451.11</span></p>
-            <p class="mb-2">اسید 1،2،3-پروپان‌تری‌کربوکسیلیک، هیدروکسی-، نمک منیزیم (2:3)؛</p>
-            <p class="mb-4">سیترات منیزیم (3:2) [<span class="ltr-text">3344-18-1</span>].</p>
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">تعریف</h3>
-            <p>سیترات منیزیم حاوی حداقل <span class="ltr-text">14.5%</span> و حداکثر <span class="ltr-text">16.4%</span> منیزیم (<span class="ltr-text">Mg</span>) است که بر اساس مبنای خشک محاسبه می‌شود.</p>
+            <p>سیترات منیزیم دارای کمتر از <span class="ltr-text">14.5%</span> و بیشتر از <span class="ltr-text">16.4%</span> منیزیم (<span class="ltr-text">Mg</span>) است که بر اساس مبنای خشک محاسبه می‌شود.</p>
+            <p><span class="ltr-text">C12H10Mg3O14</span></p>
+            <p><span class="ltr-text">451.11</span></p>
+            <p>اسید <span class="ltr-text">1,2,3</span>-پروپان‌تری‌کربوکسیلیک، هیدروکسی-، نمک منیزیم (<span class="ltr-text">2:3</span>)؛</p>
+            <p>سیترات منیزیم (<span class="ltr-text">3:2</span>) [<span class="ltr-text">3344-18-1</span>].</p>
         </div>
 
         <div id="identification" class="tab-content card hidden">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
-
-            <div class="mb-4">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">A. آزمایشات شناسایی—کلی، منیزیم <a href="General chapters/191.pdf" class="text-blue-600 hover:underline" target="_blank">191</a></h3>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه:</h4>
-                <p><span class="ltr-text">10 mg/mL</span></p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                <p>الزامات را برآورده می‌کند.</p>
+            <div class="card interactive-card">
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آزمایشات شناسایی—عمومی، منیزیم <a href="General chapters/191.pdf" class="text-blue-600 hover:underline" target="_blank">191</a></h4>
+                <p>نمونه: <span class="ltr-text">10 mg/mL</span></p>
+                <label for="identification-a-status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
+                <select id="identification-a-status" name="identification-a-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                    <option value=""></option>
+                    <option value="Pass">Pass</option>
+                    <option value="Fail">Fail</option>
+                </select>
+                <label for="identification-a-spec" class="block text-gray-700 text-sm font-bold mt-4 mb-2">توضیحات اضافه / Additional Specifications:</label>
+                <textarea id="identification-a-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
-            <div class="mb-4">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">B. آزمایشات شناسایی—کلی، سیترات <a href="General chapters/191.pdf" class="text-blue-600 hover:underline" target="_blank">191</a></h3>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه:</h4>
-                <p><span class="ltr-text">80 mg/mL</span></p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                <p>الزامات را برآورده می‌کند.</p>
+            <div class="card interactive-card mt-4">
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آزمایشات شناسایی—عمومی، سیترات <a href="General chapters/191.pdf" class="text-blue-600 hover:underline" target="_blank">191</a></h4>
+                <p>نمونه: <span class="ltr-text">80 mg/mL</span></p>
+                <label for="identification-b-status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
+                <select id="identification-b-status" name="identification-b-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                    <option value=""></option>
+                    <option value="Pass">Pass</option>
+                    <option value="Fail">Fail</option>
+                </select>
+                <label for="identification-b-spec" class="block text-gray-700 text-sm font-bold mt-4 mb-2">توضیحات اضافه / Additional Specifications:</label>
+                <textarea id="identification-b-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
         </div>
 
         <div id="assay" class="tab-content card hidden">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
-
-            <div class="mb-4">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">روش</h3>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه:</h4>
-                <p><span class="ltr-text">400 mg</span></p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز:</h4>
-                <p>نمونه را در <span class="ltr-text">50 mL</span> آب حل کنید. <span class="ltr-text">20 mL</span> از بافر آمونیاک-آمونیوم کلرید <span class="ltr-text">TS</span> و <span class="ltr-text">0.1 mL</span> از اریوکروم بلک <span class="ltr-text">TS</span> اضافه کنید. با <span class="ltr-text">0.05 M</span> ادتات دی‌سدیم <span class="ltr-text">VS</span> تیتر کنید تا به نقطه پایان آبی برسد. یک تعیین شاهد انجام دهید (به تیتریمتری <a href="General chapters/541.pdf" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید) و اصلاحات لازم را انجام دهید. از حجم <span class="ltr-text">0.05 M</span> ادتات دی‌سدیم مصرف‌شده، حجم <span class="ltr-text">0.05 M</span> ادتات دی‌سدیم متناظر با مقدار کلسیم موجود در بخش سیترات منیزیم برداشته شده را، بر اساس مقدار کلسیم یافت شده در آزمایش حد کلسیم، کم کنید. هر <span class="ltr-text">mg</span> از <span class="ltr-text">Ca</span> معادل <span class="ltr-text">0.25 mL</span> از <span class="ltr-text">0.05 M</span> ادتات دی‌سدیم است. تفاوت، حجم <span class="ltr-text">0.05 M</span> ادتات دی‌سدیم مصرف‌شده توسط منیزیم است. هر <span class="ltr-text">mL</span> از <span class="ltr-text">0.05 M</span> ادتات دی‌سدیم معادل <span class="ltr-text">1.215 mg</span> از <span class="ltr-text">Mg</span> است.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                <p><span class="ltr-text">14.5%–16.4%</span> بر اساس مبنای خشک.</p>
-            </div>
-
             <div class="card interactive-card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">سنجش (Assay) - نتیجه</h3>
-                <div class="mb-4">
-                    <label for="assay-status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
-                    <select id="assay-status" name="assay-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                </div>
-                <label for="assay-additional-spec" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                <textarea id="assay-additional-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش کار</h4>
+                <p>نمونه: <span class="ltr-text">400 mg</span></p>
+                <p>تحلیل: نمونه را در <span class="ltr-text">50 mL</span> آب حل کنید. <span class="ltr-text">20 mL</span> از بافر آمونیاک-آمونیوم کلرید <span class="ltr-text">TS</span> و <span class="ltr-text">0.1 mL</span> از اریوکروم بلک <span class="ltr-text">TS</span> اضافه کنید. با <span class="ltr-text">0.05 M</span> ادتات دی‌سدیم <span class="ltr-text">VS</span> تا نقطه پایانی آبی تیتر کنید. تعیین بلانک را انجام دهید (رجوع شود به تیترسنجی <a href="General chapters/541.pdf" class="text-blue-600 hover:underline" target="_blank">541</a>)، و هرگونه اصلاح لازم را اعمال کنید. از حجم <span class="ltr-text">0.05 M</span> ادتات دی‌سدیم مصرف‌شده، حجم <span class="ltr-text">0.05 M</span> ادتات دی‌سدیم مربوط به مقدار کلسیم در بخش سیترات منیزیم گرفته شده را کسر کنید، بر اساس مقدار کلسیم یافت‌شده در آزمایش حد کلسیم. هر <span class="ltr-text">mg</span> کلسیم معادل <span class="ltr-text">0.25 mL</span> از <span class="ltr-text">0.05 M</span> ادتات دی‌سدیم است. تفاوت، حجم <span class="ltr-text">0.05 M</span> ادتات دی‌سدیم مصرف‌شده توسط منیزیم است. هر <span class="ltr-text">mL</span> از <span class="ltr-text">0.05 M</span> ادتات دی‌سدیم معادل <span class="ltr-text">1.215 mg</span> منیزیم است.</p>
+                <p>معیارهای پذیرش: <span class="ltr-text">14.5%–16.4%</span> بر اساس مبنای خشک</p>
+                <label for="assay-status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
+                <select id="assay-status" name="assay-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                    <option value=""></option>
+                    <option value="Pass">Pass</option>
+                    <option value="Fail">Fail</option>
+                </select>
+                <label for="assay-spec" class="block text-gray-700 text-sm font-bold mt-4 mb-2">توضیحات اضافه / Additional Specifications:</label>
+                <textarea id="assay-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
         </div>
 
         <div id="impurities" class="tab-content card hidden">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
 
-            <div class="mb-4">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات، کلرید <a href="General chapters/221.pdf" class="text-blue-600 hover:underline" target="_blank">221</a></h3>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه:</h4>
-                <p><span class="ltr-text">300 mg</span></p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                <p>مقدار کلرید آن بیشتر از آنچه که با <span class="ltr-text">0.20 mL</span> از <span class="ltr-text">0.020 N</span> اسید کلریدریک (<span class="ltr-text">0.05%</span>) مطابقت دارد، نباشد.</p>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-blue-600 mb-2">نتیجه</h4>
-                    <div class="mb-4">
-                        <label for="chloride-status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
-                        <select id="chloride-status" name="chloride-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                            <option value=""></option>
-                            <option value="Pass">Pass</option>
-                            <option value="Fail">Fail</option>
-                        </select>
-                    </div>
-                    <label for="chloride-additional-spec" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="chloride-additional-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
+            <div class="card interactive-card">
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کلرید و سولفات، کلرید <a href="General chapters/221.pdf" class="text-blue-600 hover:underline" target="_blank">221</a></h4>
+                <p>نمونه: <span class="ltr-text">300 mg</span></p>
+                <p>معیارهای پذیرش: بیشتر از <span class="ltr-text">0.20 mL</span> اسید هیدروکلریک <span class="ltr-text">0.020 N</span> (<span class="ltr-text">0.05%</span>) کلرید نشان نمی‌دهد.</p>
+                <label for="chloride-status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
+                <select id="chloride-status" name="chloride-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                    <option value=""></option>
+                    <option value="Pass">Pass</option>
+                    <option value="Fail">Fail</option>
+                </select>
+                <label for="chloride-spec" class="block text-gray-700 text-sm font-bold mt-4 mb-2">توضیحات اضافه / Additional Specifications:</label>
+                <textarea id="chloride-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
-            <div class="mb-4">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات، سولفات <a href="General chapters/221.pdf" class="text-blue-600 hover:underline" target="_blank">221</a></h3>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه:</h4>
-                <p><span class="ltr-text">100 mg</span></p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                <p>مقدار سولفات آن بیشتر از آنچه که با <span class="ltr-text">0.20 mL</span> از <span class="ltr-text">0.020 N</span> اسید سولفوریک (<span class="ltr-text">0.2%</span>) مطابقت دارد، نباشد.</p>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-blue-600 mb-2">نتیجه</h4>
-                    <div class="mb-4">
-                        <label for="sulfate-status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
-                        <select id="sulfate-status" name="sulfate-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                            <option value=""></option>
-                            <option value="Pass">Pass</option>
-                            <option value="Fail">Fail</option>
-                        </select>
-                    </div>
-                    <label for="sulfate-additional-spec" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="sulfate-additional-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
+            <div class="card interactive-card mt-4">
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کلرید و سولفات، سولفات <a href="General chapters/221.pdf" class="text-blue-600 hover:underline" target="_blank">221</a></h4>
+                <p>نمونه: <span class="ltr-text">100 mg</span></p>
+                <p>معیارهای پذیرش: بیشتر از <span class="ltr-text">0.20 mL</span> اسید سولفوریک <span class="ltr-text">0.020 N</span> (<span class="ltr-text">0.2%</span>) سولفات نشان نمی‌دهد.</p>
+                <label for="sulfate-status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
+                <select id="sulfate-status" name="sulfate-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                    <option value=""></option>
+                    <option value="Pass">Pass</option>
+                    <option value="Fail">Fail</option>
+                </select>
+                <label for="sulfate-spec" class="block text-gray-700 text-sm font-bold mt-4 mb-2">توضیحات اضافه / Additional Specifications:</label>
+                <textarea id="sulfate-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
-            <div class="mb-4">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">آرسنیک، روش <span class="ltr-text">I</span> <a href="General chapters/211.pdf" class="text-blue-600 hover:underline" target="_blank">211</a></h3>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                <p>حداکثر <span class="ltr-text">3 ppm</span></p>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-blue-600 mb-2">نتیجه</h4>
-                    <div class="mb-4">
-                        <label for="arsenic-status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
-                        <select id="arsenic-status" name="arsenic-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                            <option value=""></option>
-                            <option value="Pass">Pass</option>
-                            <option value="Fail">Fail</option>
-                        </select>
-                    </div>
-                    <label for="arsenic-additional-spec" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="arsenic-additional-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
+            <div class="card interactive-card mt-4">
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آرسنیک، روش اول <a href="General chapters/211.pdf" class="text-blue-600 hover:underline" target="_blank">211</a></h4>
+                <p>معیارهای پذیرش: بیشتر از <span class="ltr-text">3 ppm</span> نیست.</p>
+                <label for="arsenic-status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
+                <select id="arsenic-status" name="arsenic-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                    <option value=""></option>
+                    <option value="Pass">Pass</option>
+                    <option value="Fail">Fail</option>
+                </select>
+                <label for="arsenic-spec" class="block text-gray-700 text-sm font-bold mt-4 mb-2">توضیحات اضافه / Additional Specifications:</label>
+                <textarea id="arsenic-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
-            <div class="mb-4">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">آهن <a href="General chapters/241.pdf" class="text-blue-600 hover:underline" target="_blank">241</a></h3>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آماده‌سازی نمونه:</h4>
-                <p><span class="ltr-text">50 mg</span> را با <span class="ltr-text">5 mL</span> اسید نیتریک <span class="ltr-text">2 N</span> به مدت <span class="ltr-text">1 min</span> بجوشانید. خنک کنید، با آب تا <span class="ltr-text">45 mL</span> رقیق کنید، و <span class="ltr-text">2 mL</span> اسید کلریدریک اضافه کنید.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                <p>حداکثر <span class="ltr-text">200 ppm</span></p>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-blue-600 mb-2">نتیجه</h4>
-                    <div class="mb-4">
-                        <label for="iron-status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
-                        <select id="iron-status" name="iron-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                            <option value=""></option>
-                            <option value="Pass">Pass</option>
-                            <option value="Fail">Fail</option>
-                        </select>
-                    </div>
-                    <label for="iron-additional-spec" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="iron-additional-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
+            <div class="card interactive-card mt-4">
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آهن <a href="General chapters/241.pdf" class="text-blue-600 hover:underline" target="_blank">241</a></h4>
+                <p>آماده‌سازی نمونه آزمایش: <span class="ltr-text">50 mg</span> را با <span class="ltr-text">5 mL</span> اسید نیتریک <span class="ltr-text">2 N</span> به مدت <span class="ltr-text">1 min</span> بجوشانید. خنک کنید، با آب تا <span class="ltr-text">45 mL</span> رقیق کنید، و <span class="ltr-text">2 mL</span> اسید هیدروکلریک اضافه کنید.</p>
+                <p>معیارهای پذیرش: بیشتر از <span class="ltr-text">200 ppm</span> نیست.</p>
+                <label for="iron-status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
+                <select id="iron-status" name="iron-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                    <option value=""></option>
+                    <option value="Pass">Pass</option>
+                    <option value="Fail">Fail</option>
+                </select>
+                <label for="iron-spec" class="block text-gray-700 text-sm font-bold mt-4 mb-2">توضیحات اضافه / Additional Specifications:</label>
+                <textarea id="iron-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
-            <div class="mb-4">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">حد کلسیم</h3>
-                <p class="text-gray-700 text-sm mb-2">[توجه—یک محلول استاندارد جذب اتمی کلسیم موجود در بازار می‌تواند به جای آماده‌سازی محلول ذخیره استاندارد کلسیم که در ادامه توضیح داده شده است، استفاده شود. غلظت‌های محلول‌های استاندارد و محلول نمونه ممکن است برای مطابقت با دامنه خطی یا کاری دستگاه تغییر یابند.]</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">اسید کلریدریک رقیق:</h4>
-                <p><span class="ltr-text">100 mL</span> اسید کلریدریک را با آب تا <span class="ltr-text">1000 mL</span> رقیق کنید.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول لانتانیم:</h4>
-                <p>به <span class="ltr-text">58.65 g</span> اکسید لانتانیم، <span class="ltr-text">400 mL</span> آب اضافه کنید، و به تدریج با هم زدن، <span class="ltr-text">250 mL</span> اسید کلریدریک اضافه کنید. هم بزنید تا حل شود، و با آب تا <span class="ltr-text">1000 mL</span> رقیق کنید.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول‌های استاندارد:</h4>
-                <p><span class="ltr-text">249.7 mg</span> کربنات کلسیم را، که قبلاً در <span class="ltr-text">300°</span> به مدت <span class="ltr-text">3 h</span> خشک شده و به مدت <span class="ltr-text">2 h</span> در دسی‌کاتور خنک شده است، به یک بالن حجمی <span class="ltr-text">100-mL</span> منتقل کنید. در حداقل مقدار اسید کلریدریک حل کرده و با آب تا حجم برسانید. <span class="ltr-text">1.0</span>، <span class="ltr-text">5.0</span>، <span class="ltr-text">10.0</span>، و <span class="ltr-text">15.0 mL</span> از این محلول ذخیره را به بالن‌های حجمی <span class="ltr-text">1000-mL</span> جداگانه، که هر یک حاوی <span class="ltr-text">20 mL</span> محلول لانتانیم و <span class="ltr-text">40 mL</span> اسید کلریدریک رقیق هستند، منتقل کنید. با آب تا حجم برسانید. این محلول‌های استاندارد به ترتیب حاوی <span class="ltr-text">1.0</span>، <span class="ltr-text">5.0</span>، <span class="ltr-text">10.0</span>، و <span class="ltr-text">15.0 µg/mL</span> کلسیم هستند.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه:</h4>
-                <p><span class="ltr-text">250 mg</span> سیترات منیزیم را به یک بشر منتقل کنید، <span class="ltr-text">30 mL</span> اسید کلریدریک رقیق اضافه کنید، و هم بزنید تا حل شود. محلول را به یک بالن حجمی <span class="ltr-text">200-mL</span> حاوی <span class="ltr-text">4 mL</span> محلول لانتانیم منتقل کنید، و با آب تا حجم برسانید.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول شاهد:</h4>
-                <p><span class="ltr-text">4 mL</span> محلول لانتانیم و <span class="ltr-text">10 mL</span> اسید کلریدریک رقیق را به یک بالن حجمی <span class="ltr-text">200-mL</span> منتقل کنید، و با آب تا حجم برسانید.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط دستگاهی:</h4>
-                <p>(به طیف‌سنجی جذب اتمی <a href="General chapters/852.pdf" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید.)</p>
-                <ul class="list-disc pr-5 mt-2 mb-2">
+            <div class="card interactive-card mt-4">
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد کلسیم</h4>
+                <p class="mb-2">[توجه—یک محلول استاندارد جذب اتمی موجود در بازار برای کلسیم می‌تواند در جایی که تهیه محلول ذخیره استاندارد کلسیم در زیر توضیح داده شده است، استفاده شود. غلظت‌های محلول‌های استاندارد و محلول نمونه ممکن است برای مطابقت با محدوده خطی یا کاری ابزار تغییر یابند.]</p>
+                <p>اسید هیدروکلریک رقیق: <span class="ltr-text">100 mL</span> اسید هیدروکلریک را با آب تا <span class="ltr-text">1000 mL</span> رقیق کنید.</p>
+                <p>محلول لانتانوم: به <span class="ltr-text">58.65 g</span> اکسید لانتانوم <span class="ltr-text">400 mL</span> آب اضافه کنید، و به تدریج با هم زدن <span class="ltr-text">250 mL</span> اسید هیدروکلریک اضافه کنید. هم بزنید تا حل شود، و با آب تا <span class="ltr-text">1000 mL</span> رقیق کنید.</p>
+                <p>محلول‌های استاندارد: <span class="ltr-text">249.7 mg</span> کربنات کلسیم را که قبلاً در <span class="ltr-text">300°</span> به مدت <span class="ltr-text">3 h</span> خشک شده و در یک دسیکاتور به مدت <span class="ltr-text">2 h</span> خنک شده است، به یک بالن حجمی <span class="ltr-text">100-mL</span> منتقل کنید. در حداقل مقدار اسید هیدروکلریک حل کنید، و با آب تا حجم رقیق کنید. <span class="ltr-text">1.0</span>، <span class="ltr-text">5.0</span>، <span class="ltr-text">10.0</span> و <span class="ltr-text">15.0 mL</span> از این محلول ذخیره را به بالن‌های حجمی جداگانه <span class="ltr-text">1000-mL</span> منتقل کنید، هر کدام حاوی <span class="ltr-text">20 mL</span> محلول لانتانوم و <span class="ltr-text">40 mL</span> اسید هیدروکلریک رقیق هستند. با آب تا حجم رقیق کنید. این محلول‌های استاندارد به ترتیب <span class="ltr-text">1.0</span>، <span class="ltr-text">5.0</span>، <span class="ltr-text">10.0</span> و <span class="ltr-text">15.0 µg/mL</span> کلسیم دارند.</p>
+                <p>محلول نمونه: <span class="ltr-text">250 mg</span> سیترات منیزیم را به یک بشر منتقل کنید، <span class="ltr-text">30 mL</span> اسید هیدروکلریک رقیق اضافه کنید، و هم بزنید تا حل شود. محلول را به یک بالن حجمی <span class="ltr-text">200-mL</span> حاوی <span class="ltr-text">4 mL</span> محلول لانتانوم منتقل کنید، و با آب تا حجم رقیق کنید.</p>
+                <p>محلول بلانک: <span class="ltr-text">4 mL</span> محلول لانتانوم و <span class="ltr-text">10 mL</span> اسید هیدروکلریک رقیق را به یک بالن حجمی <span class="ltr-text">200-mL</span> منتقل کنید، و با آب تا حجم رقیق کنید.</p>
+                <h3>شرایط ابزاری</h3>
+                <p>(رجوع شود به طیف‌سنجی جذب اتمی <a href="General chapters/852.pdf" class="text-blue-600 hover:underline" target="_blank">852</a>).</p>
+                <ul>
                     <li>حالت: طیف‌سنجی جذب اتمی</li>
-                    <li>طول موج تحلیلی: خط نشر کلسیم در <span class="ltr-text">422.7 nm</span></li>
+                    <li>طول موج تحلیلی: خط انتشار کلسیم در <span class="ltr-text">422.7 nm</span></li>
                     <li>لامپ: کاتد توخالی کلسیم</li>
-                    <li>شعله: اکسید نیتروژن–استیلن</li>
+                    <li>شعله: نیتروس اکسید–استیلن</li>
                 </ul>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز:</h4>
-                <p>نمونه‌ها: محلول‌های استاندارد، محلول نمونه، و محلول شاهد</p>
-                <p>غلظت <span class="ltr-text">C</span> بر حسب <span class="ltr-text">µg/mL</span> کلسیم را در محلول نمونه با استفاده از نمودار کالیبراسیون تعیین کنید.</p>
-                <p>درصد کلسیم را در بخش سیترات منیزیم برداشته شده محاسبه کنید:</p>
+                <h3>تحلیل</h3>
+                <p>نمونه‌ها: محلول‌های استاندارد، محلول نمونه، و محلول بلانک</p>
+                <p>غلظت <span class="ltr-text">C</span>، بر حسب <span class="ltr-text">µg/mL</span>، کلسیم را در محلول نمونه با استفاده از نمودار کالیبراسیون تعیین کنید.</p>
+                <p>درصد کلسیم را در بخش سیترات منیزیم گرفته شده محاسبه کنید:</p>
                 <div class="formula-display">
                     $$Result = (V/W \times C \times F) \times 100$$
                 </div>
-                <ul class="list-disc pr-5 mt-2 mb-2">
-                    <li><span class="ltr-text">V</span> = حجم محلول نمونه (<span class="ltr-text">mL</span>)</li>
-                    <li><span class="ltr-text">W</span> = وزن سیترات منیزیم برداشته شده (<span class="ltr-text">mg</span>)</li>
-                    <li><span class="ltr-text">C</span> = غلظت کلسیم در محلول نمونه (<span class="ltr-text">µg/mL</span>)</li>
-                    <li><span class="ltr-text">F</span> = ضریب تبدیل از <span class="ltr-text">µg/mL</span> به <span class="ltr-text">mg/mL</span>، <span class="ltr-text">0.001</span></li>
-                </ul>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                <p>حداکثر <span class="ltr-text">1.0%</span> بر اساس مبنای خشک.</p>
+                <p>
+                    <span class="ltr-text">V</span> = حجم محلول نمونه (<span class="ltr-text">mL</span>)<br>
+                    <span class="ltr-text">W</span> = وزن سیترات منیزیم گرفته شده (<span class="ltr-text">mg</span>)<br>
+                    <span class="ltr-text">C</span> = غلظت کلسیم در محلول نمونه (<span class="ltr-text">µg/mL</span>)<br>
+                    <span class="ltr-text">F</span> = تبدیل از <span class="ltr-text">µg/mL</span> به <span class="ltr-text">mg/mL</span>، <span class="ltr-text">0.001</span>
+                </p>
+                <p>معیارهای پذیرش: بیشتر از <span class="ltr-text">1.0%</span> بر اساس مبنای خشک نیست.</p>
 
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-blue-600 mb-2">حد کلسیم - محاسبه‌گر</h4>
-                    <div class="flex flex-col mb-4">
-                        <label for="limitOfCalcium_V" class="block text-gray-700 text-sm font-bold mb-2">حجم محلول نمونه (<span class="ltr-text">mL</span>) - <span class="ltr-text">V</span>:</label>
-                        <input type="text" id="limitOfCalcium_V" name="V" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        <label for="limitOfCalcium_W" class="block text-gray-700 text-sm font-bold mb-2">وزن سیترات منیزیم برداشته شده (<span class="ltr-text">mg</span>) - <span class="ltr-text">W</span>:</label>
-                        <input type="text" id="limitOfCalcium_W" name="W" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        <label for="limitOfCalcium_C" class="block text-gray-700 text-sm font-bold mb-2">غلظت کلسیم در محلول نمونه (<span class="ltr-text">µg/mL</span>) - <span class="ltr-text">C</span>:</label>
-                        <input type="text" id="limitOfCalcium_C" name="C" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        <label for="limitOfCalcium_F" class="block text-gray-700 text-sm font-bold mb-2">ضریب تبدیل (<span class="ltr-text">F</span>):</label>
-                        <input type="text" id="limitOfCalcium_F" name="F" value="0.001" readonly class="ltr-text shadow appearance-none border border-gray-300 bg-gray-100 rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <button class="calculation-button" onclick="calculateLimitOfCalcium()">محاسبه</button>
-                    <div class="mt-4">
-                        <p class="text-gray-700 text-sm font-bold">نتیجه: <span id="limitOfCalcium-result" class="ltr-text"></span></p>
-                        <p class="text-gray-700 text-sm font-bold">نتیجه (<span class="ltr-text">ppm</span>): <span id="limitOfCalcium-ppm-result" class="ltr-text"></span></p>
-                        <p class="text-gray-700 text-sm font-bold">وضعیت: <span id="limitOfCalcium-status"></span></p>
-                    </div>
-                    <label for="limitOfCalcium-additional-spec" class="block text-gray-700 text-sm font-bold mt-4 mb-2">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="limitOfCalcium-additional-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                <div class="mt-4">
+                    <label for="calcium-V" class="block text-gray-700 text-sm font-bold mb-2">V (حجم محلول نمونه):</label>
+                    <input type="text" id="calcium-V" name="calcium-V" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
                 </div>
+                <div>
+                    <label for="calcium-W" class="block text-gray-700 text-sm font-bold mb-2">W (وزن سیترات منیزیم):</label>
+                    <input type="text" id="calcium-W" name="calcium-W" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                </div>
+                <div>
+                    <label for="calcium-C" class="block text-gray-700 text-sm font-bold mb-2">C (غلظت کلسیم):</label>
+                    <input type="text" id="calcium-C" name="calcium-C" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                </div>
+                <div>
+                    <label for="calcium-F" class="block text-gray-700 text-sm font-bold mb-2">F (ضریب تبدیل):</label>
+                    <input type="text" id="calcium-F" name="calcium-F" value="0.001" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                </div>
+                <button onclick="calculateCalcium()" class="calculation-button mt-4">محاسبه</button>
+                <p class="mt-4">نتیجه: <span id="calcium-result-percent" class="font-bold ltr-text"></span></p>
+                <p>وضعیت: <span id="calcium-status" class="font-bold"></span></p>
+                <label for="calcium-spec" class="block text-gray-700 text-sm font-bold mt-4 mb-2">توضیحات اضافه / Additional Specifications:</label>
+                <textarea id="calcium-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
         </div>
 
         <div id="specific-tests" class="tab-content card hidden">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
 
-            <div class="mb-4">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2"><span class="ltr-text">PH</span> <a href="General chapters/791.pdf" class="text-blue-600 hover:underline" target="_blank">791</a></h3>
+            <div class="card interactive-card">
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">pH <a href="General chapters/791.pdf" class="text-blue-600 hover:underline" target="_blank">791</a></h4>
                 <p><span class="ltr-text">5.0–9.0</span>، در سوسپانسیون (<span class="ltr-text">50 mg/mL</span>)</p>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-blue-600 mb-2">نتیجه</h4>
-                    <div class="mb-4">
-                        <label for="ph-status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
-                        <select id="ph-status" name="ph-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                            <option value=""></option>
-                            <option value="Pass">Pass</option>
-                            <option value="Fail">Fail</option>
-                        </select>
-                    </div>
-                    <label for="ph-additional-spec" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="ph-additional-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
+                <label for="ph-status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
+                <select id="ph-status" name="ph-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                    <option value=""></option>
+                    <option value="Pass">Pass</option>
+                    <option value="Fail">Fail</option>
+                </select>
+                <label for="ph-spec" class="block text-gray-700 text-sm font-bold mt-4 mb-2">توضیحات اضافه / Additional Specifications:</label>
+                <textarea id="ph-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
-            <div class="mb-4">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">افت وزنی در اثر خشک کردن <a href="General chapters/731.pdf" class="text-blue-600 hover:underline" target="_blank">731</a></h3>
-                <p><span class="ltr-text">1 g</span> را در آون کانوکشن مکانیکی در دمای <span class="ltr-text">135°</span> به مدت <span class="ltr-text">16 h</span> خشک کنید، سپس تا وزن ثابت: حداکثر <span class="ltr-text">29%</span> از وزن خود را از دست می‌دهد، مگر اینکه برچسب انیدروس داشته باشد، در این صورت حداکثر <span class="ltr-text">2.0%</span> از وزن خود را از دست می‌دهد.</p>
+            <div class="card interactive-card mt-4">
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">افت در خشک کردن <a href="General chapters/731.pdf" class="text-blue-600 hover:underline" target="_blank">731</a></h4>
+                <p><span class="ltr-text">1 g</span> را در کوره همرفتی مکانیکی در <span class="ltr-text">135°</span> به مدت <span class="ltr-text">16 h</span> خشک کنید، سپس تا وزن ثابت: بیش از <span class="ltr-text">29%</span> وزن خود را از دست نمی‌دهد، مگر اینکه به عنوان انیدروس برچسب‌گذاری شده باشد، که در این صورت بیش از <span class="ltr-text">2.0%</span> وزن خود را از دست نمی‌دهد.</p>
                 <div class="formula-display">
-                    $$LOD = \frac{(W_{1}+W_{sa})-W_2}{W_{sa}} \times 100$$
+                    $$LOD = \frac{(W_1 + W_{sa}) - W_2}{W_{sa}} \times 100$$
                 </div>
-
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-blue-600 mb-2">افت وزنی در اثر خشک کردن - محاسبه‌گر</h4>
-                    <div class="flex flex-col mb-4">
-                        <label for="lossOnDrying_W1" class="block text-gray-700 text-sm font-bold mb-2">وزن کروزه خالی (<span class="ltr-text">W₁</span>):</label>
-                        <input type="text" id="lossOnDrying_W1" name="W1" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        <label for="lossOnDrying_Wsa" class="block text-gray-700 text-sm font-bold mb-2">وزن نمونه اولیه (<span class="ltr-text">Wsa</span>):</label>
-                        <input type="text" id="lossOnDrying_Wsa" name="Wsa" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        <label for="lossOnDrying_W2" class="block text-gray-700 text-sm font-bold mb-2">وزن کروزه با نمونه خشک شده (<span class="ltr-text">W₂</span>):</label>
-                        <input type="text" id="lossOnDrying_W2" name="W2" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div class="mb-4">
-                        <input type="checkbox" id="lossOnDrying_anhydrous" class="ml-2">
-                        <label for="lossOnDrying_anhydrous" class="text-gray-700 text-sm font-bold">محصول انیدروس است؟</label>
-                    </div>
-                    <button class="calculation-button" onclick="calculateLossOnDrying()">محاسبه</button>
-                    <div class="mt-4">
-                        <p class="text-gray-700 text-sm font-bold">نتیجه: <span id="lossOnDrying-result" class="ltr-text"></span></p>
-                        <p class="text-gray-700 text-sm font-bold">نتیجه (<span class="ltr-text">ppm</span>): <span id="lossOnDrying-ppm-result" class="ltr-text"></span></p>
-                        <p class="text-gray-700 text-sm font-bold">وضعیت: <span id="lossOnDrying-status"></span></p>
-                    </div>
-                    <label for="lossOnDrying-additional-spec" class="block text-gray-700 text-sm font-bold mt-4 mb-2">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="lossOnDrying-additional-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                <div class="mt-4">
+                    <label for="lod-W1" class="block text-gray-700 text-sm font-bold mb-2">W1:</label>
+                    <input type="text" id="lod-W1" name="lod-W1" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
                 </div>
+                <div>
+                    <label for="lod-Wsa" class="block text-gray-700 text-sm font-bold mb-2">Wsa:</label>
+                    <input type="text" id="lod-Wsa" name="lod-Wsa" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                </div>
+                <div>
+                    <label for="lod-W2" class="block text-gray-700 text-sm font-bold mb-2">W2:</label>
+                    <input type="text" id="lod-W2" name="lod-W2" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                </div>
+                <label for="lod-is-anhydrous" class="block text-gray-700 text-sm font-bold mb-2 mt-2">انیدروس است؟</label>
+                <input type="checkbox" id="lod-is-anhydrous" name="lod-is-anhydrous" class="leading-tight">
+                <button onclick="calculateLOD()" class="calculation-button mt-4">محاسبه</button>
+                <p class="mt-4">نتیجه: <span id="lod-result-percent" class="font-bold ltr-text"></span></p>
+                <p>وضعیت: <span id="lod-status" class="font-bold"></span></p>
+                <label for="lod-spec" class="block text-gray-700 text-sm font-bold mt-4 mb-2">توضیحات اضافه / Additional Specifications:</label>
+                <textarea id="lod-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
         </div>
 
         <div id="additional-requirements" class="tab-content card hidden">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
 
-            <div class="mb-4">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری:</h3>
+            <div class="card">
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">بسته‌بندی و نگهداری</h4>
                 <p>در ظروف محکم نگهداری شود.</p>
+                <label for="packaging-status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
+                <select id="packaging-status" name="packaging-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                    <option value=""></option>
+                    <option value="Pass">Pass</option>
+                    <option value="Fail">Fail</option>
+                </select>
+                <label for="packaging-spec" class="block text-gray-700 text-sm font-bold mt-4 mb-2">توضیحات اضافه / Additional Specifications:</label>
+                <textarea id="packaging-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
-            <div class="mb-4">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">برچسب‌گذاری:</h3>
-                <p>سیترات منیزیمی که در آزمایش افت وزنی در اثر خشک کردن حداکثر <span class="ltr-text">2.0%</span> از وزن خود را از دست می‌دهد، می‌تواند به عنوان سیترات منیزیم انیدروس برچسب‌گذاری شود.</p>
+            <div class="card mt-4">
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">برچسب‌گذاری</h4>
+                <p>سیترات منیزیم که در آزمایش افت در خشک کردن بیش از <span class="ltr-text">2.0%</span> از وزن خود را از دست نمی‌دهد، می‌تواند به عنوان سیترات منیزیم انیدروس برچسب‌گذاری شود.</p>
+                <label for="labeling-status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
+                <select id="labeling-status" name="labeling-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                    <option value=""></option>
+                    <option value="Pass">Pass</option>
+                    <option value="Fail">Fail</option>
+                </select>
+                <label for="labeling-spec" class="block text-gray-700 text-sm font-bold mt-4 mb-2">توضیحات اضافه / Additional Specifications:</label>
+                <textarea id="labeling-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
         </div>
     </div>
@@ -381,7 +352,7 @@
 
             tabButtons.forEach(button => {
                 button.addEventListener('click', () => {
-                    const tab = button.dataset.tab;
+                    const targetTab = button.dataset.tab;
 
                     tabButtons.forEach(btn => {
                         btn.classList.remove('tab-active');
@@ -391,96 +362,88 @@
                     button.classList.add('tab-active');
 
                     tabContents.forEach(content => {
-                        content.classList.add('hidden');
+                        if (content.id === targetTab) {
+                            content.classList.remove('hidden');
+                        } else {
+                            content.classList.add('hidden');
+                        }
                     });
-                    document.getElementById(tab).classList.remove('hidden');
                 });
             });
-
-            // Function for Limit of Calcium Calculation
-            window.calculateLimitOfCalcium = () => {
-                const V = parseFloat(document.getElementById('limitOfCalcium_V').value);
-                const W = parseFloat(document.getElementById('limitOfCalcium_W').value);
-                const C = parseFloat(document.getElementById('limitOfCalcium_C').value);
-                const F = parseFloat(document.getElementById('limitOfCalcium_F').value);
-
-                const resultSpan = document.getElementById('limitOfCalcium-result');
-                const ppmResultSpan = document.getElementById('limitOfCalcium-ppm-result');
-                const statusSpan = document.getElementById('limitOfCalcium-status');
-
-                resultSpan.textContent = '';
-                ppmResultSpan.textContent = '';
-                statusSpan.textContent = '';
-                statusSpan.className = '';
-
-                if (isNaN(V) || isNaN(W) || isNaN(C) || isNaN(F) || W === 0) {
-                    statusSpan.textContent = 'ورودی‌های نامعتبر / Invalid inputs';
-                    statusSpan.classList.add('fail-text');
-                    return;
-                }
-
-                const result = (V / W * C * F) * 100;
-                const limit = 1.0; // NMT 1.0%
-
-                resultSpan.textContent = `${result.toFixed(4)} %`;
-                ppmResultSpan.textContent = `${(result / 100 * 1000000).toFixed(2)} ppm`;
-
-                if (result <= limit) {
-                    statusSpan.textContent = 'پاس (Pass)';
-                    statusSpan.classList.add('pass-text');
-                } else {
-                    statusSpan.textContent = 'رد (Fail)';
-                    statusSpan.classList.add('fail-text');
-                }
-            };
-
-            // Function for Loss on Drying Calculation
-            window.calculateLossOnDrying = () => {
-                const W1 = parseFloat(document.getElementById('lossOnDrying_W1').value); // Empty crucible weight
-                const Wsa = parseFloat(document.getElementById('lossOnDrying_Wsa').value); // Initial sample weight
-                const W2 = parseFloat(document.getElementById('lossOnDrying_W2').value); // Crucible with dried sample weight
-                const isAnhydrous = document.getElementById('lossOnDrying_anhydrous').checked;
-
-                const resultSpan = document.getElementById('lossOnDrying-result');
-                const ppmResultSpan = document.getElementById('lossOnDrying-ppm-result');
-                const statusSpan = document.getElementById('lossOnDrying-status');
-
-                resultSpan.textContent = '';
-                ppmResultSpan.textContent = '';
-                statusSpan.textContent = '';
-                statusSpan.className = '';
-
-                if (isNaN(W1) || isNaN(Wsa) || isNaN(W2) || Wsa === 0) {
-                    statusSpan.textContent = 'ورودی‌های نامعتبر / Invalid inputs';
-                    statusSpan.classList.add('fail-text');
-                    return;
-                }
-
-                // Initial total weight = W1 + Wsa
-                // Final total weight = W2
-                // Loss of weight = (W1 + Wsa) - W2
-                // LOD % = (Loss of weight / Initial sample weight) * 100
-                const result = ((W1 + Wsa) - W2) / Wsa * 100;
-
-                let limit;
-                if (isAnhydrous) {
-                    limit = 2.0; // NMT 2.0% for anhydrous
-                } else {
-                    limit = 29.0; // NMT 29% for non-anhydrous
-                }
-
-                resultSpan.textContent = `${result.toFixed(4)} %`;
-                ppmResultSpan.textContent = `${(result / 100 * 1000000).toFixed(2)} ppm`;
-
-                if (result <= limit) {
-                    statusSpan.textContent = 'پاس (Pass)';
-                    statusSpan.classList.add('pass-text');
-                } else {
-                    statusSpan.textContent = 'رد (Fail)';
-                    statusSpan.classList.add('fail-text');
-                }
-            };
         });
+
+        function calculateCalcium() {
+            const V = parseFloat(document.getElementById('calcium-V').value);
+            const W = parseFloat(document.getElementById('calcium-W').value);
+            const C = parseFloat(document.getElementById('calcium-C').value);
+            const F = parseFloat(document.getElementById('calcium-F').value);
+
+            const resultPercentSpan = document.getElementById('calcium-result-percent');
+            const statusSpan = document.getElementById('calcium-status');
+
+            resultPercentSpan.textContent = '';
+            statusSpan.textContent = '';
+            statusSpan.className = 'font-bold'; // Reset classes
+
+            if (isNaN(V) || isNaN(W) || isNaN(C) || isNaN(F) || W === 0) {
+                resultPercentSpan.textContent = 'لطفاً تمام ورودی‌ها را پر کنید.';
+                statusSpan.classList.add('fail-text');
+                return;
+            }
+
+            const result = (V / W * C * F) * 100;
+            const limit = 1.0; // NMT 1.0%
+
+            resultPercentSpan.textContent = `${result.toFixed(4)}%`;
+
+            if (result <= limit) {
+                statusSpan.textContent = 'موفق (Pass)';
+                statusSpan.classList.add('pass-text');
+            } else {
+                statusSpan.textContent = 'ناموفق (Fail)';
+                statusSpan.classList.add('fail-text');
+            }
+        }
+
+        function calculateLOD() {
+            const W1 = parseFloat(document.getElementById('lod-W1').value);
+            const Wsa = parseFloat(document.getElementById('lod-Wsa').value);
+            const W2 = parseFloat(document.getElementById('lod-W2').value);
+            const isAnhydrous = document.getElementById('lod-is-anhydrous').checked;
+
+            const resultPercentSpan = document.getElementById('lod-result-percent');
+            const statusSpan = document.getElementById('lod-status');
+
+            resultPercentSpan.textContent = '';
+            statusSpan.textContent = '';
+            statusSpan.className = 'font-bold'; // Reset classes
+
+            if (isNaN(W1) || isNaN(Wsa) || isNaN(W2) || Wsa === 0) {
+                resultPercentSpan.textContent = 'لطفاً تمام ورودی‌ها را پر کنید.';
+                statusSpan.classList.add('fail-text');
+                return;
+            }
+
+            // LOD = ((W1 + Wsa) - W2) / Wsa * 100
+            const result = ((W1 + Wsa) - W2) / Wsa * 100;
+
+            let limit;
+            if (isAnhydrous) {
+                limit = 2.0; // NMT 2.0% for anhydrous
+            } else {
+                limit = 29.0; // NMT 29% for non-anhydrous
+            }
+
+            resultPercentSpan.textContent = `${result.toFixed(4)}%`;
+
+            if (result <= limit) {
+                statusSpan.textContent = 'موفق (Pass)';
+                statusSpan.classList.add('pass-text');
+            } else {
+                statusSpan.textContent = 'ناموفق (Fail)';
+                statusSpan.classList.add('fail-text');
+            }
+        }
     </script>
 </body>
 </html>

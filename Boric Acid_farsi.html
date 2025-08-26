@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مونوگراف اسید بوریک (USP)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Vazirmatn -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax CDN for LaTeX rendering -->
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .tab-active {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        .tab-inactive {
+            border-color: transparent;
+            color: #6b7280;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+        .pass-text {
+            color: #22c55e;
+        }
+        .fail-text {
+            color: #ef4444;
+        }
+        .interactive-card {
+            background-color: #e0f2fe;
+            border: 1px solid #90cdf4;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 0.5rem;
+        }
+        .calculation-button {
+            background-color: #2563eb;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">اسید بوریک</h1>
+
+        <div class="flex justify-center mb-6 border-b border-gray-200">
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" data-tab="definition">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="identification">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="assay">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="impurities">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="specific_tests">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="additional_requirements">الزامات اضافی</button>
+        </div>
+
+        <!-- Definition Tab -->
+        <div id="definition" class="tab-content card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+            <p class="mb-2">اسید بوریک (<span class="ltr-text">H₃BO₃</span>) [شماره ثبت CAS: <span class="ltr-text">10043-35-3</span>].</p>
+            <p>اسید بوریک حاوی کمتر از <span class="ltr-text">99.5%</span> و بیشتر از <span class="ltr-text">100.5%</span> اسید بوریک (<span class="ltr-text">H₃BO₃</span>) نیست، که بر مبنای خشک محاسبه می‌شود.</p>
+        </div>
+
+        <!-- Identification Tab -->
+        <div id="identification" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">• A. آزمون‌های شناسایی—عمومی، بورات <a href="General chapters/191.pdf" class="text-blue-600 hover:underline" target="_blank">191</a>:</h3>
+            <p>الزامات را برآورده می‌کند.</p>
+        </div>
+
+        <!-- Assay Tab -->
+        <div id="assay" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">• روش کار</h3>
+            <p><strong>محلول نمونه:</strong> <span class="ltr-text">2 g</span> از اسید بوریک را در <span class="ltr-text">100 mL</span> از مخلوط گلیسیرین و آب (<span class="ltr-text">1:1</span>)، که قبلاً با فنل‌فتالئین <span class="ltr-text">TS</span> خنثی شده است، حل کنید.</p>
+            <p><strong>تجزیه:</strong> محلول نمونه را با <span class="ltr-text">1 N</span> سدیم هیدروکسید <span class="ltr-text">VS</span> تیتر کنید. رنگ صورتی را با افزودن <span class="ltr-text">50 mL</span> گلیسیرین، که با فنل‌فتالئین <span class="ltr-text">TS</span> خنثی شده است، از بین ببرید و تیتر کردن را تا زمانی که رنگ صورتی دوباره ظاهر شود، ادامه دهید. هر <span class="ltr-text">mL</span> از <span class="ltr-text">1 N</span> سدیم هیدروکسید معادل <span class="ltr-text">61.83 mg</span> از <span class="ltr-text">H₃BO₃</span> است.</p>
+            <p><strong>معیار پذیرش:</strong> <span class="ltr-text">99.5%–100.5%</span> بر مبنای خشک.</p>
+
+            <div class="card interactive-card">
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محاسبه سنجش اسید بوریک</h4>
+                <p>این محاسبه بر اساس فرمول زیر است:</p>
+                <div class="formula-display">
+                    $$Result = \frac{V \times 61.83}{20}$$
+                </div>
+                <div class="mb-4">
+                    <div class="mb-2">
+                        <label for="assay_V" class="block text-gray-700 text-sm font-bold mb-1">
+                            حجم سدیم هیدروکسید مصرفی (<span class="ltr-text">V</span> بر حسب <span class="ltr-text">mL</span>):
+                        </label>
+                        <input type="text" id="assay_V" name="assay_V" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2" placeholder="مثلاً 32.25">
+                    </div>
+                </div>
+                <button class="calculation-button" onclick="calculateAssay()">محاسبه</button>
+                <div class="mt-4">
+                    <p><strong>نتیجه (%):</strong> <span id="assay_result_percent"></span></p>
+                    <p><strong>نتیجه (ppm):</strong> <span id="assay_result_ppm"></span></p>
+                    <p><strong>وضعیت:</strong> <span id="assay_status"></span></p>
+                </div>
+                <div class="mt-4">
+                    <label for="assay_additional_spec" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="assay_additional_spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Impurities Tab (Empty as per source) -->
+        <div id="impurities" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+            <p>هیچ اطلاعاتی در مورد ناخالصی‌ها در متن اصلی ارائه نشده است.</p>
+        </div>
+
+        <!-- Specific Tests Tab -->
+        <div id="specific_tests" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">• کاهش وزن در خشک شدن <a href="General chapters/731.pdf" class="text-blue-600 hover:underline" target="_blank">731</a></h3>
+            <p><strong>تجزیه:</strong> به مدت <span class="ltr-text">5 h</span> روی سیلیسیم ژل خشک کنید.</p>
+            <p><strong>معیار پذیرش:</strong> بیشتر از <span class="ltr-text">0.5%</span> نیست.</p>
+            <div class="card interactive-card">
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محاسبه کاهش وزن در خشک شدن</h4>
+                <div class="formula-display">
+                    $$LOD = \frac{(W_1 + W_{sa}) - W_2}{W_{sa}} \times 100$$
+                </div>
+                <div class="mb-4">
+                    <div class="mb-2">
+                        <label for="lod_W1" class="block text-gray-700 text-sm font-bold mb-1">
+                            وزن ظرف خالی (<span class="ltr-text">W1</span>):
+                        </label>
+                        <input type="text" id="lod_W1" name="lod_W1" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2" placeholder="مثلاً 10.000">
+                    </div>
+                    <div class="mb-2">
+                        <label for="lod_Wsa" class="block text-gray-700 text-sm font-bold mb-1">
+                            وزن نمونه (<span class="ltr-text">Wsa</span>):
+                        </label>
+                        <input type="text" id="lod_Wsa" name="lod_Wsa" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2" placeholder="مثلاً 1.000">
+                    </div>
+                    <div class="mb-2">
+                        <label for="lod_W2" class="block text-gray-700 text-sm font-bold mb-1">
+                            وزن ظرف + نمونه پس از خشک شدن (<span class="ltr-text">W2</span>):
+                        </label>
+                        <input type="text" id="lod_W2" name="lod_W2" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2" placeholder="مثلاً 10.995">
+                    </div>
+                </div>
+                <button class="calculation-button" onclick="calculateLossOnDrying()">محاسبه</button>
+                <div class="mt-4">
+                    <p><strong>نتیجه (%):</strong> <span id="lod_result_percent"></span></p>
+                    <p><strong>نتیجه (ppm):</strong> <span id="lod_result_ppm"></span></p>
+                    <p><strong>وضعیت:</strong> <span id="lod_status"></span></p>
+                </div>
+                <div class="mt-4">
+                    <label for="lod_additional_spec" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="lod_additional_spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">• حلالیت در الکل</h3>
+            <p><strong>محلول نمونه:</strong> <span class="ltr-text">1 g</span> در <span class="ltr-text">10 mL</span> الکل جوشان.</p>
+            <p><strong>معیار پذیرش:</strong> به طور کامل حل می‌شود.</p>
+            <div class="card interactive-card">
+                <div class="mb-4">
+                    <label for="solubility_status" class="block text-gray-700 text-sm font-bold mb-1">وضعیت:</label>
+                    <select id="solubility_status" name="solubility_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                        <option value=""></option>
+                        <option value="Pass">Pass</option>
+                        <option value="Fail">Fail</option>
+                    </select>
+                </div>
+                <div class="mt-4">
+                    <label for="solubility_additional_spec" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="solubility_additional_spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">• کامل بودن محلول</h3>
+            <p><strong>محلول نمونه:</strong> <span class="ltr-text">1 g</span> در <span class="ltr-text">25 mL</span> آب.</p>
+            <p><strong>معیار پذیرش:</strong> یک محلول شفاف تولید می‌کند.</p>
+            <div class="card interactive-card">
+                <div class="mb-4">
+                    <label for="completeness_status" class="block text-gray-700 text-sm font-bold mb-1">وضعیت:</label>
+                    <select id="completeness_status" name="completeness_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                        <option value=""></option>
+                        <option value="Pass">Pass</option>
+                        <option value="Fail">Fail</option>
+                    </select>
+                </div>
+                <div class="mt-4">
+                    <label for="completeness_additional_spec" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="completeness_additional_spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Requirements Tab -->
+        <div id="additional_requirements" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">• بسته‌بندی و نگهداری</h3>
+            <p>در ظروف در بسته نگهداری شود.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">• برچسب‌گذاری</h3>
+            <p>ظرف را با هشدار عدم مصرف داخلی برچسب‌گذاری کنید.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetTab = button.dataset.tab;
+
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('tab-active');
+                        btn.classList.add('tab-inactive');
+                    });
+                    button.classList.remove('tab-inactive');
+                    button.classList.add('tab-active');
+
+                    tabContents.forEach(content => {
+                        if (content.id === targetTab) {
+                            content.classList.remove('hidden');
+                        } else {
+                            content.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        });
+
+        function calculateAssay() {
+            const V = parseFloat(document.getElementById('assay_V').value);
+
+            if (isNaN(V)) {
+                alert('لطفاً یک مقدار عددی معتبر برای حجم سدیم هیدروکسید وارد کنید.');
+                return;
+            }
+
+            // Result (%) = (V * 61.83) / 2000 * 100 = (V * 61.83) / 20
+            const resultPercent = (V * 61.83) / 20;
+            const resultPPM = (resultPercent / 100) * 1000000;
+
+            const assayResultPercentSpan = document.getElementById('assay_result_percent');
+            const assayResultPPMSpan = document.getElementById('assay_result_ppm');
+            const assayStatusSpan = document.getElementById('assay_status');
+
+            assayResultPercentSpan.textContent = resultPercent.toFixed(2) + '%';
+            assayResultPPMSpan.textContent = resultPPM.toFixed(0) + ' ppm';
+
+            // Acceptance criteria: 99.5%–100.5%
+            if (resultPercent >= 99.5 && resultPercent <= 100.5) {
+                assayStatusSpan.textContent = 'قبول (Pass)';
+                assayStatusSpan.classList.remove('fail-text');
+                assayStatusSpan.classList.add('pass-text');
+            } else {
+                assayStatusSpan.textContent = 'رد (Fail)';
+                assayStatusSpan.classList.remove('pass-text');
+                assayStatusSpan.classList.add('fail-text');
+            }
+        }
+
+        function calculateLossOnDrying() {
+            const W1 = parseFloat(document.getElementById('lod_W1').value);
+            const Wsa = parseFloat(document.getElementById('lod_Wsa').value);
+            const W2 = parseFloat(document.getElementById('lod_W2').value);
+
+            if (isNaN(W1) || isNaN(Wsa) || isNaN(W2) || Wsa === 0) {
+                alert('لطفاً مقادیر عددی معتبر برای W1، Wsa و W2 وارد کنید. Wsa نمی‌تواند صفر باشد.');
+                return;
+            }
+
+            const resultPercent = ((W1 + Wsa) - W2) / Wsa * 100;
+            const resultPPM = (resultPercent / 100) * 1000000;
+
+            const lodResultPercentSpan = document.getElementById('lod_result_percent');
+            const lodResultPPMSpan = document.getElementById('lod_result_ppm');
+            const lodStatusSpan = document.getElementById('lod_status');
+
+            lodResultPercentSpan.textContent = resultPercent.toFixed(2) + '%';
+            lodResultPPMSpan.textContent = resultPPM.toFixed(0) + ' ppm';
+
+
+            // Acceptance criteria: NMT 0.5%
+            if (resultPercent <= 0.5) {
+                lodStatusSpan.textContent = 'قبول (Pass)';
+                lodStatusSpan.classList.remove('fail-text');
+                lodStatusSpan.classList.add('pass-text');
+            } else {
+                lodStatusSpan.textContent = 'رد (Fail)';
+                lodStatusSpan.classList.remove('pass-text');
+                lodStatusSpan.classList.add('fail-text');
+            }
+        }
+    </script>
+</body>
+</html>

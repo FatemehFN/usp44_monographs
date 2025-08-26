@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>711. انحلال</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vazirmatn Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax for LaTeX rendering -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">انحلال <span class="ltr-text">á711ñ</span></h1>
+
+        <div class="card mb-6">
+            <p class="mb-4">فصل عمومی انحلال <span class="ltr-text">á<a href="711.html" class="text-blue-600 hover:underline" target="_blank">711</a>ñ</span> با متون مربوطه در فارماکوپه اروپا و/یا فارماکوپه ژاپن هماهنگ شده است. این فارماکوپه‌ها متعهد شده‌اند که هیچ تغییری یک‌جانبه در این فصل هماهنگ‌شده ایجاد نکنند.</p>
+            <p class="mb-4">بخش‌هایی از متن فصل عمومی فعلی که متن ملی <span class="ltr-text">USP</span> هستند و بنابراین بخشی از متن هماهنگ‌شده نیستند، با نمادهای (<span class="ltr-text">◆◆</span>) مشخص شده‌اند تا این واقعیت را مشخص کنند.</p>
+            <p class="mb-4">این آزمایش برای تعیین انطباق با الزامات انحلال پذیری <span class="ltr-text">◆</span>در مواردی که در تک‌نگار انفرادی ذکر شده است<span class="ltr-text">◆</span> برای اشکال دارویی خوراکی تجویز شده است. در این فصل عمومی، واحد دوز به عنوان <span class="ltr-text">1</span> قرص یا <span class="ltr-text">1</span> کپسول یا مقدار مشخص شده تعریف می‌شود. <span class="ltr-text">◆</span>از بین انواع طراحی دستگاه‌های شرح داده شده در اینجا، از موردی استفاده کنید که در تک‌نگار انفرادی مشخص شده است. در صورتی که بر روی برچسب ذکر شده باشد که یک محصول روکش روده ای دارد و یک آزمایش انحلال پذیری یا دیس اینتگراسیون به طور خاص بیان نکند که باید برای محصولات با آزادسازی تاخیری اعمال شود و در تک‌نگار انفرادی گنجانده شده باشد، رویه و تفسیر داده شده برای اشکال دارویی با آزادسازی تاخیری اعمال می‌شود، مگر اینکه در تک‌نگار انفرادی به نحو دیگری مشخص شده باشد.</p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">برای اشکال دارویی حاوی یا روکش شده با ژلاتین</h2>
+            <p class="mb-4">اگر شکل دارویی حاوی ژلاتین به دلیل شواهدی از وجود پیوند متقاطع، معیارهای جدول پذیرش مربوطه (به تفسیر، اشکال دارویی با آزادسازی فوری، اشکال دارویی با آزادسازی پایدار، یا اشکال دارویی با آزادسازی تاخیری مراجعه کنید) را برآورده نکند، روش انحلال باید با افزودن آنزیم‌ها به محیط، همانطور که در زیر شرح داده شده است، تکرار شود و نتایج انحلال باید از مرحله اول جدول پذیرش مربوطه ارزیابی شود.</p>
+            <p class="mb-4">لازم نیست تا مرحله نهایی (تا <span class="ltr-text">24</span> واحد) آزمایش ادامه یابد، زمانی که معیارها در طول آزمایش مرحله اول برآورده نمی‌شوند و شواهدی از پیوند متقاطع مشاهده می‌شود.</p>
+            <p class="mb-4">ژلاتین، در حضور ترکیبات خاص و/یا در شرایط نگهداری خاص، از جمله اما نه محدود به رطوبت و دمای بالا، ممکن است پیوند متقاطع ایجاد کند. یک غشای نازک ممکن است بر روی سطح خارجی و/یا داخلی پوسته کپسول ژلاتینی یا بر روی شکل دارویی تشکیل شود که از آزادسازی دارو در طول آزمایش انحلال پذیری جلوگیری می‌کند (برای اطلاعات بیشتر به کپسول‌ها – آزمایش انحلال و ویژگی‌های کیفی مرتبط <span class="ltr-text">á<a href="1094.html" class="text-blue-600 hover:underline" target="_blank">1094</a>ñ</span> مراجعه کنید).</p>
+            <p class="mb-4 text-sm text-gray-600">[نکته — تمام ارجاعات به فصلی بالاتر از <span class="ltr-text">á<a href="1000.html" class="text-blue-600 hover:underline" target="_blank">1000</a>ñ</span> فقط برای اهداف اطلاعاتی، به عنوان یک منبع مفید است. این فصول اجباری نیستند مگر اینکه به صراحت برای این کاربرد فراخوانده شوند.]</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">محیط انحلال با <span class="ltr-text">pH ≤4.0</span></h3>
+            <p class="mb-2"><strong>آنزیم:</strong> پپسین، فعالیت تعیین شده با روش پپسین خالص، در بخش مشخصات معرف.</p>
+            <p class="mb-4"><strong>مقدار:</strong> مقداری پپسین که منجر به فعالیتی حداکثر <span class="ltr-text">750,000 Units/L</span> از محیط انحلال شود.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">محیط انحلال با <span class="ltr-text">pH >4.0</span> و <span class="ltr-text"><6.8</span></h3>
+            <p class="mb-2"><strong>آنزیم:</strong> پاپائین، فعالیت تعیین شده با آزمایش سنجش در تک‌نگار پاپائین؛ یا بروملین، فعالیت تعیین شده با روش بروملین، در بخش مشخصات معرف.</p>
+            <p class="mb-4"><strong>مقدار:</strong> مقداری پاپائین که منجر به فعالیتی حداکثر <span class="ltr-text">550,000 Units/L</span> از محیط انحلال شود، یا مقداری بروملین که منجر به فعالیتی حداکثر <span class="ltr-text">30 gelatin-digesting units (GDU)/L</span> از محیط انحلال شود.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">محیط انحلال با <span class="ltr-text">pH ≥6.8</span></h3>
+            <p class="mb-2"><strong>آنزیم:</strong> پانکراتین، فعالیت پروتئاز تعیین شده با روش سنجش فعالیت پروتئاز (قدرت هضم کازئین) در تک‌نگار پانکراتین.</p>
+            <p class="mb-4"><strong>مقدار:</strong> مقداری پانکراتین که منجر به فعالیتی پروتئازی حداکثر <span class="ltr-text">2000 Units/L</span> از محیط انحلال شود.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">محیط انحلال حاوی سورفکتانت یا سایر مواد تشکیل دهنده شناخته شده برای دناتوره کردن آنزیم</h3>
+            <p class="mb-4">اگر محیط انحلال حاوی سورفکتانت یا سایر مواد تشکیل دهنده ای است که شناخته شده‌اند آنزیم مورد استفاده را دناتوره می‌کنند، می‌توان یک مرحله پیش‌تیمار در آزمایش انحلال شکل دارویی اعمال کرد. این مرحله پیش‌تیمار با استفاده از محیط انحلال مشخص شده بدون سورفکتانت یا ماده تشکیل دهنده و با افزودن مقدار مناسب آنزیم با توجه به <span class="ltr-text">pH</span> محیط انجام می‌شود. مقدار آنزیم اضافه شده متناسب با حجم محیط انحلال مورد استفاده در پیش‌تیمار است. برای دستیابی به حجم محیط مشخص شده برای آزمایش نهایی انحلال، مرحله پیش‌تیمار ممکن است با حجم کمتری از محیط بدون ماده تشکیل دهنده انجام شود به گونه‌ای که حجم نهایی پس از افزودن ماده تشکیل دهنده در پایان مرحله پیش‌تیمار به دست آید. تمام شرایط دیگر آزمایش (دستگاه، چرخش یا نرخ جریان) باید همانطور که در روش یا تک‌نگار شرح داده شده است، باقی بمانند. به طور معمول، مدت زمان مرحله پیش‌تیمار حداکثر <span class="ltr-text">15 min</span> است. زمان پیش‌تیمار مورد نیاز باید به صورت موردی ارزیابی شده و از نظر علمی توجیه شود. این زمان باید در کل زمان آزمایش گنجانده شود. به عنوان مثال، اگر کل زمان آزمایش <span class="ltr-text">45 min</span> باشد و <span class="ltr-text">15 min</span> در مرحله پیش‌تیمار استفاده شود، آزمایش <span class="ltr-text">30 min</span> پس از افزودن ماده تشکیل دهنده ادامه خواهد یافت.<span class="ltr-text">◆</span></p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">دستگاه</h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">دستگاه <span class="ltr-text">1</span> (دستگاه سبدی)</h3>
+            <p class="mb-2">مجموعه شامل موارد زیر است: یک ظرف که ممکن است دارای درپوش باشد و از شیشه یا سایر مواد بی‌اثر، شفاف ساخته شده باشد؛<sup class="text-blue-600 hover:underline cursor-pointer" title="The materials should not sorb, react, or interfere with the specimen being tested.">1</sup> یک موتور؛ یک میله محرک فلزی؛ و یک سبد استوانه‌ای. ظرف به طور جزئی در یک حمام آب مناسب با هر اندازه مناسب غوطه‌ور می‌شود یا توسط یک وسیله مناسب مانند ژاکت گرمایشی گرم می‌شود. حمام آب یا وسیله گرمایشی اجازه می‌دهد دمای داخل ظرف در طول آزمایش در <span class="ltr-text">37 ± 0.5°</span> حفظ شود و سیال حمام را در حرکت ثابت و آرام نگه می‌دارد. هیچ بخشی از مجموعه، از جمله محیطی که مجموعه در آن قرار گرفته است، حرکت، هم‌زدگی یا لرزش قابل توجهی فراتر از آنچه که ناشی از عنصر همزن با چرخش آرام است، ایجاد نمی‌کند. دستگاهی که امکان مشاهده نمونه و عنصر همزن را در طول آزمایش فراهم می‌کند، ارجح است. ظرف استوانه‌ای است، با کف نیم‌کره‌ای و <span class="ltr-text">◆</span>با یکی از ابعاد و ظرفیت‌های زیر: برای ظرفیت اسمی <span class="ltr-text">1 L</span>، ارتفاع <span class="ltr-text">160–210 mm</span> و قطر داخلی آن <span class="ltr-text">98–106 mm</span> است؛ <span class="ltr-text">◆</span>برای ظرفیت اسمی <span class="ltr-text">2 L</span>، ارتفاع <span class="ltr-text">280–300 mm</span> و قطر داخلی آن <span class="ltr-text">98–106 mm</span> است؛ و برای ظرفیت اسمی <span class="ltr-text">4 L</span>، ارتفاع <span class="ltr-text">280–300 mm</span> و قطر داخلی آن <span class="ltr-text">145–155 mm</span> است<span class="ltr-text">◆</span>. کناره‌های آن در بالا لبه‌دار هستند. می‌توان از یک درپوش مناسب برای کاهش تبخیر استفاده کرد.<sup class="text-blue-600 hover:underline cursor-pointer" title="If a cover is used, it provides sufficient openings to allow ready insertion of the thermometer and withdrawal of specimens.">2</sup> میله به گونه‌ای قرار می‌گیرد که محور آن در هیچ نقطه‌ای بیش از <span class="ltr-text">2 mm</span> از محور عمودی ظرف نباشد و به آرامی و بدون لرزش قابل توجهی که بتواند بر نتایج تأثیر بگذارد، بچرخد. از یک دستگاه تنظیم سرعت استفاده می‌شود که امکان انتخاب و حفظ سرعت چرخش میله را با نرخ مشخص شده <span class="ltr-text">◆</span>در تک‌نگار انفرادی<span class="ltr-text">◆</span> در محدوده <span class="ltr-text">±4%</span> فراهم می‌کند.</p>
+            <p class="mb-4">اجزای میله و سبد عنصر همزن از فولاد ضد زنگ، نوع <span class="ltr-text">316</span>، یا سایر مواد بی‌اثر، مطابق با مشخصات نشان داده شده در شکل <span class="ltr-text">1</span> ساخته شده‌اند. می‌توان از سبدی با روکش طلا به ضخامت حدود <span class="ltr-text">0.0001 inch (2.5 µm)</span> استفاده کرد. یک واحد دوز در ابتدای هر آزمایش در یک سبد خشک قرار داده می‌شود. فاصله بین کف داخلی ظرف و کف سبد در طول آزمایش در <span class="ltr-text">25 ± 2 mm</span> حفظ می‌شود.</p>
+            <p class="text-sm text-gray-600 mb-2"><sup class="text-blue-600 hover:underline cursor-pointer">1</sup> مواد نباید نمونه مورد آزمایش را جذب، واکنش داده یا با آن تداخل کنند.</p>
+            <p class="text-sm text-gray-600 mb-4"><sup class="text-blue-600 hover:underline cursor-pointer">2</sup> اگر از درپوش استفاده می‌شود، باید دارای منافذ کافی برای قرار دادن آسان دماسنج و برداشت نمونه‌ها باشد.</p>
+
+            <p class="text-center mb-4">شکل <span class="ltr-text">1</span>. عنصر همزن سبدی.</p>
+            <!-- No actual image for Figure 1, so just text as per spec -->
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">دستگاه <span class="ltr-text">2</span> (دستگاه پارویی)</h3>
+            <p class="mb-4">از مجموعه دستگاه <span class="ltr-text">1</span> استفاده کنید، با این تفاوت که از یک پارو که از یک تیغه و یک میله تشکیل شده است به عنوان عنصر همزن استفاده می‌شود. میله به گونه‌ای قرار می‌گیرد که محور آن در هیچ نقطه‌ای بیش از <span class="ltr-text">2 mm</span> از محور عمودی ظرف نباشد و به آرامی و بدون لرزش قابل توجهی که بتواند بر نتایج تأثیر بگذارد، بچرخد. خط مرکزی عمودی تیغه از محور میله عبور می‌کند به طوری که کف تیغه با کف میله هم‌سطح باشد. پارو مطابق با مشخصات نشان داده شده در شکل <span class="ltr-text">2</span> است. فاصله <span class="ltr-text">25 ± 2 mm</span> بین کف تیغه و کف داخلی ظرف در طول آزمایش حفظ می‌شود. تیغه و میله فلزی یا بی‌اثر و سفت و سخت مناسب، یک واحد را تشکیل می‌دهند. می‌توان از یک طراحی دو قسمتی قابل جدا شدن مناسب استفاده کرد، مشروط بر اینکه مجموعه در طول آزمایش محکم متصل بماند. تیغه و میله پارو ممکن است با یک پوشش مناسب پوشانده شوند تا هر دو بی‌اثر شوند. واحد دوز اجازه داده می‌شود تا قبل از شروع چرخش تیغه به کف ظرف فرو رود. یک قطعه کوچک و شل از مواد غیر واکنش‌پذیر، مانند حداکثر چند دور سیم پیچ، ممکن است به واحدهای دوز که در غیر این صورت شناور می‌شوند، متصل شود. یک دستگاه غرق‌کننده جایگزین در شکل <span class="ltr-text">2a</span> نشان داده شده است. می‌توان از سایر دستگاه‌های غرق‌کننده معتبر استفاده کرد.</p>
+
+            <p class="text-center mb-4">شکل <span class="ltr-text">2</span>. عنصر همزن پارویی.</p>
+            <!-- No actual image for Figure 2, so just text as per spec -->
+
+            <p class="text-center mb-4">شکل <span class="ltr-text">2a</span>. غرق‌کننده جایگزین. همه ابعاد بر حسب <span class="ltr-text">mm</span> بیان شده‌اند.</p>
+            <!-- No actual image for Figure 2a, so just text as per spec -->
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">دستگاه <span class="ltr-text">3</span> (سیلندر رفت و برگشتی)<sup class="text-blue-600 hover:underline cursor-pointer" title="Not accepted by the Japanese Pharmacopoeia.">3</sup></h3>
+            <p class="mb-4">مجموعه شامل یک سری ظروف شیشه‌ای استوانه‌ای با کف صاف؛ یک سری سیلندرهای شیشه‌ای رفت و برگشتی؛ اتصالات بی‌اثر (فولاد ضد زنگ نوع <span class="ltr-text">316</span> یا سایر مواد مناسب)، و صفحاتی که از مواد مناسب غیر جاذب و غیر واکنش‌پذیر ساخته شده‌اند و برای قرار گرفتن در قسمت بالا و پایین سیلندرهای رفت و برگشتی طراحی شده‌اند؛ و یک موتور و مجموعه محرک برای حرکت عمودی سیلندرها در داخل ظروف است؛ در صورت تمایل، سیلندرهای رفت و برگشتی را به صورت افقی به ردیف دیگری از ظروف هدایت کنید. ظروف به طور جزئی در یک حمام آب مناسب با هر اندازه مناسب غوطه‌ور می‌شوند که امکان حفظ دما در <span class="ltr-text">37 ± 0.5°</span> در طول آزمایش را فراهم می‌کند. هیچ بخشی از مجموعه، از جمله محیطی که مجموعه در آن قرار گرفته است، حرکت، هم‌زدگی یا لرزش قابل توجهی فراتر از آنچه که ناشی از حرکت آرام و عمودی سیلندر رفت و برگشتی است، ایجاد نمی‌کند. از دستگاهی استفاده می‌شود که امکان انتخاب و حفظ نرخ رفت و برگشت با نرخ غوطه‌وری مشخص شده <span class="ltr-text">◆</span>در تک‌نگار انفرادی<span class="ltr-text">◆</span> در محدوده <span class="ltr-text">±5%</span> را فراهم می‌کند. دستگاهی که امکان مشاهده نمونه‌ها و سیلندرهای رفت و برگشتی را فراهم می‌کند، ارجح است. ظروف دارای درپوش‌های تبخیر هستند که برای مدت زمان آزمایش در جای خود باقی می‌مانند. اجزا مطابق با ابعاد نشان داده شده در شکل <span class="ltr-text">3</span> هستند، مگر اینکه <span class="ltr-text">◆</span>در تک‌نگار انفرادی<span class="ltr-text">◆</span> به نحو دیگری مشخص شده باشد.</p>
+            <p class="text-sm text-gray-600 mb-4"><sup class="text-blue-600 hover:underline cursor-pointer">3</sup> مورد پذیرش فارماکوپه ژاپن نیست.</p>
+
+            <p class="text-center mb-4">شکل <span class="ltr-text">3</span>. دستگاه <span class="ltr-text">3</span> (سیلندر رفت و برگشتی).</p>
+            <!-- No actual image for Figure 3, so just text as per spec -->
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">دستگاه <span class="ltr-text">4</span> (سلول جریان پیوسته)</h3>
+            <p class="mb-4">مجموعه شامل یک مخزن و یک پمپ برای محیط انحلال؛ یک سلول جریان پیوسته؛ و یک حمام آب است که محیط انحلال را در <span class="ltr-text">37 ± 0.5°</span> حفظ می‌کند. از اندازه سلول مشخص شده <span class="ltr-text">◆</span>در تک‌نگار انفرادی<span class="ltr-text">◆</span> استفاده کنید.</p>
+            <p class="mb-4">پمپ محیط انحلال را به سمت بالا از طریق سلول جریان پیوسته به حرکت در می‌آورد. پمپ دارای محدوده دبی بین <span class="ltr-text">240</span> و <span class="ltr-text">960 mL/h</span> است، با نرخ‌های جریان استاندارد <span class="ltr-text">4, 8,</span> و <span class="ltr-text">16 mL/min</span>. باید جریان ثابتی (<span class="ltr-text">±5%</span> از نرخ جریان اسمی) را ارائه دهد؛ مشخصات جریان سینوسی با پالسی به میزان <span class="ltr-text">120 ± 10 pulses/min</span> است. پمپ بدون پالس نیز ممکن است استفاده شود. روش‌های آزمایش انحلال پذیری با استفاده از سلول جریان پیوسته باید از نظر نرخ و هرگونه پالس مشخص شوند.</p>
+            <p class="mb-4">سلول جریان پیوسته (به شکل <span class="ltr-text">4</span> و شکل <span class="ltr-text">5</span> مراجعه کنید)، از مواد شفاف و بی‌اثر، به صورت عمودی با یک سیستم فیلتر (مشخص شده در تک‌نگار انفرادی) نصب شده است که از خروج ذرات حل نشده از بالای سلول جلوگیری می‌کند؛ قطرهای استاندارد سلول <span class="ltr-text">12</span> و <span class="ltr-text">22.6 mm</span> هستند؛ مخروط پایینی معمولاً با دانه‌های شیشه‌ای کوچک به قطر حدود <span class="ltr-text">1-mm</span> با یک دانه حدود <span class="ltr-text">5 mm</span>، که در راس برای محافظت از لوله ورودی سیال قرار گرفته است، پر می‌شود؛ و یک نگهدارنده قرص (به شکل <span class="ltr-text">4</span> و شکل <span class="ltr-text">5</span> مراجعه کنید) برای قرار دادن اشکال دارویی خاص، به عنوان مثال، قرص‌های <span class="ltr-text">inlay</span>، موجود است. سلول در حمام آب غوطه‌ور شده و دما در <span class="ltr-text">37 ± 0.5°</span> حفظ می‌شود.</p>
+
+            <p class="text-center mb-4">شکل <span class="ltr-text">4</span>. دستگاه <span class="ltr-text">4</span>: سلول بزرگ برای قرص‌ها و کپسول‌ها (بالا)؛ نگه‌دارنده قرص برای سلول بزرگ (پایین). (تمام اندازه‌گیری‌ها بر حسب <span class="ltr-text">mm</span> بیان شده‌اند مگر اینکه خلاف آن ذکر شده باشد.)</p>
+            <!-- No actual image for Figure 4, so just text as per spec -->
+
+            <p class="text-center mb-4">شکل <span class="ltr-text">5</span>. دستگاه <span class="ltr-text">4</span>: سلول کوچک برای قرص‌ها و کپسول‌ها (بالا)؛ نگه‌دارنده قرص برای سلول کوچک (پایین). (تمام اندازه‌گیری‌ها بر حسب <span class="ltr-text">mm</span> بیان شده‌اند مگر اینکه خلاف آن ذکر شده باشد.)</p>
+            <!-- No actual image for Figure 5, so just text as per spec -->
+
+            <p class="mb-4">این دستگاه از یک مکانیزم گیره و دو اورینگ برای مونتاژ سلول استفاده می‌کند. پمپ از واحد انحلال جدا می‌شود تا دومی را در برابر هرگونه ارتعاش ناشی از پمپ محافظت کند. موقعیت پمپ نباید در سطحی بالاتر از فلاسک‌های مخزن باشد. اتصالات لوله‌ها باید تا حد امکان کوتاه باشند. از لوله‌های بی‌اثر مناسب، مانند پلی‌تف، با قطر داخلی حدود <span class="ltr-text">1.6-mm</span> و اتصالات با انتهای فلنج‌دار بی‌اثر شیمیایی استفاده کنید.</p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مناسبت دستگاه</h2>
+            <p class="mb-4">تعیین مناسبت یک مجموعه آزمایش برای انجام آزمایش انحلال پذیری باید شامل انطباق با ابعاد و تلرانس‌های دستگاه همانطور که در بالا ذکر شد باشد. علاوه بر این، پارامترهای آزمایش حیاتی که باید به صورت دوره‌ای در طول استفاده نظارت شوند شامل حجم و دمای محیط انحلال، سرعت چرخش (دستگاه <span class="ltr-text">1</span> و دستگاه <span class="ltr-text">2</span>)، نرخ غوطه‌وری (دستگاه <span class="ltr-text">3</span>)، و نرخ جریان محیط (دستگاه <span class="ltr-text">4</span>) می‌باشند.</p>
+            <p class="mb-4">عملکرد قابل قبول مجموعه آزمایش انحلال پذیری را به صورت دوره‌ای تعیین کنید.<span class="ltr-text">◆</span>مناسبت برای دستگاه انفرادی با آزمایش تأیید عملکرد نشان داده می‌شود.</p>
+
+            <p class="mb-4">استانداردهای مرجع <span class="ltr-text">á<a href="11.html" class="text-blue-600 hover:underline" target="_blank">11</a>ñ</span> <span class="ltr-text">USP</span>: قرص‌های پردنیزون <span class="ltr-text">USP RS</span></p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایش تأیید عملکرد، دستگاه <span class="ltr-text">1</span> و دستگاه <span class="ltr-text">2</span>:</h3>
+            <p class="mb-4">قرص‌های پردنیزون <span class="ltr-text">USP RS</span> را طبق شرایط عملیاتی مشخص شده آزمایش کنید. دستگاه مناسب است اگر نتایج به دست آمده در محدوده قابل قبول ذکر شده در برگه داده فنی خاص برای سری استفاده شده و دستگاه آزمایش شده باشد.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایش تأیید عملکرد، دستگاه <span class="ltr-text">3</span>:</h3>
+            <p class="mb-4">[به زودی.]</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایش تأیید عملکرد، دستگاه <span class="ltr-text">4</span>:</h3>
+            <p class="mb-4">[به زودی.]<span class="ltr-text">◆</span></p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">روش اجرا</h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">دستگاه <span class="ltr-text">1</span> و دستگاه <span class="ltr-text">2</span></h3>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">اشکال دارویی با آزادسازی فوری</h4>
+            <p class="mb-2">حجم مشخص شده محیط انحلال (<span class="ltr-text">±1%</span>) را در ظرف دستگاه مشخص شده <span class="ltr-text">◆</span>در تک‌نگار انفرادی<span class="ltr-text">◆</span> قرار دهید، دستگاه را مونتاژ کنید، محیط انحلال را تا <span class="ltr-text">37 ± 0.5°</span> هم دما کنید و دماسنج را خارج کنید. <span class="ltr-text">1</span> واحد دوز را در دستگاه قرار دهید، با دقت حباب‌های هوا را از سطح واحد دوز خارج کنید و بلافاصله دستگاه را با نرخ مشخص شده <span class="ltr-text">◆</span>در تک‌نگار انفرادی<span class="ltr-text">◆</span> به کار اندازید. در فاصله زمانی مشخص شده، یا در هر یک از زمان‌های ذکر شده، نمونه‌ای را از ناحیه‌ای در میانه سطح محیط انحلال و بالای سبد یا تیغه چرخان، حداقل <span class="ltr-text">1 cm</span> از دیواره ظرف، خارج کنید.</p>
+            <p class="mb-2 text-sm text-gray-600">[نکته — در مواردی که زمان‌های نمونه‌برداری متعدد مشخص شده است، بخش‌های خارج شده برای تجزیه و تحلیل را با حجم‌های مساوی از محیط انحلال تازه در <span class="ltr-text">37°</span> جایگزین کنید یا، در مواردی که می‌توان نشان داد جایگزینی محیط لازم نیست، تغییر حجم را در محاسبه اصلاح کنید. ظرف را در طول آزمایش پوشیده نگه دارید و دمای مخلوط تحت آزمایش را در زمان‌های مناسب بررسی کنید.]</p>
+            <p class="mb-2">تجزیه و تحلیل را <span class="ltr-text">◆</span>همانطور که در تک‌نگار انفرادی دستور داده شده است<span class="ltr-text">◆</span> با استفاده از یک روش سنجش مناسب انجام دهید.<sup class="text-blue-600 hover:underline cursor-pointer" title="Test specimens are filtered immediately upon sampling unless filtration is demonstrated to be unnecessary. Use an inert filter that does not cause adsorption of the active ingredient or contain extractable substances that would interfere with the analysis.">4</sup> آزمایش را با واحدهای شکل دارویی اضافی تکرار کنید.</p>
+            <p class="mb-2">اگر از تجهیزات خودکار برای نمونه‌برداری استفاده می‌شود یا دستگاه به نحو دیگری اصلاح شده است، تأیید اینکه دستگاه اصلاح شده نتایجی معادل نتایج به دست آمده با دستگاه استاندارد شرح داده شده در این فصل عمومی تولید خواهد کرد، ضروری است.</p>
+            <p class="text-sm text-gray-600 mb-4"><sup class="text-blue-600 hover:underline cursor-pointer">4</sup> نمونه‌های آزمایش بلافاصله پس از نمونه‌برداری فیلتر می‌شوند مگر اینکه نشان داده شود که فیلتراسیون لازم نیست. از یک فیلتر بی‌اثر استفاده کنید که باعث جذب ماده فعال نشود یا حاوی مواد قابل استخراجی نباشد که با تجزیه و تحلیل تداخل کند.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محیط انحلال:</h4>
+            <p class="mb-2">از یک محیط انحلال مناسب استفاده می‌شود. از حلال مشخص شده <span class="ltr-text">◆</span>در تک‌نگار انفرادی<span class="ltr-text">◆</span> استفاده کنید. حجم مشخص شده به اندازه‌گیری‌های انجام شده بین <span class="ltr-text">20°</span> و <span class="ltr-text">25°</span> اشاره دارد. اگر محیط انحلال یک محلول بافری است، محلول را طوری تنظیم کنید که <span class="ltr-text">pH</span> آن در محدوده <span class="ltr-text">0.05</span> واحد از <span class="ltr-text">pH</span> مشخص شده <span class="ltr-text">◆</span>در تک‌نگار انفرادی<span class="ltr-text">◆</span> باشد. [نکته — گازهای حل شده می‌توانند باعث تشکیل حباب شوند که ممکن است نتایج آزمایش را تغییر دهد. اگر گازهای حل شده بر نتایج انحلال تأثیر می‌گذارند، باید قبل از آزمایش حذف شوند.<sup class="text-blue-600 hover:underline cursor-pointer" title="One method of deaeration is as follows: Heat the medium, while stirring gently, to about 41°, immediately filter under vacuum using a filter having a porosity of 0.45 µm or less, with vigorous stirring, and continue stirring under vacuum for about 5 min. Other validated deaeration techniques for removal of dissolved gases may be used.">5</sup>]</p>
+            <p class="text-sm text-gray-600 mb-4"><sup class="text-blue-600 hover:underline cursor-pointer">5</sup> یکی از روش‌های حذف گاز به شرح زیر است: محیط را در حالی که به آرامی هم زده می‌شود، تا حدود <span class="ltr-text">41°</span> گرم کنید، بلافاصله آن را تحت خلاء با استفاده از فیلتری با تخلخل <span class="ltr-text">0.45 µm</span> یا کمتر، با هم‌زدن شدید فیلتر کنید و به هم‌زدن تحت خلاء برای حدود <span class="ltr-text">5 min</span> ادامه دهید. می‌توان از سایر تکنیک‌های تأیید شده حذف گاز برای حذف گازهای حل شده استفاده کرد.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">زمان:</h4>
+            <p class="mb-4">در مواردی که یک مشخصه زمانی واحد داده شده است، آزمایش ممکن است در مدت زمان کوتاه‌تری به پایان برسد اگر نیاز برای حداقل مقدار حل شده برآورده شود. نمونه‌ها فقط در زمان‌های ذکر شده، با تلرانس <span class="ltr-text">±2%</span>، خارج می‌شوند.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش برای نمونه ترکیبی برای اشکال دارویی با آزادسازی فوری:</h4>
+            <p class="mb-4">از این روش در مواردی که روش برای نمونه ترکیبی در تک‌نگار انفرادی مشخص شده است، استفاده کنید. طبق دستورالعمل اشکال دارویی با آزادسازی فوری در دستگاه <span class="ltr-text">1</span> و دستگاه <span class="ltr-text">2</span> در بخش روش اجرا عمل کنید. حجم‌های مساوی از محلول‌های فیلتر شده شش یا دوازده نمونه انفرادی خارج شده را با هم ترکیب کرده و از نمونه ترکیبی به عنوان نمونه آزمایش استفاده کنید. مقدار متوسط ماده فعال حل شده در نمونه ترکیبی را تعیین کنید.<span class="ltr-text">◆</span></p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">اشکال دارویی با آزادسازی پایدار</h4>
+            <p class="mb-2">طبق دستورالعمل اشکال دارویی با آزادسازی فوری عمل کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محیط انحلال:</h4>
+            <p class="mb-4">طبق دستورالعمل اشکال دارویی با آزادسازی فوری عمل کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">زمان:</h4>
+            <p class="mb-4">نقاط زمانی آزمایش، معمولاً سه مورد، بر حسب ساعت بیان می‌شوند.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">اشکال دارویی با آزادسازی تاخیری<sup class="text-blue-600 hover:underline cursor-pointer">3</sup></h4>
+            <p class="mb-4">از روش <span class="ltr-text">A</span> یا روش <span class="ltr-text">B</span> و دستگاه مشخص شده <span class="ltr-text">◆</span>در تک‌نگار انفرادی<span class="ltr-text">◆</span> استفاده کنید. تمام زمان‌های آزمایش ذکر شده باید با تلرانس <span class="ltr-text">±2%</span> رعایت شوند، مگر اینکه به نحو دیگری مشخص شده باشد.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش <span class="ltr-text">A</span> (مگر اینکه <span class="ltr-text">◆</span>در تک‌نگار انفرادی به نحو دیگری دستور داده شده باشد<span class="ltr-text">◆</span>)</h4>
+            <p class="font-semibold mt-2 mb-1">مرحله اسیدی</p>
+            <p class="mb-2">حجم <span class="ltr-text">750 mL</span> اسید کلریدریک <span class="ltr-text">0.1 N</span> را در ظرف قرار دهید و دستگاه را مونتاژ کنید. اجازه دهید محیط به دمای <span class="ltr-text">37 ± 0.5°</span> هم دما شود. <span class="ltr-text">1</span> واحد دوز را در دستگاه قرار دهید، ظرف را بپوشانید و دستگاه را با نرخ مشخص شده <span class="ltr-text">◆</span>در تک‌نگار<span class="ltr-text">◆</span> به کار اندازید.</p>
+            <p class="mb-2">پس از <span class="ltr-text">2 h</span> عملیات در اسید کلریدریک <span class="ltr-text">0.1 N</span>، یک بخش از سیال را خارج کرده و بلافاصله طبق دستورالعمل مرحله بافری عمل کنید.</p>
+            <p class="mb-4">تجزیه و تحلیل بخش را با استفاده از یک روش سنجش مناسب انجام دهید. <span class="ltr-text">◆</span>روش در تک‌نگار انفرادی مشخص شده است.<span class="ltr-text">◆</span></p>
+
+            <p class="font-semibold mt-2 mb-1">مرحله بافری</p>
+            <p class="mb-2 text-sm text-gray-600">[نکته — عملیات افزودن بافر و تنظیم <span class="ltr-text">pH</span> را در عرض <span class="ltr-text">5 min</span> تکمیل کنید.] در حالی که دستگاه با نرخ مشخص شده <span class="ltr-text">◆</span>در تک‌نگار<span class="ltr-text">◆</span> کار می‌کند، <span class="ltr-text">250 mL</span> از تری‌بازیک سدیم فسفات <span class="ltr-text">0.20 M</span> که تا <span class="ltr-text">37 ± 0.5°</span> هم دما شده است، به سیال در ظرف اضافه کنید. در صورت لزوم، با اسید کلریدریک <span class="ltr-text">2 N</span> یا هیدروکسید سدیم <span class="ltr-text">2 N</span> تا <span class="ltr-text">pH</span> <span class="ltr-text">6.8 ± 0.05</span> تنظیم کنید. به کار با دستگاه برای <span class="ltr-text">45 min</span>، یا برای زمان مشخص شده <span class="ltr-text">◆</span>در تک‌نگار انفرادی<span class="ltr-text">◆</span> ادامه دهید. در پایان دوره زمانی، یک بخش از سیال را خارج کرده و تجزیه و تحلیل را با استفاده از یک روش سنجش مناسب انجام دهید. <span class="ltr-text">◆</span>روش در تک‌نگار انفرادی مشخص شده است. آزمایش ممکن است در مدت زمان کوتاه‌تری نسبت به زمان مشخص شده برای مرحله بافری به پایان برسد اگر نیاز برای حداقل مقدار حل شده در زمان زودتری برآورده شود.<span class="ltr-text">◆</span></p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش <span class="ltr-text">B</span> (مگر اینکه <span class="ltr-text">◆</span>در تک‌نگار انفرادی به نحو دیگری دستور داده شده باشد<span class="ltr-text">◆</span>)</h4>
+            <p class="font-semibold mt-2 mb-1">مرحله اسیدی</p>
+            <p class="mb-2">حجم <span class="ltr-text">1000 mL</span> اسید کلریدریک <span class="ltr-text">0.1 N</span> را در ظرف قرار دهید و دستگاه را مونتاژ کنید. اجازه دهید محیط به دمای <span class="ltr-text">37 ± 0.5°</span> هم دما شود. <span class="ltr-text">1</span> واحد دوز را در دستگاه قرار دهید، ظرف را بپوشانید و دستگاه را با نرخ مشخص شده <span class="ltr-text">◆</span>در تک‌نگار<span class="ltr-text">◆</span> به کار اندازید. پس از <span class="ltr-text">2 h</span> عملیات در اسید کلریدریک <span class="ltr-text">0.1 N</span>، یک بخش از سیال را خارج کرده و بلافاصله طبق دستورالعمل مرحله بافری عمل کنید.</p>
+            <p class="mb-4">تجزیه و تحلیل بخش را با استفاده از یک روش سنجش مناسب انجام دهید. <span class="ltr-text">◆</span>روش در تک‌نگار انفرادی مشخص شده است.<span class="ltr-text">◆</span></p>
+
+            <p class="font-semibold mt-2 mb-1">مرحله بافری</p>
+            <p class="mb-2 text-sm text-gray-600">[نکته — برای این مرحله از روش، از بافری استفاده کنید که قبلاً تا دمای <span class="ltr-text">37 ± 0.5°</span> هم دما شده است.] اسید را از ظرف تخلیه کرده و <span class="ltr-text">1000 mL</span> بافر فسفات <span class="ltr-text">pH 6.8</span>، آماده شده با مخلوط کردن اسید کلریدریک <span class="ltr-text">0.1 N</span> با تری‌بازیک سدیم فسفات <span class="ltr-text">0.20 M</span> (<span class="ltr-text">3:1</span>) و تنظیم <span class="ltr-text">pH</span> در صورت لزوم با اسید کلریدریک <span class="ltr-text">2 N</span> یا هیدروکسید سدیم <span class="ltr-text">2 N</span> تا <span class="ltr-text">6.8 ± 0.05</span> را به ظرف اضافه کنید. [نکته — این کار همچنین می‌تواند با خارج کردن ظرف حاوی اسید از دستگاه، سپس جایگزینی آن با ظرف دیگری حاوی بافر، و انتقال واحد دوز به ظرف حاوی بافر انجام شود.]</p>
+            <p class="mb-4">به کار با دستگاه برای <span class="ltr-text">45 min</span>، یا برای زمان مشخص شده <span class="ltr-text">◆</span>در تک‌نگار انفرادی<span class="ltr-text">◆</span> ادامه دهید. در پایان دوره زمانی، یک بخش از سیال را خارج کرده و تجزیه و تحلیل را با استفاده از یک روش سنجش مناسب انجام دهید. <span class="ltr-text">◆</span>روش در تک‌نگار انفرادی مشخص شده است. آزمایش ممکن است در مدت زمان کوتاه‌تری نسبت به زمان مشخص شده برای مرحله بافری به پایان برسد اگر نیاز برای حداقل مقدار حل شده در زمان زودتری برآورده شود.<span class="ltr-text">◆</span></p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">دستگاه <span class="ltr-text">3</span> (سیلندر رفت و برگشتی)</h3>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">اشکال دارویی با آزادسازی فوری<sup class="text-blue-600 hover:underline cursor-pointer">3</sup></h4>
+            <p class="mb-2">حجم مشخص شده محیط انحلال را در هر ظرف دستگاه قرار دهید، دستگاه را مونتاژ کنید، محیط انحلال را تا <span class="ltr-text">37 ± 0.5°</span> هم دما کنید و دماسنج را خارج کنید. <span class="ltr-text">1</span> واحد شکل دارویی را در هر یک از شش سیلندر رفت و برگشتی قرار دهید، با دقت حباب‌های هوا را از سطح هر واحد دوز خارج کنید و بلافاصله دستگاه را همانطور که <span class="ltr-text">◆</span>در تک‌نگار انفرادی<span class="ltr-text">◆</span> مشخص شده است به کار اندازید. در طول حرکت رو به بالا و پایین، سیلندر رفت و برگشتی مسافتی کلی <span class="ltr-text">9.9–10.1 cm</span> را طی می‌کند. در فاصله زمانی مشخص شده، یا در هر یک از زمان‌های ذکر شده، سیلندرهای رفت و برگشتی را بالا آورده و بخشی از محلول تحت آزمایش را از ناحیه‌ای در میانه سطح محیط انحلال و کف هر ظرف خارج کنید. تجزیه و تحلیل را طبق دستورالعمل <span class="ltr-text">◆</span>در تک‌نگار انفرادی<span class="ltr-text">◆</span> انجام دهید. در صورت لزوم، آزمایش را با واحدهای شکل دارویی اضافی تکرار کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محیط انحلال:</h4>
+            <p class="mb-4">طبق دستورالعمل اشکال دارویی با آزادسازی فوری در دستگاه <span class="ltr-text">1</span> و دستگاه <span class="ltr-text">2</span> عمل کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">زمان:</h4>
+            <p class="mb-4">طبق دستورالعمل اشکال دارویی با آزادسازی فوری در دستگاه <span class="ltr-text">1</span> و دستگاه <span class="ltr-text">2</span> عمل کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">اشکال دارویی با آزادسازی پایدار</h4>
+            <p class="mb-2">طبق دستورالعمل اشکال دارویی با آزادسازی فوری در دستگاه <span class="ltr-text">3</span> عمل کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محیط انحلال:</h4>
+            <p class="mb-4">طبق دستورالعمل اشکال دارویی با آزادسازی پایدار در دستگاه <span class="ltr-text">1</span> و دستگاه <span class="ltr-text">2</span> عمل کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">زمان:</h4>
+            <p class="mb-4">طبق دستورالعمل اشکال دارویی با آزادسازی پایدار در دستگاه <span class="ltr-text">1</span> و دستگاه <span class="ltr-text">2</span> عمل کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">اشکال دارویی با آزادسازی تاخیری</h4>
+            <p class="mb-2">طبق دستورالعمل اشکال دارویی با آزادسازی تاخیری، روش <span class="ltr-text">B</span> در دستگاه <span class="ltr-text">1</span> و دستگاه <span class="ltr-text">2</span>، با استفاده از یک ردیف از ظروف برای محیط‌های مرحله اسیدی و ردیف بعدی از ظروف برای محیط‌های مرحله بافری، و با استفاده از حجم مشخص شده محیط (معمولاً <span class="ltr-text">300 mL</span>) عمل کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">زمان:</h4>
+            <p class="mb-4">طبق دستورالعمل اشکال دارویی با آزادسازی فوری در دستگاه <span class="ltr-text">1</span> و دستگاه <span class="ltr-text">2</span> عمل کنید.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">دستگاه <span class="ltr-text">4</span> (سلول جریان پیوسته)</h3>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">اشکال دارویی با آزادسازی فوری</h4>
+            <p class="mb-2">دانه‌های شیشه‌ای را در سلول مشخص شده <span class="ltr-text">◆</span>در تک‌نگار<span class="ltr-text">◆</span> قرار دهید. <span class="ltr-text">1</span> واحد دوز را روی دانه‌ها یا، اگر <span class="ltr-text">◆</span>در تک‌نگار<span class="ltr-text">◆</span> مشخص شده است، روی یک نگهدارنده سیمی قرار دهید. سر فیلتر را مونتاژ کرده و قطعات را با یک دستگاه گیره مناسب به هم محکم کنید. محیط انحلال گرم شده تا <span class="ltr-text">37 ± 0.5°</span> را از طریق پمپ از پایین سلول وارد کنید تا نرخ جریان مشخص شده <span class="ltr-text">◆</span>در تک‌نگار انفرادی<span class="ltr-text">◆</span> با دقت <span class="ltr-text">5%</span> اندازه‌گیری شود. الیوت را به صورت کسری در هر یک از زمان‌های ذکر شده جمع‌آوری کنید. تجزیه و تحلیل را طبق دستورالعمل <span class="ltr-text">◆</span>در تک‌نگار انفرادی<span class="ltr-text">◆</span> انجام دهید. آزمایش را با واحدهای شکل دارویی اضافی تکرار کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محیط انحلال:</h4>
+            <p class="mb-4">طبق دستورالعمل اشکال دارویی با آزادسازی فوری در دستگاه <span class="ltr-text">1</span> و دستگاه <span class="ltr-text">2</span> عمل کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">زمان:</h4>
+            <p class="mb-4">طبق دستورالعمل اشکال دارویی با آزادسازی فوری در دستگاه <span class="ltr-text">1</span> و دستگاه <span class="ltr-text">2</span> عمل کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">اشکال دارویی با آزادسازی پایدار</h4>
+            <p class="mb-2">طبق دستورالعمل اشکال دارویی با آزادسازی فوری در دستگاه <span class="ltr-text">4</span> عمل کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محیط انحلال:</h4>
+            <p class="mb-4">طبق دستورالعمل اشکال دارویی با آزادسازی فوری در دستگاه <span class="ltr-text">4</span> عمل کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">زمان:</h4>
+            <p class="mb-4">طبق دستورالعمل اشکال دارویی با آزادسازی فوری در دستگاه <span class="ltr-text">4</span> عمل کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">اشکال دارویی با آزادسازی تاخیری</h4>
+            <p class="mb-2">طبق دستورالعمل اشکال دارویی با آزادسازی تاخیری در دستگاه <span class="ltr-text">1</span> و دستگاه <span class="ltr-text">2</span>، با استفاده از محیط‌های مشخص شده عمل کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">زمان:</h4>
+            <p class="mb-4">طبق دستورالعمل اشکال دارویی با آزادسازی تاخیری در دستگاه <span class="ltr-text">1</span> و دستگاه <span class="ltr-text">2</span> عمل کنید.</p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تفسیر</h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">اشکال دارویی با آزادسازی فوری</h3>
+            <p class="mb-4">مگر اینکه <span class="ltr-text">◆</span>در تک‌نگار انفرادی<span class="ltr-text">◆</span> به نحو دیگری مشخص شده باشد، الزامات در صورتی برآورده می‌شوند که مقادیر ماده فعال حل شده از واحدهای دوز آزمایش شده مطابق با جدول پذیرش <span class="ltr-text">1</span> باشد. آزمایش را از طریق سه مرحله ادامه دهید مگر اینکه نتایج در <span class="ltr-text">S1</span> یا <span class="ltr-text">S2</span> مطابق باشند. مقدار <span class="ltr-text">Q</span>، مقدار ماده فعال حل شده <span class="ltr-text">◆</span>در تک‌نگار انفرادی<span class="ltr-text">◆</span> است که به صورت درصدی از محتوای برچسب‌گذاری شده واحد دوز بیان می‌شود؛ مقادیر <span class="ltr-text">5%</span>، <span class="ltr-text">15%</span> و <span class="ltr-text">25%</span> در جدول پذیرش <span class="ltr-text">1</span> درصدهایی از محتوای برچسب‌گذاری شده هستند تا این مقادیر و <span class="ltr-text">Q</span> از نظر شرایط یکسان باشند.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">جدول پذیرش <span class="ltr-text">1</span></h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>مرحله</th>
+                        <th>تعداد آزمایش شده</th>
+                        <th>معیار پذیرش</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">S1</span></td>
+                        <td><span class="ltr-text">6</span></td>
+                        <td>هر واحد حداقل <span class="ltr-text">Q + 5%</span> است.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">S2</span></td>
+                        <td><span class="ltr-text">6</span></td>
+                        <td>میانگین <span class="ltr-text">12</span> واحد (<span class="ltr-text">S1 + S2</span>) حداقل <span class="ltr-text">Q</span> است و هیچ واحدی کمتر از <span class="ltr-text">Q − 15%</span> نیست.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">S3</span></td>
+                        <td><span class="ltr-text">12</span></td>
+                        <td>میانگین <span class="ltr-text">24</span> واحد (<span class="ltr-text">S1 + S2 + S3</span>) حداقل <span class="ltr-text">Q</span> است، حداکثر <span class="ltr-text">2</span> واحد کمتر از <span class="ltr-text">Q − 15%</span> نیستند و هیچ واحدی کمتر از <span class="ltr-text">Q − 25%</span> نیست.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">اشکال دارویی با آزادسازی فوری نمونه ترکیبی<span class="ltr-text">◆</span></h3>
+            <p class="mb-4">مگر اینکه در تک‌نگار انفرادی به نحو دیگری مشخص شده باشد، الزامات در صورتی برآورده می‌شوند که مقادیر ماده فعال حل شده از نمونه ترکیبی آزمایش شده مطابق با جدول پذیرش همراه برای نمونه ترکیبی باشد. آزمایش را از طریق سه مرحله ادامه دهید مگر اینکه نتایج در <span class="ltr-text">S1</span> یا <span class="ltr-text">S2</span> مطابق باشند. مقدار <span class="ltr-text">Q</span>، مقدار ماده فعال حل شده مشخص شده در تک‌نگار انفرادی است که به صورت درصدی از محتوای برچسب‌گذاری شده بیان می‌شود.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">جدول پذیرش برای نمونه ترکیبی</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>مرحله</th>
+                        <th>تعداد آزمایش شده</th>
+                        <th>معیار پذیرش</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">S1</span></td>
+                        <td><span class="ltr-text">6</span></td>
+                        <td>مقدار متوسط حل شده حداقل <span class="ltr-text">Q + 10%</span> است.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">S2</span></td>
+                        <td><span class="ltr-text">6</span></td>
+                        <td>مقدار متوسط حل شده (<span class="ltr-text">S1 + S2</span>) حداقل <span class="ltr-text">Q + 5%</span> است.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">S3</span></td>
+                        <td><span class="ltr-text">12</span></td>
+                        <td>مقدار متوسط حل شده (<span class="ltr-text">S1 + S2 + S3</span>) حداقل <span class="ltr-text">Q</span> است.<span class="ltr-text">◆</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">اشکال دارویی با آزادسازی پایدار</h3>
+            <p class="mb-4">مگر اینکه <span class="ltr-text">◆</span>در تک‌نگار انفرادی<span class="ltr-text">◆</span> به نحو دیگری مشخص شده باشد، الزامات در صورتی برآورده می‌شوند که مقادیر ماده فعال حل شده از واحدهای دوز آزمایش شده مطابق با جدول پذیرش <span class="ltr-text">2</span> باشد. آزمایش را از طریق سه سطح ادامه دهید مگر اینکه نتایج در <span class="ltr-text">L1</span> یا <span class="ltr-text">L2</span> مطابق باشند. محدودیت‌ها بر روی مقادیر ماده فعال حل شده بر حسب درصد محتوای برچسب‌گذاری شده بیان می‌شوند. محدودیت‌ها هر مقدار <span class="ltr-text">Qi</span> را در بر می‌گیرند، که مقدار حل شده در هر بازه دوزینگ کسری مشخص شده است. در مواردی که بیش از یک محدوده <span class="ltr-text">◆</span>در تک‌نگار انفرادی<span class="ltr-text">◆</span> مشخص شده است، معیارهای پذیرش به صورت جداگانه برای هر محدوده اعمال می‌شوند.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">جدول پذیرش <span class="ltr-text">2</span></h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>سطح</th>
+                        <th>تعداد آزمایش شده</th>
+                        <th>معیار</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">L1</span></td>
+                        <td><span class="ltr-text">6</span></td>
+                        <td>هیچ مقدار انفرادی خارج از هر یک از محدوده‌های ذکر شده نیست و هیچ مقدار انفرادی کمتر از مقدار ذکر شده در زمان نهایی آزمایش نیست.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">L2</span></td>
+                        <td><span class="ltr-text">6</span></td>
+                        <td>مقدار متوسط <span class="ltr-text">12</span> واحد (<span class="ltr-text">L1 + L2</span>) در هر یک از محدوده‌های ذکر شده قرار دارد و حداقل مقدار ذکر شده در زمان نهایی آزمایش است؛ هیچ کدام بیش از <span class="ltr-text">10%</span> از محتوای برچسب‌گذاری شده خارج از هر یک از محدوده‌های ذکر شده نیستند؛ و هیچ کدام بیش از <span class="ltr-text">10%</span> از محتوای برچسب‌گذاری شده کمتر از مقدار ذکر شده در زمان نهایی آزمایش نیستند.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">L3</span></td>
+                        <td><span class="ltr-text">12</span></td>
+                        <td>مقدار متوسط <span class="ltr-text">24</span> واحد (<span class="ltr-text">L1 + L2 + L3</span>) در هر یک از محدوده‌های ذکر شده قرار دارد و حداقل مقدار ذکر شده در زمان نهایی آزمایش است؛ حداکثر <span class="ltr-text">2</span> واحد از <span class="ltr-text">24</span> واحد بیش از <span class="ltr-text">10%</span> از محتوای برچسب‌گذاری شده خارج از هر یک از محدوده‌های ذکر شده نیستند؛ حداکثر <span class="ltr-text">2</span> واحد از <span class="ltr-text">24</span> واحد بیش از <span class="ltr-text">10%</span> از محتوای برچسب‌گذاری شده کمتر از مقدار ذکر شده در زمان نهایی آزمایش نیستند؛ و هیچ یک از واحدها بیش از <span class="ltr-text">20%</span> از محتوای برچسب‌گذاری شده خارج از هر یک از محدوده‌های ذکر شده یا بیش از <span class="ltr-text">20%</span> از محتوای برچسب‌گذاری شده کمتر از مقدار ذکر شده در زمان نهایی آزمایش نیستند.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">اشکال دارویی با آزادسازی تاخیری<sup class="text-blue-600 hover:underline cursor-pointer">3</sup></h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مرحله اسیدی:</h4>
+            <p class="mb-4">مگر اینکه <span class="ltr-text">◆</span>در تک‌نگار انفرادی<span class="ltr-text">◆</span> به نحو دیگری مشخص شده باشد، الزامات این بخش از آزمایش در صورتی برآورده می‌شوند که مقادیر، بر اساس درصد محتوای برچسب‌گذاری شده، ماده فعال حل شده از واحدهای آزمایش شده مطابق با جدول پذیرش <span class="ltr-text">3</span> باشد. آزمایش را از طریق تمام سطوح ادامه دهید مگر اینکه نتایج هر دو مرحله اسیدی و بافری در سطح زودتری مطابق باشند.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">جدول پذیرش <span class="ltr-text">3</span></h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>سطح</th>
+                        <th>تعداد آزمایش شده</th>
+                        <th>معیار</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">A1</span></td>
+                        <td><span class="ltr-text">6</span></td>
+                        <td>هیچ مقدار انفرادی از <span class="ltr-text">10%</span> حل شده تجاوز نمی‌کند.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">A2</span></td>
+                        <td><span class="ltr-text">6</span></td>
+                        <td>میانگین <span class="ltr-text">12</span> واحد (<span class="ltr-text">A1 + A2</span>) حداکثر <span class="ltr-text">10%</span> حل شده است و هیچ واحد انفرادی بیش از <span class="ltr-text">25%</span> حل شده نیست.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">A3</span></td>
+                        <td><span class="ltr-text">12</span></td>
+                        <td>میانگین <span class="ltr-text">24</span> واحد (<span class="ltr-text">A1 + A2 + A3</span>) حداکثر <span class="ltr-text">10%</span> حل شده است و هیچ واحد انفرادی بیش از <span class="ltr-text">25%</span> حل شده نیست.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مرحله بافری:</h4>
+            <p class="mb-4">مگر اینکه <span class="ltr-text">◆</span>در تک‌نگار انفرادی<span class="ltr-text">◆</span> به نحو دیگری مشخص شده باشد، الزامات در صورتی برآورده می‌شوند که مقادیر ماده فعال حل شده از واحدهای آزمایش شده مطابق با جدول پذیرش <span class="ltr-text">4</span> باشد. آزمایش را از طریق سه سطح ادامه دهید مگر اینکه نتایج هر دو مرحله در سطح زودتری مطابق باشند. مقدار <span class="ltr-text">Q</span> در جدول پذیرش <span class="ltr-text">4</span> <span class="ltr-text">75%</span> حل شده است مگر اینکه <span class="ltr-text">◆</span>در تک‌نگار انفرادی<span class="ltr-text">◆</span> به نحو دیگری مشخص شده باشد. مقدار <span class="ltr-text">Q</span>، <span class="ltr-text">◆</span>مشخص شده در تک‌نگار انفرادی<span class="ltr-text">◆</span>، کل مقدار ماده فعال حل شده در هر دو مرحله اسیدی و بافری است که به صورت درصدی از محتوای برچسب‌گذاری شده بیان می‌شود. مقادیر <span class="ltr-text">5%</span>، <span class="ltr-text">15%</span> و <span class="ltr-text">25%</span> در جدول پذیرش <span class="ltr-text">4</span> درصدهایی از محتوای برچسب‌گذاری شده هستند تا این مقادیر و <span class="ltr-text">Q</span> از نظر شرایط یکسان باشند.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">جدول پذیرش <span class="ltr-text">4</span></h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>سطح</th>
+                        <th>تعداد آزمایش شده</th>
+                        <th>معیار</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">B1</span></td>
+                        <td><span class="ltr-text">6</span></td>
+                        <td>هر واحد حداقل <span class="ltr-text">Q + 5%</span> است.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">B2</span></td>
+                        <td><span class="ltr-text">6</span></td>
+                        <td>میانگین <span class="ltr-text">12</span> واحد (<span class="ltr-text">B1 + B2</span>) حداقل <span class="ltr-text">Q</span> است و هیچ واحدی کمتر از <span class="ltr-text">Q − 15%</span> نیست.</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">B3</span></td>
+                        <td><span class="ltr-text">12</span></td>
+                        <td>میانگین <span class="ltr-text">24</span> واحد (<span class="ltr-text">B1 + B2 + B3</span>) حداقل <span class="ltr-text">Q</span> است، حداکثر <span class="ltr-text">2</span> واحد کمتر از <span class="ltr-text">Q – 15%</span> نیستند و هیچ واحدی کمتر از <span class="ltr-text">Q − 25%</span> نیست.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

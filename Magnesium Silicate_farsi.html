@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مونوگراف سیلیکات منیزیم (USP)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Vazirmatn -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax CDN for LaTeX rendering -->
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .tab-active {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        .tab-inactive {
+            border-color: transparent;
+            color: #6b7280;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+        .pass-text {
+            color: #22c55e;
+        }
+        .fail-text {
+            color: #ef4444;
+        }
+        .interactive-card {
+            background-color: #e0f2fe;
+            border: 1px solid #90cdf4;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 0.5rem;
+        }
+        .calculation-button {
+            background-color: #2563eb;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+    </style>
+</head>
+<body class="rtl">
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">سیلیکات منیزیم</h1>
+
+        <!-- Tab Navigation -->
+        <div class="flex justify-center mb-6 border-b border-gray-200">
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab('definition')">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('identification')">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('assay')">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('impurities')">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('specific-tests')">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('additional-requirements')">الزامات اضافی</button>
+        </div>
+
+        <!-- Content Area -->
+        <div id="content-container">
+            <!-- Definition Tab -->
+            <div id="definition-content" class="tab-content card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+                <p class="mb-4">
+                    سیلیکات منیزیم ترکیبی از اکسید منیزیم و دی‌اکسید سیلیسیوم است. این ماده حاوی <span class="ltr-text">NLT 15.0%</span> اکسید منیزیم (<span class="ltr-text">MgO</span>) و <span class="ltr-text">NLT 67.0%</span> دی‌اکسید سیلیسیوم (<span class="ltr-text">SiO₂</span>) است که بر اساس احتراق محاسبه می‌شود.
+                </p>
+            </div>
+
+            <!-- Identification Tab -->
+            <div id="identification-content" class="tab-content card hidden">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+
+                <h3><span class="ltr-text">•</span> شناسایی (A): آزمون‌های شناسایی — عمومی، منیزیم <a href="General chapters/191.pdf" class="text-blue-600 hover:underline" target="_blank">191</a></h3>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه:</h4>
+                <p class="mb-2"><span class="ltr-text">500 mg</span></p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل:</h4>
+                <p class="mb-2">نمونه را با <span class="ltr-text">10 mL</span> اسید هیدروکلریک <span class="ltr-text">3 N</span> مخلوط کنید. فیلتر کنید و فیلتر شده را با هیدروکسید آمونیوم <span class="ltr-text">6 N</span> نسبت به کاغذ تورنسل خنثی کنید.</p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیار پذیرش:</h4>
+                <p class="mb-4">فیلتر شده خنثی شده الزامات را برآورده می‌کند.</p>
+
+                <h3><span class="ltr-text">•</span> شناسایی (B):</h3>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل:</h4>
+                <p class="mb-2">یک دانه را با ذوب کردن چند بلور سدیم آمونیوم فسفات روی یک حلقه پلاتینی در شعله مشعل بونزن تهیه کنید. دانه داغ و شفاف را در تماس با سیلیکات منیزیم قرار داده و دوباره ذوب کنید.</p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیار پذیرش:</h4>
+                <p class="mb-4">سیلیکا در دانه شناور شده و پس از سرد شدن، دانه‌ای مات با ساختار شبکه‌ای تولید می‌کند.</p>
+            </div>
+
+            <!-- Assay Tab -->
+            <div id="assay-content" class="tab-content card hidden">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+
+                <div class="card interactive-card p-4 my-4">
+                    <h3><span class="ltr-text">•</span> اکسید منیزیم</h3>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه:</h4>
+                    <p class="mb-2"><span class="ltr-text">1.5 g</span></p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم تیتراسیون:</h4>
+                    <ul class="list-disc list-inside mb-2">
+                        <li>حالت: تیتراسیون برگشتی</li>
+                        <li>تیترانت: <span class="ltr-text">1 N</span> هیدروکسید سدیم <span class="ltr-text">VS</span></li>
+                        <li>تشخیص نقطه پایانی: چشمی</li>
+                    </ul>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل:</h4>
+                    <p class="mb-2">نمونه را در <span class="ltr-text">50.0 mL</span> اسید سولفوریک <span class="ltr-text">1 N VS</span> حل کنید. به مدت <span class="ltr-text">1 h</span> در حمام بخار حرارت دهید، تا دمای اتاق خنک کنید و متیل اورانژ <span class="ltr-text">TS</span> اضافه کنید. اسید اضافی در نمونه را با تیترانت تیتر کنید. هر <span class="ltr-text">mL</span> اسید سولفوریک <span class="ltr-text">1 N</span> معادل <span class="ltr-text">20.15 mg</span> از <span class="ltr-text">MgO</span> است.</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیار پذیرش:</h4>
+                    <p class="mb-4"><span class="ltr-text">NLT 15.0%</span> بر اساس احتراق.</p>
+
+                    <!-- Status Dropdown -->
+                    <div class="mb-4">
+                        <label for="mgo-status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
+                        <select id="mgo-status" name="mgo-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                            <option value=""></option>
+                            <option value="Pass">Pass</option>
+                            <option value="Fail">Fail</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="mgo-spec" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="mgo-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="card interactive-card p-4 my-4">
+                    <h3><span class="ltr-text">•</span> دی‌اکسید سیلیسیوم</h3>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه:</h4>
+                    <p class="mb-2"><span class="ltr-text">700 mg</span></p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل:</h4>
+                    <p class="mb-2">نمونه را به یک ظرف پلاتینی کوچک منتقل کنید. <span class="ltr-text">10 mL</span> اسید سولفوریک <span class="ltr-text">1 N</span> اضافه کنید و در حمام بخار تا خشکی حرارت دهید، در حالی که ظرف بدون پوشش باشد. باقیمانده را با <span class="ltr-text">25 mL</span> آب تیمار کنید و به مدت <span class="ltr-text">15 min</span> در حمام بخار حرارت دهید. مایع رویی را از طریق کاغذ صافی بدون خاکستر، با کمک مکش، جداسازی کرده و باقیمانده را سه بار با آب گرم توسط دکانته کردن شستشو دهید و شستشوها را از طریق کاغذ صافی عبور دهید. در نهایت، باقیمانده را به صافی منتقل کرده و به طور کامل با آب گرم بشویید. کاغذ صافی و محتویات آن را به ظرف پلاتینی که قبلاً استفاده شده بود منتقل کنید. تا خشکی حرارت دهید، خاکستر کنید، به مدت <span class="ltr-text">30 min</span> به شدت حرارت دهید، خنک کرده و وزن کنید. باقیمانده را با آب مرطوب کرده و <span class="ltr-text">6 mL</span> اسید هیدروفلوئوریک و <span class="ltr-text">3 drops</span> اسید سولفوریک اضافه کنید. تا خشکی تبخیر کنید، به مدت <span class="ltr-text">5 min</span> حرارت دهید، خنک کرده و وزن کنید. کاهش وزن نشان‌دهنده وزن <span class="ltr-text">SiO₂</span> است.</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیار پذیرش:</h4>
+                    <p class="mb-4"><span class="ltr-text">NLT 67.0%</span> بر اساس احتراق.</p>
+
+                    <!-- Status Dropdown -->
+                    <div class="mb-4">
+                        <label for="sio2-status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
+                        <select id="sio2-status" name="sio2-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                            <option value=""></option>
+                            <option value="Pass">Pass</option>
+                            <option value="Fail">Fail</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="sio2-spec" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="sio2-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Impurities Tab -->
+            <div id="impurities-content" class="tab-content card hidden">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+
+                <div class="card interactive-card p-4 my-4">
+                    <h3><span class="ltr-text">•</span> فلوراید</h3>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول شناساگر:</h4>
+                    <p class="mb-2"><span class="ltr-text">100 mg/mL</span> مخلوط کمپلکسان لانتاینم آلیزارین در <span class="ltr-text">60%</span> ایزوپروپیل الکل. اگر محلول شفاف نبود، آن را فیلتر کنید.</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استاندارد:</h4>
+                    <p class="mb-2"><span class="ltr-text">2.21 µg/mL</span> فلوراید سدیم در اسید هیدروکلریک <span class="ltr-text">0.1 N</span>.</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه:</h4>
+                    <p class="mb-2">یک دوغاب متشکل از <span class="ltr-text">5.0 g</span> سیلیکات منیزیم و <span class="ltr-text">45 mL</span> اسید هیدروکلریک <span class="ltr-text">0.1 N</span> تهیه کنید. به مدت <span class="ltr-text">15 min</span> در دمای اتاق هم بزنید و از فیلتر با اندازه منافذ <span class="ltr-text">0.45-µm</span> به داخل بالن حجمی <span class="ltr-text">50-mL</span> عبور دهید. فیلتر را با پنج قسمت <span class="ltr-text">1-mL</span> اسید هیدروکلریک <span class="ltr-text">0.1 N</span> شستشو دهید و شستشوها را در بالن جمع‌آوری کنید. با اسید هیدروکلریک <span class="ltr-text">0.1 N</span> به حجم برسانید.</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط دستگاهی:</h4>
+                    <ul class="list-disc list-inside mb-2">
+                        <li>حالت: <span class="ltr-text">Vis</span></li>
+                        <li>طول موج تحلیلی: حدود <span class="ltr-text">620 nm</span></li>
+                        <li>سلول: <span class="ltr-text">1 cm</span></li>
+                        <li>بلانک: اسید هیدروکلریک <span class="ltr-text">0.1 N</span>، محلول شناساگر و آب (<span class="ltr-text">5:5:15</span>)</li>
+                    </ul>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل:</h4>
+                    <p class="mb-2"><span class="ltr-text">5.0 mL</span> از محلول استاندارد و محلول نمونه را به بالن‌های حجمی جداگانه <span class="ltr-text">25-mL</span> منتقل کنید، <span class="ltr-text">5.0 mL</span> محلول شناساگر اضافه کنید، با آب به حجم برسانید و اجازه دهید به مدت <span class="ltr-text">1 h</span> در نور پراکنده و در دمای محیط قرار گیرد. جذب محلول‌ها را در برابر بلانک تعیین کنید.</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیار پذیرش:</h4>
+                    <p class="mb-4"><span class="ltr-text">10 µg/g</span>؛ جذب محلول نمونه <span class="ltr-text">NMT</span> جذب محلول استاندارد است.</p>
+
+                    <!-- Status Dropdown -->
+                    <div class="mb-4">
+                        <label for="fluoride-status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
+                        <select id="fluoride-status" name="fluoride-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                            <option value=""></option>
+                            <option value="Pass">Pass</option>
+                            <option value="Fail">Fail</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="fluoride-spec" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="fluoride-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="card interactive-card p-4 my-4">
+                    <h3><span class="ltr-text">•</span> نمک‌های محلول</h3>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه:</h4>
+                    <p class="mb-2"><span class="ltr-text">10.0 g</span></p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل:</h4>
+                    <p class="mb-2">نمونه را با <span class="ltr-text">150 mL</span> آب به مدت <span class="ltr-text">15 min</span> بجوشانید. تا دمای اتاق خنک کنید و اجازه دهید مخلوط به مدت <span class="ltr-text">15 min</span> بماند. با کمک مکش فیلتر کنید، فیلتر شده را به بالن حجمی <span class="ltr-text">200-mL</span> منتقل کرده و با آب به حجم برسانید. <span class="ltr-text">50.0 mL</span> از این محلول، که نشان‌دهنده <span class="ltr-text">2.5 g</span> از سیلیکات است، را در یک ظرف پلاتینی توزین شده تا خشکی تبخیر کنید. به آرامی تا وزن ثابت حرارت دهید. محلول رقیق شده باقیمانده را برای آزمون قلیاهای آزاد نگه دارید.</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیار پذیرش:</h4>
+                    <p class="mb-4"><span class="ltr-text">3.0%</span>؛ <span class="ltr-text">NMT 75.0 mg</span>.</p>
+
+                    <!-- Status Dropdown -->
+                    <div class="mb-4">
+                        <label for="soluble-salts-status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
+                        <select id="soluble-salts-status" name="soluble-salts-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                            <option value=""></option>
+                            <option value="Pass">Pass</option>
+                            <option value="Fail">Fail</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="soluble-salts-spec" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="soluble-salts-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="card interactive-card p-4 my-4">
+                    <h3><span class="ltr-text">•</span> قلیاهای آزاد</h3>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه:</h4>
+                    <p class="mb-2"><span class="ltr-text">20 mL</span> از فیلتر شده رقیق شده نگهداری شده تهیه شده در آزمون نمک‌های محلول.</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل:</h4>
+                    <p class="mb-2"><span class="ltr-text">2 drops</span> فنل فتالئین <span class="ltr-text">TS</span> به نمونه اضافه کنید، که نشان‌دهنده <span class="ltr-text">1 g</span> سیلیکات منیزیم است.</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیار پذیرش:</h4>
+                    <p class="mb-4">اگر رنگ صورتی تولید شد، برای از بین بردن آن <span class="ltr-text">NMT 2.5 mL</span> از اسید هیدروکلریک <span class="ltr-text">0.1 N</span> نیاز است.</p>
+
+                    <!-- Status Dropdown -->
+                    <div class="mb-4">
+                        <label for="free-alkali-status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
+                        <select id="free-alkali-status" name="free-alkali-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                            <option value=""></option>
+                            <option value="Pass">Pass</option>
+                            <option value="Fail">Fail</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="free-alkali-spec" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="free-alkali-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="card interactive-card p-4 my-4">
+                    <h3><span class="ltr-text">•</span> سرب <a href="General chapters/251.pdf" class="text-blue-600 hover:underline" target="_blank">251</a></h3>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تهیه آزمون:</h4>
+                    <p class="mb-2"><span class="ltr-text">1.0 g</span> سیلیکات منیزیم را در <span class="ltr-text">20 mL</span> اسید هیدروکلریک <span class="ltr-text">3 N</span> حل کنید، در حمام بخار تا <span class="ltr-text">10 mL</span> تبخیر کنید، با آب به <span class="ltr-text">20 mL</span> رقیق کرده و خنک کنید.</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیار پذیرش:</h4>
+                    <p class="mb-4"><span class="ltr-text">NMT 10 µg/g</span>.</p>
+
+                    <!-- Status Dropdown -->
+                    <div class="mb-4">
+                        <label for="lead-status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
+                        <select id="lead-status" name="lead-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                            <option value=""></option>
+                            <option value="Pass">Pass</option>
+                            <option value="Fail">Fail</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="lead-spec" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="lead-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specific Tests Tab -->
+            <div id="specific-tests-content" class="tab-content card hidden">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+
+                <div class="card interactive-card p-4 my-4">
+                    <h3><span class="ltr-text">•</span> نسبت <span class="ltr-text">SiO₂</span> به <span class="ltr-text">MgO</span></h3>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل:</h4>
+                    <p class="mb-2">درصد <span class="ltr-text">SiO₂</span> به‌دست‌آمده در سنجش دی‌اکسید سیلیسیوم را بر درصد <span class="ltr-text">MgO</span> به‌دست‌آمده در سنجش اکسید منیزیم تقسیم کنید.</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیار پذیرش:</h4>
+                    <p class="mb-4"><span class="ltr-text">2.50–4.50</span></p>
+
+                    <!-- Status Dropdown -->
+                    <div class="mb-4">
+                        <label for="ratio-status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
+                        <select id="ratio-status" name="ratio-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                            <option value=""></option>
+                            <option value="Pass">Pass</option>
+                            <option value="Fail">Fail</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="ratio-spec" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="ratio-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="card interactive-card p-4 my-4">
+                    <h3><span class="ltr-text">•</span> افت در خشکانیدن <a href="General chapters/731.pdf" class="text-blue-600 hover:underline" target="_blank">731</a></h3>
+                    <p class="text-gray-600 mb-2">
+                        <span class="font-bold">[توجه—نمونه خشک شده را برای آزمون افت در احتراق نگه دارید.]</span>
+                    </p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل:</h4>
+                    <p class="mb-2">در دمای <span class="ltr-text">105°</span> به مدت <span class="ltr-text">2 h</span> خشک کنید.</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیار پذیرش:</h4>
+                    <p class="mb-4"><span class="ltr-text">NMT 15.0%</span>.</p>
+
+                    <!-- Calculator for Loss on Drying -->
+                    <div class="formula-display">
+                        $$LOD=\frac{(W_{1}+W_{sa})-W_2}{W_{sa}} \times 100$$
+                    </div>
+                    <div class="mb-4">
+                        <label for="lod-w1" class="block text-gray-700 text-sm font-bold mb-2">W1 (وزن بوته خالی):</label>
+                        <input type="text" id="lod-w1" name="lod-w1" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                    </div>
+                    <div class="mb-4">
+                        <label for="lod-wsa" class="block text-gray-700 text-sm font-bold mb-2">Wsa (وزن نمونه):</label>
+                        <input type="text" id="lod-wsa" name="lod-wsa" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                    </div>
+                    <div class="mb-4">
+                        <label for="lod-w2" class="block text-gray-700 text-sm font-bold mb-2">W2 (وزن نمونه خشک شده + بوته):</label>
+                        <input type="text" id="lod-w2" name="lod-w2" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                    </div>
+                    <button class="calculation-button" onclick="calculateLOD('lod')">محاسبه</button>
+                    <div class="mt-4">
+                        <p>نتیجه: <span id="lod-result"></span></p>
+                        <p>وضعیت: <span id="lod-status"></span></p>
+                    </div>
+                    <div class="mb-4">
+                        <label for="lod-spec" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="lod-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="card interactive-card p-4 my-4">
+                    <h3><span class="ltr-text">•</span> افت در احتراق <a href="General chapters/733.pdf" class="text-blue-600 hover:underline" target="_blank">733</a></h3>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه:</h4>
+                    <p class="mb-2">نمونه نگه داشته شده از آزمون افت در خشکانیدن.</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل:</h4>
+                    <p class="mb-2">نمونه را در دمای <span class="ltr-text">900°–1000°</span> به مدت <span class="ltr-text">20 min</span> حرارت دهید.</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیار پذیرش:</h4>
+                    <p class="mb-4"><span class="ltr-text">NMT 15%</span>، قبلاً خشک شده.</p>
+
+                    <!-- Calculator for Loss on Ignition -->
+                    <div class="formula-display">
+                        $$LOI=\frac{(W_{1}+W_{sa})-W_2}{W_{sa}} \times 100$$
+                    </div>
+                    <div class="mb-4">
+                        <label for="loi-w1" class="block text-gray-700 text-sm font-bold mb-2">W1 (وزن بوته خالی):</label>
+                        <input type="text" id="loi-w1" name="loi-w1" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                    </div>
+                    <div class="mb-4">
+                        <label for="loi-wsa" class="block text-gray-700 text-sm font-bold mb-2">Wsa (وزن نمونه):</label>
+                        <input type="text" id="loi-wsa" name="loi-wsa" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                    </div>
+                    <div class="mb-4">
+                        <label for="loi-w2" class="block text-gray-700 text-sm font-bold mb-2">W2 (وزن نمونه حرارت داده شده + بوته):</label>
+                        <input type="text" id="loi-w2" name="loi-w2" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                    </div>
+                    <button class="calculation-button" onclick="calculateLOD('loi')">محاسبه</button>
+                    <div class="mt-4">
+                        <p>نتیجه: <span id="loi-result"></span></p>
+                        <p>وضعیت: <span id="loi-status"></span></p>
+                    </div>
+                    <div class="mb-4">
+                        <label for="loi-spec" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="loi-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="card interactive-card p-4 my-4">
+                    <h3><span class="ltr-text">•</span> <span class="ltr-text">pH</span> <a href="General chapters/791.pdf" class="text-blue-600 hover:underline" target="_blank">791</a></h3>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه:</h4>
+                    <p class="mb-2">یک سوسپانسیون آبی کاملاً مخلوط (<span class="ltr-text">1 in 10</span>).</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیار پذیرش:</h4>
+                    <p class="mb-4"><span class="ltr-text">7.0–10.8</span></p>
+
+                    <!-- Status Dropdown -->
+                    <div class="mb-4">
+                        <label for="ph-status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
+                        <select id="ph-status" name="ph-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                            <option value=""></option>
+                            <option value="Pass">Pass</option>
+                            <option value="Fail">Fail</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="ph-spec" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="ph-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Requirements Tab -->
+            <div id="additional-requirements-content" class="tab-content card hidden">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+
+                <h3><span class="ltr-text">•</span> بسته‌بندی و نگهداری:</h3>
+                <p class="mb-4">در ظروف با درپوش محکم نگهداری شود.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab switching logic
+        function showTab(tabId) {
+            // Hide all tab content
+            document.querySelectorAll('.tab-content').forEach(tabContent => {
+                tabContent.classList.add('hidden');
+            });
+
+            // Deactivate all tab buttons
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('tab-active');
+                button.classList.add('tab-inactive');
+            });
+
+            // Show the selected tab content
+            document.getElementById(tabId + '-content').classList.remove('hidden');
+
+            // Activate the clicked button
+            event.currentTarget.classList.remove('tab-inactive');
+            event.currentTarget.classList.add('tab-active');
+
+            // Ensure MathJax re-renders content if new tab has formulas
+            if (typeof MathJax !== 'undefined') {
+                MathJax.typeset();
+            }
+        }
+
+        // Calculation function for Loss on Drying / Loss on Ignition
+        function calculateLOD(testType) {
+            const w1Input = document.getElementById(`${testType}-w1`);
+            const wsaInput = document.getElementById(`${testType}-wsa`);
+            const w2Input = document.getElementById(`${testType}-w2`);
+            const resultSpan = document.getElementById(`${testType}-result`);
+            const statusSpan = document.getElementById(`${testType}-status`);
+
+            const W1 = parseFloat(w1Input.value);
+            const Wsa = parseFloat(wsaInput.value);
+            const W2 = parseFloat(w2Input.value);
+
+            if (isNaN(W1) || isNaN(Wsa) || isNaN(W2) || Wsa === 0) {
+                resultSpan.textContent = 'ورودی‌های نامعتبر.';
+                statusSpan.textContent = '';
+                statusSpan.className = '';
+                return;
+            }
+
+            const result = ((W1 + Wsa) - W2) / Wsa * 100;
+            const acceptanceLimit = 15.0; // NMT 15.0% for LOD, NMT 15% for LOI
+
+            resultSpan.textContent = `${result.toFixed(2)}%`;
+
+            let statusText = '';
+            let statusClass = '';
+
+            if (result <= acceptanceLimit) {
+                statusText = 'Pass';
+                statusClass = 'pass-text';
+            } else {
+                statusText = 'Fail';
+                statusClass = 'fail-text';
+            }
+            statusSpan.textContent = statusText;
+            statusSpan.className = statusClass;
+
+            const ppmResult = (result / 100) * 1_000_000;
+            resultSpan.textContent += ` (${ppmResult.toFixed(2)} ppm)`;
+        }
+
+        // Initialize the first tab as active on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            showTab('definition');
+            // Manually trigger click for the first tab button to ensure initial state is correct
+            document.querySelector('.tab-button').click();
+        });
+    </script>
+</body>
+</html>
