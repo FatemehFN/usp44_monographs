@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طراحی و تحلیل سنجش‌های زیستی</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Vazirmatn -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax CDN for LaTeX rendering -->
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6"><span class="ltr-text">111</span> طراحی و تحلیل سنجش‌های زیستی</h1>
+
+        <div class="card mb-6">
+            <h2>مقدمه</h2>
+            <p class="mb-4">قدرت چندین ماده فارماکوپه‌ای باید با سنجش‌های زیستی تعیین شود. هدف این فصل ارائه توضیحی مختصر از برخی روش‌های بیومتریک ضروری برای سنجش‌های زیستی در فصول یا تک‌نگاری‌های <span class="ltr-text">USP–NF</span>، یعنی شناسایی داده‌های پرت، فواصل اطمینان برای اندازه‌گیری‌های قدرت نسبی، و ترکیب سنجش‌های مستقل است. برای سنجش‌های زیستی که در <span class="ltr-text">USP–NF</span> نیستند، ممکن است روش‌های دیگری مناسب باشند. به فصل اطلاعات عمومی تحلیل سنجش‌های زیستی <a href="1034.html" class="text-blue-600 hover:underline" target="_blank"><span class="ltr-text">1034</span></a> مراجعه کنید که ممکن است یک راهنمای مفید، اما غیرالزامی باشد.</p>
+        </div>
+
+        <div class="card mb-6">
+            <h2>رد مشاهدات پرت یا غیرعادی</h2>
+            <p class="mb-4">پاسخی که به دلیل عدم رعایت روال در طول یک سنجش قابل تردید است، رد می‌شود. سایر مقادیر غیرعادی ممکن است تنها پس از جدول‌بندی پاسخ‌ها کشف شوند، اما سپس می‌توان آنها را به بی‌نظمی‌های سنجش ردیابی کرد که حذف آنها را توجیه می‌کند. رد یا حفظ خودسرانه یک پاسخ ظاهراً غیرعادی می‌تواند منبع جدی سوگیری باشد. به طور کلی، رد مشاهدات صرفاً بر اساس بزرگی نسبی آنها، بدون بررسی علت، رویه‌ای است که باید با احتیاط استفاده شود. اگر فهمیده شود، چه پس از بررسی علت و چه بر اساس تجربه عملی سنجش، که عدم تطابق یک مشاهده بعید است از انتظار معقول پاسخ به درمان‌های سنجش ناشی شود، آنگاه یک پاسخ غیرعادی یا پرت مشکوک ممکن است در برابر یکی از دو معیار آزمایش شود، که هر دو فرض می‌کنند داده‌ها دارای توزیع تقریباً نرمال هستند (که ممکن است تنها پس از تبدیل مناسب پاسخ‌های اصلی برآورده شود). رویکردهای آماری معتبر جایگزین برای تشخیص داده پرت ممکن است استفاده شوند. شرایطی که تحت آن آزمایش داده پرت انجام خواهد شد و معیاری که باید استفاده شود، باید <span class="ltr-text">a priori</span> در رویه‌های آزمایشگاه مشخص شود، اگر در تک‌نگاری یا فصل مشخص نشده باشد.</p>
+
+            <h3>معیار <span class="ltr-text">1</span> (آزمون دیکسون)</h3>
+            <p class="mb-4">معیار اول بر اساس تغییرپذیری در یک گروه واحد از پاسخ‌های ظاهراً معادل، مانند گروهی از حیوانات که غلظت مشترکی از یک نمونه به آنها داده شده است، بنا شده است. در سطح اطمینان <span class="ltr-text">99%</span>، یک مشاهده معتبر در <span class="ltr-text">100</span> آزمایش (زمانی که داده پرت مشکوک فقط در یک انتها می‌تواند رخ دهد) یا یک بار در <span class="ltr-text">50</span> آزمایش (زمانی که داده پرت مشکوک می‌تواند در هر دو انتها رخ دهد) رد خواهد شد، به شرطی که تعداد نسبتاً کمی، اگر وجود داشته باشد، از پاسخ‌ها در گروه یکسان باشند. پاسخ‌ها را بر اساس بزرگی از <span class="ltr-text">y1</span> تا <span class="ltr-text">yN</span> مرتب کنید، که <span class="ltr-text">N</span> تعداد مشاهدات در گروه است. شکاف نسبی را با استفاده از فرمول‌های جدول <span class="ltr-text">1</span> زیر محاسبه کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2 text-center">جدول <span class="ltr-text">1</span></h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>اندازه نمونه (<span class="ltr-text">N</span>)</th>
+                        <th>داده پرت نامزد، کوچکترین (<span class="ltr-text">y1</span>)</th>
+                        <th>داده پرت نامزد، بزرگترین (<span class="ltr-text">yN</span>)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">3–7</span></td>
+                        <td class="ltr-text">G1 = (y2 − y1)/(yN − y1)</td>
+                        <td class="ltr-text">G1 = (yN − yN−1)/(yN − y1)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">8–10</span></td>
+                        <td class="ltr-text">G2 = (y2 − y1)/(yN−1 − y1)</td>
+                        <td class="ltr-text">G2 = (yN − yN−1)/(yN − y2)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">11–13</span></td>
+                        <td class="ltr-text">G3 = (y3 − y1)/(yN−1 − y1)</td>
+                        <td class="ltr-text">G3 = (yN − yN−2)/(yN − y2)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="mb-4">اگر <span class="ltr-text">G1</span>، <span class="ltr-text">G2</span> یا <span class="ltr-text">G3</span>، بر حسب مورد، از مقدار بحرانی در جدول <span class="ltr-text">2</span> برای <span class="ltr-text">N</span> مشاهده شده فراتر رود، مبنای آماری برای شناسایی اندازه‌گیری ناسازگار به عنوان داده پرت و در نظر گرفتن حذف آن وجود دارد. برای <span class="ltr-text">N</span> بزرگتر از <span class="ltr-text">13</span>، از معیار <span class="ltr-text">2</span> استفاده کنید.</p>
+            <p class="mb-4">در نمونه‌های گرفته شده از یک جامعه نرمال، در سطح اطمینان <span class="ltr-text">99%</span>، شکاف‌های مساوی یا بزرگتر از مقادیر زیر برای <span class="ltr-text">G1</span>، <span class="ltr-text">G2</span> و <span class="ltr-text">G3</span> با احتمال <span class="ltr-text">P = 0.01</span> رخ می‌دهند، زمانی که اندازه‌گیری‌های پرت فقط در یک انتها می‌توانند رخ دهند؛ یا با <span class="ltr-text">P = 0.02</span>، زمانی که ممکن است در هر دو انتها رخ دهند.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2 text-center">جدول <span class="ltr-text">2</span>. آزمون برای اندازه‌گیری‌های پرت</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th><span class="ltr-text">N</span></th>
+                        <th><span class="ltr-text">G1</span></th>
+                        <th><span class="ltr-text">N</span></th>
+                        <th><span class="ltr-text">G2</span></th>
+                        <th><span class="ltr-text">N</span></th>
+                        <th><span class="ltr-text">G3</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">3</span></td>
+                        <td><span class="ltr-text">0.988</span></td>
+                        <td><span class="ltr-text">8</span></td>
+                        <td><span class="ltr-text">0.683</span></td>
+                        <td><span class="ltr-text">11</span></td>
+                        <td><span class="ltr-text">0.679</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">4</span></td>
+                        <td><span class="ltr-text">0.889</span></td>
+                        <td><span class="ltr-text">9</span></td>
+                        <td><span class="ltr-text">0.635</span></td>
+                        <td><span class="ltr-text">12</span></td>
+                        <td><span class="ltr-text">0.642</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">5</span></td>
+                        <td><span class="ltr-text">0.780</span></td>
+                        <td><span class="ltr-text">10</span></td>
+                        <td><span class="ltr-text">0.597</span></td>
+                        <td><span class="ltr-text">13</span></td>
+                        <td><span class="ltr-text">0.615</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">6</span></td>
+                        <td><span class="ltr-text">0.698</span></td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">7</span></td>
+                        <td><span class="ltr-text">0.637</span></td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>—</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>معیار <span class="ltr-text">2</span> (آزمون انحراف استیودنت‌شده حدی گرابز)</h3>
+            <p class="mb-4">معیار دوم ممکن است برای بررسی مقادیر پرت در گروه‌های پاسخ‌های ظاهراً معادل و همچنین برای بررسی مجموعه باقی‌مانده‌ها از یک مدل برازش شده (خطی یا غیرخطی) که در آن واریانس ثابت است، استفاده شود. مدل نهایی (که باقی‌مانده‌ها را برای تشخیص داده پرت تولید می‌کند) باید شامل تمام متغیرهای طراحی مهم باشد. (برای بحث بیشتر درباره متغیرهای طراحی، به فصل اطلاعات عمومی طراحی و توسعه سنجش‌های زیستی <a href="1032.html" class="text-blue-600 hover:underline" target="_blank"><span class="ltr-text">1032</span></a> مراجعه کنید، که ممکن است منبعی مفید، اما غیرالزامی باشد.) (توجه داشته باشید که برای کاربرد در باقی‌مانده‌ها، موارد زیر یک تقریب است. اگر نرم‌افزار آماری باقی‌مانده‌های استیودنت‌شده را فراهم کند، باید از آن مقادیر به جای مقادیر حاصل از معادله زیر استفاده شود.) برای مقداری، <span class="ltr-text">R</span>، که دورترین فاصله را از میانگین نمونه دارد، انحراف استاندارد <span class="ltr-text">Z</span> را محاسبه کنید:</p>
+            <div class="formula-display">
+                $$Z = \frac{R - \bar{R}}{S}$$
+            </div>
+            <p class="mb-4">که در آن <span class="ltr-text">R</span> و <span class="ltr-text">S</span> به ترتیب میانگین و انحراف معیار مجموعه مقادیر هستند. برای باقی‌مانده‌های حاصل از برازش حداقل مربعات، مانند سنجش خط موازی، <span class="ltr-text">R = 0</span>، و <span class="ltr-text">S</span> ریشه دوم میانگین مربعات باقی‌مانده از تحلیل است. اگر <span class="ltr-text">|Z|</span> بزرگتر از <span class="ltr-text">C</span> باشد که در ادامه تعیین می‌شود، آنگاه مقدار <span class="ltr-text">R</span> به عنوان یک داده پرت آماری در سطح <span class="ltr-text">1%</span> شناسایی می‌شود.</p>
+            <p class="mb-4">که در آن <span class="ltr-text">N</span> اندازه نمونه است، <span class="ltr-text">t</span> نقطه درصدی <span class="ltr-text">100p</span> یک طرفه از توزیع <span class="ltr-text">t</span> با <span class="ltr-text">df</span> درجات آزادی مرتبط با <span class="ltr-text">S</span> است:</p>
+            <p class="mb-4">روش‌های جایگزین برای تشخیص داده پرت در دسترس هستند که برای استفاده در مجموعه‌داده‌هایی که ممکن است حاوی داده‌های پرت متعدد باشند و برای تشخیص داده‌های پرت مرتبط با طراحی یا مدل سنجش زیستی در نظر گرفته شده‌اند. برای بحث بیشتر در مورد داده‌های پرت، به فصل اطلاعات عمومی داده‌های تحلیلی—تفسیر و درمان <a href="1010.html" class="text-blue-600 hover:underline" target="_blank"><span class="ltr-text">1010</span></a> مراجعه کنید، که ممکن است منبعی مفید، اما غیرالزامی باشد.</p>
+        </div>
+
+        <div class="card mb-6">
+            <h2>فاصله اطمینان و حدود قدرت</h2>
+            <p class="mb-4">روش زیر (فیِیلر) برای تعیین فاصله اطمینان برای برآورد لگاریتم قدرت نسبی از یک سنجش خط موازی یا یک سنجش نسبت شیب استفاده می‌شود. فرض کنید <span class="ltr-text">M = a/b</span> نسبت مورد نیاز برای فاصله اطمینان باشد. برای برآوردها، <span class="ltr-text">a</span> و <span class="ltr-text">b</span>، ما خطاهای استاندارد مربوطه آنها، <span class="ltr-text">SEa</span> و <span class="ltr-text">SEb</span>، و کوواریانس بین آنها را داریم که با <span class="ltr-text">Cov</span> نشان داده می‌شود. فاصله اطمینان، <span class="ltr-text">(MLow, MUp)</span>، برای لگاریتم قدرت نسبی تخمین‌زده شده به شرح زیر است:</p>
+            <div class="formula-display">
+                $$M_{Low}, M_{Up} = \frac{(ab - g \cdot \text{Cov}) \pm t \sqrt{ (a^2 \cdot \text{SE}_b^2 + b^2 \cdot \text{SE}_a^2 - 2ab \cdot \text{Cov}) - g (a^2 \cdot \text{SE}_b^2 - \text{Cov}^2)}}{b^2 - g \cdot \text{SE}_b^2}$$
+            </div>
+            <p class="mb-4">که در آن:</p>
+            <div class="formula-display">
+                $$g = \frac{t^2 \text{SE}_b^2}{b^2}$$
+            </div>
+            <p class="mb-4">و <span class="ltr-text">t = tdf,α/2</span> نقطه درصدی <span class="ltr-text">α/2</span> بالایی (یا نقطه درصدی <span class="ltr-text">α</span> دو طرفه) با درجات آزادی باقی‌مانده، <span class="ltr-text">df</span>، از تحلیل آماری و سطح اطمینان انتخاب شده، <span class="ltr-text">100*(1−α)</span>، (معمولاً <span class="ltr-text">95%</span>) است. اگر <span class="ltr-text">g ≥ 1</span> باشد، به این معنی است که مخرج، <span class="ltr-text">b</span>، از نظر آماری به طور معنی‌داری با <span class="ltr-text">0</span> تفاوت ندارد و استفاده از این نسبت برای آن داده‌ها منطقی نیست. طول، <span class="ltr-text">L</span>، این فاصله اطمینان <span class="ltr-text">MUp − MLow</span> است.</p>
+            <p class="mb-4">برای مواردی که برآوردهای <span class="ltr-text">a</span> و <span class="ltr-text">b</span> از نظر آماری همبستگی ندارند (<span class="ltr-text">Cov = 0</span>)، فرمول فاصله اطمینان به شرح زیر ساده می‌شود:</p>
+            <div class="formula-display">
+                $$M_{Low}, M_{Up} = M \pm t \sqrt{ \frac{\text{SE}_a^2}{b^2} + \frac{a^2 \text{SE}_b^2}{b^4} }$$
+            </div>
+            <p class="mb-4">برای بحث بیشتر در مورد فواصل اطمینان برای قدرت، به فصل <a href="1034.html" class="text-blue-600 hover:underline" target="_blank"><span class="ltr-text">1034</span></a> مراجعه کنید، که ممکن است منبعی مفید، اما غیرالزامی باشد.</p>
+        </div>
+
+        <div class="card mb-6">
+            <h2>ترکیب سنجش‌های مستقل</h2>
+            <p class="mb-4">هنگامی که تک‌نگاری یا فصل اجازه می‌دهد، ممکن است چندین سنجش مستقل انجام شود تا نتایج ترکیبی عرض فاصله اطمینان را به حدود مشخص شده در تک‌نگاری یا فصل مربوطه کاهش دهد. در جایی که دو یا چند سنجش مستقل مورد نیاز است، که هر یک به یک لگاریتم قدرت <span class="ltr-text">M</span> منجر می‌شود، <span class="ltr-text">M</span>‌ها با استفاده از یکی از دو روش زیر ترکیب می‌شوند.</p>
+
+            <h3>روش <span class="ltr-text">1</span></h3>
+            <p class="mb-4">فرض کنید <span class="ltr-text">Mi</span> لگاریتم قدرت نسبی سنجش <span class="ltr-text">i</span>-ام از <span class="ltr-text">h</span> نتیجه سنجش باشد که قرار است ترکیب شوند. برای ترکیب <span class="ltr-text">h</span> نتیجه، میانگین، انحراف معیار و خطای استاندارد <span class="ltr-text">Mi</span> به روش معمول محاسبه می‌شوند:</p>
+            <div class="formula-display">
+                $$\bar{M} = \frac{\sum M_i}{h}$$
+            </div>
+            <div class="formula-display">
+                $$s = \sqrt{\frac{\sum (M_i - \bar{M})^2}{h-1}}$$
+            </div>
+            <div class="formula-display">
+                $$\text{SE} = \frac{s}{\sqrt{h}}$$
+            </div>
+            <p class="mb-4">یک فاصله اطمینان <span class="ltr-text">100(1 − α)%</span> سپس به شرح زیر یافت می‌شود:</p>
+            <div class="formula-display">
+                $$\bar{M} \pm t_{h-1,\alpha/2} \text{SE}$$
+            </div>
+            <p class="mb-4">که در آن <span class="ltr-text">th−1,α/2</span> نقطه درصدی <span class="ltr-text">α/2</span> بالایی (یا نقطه درصدی <span class="ltr-text">α</span> دو طرفه) از یک توزیع <span class="ltr-text">t</span> با <span class="ltr-text">h − 1</span> درجات آزادی است. عرض، <span class="ltr-text">L</span>، این فاصله <span class="ltr-text">2th−1,α/2SE</span> است.</p>
+
+            <h3>روش <span class="ltr-text">2</span></h3>
+            <p class="mb-4">فرض می‌شود که نتایج هر یک از <span class="ltr-text">h</span> سنجش تحلیل شده‌اند تا <span class="ltr-text">h</span> مقدار لگاریتم قدرت با حدود اطمینان مربوطه را ارائه دهند. برای هر سنجش، <span class="ltr-text">i</span>، فاصله اطمینان برای لگاریتم قدرت یا لگاریتم قدرت نسبی را به دست آورید. سپس مقدار <span class="ltr-text">Li</span> را با کم کردن حد پایین اطمینان <span class="ltr-text">i</span>-ام از حد بالای اطمینان <span class="ltr-text">i</span>-ام محاسبه کنید. وزنی <span class="ltr-text">wi</span> برای هر مقدار لگاریتم قدرت نسبی، <span class="ltr-text">Mi</span>، به شرح زیر محاسبه می‌شود، که در آن <span class="ltr-text">ti</span> دارای همان مقدار توزیع <span class="ltr-text">t</span> است که در محاسبه حدود اطمینان در سنجش <span class="ltr-text">i</span>-ام استفاده شده و بر اساس <span class="ltr-text">ni</span> درجات آزادی است:</p>
+            <div class="formula-display">
+                $$w_i = \frac{4 t_i^2}{L_i^2}$$
+            </div>
+            <p class="mb-4">حاصل ضرب‌های <span class="ltr-text">wiMi</span> برای هر سنجش تشکیل می‌شوند، و مجموع آنها بر وزن کل (<span class="ltr-text">w</span>) برای تمام سنجش‌ها تقسیم می‌شود تا میانگین وزنی لگاریتم قدرت نسبی و خطای استاندارد آن به شرح زیر به دست آید:</p>
+            <div class="formula-display">
+                $$\bar{M}_w = \frac{\sum w_i M_i}{\sum w_i}$$
+            </div>
+            <div class="formula-display">
+                $$\text{SE}_{\bar{M}_w} = \frac{1}{\sqrt{\sum w_i}}$$
+            </div>
+            <p class="mb-4">سپس یک کای-مربع تقریبی را محاسبه کنید:</p>
+            <div class="formula-display">
+                $$\chi^2_M = \sum w_i (M_i - \bar{M}_w)^2$$
+            </div>
+            <p class="mb-4">اگر مقدار <span class="ltr-text">χ2M</span> تقریبی به خوبی کمتر از مقدار <span class="ltr-text">5%</span> نشان داده شده در جدول <span class="ltr-text">3</span> باشد، فاصله اطمینان را با استفاده از معادلات میانگین و خطای استاندارد تقریبی در <span class="ltr-text">(1)</span> بالا محاسبه کنید؛ در غیر این صورت از وزن‌های جایگزین که در ادامه توضیح داده شده است استفاده کنید. آزمایشگاه‌ها باید در رویه‌های خود مشخص کنند که چگونه "به خوبی کمتر" را تعیین کنند. در غیاب چنین مشخصاتی، مقادیر <span class="ltr-text">20%</span> جدول <span class="ltr-text">3</span> پیشنهاد می‌شود.</p>
+            <p class="mb-4">یک فاصله اطمینان <span class="ltr-text">100(1 − α)%</span> در مقیاس لگاریتمی سپس به شرح زیر یافت می‌شود:</p>
+            <div class="formula-display">
+                $$M \pm L/2$$
+            </div>
+            <p class="mb-4">که در آن <span class="ltr-text">tN,α/2</span> نقطه درصدی <span class="ltr-text">α/2</span> بالایی (یا نقطه درصدی <span class="ltr-text">α</span> دو طرفه) از یک توزیع <span class="ltr-text">t</span> با درجات آزادی، <span class="ltr-text">df</span> است. عرض این فاصله <span class="ltr-text">L</span> است.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2 text-center">جدول <span class="ltr-text">3</span>. مقادیر بحرانی برای آزمون کای-مربع تقریبی</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th><span class="ltr-text">h</span></th>
+                        <th>مقادیر بحرانی</th>
+                        <th><span class="ltr-text">5%</span></th>
+                        <th><span class="ltr-text">20%</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">2</span></td>
+                        <td></td>
+                        <td><span class="ltr-text">3.841</span></td>
+                        <td><span class="ltr-text">1.642</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">3</span></td>
+                        <td></td>
+                        <td><span class="ltr-text">5.991</span></td>
+                        <td><span class="ltr-text">3.219</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">4</span></td>
+                        <td></td>
+                        <td><span class="ltr-text">7.815</span></td>
+                        <td><span class="ltr-text">4.642</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">5</span></td>
+                        <td></td>
+                        <td><span class="ltr-text">9.488</span></td>
+                        <td><span class="ltr-text">5.989</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">6</span></td>
+                        <td></td>
+                        <td><span class="ltr-text">11.070</span></td>
+                        <td><span class="ltr-text">7.289</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">7</span></td>
+                        <td></td>
+                        <td><span class="ltr-text">12.592</span></td>
+                        <td><span class="ltr-text">8.558</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">8</span></td>
+                        <td></td>
+                        <td><span class="ltr-text">14.067</span></td>
+                        <td><span class="ltr-text">9.803</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">9</span></td>
+                        <td></td>
+                        <td><span class="ltr-text">15.507</span></td>
+                        <td><span class="ltr-text">11.030</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">10</span></td>
+                        <td></td>
+                        <td><span class="ltr-text">16.919</span></td>
+                        <td><span class="ltr-text">12.242</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="mb-4">وزن‌های جایگزین: تغییرپذیری مشاهده شده بین لگاریتم‌های قدرت تخمین‌زده شده یا قدرت‌های نسبی را می‌توان به دو جزء تقسیم کرد:</p>
+            <ul class="list-disc pr-8 mb-4">
+                <li><p class="mb-2">تغییرپذیری درون سنجش برای سنجش <span class="ltr-text">i</span>:</p>
+                    <div class="formula-display">
+                        $$V_i = 1/w_i$$
+                    </div>
+                </li>
+                <li><p class="mb-2">جزء تغییرپذیری بین سنجش: <span class="text-red-500">[فرمول در متن اصلی موجود نیست]</span></p></li>
+            </ul>
+            <p class="mb-4">برای هر سنجش، یک ضریب وزنی سپس به شرح زیر محاسبه می‌شود:</p>
+            <div class="formula-display">
+                $$w'_i = \frac{1}{V_i + \text{SE}_{\bar{M}_w}^2}$$
+            </div>
+            <p class="mb-4">فاصله اطمینان سپس به شرح زیر یافت می‌شود:</p>
+            <div class="formula-display">
+                $$\bar{M}_w \pm t \sqrt{\text{SE}_{\bar{M}_w}^2}$$
+            </div>
+            <p class="mb-4">و <span class="ltr-text">t</span>، مقدار توزیع <span class="ltr-text">t</span>، اغلب با مقدار <span class="ltr-text">2</span> تقریبی می‌شود.</p>
+            <p class="mb-4">برای بحث بیشتر در مورد ترکیب سنجش‌ها، به <a href="1034.html" class="text-blue-600 hover:underline" target="_blank"><span class="ltr-text">1034</span></a> مراجعه کنید، که ممکن است منبعی مفید، اما غیرالزامی باشد.</p>
+        </div>
+
+        <div class="card mb-6">
+            <h2>ضمیمه—ادبیات کلیدی</h2>
+            <ul class="list-disc pr-8">
+                <li class="mb-2">Bliss, CI. <span class="ltr-text">Analysis of the biological assays in USP XV. Drug Standards, 24, 33–67, 1956.</span></li>
+                <li class="mb-2">Böhrer A. <span class="ltr-text">One-sided and two-sided critical values for Dixon’s outlier test for sample sizes up to n = 30. Economic Quality Control 23, 5–13, 2008.</span></li>
+                <li class="mb-2">Cochran, WG. <span class="ltr-text">The combination of estimates from different experiments. Biometrics 10, 101–129, 1954.</span></li>
+                <li class="mb-2">Fieller, EC. <span class="ltr-text">Some problems in interval estimation. Journal of the Royal Statistical Society, B 16, 175–185, 1954.</span></li>
+                <li class="mb-2">Iglewicz, B and Hoaglin, DC. <span class="ltr-text">How to Detect and Handle Outliers. Quality Press, Milwaukee, 1993.</span></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
