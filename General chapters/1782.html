@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طیف‌سنجی دو رنگی دورانی ارتعاشی (VCD)—تئوری و عمل</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block; /* Helps with mixing RTL and LTR content */
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6"><span class="ltr-text">1782</span> طیف‌سنجی دو رنگی دورانی ارتعاشی (VCD)—تئوری و عمل</h1>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">1. مقدمه</h2>
+            <p class="mb-4">
+                کایرالیته (<span class="ltr-text">Chirality</span>) جنبه‌ای فراگیر از دنیای سه‌بعدی است. مولکول‌هایی که از پیچیدگی ساختاری کافی برخوردارند به طوری که ساختارهای تصویر آینه‌ای آن‌ها بر هم منطبق نیستند، کایرال نامیده می‌شوند. برای مولکول‌های دارویی کایرال، دو معیار ساختاری مهم که برای مشخصه یابی فیزیکی آن‌ها حیاتی هستند عبارتند از پیکربندی مطلق (<span class="ltr-text">AC</span>) و درصد اضافی انانتیومر (<span class="ltr-text">EE</span>) که به آن خلوص انانتیومری نیز گفته می‌شود. <span class="ltr-text">AC</span> یک مولکول کایرال، ساختار سه‌بعدی آن را در فضا مشخص کرده و آن را از ساختار تصویر آینه‌ای آن متمایز می‌کند. ساختارهایی که از طریق تقارن آینه‌ای با یکدیگر مرتبط هستند، به عنوان «انانتیومرها» شناخته می‌شوند. <span class="ltr-text">AC</span> یک انانتیومر خاص برای عملکرد آن به عنوان یک عامل دارویی حیاتی است، زیرا ساختارهای تصویر آینه‌ای، یعنی انانتیومرها، اثرات درمانی متفاوتی دارند، هم مطلوب و هم نامطلوب. <span class="ltr-text">EE</span> یک نمونه، معمولاً به صورت درصد اضافی، مقادیر نسبی انانتیومرها را مشخص می‌کند. <span class="ltr-text">EE</span> <span class="ltr-text">100%</span> به معنای یک انانتیومر خالص (<span class="ltr-text">100%</span> خلوص انانتیومری) است، <span class="ltr-text">0%</span> به معنای مخلوط راسمیک با مقادیر مساوی از انانتیومرها و بدون اضافه است، و <span class="ltr-text">-100%</span> به معنای یک نمونه خالص از انانتیومر مخالف نسبت به تعریف <span class="ltr-text">EE</span> است.
+            </p>
+            <p class="mb-4">
+                فصل اصلی که به کایرالیته مولکولی در <span class="ltr-text">USP–NF</span> می‌پردازد، چرخش نوری <a href="781.html" class="text-blue-600 hover:underline" target="_blank">781</a> است. چرخش نوری (<span class="ltr-text">OR</span>) یک نمونه، اندازه‌گیری زاویه چرخش یک صفحه نور پلاریزه توسط یک نمونه کایرال در یک طول موج خاص، معمولاً در ناحیه مرئی یا نزدیک <span class="ltr-text">UV</span> است. <span class="ltr-text">AC</span> و <span class="ltr-text">EE</span> هر نمونه با اندازه‌گیری <span class="ltr-text">OR</span> آن تعیین می‌شود، اگر اندازه‌گیری قبلاً با استفاده از یک نمونه با <span class="ltr-text">AC</span> و <span class="ltr-text">EE</span> شناخته شده کالیبره شده باشد. علامت <span class="ltr-text">OR</span> مقدار بیشتر انانتیومر را تعیین می‌کند، و بزرگی <span class="ltr-text">OR</span>، <span class="ltr-text">EE</span> را تعیین می‌کند، جایی که <span class="ltr-text">100% EE</span> مربوط به حداکثر <span class="ltr-text">OR</span> ممکن برای مولکول کایرال مورد نظر است. اگرچه <span class="ltr-text">OR</span> یک روش ساده و به خوبی تثبیت شده برای تعیین <span class="ltr-text">AC</span> و <span class="ltr-text">EE</span> نسبت به کالیبراسیون‌های شناخته شده آن‌ها است، اما همه مولکول‌ها <span class="ltr-text">OR</span> قابل اندازه‌گیری ندارند، به ویژه با مقادیر محدود نمونه که در آن وجود ناخالصی‌های کایرال نمی‌تواند با اندازه‌گیری <span class="ltr-text">OR</span> تعیین شود. <span class="ltr-text">OR</span> صرفاً یک عدد بدون اطلاعات ساختاری درباره مولکول نمونه است.
+            </p>
+            <p class="mb-4">
+                در چند دهه گذشته، <span class="ltr-text">AC</span> یک مولکول کایرال ناشناخته با استفاده از روش بیفوئت (<span class="ltr-text">Bijvoet</span>) کریستالوگرافی اشعه ایکس تک‌بلور تعیین شده است. روش بیفوئت به یک بلور منفرد با خلوص بالا از مولکول با یک فاز کایرال منفرد نیاز دارد. تجزیه و تحلیل با این روش همیشه امکان‌پذیر نیست، به عنوان مثال، برای مایعات غیرقابل تبلور یا جامدات نامحلول، و در بسیاری از موارد تجزیه و تحلیل با استفاده از روش بیفوئت نیاز به تلاش و زمان زیادی برای دستیابی به تبلور دارد.
+            </p>
+            <p class="mb-4">
+                این فصل یک تکنیک برای تعیین <span class="ltr-text">AC</span> ارائه می‌دهد که بر دو رنگی دورانی ارتعاشی (<span class="ltr-text">VCD</span>) تکیه دارد، روشی که اکنون به طور گسترده در صنعت داروسازی برای مولکول‌های کایرال که <span class="ltr-text">AC</span> آن‌ها ناشناخته است، استفاده می‌شود. این تکنیک شامل مقایسه طیف <span class="ltr-text">VCD</span> اندازه‌گیری شده برای یک مولکول کایرال با محاسبه شیمی کوانتومی برای همان مولکول است. اگر طیف‌های <span class="ltr-text">VCD</span> اندازه‌گیری شده و محاسبه شده توافق بر ویژگی‌های اصلی و علائم آن‌ها را نشان دهند، این بدان معناست که <span class="ltr-text">AC</span> نمونه فیزیکی با <span class="ltr-text">AC</span> ساختار مورد استفاده در محاسبه یکسان است. اگر علائم مخالف باشند، <span class="ltr-text">AC</span> نمونه مخالف آنچه در محاسبه استفاده شده است، می‌باشد.
+            </p>
+            <p class="mb-4">
+                همانطور که در ادامه توضیح داده شده است، روش‌های آماری برای ارزیابی درجه اطمینان از تعیین صحیح <span class="ltr-text">AC</span> با روش <span class="ltr-text">VCD</span> توسعه یافته‌اند. معمولاً <span class="ltr-text">AC</span> یک مولکول کایرال با اتصال کایرالیته ساختاری آن، با برچسب <span class="ltr-text">R</span> یا <span class="ltr-text">S</span> برای مراکز کایرال یا <span class="ltr-text">P</span> یا <span class="ltr-text">M</span> برای محورهای کایرال، به علامت <span class="ltr-text">OR</span> اندازه‌گیری شده آن به صورت <span class="ltr-text">(+)</span> یا <span class="ltr-text">(-)</span> مشخص می‌شود. هنگامی که <span class="ltr-text">AC</span> یک مولکول با <span class="ltr-text">VCD</span> تعیین شد، به عنوان مثال، <span class="ltr-text">(S)-(−)-α-pinene</span>، طیف <span class="ltr-text">VCD</span> آن می‌تواند به یک استاندارد مرجع از <span class="ltr-text">AC</span> این مولکول تبدیل شود، و <span class="ltr-text">AC</span> هر نمونه بعدی از این مولکول می‌تواند با مقایسه با استاندارد مرجع <span class="ltr-text">VCD</span> آن تعیین شود. یک مزیت مهم تعیین <span class="ltr-text">AC</span> توسط <span class="ltr-text">VCD</span>، غنای طیفی یک طیف <span class="ltr-text">VCD</span> است که از تعیین همزمان هویت ساختاری مولکول و کایرالیته مطلق آن پشتیبانی می‌کند. برخلاف <span class="ltr-text">OR</span>، هر مولکول کایرال یک طیف <span class="ltr-text">VCD</span> دارد، زیرا همه مولکول‌ها باندهای جذب فروسرخ (<span class="ltr-text">IR</span>) دارند که هر یک به عنوان کروموفور برای طیف <span class="ltr-text">VCD</span> عمل می‌کند. <span class="ltr-text">VCD</span> همچنین به ساختارهای مولکولی حساس است. همانطور که در ادامه نشان داده شده است، اطلاعات درباره ساختار یک مولکول کایرال به عنوان یک پاداش از تعیین <span class="ltr-text">AC</span> با <span class="ltr-text">VCD</span> به دست می‌آید، اما <span class="ltr-text">AC</span> محتوای اطلاعاتی اصلی مولکول‌های دارویی کایرال است. بدنه گسترده‌ای از ادبیات توصیف کننده <span class="ltr-text">AC</span> مولکول‌های بیولوژیکی در طول <span class="ltr-text">30</span> سال گذشته ایجاد شده است و می‌تواند به عنوان مبنایی برای تعیین حالات ساختاری ثانویه و بالاتر از مواد دارویی بیولوژیکی استفاده شود. روش‌های استریواختصاصی با استفاده از <span class="ltr-text">VCD</span> می‌توانند برای مشخصه یابی تولید، فرمولاسیون و پایداری محصولات بیودارویی توسعه یابند.
+            </p>
+            <p class="mb-4">
+                این فصل همچنین روشی برای تعیین <span class="ltr-text">EE</span> با استفاده از <span class="ltr-text">VCD</span> ارائه می‌دهد. تعیین <span class="ltr-text">EE</span> با <span class="ltr-text">VCD</span> از این واقعیت استفاده می‌کند که بزرگی یک طیف <span class="ltr-text">VCD</span>، که به عنوان تفاوت جذب پلاریزاسیون دایره‌ای برای یک طیف ثابت جذب <span class="ltr-text">IR</span> والد اندازه‌گیری می‌شود، مستقیماً با <span class="ltr-text">EE</span> بدون هیچ آفستی متناسب است. بنابراین، حداکثر اندازه نسبی یک طیف <span class="ltr-text">VCD</span> برای <span class="ltr-text">EE</span> <span class="ltr-text">100%</span> به دست می‌آید، برای <span class="ltr-text">EE</span> <span class="ltr-text">0%</span> (مخلوط راسمیک) صفر است، و برای <span class="ltr-text">EE</span> <span class="ltr-text">-100%</span> حداکثر با علائم مخالف است (تمام باندهای مثبت <span class="ltr-text">VCD</span> منفی و تمام باندهای منفی <span class="ltr-text">VCD</span> مثبت هستند). مزیت تعیین <span class="ltr-text">EE</span> با <span class="ltr-text">VCD</span> این است که <span class="ltr-text">EE</span> هر نمونه مولکولی را می‌توان با یک اندازه‌گیری <span class="ltr-text">VCD</span> تعیین کرد، هنگامی که اندازه نسبی <span class="ltr-text">VCD</span> برای <span class="ltr-text">100% EE</span> (یا هر مقدار <span class="ltr-text">%EE</span>) برای آن مولکول شناخته شده باشد. جداسازی انانتیومرها با کروماتوگرافی کایرال لازم نیست.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">2. تعریف دو رنگی دورانی ارتعاشی</h2>
+            <p class="mb-4">
+                <span class="ltr-text">VCD</span> به صورت زیر تعریف می‌شود:
+            </p>
+            <div class="formula-display">
+                $$ \Delta A = A_L - A_R $$
+            </div>
+            <p class="mb-2">
+                که در آن:
+            </p>
+            <ul class="list-disc pr-8 mb-4">
+                <li><span class="ltr-text">$\Delta A$</span> <span class="mr-2">=</span> تفاوت در جذب <span class="ltr-text">IR</span></li>
+                <li><span class="ltr-text">$A_L$</span> <span class="mr-2">=</span> جذب نمونه <span class="ltr-text">A</span> برای تابش پلاریزه دایره‌ای چپ (<span class="ltr-text">LCP</span>)</li>
+                <li><span class="ltr-text">$A_R$</span> <span class="mr-2">=</span> جذب نمونه <span class="ltr-text">A</span> برای تابش پلاریزه دایره‌ای راست (<span class="ltr-text">RCP</span>)</li>
+            </ul>
+            <p class="mb-4">
+                شدت جذب <span class="ltr-text">IR</span> غیر پلاریزه به عنوان میانگین شدت‌های <span class="ltr-text">LCP</span> و <span class="ltr-text">RCP</span> تعریف می‌شود:
+            </p>
+            <div class="formula-display">
+                $$ A = (A_L + A_R)/2 $$
+            </div>
+            <p class="mb-4">
+                شدت‌های <span class="ltr-text">IR</span> انانتیومرها یکسان هستند، در حالی که انانتیومرها شدت‌های <span class="ltr-text">VCD</span> مساوی و با علامت مخالف دارند.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">3. ابزار دقیق <span class="ltr-text">VCD</span></h2>
+            <p class="mb-4">
+                اندازه‌گیری طیف <span class="ltr-text">VCD</span> و طیف <span class="ltr-text">mid-IR</span> والد آن بر اساس طیف‌سنجی جذب تبدیل فوریه <span class="ltr-text">IR</span> (<span class="ltr-text">FT-IR</span>) است. چیدمان نوری-الکترونیکی برای اندازه‌گیری <span class="ltr-text">VCD</span> با استفاده از طیف‌سنج <span class="ltr-text">FT-VCD</span> در شکل <span class="ltr-text">1</span> نشان داده شده است. پرتو خروجی یک طیف‌سنج <span class="ltr-text">FT-IR</span> به صورت نوری فیلتر شده و سپس به صورت خطی پلاریزه می‌شود، قبل از عبور از یک مدولاتور فوتوالاستیک (<span class="ltr-text">PEM</span>). <span class="ltr-text">PEM</span> سلنید روی (<span class="ltr-text">ZnSe</span>)، که معمولاً برای اندازه‌گیری <span class="ltr-text">VCD</span> استفاده می‌شود، وضعیت پلاریزاسیون پرتو را بین <span class="ltr-text">LCP</span> و <span class="ltr-text">RCP</span> با فرکانس <span class="ltr-text">37 kHz</span> تغییر می‌دهد. یک محلول نمونه در یک سلول <span class="ltr-text">IR</span> استاندارد در مسیر پرتو قرار داده می‌شود، و یک آشکارساز تلورید جیوه-کادمیم (<span class="ltr-text">MCT</span>) خنک شده با نیتروژن مایع، پرتو عبوری را تشخیص می‌دهد. آشکارساز سیگنال‌هایی را در دو محدوده فرکانس تولید می‌کند: <span class="ltr-text">1) IDC</span>، در محدوده <span class="ltr-text">1–2 kHz</span>، نشان‌دهنده تداخل‌نگاشت <span class="ltr-text">FT-IR</span> است؛ و <span class="ltr-text">2) IAC</span>، با مرکزیت <span class="ltr-text">37 kHz</span>، نشان‌دهنده تداخل‌نگاشت <span class="ltr-text">FT-VCD</span> است. تداخل‌نگاشت <span class="ltr-text">FT-IR</span> را می‌توان مستقیماً با تبدیل فوریه برای تولید طیف <span class="ltr-text">IR</span> تبدیل کرد. پس از دمودولاسیون همزمان (با استفاده از تقویت‌کننده قفل-در یا پردازش صرفاً عددی) با یک مرجع در <span class="ltr-text">37 kHz</span>، تداخل‌نگاشت <span class="ltr-text">VCD</span> را می‌توان با تبدیل فوریه برای تولید طیف <span class="ltr-text">VCD</span> تبدیل کرد. هر دو طیف <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> در واحدهای جذب بدون بعد <span class="ltr-text">A</span> ارائه می‌شوند، و از این رو، نسبت شدت <span class="ltr-text">VCD</span> به شدت <span class="ltr-text">IR</span> برای هر باند در طیف، نسبت ناهمسانگردی بدون بعد را برای آن انتقال ارتعاشی تولید می‌کند. شکل <span class="ltr-text">1</span> حداقل تنظیمات برای اندازه‌گیری <span class="ltr-text">VCD</span> را نشان می‌دهد، اما ابزارهای پیشرفته فنی از دو <span class="ltr-text">PEM</span> برای افزایش پایداری خط پایه و دو منبع برای افزایش کیفیت سیگنال یا کاهش زمان اندازه‌گیری نمونه استفاده می‌کنند. اندازه‌گیری <span class="ltr-text">VCD</span> در سایر مناطق طیفی، به عنوان مثال کشش هیدروژن یا نزدیک <span class="ltr-text">IR</span>، می‌تواند با تغییرات مناسب در منابع، پلاریزرها، فیلترها، <span class="ltr-text">PEM</span>، سلول‌ها و آشکارسازها انجام شود.
+            </p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">شکل 1.</h3>
+            <p class="mb-4">
+                نموداری که ویژگی‌های معمول یک طیف‌سنج <span class="ltr-text">FT-VCD</span> را برای اندازه‌گیری طیف‌های <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> یک نمونه کایرال نشان می‌دهد.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">4. اندازه‌گیری طیف‌های <span class="ltr-text">VCD</span></h2>
+            <p class="mb-4">
+                شکل <span class="ltr-text">2</span> طیف‌های <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> را برای <span class="ltr-text">(+)-R-</span> و <span class="ltr-text">(−)-S-α-pinene</span> به صورت مایع خالص اندازه‌گیری شده در وضوح طیفی <span class="ltr-text">4 cm-1</span> برای <span class="ltr-text">1 h</span> نشان می‌دهد. همچنین ساختارهای استریو دو انانتیومر مخالف <span class="ltr-text">(+)-R-</span> و <span class="ltr-text">(−)-S-α-pinene</span> نشان داده شده‌اند. این شکل نشان می‌دهد که طیف‌های <span class="ltr-text">IR</span> برای این انانتیومرها تقریباً یکسان هستند (ردهای خط‌چین و توپر برهم منطبق)، و بنابراین <span class="ltr-text">IR</span> نسبت به کایرالیته کور است. در مقابل، طیف‌های <span class="ltr-text">VCD</span> متناظر دارای شدت‌هایی هستند که برای هر باند در طیف از نظر بزرگی یکسان و از نظر علامت مخالف هستند. دو ساختار استریو برای <span class="ltr-text">α-pinene</span> به گونه‌ای ارائه شده‌اند که تقارن آینه‌ای آن‌ها را آشکار می‌کند، و در نتیجه جفت‌های مولکول‌های کایرال با تقارن آینه‌ای، طیف‌های <span class="ltr-text">VCD</span> متقارن آینه‌ای حول خط پایه صفر دارند. خط پایه <span class="ltr-text">VCD</span> برای این طیف‌ها کمی بالاتر از صفر آفست شده است و می‌توان آن را همانطور که در ادامه بحث می‌شود، تصحیح کرد. بررسی مقیاس‌های شدت برای طیف‌های <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> نشان می‌دهد که شدت‌های <span class="ltr-text">VCD</span> تقریباً چهار مرتبه قدر کوچکتر از شدت‌های <span class="ltr-text">IR</span> متناظر هستند. در نهایت، هر باند در طیف <span class="ltr-text">IR</span> یک باند <span class="ltr-text">VCD</span> متناظر دارد. غنای باندهای طیفی تفکیک شده در طیف <span class="ltr-text">VCD</span>، که هر یک نماینده آنچه به طور سنتی کروموفور در دو رنگی دورانی الکترونیکی (<span class="ltr-text">ECD</span>) نامیده شده است، به <span class="ltr-text">VCD</span> ترکیبی استثنایی از غنای ساختاری و اختصاصیت استریوشیمیایی می‌دهد.
+            </p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">شکل 2.</h3>
+            <p class="mb-4">
+                طیف‌های <span class="ltr-text">IR</span> (پایین) و <span class="ltr-text">VCD</span> (بالا) <span class="ltr-text">(1S)-(−)-α-pinene</span> (خط‌چین) و <span class="ltr-text">(1R)-(+)-α-pinene</span> (توپر). در سمت چپ، ساختارهای استریو بهینه شده با شیمی کوانتومی <span class="ltr-text">(1S)-(−)-α-pinene</span> (بالا) و <span class="ltr-text">(1R)-(+)-α-pinene</span> (پایین) ارائه شده‌اند. طیف‌های <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> در وضوح طیفی <span class="ltr-text">4 cm-1</span> اندازه‌گیری شدند و طیف‌های <span class="ltr-text">VCD</span> برای <span class="ltr-text">1 h</span> میانگین‌گیری شدند.
+            </p>
+            <p class="mb-4">
+                الزامات نمونه‌برداری برای <span class="ltr-text">VCD</span> مشابه آنهایی است که برای به دست آوردن یک طیف <span class="ltr-text">IR</span> خوب لازم است. ایده‌آل، همانطور که در شکل <span class="ltr-text">2</span> نشان داده شده است، تحلیلگران ترکیبی از طول مسیر و غلظت نمونه را انتخاب می‌کنند تا یک مقدار جذب <span class="ltr-text">IR</span> متوسط <span class="ltr-text">A</span> در محدوده بین <span class="ltr-text">0.2</span> و <span class="ltr-text">0.8</span> و غلظت‌هایی بین <span class="ltr-text">0.1</span> و <span class="ltr-text">1.0 M</span>، بسته به وزن مولکولی نمونه، به دست آورند. طول مسیرهای معمول برای حلال‌های آلی در محدوده <span class="ltr-text">50–100 µm</span> است، و مقادیر نمونه مورد نیاز معمولاً <span class="ltr-text">5–10 mg</span> است، اگرچه مقادیر تا <span class="ltr-text">2 mg</span> نیز ممکن است. حلال‌های معمول برای اندازه‌گیری <span class="ltr-text">VCD</span> مولکول‌های آلی، حلال‌های دوتریومه هستند که جذب حلال کاهش یافته در ناحیه <span class="ltr-text">mid-IR</span> دارند. علاوه بر حلال‌های بدون هیدروژن، مانند تتراکلرید کربن (<span class="ltr-text">CCl4</span>)، دیگر حلال‌های معمولاً مورد استفاده برای <span class="ltr-text">VCD</span> شامل کلروفرم دوتریومه (<span class="ltr-text">CDCl3</span>) و دی‌متیل سولفوکسید دوتریومه (<span class="ltr-text">DMSO-d6</span>) هستند.
+            </p>
+            <p class="mb-4">
+                طیف‌های <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> را می‌توان یا در واحدهای جذب، به عنوان <span class="ltr-text">A</span> و <span class="ltr-text">$\Delta A$</span>، که شرایط نمونه‌برداری را منعکس می‌کنند، یا در ضرایب جذب مولی، <span class="ltr-text">$\varepsilon$</span> و <span class="ltr-text">$\Delta \varepsilon$</span>، که وابستگی شدت به غلظت و طول مسیر را حذف کرده و یک ویژگی در سطح مولکولی را ارائه می‌دهند که می‌توان آن را به صورت کمی با شدت‌های <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> محاسبه شده مقایسه کرد، ترسیم کرد. تبدیل بین این دو مجموعه از مقادیر به صورت زیر است:
+            </p>
+            <div class="formula-display">
+                $$ A = \varepsilon C \times l $$
+            </div>
+            <p class="mb-2">
+                که در آن:
+            </p>
+            <ul class="list-disc pr-8 mb-4">
+                <li><span class="ltr-text">A</span> <span class="mr-2">=</span> جذب <span class="ltr-text">IR</span></li>
+                <li><span class="ltr-text">$\varepsilon$</span> <span class="mr-2">=</span> ضریب جذب مولی</li>
+                <li><span class="ltr-text">C</span> <span class="mr-2">=</span> غلظت (<span class="ltr-text">mol/L</span>)</li>
+                <li><span class="ltr-text">l</span> <span class="mr-2">=</span> طول مسیر (<span class="ltr-text">cm</span>)</li>
+            </ul>
+            <p class="mb-4">
+                و
+            </p>
+            <div class="formula-display">
+                $$ \Delta A = \Delta \varepsilon C \times l $$
+            </div>
+            <p class="mb-2">
+                که در آن:
+            </p>
+            <ul class="list-disc pr-8 mb-4">
+                <li><span class="ltr-text">$\Delta A$</span> <span class="mr-2">=</span> تفاوت در جذب <span class="ltr-text">IR</span></li>
+                <li><span class="ltr-text">$\Delta \varepsilon$</span> <span class="mr-2">=</span> تفاوت در ضریب جذب مولی</li>
+            </ul>
+            <p class="mb-4">
+                یک معیار بدون بعد مفید از قدرت ذاتی باند <span class="ltr-text">VCD</span>، نسبت ناهمسانگردی است که به صورت <span class="ltr-text">$g = \Delta A/A = \Delta \varepsilon/\varepsilon$</span> تعریف می‌شود. با در نظر گرفتن وابستگی فرکانس طیفی <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span>، طیف‌های اندازه‌گیری شده به ترتیب به صورت <span class="ltr-text">$A(\nu)$</span> و <span class="ltr-text">$\Delta A(\nu)$</span> یا به صورت <span class="ltr-text">$\varepsilon(\nu)$</span> و <span class="ltr-text">$\Delta \varepsilon(\nu)$</span> بیان می‌شوند.
+            </p>
+            <p class="mb-4">
+                طیف‌های <span class="ltr-text">VCD</span> نیاز به تصحیحات خط پایه برای ابزار دقیق و شدت حلال دارند. انحرافات از یک خط پایه کاملاً مسطح با آفست صفر باید قبل از تکمیل یک طیف <span class="ltr-text">VCD</span> کالیبره شده نهایی حذف شوند. تصحیح خط پایه حلال را می‌توان برای طیف‌های <span class="ltr-text">VCD</span> با کم کردن طیف <span class="ltr-text">VCD</span> حلال در همان سلول نمونه به دست آورد. اگر انانتیومر مخالف یا مخلوط راسمیک نمونه در دسترس باشد، تصحیح خط پایه را می‌توان به عنوان نیمی از تفاوت بین این دو طیف <span class="ltr-text">VCD</span> مساوی و مخالف در مورد انانتیومرها یا به عنوان کم کردن ساده در مورد مخلوط راسمیک به دست آورد. انحرافات خط پایه ناشی از حضور اجتناب‌ناپذیر دو رنگی خطی در عناصر نوری ابزار و سلول نمونه است که می‌تواند برای تمام شدت‌های <span class="ltr-text">VCD</span> به جز بزرگترین آنها مهم شود. مثالی از یک طیف <span class="ltr-text">VCD</span> تصحیح شده با خط پایه در شکل <span class="ltr-text">3</span>، به همراه طیف <span class="ltr-text">IR</span> متناظر و طیف نویز <span class="ltr-text">VCD</span>، ارائه شده است. طیف این نمونه از <span class="ltr-text">(−)-(S)-α-pinene</span> خالص برای مدت <span class="ltr-text">1 h</span> در وضوح طیفی <span class="ltr-text">4 cm-1</span> در باریم فلوراید (<span class="ltr-text">BaF2</span>) با طول مسیر <span class="ltr-text">75 µm</span> جمع‌آوری شد. طیف نویز کمتر از <span class="ltr-text">1 × 10-5</span> واحد جذب (<span class="ltr-text">A</span>) در سراسر طیف است. طیف‌های <span class="ltr-text">IR</span>، <span class="ltr-text">VCD</span> و نویز ارائه شده در شکل <span class="ltr-text">3</span> را می‌توان به عنوان یک استاندارد اعتبارسنجی برای عملکرد یک ابزار <span class="ltr-text">mid-IR FT-VCD</span>، همانطور که در طیف‌سنجی دو رنگی دورانی ارتعاشی <a href="782.html" class="text-blue-600 hover:underline" target="_blank">782</a> توضیح داده شده است، در نظر گرفت.
+            </p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">شکل 3.</h3>
+            <p class="mb-4">
+                جذب <span class="ltr-text">IR</span> (<span class="ltr-text">A</span>) (پایین)، <span class="ltr-text">VCD</span> تصحیح شده با خط پایه (وسط)، و طیف نویز <span class="ltr-text">VCD</span> (بالا) برای <span class="ltr-text">(−)-(1S)-α-pinene</span> به صورت مایع خالص با میانگین‌گیری برای <span class="ltr-text">1 h</span> در وضوح طیفی <span class="ltr-text">4 cm-1</span> و در یک سلول باریم فلوراید با طول مسیر <span class="ltr-text">75 µm</span>.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">5. تحلیل کیفی و کمی</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">5.1 اطمینان از صحت علائم و شدت‌ها</h3>
+            <p class="mb-4">
+                تحلیل کیفی را می‌توان با <span class="ltr-text">VCD</span> با مقایسه طیف <span class="ltr-text">VCD</span> یک نمونه ناشناخته با طیف مرجع آن مولکول برای شناسایی ویژگی‌های مشترک و تأیید اینکه طیف <span class="ltr-text">VCD</span> نمونه تطابق نزدیکی با طیف مرجع دارد، انجام داد.
+            </p>
+            <p class="mb-4">
+                تحلیل کمی با استفاده از <span class="ltr-text">VCD</span> شامل اندازه‌گیری شدت <span class="ltr-text">VCD</span> مولکول نمونه و مقایسه آن با یک طیف مرجع استاندارد برای آن مولکول است. به این ترتیب، غلظت و <span class="ltr-text">%EE</span> نمونه را می‌توان به صورت زیر تعیین کرد. شدت طیف <span class="ltr-text">IR</span> نسبت به استاندارد <span class="ltr-text">IR</span> نمونه، غلظت را برای اندازه‌گیری‌ها با طول مسیر یکسان تعیین می‌کند. پس از نرمال‌سازی شدت <span class="ltr-text">IR</span> نمونه ناشناخته به استاندارد، شدت‌های نسبی <span class="ltr-text">VCD</span>، <span class="ltr-text">%EE</span> نمونه را تعیین می‌کنند. چنین مقایسه‌هایی باید با تمام شرایط نمونه‌برداری یکسان، از جمله حلال و وضوح طیفی ابزار، انجام شود.
+            </p>
+            <p class="mb-4">
+                برای تعیین اینکه شدت‌های <span class="ltr-text">VCD</span> صحیح هستند، شدت‌های <span class="ltr-text">VCD</span> کالیبره نشده باید کالیبره شوند. این کار با قرار دادن یک صفحه چند موج در موقعیت نمونه، و سپس یک پلاریزر که یا موازی یا عمود بر پلاریزر ابزار در شکل <span class="ltr-text">1</span> است، انجام می‌شود. اندازه‌گیری طیف <span class="ltr-text">VCD</span> این تنظیمات صفحه چند موج برای دو تنظیم صفحه موج و پلاریزر که <span class="ltr-text">90°</span> با یکدیگر تفاوت دارند، دو مجموعه منحنی تولید می‌کند که نقاط تقاطع دارند. منحنی اتصال نقاط تقاطع شکل یک تابع بسل مرتبه اول را دنبال می‌کند و نشان‌دهنده شدت واحد <span class="ltr-text">VCD</span> است. تقسیم این منحنی بر طیف <span class="ltr-text">VCD</span> کالیبره نشده، یک طیف <span class="ltr-text">VCD</span> با شدت‌های کالیبره شده صحیح تولید می‌کند. دو منحنی کالیبراسیون و منحنی نقطه تقاطع آن‌ها در شکل <span class="ltr-text">4</span> نشان داده شده‌اند.
+            </p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">شکل 4.</h3>
+            <p class="mb-4">
+                منحنی‌های کالیبراسیون برای شدت <span class="ltr-text">VCD</span> که با قرار دادن یک صفحه چند موج و یک پلاریزر در پرتو <span class="ltr-text">IR</span> و اتصال نقاط تقاطع با یک منحنی که شدت واحد <span class="ltr-text">VCD</span> را برای حداکثر شدت <span class="ltr-text">VCD</span> در <span class="ltr-text">1200 cm-1</span> نشان می‌دهد، ایجاد شده‌اند.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">5.2 تعیین سطح نویز در هر نقطه از طیف</h3>
+            <p class="mb-4">
+                یک عامل حیاتی در تحلیل کمی با استفاده از <span class="ltr-text">VCD</span>، درجه دقت طیف است که توسط سطح نویز <span class="ltr-text">VCD</span> و پایداری خط پایه اندازه‌گیری مشخص می‌شود. سطح نویز به تعدادی از عوامل مانند مقدار <span class="ltr-text">D*</span> آشکارساز، مقدار تابش عبوری از نمونه از منبع، و مقدار جذب نمونه بستگی دارد. سطح نویز با تقسیم اندازه‌گیری <span class="ltr-text">VCD</span> به دو نیمه به دست می‌آید. افزودن این نیمه‌ها طیف <span class="ltr-text">VCD</span> را، شامل نویز، می‌دهد، در حالی که کم کردن، ویژگی‌های <span class="ltr-text">VCD</span> را حذف کرده و طیف نویز معادل را باقی می‌گذارد. مثالی از طیف نویز <span class="ltr-text">VCD</span> در شکل <span class="ltr-text">3</span> آورده شده است، که از پایین به بالا، طیف‌های <span class="ltr-text">IR</span>، <span class="ltr-text">VCD</span> و نویز <span class="ltr-text">VCD</span> را برای اندازه‌گیری <span class="ltr-text">(−)-S-α-pinene</span> نشان می‌دهد. سطح نویز <span class="ltr-text">VCD</span> را می‌توان با افزایش زمان اندازه‌گیری از طریق هم‌افزایی طیف‌ها، در صورت نیاز، کاهش داد.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">5.3 دقت خط پایه <span class="ltr-text">VCD</span></h3>
+            <p class="mb-4">
+                یک عامل حیاتی دوم در اندازه‌گیری طیف <span class="ltr-text">VCD</span>، ویژگی‌های خط پایه <span class="ltr-text">VCD</span> است، یعنی موقعیت، راستا و پایداری آن. خط شدت صفر <span class="ltr-text">VCD</span> بین شدت‌های <span class="ltr-text">VCD</span> مثبت و منفی باید تا حد امکان به صفر الکترونیکی اندازه‌گیری (صفر نمایش طیفی) نزدیک باشد. به دلیل حساسیت مقیاس شدت <span class="ltr-text">VCD</span>، همیشه مقداری آفست از خط پایه از صفر الکترونیکی رخ می‌دهد، همانطور که در بالا در اشاره به نیاز به تصحیح خط پایه طیف‌های <span class="ltr-text">VCD</span> <span class="ltr-text">α-pinene</span> در شکل <span class="ltr-text">2</span> و همانطور که برای شکل <span class="ltr-text">3</span> انجام شد، بحث شد. استفاده از <span class="ltr-text">α-pinene</span> به عنوان یک استاندارد اعتبارسنجی سودمند است، زیرا <span class="ltr-text">α-pinene</span> دارای شدت غیرمعمول بزرگی است و بنابراین، اندازه‌گیری طیف آن به طور منظم نسبتاً آسان است. <span class="ltr-text">α-pinene</span> همچنین می‌تواند به عنوان معیاری برای خط پایه اندازه‌گیری <span class="ltr-text">VCD</span> نسبت به صفر الکترونیکی اندازه‌گیری استفاده شود. این در شکل <span class="ltr-text">5</span> نشان داده شده است، جایی که طیف‌های <span class="ltr-text">VCD</span> <span class="ltr-text">(−)-α-pinene</span> (خط‌چین) و <span class="ltr-text">(+)-α-pinene</span> (سیاه) به همراه طیف <span class="ltr-text">VCD</span> یک مخلوط راسمیک [مقادیر مساوی از <span class="ltr-text">(−)-α-pinene</span> و <span class="ltr-text">(+)-α-pinene</span>، و در نتیجه لغو شدت <span class="ltr-text">VCD</span>] از <span class="ltr-text">α-pinene</span> (خاکستری) ارائه شده‌اند. طیف <span class="ltr-text">VCD</span> مخلوط راسمیک <span class="ltr-text">α-pinene</span>، خط پایه <span class="ltr-text">VCD</span> برای این اندازه‌گیری است. یک استاندارد معمول برای کیفیت خط پایه، انحرافات از صفر الکترونیکی کمتر از <span class="ltr-text">10%</span> از حداکثر جدایی شدت <span class="ltr-text">VCD</span> مثبت و منفی طیف <span class="ltr-text">α-pinene</span> خالص، یا تقریباً <span class="ltr-text">1 × 10-4</span> است. خط پایه نشان داده شده در شکل <span class="ltr-text">5</span> این استاندارد را در حدود <span class="ltr-text">5%</span> برآورده می‌کند. خط پایه در <span class="ltr-text">1350 cm-1</span> کمی بالاتر از صفر الکترونیکی است و حداکثر انحراف از صفر الکترونیکی کمتر از <span class="ltr-text">0.00005</span> یا <span class="ltr-text">5 × 10-5</span> در <span class="ltr-text">1170 cm-1</span> دارد، که می‌توان آن را با حداکثر مقادیر شدت مثبت و منفی <span class="ltr-text">(−)-α-pinene</span> از <span class="ltr-text">+5 × 10-4</span> در <span class="ltr-text">1220 cm-1</span> و یک مقدار پیک منفی <span class="ltr-text">−4 × 10-4</span> در <span class="ltr-text">1130 cm-1</span> مقایسه کرد.
+            </p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">شکل 5.</h3>
+            <p class="mb-4">
+                طیف <span class="ltr-text">VCD</span> <span class="ltr-text">R-(+)-α-pinene</span> (سیاه)، <span class="ltr-text">S-(−)-α-pinene</span> (خط‌چین)، و <span class="ltr-text">α-pinene</span> راسمیک (خاکستری) به صورت مایع خالص برای اندازه‌گیری <span class="ltr-text">60-min</span> در یک سلول باریم فلوراید با طول مسیر <span class="ltr-text">75 µm</span>.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">5.4 مصنوعات جذب خط پایه <span class="ltr-text">VCD</span> و قابلیت اندازه‌گیری تک-انانتیومر</h3>
+            <p class="mb-4">
+                برای آزمایش‌های دقت و پایداری خط پایه، نمونه کافور در محلول تتراکلرید کربن به عنوان یک استاندارد صلاحیت استفاده می‌شود و یک آزمایش سخت‌گیرانه‌تر از <span class="ltr-text">α-pinene</span> ارائه می‌دهد، زیرا طیف <span class="ltr-text">VCD</span> کافور تقریباً یک پنجم بزرگی، نسبت به طیف جذب <span class="ltr-text">IR</span>، از <span class="ltr-text">α-pinene</span> خالص است. طیف‌های <span class="ltr-text">VCD</span> هر دو انانتیومر، و همچنین دو معیار از خط پایه <span class="ltr-text">VCD</span>، در شکل <span class="ltr-text">6</span> ارائه شده‌اند. واضح است، همانطور که در شکل <span class="ltr-text">2</span> و شکل <span class="ltr-text">5</span>، طیف‌های <span class="ltr-text">VCD</span> انانتیومرها، در این مورد <span class="ltr-text">(+)-camphor</span> و <span class="ltr-text">(−)-camphor</span>، از نظر شدت مساوی و از نظر علامت مخالف نسبت به خط پایه <span class="ltr-text">VCD</span> تا سطح نویز اندازه‌گیری هستند. دو خط پایه <span class="ltr-text">VCD</span> ارائه شده هر دو اندازه‌گیری <span class="ltr-text">VCD</span> صفر هستند. طیف <span class="ltr-text">VCD</span> کافور راسمیک [مخلوط مساوی از <span class="ltr-text">(+)-camphor</span> و <span class="ltr-text">(−)-camphor</span>] خط پایه <span class="ltr-text">VCD</span> واقعی برای طیف‌های منفرد <span class="ltr-text">(+)-camphor</span> و <span class="ltr-text">(−)-camphor</span> است، حتی اگر آفست‌هایی (مصنوعاتی) به دلیل باندهای جذب در طیف <span class="ltr-text">IR</span> کافور وجود داشته باشد. عدم وجود چنین مصنوعاتی تا سطح نویز اندازه‌گیری با همخوانی طیف <span class="ltr-text">VCD</span> مخلوط راسمیک و طیف حلال، تتراکلرید کربن، نشان داده شده است. از آنجا که تتراکلرید کربن سطح قابل توجهی از جذب در ناحیه نمایش داده شده طیف ندارد، توافق این دو خط پایه در سطح نویز، عدم وجود مصنوعات خط پایه در طیف <span class="ltr-text">VCD</span> کافور راسمیک، و بنابراین، برای اندازه‌گیری <span class="ltr-text">VCD</span> هر یک از دو انانتیومر کافور را نشان می‌دهد.
+            </p>
+            <p class="mb-4">
+                دستیابی به یک خط پایه <span class="ltr-text">VCD</span> عاری از مصنوعات جذب معمولاً با هم‌ترازی نوری ابزار <span class="ltr-text">VCD</span> به گونه‌ای انجام می‌شود که خط پایه تا حد امکان به صفر الکترونیکی واقعی ابزار اندازه‌گیری نزدیک باشد. در شکل <span class="ltr-text">6</span>، خط پایه <span class="ltr-text">VCD</span> را می‌توان مشاهده کرد که در سراسر طیف بالای صفر و پایین صفر حرکت می‌کند، اما در این حالت، انحرافات از صفر الکترونیکی کوچک هستند (تقریباً <span class="ltr-text">2 × 10-5</span>) و کمتر از <span class="ltr-text">20%</span> از حداکثر شدت‌های <span class="ltr-text">VCD</span> مثبت و منفی طیف (تقریباً <span class="ltr-text">1 × 10-4</span>) هستند. این مقدار انحراف با حداکثر بزرگی‌های خط پایه که در بالا برای <span class="ltr-text">α-pinene</span> بحث شد و در شکل <span class="ltr-text">5</span> نمایش داده شد، سازگار است، زیرا <span class="ltr-text">α-pinene</span> طیف <span class="ltr-text">VCD</span> بسیار بزرگتری (تقریباً <span class="ltr-text">5×</span>) نسبت به طیف <span class="ltr-text">IR</span> خود در مقایسه با کافور دارد. خطوط پایه برای کافور در شکل <span class="ltr-text">6</span> نسبت به <span class="ltr-text">α-pinene</span> در شکل <span class="ltr-text">5</span> پر سر و صداتر هستند، زیرا مقیاس طیف <span class="ltr-text">VCD</span> کوچکتر است و زمان اندازه‌گیری <span class="ltr-text">20 min</span> به جای <span class="ltr-text">1 h</span> است. همانند شکل <span class="ltr-text">3</span>، خط پایه <span class="ltr-text">VCD</span> را می‌توان با کم کردن یک طیف خط پایه مناسب، راسمیک یا حلال، تصحیح کرد. در شکل <span class="ltr-text">7</span>، طیف‌های <span class="ltr-text">VCD</span> تصحیح شده با خط پایه حلال برای هر دو انانتیومر و مخلوط راسمیک با کم کردن طیف <span class="ltr-text">VCD</span> حلال تتراکلرید کربن به دست آمده‌اند. در نتیجه خط پایه صفر <span class="ltr-text">VCD</span> و صفر الکترونیکی ابزار تا سطح نویز یکسان هستند، و خواص تقارن آینه‌ای این طیف‌ها حتی آشکارتر است. این آزمایش <span class="ltr-text">VCD</span> تأیید می‌کند که با کم کردن طیف <span class="ltr-text">VCD</span> حلال، یک طیف <span class="ltr-text">VCD</span> دقیق از کافور را می‌توان تنها با استفاده از یک انانتیومر، چه <span class="ltr-text">(+)-</span> و چه <span class="ltr-text">(−)-</span>انانتیومر، به دست آورد، و بنابراین، ابزار قابلیت اندازه‌گیری <span class="ltr-text">VCD</span> تک-انانتیومر را دارد.
+            </p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">شکل 6.</h3>
+            <p class="mb-4">
+                طیف <span class="ltr-text">VCD</span> <span class="ltr-text">R-(+)-camphor</span> (سیاه)، <span class="ltr-text">S-(−)-camphor</span> (خط‌چین خاکستری)، و مخلوط کافور راسمیک (خاکستری) به صورت محلول <span class="ltr-text">0.9 M</span> در تتراکلرید کربن. همچنین با همان سلول و طول مسیر، طیف <span class="ltr-text">VCD</span> تتراکلرید کربن خالص (خط‌چین سیاه) ارائه شده است. شرایط نمونه‌برداری شامل زمان جمع‌آوری طیف <span class="ltr-text">20 min</span> با یک سلول باریم فلوراید با طول مسیر <span class="ltr-text">100 µm</span> بود.
+            </p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">شکل 7.</h3>
+            <p class="mb-4">
+                طیف <span class="ltr-text">VCD</span> <span class="ltr-text">R-(+)-camphor-carbon tetrachloride</span> (خاکستری)، <span class="ltr-text">S-(−)-camphor-carbon tetrachloride</span> (سیاه)، و مخلوط راسمیک کافور-تتراکلرید کربن (خط‌چین) که در شکل <span class="ltr-text">6</span> نشان داده شده‌اند و با خط پایه حلال تصحیح شده‌اند.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">5.5 پایداری اندازه‌گیری <span class="ltr-text">VCD</span> و کاهش سطح نویز</h3>
+            <p class="mb-4">
+                مقایسه اندازه‌گیری‌های <span class="ltr-text">VCD</span> کافور برای <span class="ltr-text">20 min</span> با آنچه در مدت <span class="ltr-text">4 h</span> در بلوک‌های <span class="ltr-text">20 min</span> اندازه‌گیری شده است، امکان ارزیابی پایداری اندازه‌گیری ابزار و همچنین کاهش سطح نویز در طول زمان را فراهم می‌کند. در شکل <span class="ltr-text">8</span>، <span class="ltr-text">12</span> طیف <span class="ltr-text">VCD</span> <span class="ltr-text">20-min</span> اندازه‌گیری شده در <span class="ltr-text">4 h</span> برای نشان دادن پایداری طیف <span class="ltr-text">VCD</span> در طول زمان ارائه شده‌اند. واضح است که هیچ انحرافی از طیف‌های <span class="ltr-text">VCD</span> خارج از سطح نویز هیچ یک از طیف‌های <span class="ltr-text">20-min</span> وجود ندارد، و بنابراین، هیچ رانش طولانی‌مدت در خط پایه <span class="ltr-text">VCD</span> در این دوره زمانی وجود ندارد.
+            </p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">شکل 8.</h3>
+            <p class="mb-4">
+                هم‌پوشانی <span class="ltr-text">12</span> طیف <span class="ltr-text">VCD</span> <span class="ltr-text">20-min</span> از <span class="ltr-text">R-(+)-camphor</span> تحت شرایط شکل <span class="ltr-text">6</span> و شکل <span class="ltr-text">7</span>.
+            </p>
+            <p class="mb-4">
+                اگر <span class="ltr-text">12</span> بلوک از طیف‌های <span class="ltr-text">VCD</span> <span class="ltr-text">20-min</span> در شکل <span class="ltr-text">8</span> میانگین‌گیری شوند، طیف <span class="ltr-text">VCD</span> <span class="ltr-text">4-h</span> حاصل را می‌توان با یک طیف <span class="ltr-text">VCD</span> <span class="ltr-text">20-min</span> از همان نمونه مقایسه کرد تا کاهش نویز حاصل از میانگین‌گیری سیگنال را نشان دهد، مشروط بر اینکه هیچ منبع نویز سیستماتیک دیگری در طیف‌سنج <span class="ltr-text">VCD</span> وجود نداشته باشد. در این حالت، کاهش نویز باید ضریبی از جذر <span class="ltr-text">12</span>، یا تقریباً <span class="ltr-text">3.5</span> باشد. بنابراین، نسبت سیگنال به نویز باید با ضریب <span class="ltr-text">3.5</span> بهبود یابد. چنین مقایسه‌ای در شکل <span class="ltr-text">9</span> ارائه شده است.
+            </p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">شکل 9.</h3>
+            <p class="mb-4">
+                مقایسه میانگین <span class="ltr-text">4-h</span> از <span class="ltr-text">12</span> طیف <span class="ltr-text">VCD</span> <span class="ltr-text">20-min</span> [<span class="ltr-text">R-(+)-camphor 240 min</span> (خاکستری)] با یک اندازه‌گیری <span class="ltr-text">20-min</span> کافور [<span class="ltr-text">R-(+)-camphor 20 min</span> (سیاه)]، تحت شرایط شکل‌های <span class="ltr-text">6</span>، <span class="ltr-text">7</span> و <span class="ltr-text">8</span>، نشان‌دهنده بهبود نسبت سیگنال به نویز با افزایش زمان جمع‌آوری.
+            </p>
+            <p class="mb-4">
+                سطح نویز را می‌توان مستقیماً در مقیاس حساسیت <span class="ltr-text">5×</span> مشاهده کرد تا سطوح نویز را با مقایسه طیف‌های نویز، همانطور که در شکل <span class="ltr-text">3</span> نشان داده شده و توضیح داده شده است، برای اندازه‌گیری‌های <span class="ltr-text">VCD</span> <span class="ltr-text">4-h</span> و <span class="ltr-text">20-min</span> بهتر ارزیابی کرد. این در شکل <span class="ltr-text">10</span> ارائه شده است.
+            </p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">شکل 10.</h3>
+            <p class="mb-4">
+                مقایسه طیف‌های نویز <span class="ltr-text">VCD</span> <span class="ltr-text">R-(+)-camphor</span> برای یک اندازه‌گیری <span class="ltr-text">20-min</span> [نویز <span class="ltr-text">R-(+)-camphor</span> (خاکستری)] در مقابل یک اندازه‌گیری <span class="ltr-text">4-h</span> [نویز <span class="ltr-text">R-(+)-camphor</span> (سیاه)] تحت شرایط شکل‌های <span class="ltr-text">6</span>، <span class="ltr-text">7</span>، <span class="ltr-text">8</span> و <span class="ltr-text">9</span>، که در آن مقیاس شدت برای جای دادن طیف‌های نویز که <span class="ltr-text">5×</span> بزرگ شده‌اند برای مشاهده بهتر از سطوح نویز در چهار شکل قبلی، افزایش یافته است.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">6. تعیین پیکربندی مطلق</h2>
+            <p class="mb-4">
+                طیف‌های <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> یک نمونه در محلول در عرض چند دقیقه تا ساعت اندازه‌گیری می‌شوند، بدون نیاز به تبلور قبلی یا خلوص نوری بالای نمونه. <span class="ltr-text">AC</span> یک نمونه ناشناخته با مقایسه طیف <span class="ltr-text">VCD</span> اندازه‌گیری شده آن با محاسبه شیمی کوانتومی <span class="ltr-text">VCD</span> همان مولکول تعیین می‌شود، جایی که <span class="ltr-text">AC</span> مورد استفاده در طیف <span class="ltr-text">VCD</span> محاسبه شده به صورت دلخواه انتخاب می‌شود. اگر علائم باندها در طیف <span class="ltr-text">VCD</span> اندازه‌گیری شده با علائم در طیف <span class="ltr-text">VCD</span> محاسبه شده مطابقت داشته باشند، <span class="ltr-text">AC</span> نمونه با آنچه در محاسبه استفاده شده است یکسان است. اگر علائم مخالف باشند، نمونه دارای <span class="ltr-text">AC</span> مخالف با آنچه محاسبه شده است، می‌باشد. مثالی از تعیین <span class="ltr-text">AC</span> یک مولکول دارویی در شکل <span class="ltr-text">11</span> نشان داده شده است. <span class="ltr-text">AC</span> میرتازاپین، که به صورت راسمیک فروخته می‌شود، با مقایسه طیف‌های <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> اندازه‌گیری شده انانتیومر <span class="ltr-text">(−)-</span> با طیف‌های <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> محاسبه شده انانتیومر <span class="ltr-text">R-</span> تعیین می‌شود. تطابق نزدیک در علائم <span class="ltr-text">VCD</span>—فرکانس‌های ارتعاشی، شدت‌های طیف‌های مشاهده شده و محاسبه شده، و فرکانس‌ها و شدت‌های <span class="ltr-text">IR</span>—به وضوح نشان می‌دهد که <span class="ltr-text">AC</span> میرتازاپین <span class="ltr-text">(−)-R</span> است. همچنین در شکل <span class="ltr-text">11</span> ساختار محاسبه شده شیمی کوانتومی استریواختصاصی <span class="ltr-text">R-mirtazapine</span> نشان داده شده است.
+            </p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">شکل 11.</h3>
+            <p class="mb-4">
+                مقایسه طیف‌های <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> اندازه‌گیری شده (مشاهده شده) و محاسبه شده میرتازاپین، که امکان تخصیص <span class="ltr-text">AC</span> آن به <span class="ltr-text">(−)-R</span> را فراهم می‌کند. با اجازه از <span class="ltr-text">John Wiley & Sons</span> بازتولید شده است.
+            </p>
+            <p class="mb-4">
+                اگر <span class="ltr-text">AC</span> یک مولکول قبلاً تثبیت شده باشد، به عنوان مثال، با کریستالوگرافی اشعه ایکس، محاسبه <span class="ltr-text">VCD</span> مولکول ضروری نیست (اما می‌تواند به عنوان یک بررسی تخصیص اشعه ایکس انجام شود)، و طیف <span class="ltr-text">VCD</span> اندازه‌گیری شده مولکول را می‌توان به عنوان یک استاندارد مرجع برای <span class="ltr-text">AC</span> مولکول، به عنوان مثال، با پشتیبانی <span class="ltr-text">USP</span>، در نظر گرفت. برای یک مولکول با کایرالیته ساختاری ناشناخته، تعیین <span class="ltr-text">AC</span> آن با <span class="ltr-text">VCD</span> نیاز به مقایسه طیف‌های <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> اندازه‌گیری شده و محاسبه شده، <span class="ltr-text">$\varepsilon(\nu)$</span> و <span class="ltr-text">$\Delta \varepsilon(\nu)$</span> دارد، همانطور که در شکل <span class="ltr-text">11</span> نشان داده شده است. نکته کلیدی مقایسه، همبستگی باندهای اصلی <span class="ltr-text">VCD</span> برای تعیین اینکه آیا علائم یکسان یا مخالف دارند، می‌باشد. طیف <span class="ltr-text">IR</span> در این فرآیند یک راهنما است. مشاهده یک همبستگی نزدیک بین طیف‌های <span class="ltr-text">IR</span> محاسبه شده و اندازه‌گیری شده اطمینان می‌دهد که یک میدان نیروی ارتعاشی خوب محاسبه شده و مهمترین باندهای ارتعاشی همبستگی دارند. اگر یک همبستگی متناظر از علائم باندهای اصلی <span class="ltr-text">VCD</span> انجام شود، همانطور که در شکل <span class="ltr-text">11</span>، آنگاه <span class="ltr-text">AC</span> تعیین شده است.
+            </p>
+            <p class="mb-4">
+                هنگامی که طیف‌های <span class="ltr-text">VCD</span> اندازه‌گیری شده و محاسبه شده مقایسه می‌شوند، بزرگی شدت‌های متناظر حیاتی نیستند. آنچه مهم است شدت‌های نسبی باندها در دو طیف است، و در واقع، مقایسه طیف‌های اندازه‌گیری شده و محاسبه شده را می‌توان با استفاده از مجموعه‌های مختلفی از شدت‌ها برای <span class="ltr-text">$\varepsilon(\nu)$</span> و <span class="ltr-text">$\Delta \varepsilon(\nu)$</span> برای طیف‌های محاسبه شده و <span class="ltr-text">$A(\nu)$</span> و <span class="ltr-text">$\Delta A(\nu)$</span> برای طیف‌های اندازه‌گیری شده انجام داد. به طور کلی، انتظار نمی‌رود یک تطابق دقیق فرکانس‌های باند اندازه‌گیری شده و محاسبه شده به دلیل چندین محدودیت در محاسبات وجود داشته باشد. مثال‌هایی از این محدودیت‌ها شامل فرض تقریب هارمونیک هنگامی که مقداری ناهارمونیسیته در طیف‌های اندازه‌گیری شده وجود دارد، نیاز به نادیده گرفتن اثرات برهم‌کنش‌های حلال با مولکول حل‌شونده کایرال، محدودیت‌ها در اندازه مجموعه پایه مورد استفاده برای محاسبه کوانتومی، و انتخاب تابع چگالی مورد نیاز برای محاسبه نظریه تابع چگالی (<span class="ltr-text">DFT</span>) است.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">7. محاسبه طیف‌های <span class="ltr-text">VCD</span></h2>
+            <p class="mb-4">
+                برای تعیین <span class="ltr-text">AC</span> یک مولکول با کایرالیته ناشناخته با استفاده از روش <span class="ltr-text">VCD</span> به عنوان جایگزین، یا مکمل، کریستالوگرافی اشعه ایکس، تحلیلگران یک محاسبه شیمی کوانتومی از شدت‌های <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> مولکول را انجام می‌دهند. از اواخر دهه <span class="ltr-text">1990</span>، نرم‌افزارهای تجاری <span class="ltr-text">DFT</span> در دسترس بوده‌اند و توسط یک کاربر آموزش دیده می‌توانند به طور مؤثر استفاده شوند، زیرا نیاز به تخصص خاص یا تجربه گسترده در محاسبات شیمی کوانتومی ندارند. به عنوان مثال، محاسبات <span class="ltr-text">VCD</span> اکنون بخشی از برخی برنامه‌های درسی شیمی کارشناسی هستند. مراحل زیر برای انجام یک محاسبه <span class="ltr-text">DFT</span> از <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> لازم است:
+            </p>
+            <ol class="list-decimal pr-8 mb-4">
+                <li>ساختار استریواختصاصی مولکول از طریق یک رابط گرافیکی بصری وارد می‌شود.</li>
+                <li>برنامه شیمی کوانتومی سپس به طور خودکار مراحل زیر را انجام می‌دهد:
+                    <ol class="list-disc pr-8 mb-2">
+                        <li>هندسه به یک پیکربندی با حداقل انرژی بهینه می‌شود.</li>
+                        <li>یک میدان نیرو محاسبه می‌شود که مدهای ارتعاشی مولکول را تعیین می‌کند، با <span class="ltr-text">3N-6</span> مد برای مولکولی با <span class="ltr-text">N</span> اتم.</li>
+                        <li>تانسورهای قطبی اتمی که طیف <span class="ltr-text">IR</span> را تولید می‌کنند، محاسبه می‌شوند.</li>
+                        <li>تانسورهای محوری اتمی که طیف <span class="ltr-text">VCD</span> را تولید می‌کنند، محاسبه می‌شوند.</li>
+                    </ol>
+                </li>
+                <li>خروجی محاسبه شامل جدولی است که برای هر مد <span class="ltr-text">i</span> یک فرکانس <span class="ltr-text">$\nu_i$</span>، شدت <span class="ltr-text">IR</span> (قدرت دوقطبی) <span class="ltr-text">$D_i$</span>، و شدت <span class="ltr-text">VCD</span> (قدرت دورانی) <span class="ltr-text">$R_i$</span> وجود دارد.</li>
+                <li>برنامه‌های تجاری طیف‌های <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> را برای مولکول با استفاده از مراحل زیر محاسبه می‌کنند:
+                    <ol class="list-disc pr-8 mb-2">
+                        <li>یک شکل خط <span class="ltr-text">$f(\nu)$</span> به هر مقدار قدرت دوقطبی و دورانی، <span class="ltr-text">$D_i$</span> و <span class="ltr-text">$R_i$</span>، که در هر فرکانس ارتعاشی <span class="ltr-text">$\nu_i$</span> مرکز دارد، اعمال می‌شود.</li>
+                        <li>جمع‌بندی این شدت‌های شکل خط مد نرمال، به طور خودکار طیف‌های <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> نهایی محاسبه شده <span class="ltr-text">$\varepsilon(\nu)$</span> و <span class="ltr-text">$\Delta \varepsilon(\nu)$</span> را تولید می‌کند که می‌توانند مستقیماً با طیف‌های <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> اندازه‌گیری شده مربوطه مقایسه شوند.</li>
+                    </ol>
+                </li>
+            </ol>
+            <p class="mb-4">
+                یک عامل مهم دیگر که اغلب در تخصیص <span class="ltr-text">AC</span> مولکول‌های دارویی و محصولات طبیعی (به دلیل پیچیدگی ساختاری این نوع مولکول‌ها) مواجه می‌شود، وجود بیش از یک کنفورمر مهم تحت شرایط اندازه‌گیری است. جمعیت‌های کسری کنفورمرهای مختلف را می‌توان با استفاده از انرژی‌های نسبی محاسبه شده آن‌ها در توزیع بولتزمن پیش‌بینی کرد. کنفورمر با کمترین انرژی بالاترین جمعیت کسری را دارد و به همین ترتیب، به کنفورمرهایی با انرژی‌های نسبی بالاتر و جمعیت کمتر می‌رسد. برای محاسبه <span class="ltr-text">VCD</span>، باید <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> هر کنفورمر مهم را محاسبه کرده و سپس این طیف‌ها را با وزن‌دهی بر اساس جمعیت کسری بولتزمن با هم جمع کرد. معمولاً، می‌توان از سهم طیفی کنفورمرهایی که کمتر از چند درصد از کل جمعیت را تشکیل می‌دهند، صرف نظر کرد.
+            </p>
+            <p class="mb-4">
+                برنامه‌هایی برای محاسبه طیف‌های <span class="ltr-text">VCD</span> و <span class="ltr-text">IR</span> تا سطح دقتی که برای مقایسه با <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> اندازه‌گیری شده کافی است، به صورت تجاری از منابع مختلف در دسترس هستند. ابتدا، به یک برنامه برای ارزیابی و یافتن هندسه تمام کنفورمیشن‌های با کمترین انرژی یک مولکول کایرال نیاز است. برنامه‌های مختلفی با استفاده از مکانیک مولکولی برای این منظور در دسترس هستند. دوم، به یک برنامه نرم‌افزاری کامل شیمی کوانتومی برای محاسبه میدان‌های نیروی اب‌اینیشیو، فرکانس‌های ارتعاشی، و شدت‌های <span class="ltr-text">VCD</span> و <span class="ltr-text">IR</span> برای هر یک از کنفورمرهای با کمترین انرژی نیاز است. یک مدل شیمیایی رایج با دقت کافی برای تعیین <span class="ltr-text">AC</span>، <span class="ltr-text">DFT</span> است، با استفاده از یک مجموعه پایه حداقل <span class="ltr-text">6-31G(d)</span>، و انتخابی از توابع هیبریدی، مانند <span class="ltr-text">B3LYP</span> یا <span class="ltr-text">B3PW91</span>. مجموعه‌های پایه با سطح بالاتر و انتخاب‌های جایگزین از توابع هیبریدی را می‌توان انجام داد. در نهایت، به یک روش نرم‌افزاری برای مقایسه طیف‌های <span class="ltr-text">VCD</span> و <span class="ltr-text">IR</span> اندازه‌گیری شده و محاسبه شده برای ارزیابی درجه توافق طیفی بین طیف‌های اندازه‌گیری شده و محاسبه شده، و بنابراین سطح اطمینان از پیش‌بینی صحیح <span class="ltr-text">AC</span>، نیاز است. جزئیات اضافی در ادامه توضیح داده شده است.
+            </p>
+            <p class="mb-4">
+                در شکل <span class="ltr-text">12</span>، <span class="ltr-text">AC</span> انانتیومر فعال بیولوژیکی مسکن <span class="ltr-text">(S)-(+)-ibuprofen</span> با مقایسه طیف‌های <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> اندازه‌گیری شده و محاسبه شده تعیین می‌شود. <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> محاسبه شده مجموع طیف‌های کنفورمر <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> هستند، یکی برای هر کنفورمر، با وزن‌دهی بر اساس جمعیت‌های کسری <span class="ltr-text">0.37</span>، <span class="ltr-text">0.36</span>، <span class="ltr-text">0.12</span> و <span class="ltr-text">0.07</span>، به علاوه مشارکت‌های کوچکتر از هشت کنفورمر دیگر که مجموعاً <span class="ltr-text">0.08</span> را تشکیل می‌دهند. به وضوح، دو کنفورمر مهم وجود دارد که تقریباً به طور مساوی جمعیت دارند، و ویژگی‌های اصلی طیف‌های <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> نهایی توسط این طیف‌ها تعیین می‌شوند. در نتیجه این تحلیل، نه تنها <span class="ltr-text">VCD</span> توانسته <span class="ltr-text">AC</span> ایبوپروفن <span class="ltr-text">(+)</span> را به عنوان <span class="ltr-text">S</span> تأیید کند، بلکه دو کنفورمر غالب در حالت محلول نیز شناسایی شده‌اند، به همراه دو کنفورمر دیگر با جمعیت کمتر.
+            </p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">شکل 12.</h3>
+            <p class="mb-4">
+                در بالا، طیف‌های <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> اندازه‌گیری شده (مشاهده شده؛ <span class="ltr-text">+</span>) و محاسبه شده (<span class="ltr-text">S</span>) ایبوپروفن <span class="ltr-text">(+)</span> (بالا) و ساختار استریوی <span class="ltr-text">(S)-ibuprofen</span> (پایین) نمایش داده شده‌اند. در پایین، ساختارهای استریو، انرژی نسبی (<span class="ltr-text">RE</span>)، و درصد جمعیت بولتزمن (<span class="ltr-text">BP</span>) برای چهار کنفورمر مهم حالت محلول نمایش داده شده‌اند.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">8. مقایسه طیف‌های اندازه‌گیری شده و محاسبه شده</h2>
+            <p class="mb-4">
+                برای ارائه یک معیار آماری بدون سوگیری از درجه شباهت بین طیف‌های <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> اندازه‌گیری شده و محاسبه شده، یک روش تحلیلی مبتنی بر الگوریتم کانولوشن توسعه یافته است. درجه شباهت، یا همخوانی، بین یک طیف اندازه‌گیری شده و یک طیف محاسبه شده را می‌توان محاسبه کرد و برای تعیین درجه اطمینان از صحت <span class="ltr-text">AC</span> تعیین شده با بررسی بصری استفاده کرد.
+            </p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">8.1 درجه اطمینان از تخصیص صحیح</h3>
+            <p class="mb-4">
+                نتایج استفاده از چنین معیارهای آماری در شکل <span class="ltr-text">13</span> نشان داده شده است. درجه شباهت (شباهت کلی همسایگی، <span class="ltr-text">TNS</span>) <span class="ltr-text">IR</span> اندازه‌گیری شده و محاسبه شده <span class="ltr-text">92.5</span> است، که <span class="ltr-text">100</span> یک تطابق کامل است. همین معیار <span class="ltr-text">TNS</span> برای <span class="ltr-text">VCD</span> <span class="ltr-text">82.2</span> است. از آنجا که باندهای <span class="ltr-text">VCD</span> می‌توانند مثبت یا منفی باشند، یک تحلیل دقیق‌تر برای <span class="ltr-text">VCD</span> انجام می‌شود، و فقط مناطق توافق علامت برای هر انانتیومر مقایسه می‌شوند. در این حالت، مقدار شباهت همسایگی علامت‌دار (<span class="ltr-text">SNS</span>) برای انانتیومر <span class="ltr-text">S-</span> برابر با <span class="ltr-text">92.8</span> است، و برای انانتیومر <span class="ltr-text">R-</span> تنها <span class="ltr-text">12.1</span> است. به وضوح، این تحلیل توافق بصری طیف <span class="ltr-text">VCD</span> اندازه‌گیری شده (خط پر بالا) و طیف‌های <span class="ltr-text">VCD</span> محاسبه شده (خط پر پایین) برای انانتیومر <span class="ltr-text">S-</span> در مقابل انانتیومر <span class="ltr-text">R-</span> (خط چین) را تأیید می‌کند. یک مقایسه عددی اضافی به عنوان شاخص شباهت انانتیومری (<span class="ltr-text">ESI</span>) محاسبه می‌شود، که برابر با <span class="ltr-text">SNS(S)– SNS(R)</span> است. نتیجه (نقطه سیاه) سپس در مقابل پایگاه داده‌ای از <span class="ltr-text">89</span> تخصیص <span class="ltr-text">VCD</span> صحیح قبلی، که محورها <span class="ltr-text">SNS</span> (عمودی) و <span class="ltr-text">ESI</span> (افقی) هستند، ترسیم می‌شود. هر چه یک نقطه آماری به گوشه بالا سمت راست نمودار نزدیک‌تر باشد، شباهت مقایسه بیشتر و درجه اطمینان بالاتر است. گوشه بالا سمت راست نمودار به عنوان <span class="ltr-text">100%</span> شباهت طیفی تعریف می‌شود. درجه اطمینان یک معیار آماری است که برای نقاط خوشه‌بندی شده در منطقه بالا سمت راست نمودار، <span class="ltr-text">100%</span> اطمینان تعیین می‌شود. معیارهای آماری مانند این، اتکا به تنها قضاوت بصری برای مقایسه طیف‌های <span class="ltr-text">VCD</span> اندازه‌گیری شده و محاسبه شده را از بین می‌برند و یک مبنای آماری برای تخصیص درجه شباهت بین طیف‌های اندازه‌گیری شده و محاسبه شده فراهم می‌کنند.
+            </p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">شکل 13.</h3>
+            <p class="mb-4">
+                خروجی یک برنامه تجاری برای مقایسه طیف‌های <span class="ltr-text">VCD</span> و <span class="ltr-text">IR</span> اندازه‌گیری شده (مشاهده شده) با طیف‌های <span class="ltr-text">VCD</span> محاسبه شده هر دو انانتیومر و طیف <span class="ltr-text">IR</span> محاسبه شده. داده‌های آماری در متن توضیح داده شده‌اند.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">9. تعیین درصد اضافی انانتیومر</h2>
+            <p class="mb-4">
+                پس از <span class="ltr-text">AC</span>، مهمترین ویژگی بعدی یک نمونه کایرال، <span class="ltr-text">EE</span> است، همانطور که در <span class="ltr-text">1. Introduction</span> (مقدمه) توضیح داده شده است. برای انانتیومرهای با برچسب <span class="ltr-text">R</span> و <span class="ltr-text">S</span>، <span class="ltr-text">EE</span> برای انانتیومر <span class="ltr-text">R</span> به صورت <span class="ltr-text">$EE = (N_R - N_S)/(N_R + N_S)$</span> و <span class="ltr-text">%EE = EE × 100%</span> تعریف می‌شود. در اینجا، <span class="ltr-text">$N_R$</span> نشان‌دهنده تعداد مول‌های انانتیومر <span class="ltr-text">R</span> موجود در نمونه است؛ برای یک محلول، <span class="ltr-text">$N_R$</span> می‌تواند نشان‌دهنده غلظت انانتیومر <span class="ltr-text">R</span> باشد. بنابراین، <span class="ltr-text">%EE</span> برای انانتیومر <span class="ltr-text">R</span> می‌تواند از <span class="ltr-text">+100%</span> تا <span class="ltr-text">-100%</span> متغیر باشد.
+            </p>
+            <div class="formula-display">
+                $$ EE = \frac{N_R - N_S}{N_R + N_S} $$
+            </div>
+            <div class="formula-display">
+                $$ \%EE = EE \times 100\% $$
+            </div>
+            <p class="mb-4">
+                طیف‌های <span class="ltr-text">VCD</span> همچنین می‌توانند برای تعیین <span class="ltr-text">EE</span> یک نمونه استفاده شوند، هنگامی که نمونه با یک اندازه‌گیری <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> از یک نمونه با <span class="ltr-text">EE</span> شناخته شده کالیبره شده باشد. <span class="ltr-text">VCD</span> به صورت خطی با <span class="ltr-text">EE</span> مقیاس‌پذیر است با حداکثر شدت <span class="ltr-text">VCD</span> برای یک شدت <span class="ltr-text">IR</span> معین در <span class="ltr-text">100% EE</span>، نیمی از شدت <span class="ltr-text">VCD</span> برای همان شدت <span class="ltr-text">IR</span> در <span class="ltr-text">50% EE</span>، و صفر <span class="ltr-text">VCD</span> برای مخلوط راسمیک <span class="ltr-text">0% EE</span>. این نقاط در شکل <span class="ltr-text">14</span> برای <span class="ltr-text">11</span> اندازه‌گیری <span class="ltr-text">R-(+)-α-pinene</span> نشان داده شده‌اند که در آن <span class="ltr-text">%EE</span> از <span class="ltr-text">100%</span> به <span class="ltr-text">6.7%</span> کاهش می‌یابد. طیف‌های <span class="ltr-text">IR</span> یکسان هستند، اما طیف‌های <span class="ltr-text">VCD</span> با کاهش <span class="ltr-text">EE</span> به صورت خطی کوچکتر می‌شوند، با افزودن مقادیر اندازه‌گیری شده از انانتیومر مخالف به سلول نمونه. درجه دقت این تعیین <span class="ltr-text">%EE</span> کمی بیشتر از <span class="ltr-text">1%</span> بود، همانطور که در نمودار <span class="ltr-text">EE</span> واقعی آماده شده در مقابل <span class="ltr-text">EE</span> پیش‌بینی شده <span class="ltr-text">VCD</span>، با استفاده از تحلیل شیمی‌سنجی حداقل مربعات جزئی، در شکل <span class="ltr-text">15</span> نشان داده شده است.
+            </p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">شکل 14.</h3>
+            <p class="mb-4">
+                هم‌پوشانی <span class="ltr-text">11</span> طیف <span class="ltr-text">VCD</span> (بالا) و <span class="ltr-text">IR</span> (پایین) از محلول <span class="ltr-text">3.1 M</span> از <span class="ltr-text">(+)-(R)-α-pinene</span> در تتراکلرید کربن برای نمونه‌هایی با مقادیر <span class="ltr-text">%EE</span> <span class="ltr-text">100.0%</span>، <span class="ltr-text">88.2%</span>، <span class="ltr-text">77.8%</span>، <span class="ltr-text">68.4%</span>، <span class="ltr-text">60.2%</span>، <span class="ltr-text">52.4%</span>، <span class="ltr-text">45.5%</span>، <span class="ltr-text">33.3%</span>، <span class="ltr-text">23.1%</span>، <span class="ltr-text">14.3%</span>، و <span class="ltr-text">6.7%</span>. با اجازه از <span class="ltr-text">John Wiley & Sons</span> بازتولید شده است.
+            </p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">شکل 15.</h3>
+            <p class="mb-4">
+                نمودار و جدول متناظر مقادیر <span class="ltr-text">%EE</span> واقعی در مقابل پیش‌بینی شده توسط <span class="ltr-text">VCD</span> با استفاده از تحلیل شیمی‌سنجی حداقل مربعات جزئی (<span class="ltr-text">PLS</span>) که یک انحراف مربع میانگین ریشه (<span class="ltr-text">RMSD</span>) <span class="ltr-text">1.15</span> و یک خطای انحراف معیار اعتبار سنجی متقابل (<span class="ltr-text">STDEV</span>) <span class="ltr-text">1.21</span> را به دست می‌آورد.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">10. استفاده همزمان از <span class="ltr-text">VCD</span> برای پیکربندی مطلق و <span class="ltr-text">EE</span></h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">10.1 شناسایی مواد اولیه کایرال</h3>
+            <p class="mb-4">
+                در حال حاضر، هیچ اندازه‌گیری روتین و لحظه‌ای کایرال برای شناسایی مواد (<span class="ltr-text">ID</span>) وجود ندارد. مواد دارویی کایرال باید با آزمون‌های مونگراف <span class="ltr-text">USP–NF</span> که معمولاً بر روش‌های آزمایشی غیرکایرال مانند طیف‌سنجی <span class="ltr-text">mid-IR</span> (طیف‌سنجی فروسرخ میانی <a href="854.html" class="text-blue-600 hover:underline" target="_blank">854</a> و طیف‌سنجی فروسرخ میانی—تئوری و عمل <a href="1854.html" class="text-blue-600 hover:underline" target="_blank">1854</a>) تکیه دارند، مطابقت داشته باشند. در عمل، <span class="ltr-text">near-IR</span> (برای اطلاعات بیشتر، به <span class="ltr-text">▲</span>طیف‌سنجی فروسرخ نزدیک—تئوری و عمل <a href="1856.html" class="text-blue-600 hover:underline" target="_blank">1856</a><span class="ltr-text">▲ (CN 1-May-2020)</span> مراجعه کنید) در بسیاری از تأسیسات تولیدی استفاده می‌شود. برای تحلیل <span class="ltr-text">near-IR</span> جامدات، تحلیلگران معمولاً از پروب‌های فیبر نوری استفاده می‌کنند و سپس ماده اولیه را با مقایسه طیف اندازه‌گیری شده با استاندارد مرجع <span class="ltr-text">USP</span> تأیید می‌کنند. برای تعیین <span class="ltr-text">AC</span> و <span class="ltr-text">EE</span> یک ماده کایرال، تحلیلگران باید یک اندازه‌گیری چرخش نوری جداگانه انجام دهند، که نیاز به مقادیر زیادی نمونه در یک سلول با طول مسیر <span class="ltr-text">10-cm</span> دارد، جایی که خطاهای عدم قطعیت برای موادی با مقادیر <span class="ltr-text">OR</span> کوچک ممکن است.
+            </p>
+            <p class="mb-4">
+                یک اندازه‌گیری منفرد از طیف <span class="ltr-text">VCD</span> و طیف <span class="ltr-text">IR</span> مرتبط با آن در ناحیه <span class="ltr-text">mid-IR</span> یا <span class="ltr-text">near-IR</span> یک ماده اولیه، چه به صورت جامد بلوری و چه در محلول، به طور همزمان اطلاعاتی برای سه معیار حیاتی: <span class="ltr-text">ID</span>، <span class="ltr-text">AC</span> و <span class="ltr-text">EE</span> را شامل می‌شود. با مقایسه با استاندارد مرجع <span class="ltr-text">USP</span>، اندازه‌گیری همزمان طیف‌های <span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span> یک ماده آزمایشی، نمونه و وجود ناخالصی‌ها را شناسایی کرده و ناخالصی‌ها را به آکایرال (فقط <span class="ltr-text">IR</span>) یا کایرال (<span class="ltr-text">IR</span> و <span class="ltr-text">VCD</span>) جدا می‌کند. علائم <span class="ltr-text">VCD</span>، <span class="ltr-text">AC</span> انانتیومر غالب را شناسایی می‌کنند، و نسبت <span class="ltr-text">VCD</span> به <span class="ltr-text">IR</span>، <span class="ltr-text">EE</span> را می‌دهد، همانطور که در بالا توضیح داده شد. دقت معمول <span class="ltr-text">VCD</span> برای تعیین <span class="ltr-text">EE</span> در محدوده <span class="ltr-text">0.1%–1%</span> است.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">10.2 کنترل کیفیت کایرال</h3>
+            <p class="mb-4">
+                <span class="ltr-text">VCD</span> می‌تواند به عنوان یک معیار کایرال برای مشخصه یابی مواد اولیه برای فناوری تحلیل فرآیند (<span class="ltr-text">PAT</span>) در طول توسعه، سنتز، فرمولاسیون و تولید نهایی مواد دارویی و محصولات دارویی استفاده شود. <span class="ltr-text">VCD</span> همچنین می‌تواند برای آزمایش برهم‌کنش بین مواد دارویی کایرال فرموله شده و excipients استفاده شود. در حال حاضر، هیچ پروتکلی برای نظارت بر <span class="ltr-text">EE</span> به عنوان یک معیار کنترل کیفیت در صنعت داروسازی وجود ندارد. به دلیل اهمیت کایرالیته به عنوان یک معیار حیاتی برای یکپارچگی نمونه، نیاز به ادغام یک فناوری جدید، مانند <span class="ltr-text">VCD</span>، برای اطمینان از سطح مطلوب کیفیت کایرال محصولات دارویی از کشف تا فرمولاسیون نهایی وجود دارد.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مراجع</h2>
+            <ol class="list-decimal pr-8">
+                <li class="mb-2"><span class="ltr-text">Barron LD. Molecular light scattering and optical activity, second edition, revised and enlarged. Cambridge: Cambridge University Press; 2009.</span></li>
+                <li class="mb-2"><span class="ltr-text">Nafie LA. Vibrational optical activity: principles and applications. Chichester, UK: John Wiley & Sons; 2011.</span></li>
+                <li class="mb-2"><span class="ltr-text">Stephens PJ, Devlin FJ, Cheeseman JR. VCD Spectroscopy for organic chemists. Boca Raton, FL: CRC Press; 2012.</span></li>
+                <li class="mb-2"><span class="ltr-text">Freedman TB, Cao X, Dukor RK, Nafie LA. Absolute configuration determination of chiral molecules in the solution state using vibrational circular dichroism. Chirality. 2003;15:743–758.</span></li>
+                <li class="mb-2"><span class="ltr-text">He Y, Wang B, Dukor RK, Nafie LA. Determination of absolute configuration of chiral molecules using vibrational optical activity: a review. Appl Spectrosc. 2011;65(7):699–723.</span></li>
+                <li class="mb-2"><span class="ltr-text">Pivonka DE, Wesolowski SS. Vibrational circular dichroism (VCD) chiral assignment of atropisomers: application to γ-amino butyric acid (GABA) modulators designed as potential anxyolytic drugs. Appl Spectrosc. 2013;67(4):365–371.</span></li>
+                <li class="mb-2"><span class="ltr-text">Freedman TB, Dukor RK, van Hoof PJCM, Kellenbach ER, Nafie LA. Determination of the absolute configuration of (−)-mirtazapine by vibrational circular dichroism. Helv Chim Acta. 2002;85:1160–1165.</span></li>
+                <li class="mb-2"><span class="ltr-text">Guo C, Shah RD, Dukor RK, Cao X, Freedman TB, Nafie LA. Determination of enantiomeric excess in samples of chiral molecules using Fourier transform vibrational circular dichroism spectroscopy: simulation of real-time reaction monitoring. Anal Chem. 2004;76(23):6956–6966.</span></li>
+                <li class="mb-2"><span class="ltr-text">Guo C, Shah RD, Dukor RK, Cao X, Freedman TB, Nafie LA. Enantiomeric excess determination by Fourier transform near-infrared vibrational circular dichroism spectroscopy: simulation of real-time process monitoring. Appl Spectrosc. 2005;59(9):1114–1124.</span></li>
+                <li class="mb-2"><span class="ltr-text">Guo C, Shah RD, Mills J, Dukor RD, Cao X, Freedman TB, Nafie LA. Fourier transform near-infrared vibrational circular dichroism used for on-line monitoring of the epimerization of 2,2-dimethyl-1,3-dioxolane-4-methanol: a pseudo racemization reaction. Chirality. 2006;18(10):775–782.</span></li>
+                <li class="mb-2"><span class="ltr-text">Kott L, Petrovic J, Phelps D, Roginiski R, Schubert J. Determination of a low-level percent enantiomer of a compound with no ultraviolet chromophore using vibrational circular dichroism (VCD): enantiomeric purity by VCD of a compound with three chiral centers. Appl Spectrosc. 2014;68(10):1108–1115.</span></li>
+                <li class="mb-2"><span class="ltr-text">Nafie LA. Dual polarization modulation: real-time, spectral-multiplex separation of circular dichroism from linear birefringence spectral intensities. Appl Spectrosc. 2000;54(11):1634–1645.</span></li>
+                <li class="mb-2"><span class="ltr-text">Nafie LA, Buijs H, Rilling A, Cao X, Dukor RK. Dual source Fourier transform polarization modulation spectroscopy: an improved method for the measurement of circular and linear dichroism. Appl Spectrosc. 2004;58(6):647–654.</span></li>
+                <li class="mb-2"><span class="ltr-text">Nafie LA. Vibrational circular dichroism: a new tool for the solution-state determination of the structure and absolute configuration of chiral natural product molecules. Nat Prod Commun. 2008;3(3):451–466.</span></li>
+                <li class="mb-2"><span class="ltr-text">Debie E, De Gussem E, Dukor RK, Herrebout W, Nafie LA, Bultinck P. A confidence level algorithm for the determination of absolute configuration using vibrational circular dichroism or Raman optical activity. ChemPhysChem. 2011;12(8):1542–1549.</span></li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

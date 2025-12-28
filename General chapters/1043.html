@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1043. مواد کمکی برای محصولات مهندسی سلول، ژن و بافت</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vazirmatn Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax CDN for LaTeX rendering -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6"><span class="ltr-text">1043</span>. مواد کمکی برای محصولات مهندسی سلول، ژن و بافت</h1>
+
+        <div class="card mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+            <p class="mb-4">طیف گسترده‌ای از معرف‌ها و مواد، که بسیاری از آنها منحصربه‌فرد یا پیچیده هستند، در ساخت محصولات مهندسی سلول، ژن و بافت (CGT) استفاده می‌شوند.</p>
+            <p class="mb-4">هدف این فصل ارائه راهنمایی در مورد توسعه برنامه‌های صلاحیت‌سنجی مواد مناسب برای محصولات <span class="ltr-text">CGT</span> است. از آنجایی که محصولات <span class="ltr-text">CGT</span> معمولاً مستعد مراحل گسترده تصفیه، فیلتراسیون و استریلیزاسیون نهایی نیستند، صلاحیت‌سنجی معرف‌ها و مواد برای اطمینان از کیفیت محصول <span class="ltr-text">CGT</span> بسیار حیاتی است.</p>
+            <p class="mb-4">اصطلاح "مواد کمکی" (<span class="ltr-text">AMs</span>) به موادی اشاره دارد که در طول فرآیند تولید با ماده اولیه سلولی، واسطه‌های محصول <span class="ltr-text">CGT</span>، یا محصول نهایی <span class="ltr-text">CGT</span> در تماس قرار می‌گیرند، اما قرار نیست در محصول نهایی <span class="ltr-text">CGT</span> وجود داشته باشند. بنابراین <span class="ltr-text">AMs</span> از ماده اولیه سلولی، واسطه‌ها و محصولات نهایی <span class="ltr-text">CGT</span> متمایز هستند. مواد افزودنی (Excipients) که قرار است در محصول نهایی حضور داشته باشند، بنابراین <span class="ltr-text">AMs</span> نیستند. دستگاه‌های فرآوری مانند ظروف و مجموعه‌های لوله‌کشی انتقال ممکن است <span class="ltr-text">AMs</span> در نظر گرفته شوند اگر دارای سطوح و موادی باشند که در طول تولید با سلول‌ها تماس پیدا می‌کنند. دستگاه‌ها و ظروف فرآوری که <span class="ltr-text">AMs</span> در نظر گرفته می‌شوند، معمولاً بیومواد طبیعی یا سنتزی را در خود جای می‌دهند. داربست‌ها یا دستگاه‌های تحویل که قرار است بخشی از محصول نهایی باشند، <span class="ltr-text">AMs</span> نیستند. بانک‌های سلولی و بانک‌های ویروسی عموماً <span class="ltr-text">AMs</span> در نظر گرفته نمی‌شوند؛ سلول‌های لایه تغذیه‌کننده (feeder layer cells) که قرار نیست در محصول نهایی گنجانده شوند، ممکن است یک <span class="ltr-text">AM</span> یا یک ناخالصی در نظر گرفته شوند. اسناد راهنما (یعنی <span class="ltr-text">ICH Q5D</span>) الزامات خاصی را برای گواهی بانک سلولی و ویروسی و تأییدیه نظارتی توصیف می‌کنند. با این حال، ویروس‌های "کمکی" (<span class="ltr-text">"helper" viruses</span>) و پلاسمیدهای "کمکی" (<span class="ltr-text">"helper" plasmids</span>) ممکن است <span class="ltr-text">AMs</span> در نظر گرفته شوند اگر قرار نباشد بخشی از محصول نهایی باشند.</p>
+            <p class="mb-4">معرف‌هایی که در طبقه‌بندی <span class="ltr-text">AM</span> قرار می‌گیرند شامل مواد شیمیایی با خصوصیات مشخص، ترکیبات پیچیده (آنتی‌بیوتیک‌ها، ضدانعقادها، گرادیان‌های چگالی، توکسین‌ها)، مخلوط‌های چند جزئی (بافرها، محیط‌های کشت)، و ترکیبات یا مخلوط‌های بیولوژیکی پیچیده (آنزیم‌ها؛ محصولات مشتق شده از خون، پلاسما یا سرم؛ عصاره‌های بیولوژیکی؛ سیتوکین‌ها؛ آنتی‌بادی‌ها؛ و محیط‌های تهیه‌شده از سلول‌های کشت شده) می‌شوند.</p>
+        </div>
+
+        <div class="card mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">ملاحظات نظارتی</h2>
+            <p class="mb-4">آژانس‌های نظارتی به <span class="ltr-text">AMs</span> (همانطور که در این فصل تعریف شده‌اند) به عنوان محصولات کمکی (<span class="ltr-text">ancillary products</span>)، معرف‌های کمکی (<span class="ltr-text">ancillary reagents</span>)، مواد فرآوری (<span class="ltr-text">processing materials</span>)، کمک‌کننده‌های فرآوری (<span class="ltr-text">processing aids</span>)، و معرف‌های فرآیند (<span class="ltr-text">process reagents</span>) اشاره کرده‌اند. <span class="ltr-text">US FDA</span> مفهوم <span class="ltr-text">AM</span> را ابتدا با اصطلاح "محصول کمکی" در اطلاعیه‌ای در <span class="ltr-text">Federal Register</span>، <span class="ltr-text">Application of Current Statutory Authorities to Human Somatic Cell Therapy Products and Gene Therapy Products [Federal Register 58(197), October 14, 1993, pp. 53248–53251]</span>، معرفی کرد که اختیارات <span class="ltr-text">FDA</span> را برای تنظیم محصولات سلول‌درمانی سوماتیک انسانی و محصولات ژن‌درمانی تثبیت نمود. در یک راهنمای بعدی، <span class="ltr-text">FDA</span> اصطلاح "معرف کمکی" را به عنوان ماده‌ای "که در ساخت یا تولید یک محصول بیولوژیکی استفاده می‌شود و ممکن است بخشی از محصول نهایی باشد یا نباشد" تعریف کرد، اما این تعریف رسمی نشده یا به طور مداوم در سایر راهنماهای <span class="ltr-text">FDA</span> استفاده نشد (به <span class="ltr-text">Guidance for Industry: Characterization and Qualification of Cell Substrates and Other Biological Materials Used in the Production of Viral Vaccines for Infectious Disease Indications, February 2010</span> مراجعه کنید). اصطلاح "<span class="ltr-text">AM</span>" همچنین مترادف با "ماده فرآوری" (<span class="ltr-text">processing material</span>) است، همانطور که در <span class="ltr-text">21 CFR 1271</span>، <span class="ltr-text">Current Good Tissue Practice for Manufacturers of Human Cellular and Tissue-Based Products; Inspection and Enforcement; Proposed Rule [Federal Register 66(5), January 8, 2001, pp. 1508–1559]</span> تعریف شده است. <span class="ltr-text">US FDA</span> همچنین اطلاعاتی را به تولیدکنندگان محصولات سلولی و بافتی در <span class="ltr-text">21 CFR 876.5885</span>، <span class="ltr-text">Tissue Culture Media for Human Ex Vivo Tissue and Cell Culture Processing Applications</span> ارائه می‌دهد.</p>
+            <p class="mb-4">اصطلاحات برچسب‌گذاری مختلفی توسط تولیدکنندگان <span class="ltr-text">AM</span> استفاده شده است. اصطلاحات برچسب‌گذاری "<span class="ltr-text">Research Use Only</span>" (<span class="ltr-text">RUO</span>) و "<span class="ltr-text">Investigational Use Only</span>" (<span class="ltr-text">IUO</span>) از مقررات برچسب‌گذاری تجهیزات پزشکی نشأت گرفته و برای موادی که برای استفاده تشخیصی <span class="ltr-text">in vitro</span> در نظر گرفته شده‌اند، اعمال می‌شوند (به <span class="ltr-text">Distribution of In Vitro Diagnostic Products Labeled for Research Use Only or Investigational Use Only: Guidance for Industry and FDA Staff, November 2013</span> مراجعه کنید). از آنجایی که برچسب یک <span class="ltr-text">AM</span> ممکن است به کاربرد مورد نظر آن در تولید محصول <span class="ltr-text">CGT</span> مربوط باشد یا نباشد، در نهایت مسئولیت تولیدکننده محصول <span class="ltr-text">CGT</span> است که مناسب بودن یک <span class="ltr-text">AM</span> خاص را در فرآیند تولید محصول <span class="ltr-text">CGT</span> تعریف و صلاحیت‌سنجی کند.</p>
+            <p class="mb-4">تفاوت‌های جهانی و منطقه‌ای در برچسب‌گذاری و مستندسازی <span class="ltr-text">AM</span> ممکن است الزامات ارائه نظارتی محصول <span class="ltr-text">CGT</span> را دیکته کند. در <span class="ltr-text">US</span>، حامی محصول <span class="ltr-text">CGT</span> گاهی اوقات می‌تواند به پرونده اصلی دارو (<span class="ltr-text">DMF</span>) یک تولیدکننده <span class="ltr-text">AM</span> ارجاع متقابل دهد، که اجازه می‌دهد اطلاعات اختصاصی <span class="ltr-text">AM</span> توسط ناظران بررسی شود، اما لزوماً توسط تولیدکننده محصول <span class="ltr-text">CGT</span> بررسی نمی‌شود. سایر کشورها و مقامات نظارتی، ارائه اطلاعات <span class="ltr-text">AM</span> را به شیوه‌های متفاوتی مدیریت می‌کنند و برای تولیدکننده محصول <span class="ltr-text">CGT</span> بسیار مهم است که از این تفاوت‌ها آگاه باشد اگر همان محصول <span class="ltr-text">CGT</span> در بیش از یک حوزه نظارتی مورد آزمایش بالینی یا بازاریابی قرار گیرد. در هر صورت، تولیدکننده محصول <span class="ltr-text">CGT</span> مسئول اطمینان از برچسب‌گذاری، ویژگی‌های اساسی، خصوصیات کیفی و مناسبت <span class="ltr-text">AM</span> برای استفاده است.</p>
+        </div>
+
+        <div class="card mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تأثیر کیفیت مواد کمکی بر کیفیت محصول</h2>
+            <p class="mb-4">کیفیت <span class="ltr-text">AM</span> می‌تواند خطراتی برای پایداری، ایمنی، قدرت و خلوص هر محصول ایجاد کند. این خطرات اغلب با محصولات <span class="ltr-text">CGT</span> افزایش می‌یابند، چه به دلیل عمر مفید کوتاه آنها، توانایی محدود برای انجام آزمایش‌های گسترده در فرآیند و رهاسازی، یا این واقعیت که بسیاری از محصولات <span class="ltr-text">CGT</span> پس از تجویز به بیمار <span class="ltr-text">in vivo</span> گسترش می‌یابند. برای به حداقل رساندن خطرات مرتبط با این سناریوهای رایج، صلاحیت‌سنجی دقیق <span class="ltr-text">AM</span> و اعمال محتاطانه کنترل‌های فرآیند تولید ضروری است.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">منبع‌یابی مواد کمکی</h3>
+            <p class="mb-4"><span class="ltr-text">AMs</span> مورد استفاده در تولید محصولات <span class="ltr-text">CGT</span> اغلب به دلیل اثرات عملکردی یا بیولوژیکی منحصربه‌فردشان انتخاب می‌شوند، و لزوماً بر اساس ویژگی‌های کیفی آنها نیستند. بسیاری از <span class="ltr-text">AMs</span> فقط برای استفاده تحقیقاتی در نظر گرفته شده‌اند، اما ممکن است به راحتی در درجه‌ای قابل مقایسه با محصولات درمانی دارای مجوز و با خصوصیات مشخص که با روش‌های کنترل شده و مستند تولید می‌شوند، در دسترس نباشند. به همین دلیل، بسیاری از تولیدکنندگان محصولات <span class="ltr-text">CGT</span> از <span class="ltr-text">AMs</span> که محصولات درمانی تأیید شده یا دارای مجوز هستند، استفاده می‌کنند. اخیراً، بسیاری از تأمین‌کنندگان <span class="ltr-text">AM</span> متعهد شده‌اند که <span class="ltr-text">AMs</span> با درجه بالاتر را با استفاده از رویکردهای تولید و آزمایش با کیفیت بالا و مستندات گسترده ارائه دهند. اگرچه اصطلاحات "درجه بالینی" (<span class="ltr-text">clinical grade</span>) و "رویه های تولید خوب" (<span class="ltr-text">GMP</span>) اغلب برای این <span class="ltr-text">AMs</span> با کیفیت بالاتر استفاده می‌شوند، اما مستندات آنها ممکن است به طور کامل با الزامات نظارتی برای محصولات دارویی نهایی و مواد افزودنی مطابقت نداشته باشد. صرف نظر از ادعاها یا توضیحات برچسب‌گذاری <span class="ltr-text">AM</span>، تولیدکنندگان محصولات <span class="ltr-text">CGT</span> در نهایت مسئول اطمینان از این هستند که <span class="ltr-text">AM</span> الزامات عملکردی، کیفی و مستندسازی لازم را که توسط مقامات نظارتی مربوطه درخواست می‌شود، برآورده می‌کند.</p>
+            <p class="mb-4">اقدامات حفاظتی خاصی برای به حداقل رساندن یا حذف خطر انتقال عوامل غیربومی (ویروس‌ها، باکتری‌ها، مایکوپلاسما، پروتوزوا، قارچ‌ها، پریون‌ها و غیره) هنگام منبع‌یابی <span class="ltr-text">AMs</span> با استفاده از اجزای مشتق شده از انسان یا حیوان مانند سرم‌ها، آنتی‌بادی‌ها یا فاکتورهای رشد ضروری است. به طور کلی، تولیدکنندگان اجزا و <span class="ltr-text">AMs</span> مشتق شده از انسان یا حیوان باید رویه‌های زیر را برای اطمینان از ایمنی محصول <span class="ltr-text">CGT</span> انجام دهند:</p>
+            <ol class="list-decimal list-inside pr-4 mb-4">
+                <li><span class="ltr-text">1.</span> غربالگری و صلاحیت‌سنجی (به عنوان مثال، از طریق آزمایش باکتریایی یا ویروسی) و مستندسازی (به عنوان مثال، از طریق گواهی گله و قابلیت ردیابی) منابع اجزای مشتق شده از انسان یا حیوان به عنوان عاری از عوامل غیربومی مشکوک.</li>
+                <li><span class="ltr-text">2.</span> اعتباربخشی غیرفعال‌سازی (به عنوان مثال، از طریق تیمارهای شیمیایی، حرارتی یا پرتودهی) و حذف (به عنوان مثال، از طریق روش‌های کروماتوگرافی یا فیلتراسیون) عوامل غیربومی مشکوک در طول فرآوری اجزای <span class="ltr-text">AM</span> مشتق شده از انسان یا حیوان.</li>
+                <li><span class="ltr-text">3.</span> آزمایش (به عنوان مثال، از طریق واکنش زنجیره‌ای پلیمراز یا خطوط سلولی پاسخ‌دهنده به ویروس) مواد اولیه و اجزای <span class="ltr-text">AM</span> تصفیه شده مشتق شده از انسان یا حیوان برای وجود عوامل غیربومی مشکوک.</li>
+            </ol>
+            <p class="mb-4">صنعت و ناظران هنوز اصطلاحات استانداردی را برای توصیف کامل حضور یا عدم حضور اجزای مشتق شده از انسان یا حیوان در <span class="ltr-text">AMs</span> تعیین نکرده‌اند. با این حال، تولیدکنندگان محصولات <span class="ltr-text">CGT</span> باید تلاش کنند تا تمام خطرات احتمالی عوامل غیربومی را در محصولات نهایی <span class="ltr-text">CGT</span> خود حذف کنند. مستقیم‌ترین راه برای دستیابی به این هدف، حذف <span class="ltr-text">AMs</span> حاوی مواد با منشأ انسانی یا حیوانی است. اگر <span class="ltr-text">AMs</span> حاوی اجزای مشتق شده از انسان یا حیوان استفاده می‌شوند، تولیدکنندگان محصولات <span class="ltr-text">CGT</span> باید از تأمین‌کنندگان <span class="ltr-text">AM</span> بخواهند که عدم وجود عوامل غیربومی را از طریق منبع‌یابی، فرآوری و آزمایش مناسب اجزای مشتق شده از انسان یا حیوان خود تأیید و مستند کنند.</p>
+            <p class="mb-4">صرف نظر از درجه اعلام شده <span class="ltr-text">AM</span>، تولیدکننده محصول <span class="ltr-text">CGT</span> مسئول توسعه برنامه‌های صلاحیت‌سنجی جامع و از نظر علمی معتبر برای اطمینان از قابلیت ردیابی، ثبات، مناسبت، خلوص و ایمنی <span class="ltr-text">AM</span> است. توسعه‌دهندگان بهتر است به راهنمای <span class="ltr-text">ICH Q8(R2)</span> شورای بین‌المللی هماهنگ‌سازی (<span class="ltr-text">ICH</span>) در مورد توسعه دارویی مراجعه کنند که متدولوژی هماهنگ بین‌المللی را برای گنجاندن رویکرد طراحی بر اساس کیفیت (<span class="ltr-text">QbD</span>) در فرآیندهای توسعه ارائه می‌دهد. این راهنما امکان بررسی سیستماتیک ویژگی‌های کیفی حیاتی یک فرآیند تولید، از جمله مواد، را فراهم می‌کند و منجر به طراحی یک محصول با کیفیت بالا می‌شود.</p>
+        </div>
+
+        <div class="card mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">صلاحیت‌سنجی مواد کمکی</h2>
+            <p class="mb-4">صلاحیت‌سنجی <span class="ltr-text">AM</span> فرآیند جمع‌آوری و ارزیابی داده‌ها برای تعیین منبع، هویت، خلوص، ایمنی و مناسبت کلی یک <span class="ltr-text">AM</span> خاص است که در فرآیند تولید استفاده می‌شود. توسعه‌دهندگان و تولیدکنندگان محصولات <span class="ltr-text">CGT</span> مسئول ایجاد و بازنگری دوره‌ای برنامه‌های صلاحیت‌سنجی <span class="ltr-text">AM</span> منطقی و از نظر علمی معتبر هستند. این برنامه‌ها باید شامل مشخصه‌یابی و کمی‌سازی هر <span class="ltr-text">AM</span> در طول فرآیند تولید باشد (یعنی اندازه‌گیری تمایل آن به حذف، تخریب یا جذب توسط سلول‌ها در طول تولید). اگرچه ناهمگنی بسیاری از محصولات <span class="ltr-text">CGT</span> و <span class="ltr-text">AMs</span> توصیه آزمایش‌ها یا پروتکل‌های خاصی را برای یک برنامه صلاحیت‌سنجی دشوار می‌کند، اما موارد زیر یک رویکرد عملی قابل اجرا برای اکثر <span class="ltr-text">AMs</span> را ارائه می‌دهد.</p>
+            <p class="mb-4">مستندسازی دقیق، سنگ بنای هر برنامه صلاحیت‌سنجی است. یک برنامه صلاحیت‌سنجی <span class="ltr-text">AM</span> که به خوبی طراحی و مستند شده باشد، با پیشرفت توسعه محصول جامع‌تر می‌شود. توسعه مشخصات تدریجی برای <span class="ltr-text">AMs</span> معمولاً موازی با توسعه مشخصات تدریجی برای محصول <span class="ltr-text">CGT</span>، از جمله آزمایش‌های تحلیلی، پیش می‌رود. در مراحل اولیه توسعه محصول <span class="ltr-text">CGT</span>، ایمنی تمرکز اصلی است؛ توصیف کامل ویژگی‌های <span class="ltr-text">AM</span>، و کمی‌سازی دقیق <span class="ltr-text">AM</span> باقیمانده در محصول <span class="ltr-text">CGT</span>، ممکن است به دلیل عدم وجود سنجش‌های معتبر محدود شود. در مراحل بعدی محصول <span class="ltr-text">CGT</span>، مشخصات کیفیت <span class="ltr-text">AM</span> و باقیمانده‌ها، همراه با روش‌های آزمایش تحلیلی، باید به طور جامع‌تری برای پشتیبانی از صدور مجوز نهایی محصول <span class="ltr-text">CGT</span> تشریح شوند.</p>
+            <p class="mb-4">در مواردی که <span class="ltr-text">AMs</span> محصولات دارای مجوز برای استفاده درمانی هستند و تحت رویه‌های تولید خوب جاری (<span class="ltr-text">cGMP</span>) تولید می‌شوند، میزان صلاحیت‌سنجی معمولاً کمتر از موادی است که برای اهداف تحقیقاتی در نظر گرفته شده‌اند. در حالی که استفاده از محصولات درمانی دارای مجوز به عنوان <span class="ltr-text">AMs</span> ممکن است سطح بالاتری از کیفیت و ایمنی را تضمین کند، اما خارج از دامنه استفاده مورد نظر و برچسب‌گذاری محصول دارای مجوز است؛ بنابراین، مناسبت <span class="ltr-text">AM</span> برای استفاده در فرآیند تولید محصول <span class="ltr-text">CGT</span> همچنان نیاز به صلاحیت‌سنجی دارد. اصلاح محصول دارای مجوز، مانند رقیق‌سازی، فرمولاسیون مجدد، مخلوط کردن با عامل دیگر، تقسیم به دوزهای کوچکتر، یا بسته‌بندی مجدد، می‌تواند صلاحیت‌سنجی اضافی را در پی داشته باشد. اصلاح سیستم کانتینر-بسته‌بندی محصول دارای مجوز نیز ممکن است در صورت استفاده به عنوان <span class="ltr-text">AM</span> ضروری باشد.</p>
+            <p class="mb-4">در بسیاری از موقعیت‌ها، مواد پیچیده یا منحصربه‌فرد که برای کنترل فرآیند یا تولید محصول <span class="ltr-text">CGT</span> ضروری هستند، در درجه دارویی در دسترس نخواهند بود. حتی اگر یک <span class="ltr-text">AM</span> که مطابق با <span class="ltr-text">cGMP</span> تولید شده است، استفاده شود، تولیدکننده محصول <span class="ltr-text">CGT</span> باید یک استراتژی از نظر علمی معتبر برای صلاحیت‌سنجی <span class="ltr-text">AM</span> بر اساس ارزیابی‌های حیاتی بودن و اصول مدیریت ریسک توسعه دهد. این ارزیابی خطرات عمده برای محصول <span class="ltr-text">CGT</span>، حالت‌های شکست <span class="ltr-text">AM</span> یا محصول <span class="ltr-text">CGT</span>، و تأثیرات بر محصول یا بیمار در صورت شکست <span class="ltr-text">AM</span> یا محصول <span class="ltr-text">CGT</span> را در نظر می‌گیرد. یک برنامه صلاحیت‌سنجی برای <span class="ltr-text">AMs</span> مورد استفاده در تولید محصول <span class="ltr-text">CGT</span> باید هر یک از زمینه‌های زیر را پوشش دهد: <span class="ltr-text">1)</span> شناسایی و منبع‌یابی، <span class="ltr-text">2)</span> انتخاب و مناسبت برای استفاده در تولید، <span class="ltr-text">3)</span> مشخصه‌یابی، <span class="ltr-text">4)</span> صلاحیت‌سنجی فروشنده، و <span class="ltr-text">5)</span> تضمین کیفیت و کنترل.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">شناسایی و منبع‌یابی</h3>
+            <p class="mb-4">اولین گام در هر برنامه صلاحیت‌سنجی، فهرست کردن تمام <span class="ltr-text">AMs</span> مورد استفاده در یک فرآیند تولید محصول <span class="ltr-text">CGT</span> خاص است، از جمله جزئیات در مورد اینکه در کجای فرآیند تولید به کار گرفته می‌شوند. منبع و کاربرد مورد نظر برای هر ماده باید مشخص شود و مقدار یا غلظت لازم هر ماده باید تعیین شود. منابع جایگزین برای هر ماده باید شناسایی و صلاحیت‌سنجی شوند.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">انتخاب و مناسبت برای استفاده</h3>
+            <p class="mb-4">توسعه‌دهندگان محصولات <span class="ltr-text">CGT</span> باید معیارهای انتخاب <span class="ltr-text">AMs</span> و معیارهای صلاحیت‌سنجی برای هر فروشنده را در اوایل فاز طراحی توسعه محصول <span class="ltr-text">CGT</span> ایجاد و مستند کنند. معیارهای انتخاب باید شامل ارزیابی‌های خلوص میکروبیولوژیکی و شیمیایی، هویت، و فعالیت بیولوژیکی مرتبط با فرآیند تولید محصول <span class="ltr-text">CGT</span> خاص باشد. پرداختن به این مسائل در اوایل توسعه محصول مهم است زیرا برخی از <span class="ltr-text">AMs</span> که در ابتدا ضروری تلقی می‌شوند، ممکن است صلاحیت‌سنجی آنها غیرممکن یا به طرز چشمگیری گران باشد، و بنابراین بررسی جایگزین‌ها را توجیه کند. مثال‌ها شامل برخی مواد مشتق شده از حیوانات یا انسان هستند که ممکن است منابع جایگزین (یعنی گیاهی یا سنتز شیمیایی) داشته باشند.</p>
+            <p class="mb-4"><span class="ltr-text">AMs</span> حاوی اجزای با منشأ حیوانی یا انسانی به دلیل خطر بالقوه بیماری‌های عفونی یا مشترک انسان و دام، و نظارت نظارتی مرتبط، نیاز به انتخاب دقیق دارند. فروشندگان باید مستنداتی در مورد کشور مبدأ برای <span class="ltr-text">AMs</span> مشتق شده از حیوانات ارائه دهند تا به نگرانی‌ها در مورد انسفالوپاتی‌های اسفنجی شکل قابل انتقال و سایر بیماری‌های مربوط به کشاورزی (مانند سل، بروسلوز و غیره) رسیدگی کنند. در بسیاری موارد، زنجیره نگهداری برای <span class="ltr-text">AMs</span> مشتق شده از حیوانات (یعنی کشتارگاه ← مرکز فرآوری میانی ← مرکز فرآوری نهایی) باید مستند شود. فروشندگان <span class="ltr-text">AMs</span> مشتق شده از انسان باید مستنداتی در مورد قابلیت ردیابی مواد ارائه دهند. به عنوان مثال، <span class="ltr-text">AMs</span> مشتق شده از پلاسمای انسانی باید از مراکز دارای مجوز تأمین شوند که مجموعه اهداکنندگان را کنترل می‌کنند و اهداکنندگان فردی را به طور مناسب برای بیماری‌های عفونی انسانی مربوطه غربالگری می‌کنند. فروشندگان <span class="ltr-text">AMs</span> مشتق شده از حیوان و انسان ممکن است درجات مختلفی از مواد را ارائه دهند، که برخی برای استفاده در تولید محصول <span class="ltr-text">CGT</span> مناسب‌تر از بقیه هستند. بسیاری از اجزای مشتق شده از حیوان و پلاسمای انسانی تحت تیمارهای شیمیایی معتبر (تیمار با دترجنت یا حلال) یا فیزیکی (حرارت، پرتودهی یا فیلتراسیون) قرار می‌گیرند که نشان داده شده‌اند خطر آلودگی توسط عوامل میکروبی یا ویروسی غیربومی را به طور قابل توجهی کاهش می‌دهند.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">مشخصه‌یابی</h3>
+            <p class="mb-4">آزمایش‌های کنترل کیفیت و مشخصه‌یابی برای هر <span class="ltr-text">AM</span> باید توسعه یابند (یا اتخاذ شوند) و پیاده‌سازی شوند. آزمایش <span class="ltr-text">AM</span> باید ویژگی‌های کیفی مختلفی را ارزیابی کند، از جمله هویت، خلوص، عملکرد و عاری بودن از آلودگی میکروبی یا ویروسی. سطح مناسب آزمایش برای هر <span class="ltr-text">AM</span> از مشخصات ارزیابی ریسک آن و دانش کسب شده در طول توسعه محصول <span class="ltr-text">CGT</span> به دست می‌آید. مشخصات آزمایش <span class="ltr-text">AM</span> باید برای اطمینان از ثبات و عملکرد در فرآیند تولید محصول <span class="ltr-text">CGT</span> تعیین و توجیه شوند. معیارهای پذیرش می‌توانند بر اساس داده‌های حاصل از سری‌های مورد استفاده در مطالعات پیش‌بالینی و بالینی اولیه، سری‌های مورد استفاده برای نمایش ثبات تولید، و داده‌های توسعه مربوطه، مانند آنهایی که از توسعه روش تحلیلی و مطالعات پایداری به دست می‌آیند، باشند. داده‌های آزمایش <span class="ltr-text">AM</span> باید به مرور زمان برای ثبات ردیابی شوند و نمونه‌های ذخیره شده باید برای تجزیه و تحلیل بعدی، در صورت لزوم، بایگانی شوند.</p>
+            <p class="mb-4">برخی <span class="ltr-text">AMs</span> که ماهیت بیولوژیکی دارند، ممکن است به طور کامل مشخصه‌یابی دشوار باشند. از آنجایی که این مواد اثرات خود را از طریق فعالیت‌های بیولوژیکی پیچیده اعمال می‌کنند و به دلیل اینکه آزمایش‌های فیزیکوشیمیایی ممکن است پیش‌بینی‌کننده عملکرد فرآیند <span class="ltr-text">AM</span> نباشند، اغلب لازم است که آزمایش‌های عملکردی یا کارایی شامل شوند. تغییرپذیری عملکرد <span class="ltr-text">AMs</span> ممکن است تأثیر مخربی بر قدرت و ثبات محصول <span class="ltr-text">CGT</span> داشته باشد. مثال‌هایی از آزمایش‌های عملکردی پیچیده برای <span class="ltr-text">AMs</span> شامل آزمایش ترویج رشد <span class="ltr-text">fetal bovine serum (FBS)</span> یا مکمل‌های پلاسمای/سرم انسانی، آزمایش عملکرد آماده‌سازی آنزیم‌های گوارشی، و سنجش‌های سمیت سلولی کشت بافت <span class="ltr-text">in vitro</span> (به <span class="ltr-text">Performance Testing</span> مراجعه کنید).</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">صلاحیت‌سنجی فروشنده</h3>
+            <p class="mb-4">فروشندگان <span class="ltr-text">AM</span> باید در اولین فرصت صلاحیت‌سنجی شوند. بازرسی از مرکز تولید فروشنده، شامل قابلیت‌های <span class="ltr-text">GMP</span> و برنامه آزمایش <span class="ltr-text">AM</span> آنها، عناصر اساسی یک برنامه صلاحیت‌سنجی فروشنده هستند. بررسی رویه‌های فرآوری و برنامه مستندسازی فروشنده برای ایجاد اعتماد به فروشنده به عنوان یک تأمین‌کننده قابل اعتماد ضروری است. فروشندگانی که از طریق برنامه بازرسی <span class="ltr-text">ISO</span> تأیید شده‌اند یا توسط آژانس‌های دولتی بازرسی شده‌اند، معمولاً سیستم‌های کیفی قوی دارند. گزارش‌های بازرسی‌های گذشته از تأمین‌کنندگان <span class="ltr-text">US</span> که از طریق قانون آزادی اطلاعات (<span class="ltr-text">FOI Act</span>) به دست آمده‌اند، ممکن است فرآیند صلاحیت‌سنجی را تقویت کنند.</p>
+            <p class="mb-4">توسعه‌دهنده محصول <span class="ltr-text">CGT</span> باید یک توافقنامه کیفیت کتبی با هر فروشنده <span class="ltr-text">AM</span> ایجاد کند تا نقش‌ها و مسئولیت‌ها، از جمله کانال‌های ارتباطی، کنترل تغییر، رویه بازرسی و حل اختلاف را به وضوح تعریف کند. توسعه یک رابطه کاری خوب با فروشندگان مهم است. در برخی موارد، فروشنده ممکن است استانداردهای تولید بالاتر، خدمات فرمولاسیون سفارشی، یا جایگزینی اجزای زیر استاندارد را بنا به درخواست، با یا بدون هزینه‌های اضافی، ارائه دهد. فروشندگان باید با اصول اعتباربخشی، به ویژه اعتباربخشی پاکسازی، غیرفعال‌سازی ویروسی و استریلیزاسیون آشنا باشند. همچنین اطمینان از اینکه فروشنده <span class="ltr-text">AM</span> گام‌های مناسب را برای جلوگیری از آلودگی متقابل بین <span class="ltr-text">AMs</span> مختلف در طول تولید برمی‌دارد، حیاتی است. در نهایت، فروشندگان <span class="ltr-text">AM</span> باید گواهینامه کتبی تغییرات فرآوری یا منبع‌یابی را به مشتریان ارائه دهند، به خوبی قبل از اجرای تغییرات تا مشتریان بتوانند تأثیرات بالقوه چنین تغییراتی را ارزیابی کنند.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">کنترل کیفیت و تضمین کیفیت</h3>
+            <p class="mb-4">از آنجایی که اجزای برنامه صلاحیت‌سنجی <span class="ltr-text">AM</span> چندوجهی هستند و باید با <span class="ltr-text">cGMP</span> مطابقت داشته باشند، باید توسط واحد تضمین کیفیت/کنترل کیفیت (<span class="ltr-text">QAU</span>) نظارت شوند. فعالیت‌های معمول <span class="ltr-text">QAU</span> شامل سیستم‌ها یا برنامه‌های زیر است: <span class="ltr-text">1)</span> دریافت ورودی، جداسازی، بازرسی و رهاسازی مواد قبل از استفاده در تولید، <span class="ltr-text">2)</span> بازرسی و گواهینامه فروشنده، <span class="ltr-text">3)</span> آزمایش تأیید گواهی تجزیه و تحلیل، <span class="ltr-text">4)</span> رویه‌ها و سیاست‌های رسمی برای مواد خارج از مشخصات، <span class="ltr-text">5)</span> آزمایش پایداری، و <span class="ltr-text">6)</span> ذخیره‌سازی نمونه آرشیوی.</p>
+        </div>
+
+        <div class="card mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مدیریت ریسک</h2>
+            <p class="mb-4">ارزیابی ریسک <span class="ltr-text">AM</span> برای کیفیت محصول <span class="ltr-text">CGT</span> باید بر اساس دانش علمی باشد، با هدف نهایی حفاظت از بیمار. <span class="ltr-text">ICH Q9 (step 4) "Quality Risk Management"</span> یک رویکرد مفید برای اصول، فرآیند، روش‌ها و تعاریف مدیریت ریسک ارائه می‌دهد. فرآیندهای مدیریت ریسک شامل شناسایی، تحلیل و ارزیابی ریسک‌ها و سپس کنترل ریسک‌های بالقوه است. ابزارها یا روش‌ها، مانند ماتریس ارزیابی ریسک (<span class="ltr-text">REM</span>)، می‌توانند ریسک را کمی‌سازی کرده و تصمیم‌گیری مناسب و پذیرش ریسک را تسهیل کنند.</p>
+            <p class="mb-4">هر <span class="ltr-text">AM</span> به طور بالقوه مشمول فرآیند مدیریت ریسک است، از انتخاب و صلاحیت‌سنجی تا ذخیره‌سازی و توزیع، و استفاده در تولید. به دلایلی که قبلاً در این فصل توضیح داده شد، و به ویژه به دلیل عدم توانایی در حذف کامل برخی از باقیمانده‌های <span class="ltr-text">AM</span> از محصول نهایی <span class="ltr-text">CGT</span>، انتخاب <span class="ltr-text">AM</span> باید شامل یک رویکرد مبتنی بر ریسک باشد. قبل از انجام ارزیابی ریسک <span class="ltr-text">AM</span>، فرآیند تولید محصول <span class="ltr-text">CGT</span> باید درک شود، از جمله شناسایی رابطه <span class="ltr-text">AM</span> با ویژگی‌های کیفی حیاتی (<span class="ltr-text">CQAs</span>) محصول <span class="ltr-text">CGT</span>؛ این ملاحظات در <span class="ltr-text">ICH Q11 (step 4) "Development and Manufacture of Drug Substances"</span> توضیح داده شده‌اند. سپس می‌توان از ابزارهای ارزیابی برای کمی‌سازی هر پارامتر حیاتی استفاده کرد که منجر به ارزیابی ریسک کلی می‌شود. به عنوان مثال، اگر یک <span class="ltr-text">AM</span> دارای مشخصات ایمنی مناسب باشد، در مقادیر حداقل در مراحل بالادستی فرآیند تولید محصول <span class="ltr-text">CGT</span> استفاده شود، و به طور کامل از محصول نهایی <span class="ltr-text">CGT</span> حذف شود، در دسته ریسک پایین قرار می‌گیرد زیرا هم احتمال شکست (سمیت) و هم شدت وقوع (عواقب برای بیمار) پایین است. برعکس، یک <span class="ltr-text">AM</span> با سمیت شناخته شده که در مراحل پایین‌دست معرفی می‌شود، پتانسیل بالاتری برای ظاهر شدن به عنوان باقیمانده سمی در محصول نهایی خواهد داشت و بنابراین در دسته ریسک متوسط یا بالا قرار می‌گیرد. صرف نظر از دسته ریسک، ارزیابی حذف <span class="ltr-text">AM</span> باید در طول مشخصه‌یابی و اعتباربخشی فرآیند تولید محصول <span class="ltr-text">CGT</span> تکمیل شود.</p>
+            <p class="mb-4">به عنوان بخشی از فرآیند ارزیابی ریسک، یک برنامه صلاحیت‌سنجی منطقی و علمی باید برای هر <span class="ltr-text">AM</span>، با در نظر گرفتن منابع و فرآیندهای تولید، طراحی شود. هرگاه در دسترس باشند، <span class="ltr-text">AMs</span> که محصولات درمانی تأیید شده یا دارای مجوز هستند، ترجیح داده می‌شوند زیرا دارای مشخصات خوب، مشخصات سم‌شناسی تثبیت شده، و با رویه‌های کنترل شده و مستند تولید می‌شوند. گنجاندن بیولوژیک‌ها، داروهای مولکول کوچک، و تجهیزات پزشکی یا مواد قابل کاشت دارای مجوز یا تأیید شده در فرآیندهای تولید محصول <span class="ltr-text">CGT</span>، مشخصات ایمنی بیمار مطلوب‌تری را در مقایسه با نسخه‌های تأیید نشده ارائه می‌دهد. برنامه‌های صلاحیت‌سنجی برای این <span class="ltr-text">AMs</span> باید منعکس کننده بررسی گسترده‌ای باشد که در طول توسعه و تولید بر آنها اعمال شده است. در نتیجه، ممکن است تأکید بیشتری بر تأثیر تغییرپذیری ذاتی <span class="ltr-text">AM</span> بر عملکرد نهایی محصول <span class="ltr-text">CGT</span> شود. به عنوان مثال، اگر یک تولیدکننده آلبومین سرم انسانی (<span class="ltr-text">HSA</span>) تأیید شده را به عنوان مکمل محیط کشت سلولی برای تولید محصول <span class="ltr-text">CGT</span> انتخاب کند، ممکن است منطقی باشد که تأثیر تغییرپذیری سری به سری <span class="ltr-text">HSA</span> بر نرخ رشد و تمایز سلولی، پایداری آن در طول تولید، یا تعامل آن با سایر اجزای فرآوری را ارزیابی کند. چنین رویکردهای صلاحیت‌سنجی بر تغییرپذیری <span class="ltr-text">AM</span> تمرکز دارند زیرا بر قدرت و ایمنی محصول نهایی تأثیر می‌گذارند. برنامه‌های صلاحیت‌سنجی <span class="ltr-text">AM</span> باید جامع باشند تا خطرات برای مصرف‌کننده و محصول <span class="ltr-text">CGT</span> را به حداقل برسانند.</p>
+            <p class="mb-4">برای کمک به تولیدکنندگان و توسعه‌دهندگان <span class="ltr-text">CGT</span> در طراحی برنامه‌های مدیریت ریسک و صلاحیت‌سنجی <span class="ltr-text">AM</span> خود، دسته‌های ریسک بالقوه به عنوان سطوح <span class="ltr-text">1-4</span> به ترتیب در جدول <span class="ltr-text">1</span>، جدول <span class="ltr-text">2</span>، جدول <span class="ltr-text">3</span> و جدول <span class="ltr-text">4</span> ارائه شده‌اند؛ اینها به عنوان راهنمایی برای ایجاد یک <span class="ltr-text">REM</span> فراهم شده‌اند. <span class="ltr-text">REM</span> همچنین باید مقدار <span class="ltr-text">AM</span> استفاده شده، مرحله‌ای که <span class="ltr-text">AM</span> در فرآیند تولید استفاده می‌شود، و <span class="ltr-text">AM</span> باقیمانده در محصول نهایی <span class="ltr-text">CGT</span> را در نظر بگیرد.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">سطح <span class="ltr-text">1</span></h3>
+            <p class="mb-4"> <span class="ltr-text">AM</span> یک ماده بسیار صلاحیت‌سنجی شده است که برای استفاده در تولید محصولات <span class="ltr-text">CGT</span> بسیار مناسب است، مانند یک بیولوژیک، دارو یا تجهیزات پزشکی دارای مجوز. <span class="ltr-text">AMs</span> سطح <span class="ltr-text">1</span> عموماً با سیستم‌های بسته‌بندی استریل یا اشکال دارویی برچسب‌گذاری شده با کاربرد مورد نظر خود عرضه می‌شوند و توسعه‌دهنده محصول <span class="ltr-text">CGT</span> استفاده از آنها را در فرآیند تولید به وضوح تعریف و مستند می‌کند. تغییرات در بسته‌بندی، شکل دارویی، فرمولاسیون یا شرایط نگهداری باید صلاحیت‌سنجی و مستند شوند؛ این تغییرات همچنین ممکن است باعث آزمایش رهاسازی <span class="ltr-text">AM</span> و مطالعات پایداری بیشتر شوند.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">سطح <span class="ltr-text">2</span></h3>
+            <p class="mb-4"><span class="ltr-text">AM</span> یک ماده با خصوصیات مشخص است که تحت یک سیستم کیفی تثبیت شده تولید می‌شود و برای تولید محصول <span class="ltr-text">CGT</span> بسیار مناسب است، اما <span class="ltr-text">AM</span> یک محصول پزشکی دارای مجوز یا تأیید شده نیست. بسیاری از <span class="ltr-text">AMs</span> سطح <span class="ltr-text">2</span> به طور خاص برای تولید محصولات <span class="ltr-text">CGT</span> تولید می‌شوند. اکثر مواد مشتق شده از حیوانات از این دسته مستثنی هستند.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">سطح <span class="ltr-text">3</span></h3>
+            <p class="mb-4"><span class="ltr-text">AM</span> یا برای استفاده تحقیقاتی در نظر گرفته شده است، یا تحت شرایط آزمایشگاهی محلی تولید شده است، یا برای استفاده در تولید محصول <span class="ltr-text">CGT</span> در نظر گرفته نشده است؛ ممکن است توسط آژانس‌های نظارتی به عنوان بخشی از یک دستگاه تشخیصی <span class="ltr-text">in vitro</span> تأیید شود. <span class="ltr-text">AMs</span> سطح <span class="ltr-text">3</span> نسبت به مواد سطح <span class="ltr-text">1</span> یا سطح <span class="ltr-text">2</span> نیاز به صلاحیت‌سنجی بیشتری دارند. با استفاده از یک رویکرد مبتنی بر ریسک، ارتقاء فرآیند تولید <span class="ltr-text">AM</span> ممکن است برای صلاحیت‌سنجی کامل <span class="ltr-text">AM</span> برای تولید محصول <span class="ltr-text">CGT</span> ضروری باشد. به عنوان مثال، ممکن است لازم باشد مراحل غیرفعال‌سازی و حذف ویروسی قوی به فرآیند تولید یک آنتی‌بادی مونوکلونال با درجه تشخیصی اضافه شود تا یک معرف مناسب برای تولید محصول <span class="ltr-text">CGT</span> تولید شود. فرآیند تولید برای یک <span class="ltr-text">AM</span> که در یک مرکز تولید دانشگاهی یا در مرحله آزمایشی تولید می‌شود، احتمالاً نیاز به ارتقاء برای آزمایش‌های بالینی مرحله پایانی و تجاری‌سازی نهایی محصول <span class="ltr-text">CGT</span> خواهد داشت.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">سطح <span class="ltr-text">4</span></h3>
+            <p class="mb-4"><span class="ltr-text">AM</span> برای استفاده صنعتی یا تحقیقاتی تولید می‌شود و ممکن است حاوی ناخالصی‌های مضر باشد، و/یا ممکن است حاوی اجزای مشتق شده از حیوان یا انسان باشد که عوامل غیربومی را در خود جای داده‌اند. <span class="ltr-text">AMs</span> سطح <span class="ltr-text">4</span> پرخطر نیاز به صلاحیت‌سنجی گسترده‌ای دارند قبل از اینکه بتوانند در تولید محصول <span class="ltr-text">CGT</span> استفاده شوند. این مواد ممکن است به یک یا چند مورد از اقدامات زیر نیاز داشته باشند:</p>
+            <ol class="list-decimal list-inside pr-4 mb-4">
+                <li><span class="ltr-text">1.</span> ارتقاء فرآیند تولید <span class="ltr-text">AM</span></li>
+                <li><span class="ltr-text">2.</span> انتخاب، غربالگری و آزمایش منابع حیوانی یا انسانی</li>
+                <li><span class="ltr-text">3.</span> آزمایش هر سری <span class="ltr-text">AM</span> برای اطمینان از عاری بودن آن از عوامل غیربومی یا آلاینده‌های خاص</li>
+                <li><span class="ltr-text">4.</span> تیمار <span class="ltr-text">AM</span> برای غیرفعال‌سازی یا حذف عوامل غیربومی یا آلاینده‌های خاص</li>
+                <li><span class="ltr-text">5.</span> اعتباربخشی فرآیند تولید محصول <span class="ltr-text">CGT</span> برای ارزیابی ثبات حذف یک ماده سمی شناخته شده، و/یا آزمایش رهاسازی سری برای نشان دادن سطوح باقیمانده ایمن</li>
+                <li><span class="ltr-text">6.</span> اعتباربخشی فرآیند تولید محصول <span class="ltr-text">CGT</span> برای نشان دادن حذف یا غیرفعال‌سازی عوامل غیربومی یا آلاینده‌های خاص</li>
+            </ol>
+            <p class="mb-4">برای <span class="ltr-text">AMs</span> سطح <span class="ltr-text">4</span> که برای فرآیند تولید محصول <span class="ltr-text">CGT</span> حیاتی تلقی می‌شوند، توسعه‌دهندگان محصول <span class="ltr-text">CGT</span> باید جایگزین‌ها یا منابع جایگزین <span class="ltr-text">AM</span> را در اولین فرصت در توسعه بررسی کنند.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">جدول <span class="ltr-text">1</span>. ریسک <span class="ltr-text">AM</span> سطح <span class="ltr-text">1</span>: مواد در نظر گرفته شده برای استفاده به عنوان بیولوژیک‌ها، داروها یا تجهیزات پزشکی تأیید شده</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>مثال</th>
+                        <th>کاربرد معمول در تولید محصول <span class="ltr-text">CGT</span></th>
+                        <th>صلاحیت‌سنجی یا کاهش ریسک</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>انسولین نوترکیب برای تزریق</td>
+                        <td>محیط کشت پایه سلولی با ترکیب شیمیایی مشخص</td>
+                        <td rowspan="11">
+                            <ul>
+                                <li>ارجاع متقابل <span class="ltr-text">DMF</span> (در صورت امکان یا عملی بودن)</li>
+                                <li>گواهی تجزیه و تحلیل</li>
+                                <li>ارزیابی تأثیر سری به سری بر عملکرد فرآیند <span class="ltr-text">b</span></li>
+                                <li>ارزیابی حذف از محصول نهایی</li>
+                                <li>ارزیابی پایداری <span class="ltr-text">AM</span> به صورت ذخیره شده و استفاده شده در تولید محصول <span class="ltr-text">CGT c</span></li>
+                                <li>بازرسی‌های بصری</li>
+                                <li>ارزیابی ذرات و مواد قابل استخراج</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>مایع حمل و نقل/حفاظت اندام</td>
+                        <td>مایع بیولوژیکی فرآیندی مورد استفاده در حمل و نقل یا فرآوری بافت</td>
+                    </tr>
+                    <tr>
+                        <td>آلبومین سرم انسانی برای تزریق</td>
+                        <td>افزودنی محیط کشت سلولی</td>
+                    </tr>
+                    <tr>
+                        <td>مایعات استریل برای تزریق</td>
+                        <td>مایع بیولوژیکی فرآیندی مورد استفاده در حمل و نقل بافت، فرآوری سلول، تصفیه</td>
+                    </tr>
+                    <tr>
+                        <td>مواد قابل کاشت (کلاژن، سیلیکون، سازه‌های پلی‌اورتان در نظر گرفته شده برای کاشت جراحی)</td>
+                        <td>داربست‌ها، ماتریس‌ها برای کشت سلولی تثبیت شده</td>
+                    </tr>
+                    <tr>
+                        <td>دئوکسی‌ریبونوکلئاز نوترکیب برای استنشاق یا تزریق</td>
+                        <td>آنزیم فرآیندی مورد استفاده در تولید وکتور ویروسی، فرآوری سلول‌های بنیادی</td>
+                    </tr>
+                    <tr>
+                        <td>آنتی‌بیوتیک‌های تزریقی <span class="ltr-text">a</span></td>
+                        <td>افزودنی مایع حمل بیوپسی برای کاهش خطر آلودگی باکتریایی</td>
+                    </tr>
+                    <tr>
+                        <td>آنتی‌بادی‌های مونوکلونال تزریقی</td>
+                        <td>هدف‌گیری ایمونولوژیکی جمعیت‌های سلولی خاص برای انتخاب یا حذف</td>
+                    </tr>
+                    <tr>
+                        <td>سیتوکین‌ها، ویتامین‌ها، مواد شیمیایی، مواد مغذی تزریقی</td>
+                        <td>افزودنی محیط کشت سلولی</td>
+                    </tr>
+                    <tr>
+                        <td>کیسه‌های <span class="ltr-text">IV</span>، ست‌های انتقال و لوله‌ها، کیسه‌های کریوپروسرویشن، سرنگ‌ها، سوزن‌ها</td>
+                        <td>ظروف ذخیره‌سازی یا سیستم‌های کانتینر-بسته‌بندی، سیستم‌های انتقال آسپتیک بسته</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="text-right text-sm">
+                            <span class="ltr-text">a</span> آنتی‌بیوتیک‌های بتا لاکتام نباید به عنوان <span class="ltr-text">AMs</span> به دلیل خطر حساسیت بیمار استفاده شوند.<br>
+                            <span class="ltr-text">b</span> آنتی‌بیوتیک‌های بتا لاکتام نباید به عنوان <span class="ltr-text">AMs</span> به دلیل خطر حساسیت بیمار استفاده شوند. به <span class="ltr-text">Performance Testing</span> مراجعه کنید.<br>
+                            <span class="ltr-text">c</span> اغلب <span class="ltr-text">AMs</span> به صورت تقسیم شده یا در غلظت‌های مختلف، در بافرهای مختلف، یا تحت شرایطی متفاوت از آنچه روی برچسب ذکر شده یا قبلاً تأیید شده است، ذخیره می‌شوند. داده‌ها باید تولید شوند که پایداری و حفظ فعالیت <span class="ltr-text">AM</span> را تحت شرایط خاص کاربرد تولید نشان دهند.
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">جدول <span class="ltr-text">2</span>. ریسک <span class="ltr-text">AM</span> سطح <span class="ltr-text">2</span>: مواد با خصوصیات مشخص با کاربرد مورد نظر به عنوان <span class="ltr-text">AMs</span></h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>مثال</th>
+                        <th>کاربرد معمول در تولید محصول <span class="ltr-text">CGT</span></th>
+                        <th>صلاحیت‌سنجی یا کاهش ریسک</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>فاکتورهای رشد نوترکیب، سیتوکین‌ها <span class="ltr-text">a</span></td>
+                        <td>افزودنی محیط کشت سلولی</td>
+                        <td rowspan="9">
+                            <ul>
+                                <li>تمام فعالیت‌های صلاحیت‌سنجی و کاهش ریسک در سطح <span class="ltr-text">1</span>، به علاوه موارد زیر:</li>
+                                <li>ارجاع متقابل <span class="ltr-text">DMF</span> (در صورت امکان یا عملی بودن)</li>
+                                <li>تأیید نتایج آزمایش گواهی تجزیه و تحلیل که برای هویت، خلوص یا قدرت محصول <span class="ltr-text">CGT</span> حیاتی هستند</li>
+                                <li>تأیید <span class="ltr-text">AMs</span> حاوی مواد مشتق شده از حیوان یا انسان که تصفیه، آزمایش و گواهی شده‌اند تا عاری از عوامل غیربومی باشند</li>
+                                <li>بازرسی فروشنده</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>دانه‌های ایمونومغناطیسی</td>
+                        <td>انتخاب سلول</td>
+                    </tr>
+                    <tr>
+                        <td>سرم <span class="ltr-text">AB</span> انسانی</td>
+                        <td>افزودنی محیط کشت سلولی</td>
+                    </tr>
+                    <tr>
+                        <td>پروژسترون، استروژن، ویتامین‌ها، مواد شیمیایی تصفیه شده (<span class="ltr-text">USP-grade</span>)</td>
+                        <td>افزودنی‌های محیط کشت سلولی، عوامل القا کننده، اجزای بافر</td>
+                    </tr>
+                    <tr>
+                        <td>بافرهای فرآیندی استریل</td>
+                        <td>مایع بیولوژیکی فرآیندی مورد استفاده در حمل و نقل بافت، فرآوری سلول، تصفیه</td>
+                    </tr>
+                    <tr>
+                        <td>پلیمرهای زیست‌سازگار، داربست‌ها، هیدروژل‌ها</td>
+                        <td>داربست‌ها، ماتریس‌ها برای کشت سلولی تثبیت شده</td>
+                    </tr>
+                    <tr>
+                        <td>آنزیم‌های پروتئولیتیک</td>
+                        <td>تجزیه بافت یا پروتئین</td>
+                    </tr>
+                    <tr>
+                        <td>محیط کشت بافت</td>
+                        <td>افزودنی محیط کشت سلولی</td>
+                    </tr>
+                    <tr>
+                        <td>محیط گرادیان چگالی</td>
+                        <td>جداسازی سلولی از طریق سانتریفیوژ</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="text-right text-sm">
+                            <span class="ltr-text">a</span> <span class="ltr-text">AMs</span> تولید شده از منابع نوترکیب غیر پستانداران (یعنی به صورت میکروبی در غیاب اجزای محیط کشت مشتق شده از حیوان رشد یافته).
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">جدول <span class="ltr-text">3</span>. ریسک <span class="ltr-text">AM</span> سطح <span class="ltr-text">3</span>: مواد با ریسک متوسط که برای استفاده به عنوان <span class="ltr-text">AMs</span> در نظر گرفته نشده‌اند</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>مثال</th>
+                        <th>کاربرد معمول در تولید محصول <span class="ltr-text">CGT</span></th>
+                        <th>صلاحیت‌سنجی یا کاهش ریسک</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>فاکتورهای رشد نوترکیب، سیتوکین‌ها</td>
+                        <td>افزودنی محیط کشت سلولی</td>
+                        <td rowspan="7">
+                            <ul>
+                                <li>تمام فعالیت‌های صلاحیت‌سنجی و کاهش ریسک در سطح <span class="ltr-text">2</span>، به علاوه موارد زیر:</li>
+                                <li>ارجاع متقابل <span class="ltr-text">DMF</span> (در صورت امکان یا عملی بودن)</li>
+                                <li>تأیید نتایج آزمایش گواهی تجزیه و تحلیل</li>
+                                <li>ارتقاء فرآیند تولید و/یا آزمایش برای مناسب بودن مواد برای استفاده درمانی</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>محیط کشت بافت</td>
+                        <td>افزودنی محیط کشت سلولی</td>
+                    </tr>
+                    <tr>
+                        <td>آنتی‌بادی‌های مونوکلونال (برای استفاده تشخیصی تولید شده در کشت سلولی)</td>
+                        <td>هدف‌گیری سلول‌ها برای انتخاب، فعال‌سازی یا حذف</td>
+                    </tr>
+                    <tr>
+                        <td>بافرهای فرآیندی</td>
+                        <td>مایع بیولوژیکی فرآیندی مورد استفاده در حمل و نقل بافت، فرآوری سلول، تصفیه</td>
+                    </tr>
+                    <tr>
+                        <td>پلیمرها، داربست‌ها، هیدروژل‌های جدید</td>
+                        <td>داربست‌ها، ماتریس‌ها برای کشت سلولی تثبیت شده</td>
+                    </tr>
+                    <tr>
+                        <td>آنزیم‌های پروتئولیتیک</td>
+                        <td>تجزیه بافت یا پروتئین</td>
+                    </tr>
+                    <tr>
+                        <td>مواد شیمیایی تصفیه شده (<span class="ltr-text">reagent-grade</span>)</td>
+                        <td>افزودنی‌های محیط کشت، عوامل القا کننده، اجزای بافر</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">جدول <span class="ltr-text">4</span>. ریسک <span class="ltr-text">AM</span> سطح <span class="ltr-text">4</span>: مواد با ریسک بالا</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>مثال</th>
+                        <th>کاربرد معمول در تولید محصول <span class="ltr-text">CGT</span></th>
+                        <th>صلاحیت‌سنجی یا کاهش ریسک</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>مواد مشتق شده از حیوانات و انسان</td>
+                        <td>افزودنی‌های محیط کشت سلولی؛ جزءهای هدف‌گیرنده برای انتخاب، فعال‌سازی یا حذف سلول</td>
+                        <td rowspan="6">
+                            <ul>
+                                <li>تمام فعالیت‌های صلاحیت‌سنجی و کاهش ریسک در سطح <span class="ltr-text">3</span>، به علاوه موارد زیر:</li>
+                                <li>آزمایش ایمنی برای باقیمانده‌ها در محصول <span class="ltr-text">CGT</span></li>
+                                <li>آزمایش رتروویروسی قادر به نوترکیبی برای <span class="ltr-text">AMs</span> مرتبط با ژن‌درمانی</li>
+                                <li>آزمایش عوامل غیربومی برای ویروس‌های مرتبط با منبع حیوانی</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>پلیمرها، داربست‌ها، هیدروژل‌های مشتق شده از حیوانات</td>
+                        <td>داربست‌ها، ماتریس‌ها برای کشت سلولی تثبیت شده</td>
+                    </tr>
+                    <tr>
+                        <td>آنزیم‌های تصفیه شده</td>
+                        <td>افزودنی‌های فرآیندی مانند تریپسین یا کلاژناز برای تجزیه پروتئین یا بافت</td>
+                    </tr>
+                    <tr>
+                        <td>سلول‌های حیوانی یا انسانی که به عنوان لایه تغذیه‌کننده استفاده می‌شوند</td>
+                        <td>زیرلایه کشت سلولی یا محیط تهیه‌شده</td>
+                    </tr>
+                    <tr>
+                        <td>نهادهای سمی (مانند متوترکسات، سموم باکتریایی، و غیره)</td>
+                        <td>افزودنی‌های محیط کشت سلولی برای حفظ بیان ترانس‌ژن، افزایش تکثیر یا بهبود بقای سلول پس از کریوپروسرویشن</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمون عملکرد</h2>
+            <p class="mb-4">در مواردی که یک <span class="ltr-text">AM</span> به دلیل تأثیر آن بر یک عملکرد بیولوژیکی خاص از یک محصول واسط یا نهایی <span class="ltr-text">CGT</span> انتخاب می‌شود، آزمایش عملکرد یک عنصر اساسی از صلاحیت‌سنجی کلی آن است. این امر به ویژه زمانی صادق است که <span class="ltr-text">AM</span> نقش حیاتی در تعدیل یک اثر بیوشیمیایی پیچیده ایفا کند یا تأثیر زیادی بر بازده، خلوص، و/یا قدرت محصول نهایی داشته باشد. آزمایش عملکرد به ویژه برای <span class="ltr-text">AMs</span> که مواد پیچیده، مخلوط‌ها یا با منشأ بیولوژیکی هستند، حیاتی است؛ این <span class="ltr-text">AMs</span> بیشتر احتمال دارد تغییرپذیری قابل توجهی از سری به سری نشان دهند، فاقد یک آزمایش هویت ساده باشند، و مشخصه‌یابی آنها دشوار باشد. توسعه سنجش‌های عملکردی به خوبی تعریف شده برای <span class="ltr-text">AMs</span> پیچیده نه تنها تکرارپذیری فرآیند و کیفیت محصول نهایی را تضمین می‌کند، بلکه در بسیاری از موارد الزامات نظارتی برای آزمایش هویت را برآورده خواهد کرد.</p>
+            <p class="mb-4">اغلب، صلاحیت‌سنجی اولیه یک <span class="ltr-text">AM</span> برای استفاده در تولید محصول <span class="ltr-text">CGT</span>، اثر دوز-پاسخ <span class="ltr-text">AM</span> بر بازده، خلوص یا قدرت محصول درمانی را بررسی می‌کند. مقدار بهینه <span class="ltr-text">AM</span> مورد استفاده در تولید محصول <span class="ltr-text">CGT</span> باید به طور مداوم اثر مورد نظر را ایجاد کند، در حالی که باقیمانده‌ها را به حداقل می‌رساند. آزمایش عملکرد اغلب از یک فرآیند تولید مقیاس کوچک شده یا شبیه‌سازی شده استفاده می‌کند.</p>
+            <p class="mb-4">برخی از مثال‌ها شامل موارد زیر است:</p>
+            <ul class="list-disc list-inside pr-4 mb-4">
+                <li>برای یک <span class="ltr-text">AM</span> تکثیر سلولی که به محیط کشت اضافه می‌شود، سنجش می‌تواند نشان دهد که هر سری <span class="ltr-text">AM</span> نرخ و درجه تکثیر سلولی مورد انتظار را تولید می‌کند.</li>
+                <li>برای یک آنتی‌بادی مونوکلونال که برای تصفیه یک نوع سلول خاص استفاده می‌شود، سنجش می‌تواند نشان دهد که هر سری جدید از آنتی‌بادی مونوکلونال یک جمعیت سلولی استاندارد را با بازیابی و خلوص مورد انتظار تصفیه می‌کند.</li>
+                <li>برای یک ماده گرادیان چگالی که برای تصفیه یک وکتور یا سلول استفاده می‌شود، سنجش می‌تواند نشان دهد که هر سری جدید از ماده، وکتور یا سلول را با بازیابی و خلوص مورد انتظار تصفیه می‌کند.</li>
+                <li>برای یک وکتور ویروسی کمکی که برای تولید یک وکتور ژن‌درمانی استفاده می‌شود، سنجش می‌تواند نشان دهد که سری‌های جدید وکتور کمکی مقادیر مورد انتظار از وکتور ژن‌درمانی فعال را تولید می‌کنند.</li>
+            </ul>
+            <p class="mb-4">سنجش‌های عملکردی ممکن است با توسعه فرآیندهای تولید محصول <span class="ltr-text">CGT</span> تکامل یابند و روابط حیاتی بین <span class="ltr-text">AM</span> و محصولات نهایی بهتر درک شوند.</p>
+            <p class="mb-4">هنگامی که آزمایش‌های عملکردی نتایج نسبی را به همراه دارند، مقایسه هر سری جدید <span class="ltr-text">AM</span> در کنار یک <span class="ltr-text">AM</span> استاندارد مرجع، در صورت موجود بودن، مفید است. این مقایسه همزمان تغییرپذیری ناشی از سری‌های مختلف سلول‌ها یا وکتورهای مورد استفاده در آزمایش را کاهش می‌دهد.</p>
+        </div>
+
+        <div class="card mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">ارزیابی و حذف باقیمانده</h2>
+            <p class="mb-4">اگرچه <span class="ltr-text">AMs</span> قرار نیست در محصول نهایی <span class="ltr-text">CGT</span> حضور داشته باشند، اما اغلب حذف کامل <span class="ltr-text">AMs</span> بدون آسیب رساندن به بازده یا کیفیت محصول <span class="ltr-text">CGT</span> چالش‌برانگیز است. برای تعیین مشخصات مناسب برای باقیمانده‌های <span class="ltr-text">AM</span>، توسعه‌دهندگان باید هم رویه‌های حذف <span class="ltr-text">AM</span> و هم روش‌های تحلیلی <span class="ltr-text">AM</span> را در اوایل توسعه مورد توجه قرار دهند. توسعه مشخصات و روش‌های تشخیص باقیمانده‌های مناسب، ثبات محصول و فرآیند <span class="ltr-text">CGT</span> را تضمین می‌کند، امکان مشخصه‌یابی محصول نهایی <span class="ltr-text">CGT</span> را فراهم می‌آورد و اثرات منفی بر کیفیت محصول، کارایی بالینی و ایمنی را کاهش می‌دهد.</p>
+            <p class="mb-4">آستانه‌ها برای باقیمانده‌های <span class="ltr-text">AM</span> در طول توسعه محصول تعیین می‌شوند و ممکن است تکامل یابند. در اوایل توسعه، کاهش چند برابری در غلظت <span class="ltr-text">AM</span> اغلب برای هر واحد عملیاتی تولید تخمین زده می‌شود و حذف <span class="ltr-text">AM</span> معمولاً به عنوان یک فاکتور رقیق‌سازی یا فاکتور کاهش لگاریتمی بیان می‌شود. در مراحل پایانی توسعه، اندازه‌گیری‌های مستقیم باقیمانده‌ها از سنجش‌های معتبر استفاده می‌کنند. با این حال، تمام اندازه‌گیری‌های باقیمانده <span class="ltr-text">AM</span> باید با احتیاط تفسیر شوند، زیرا غلظت‌های <span class="ltr-text">AM</span> درون سلولی و خارج سلولی ممکن است متفاوت باشد.</p>
+            <p class="mb-4">به عنوان بخشی از اعتباربخشی فرآیند تولید محصول <span class="ltr-text">CGT</span>، ممکن است آزمایش‌های <span class="ltr-text">spiking</span> با غلظت‌های بالای <span class="ltr-text">AM</span> برای شبیه‌سازی بدترین سناریو و نشان دادن استحکام فرآیند تولید مورد نیاز باشد. مطالعات اعتباربخشی باید شامل ملاحظات زیر باشد:</p>
+            <ol class="list-decimal list-inside pr-4 mb-4">
+                <li><span class="ltr-text">1.</span> سنجش باقیمانده باید <span class="ltr-text">AM</span> را در هر ماتریس نمونه به دقت کمی‌سازی کند.</li>
+                <li><span class="ltr-text">2.</span> اگر یک اعتباربخشی مقیاس کوچک شده انجام شود، قابلیت مقایسه فرآیندهای مقیاس کوچک و مقیاس کامل باید نشان داده شود.</li>
+                <li><span class="ltr-text">3.</span> در مطالعات <span class="ltr-text">spiking</span>، سطوح بالاتر <span class="ltr-text">AM</span> نباید با فرآیند تصفیه تداخل داشته باشد.</li>
+            </ol>
+            <p class="mb-4">مشخصات برای <span class="ltr-text">AM</span> باقیمانده در محصول نهایی <span class="ltr-text">CGT</span> معمولاً بر اساس <span class="ltr-text">AM</span> باقیمانده در سری‌های محصول <span class="ltr-text">CGT</span> مورد استفاده در مطالعات سم‌شناسی یا بالینی، یا بر اساس داده‌های سم‌شناسی شناخته شده است.</p>
+        </div>
+
+        <div class="card mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">نتیجه‌گیری</h2>
+            <p class="mb-4">کیفیت <span class="ltr-text">AM</span> برای کیفیت محصول <span class="ltr-text">CGT</span> حیاتی است. <span class="ltr-text">AMs</span> باید با دقت انتخاب، مشخصه‌یابی و صلاحیت‌سنجی شوند تا در فرآیند تولید محصول <span class="ltr-text">CGT</span> به طور مداوم و مطابق با هدف عمل کنند. برنامه‌های صلاحیت‌سنجی <span class="ltr-text">AM</span> باید بر توسعه مشخصات <span class="ltr-text">AM</span> مناسب، فرآیندهای تولید محصول <span class="ltr-text">CGT</span> قوی، و ارزیابی و کاهش ریسک <span class="ltr-text">AM</span> تمرکز کنند تا از تأثیرات منفی بر کیفیت محصول <span class="ltr-text">CGT</span>، کارایی بالینی و ایمنی بیمار جلوگیری شود.</p>
+        </div>
+
+        <div class="card mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">پیوست</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">فهرست فصول مربوطه <span class="ltr-text">USP</span> و مراجع نظارتی</h3>
+            <p class="mb-4"><span class="ltr-text">AMs</span> مورد استفاده در محصولات <span class="ltr-text">CGT</span> در چارچوب فرآیند تولید محصولات <span class="ltr-text">CGT</span> تنظیم خواهند شد. لیست‌های زیر از اسناد شامل راهنماهای نظارتی و فنی مربوطه در مورد توسعه محصول و فرآیند، تولید، کنترل کیفیت و تضمین کیفیت است.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فصول <span class="ltr-text">USP</span></h4>
+            <ul class="list-disc list-inside pr-4 mb-4">
+                <li><a href="87.html" class="text-blue-600 hover:underline" target="_blank">87</a> آزمایش‌های واکنش‌پذیری بیولوژیکی، در شرایط آزمایشگاهی</li>
+                <li><a href="88.html" class="text-blue-600 hover:underline" target="_blank">88</a> آزمایش‌های واکنش‌پذیری بیولوژیکی، در شرایط زنده</li>
+                <li><a href="1046.html" class="text-blue-600 hover:underline" target="_blank">1046</a> درمان‌های پیشرفته مبتنی بر سلول و محصولات مبتنی بر بافت</li>
+                <li><a href="1047.html" class="text-blue-600 hover:underline" target="_blank">1047</a> محصولات ژن‌درمانی</li>
+                <li><a href="1052.html" class="text-blue-600 hover:underline" target="_blank">1052</a> مقالات مشتق از بیوتکنولوژی – آنالیز آمینو اسید</li>
+                <li><a href="1053.html" class="text-blue-600 hover:underline" target="_blank">1053</a> الکتروفورز مویین</li>
+                <li><a href="1054.html" class="text-blue-600 hover:underline" target="_blank">1054</a> مقالات مشتق از بیوتکنولوژی – فوکوسینگ ایزوالکتریک</li>
+                <li><a href="1055.html" class="text-blue-600 hover:underline" target="_blank">1055</a> مقالات مشتق از بیوتکنولوژی – نقشه‌برداری پپتید</li>
+                <li><a href="1056.html" class="text-blue-600 hover:underline" target="_blank">1056</a> مقالات مشتق از بیوتکنولوژی – الکتروفورز ژل پلی‌اکریل‌آمید</li>
+                <li><a href="1057.html" class="text-blue-600 hover:underline" target="_blank">1057</a> مقالات مشتق از بیوتکنولوژی – سنجش پروتئین تام</li>
+            </ul>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کد مقررات فدرال (<span class="ltr-text">CFR</span>)</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>مقررات</th>
+                        <th>عنوان</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">21 CFR 211 Subpart E, 211.80 through 211.94 and 211.101</span></td>
+                        <td>کنترل اجزا و ظروف و درپوش‌های محصول دارویی</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">21 CFR 312</span></td>
+                        <td>درخواست داروی جدید تحقیقاتی</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">21 CFR 314</span></td>
+                        <td>درخواست‌ها برای تأیید <span class="ltr-text">FDA</span> جهت بازاریابی یک داروی جدید</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">21 CFR 801.109(b)(1)</span></td>
+                        <td>برچسب‌گذاری – دستگاه‌های تجویزی</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">21 CFR 807 Subpart E, 807.81 through 807.97</span></td>
+                        <td>رویه‌های اطلاع‌رسانی پیش از بازار</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">21 CFR 812</span></td>
+                        <td>معافیت‌های دستگاه تحقیقاتی</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">21 CFR 814</span></td>
+                        <td>تأیید پیش از بازار تجهیزات پزشکی</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">21 CFR 876.5885</span></td>
+                        <td>محیط کشت بافت برای کاربردهای فرآوری بافت و سلول انسانی <span class="ltr-text">Ex Vivo</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">اسناد راهنمای <span class="ltr-text">FDA</span></h4>
+            <ul class="list-disc list-inside pr-4 mb-4">
+                <li>راهنمای صنعت: آنتی‌بادی‌های مونوکلونال مورد استفاده به عنوان معرف در تولید دارو، <span class="ltr-text">March 2001. https://www.fda.gov/downloads/BiologicsBloodVaccines/GuidanceComplianceRegulatoryInformation/Guidances/Blood/ucm080417.pdf.</span></li>
+                <li>نکات قابل تأمل در مشخصه‌یابی خطوط سلولی مورد استفاده برای تولید بیولوژیک‌ها، <span class="ltr-text">May 1993. https://www.fda.gov/downloads/biologicsbloodvaccines/safetyavailability/ucm162863.pdf.</span></li>
+                <li>سند راهنمای کنترل‌های ویژه کلاس <span class="ltr-text">II</span>: محیط کشت بافت برای کاربردهای فرآوری بافت و سلول انسانی <span class="ltr-text">ex vivo</span> – راهنمای نهایی برای صنعت و بازرسان <span class="ltr-text">FDA</span>، <span class="ltr-text">May 16, 2001. https://www.fda.gov/RegulatoryInformation/Guidances/ucm073567.htm.</span></li>
+                <li>راهنمای صنعت: ترتیبات تولید قراردادی برای داروها: توافقنامه‌های کیفیت، <span class="ltr-text">November 2016. https://www.fda.gov/downloads/drugs/guidances/ucm353925.pdf.</span></li>
+                <li>راهنمای صنعت و کارکنان سازمان غذا و دارو: استفاده از استاندارد بین‌المللی <span class="ltr-text">ISO 10993-1</span>، "ارزیابی بیولوژیکی تجهیزات پزشکی – بخش <span class="ltr-text">1</span>: ارزیابی و آزمایش در یک فرآیند مدیریت ریسک"، <span class="ltr-text">June 16, 2016. https://www.fda.gov/downloads/medicaldevices/deviceregulationandguidance/guidancedocuments/ucm348890.pdf.</span></li>
+            </ul>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">اسناد نظارتی ملی و بین‌المللی</h4>
+            <ul class="list-disc list-inside pr-4 mb-4">
+                <li><span class="ltr-text">ICH Q5A</span>: ارزیابی ایمنی ویروسی محصولات بیوتکنولوژیک مشتق شده از خطوط سلولی با منشأ انسانی و حیوانی. قابل دسترس در: <span class="ltr-text">http://www.ich.org.</span></li>
+                <li><span class="ltr-text">ICH Q5D</span>: مشتق‌سازی و مشخصه‌یابی سوبستراهای سلولی مورد استفاده برای تولید محصولات بیوتکنولوژیک/بیولوژیک. قابل دسترس در: <span class="ltr-text">http://www.ich.org.</span></li>
+                <li><span class="ltr-text">ICH Q8(R2)</span>: توسعه دارویی. قابل دسترس در: <span class="ltr-text">http://www.ich.org.</span></li>
+                <li><span class="ltr-text">ICH Q9</span>: مدیریت ریسک کیفیت. قابل دسترس در: <span class="ltr-text">http://www.ich.org.</span></li>
+                <li>راهنمای خدمات بهداشت عمومی در مورد مسائل بیماری‌های عفونی در زنوترانسپلانتاسیون. قابل دسترس در: <span class="ltr-text">https://www.cdc.gov/.</span></li>
+                <li>هلث کانادا «سند راهنما: تهیه درخواست‌های کارآزمایی بالینی برای استفاده از محصولات سلول‌درمانی در انسان». قابل دسترس در: <span class="ltr-text">https://www.canada.ca/en/health-canada.html.</span></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

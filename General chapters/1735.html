@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1735 - طیف‌سنجی فلوئورسانس اشعه ایکس – تئوری و عمل</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vazirmatn Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax CDN -->
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">1735. طیف‌سنجی فلوئورسانس اشعه ایکس – تئوری و عمل</h1>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">فهرست مطالب</h2>
+            <ol class="list-decimal list-inside space-y-1 text-gray-700">
+                <li>مقدمه</li>
+                <li>اصول طیف‌سنجی فلوئورسانس اشعه ایکس</li>
+                <li>فیزیک تحریک و انتشار اشعه ایکس</li>
+                <ol class="list-[lower-alpha] list-inside space-y-1 pr-4">
+                    <li>یونیزاسیون و اثر فوتوالکتریک</li>
+                    <li>پراکندگی</li>
+                    <li>تبدیل بین انرژی و طول موج</li>
+                    <li>طیف الکترومغناطیسی</li>
+                    <li>قوانین انتخاب</li>
+                    <li>بازده فلوئورسانس</li>
+                    <li>خطای آماری شمارش</li>
+                    <li>حد تشخیص</li>
+                    <li>نامگذاری خطوط انتشار اشعه ایکس</li>
+                </ol>
+                <li>آماده‌سازی نمونه</li>
+                <ol class="list-[lower-alpha] list-inside space-y-1 pr-4">
+                    <li>نمونه‌های مایع</li>
+                    <li>نمونه‌های پودری</li>
+                </ol>
+                <li>ابزار دقیق</li>
+                <ol class="list-[lower-alpha] list-inside space-y-1 pr-4">
+                    <li>تیوب اشعه ایکس</li>
+                    <li>فیلتر پرتو اولیه</li>
+                    <li>طیف‌سنجی فلوئورسانس اشعه ایکس با پراکندگی طول موج</li>
+                    <li>طیف‌سنجی فلوئورسانس اشعه ایکس با پراکندگی انرژی</li>
+                    <li>طیف‌سنجی اشعه ایکس پلاریزه</li>
+                    <li>طیف‌سنجی فلوئورسانس اشعه ایکس با بازتاب کلی</li>
+                </ol>
+                <li>تجزیه و تحلیل کیفی <span class="ltr-text">XRF</span></li>
+                <ol class="list-[lower-alpha] list-inside space-y-1 pr-4">
+                    <li>طیف‌های اشعه ایکس</li>
+                    <li>تجزیه و تحلیل کیفی</li>
+                </ol>
+                <li>تجزیه و تحلیل کمی <span class="ltr-text">XRF</span></li>
+                <ol class="list-[lower-alpha] list-inside space-y-1 pr-4">
+                    <li>انتخاب خط تحلیلی</li>
+                    <li>تکنیک‌های اصلاح ماتریس</li>
+                    <li>توسعه روش اندازه‌گیری و کالیبراسیون</li>
+                    <li>معیارهای مناسبت سیستم</li>
+                </ol>
+                <li>منابع اطلاعاتی اضافی</li>
+                <li>منابع</li>
+            </ol>
+        </div>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">1. مقدمه</h2>
+        <p class="mb-4 text-gray-700 leading-relaxed">این فصل کلی اطلاعاتی را در مورد تئوری و روش‌های قابل قبول برای تجزیه و تحلیل و تفسیر سازگار داده‌های طیف‌سنجی فلوئورسانس اشعه ایکس ارائه می‌دهد. طیف‌سنجی فلوئورسانس اشعه ایکس (<span class="ltr-text">XRF</span>) یک تکنیک ابزاری است که بر اساس اندازه‌گیری فوتون‌های مشخصه اشعه ایکس ناشی از تحریک الکترون‌های پوسته داخلی اتمی توسط یک منبع اولیه اشعه ایکس است. تکنیک <span class="ltr-text">XRF</span> می‌تواند برای تجزیه و تحلیل کیفی و کمی مایعات، پودرها و مواد جامد استفاده شود. اگرچه برخی از فروشندگان ابزارهای منبع مبتنی بر ایزوتوپ رادیواکتیو را عرضه می‌کنند، تقریباً تمام ابزارهای مدرن از یک تیوب اشعه ایکس به عنوان منبع استفاده می‌کنند.</p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">2. اصول طیف‌سنجی فلوئورسانس اشعه ایکس</h2>
+        <p class="mb-4 text-gray-700 leading-relaxed">اشعه ایکس تولید شده توسط یک تیوب اشعه ایکس شامل خطوط مشخصه‌ای است که مربوط به ماده آند است و یک پیوستار که به عنوان تشعشع ترمزی (Bremsstrahlung) نیز شناخته می‌شود. هر دو نوع اشعه ایکس می‌توانند برای تحریک اتم‌ها در یک نمونه و در نتیجه القای اشعه ایکس استفاده شوند. شدت هر دو نوع از این‌ها می‌تواند با تنظیمات ولتاژ و جریان ژنراتور اشعه ایکس تنظیم شود. این پارامترها را می‌توان برای بهینه‌سازی شار فوتون‌های اشعه ایکس برای هر عنصر مورد نظر تنظیم کرد. تنظیمات بیشتر، مانند افزودن فیلترها در پرتو اولیه، می‌تواند برای حذف خطوط طیفی تیوب ناخواسته و بالقوه مزاحم استفاده شود. اهداف ثانویه ممکن است برای تولید یک پرتو اشعه ایکس تحریکی استفاده شوند که با طیف اولیه تیوب اشعه ایکس متفاوت است، با هدف دستیابی به شرایط تحریک بهینه. طرح‌های ابزاری متعدد با پیکربندی‌های هندسی مختلف، به عنوان مثال، فیلترهای ثانویه و پولاریزاسیون، برای بهینه‌سازی تشخیص اشعه ایکس و کاهش سهم پس‌زمینه استفاده می‌شوند.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">اگرچه تغییرات زیادی وجود دارد، ابزار دقیق <span class="ltr-text">XRF</span> را می‌توان به دو دسته تقسیم کرد: ابزارهای <span class="ltr-text">XRF</span> با پراکندگی طول موج (<span class="ltr-text">WDXRF</span>) و ابزارهای <span class="ltr-text">XRF</span> با پراکندگی انرژی (<span class="ltr-text">EDXRF</span>). عامل تمایز اصلی بین این دو فناوری، روشی است که برای جداسازی طیف منتشر شده توسط تمام اتم‌های نمونه بر اساس انرژی فوتون اشعه ایکس استفاده می‌شود.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">انرژی (یا طول موج) فوتون اشعه ایکس مشخصه یک انتقال الکترونی معین در یک اتم است و بنابراین از نظر کیفی است. شدت تشعشع منتشر شده نشان‌دهنده تعداد اتم‌ها در نمونه است و بنابراین ماهیت کمی این تکنیک را تشکیل می‌دهد.</p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">3. فیزیک تحریک و انتشار اشعه ایکس</h2>
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">3.1 یونیزاسیون و اثر فوتوالکتریک</h3>
+        <p class="mb-4 text-gray-700 leading-relaxed">انتشار تشعشع مشخصه اشعه ایکس ناشی از انتقال الکترون بین دو پوسته داخلی یک اتم، پس از یونیزاسیون است. به عنوان مثال، پس از خروج یک الکترون از پوسته <span class="ltr-text">K</span>، اتم یونیزه می‌شود و یون در یک حالت پرانرژی، <span class="ltr-text">E1</span>، باقی می‌ماند، به طوری که <span class="ltr-text">E1</span> برابر با انرژی مورد نیاز برای حذف الکترون <span class="ltr-text">K</span> از پوسته به حالتی است که در بی‌نهایت از هسته ساکن است (بدون انرژی جنبشی باقیمانده). این برهم‌کنش بین تشعشعات الکترومغناطیسی (یک فوتون) و یک اتم که منجر به تحریک یک الکترون می‌شود، اثر فوتوالکتریک نامیده می‌شود. این معمولاً بزرگترین سهم در جذب اشعه ایکس است. بنابراین <span class="ltr-text">E1</span> مربوط به انرژی پیوند الکترون است که با انرژی سطح اتمی یکسان است. حالت برانگیخته طول عمر بسیار محدودی دارد و به سرعت توسط انتقال یک الکترون از یک پوسته بیرونی به جای خالی در پوسته داخلی واپاشی می‌کند. اتم هنوز یونیزه است، با یک جای خالی الکترون در پوسته دیگر. اجازه دهید حالت انرژی پس از این انتقال با <span class="ltr-text">E2</span> نشان داده شود، که مربوط به انرژی پیوند الکترون قبل از انتقال است. اختلاف انرژی، <span class="ltr-text">ΔE</span>، به صورت زیر نشان داده می‌شود:</p>
+        <div class="formula-display">
+            \[\Delta E = E_1 - E_2 \quad [1]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">و می‌تواند در دو فرآیند رقابتی آزاد شود: اثر اوژه (Auger effect) یا انتشار یک فوتون. برای <span class="ltr-text">XRF</span>، بدیهی است که دومی مورد علاقه است. بنابراین انرژی فوتون منتشر شده برابر با <span class="ltr-text">ΔE</span> است. انرژی‌های پیوند الکترون‌های داخلی تحت تأثیر حالت شیمیایی اتم مربوطه قرار نمی‌گیرند. سطوح انرژی اتمی برای عنصر منحصر به فرد (مشخصه) هستند، بنابراین اختلاف انرژی بین دو سطح معین نیز یک مشخصه است. بنابراین، فوتون اشعه ایکس حاصل را یک فوتون مشخصه می‌نامند. انرژی فوتون‌های مشخصه به روشی سیستماتیک با عدد اتمی <span class="ltr-text">Z</span> عناصر تغییر می‌کند، واقعیتی که می‌توان با استفاده از قانون موزلی <span class="ltr-text">[1]</span> نشان داد:</p>
+        <div class="formula-display">
+            \[E_{photon} = k(Z - s)^2 \quad [2]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">که در آن <span class="ltr-text">k</span> یک ثابت برای یک سری معین (همانطور که توسط پوسته با جای خالی اولیه الکترون تعریف شده است) و <span class="ltr-text">s</span> ثابت غربالگری است. یک جدول‌بندی نسبتاً کامل از انرژی‌های تشعشعات مشخصه را می‌توان در کار بیردن <span class="ltr-text">[2]</span> یافت. فرض کنید جای خالی اولیه در پوسته <span class="ltr-text">K</span> ایجاد شده است. پس از یک انتقال الکترون از، به عنوان مثال، پوسته <span class="ltr-text">L3</span>، اتم هنوز یک جای خالی الکترون دارد، اما در پوسته <span class="ltr-text">L3</span>، در حالی که یک فوتون با انرژی <span class="ltr-text">E</span> مربوط به</p>
+        <div class="formula-display">
+            \[E_{photon} = E_K - E_{L3} \quad [3]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">از اتم خارج شده است. جای خالی در پوسته <span class="ltr-text">L3</span> می‌تواند متعاقباً توسط یک الکترون از پوسته <span class="ltr-text">M5</span> پر شود (با فرض اینکه این یک عنصر با عدد اتمی بالا است). این منجر به یک جای خالی در پوسته <span class="ltr-text">M5</span> می‌شود که می‌تواند سپس بیشتر واپاشی کند. در پایان این آبشار، یون به حالت خنثی باز می‌گردد.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">3.2 پراکندگی</h3>
+        <p class="mb-4 text-gray-700 leading-relaxed">مهمترین برهم‌کنش بین اشعه ایکس و ماده، اثر فوتوالکتریک است که در بالا توضیح داده شد. دو مکانیسم دیگر پراکندگی همدوس و ناهمدوس هستند.</p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">3.2.1 پراکندگی همدوس</h4>
+        <p class="mb-4 text-gray-700 leading-relaxed">پراکندگی همدوس، پراکندگی الاستیک تشعشعات الکترومغناطیسی توسط یک ذره آزاد و باردار است. این به عنوان پراکندگی تامسون نیز شناخته می‌شود. میدان الکتریکی فوتون فرودی ذره باردار را شتاب می‌دهد. این ذره سپس تشعشعی با همان انرژی فوتون فرودی، اما در جهتی متفاوت، منتشر خواهد کرد.</p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">3.2.2 پراکندگی ناهمدوس</h4>
+        <p class="mb-4 text-gray-700 leading-relaxed">پراکندگی ناهمدوس یک فوتون معمولاً پراکندگی کامپتون نامیده می‌شود. پراکندگی کامپتون ماهیتی غیرالاستیک دارد. هم تکانه و هم انرژی در این فرآیند حفظ می‌شوند. پس از پراکندگی کامپتون، الکترون تکانه قابل توجهی را به دست آورده است (و از اتم برانگیخته می‌شود) و یک فوتون با طول موج بلندتر از فوتون فرودی منتشر می‌شود (به شکل <span class="ltr-text">1</span> مراجعه کنید). حفظ انرژی و تکانه منجر به یک رابطه ساده بین زاویه پراکندگی <span class="ltr-text">Φ</span> و اختلاف طول موج <span class="ltr-text">Δλ</span> بین فوتون فرودی و فوتون پراکنده شده کامپتون می‌شود:</p>
+        <div class="formula-display">
+            \[\Delta\lambda = 0.00243 \cdot (1 - \cos\Phi) \quad [4]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">معادله <span class="ltr-text">[4]</span> تغییر طول موج را بر حسب <span class="ltr-text">nm</span> محاسبه می‌کند. قله‌های تشعشع پراکنده شده کامپتون معمولاً پهن‌تر از قله‌های مربوط به تشعشع مشخصه یا تشعشع پراکنده شده همدوس هستند. دلیل آن این است که اکثر طیف‌سنج‌های فلوئورسانس اشعه ایکس پرتو فرودی موازی ندارند. بنابراین زاویه فرود بر روی نمونه می‌تواند به طور قابل توجهی متفاوت باشد. این امر به تغییرات گسترده در کل زوایای پراکندگی <span class="ltr-text">Φ</span> کمک می‌کند که منجر به تغییرات در <span class="ltr-text">Δλ</span> می‌شود.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed text-center">شکل 1. پراکندگی کامپتون یک فوتون اشعه ایکس؛ <span class="ltr-text">Φ</span> زاویه پراکندگی است (از ویلیس و دانکن <span class="ltr-text">[3]</span> با اجازه).</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">3.3 تبدیل بین انرژی و طول موج</h3>
+        <p class="mb-4 text-gray-700 leading-relaxed">فوتون‌ها دوگانگی موج-ذره را نشان می‌دهند <span class="ltr-text">[4]</span>. انرژی <span class="ltr-text">E</span> "ذره" و طول موج <span class="ltr-text">λ</span> "موج" از طریق ثابت پلانک، <span class="ltr-text">h</span>، با یکدیگر مرتبط هستند:</p>
+        <div class="formula-display">
+            \[E = hc/\lambda \quad [5]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">که در آن <span class="ltr-text">E</span> انرژی فوتون است؛ <span class="ltr-text">h</span> ثابت پلانک است؛ و <span class="ltr-text">c</span> سرعت نور در خلاء است. با جایگزینی این مقادیر در معادله <span class="ltr-text">[5]</span>، و بیان انرژی فوتون <span class="ltr-text">E</span> بر حسب <span class="ltr-text">keV</span> و طول موج <span class="ltr-text">λ</span> بر حسب <span class="ltr-text">nm</span>، موارد زیر به دست می‌آید:</p>
+        <div class="formula-display">
+            \[E \text{ (keV)} = 1.2398 / \lambda \text{ (nm)} \quad [6]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">این امکان تبدیل سریع و آسان بین مقیاس‌های انرژی و طول موج را فراهم می‌کند. توجه داشته باشید که طول موج‌های کوتاه‌تر مربوط به انرژی‌های بالاتر هستند.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">به طور معمول، کتاب‌های درسی طراحی شده حول <span class="ltr-text">WDXRF</span> از واحدهای طول موج برای تشعشعات مشخصه استفاده می‌کنند. از سوی دیگر، هنگام کار با <span class="ltr-text">EDXRF</span>، مقیاس انتخابی یک مقیاس انرژی با <span class="ltr-text">keV</span> به عنوان واحد است. انرژی فوتون را می‌توان با استفاده از معادله <span class="ltr-text">[6]</span> به طول موج فوتون و بالعکس تبدیل کرد. فرکانس تشعشعات الکترومغناطیسی (که می‌توان با استفاده از <span class="ltr-text">c/λ</span> یا از <span class="ltr-text">E/h</span> محاسبه کرد) هنگام ارتباط با تجزیه و تحلیل <span class="ltr-text">XRF</span> استفاده نمی‌شود.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">3.4 طیف الکترومغناطیسی</h3>
+        <p class="mb-4 text-gray-700 leading-relaxed">محدوده اشعه ایکس معمولاً محدوده طیفی بین <span class="ltr-text">0.01</span> و <span class="ltr-text">10 nm</span> است و <span class="ltr-text">4</span> مرتبه بزرگی را در بر می‌گیرد. با این حال، در عمل، محدوده اشعه ایکس که معمولاً تجزیه و تحلیل می‌شود، از حدود <span class="ltr-text">0.04</span> تا <span class="ltr-text">1 nm</span> متغیر است.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">منطقه اشعه ایکس طیف الکترومغناطیسی را می‌توان بر حسب تشعشعات مشخصه عناصر نیز بیان کرد. اکثر طیف‌سنج‌های اشعه ایکس با پراکندگی طول موج را می‌توان برای تجزیه و تحلیل خطوط مشخصه بین حدود <span class="ltr-text">0.04</span> و <span class="ltr-text">4.4 nm</span> تجهیز کرد. این امکان تجزیه و تحلیل تمام عناصر در جدول تناوبی از کربن به بالا (<span class="ltr-text">Z = 6</span>) را فراهم می‌کند. با آنالیزورهای اختصاصی، محدوده عنصری را می‌توان گسترش داد تا بریلیم را نیز شامل شود، اگرچه مسائل مربوط به محدودیت ویژگی و حساسیت کاربردهای عملی برای تجزیه و تحلیل کمی بریلیم را به شدت محدود می‌کند.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">3.5 قوانین انتخاب</h3>
+        <p class="mb-4 text-gray-700 leading-relaxed">انتقالات در فرآیند توصیف شده در بالا توسط قوانین انتخاب مکانیک کوانتومی کنترل می‌شوند. تشعشعات <span class="ltr-text">XRF</span> با احتمال معقول فقط از آن دسته از انتقالاتی مشاهده می‌شود که در آن‌ها</p>
+        <p class="mb-2 text-gray-700 leading-relaxed ltr-text">Δj = –1, 0, +1</p>
+        <p class="mb-4 text-gray-700 leading-relaxed ltr-text">Δl = –1 or +1</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">که در آن <span class="ltr-text">j</span> و <span class="ltr-text">l</span> اعداد کوانتومی معمول هستند. تطابق بین نامگذاری‌های پوسته (<span class="ltr-text">K, L, M…</span>) و اعداد کوانتومی <span class="ltr-text">n, l, m</span> در جدول <span class="ltr-text">1</span> آورده شده است. این بدان معنی است که در انتقالاتی مانند <span class="ltr-text">K ← L1</span> و <span class="ltr-text">L1 ← M1</span>، هر دو پوسته با <span class="ltr-text">l = 0</span> برای حالت اولیه و نهایی، انتقال‌های تشعشعی ممنوع هستند. با این حال، این انتقالات می‌توانند با انتشار یک الکترون اوژه همراه باشند.</p>
+
+        <div class="card mb-6">
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2 text-center">جدول 1. تطابق بین نامگذاری‌های پوسته (<span class="ltr-text">K, L, M, N</span>) و اعداد کوانتومی (<span class="ltr-text">n, l, m</span>)</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>پوسته</th>
+                        <th colspan="3">اعداد کوانتومی</th>
+                        <th>تعداد اوربیتال‌ها</th>
+                        <th>نامگذاری زیرپوسته</th>
+                        <th>تعداد الکترون‌ها برای پر کردن زیرپوسته</th>
+                        <th>کل تعداد الکترون‌ها در پوسته</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th><span class="ltr-text">n</span></th>
+                        <th><span class="ltr-text">l</span></th>
+                        <th><span class="ltr-text">m</span></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">K</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                        <td><span class="ltr-text">0</span></td>
+                        <td><span class="ltr-text">0</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                        <td><span class="ltr-text">1s</span></td>
+                        <td><span class="ltr-text">2</span></td>
+                        <td><span class="ltr-text">2</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">L</span></td>
+                        <td><span class="ltr-text">2</span></td>
+                        <td><span class="ltr-text">0</span></td>
+                        <td><span class="ltr-text">0</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                        <td><span class="ltr-text">2s</span></td>
+                        <td><span class="ltr-text">2</span></td>
+                        <td><span class="ltr-text">8</span></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><span class="ltr-text">2</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                        <td><span class="ltr-text">−1,0,1</span></td>
+                        <td><span class="ltr-text">3</span></td>
+                        <td><span class="ltr-text">2p</span></td>
+                        <td><span class="ltr-text">6</span></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">M</span></td>
+                        <td><span class="ltr-text">3</span></td>
+                        <td><span class="ltr-text">0</span></td>
+                        <td><span class="ltr-text">0</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                        <td><span class="ltr-text">3s</span></td>
+                        <td><span class="ltr-text">2</span></td>
+                        <td><span class="ltr-text">18</span></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><span class="ltr-text">3</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                        <td><span class="ltr-text">1,0,−1</span></td>
+                        <td><span class="ltr-text">3</span></td>
+                        <td><span class="ltr-text">3p</span></td>
+                        <td><span class="ltr-text">6</span></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><span class="ltr-text">3</span></td>
+                        <td><span class="ltr-text">2</span></td>
+                        <td><span class="ltr-text">−2,−1,0,1,2</span></td>
+                        <td><span class="ltr-text">5</span></td>
+                        <td><span class="ltr-text">3d</span></td>
+                        <td><span class="ltr-text">10</span></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">N</span></td>
+                        <td><span class="ltr-text">4</span></td>
+                        <td><span class="ltr-text">0</span></td>
+                        <td><span class="ltr-text">0</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                        <td><span class="ltr-text">4s</span></td>
+                        <td><span class="ltr-text">2</span></td>
+                        <td><span class="ltr-text">32</span></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><span class="ltr-text">4</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                        <td><span class="ltr-text">1,0,−1</span></td>
+                        <td><span class="ltr-text">3</span></td>
+                        <td><span class="ltr-text">4p</span></td>
+                        <td><span class="ltr-text">6</span></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><span class="ltr-text">4</span></td>
+                        <td><span class="ltr-text">2</span></td>
+                        <td><span class="ltr-text">−2,−1,0,1,2</span></td>
+                        <td><span class="ltr-text">5</span></td>
+                        <td><span class="ltr-text">4d</span></td>
+                        <td><span class="ltr-text">10</span></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><span class="ltr-text">4</span></td>
+                        <td><span class="ltr-text">3</span></td>
+                        <td><span class="ltr-text">−3,−2,−1,0,1, 2,3</span></td>
+                        <td><span class="ltr-text">7</span></td>
+                        <td><span class="ltr-text">4f</span></td>
+                        <td><span class="ltr-text">14</span></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="mb-4 text-gray-700 leading-relaxed">پس از اینکه جای خالی اولیه ایجاد شد، یون در یک حالت بسیار برانگیخته قرار می‌گیرد. پس از انتقال الکترون، به عنوان مثال، <span class="ltr-text">K ← L3</span>، انرژی برابر با اختلاف انرژی‌های پیوند (به معادله <span class="ltr-text">[3]</span> مراجعه کنید) بین دو پوسته درگیر می‌تواند آزاد شود. در این مورد، این منجر به انتشار یک فوتون <span class="ltr-text">Kα</span> می‌شود. با این حال، انتشار فوتون تنها یکی از دو فرآیند رقابتی است. دیگری انتشار یک الکترون اوژه است. این فرآیندی است که در آن انرژی به یک الکترون دیگر منتقل می‌شود که با انرژی جنبشی <span class="ltr-text">EKin</span> از یون خارج می‌شود. انرژی جنبشی را می‌توان تقریباً به همان روش انرژی فوتون، با استفاده از سطوح انرژی از پوسته‌های درگیر، محاسبه کرد. اگر انرژی آزاد شده از انتقال <span class="ltr-text">K ← L3</span> به یک الکترون <span class="ltr-text">L1</span> منتقل شود، انرژی جنبشی را می‌توان از</p>
+        <div class="formula-display">
+            \[E_{Kin} = E_{Auger} = E_K - E_{L1} - E_{L3} \quad [7]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">محاسبه کرد. انرژی جنبشی الکترون اوژه مشخصه است زیرا از مقادیر مشخصه تشکیل شده است. جای خالی‌های ایجاد شده پس از انتشار یک الکترون اوژه می‌توانند متعاقباً، یا توسط الکترون‌های اوژه دیگر یا توسط فوتون‌ها، واپاشی کنند.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">3.6 بازده فلوئورسانس</h3>
+        <p class="mb-4 text-gray-700 leading-relaxed">بازده فلوئورسانس (نماد <span class="ltr-text">ω</span>) به عنوان احتمال پر شدن جای خالی از طریق یک انتقال تشعشعی تعریف می‌شود. برای پوسته <span class="ltr-text">K</span> این به سادگی</p>
+        <div class="formula-display">
+            \[\omega_K = I_K / n_K \quad [8]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">که در آن <span class="ltr-text">IK</span> کل تعداد فوتون‌های اشعه ایکس پوسته <span class="ltr-text">K</span> و <span class="ltr-text">nK</span> تعداد جای خالی‌های ایجاد شده در پوسته <span class="ltr-text">K</span> است. برای پوسته <span class="ltr-text">L</span> و پوسته <span class="ltr-text">M</span>، تعریف مشابهی برای هر یک از زیرپوسته‌ها اعمال می‌شود، اما تعداد جای خالی‌های اولیه باید برای اثرات آبشاری و وقوع انتقال‌های کاستر-کرونیگ <span class="ltr-text">[5]</span> اصلاح شود. این‌ها انتقال‌های غیر تشعشعی بین زیرپوسته‌های دارای عدد کوانتومی اصلی یکسان هستند. داده‌ها در مورد مقادیر بازده فلوئورسانس را می‌توان در کار بامبینک و همکاران <span class="ltr-text">[5]</span> و هابل و همکاران <span class="ltr-text">[6]</span> یافت.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">3.7 خطای آماری شمارش</h3>
+        <p class="mb-4 text-gray-700 leading-relaxed">خطای آماری شمارش (<span class="ltr-text">CSE</span>) عدم قطعیت در اندازه‌گیری تعداد فوتون‌ها است که تابع توزیع پواسون است. توزیع تعداد فوتون‌ها را می‌توان با یک توزیع نرمال تقریب زد، زیرا تعداد فوتون‌های شمارش شده معمولاً به اندازه کافی زیاد است. انحراف معیار <span class="ltr-text">σN</span> یک اندازه‌گیری شدت با <span class="ltr-text">N</span> شمارش به صورت ریشه دوم تعداد شمارش داده می‌شود:</p>
+        <div class="formula-display">
+            \[\sigma_N = \sqrt{N} \quad [9]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">اکثر اندازه‌گیری‌ها در <span class="ltr-text">XRF</span> اکنون به صورت شدت، <span class="ltr-text">I</span>، بیان می‌شوند که به سادگی نسبت تعداد فوتون‌های شمارش شده تقسیم بر زمان اندازه‌گیری، <span class="ltr-text">t</span>، است. خطای آماری شمارش در یک شدت اندازه‌گیری شده را می‌توان با استفاده از</p>
+        <div class="formula-display">
+            \[\sigma_I = \sqrt{I/t} \quad [10]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">محاسبه کرد. این نشان می‌دهد که خطای آماری شمارش در اندازه‌گیری شدت با زمان‌های اندازه‌گیری طولانی‌تر کمتر می‌شود. اندازه‌گیری طولانی‌تر با ابزار <span class="ltr-text">XRF</span> (در شرایط اندازه‌گیری ثابت دیگر) عدم قطعیت نسبی در اندازه‌گیری را کاهش می‌دهد. این به طور کلی قابل اجرا است تا زمانی که <span class="ltr-text">CSE</span> حاصل با خطای کلی ابزار قابل مقایسه شود. برای ابزارهای پیشرفته، مرتبه بزرگی این خطای کلی ابزار حدود <span class="ltr-text">0.1%</span> یا بهتر است. انجام اندازه‌گیری‌ها با <span class="ltr-text">CSE</span> به طور قابل توجهی کمتر از خطای ابزاری کلی منجر به نتایج دقیق‌تری نخواهد شد. بنابراین <span class="ltr-text">CSE</span> یک حد پایین نظری برای دقت اندازه‌گیری اشعه ایکس اعمال می‌کند. سهم خطاهای ابزاری به <span class="ltr-text">CSE</span> اضافه می‌شود تا خطای کلی در اندازه‌گیری به دست آید.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">شدت یک پرتو فوتون از تقسیم تعداد فوتون‌های جمع‌آوری شده بر زمان اندازه‌گیری، که بر حسب شمارش در ثانیه (<span class="ltr-text">cps</span>) یا کیلوسمارش در ثانیه (<span class="ltr-text">kcps</span>) بیان می‌شود، محاسبه می‌گردد.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">3.8 حد تشخیص</h3>
+        <p class="mb-4 text-gray-700 leading-relaxed">حد تشخیص پایین (<span class="ltr-text">LLD</span>) به عنوان غلظتی تعریف می‌شود که با سطح اطمینان معین، شدت مثبتی بالاتر از شدت پس‌زمینه ایجاد می‌کند. برای تجزیه و تحلیل نزدیک به حد تشخیص، شدت پیک با شدت پس‌زمینه قابل مقایسه خواهد بود. به عنوان مثال، یک سیگنال خالص که <span class="ltr-text">3</span> برابر بزرگتر از <span class="ltr-text">CSE</span> پس‌زمینه است، این معیار را با اطمینان <span class="ltr-text">99.7%</span> برآورده می‌کند. این شدت را می‌توان سپس با استفاده از حساسیت <span class="ltr-text">S</span> طیف‌سنج برای آنالیت مورد نظر، به غلظت تبدیل کرد:</p>
+        <div class="formula-display">
+            \[LLD = (k/S) \cdot \sigma_I \quad [11]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">که در آن <span class="ltr-text">k</span> یک عامل وابسته به سطح اطمینان انتخابی است، <span class="ltr-text">S</span> حساسیت (بر حسب شدت خالص در واحد غلظت بیان می‌شود) و <span class="ltr-text">CSE</span> خطای آماری شمارش در تعیین است. جایگزینی معادله <span class="ltr-text">[10]</span> که در آن <span class="ltr-text">σI</span> خطای آماری شمارش شدت پس‌زمینه است، به دست می‌آید:</p>
+        <div class="formula-display">
+            \[LLD = (k/S) \cdot \sqrt{I_B/t} \quad [12]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">که در آن <span class="ltr-text">IB</span> شدت تشعشعات پس‌زمینه در خط تحلیلی مورد نظر است. <span class="ltr-text">LLD</span> را می‌توان با موارد زیر بهبود بخشید:</p>
+        <ul class="list-disc list-inside space-y-1 pr-4 text-gray-700">
+            <li>افزایش حساسیت <span class="ltr-text">S</span> طیف‌سنج</li>
+            <li>کاهش شدت پس‌زمینه <span class="ltr-text">IB</span></li>
+            <li>افزایش زمان اندازه‌گیری <span class="ltr-text">t</span>.</li>
+        </ul>
+        <p class="mb-4 text-gray-700 leading-relaxed">روش سوم، افزایش زمان اندازه‌گیری، راهی به خصوص آسان برای بهبود حد تشخیص به نظر می‌رسد، اما محدود است زیرا زمان‌های شمارش طولانی می‌تواند روش را غیرعملی کند. از این رو، برای یک پیکربندی طیف‌سنج معین، هر افزایش در حساسیت منجر به افزایش مشابه در شدت پس‌زمینه و بهبود <span class="ltr-text">LLD</span> با ضریب <span class="ltr-text">2</span> می‌شود.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">3.9 نامگذاری خطوط انتشار اشعه ایکس</h3>
+        <p class="mb-4 text-gray-700 leading-relaxed">نامگذاری‌های مختلفی در مورد تعیین خطوط انتشار اشعه ایکس مورد استفاده قرار می‌گیرد. اتحادیه بین‌المللی شیمی محض و کاربردی (<span class="ltr-text">IUPAC</span>) یک نمادگذاری سیستماتیک برای خطوط انتشار اشعه ایکس و لبه‌های جذب، بر اساس نامگذاری سطح انرژی، منتشر کرد. در عمل و در بسیاری از انتشارات، نمادگذاری سیگبان (Siegbahn) هنوز غالب است. برای مهمترین خطوط مشخصه، تطابق بین نمادگذاری سیگبان و <span class="ltr-text">IUPAC</span> در جدول <span class="ltr-text">2</span> آورده شده است.</p>
+
+        <div class="card mb-6">
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2 text-center">جدول 2. تطابق بین نامگذاری سیگبان و <span class="ltr-text">IUPAC</span> برای مهمترین خطوط مشخصه</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">سری <span class="ltr-text">K</span></th>
+                        <th colspan="2">سری <span class="ltr-text">L</span></th>
+                        <th colspan="2">سری <span class="ltr-text">M</span></th>
+                    </tr>
+                    <tr>
+                        <th>سیگبان</th>
+                        <th><span class="ltr-text">IUPAC</span></th>
+                        <th>سیگبان</th>
+                        <th><span class="ltr-text">IUPAC</span></th>
+                        <th>سیگبان</th>
+                        <th><span class="ltr-text">IUPAC</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">Kα1,2 or Kα</span></td>
+                        <td><span class="ltr-text">K–L2,3</span></td>
+                        <td><span class="ltr-text">Lα1</span></td>
+                        <td><span class="ltr-text">L3–M5</span></td>
+                        <td><span class="ltr-text">Mα1,2</span></td>
+                        <td><span class="ltr-text">M5–N6,7</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Kα1</span></td>
+                        <td><span class="ltr-text">K–L3</span></td>
+                        <td><span class="ltr-text">Lα2</span></td>
+                        <td><span class="ltr-text">L3–M4</span></td>
+                        <td><span class="ltr-text">Mβ</span></td>
+                        <td><span class="ltr-text">M4–N6</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Kα2</span></td>
+                        <td><span class="ltr-text">K–L2</span></td>
+                        <td><span class="ltr-text">Lβ1</span></td>
+                        <td><span class="ltr-text">L2–M4</span></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Kβ1</span></td>
+                        <td><span class="ltr-text">K–M3</span></td>
+                        <td><span class="ltr-text">Lβ2</span></td>
+                        <td><span class="ltr-text">L3–N5</span></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Kβ1,3</span></td>
+                        <td><span class="ltr-text">K–M2,3</span></td>
+                        <td><span class="ltr-text">Lγ1</span></td>
+                        <td><span class="ltr-text">L2–N4</span></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Kβ2</span></td>
+                        <td><span class="ltr-text">K–N2,3</span></td>
+                        <td><span class="ltr-text">Lη</span></td>
+                        <td><span class="ltr-text">L2–M1</span></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><span class="ltr-text">Lι</span></td>
+                        <td><span class="ltr-text">L3–M1</span></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">4. آماده‌سازی نمونه</h2>
+        <p class="mb-4 text-gray-700 leading-relaxed">با <span class="ltr-text">XRF</span> می‌توان اکثر مواد را، صرف‌نظر از حالت فیزیکی آنها – چه مایع، پودر یا جامد – با آماده‌سازی نمونه اندک یا بدون نیاز به آماده‌سازی اضافی، تجزیه و تحلیل کرد. یک مزیت قابل توجه، ظرفیت اندازه نمونه است: تکنیک <span class="ltr-text">XRF</span> می‌تواند جرم‌های بزرگ نمونه (معمولاً در محدوده وزنی گرم) را جای دهد، که خطاهای نمونه‌برداری تحلیلی را به حداقل می‌رساند. این امر درجه نمایش نماینده بودن نمونه ارائه‌شده به طیف‌سنج را از ماده اصلی ارسالی برای تجزیه و تحلیل افزایش می‌دهد. یک نگرانی اصلی این است که سطح نهایی نمونه هنگام قرار گرفتن در موقعیت اندازه‌گیری، صاف باشد.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">اندازه‌گیری‌ها را می‌توان در شرایط محیطی مختلفی از جمله هوا، نیتروژن، هلیوم و خلاء انجام داد. اکثر طیف‌سنج‌های اشعه ایکس معمولاً از خلاء به عنوان محیط تحلیل استفاده می‌کنند، به استثنای برخی از ابزارهای رومیزی. نمونه‌های مایع با محیط‌های خلاء ناسازگار هستند، بنابراین هلیوم، هوا یا نیتروژن در فشار نزدیک به محیط استفاده می‌شود. هوا و نیتروژن به راحتی اشعه ایکس با انرژی کم را جذب می‌کنند؛ بنابراین، استفاده از آنها عموماً محدود به تجزیه و تحلیل اشعه ایکس با انرژی بالا است. نمونه‌های مایع و پودری معمولاً در هلیوم تجزیه و تحلیل می‌شوند، زیرا این کار جذب تشعشعات مشخصه از نمونه را به طور قابل توجهی کاهش می‌دهد، در مقایسه با اثرات هوا یا نیتروژن.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">4.1 نمونه‌های مایع</h3>
+        <p class="mb-4 text-gray-700 leading-relaxed">نمونه‌های مایع باید قبل از معرفی به طیف‌سنج در فنجان‌های نمونه یکبار مصرف قرار داده شوند. فنجان نمونه باید با یک فیلم پشتیبان مناسب ساخته شده باشد که عاری از عناصر آلاینده باشد. فیلم‌های مناسب، مانند پلی‌استر یا پلی‌پروپیلن، ممکن است ضخامتی به کمی <span class="ltr-text">1.5 µm</span> داشته باشند. همچنین مهم است که فنجان یکبار مصرف اندازه مناسبی داشته باشد تا توسط طیف‌سنج دیده نشود؛ این اطمینان می‌دهد که سیگنال‌های اندازه‌گیری شده فقط از نمونه می‌آیند و نه از فنجان نمونه.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">علاوه بر این، درک روابط بین ماتریس نمونه، عناصر مورد علاقه و مفهوم ضخامت بی‌نهایت مهم است. به طور کلی، هنگام تجزیه و تحلیل نمونه‌های متشکل از عناصر با عدد اتمی پایین (مثلاً ماتریس‌های آلی)، استفاده از یک نمونه ضخیم‌تر نسبت به زمانی که همان عناصر را در یک ماتریس سنگین‌تر (مثلاً فلزی) تجزیه و تحلیل می‌کنید، مهم است. این تضمین می‌کند که شدت اشعه ایکس تولید شده (و شناسایی شده) فقط به ترکیب نمونه بستگی دارد و نه به مقدار جرم تجزیه و تحلیل شده. ضخامتی که در آن شدت‌ها دیگر به ضخامت نمونه ارائه‌شده به طیف‌سنج وابسته نیستند، ضخامت بحرانی (که به عنوان ضخامت بی‌نهایت نیز شناخته می‌شود) نامیده می‌شود. ضخامت بحرانی به انرژی خطوط انتشار در نظر گرفته شده، ماتریس نمونه و – به میزان کمتری – به شرایط تحریک نیز بستگی دارد. در بسیاری از موارد، ممکن است به دلیل کمبود مواد کافی یا به دلیل اینکه ضخامت بحرانی ممکن است از عمق فنجان نمونه تجاوز کند، نتوان نمونه‌های با ضخامت بی‌نهایت به دست آورد؛ دومی ممکن است هنگام تجزیه و تحلیل مایعاتی که عمدتاً از آب یا ترکیبات آلی تشکیل شده‌اند، رخ دهد. در این موارد، روش‌های اصلاح قابل اجرا هستند. در بسیاری از موارد، یک تغییر ساده در روش تحلیلی – اطمینان از اینکه تمام نمونه‌های تجزیه و تحلیل شده دارای جرم ثابت هستند – برای جلوگیری از مشکلات مربوط به ضخامت غیر بی‌نهایت کافی است.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">یک ملاحظه اضافی، تغییر چگالی بین نمونه‌ها و استانداردها است. تجزیه و تحلیل نمونه‌هایی که الزامات ضخامت بحرانی را برآورده نمی‌کنند، با محدودیت‌های تحمیل شده توسط هندسه ابزار، پیچیده‌تر خواهد شد. اشعه ایکس فرودی بر روی نمونه و اشعه ایکس منتشر شده از نمونه، یک شکل پیچیده سه بعدی را تشکیل می‌دهند که اساساً یک مخروط است. این هندسه به عنوان گوه (wedge) شناخته می‌شود. این هندسه کاربرد اصلاح ماتریس سنتی را محدود می‌کند، زیرا این روش‌های مرسوم یک حجم نمونه‌برداری اشعه ایکس یکنواخت را فرض می‌کنند، برخلاف یک مخروط. در بیشتر موارد، تفاوت بین هندسه مخروطی و مدل هندسه ساده‌تر ناچیز است. این اثر هنگام اندازه‌گیری عناصر سنگین در نمونه‌های ماتریس سبک (مانند مواد آلی) بارزتر است. در این موارد، اگر در نظر گرفته نشود، می‌تواند اثرات شدیدی بر غلظت‌های محاسبه شده داشته باشد. با این حال، می‌توان یک مدل هندسی گوه را با یک تکنیک اصلاح ماتریس که به عنوان اصلاح اثر گوه <span class="ltr-text">[7]</span> شناخته می‌شود، گنجاند.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">یک راه حل جایگزین، داشتن یک لایه بسیار نازک از نمونه است، که در نتیجه هرگونه تداخل احتمالی نمونه (اثرات ماتریس) و همچنین اثر هندسی توصیف شده در بالا را حذف می‌کند. این همیشه عملی نیست، و در عمل آماده‌سازی نمونه‌ها و استانداردهای قابل تکرار دشوار است.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">4.2 نمونه‌های پودری</h3>
+        <p class="mb-4 text-gray-700 leading-relaxed">برای اطمینان از ضخامت نمونه بی‌نهایت، نمونه‌های پودر شل ممکن است به سادگی وزن شده و مستقیماً در یک فنجان نمونه یکبار مصرف که در بالا توضیح داده شد، قرار گیرند. به دلایلی که در ادامه توضیح داده می‌شود، اغلب مفید است که پودر را با استفاده از فشار ثابت و یک ابزار تمیز، به آرامی فشرده کنیم. تغییرات در فشردگی نمونه به دلیل پرس دستی را می‌توان با استفاده از اصلاحات کامپتون جبران کرد، که می‌تواند تغییرات کوچک در ضخامت و/یا چگالی نمونه را در نظر بگیرد. این پودرها را می‌توان به اندازه ذرات ریزتر (در صورت نیاز) آسیاب کرد و سپس برای تولید یک قرص جامد فشرده کرد.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">ترجیحاً، تمام نمونه‌های جامد ناهمگن، مانند قرص‌های روکش‌دار، باید با استفاده از یک دستگاه آسیاب آسیاب شوند. به همین ترتیب، هر نمونه همگن و صافی که مساحت آن برای پوشش دیافراگم نوری ابزار خیلی کوچک است، نیز باید آسیاب شود. برای مواد نرم‌تر، هاون و دسته هاون ممکن است کافی باشد، و برای مواد دیگر ممکن است آسیاب‌های چرخشی، آسیاب‌های گلوله‌ای و/یا آسیاب‌های کرایوژنیک مورد نیاز باشند. تحلیلگر باید اطمینان حاصل کند که وسایل آسیاب ردی از عناصر آنالیت را اضافه نمی‌کنند؛ این را می‌توان به راحتی با آسیاب کردن ترکیبات خالص و مقایسه طیف‌ها مشخص کرد. بر اساس قرارداد، حداکثر اندازه پودر (ذره) باید <span class="ltr-text">50 µm</span> یا کمتر باشد. با این حال، داشتن اندازه ذرات ثابت برای استانداردها و نمونه‌ها هر دو مهم‌تر است. این امر همگنی نمونه را تضمین می‌کند و نمایشی دقیق از کل نمونه، نه فقط لایه نزدیک به سطح، ارائه می‌دهد. سپس می‌توان یک نمونه را در یک فنجان نمونه یکبار مصرف بارگذاری کرد، یا نمونه را به صورت یک قرص فشرده کرد. نقطه ضعف فشرده‌سازی نمونه به صورت یک قرص این است که ممکن است لازم باشد یک چسب (مثلاً موم یا سلولز) را به نمونه اضافه کرد. استفاده از چنین ماده‌ای باید به عنوان یک منبع احتمالی آلودگی در نظر گرفته شود. تعدادی چسب مختلف برای بهبود خواص مکانیکی قرص در دسترس هستند. یک مزیت فشرده‌سازی نمونه این است که حفره‌های هوا را که می‌توانند اشعه ایکس را جذب کنند، حذف می‌کند، و بنابراین پس از فشرده‌سازی، اندازه‌گیری‌ها معمولاً بهبود قابلیت تکرارپذیری عناصر سبک را نشان می‌دهند.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">علاوه بر این، می‌توان یک قرص فشرده را بدون فیلم پشتیبان مستقیماً اندازه‌گیری کرد. توجه به این نکته مهم است که فیلم‌های پشتیبان می‌توانند منجر به تضعیف سیگنال شوند، که بستگی به عنصر مورد نظر دارد. این اثر معمولاً در عناصر سبک‌تر مانند سدیم (<span class="ltr-text">Na</span>)، منیزیم (<span class="ltr-text">Mg</span>) و آلومینیوم (<span class="ltr-text">Al</span>) دیده می‌شود. مزیت کلیدی دیگر این است که قرص یک سطح صاف را تضمین می‌کند که برای تحریک قابل تکرار از همه زوایا در دسترس است. علاوه بر این، نمونه‌های پلت شده را می‌توان در شرایط خلاء اندازه‌گیری کرد، و این امر جذب فوتون توسط هوا یا هر گاز دیگری مانند هلیوم (<span class="ltr-text">He</span>) را کاهش می‌دهد. برخی مواد مانند لاکتوز و سلولز خودچسبنده هستند، بنابراین هیچ ملاحظه مضری هنگام آماده‌سازی یک قرص به جز زمان اضافی صرف شده برای آماده‌سازی نمونه وجود ندارد. توجه به این نکته مهم است که استانداردها و نمونه‌ها باید از آماده‌سازی نمونه تا تجزیه و تحلیل به یک روش یکسان رفتار شوند.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">از آنجا که اکثر مواد دارویی دارای ماتریس آلی هستند، توصیه می‌شود از مقداری ماده استفاده شود که تقریباً معادل ضخامت <span class="ltr-text">1.5 cm</span> باشد. این را می‌توان برای هر دو نمونه مایع و پودر شل (به شرطی که تمام نمونه‌ها و استانداردها دارای ترکیب ماتریس مشابهی باشند) استفاده کرد. علاوه بر این، هرگونه تغییرات جزئی در ضخامت نمونه را می‌توان با اصلاحات نسبت کامپتون جبران کرد.</p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">5. ابزار دقیق</h2>
+        <p class="mb-4 text-gray-700 leading-relaxed">همه طیف‌سنج‌ها شامل یک منبع (مثلاً تیوب اشعه ایکس)، نوعی مکانیزم فیلتراسیون منبع، یک محفظه نمونه و یک آشکارساز هستند. علاوه بر این، سیستم‌های پراکندگی طول موج دارای مجموعه‌ای از کلیماتورها و یک بلور تحلیلی هستند. این اجزا و چند مورد اختیاری در ادامه و بیشتر بر اساس نوع ابزار مورد بحث قرار می‌گیرند. نمودار یک طیف‌سنج پراکندگی طول موج در شکل <span class="ltr-text">2</span> نشان داده شده است. یک طیف‌سنج پراکندگی انرژی در این مورد ساده‌تر است که کلیماتورها و بلور نشان داده شده در شکل <span class="ltr-text">2</span> وجود ندارند، و آشکارساز مستقیماً به سمت نمونه نشانه رفته است.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed text-center">شکل 2. نمودار شماتیک یک طیف‌سنج <span class="ltr-text">XRF</span> با پراکندگی طول موج، که اجزای اصلی را نشان می‌دهد.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">5.1 تیوب اشعه ایکس</h3>
+        <p class="mb-4 text-gray-700 leading-relaxed">دو مؤلفه مهم تیوب اشعه ایکس رشته (استفاده شده به عنوان کاتد) و آند هستند. رشته منبع الکترون‌ها است، که توسط یک میدان الکتریکی قوی بین رشته و آند به سمت ماده آند شتاب داده می‌شوند. پس از برخورد با آند، الکترون‌ها می‌توانند به تدریج انرژی جنبشی خود را از دست دهند، و در این فرآیند گرما و یک طیف پیوسته از تشعشعات اشعه ایکس تولید کنند. همچنین، هنگامی که الکترون‌ها اتم‌های آند را یونیزه می‌کنند، جای خالی حاصل می‌تواند با انتشار تشعشعات اشعه ایکس مشخصه واپاشی کند. بنابراین طیف کلی یک تیوب اشعه ایکس شامل خطوط مشخصه عنصر آند (که ماهیتی گسسته دارد) روی یک پیوستار است. توجه داشته باشید که تشعشعات پیوستار، که توسط نمونه پراکنده می‌شوند، منبع اصلی پس‌زمینه مشاهده شده در تجزیه و تحلیل <span class="ltr-text">XRF</span> هستند.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">5.2 فیلتر پرتو اولیه</h3>
+        <p class="mb-4 text-gray-700 leading-relaxed">اکثر طیف‌سنج‌های اشعه ایکس مجهز به یک یا چند فیلتر پرتو قابل برنامه‌ریزی هستند. این فیلترها فویل‌های فلزی نازک (معمولاً با ضخامت بین <span class="ltr-text">50</span> تا <span class="ltr-text">1,000 µm</span>) هستند که بر روی یک دستگاه مکانیکی نصب شده‌اند و می‌توانند یک فیلتر خاص را در مسیر پرتو اولیه حرکت دهند. هدف اصلی فیلتر پرتو اولیه حذف خطوط مشخصه آند تیوب اشعه ایکس است. به عنوان مثال، اگر از یک تیوب آند رودیوم استفاده شود، بخش قابل توجهی از اشعه ایکس رودیوم فرودی توسط نمونه پراکنده خواهد شد. بخشی که به صورت همدوس پراکنده می‌شود، نمی‌تواند از خطوط رودیوم که توسط اتم‌ها در نمونه ایجاد می‌شوند، متمایز شود. در چنین حالتی، برای امکان تجزیه و تحلیل رودیوم در نمونه، از فیلتر پرتو اولیه برای جلوگیری از رسیدن خطوط مشخصه از تیوب اشعه ایکس به نمونه استفاده می‌شود. کاربرد دیگر فیلترهای پرتو، کاهش پس‌زمینه در برخی از محدوده‌های انرژی است. حد تشخیص پایین را می‌توان در مواردی که شدت پس‌زمینه قابل توجه است، بهبود بخشید. با این حال، استفاده از فیلترهای پرتو اولیه نیز منجر به کاهش حساسیت می‌شود، و باید مراقب بود تا به شرایط تنظیم بهینه دست یافت.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">5.3 طیف‌سنجی فلوئورسانس اشعه ایکس با پراکندگی طول موج</h3>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.3.1 اصل کار – قانون براگ</h4>
+        <p class="mb-4 text-gray-700 leading-relaxed">همانطور که از نام آن پیداست، طیف‌سنج‌های پراکندگی طول موج از یک استراتژی تک‌فام‌سازی اشعه ایکس، با استفاده از قانون پراش براگ، برای تقسیم طیف اشعه ایکس به اجزای منفرد آن (یا بهتر بگوییم، نوارهای باریک انرژی) استفاده می‌کنند:</p>
+        <div class="formula-display">
+            \[n\lambda = 2d\sin\theta \quad [13]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">که در آن <span class="ltr-text">n</span> مرتبه بازتاب است؛ <span class="ltr-text">λ</span> طول موج فوتون‌های مورد نظر است؛ <span class="ltr-text">d</span> فاصله صفحه‌های بلورنگاری است، و <span class="ltr-text">θ</span> زاویه فرود (و بازتاب) نسبت به صفحه بلور است. در اکثریت قریب به اتفاق کاربردها، مرتبه اول (<span class="ltr-text">n = 1</span>) استفاده می‌شود. برای اینکه پراش فوتون‌ها با طول موج <span class="ltr-text">λ</span> اتفاق بیفتد، زاویه <span class="ltr-text">θ</span> باید به گونه‌ای انتخاب شود که حاصل‌ضرب <span class="ltr-text">2dsinθ</span> برابر با <span class="ltr-text">λ</span> باشد. قانون براگ را می‌توان به عنوان الزامی برای تداخل سازنده فوتون‌های اشعه ایکس مشاهده کرد. یک پرتو تک‌فام و موازی از اشعه ایکس با طول موج خاص <span class="ltr-text">λ</span> را در نظر بگیرید که بردارهای الکتریکی با دامنه مساوی در فاز در هر نقطه از جهت انتشار دارند. این پرتو با زاویه <span class="ltr-text">θ</span> به یک بلور فرود می‌آید. پرتو در همه جهات پراکنده می‌شود. با این حال، تداخل سازنده فقط در جهاتی رخ می‌دهد که رابطه فاز حفظ شود. این در زاویه <span class="ltr-text">θ</span> برای پرتوهای فرودی <span class="ltr-text">1</span> و <span class="ltr-text">2</span> (به شکل <span class="ltr-text">3</span> مراجعه کنید) اتفاق می‌افتد، که در آن اختلاف مسیر <span class="ltr-text">AB + BC</span> برابر با یک عدد صحیح از طول موج‌ها <span class="ltr-text">λ</span> است. عدد صحیح <span class="ltr-text">n</span> به مرتبه پراش اشاره دارد. شدیدترین قله‌های پراش – و در نتیجه بالاترین شدت اندازه‌گیری شده – را می‌توان زمانی به دست آورد که <span class="ltr-text">n = 1</span> (مرتبه اول) باشد. پراش‌های مرتبه بالاتر با <span class="ltr-text">n = 2, 3, or 4</span> نیز رخ می‌دهند، اما کارایی آنها پایین است.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed text-center">شکل 3. هندسه شامل قانون براگ.</p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.3.2 پراکندگی</h4>
+        <p class="mb-4 text-gray-700 leading-relaxed">پراکندگی یک ابزار <span class="ltr-text">WDXRF</span> را می‌توان با مشتق‌گیری از معادله <span class="ltr-text">[13]</span> به صورت زیر محاسبه کرد:</p>
+        <div class="formula-display">
+            \[d\lambda/d\theta = (2d \cos\theta) / n \quad [14]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">پراکندگی معیاری برای جداسازی زاویه‌ای بین قله‌های مربوط به دو طول موج متفاوت است. مقدار بزرگتر برای پراکندگی نشان‌دهنده جداسازی زاویه‌ای بزرگتر، در نتیجه همپوشانی کمتر (بالقوه) بین فوتون‌هایی با طول موج‌های کمی متفاوت است. کاهش فاصله <span class="ltr-text">2d</span> یک راه واضح برای بهبود پراکندگی زاویه‌ای است؛ با این حال، فاصله <span class="ltr-text">2d</span> توسط بلور مورد استفاده تعیین می‌شود. برای اکثر محدوده طول موج، حداقل دو بلور موجود است؛ بلوری که فاصله کمتری دارد، جداسازی زاویه‌ای بهتری ارائه می‌دهد، اما معمولاً این امر شامل از دست دادن شدت است. بلورهای خوش‌تعریف با فاصله <span class="ltr-text">2d</span> شناخته شده به عنوان تک‌فام‌ساز استفاده می‌شوند. لیستی از بلورهای رایج در جدول <span class="ltr-text">3</span> آمده است.</p>
+
+        <div class="card mb-6">
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2 text-center">جدول 3. تک‌فام‌سازهای رایج در <span class="ltr-text">WDXRF</span></h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>نام بلور</th>
+                        <th>صفحه بازتاب</th>
+                        <th>فاصله <span class="ltr-text">2d (nm)</span></th>
+                        <th>محدوده عنصر</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">LiF(220)</span></td>
+                        <td>لیتیوم فلوراید (<span class="ltr-text">220</span>)</td>
+                        <td><span class="ltr-text">0.2848</span></td>
+                        <td><span class="ltr-text">V-U</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">LiF(200)</span></td>
+                        <td>لیتیوم فلوراید (<span class="ltr-text">200</span>)</td>
+                        <td><span class="ltr-text">0.4028</span></td>
+                        <td><span class="ltr-text">K-U</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Ge</span></td>
+                        <td>ژرمانیم (<span class="ltr-text">111</span>)</td>
+                        <td><span class="ltr-text">0.6532</span></td>
+                        <td><span class="ltr-text">P, S, Cl</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">PE or PET</span></td>
+                        <td>پنتااریتریتول (<span class="ltr-text">002</span>)</td>
+                        <td><span class="ltr-text">0.8742</span></td>
+                        <td><span class="ltr-text">Cl-Al</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">TlAP</span></td>
+                        <td>تالیم اسید فتالات (<span class="ltr-text">1010</span>)</td>
+                        <td><span class="ltr-text">2.575</span></td>
+                        <td><span class="ltr-text">Mg-O</span></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>ریزساختار مصنوعی لایه‌ای</td>
+                        <td><span class="ltr-text">3–12</span></td>
+                        <td><span class="ltr-text">Mg-Be</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="mb-4 text-gray-700 leading-relaxed">پراکندگی فقط جداسازی زاویه‌ای بین دو قله را توصیف می‌کند؛ عرض قله را توصیف نمی‌کند، که معمولاً به آن رزولوشن (در سایر اشکال طیف‌سنجی) گفته می‌شود و از عرض کامل قله در نیمه ارتفاع آن محاسبه می‌شود. رزولوشن واقعی سیستم آشکارساز تأثیر قابل توجهی بر جداسازی قله ندارد.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">انتخاب بلور و زاویه آشکارساز نسبت به بلور تعیین می‌کند که کدام خطوط اشعه ایکس عنصری ممکن است وارد آشکارساز شوند. وظیفه اصلی آشکارسازها در <span class="ltr-text">WDXRF</span> به شمارش فوتون‌ها با انرژی مشخص کاهش می‌یابد، زیرا استفاده از بلور تک‌فام‌ساز بدین ترتیب انتخاب طول موج فوتون‌ها را از شمارش واقعی جدا می‌کند.</p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.3.3 آشکارسازها برای <span class="ltr-text">WDXRF</span></h4>
+        <p class="mb-4 text-gray-700 leading-relaxed"><strong>آشکارسازهای پر از گاز:</strong> آشکارسازهای پر از گاز از یک حجم استوانه‌ای پر شده با یک گاز نجیب مانند آرگون (<span class="ltr-text">Ar</span>) یا کریپتون (<span class="ltr-text">Kr</span>) و یک سیم که از مرکز آشکارساز عبور می‌کند، تشکیل شده‌اند (به شکل <span class="ltr-text">4</span> مراجعه کنید).</p>
+        <p class="mb-4 text-gray-700 leading-relaxed text-center">شکل 4. نمودار شماتیک یک شمارشگر جریانی.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">یک فوتون ورودی (با انرژی <span class="ltr-text">hν</span> نشان داده شده) می‌تواند یک الکترون بیرونی (ظرفیت) را از یکی از اتم‌های گاز بی‌اثر حذف کند. برای یک آشکارساز پر از آرگون:</p>
+        <div class="formula-display">
+            \[\text{Ar} + h\nu \rightarrow \text{Ar}^+ + e^- \quad [15]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">انرژی مورد نیاز برای یونیزاسیون، <span class="ltr-text">ei</span>، به عنصر بستگی دارد؛ برای آرگون (<span class="ltr-text">Ar</span>)، حدود <span class="ltr-text">26 eV</span> برای ایجاد یک جفت یون-الکترون لازم است. کل تعداد این یونیزاسیون‌های اولیه، <span class="ltr-text">np</span>، که در هر فوتون فرودی با انرژی <span class="ltr-text">E</span> ایجاد می‌شود، را می‌توان با استفاده از</p>
+        <div class="formula-display">
+            \[n_p = E/e_i \quad [16]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">محاسبه کرد. میدان الکتریکی بین سیم و بدنه بیرونی باعث شتاب گرفتن الکترون‌ها به سمت سیم آند می‌شود. یون‌های مثبت، از سوی دیگر، به سمت محفظه مهاجرت می‌کنند. میدان الکتریکی حاصل منجر به یک آبشار از رویدادهای یونیزاسیون می‌شود. نتیجه این اثر آبشاری به شرح زیر است: برای هر یک از الکترون‌های منفردی که در ابتدا توسط فوتون فرودی ایجاد شده‌اند، تعداد بسیار بیشتری الکترون در نهایت در سیم آند جمع‌آوری می‌شوند (این عامل تقویت گاز نامیده می‌شود و معمولاً حدود <span class="ltr-text">10<sup>4</sup></span> تا <span class="ltr-text">10<sup>6</sup></span> است)، که افت ولتاژ ایجاد می‌کند که سپس توسط الکترونیک شمارش پردازش می‌شود.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">پنجره ورودی باید تا حد امکان فوتون‌های ورودی کمی را جذب کند، زیرا هر فوتونی که در پنجره جذب شود از مدار شمارش از دست می‌رود و در نتیجه حساسیت را کاهش می‌دهد. پنجره‌های بزرگ با میرایی کم برای طول موج‌های بلند را می‌توان از پلیمرهای کشیده شده، مانند پلی‌اتیلن یا پلی‌استر، پوشش داده شده با یک ماده رسانا در داخل شمارشگر برای فراهم کردن یک میدان الکتریکی همگن ساخت. چنین پنجره‌های نازکی برای مقاومت در برابر اختلاف فشار ناشی از خلاء در محفظه طیف‌سنج به پشتیبانی مکانیکی نیاز دارند. کلیماتور معمولاً به عنوان یک پشتیبان ترجیح داده می‌شود زیرا میزان تشعشعات پراکنده شده از بلور یا چندلایه را نیز کاهش می‌دهد.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">از سوی دیگر، پنجره‌های پلیمری سوراخ‌های سوزنی کوچکی دارند. این سوراخ‌های سوزنی به گاز شمارشگر اجازه می‌دهند تا به تدریج نشت کند. چنین آشکارسازهایی قبل از نشت گاز شمارشگر یا آلوده شدن آن به حدی که عملاً آشکارساز را بی‌فایده کند، عمر بسیار کوتاهی خواهند داشت. برای جبران نشت‌ها، یک جریان ثابت از گاز شمارشگر استفاده می‌شود که مازاد آن از محفظه طیف‌سنج خارج می‌شود؛ چنین آشکارسازهایی بنابراین شمارشگرهای تناسبی جریانی (یا آشکارسازهای جریان گاز) نامیده می‌شوند. تنها بخشی از این جریان به داخل محفظه طیف‌سنج نشت می‌کند، در حالی که بقیه از طریق یک لوله آشکارساز را ترک کرده و به اتمسفر تخلیه می‌شود. برای پایداری کلی طیف‌سنج ضروری است که فشار و دمای گاز ثابت نگه داشته شود. از این رو، اکثر ابزارها مجهز به یک پایدارکننده چگالی گاز هستند.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">شمارشگرهای تناسبی جریان گاز، شمارشگرهای ترجیحی برای تشخیص اشعه ایکس با طول موج‌های بسیار بلند در طیف‌سنج‌های پراکندگی طول موج هستند. کارایی شمارش آشکارسازهای پر از گاز توسط جذب در پنجره ورودی و کارایی جذب (جذب تشعشعات فرودی) گاز شمارشگر برای طول موج‌های مورد نظر تعیین می‌شود. کارایی جذب به طول مسیر موجود در آشکارساز، ترکیب گاز شمارشگر و فشار آن بستگی دارد. خواص جذب پنجره کارایی آشکارساز را در طول موج‌های بلند تعیین می‌کند، در حالی که خواص جذب گاز کارایی را در طول موج‌های کوتاه‌تر تعیین می‌کند. با در نظر گرفتن ابعاد معمول، ماهیت گاز و فشار، جذب گاز به عنوان تابعی از طول موج فوتون فرودی قابل محاسبه است. در حدود طول موج‌های <span class="ltr-text">0.2–0.3 nm</span>، حدود نیمی از فوتون‌های فرودی جذب نمی‌شوند، که نشان‌دهنده کارایی پایین است. این دلیل اصلی است که ابزارهای <span class="ltr-text">WDXRF</span> متوالی مجهز به بیش از یک آشکارساز هستند.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed"><strong>شمارشگر سوسوزن (Scintillation counter):</strong> ابزارهای <span class="ltr-text">WDXRF</span> معمولاً برای تشخیص طول موج‌های کوتاه‌تر که شمارشگر تناسبی گاز برای آنها کمتر کارآمد است، به یک شمارشگر سوسوزن مجهز هستند. عملکرد شمارشگر سوسوزن بر اساس دو مرحله متمایز است: یک بلور سوسوزن و یک تیوب فوتومولتی‌پلایر (به شکل <span class="ltr-text">5</span> مراجعه کنید).</p>
+        <p class="mb-4 text-gray-700 leading-relaxed text-center">شکل 5. نمودار شماتیک یک شمارشگر سوسوزن.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">در مرحله اول، فوتون ورودی توسط یک "بلور سوسوزن" جذب می‌شود. سوسوزن ماده‌ای است که هنگام تحریک توسط تشعشعات یونیزه کننده، مانند اشعه ایکس، نور منتشر می‌کند. مواد سوسوزن مختلفی با خواص متفاوت در مورد سختی تشعشع، محدوده دمای عملیاتی، زمان‌های واپاشی، خواص نوری و سایر خواص وجود دارند. متداول‌ترین ماده سوسوزن در ابزارهای <span class="ltr-text">WDXRF</span> یک بلور یدید سدیم (<span class="ltr-text">NaI</span>) است که با تالیم (<span class="ltr-text">Tl</span>) دوپه شده است. بلور سوسوزن به صورت نوری به یک "فوتومولتی‌پلایر" کوپل شده است که از یک فوتوکاتد و مجموعه‌ای از داینودها تشکیل شده است. در مرحله دوم، پس از برخورد با یک فوتون، فوتوکاتد الکترون‌های آزاد را رها می‌کند. سپس این الکترون‌ها به سمت مجموعه‌ای از داینودها شتاب داده می‌شوند. در هر داینود، برخورد الکترون‌ها الکترون‌های بیشتری تولید می‌کند. اگر از <span class="ltr-text">10</span> داینود استفاده شود، تقویت کلی حدود <span class="ltr-text">10<sup>6</sup></span> برابر است.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">کارایی شمارش شمارشگر سوسوزن تا حد زیادی توسط ضخامت بلور یدید سدیم تالیم <span class="ltr-text">[NaI(Tl)]</span> تعیین می‌شود. کارایی شمارش برای یک بلور با ضخامت <span class="ltr-text">3-mm</span> برای طول موج‌های <span class="ltr-text">0.05 nm</span> و بلندتر بهتر از <span class="ltr-text">99%</span> است. این امکان تشخیص فوتون‌های پرانرژی مانند <span class="ltr-text">Sn Kα</span> را با کارایی بالا فراهم می‌کند.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">تولید فوتون‌های نور در آشکارساز سوسوزن بیشتر از تعداد جفت‌های الکترون-یون ایجاد شده در یک شمارشگر جریانی است؛ این باید منجر به رزولوشن بهتر شود. با این حال، این مزیت با بازده پایین فوتوالکترون‌ها توسط فوتوکاتد، که در آن کمتر از <span class="ltr-text">1</span> الکترون برای هر <span class="ltr-text">10</span> فوتون نوری فرودی آزاد می‌شود، از بین می‌رود. در مقایسه با شمارشگرهای پر از گاز، رزولوشن یک شمارشگر سوسوزن بدتر است.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">استفاده از تکنیک <span class="ltr-text">WDXRF</span> (معمولاً با توان در محدوده <span class="ltr-text">kW</span>) برای تجزیه و تحلیل نمونه‌های ماتریس آلی محدود است زیرا گرمای تولید شده توسط اشعه ایکس ممکن است برای القای تغییر قابل توجهی در نمونه، مانند قهوه‌ای شدن یا سوختن سطح نمونه، کافی باشد. علاوه بر این، حتی اگر نمونه برای مدت زمان بسیار کوتاهی توسط <span class="ltr-text">WDXRF</span> اندازه‌گیری شود، گرمای وارد شده به سطح نمونه ممکن است باعث از دست دادن عناصر فرار [مانند جیوه (<span class="ltr-text">Hg</span>) و سلنیم (<span class="ltr-text">Se</span>)] شود. با این حال، تکنیک <span class="ltr-text">WDXRF</span> کاملاً برای اندازه‌گیری مواد معدنی که می‌توانند دماهای بالا را تحمل کنند، مناسب است. نمونه‌هایی از مواد معدنی رایج که برای اندازه‌گیری <span class="ltr-text">WDXRF</span> مناسب هستند، کربنات کلسیم (<span class="ltr-text">CaCO3</span>) و کلرید سدیم (<span class="ltr-text">NaCl</span>) می‌باشند.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">5.4 طیف‌سنجی فلوئورسانس اشعه ایکس با پراکندگی انرژی</h3>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.4.1 اصل کار</h4>
+        <p class="mb-4 text-gray-700 leading-relaxed">تکنیک <span class="ltr-text">XRF</span> با پراکندگی انرژی معمولاً شامل تشخیص همزمان فوتون‌هایی با انرژی‌های مختلف است که توسط اتم‌های نمونه منتشر می‌شوند. آشکارساز هم انرژی فوتون و هم شدت آن را تعیین می‌کند، که تعداد فوتون‌ها در واحد زمان است. برای فراهم کردن رزولوشن کافی برای تمایز بین خطوط مشخصه و خطوط همپوشان از عناصر دیگر، اکثر ابزارهای <span class="ltr-text">EDXRF</span> مجهز به یک آشکارساز با رزولوشن بالا و یک آنالایزر چند کاناله (<span class="ltr-text">MCA</span>) هستند. <span class="ltr-text">MCA</span> اساساً یک نمایش هیستوگرام از طیف ارائه می‌دهد. ابزارهای پیشرفته از الگوریتم‌های محاسباتی پیچیده (واپیچش) برای شناسایی قله‌ها (یعنی برای اثبات وجود عناصر خاص) و به دست آوردن داده‌های شدت از هیستوگرام استفاده می‌کنند. <span class="ltr-text">EDXRF</span> از نظر تئوری یک تکنیک همزمان است زیرا کل طیف را در یک مرحله شمارش اندازه‌گیری می‌کند. با این حال، بهبودهای قابل توجهی در عملکرد را می‌توان با اندازه‌گیری نمونه با استفاده از دو یا چند شرایط تحریک مختلف، که هر کدام برای یک محدوده انرژی خاص بهینه شده‌اند، به دست آورد.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">در مقایسه با <span class="ltr-text">WDXRF</span>، طراحی طیف‌سنج <span class="ltr-text">EDXRF</span> بسیار ساده‌تر است زیرا فاقد گونیومتر با دقت بالا و کلیماتورهای مرتبط است. موقعیت‌یابی آشکارساز نسبت به نمونه بسیار ساده است؛ واضح‌ترین نیاز این است که نباید یک مسیر مستقیم بین آند تیوب اشعه ایکس از طریق پنجره ورودی آشکارساز به بدنه فعال وجود داشته باشد. فواصل بین پنجره تیوب اشعه ایکس و نمونه، و بین نمونه و پنجره ورودی آشکارساز، می‌تواند کم باشد، در حدود <span class="ltr-text">1–2 cm</span>. علاوه بر این، از آنجا که فقط کلیمیشن محدودی مورد نیاز است، زاویه پذیرش فوتون‌ها از نمونه می‌تواند کاملاً بزرگ باشد. تیوب‌های اشعه ایکس با توان پایین با توان حداکثر <span class="ltr-text">50 W</span> استفاده می‌شوند. به دلیل سادگی ذاتی طراحی آنها، تنوع گسترده‌ای از سیستم‌ها با قابلیت‌های متفاوت وجود دارد. یک طیف معمولی در طیف‌سنج پراکندگی انرژی در شکل <span class="ltr-text">6</span> نشان داده شده است. انرژی در محور افقی از چپ به راست افزایش می‌یابد. شکل قله تقریباً گاوسی کامل است.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed text-center">شکل 6. طیف پراکندگی انرژی یک نمونه برنج. از چپ، قله‌ها به دلیل <span class="ltr-text">Cu Kα</span>، <span class="ltr-text">Zn Kα</span>، <span class="ltr-text">Cu Kβ</span> و <span class="ltr-text">Zn Kβ</span> هستند. محور افقی انرژی و محور عمودی بر حسب شمارش در هر کانال است. این طیف در <span class="ltr-text">75,000 cps</span> با <span class="ltr-text">50 kV</span> و یک فیلتر اولیه <span class="ltr-text">Ag</span> برای کاهش پس‌زمینه ثبت شد. عرض کامل در نیمه حداکثر (<span class="ltr-text">FWHM</span>) در قله <span class="ltr-text">Cu Kα</span> حدود <span class="ltr-text">165 eV</span> است.</p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.4.2 آشکارسازها</h4>
+        <p class="mb-4 text-gray-700 leading-relaxed">رزولوشن سیستم آشکارساز هم عرض قله (بر حسب <span class="ltr-text">FWHM</span> بیان می‌شود) و هم جداسازی قله را تعیین می‌کند. سیستم‌ها ممکن است مجهز به آشکارسازهای پر از گاز، حالت جامد یا نیمه‌رسانا باشند. سه آشکارساز حالت جامد متداول عبارتند از:</p>
+        <ul class="list-disc list-inside space-y-1 pr-4 text-gray-700">
+            <li>سیلیکون-لیتیوم دریفت شده <span class="ltr-text">Si(Li)</span> خنک شده با نیتروژن مایع</li>
+            <li>آشکارسازهای ژرمانیم خنک شده با نیتروژن مایع، مانند <span class="ltr-text">LeGe</span> و <span class="ltr-text">HPGe</span></li>
+            <li>آشکارسازهای مبتنی بر سیلیکون ذاتی، مانند آشکارساز <span class="ltr-text">PIN</span> (مثبت، ذاتی و منفی) و آشکارساز دریفت سیلیکون (<span class="ltr-text">SDD</span>).</li>
+        </ul>
+        <p class="mb-4 text-gray-700 leading-relaxed">دو نوع اول آشکارسازها کارایی جذب فوتون بالا را امکان‌پذیر می‌کنند اما به ظروف عایق‌بندی شده نسبتاً حجیم (دوئر) برای نیتروژن مایع نیاز دارند. این آشکارسازها عموماً نسبتاً بزرگ هستند که حساسیت را بهبود می‌بخشد، و ضخیم هستند که کارایی جذب را برای فوتون‌های پرانرژی بهبود می‌بخشد. آنها معمولاً در تجهیزات ایستاده یافت می‌شوند. سیستم‌های رومیزی مجهز به آشکارسازهایی هستند که مبتنی بر سیلیکون ذاتی هستند. این انواع آشکارسازها نیازی به خنک‌سازی تا دماهای پایین دو دسته دیگر ندارند؛ دماهای بین <span class="ltr-text">-25°</span> و <span class="ltr-text">-15°</span> قابل قبول هستند. خنک‌سازی پلتیر یا خنک‌سازی الکتروحرارتی برای رسیدن به این دماها کافی است. این آشکارسازها کوچکتر و نازکتر از همتایان حجیم خود هستند. تجهیزات قدیمی‌تر ممکن است هنوز از به اصطلاح آشکارسازهای <span class="ltr-text">PIN</span> استفاده کنند، اما تمام تجهیزات جدیدتر مجهز به <span class="ltr-text">SDD</span> هستند. <span class="ltr-text">SDD</span>ها رزولوشن بسیار بهتری دارند و می‌توانند در شدت‌های بسیار بالاتر از آشکارسازهای <span class="ltr-text">PIN</span> استفاده شوند، که معمولاً در <span class="ltr-text">Mn Kα</span> به حدود <span class="ltr-text">220 eV</span> محدود می‌شوند. <span class="ltr-text">SDD</span>ها همراه با الکترونیک پیشرفته، رزولوشنی (بر حسب <span class="ltr-text">FWHM</span>) بهتر از <span class="ltr-text">145 eV</span> در <span class="ltr-text">Mn Kα</span> دارند. این قابل مقایسه با آشکارسازهای نیمه‌رسانای خنک شده با نیتروژن مایع است. یک کلمه احتیاط لازم است زیرا رزولوشن با افزایش نرخ شمارش یا شدت بدتر می‌شود. بنابراین اکثر تولیدکنندگان رزولوشن را در نرخ شمارش پایین غیرعملی <span class="ltr-text">1,000</span> یا <span class="ltr-text">2,000 cps</span> مشخص می‌کنند.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">5.5 طیف‌سنجی اشعه ایکس پلاریزه</h3>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.5.1 اصل کار</h4>
+        <p class="mb-4 text-gray-700 leading-relaxed">پیچیده‌ترین طیف‌سنج‌های <span class="ltr-text">EDXRF</span> از پولاریزاسیون یا یک هدف ثانویه برای تغییر توزیع طیفی منبع اشعه ایکس استفاده می‌کنند؛ هدف کاهش، یا در حالت ایده‌آل حذف، شدت پس‌زمینه پیوسته است. این تلاش یک نتیجه منطقی از معادله <span class="ltr-text">[3]</span> است. به دلیل اینکه جزء اصلی پس‌زمینه تشعشعات پراکنده شده تیوب است، یکی از روش‌های جلوگیری از رسیدن تشعشعات از تیوب اشعه ایکس به سیستم آشکارساز، استفاده از تشعشعات پلاریزه شده است. این سیستم‌ها در تجزیه و تحلیل، به عنوان مثال، بقایای کاتالیزور پالادیوم (<span class="ltr-text">Pd</span>) در برخی از مواد دارویی کاربرد دارند.</p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.5.2 تشعشع پلاریزه شده و هدف پلاریزه کننده</h4>
+        <p class="mb-4 text-gray-700 leading-relaxed">جهت‌گیری بردار میدان الکتریکی <span class="ltr-text">E</span> فوتون‌های تولید شده در یک تیوب اشعه ایکس تصادفی است اما همیشه عمود بر جهت انتشار. با استفاده از یک سیستم مختصات دکارتی، با جهت <span class="ltr-text">z</span> که با جهت انتشار هم‌راستا است، دو مؤلفه بردار میدان الکتریکی در جهت <span class="ltr-text">x</span> (با <span class="ltr-text">Ex</span> نشان داده می‌شود) و جهت <span class="ltr-text">y</span> (<span class="ltr-text">Ey</span>) یکسان هستند و از رابطه زیر پیروی می‌کنند:</p>
+        <div class="formula-display">
+            \[E_x^2 = E_y^2 \quad [17]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">مولفه در امتداد محور انتشار، <span class="ltr-text">Ez</span>، صفر است؛ این به این دلیل است که تشعشع الکترومغناطیسی یک موج عرضی است. پس از پراکندگی همدوس در صفحه <span class="ltr-text">yz</span>، بردار میدان فوتون‌های در حال حرکت در جهت <span class="ltr-text">y</span>، <span class="ltr-text">Ey</span>، نیز به صفر کاهش می‌یابد. این پرتو فوتون‌ها، که همگی بردار میدان الکتریکی آنها موازی با جهت <span class="ltr-text">x</span> است، به نمونه هدایت می‌شود و به روش معمول برهم‌کنش می‌کند. فوتون‌ها باعث یونیزاسیون می‌شوند و می‌توانند پراکنده شوند، اما نمی‌توانند در جهت محور <span class="ltr-text">x</span> پراکنده شوند، زیرا بردار میدان الکتریکی نمی‌تواند مولفه‌ای موازی با جهت انتشار داشته باشد. اگر آشکارساز اکنون در جایی در امتداد جهت <span class="ltr-text">x</span> قرار گیرد (هنوز در همان چارچوب مرجع)، پس‌زمینه به طور قابل توجهی کاهش می‌یابد زیرا سهم اصلی (یعنی پراکندگی از تشعشع فرودی) وجود ندارد. این فرآیند ناکارآمد است زیرا پولاریزاسیون فعال وجود ندارد؛ این امر کاملاً با سرکوب یک مولفه از موج الکترومغناطیسی به دست می‌آید، که در نتیجه شدت آن را به طور قابل توجهی کاهش می‌دهد. بنابراین، از تیوب‌های اشعه ایکس با قدرت بالا استفاده می‌شود.</p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.5.3 اهداف ثانویه</h4>
+        <p class="mb-4 text-gray-700 leading-relaxed">استفاده از اهداف ثانویه در طیف‌سنجی پراکندگی انرژی برای ابزارهای پرقدرت بسیار گسترده بوده است. هدف کاهش پس‌زمینه و در نتیجه بهبود حد تشخیص پایین است. هنگامی که الکترون‌ها کاهش سرعت پیدا می‌کنند، تشعشعات ترمزی با ماهیت پیوسته تولید می‌کنند؛ اما فوتون‌ها تشعشعات ترمزی تولید نمی‌کنند. اصل پشت یک ابزار مجهز به اهداف ثانویه این است که از یک تیوب اشعه ایکس کلاسیک برای فراهم کردن یک پرتو اشعه ایکس (شامل پیوستار مشکل‌ساز) استفاده شود و آن را به سمت یک هدف ثانویه، که معمولاً یک فلز است، هدایت کند. تشعشعات ساطع شده از هدف ثانویه شامل تشعشعات مشخصه بسیار شدید مربوط به ماهیت هدف و پیوستار پراکنده شده خواهد بود. شدت پس‌زمینه پراکنده شده نسبتاً کم است، به خصوص زمانی که ماده هدف یک فلز با عدد اتمی متوسط تا بالا باشد. هیچ پیوستار اضافی توسط فوتون‌های فرودی ایجاد نمی‌شود، اما سهم کوچکی از تشعشعات پس‌زمینه توسط فوتوالکترون‌های پرانرژی ایجاد می‌شود. تشعشعات از هدف ثانویه برای اهداف تحریک به سمت نمونه هدایت می‌شود. طیف حاصل از نمونه از خطوط مشخصه عناصر موجود، تشعشعات مشخصه پراکنده شده از هدف ثانویه، و پیوستار پراکنده شده همزمان از تیوب تشکیل شده است. سهم اخیر بسیار ضعیف است زیرا در معرض دو رویداد پراکندگی قرار گرفته است، یکی در هدف ثانویه و دیگری در نمونه. اگر ابزار مجهز به انتخابی از اهداف ثانویه باشد، بهبودهای قابل توجهی در حد تشخیص پایین قابل دستیابی است. فرآیند دو مرحله‌ای برای دستیابی به همان شار در نمونه در مقایسه با تحریک مستقیم به یک تیوب اشعه ایکس با قدرت بالاتر نیاز دارد، بنابراین معمولاً در ابزارهای رومیزی گنجانده نمی‌شود. در حال حاضر، اهداف ثانویه اغلب در ترکیب با اهداف پلاریزاسیون استفاده می‌شوند. این ترکیب ساده است، زیرا هر دو نوع هدف می‌توانند از آرایش هندسی یکسانی استفاده کنند.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">5.6 طیف‌سنجی فلوئورسانس اشعه ایکس با بازتاب کلی</h3>
+        <p class="mb-4 text-gray-700 leading-relaxed">نوع دیگری، طیف‌سنجی فلوئورسانس اشعه ایکس با بازتاب کلی (<span class="ltr-text">TXRF</span>، که گاهی اوقات به اختصار <span class="ltr-text">TRXRF</span> نیز نامیده می‌شود)، در تجزیه و تحلیل نمونه‌های بسیار نازک و بسیار همگن مشتق شده از مایعات تخصص دارد. به طور معمول، ابزارهای <span class="ltr-text">TXRF</span> از یک منبع اشعه ایکس استفاده می‌کنند که با زاویه بسیار کوچک نسبت به سطح به سمت نمونه هدایت می‌شود. آشکارساز معمولاً در زاویه <span class="ltr-text">90°</span> بالای نمونه قرار می‌گیرد. تکنیک <span class="ltr-text">TXRF</span> معمولاً از استانداردهای داخلی (مخلوط شده با ناشناخته‌ها) و روابط هندسی برای تعیین غلظت‌های عنصری استفاده می‌کند.</p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">6. تجزیه و تحلیل کیفی <span class="ltr-text">XRF</span></h2>
+        <p class="mb-4 text-gray-700 leading-relaxed">این بخش هم برای <span class="ltr-text">WDXRF</span> و هم برای <span class="ltr-text">EDXRF</span> کاربرد دارد.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">6.1 طیف‌های اشعه ایکس</h3>
+        <p class="mb-4 text-gray-700 leading-relaxed">تجزیه و تحلیل کیفی با استفاده از فلوئورسانس اشعه ایکس نسبتاً ساده است زیرا طیف‌های خطی مشخصه عناصر ساده هستند و تحت تأثیر پیوندهای شیمیایی قرار نمی‌گیرند؛ یعنی این طیف‌ها واقعاً عنصری هستند. برای تجزیه و تحلیل کیفی (و کمی)، خطوط اصلی آنهایی هستند که از سری‌های <span class="ltr-text">K</span> و <span class="ltr-text">L</span> می‌آیند. خطوط <span class="ltr-text">K</span> از انتقال الکترون پس از خارج شدن یکی از الکترون‌های <span class="ltr-text">K</span> ناشی می‌شوند. به دلیل قوانین انتخاب مکانیک کوانتومی، همه انتقال‌ها مجاز نیستند. انتقال از پوسته <span class="ltr-text">L</span> به پوسته <span class="ltr-text">K</span> محدود به انتقالاتی است که شامل <span class="ltr-text">L2</span> و <span class="ltr-text">L3</span> می‌شود، زیرا انتقال‌های تشعشعی بین پوسته <span class="ltr-text">L1</span> و پوسته <span class="ltr-text">K</span> ممنوع هستند. این انتقال‌ها محتمل‌ترین هستند که منجر به غالب‌ترین خط در طیف می‌شوند. برای اکثر عناصر، اختلاف انرژی بین پوسته <span class="ltr-text">L2</span> و پوسته <span class="ltr-text">L3</span> نسبتاً کوچک است (در حدود چند <span class="ltr-text">eV</span>)، بنابراین خطوط منتشر شده معمولاً جدا نیستند و به سادگی یک دوتایی در نظر گرفته می‌شوند. انتقال‌های تشعشعی از پوسته‌های <span class="ltr-text">M</span> و <span class="ltr-text">N</span> به پوسته <span class="ltr-text">K</span> نیز رخ می‌دهند. این‌ها منجر به بخش پیچیده‌تری از طیف <span class="ltr-text">K</span> می‌شوند. با این حال، در عمل، فقط دوتایی <span class="ltr-text">Kβ1,3</span> (ناشی از انتقال‌های بین <span class="ltr-text">M3</span> و <span class="ltr-text">K</span> و <span class="ltr-text">M2</span> و <span class="ltr-text">K</span>) اهمیت دارد. شدت نسبی بین <span class="ltr-text">Kα</span> و <span class="ltr-text">Kβ</span> از <span class="ltr-text">1</span> در <span class="ltr-text">1,000</span> برای سدیم (<span class="ltr-text">Na</span>) تا <span class="ltr-text">1</span> در <span class="ltr-text">6</span> برای پلوتونیوم (<span class="ltr-text">Pu</span>) متغیر است، که <span class="ltr-text">Kα</span> همیشه شدیدترین خط از این سری است.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">خط <span class="ltr-text">Kα</span> توسط یک انتقال الکترون از یک الکترون در پوسته <span class="ltr-text">L3</span>، پس از حذف یک الکترون پوسته <span class="ltr-text">K</span>، تولید می‌شود. خط <span class="ltr-text">Kα</span> غالب‌ترین خط در سری یک عنصر است. با این حال، الکترون‌های <span class="ltr-text">K</span> یک عنصر، بالاترین انرژی پیوند را در بین تمام الکترون‌های اتم دارند، و بنابراین فقط توسط فوتون‌های فرودی پرانرژی تحریک می‌شوند. این معمولاً برای عناصر با عدد اتمی پایین و متوسط مشکلی نیست، اما تحریک خطوط <span class="ltr-text">K</span> عناصر با عدد اتمی بالاتر از <span class="ltr-text">50</span>، به عنوان مثال، ممکن است امکان‌پذیر نباشد، زیرا پتانسیل تحریک بالاتر از حداکثر ولتاژ عملیاتی در اکثر تیوب‌های اشعه ایکس است.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">در حالی که طیف‌های خط <span class="ltr-text">K</span> معمولاً به تنها دو خط محدود می‌شوند، وضعیت برای طیف‌های سری <span class="ltr-text">L</span> پیچیده‌تر است. برای سرب (<span class="ltr-text">Pb</span>)، در بیردن <span class="ltr-text">[2]</span> مجموعاً <span class="ltr-text">46</span> خط <span class="ltr-text">L</span> فهرست شده است. بسیاری از این‌ها ضعیف یا دوتایی هستند. برای تجزیه و تحلیل کیفی، همه این خطوط نباید در نظر گرفته شوند. در همه موارد، مهم است که درک کنیم اگر <span class="ltr-text">Kβ</span> قابل مشاهده باشد، پس <span class="ltr-text">Kα</span> نیز باید قابل مشاهده باشد و شدت بالاتری داشته باشد.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">6.2 تجزیه و تحلیل کیفی</h3>
+        <p class="mb-4 text-gray-700 leading-relaxed">تجزیه و تحلیل کیفی معمولاً شامل چند مرحله ساده است. پس از جمع‌آوری طیف‌ها، پس‌زمینه از آنها کسر می‌شود. این کسر پس‌زمینه را می‌توان در یک مرحله جداگانه انجام داد، یا می‌توان آن را در ترکیب با یک الگوریتم جستجوی قله انجام داد. بخشی از این فوتون‌ها در جهت بلور تحلیلی (<span class="ltr-text">WDXRF</span>) یا مستقیماً به آشکارساز (<span class="ltr-text">EDXRF</span>) منتشر می‌شوند. سپس، یک جستجوی قله انجام می‌شود و در نهایت، این قله‌ها شناسایی می‌شوند، یعنی هر یک به یک عنصر خاص نسبت داده می‌شوند. الگوریتم‌های کارآمد برای تجزیه و تحلیل کیفی به دنبال وجود هر عنصر هستند، نه اینکه سعی کنند هر قله را شناسایی کنند. این با پراش اشعه ایکس که در آن هر قله برای مطابقت با یک فاز بررسی می‌شود، متفاوت است. در این روش، ابتدا جستجوی قله انجام می‌شود. سپس، برای هر عنصر، وجود دوتایی <span class="ltr-text">Kα1,2</span> تأیید می‌شود. اگر این خط در طیف یافت شود، سپس خطوط ضعیف‌تر همان سری (<span class="ltr-text">Kβ1,3</span> و <span class="ltr-text">Kβ2</span>) بررسی می‌شوند. توجه داشته باشید که تمام خطوط مشخصه در یک سری باید ظاهر شوند، به جز در مواردی که شدت یک خط ضعیف‌تر مشابه شدت پس‌زمینه باشد. برای عناصر با اعداد اتمی بالاتر که خطوط <span class="ltr-text">K</span> تحریک نمی‌شوند (یا به دلیل محدودیت‌های سخت‌افزاری تشخیص نمی‌شوند)، فرآیند با طیف‌های خط <span class="ltr-text">L</span> آغاز می‌شود. نسبت شدت‌ها، به عنوان مثال، <span class="ltr-text">Kα</span> به <span class="ltr-text">Kβ</span> در چندین پایگاه داده <span class="ltr-text">[8,9]</span> فهرست شده‌اند. نسبت‌های جدول‌بندی شده برای اتم "ایزوله" هستند؛ آنها شدت‌ها را همانطور که از یک اتم بدون هیچگونه اثر ماتریسی به دست می‌آیند، منعکس می‌کنند. این نسبت‌ها را می‌توان به راحتی برای اثرات ماتریس، حتی در مورد خطوط همپوشان، اصلاح کرد. فقط عناصری که در سطوح ردی (با شدت‌های قابل مقایسه با انحراف معیار شدت پس‌زمینه) وجود دارند، معمولاً "وجود ندارند" در نظر گرفته می‌شوند. توجه داشته باشید که، اصولاً، تداخل خطی بین عناصر در تجزیه و تحلیل کیفی چندان مشکلی نیست؛ این به دلیل این واقعیت است که در تجزیه و تحلیل کیفی، نقاط داده بسیار بیشتری که خطوط جایگزین را پوشش می‌دهند، در دسترس هستند. از این رو، اثبات وجود عناصر به اندازه آنچه انتظار می‌رود تحت تأثیر قرار نمی‌گیرد. همچنین، در طیف‌سنجی پراکندگی انرژی، که در آن همپوشانی خط شدیدتر است، اصلاحات کافی را می‌توان انجام داد زیرا شکل قله به خوبی شناخته شده است.</p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">7. تجزیه و تحلیل کمی <span class="ltr-text">XRF</span></h2>
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">7.1 انتخاب خط تحلیلی</h3>
+        <p class="mb-4 text-gray-700 leading-relaxed">طیف‌های انتشار مشخصه اکثر عناصر شامل چندین خط است. انتخاب یک خط تحلیلی برای یک عنصر مشخص تا حد زیادی به سه عامل بستگی دارد: غلظت عنصر در نمونه، خطوط بالقوه مزاحم، و قابلیت‌های تحریک طیف‌سنج. در اکثر موارد، خط انتشار <span class="ltr-text">Kα</span> یک عنصر ترجیح داده می‌شود. هنگامی که تحریک خطوط <span class="ltr-text">K</span> به دلیل محدودیت‌های تیوب و/یا ژنراتور امکان‌پذیر نیست، استفاده از خطوط <span class="ltr-text">L</span>، با انرژی کمترشان، ضروری است. استفاده از خط <span class="ltr-text">Lα</span> (هنگامی که خط <span class="ltr-text">Kα</span> تحریک نمی‌شود) چندان ضرری ندارد زیرا برای آن عناصر، شدت خطوط <span class="ltr-text">L</span> کاملاً بالا است. همچنین، کارایی تشخیص فوتون‌های خط <span class="ltr-text">L</span> بسیار بالاتر از فوتون‌های خط <span class="ltr-text">K</span> پرانرژی همان عنصر است. برای عناصر با اعداد اتمی بالا (یعنی <span class="ltr-text">Z</span> بزرگتر از حدود <span class="ltr-text">72</span>)، <span class="ltr-text">Lβ</span> یک جایگزین بسیار خوب برای <span class="ltr-text">Lα</span> ارائه می‌دهد و این خطوط حساسیت‌های قابل مقایسه‌ای دارند.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">به طور کلی، در یک ابزار <span class="ltr-text">WDXRF</span> معمولی، تمام عناصر با اعداد اتمی تا <span class="ltr-text">56</span> با خط <span class="ltr-text">Kα</span> خود اندازه‌گیری می‌شوند. برای عناصر با اعداد اتمی بالاتر، از خط <span class="ltr-text">Lα</span> استفاده می‌شود. برای طیف‌سنج‌های <span class="ltr-text">EDXRF</span> مجهز به ژنراتورهای <span class="ltr-text">SDD</span> (و تیوب‌ها) با حداکثر ولتاژ حداقل <span class="ltr-text">30 kV</span>، خطوط <span class="ltr-text">K</span> برای اندازه‌گیری عناصر تا حدود <span class="ltr-text">Z = 47</span> در دسترس هستند؛ طیف‌های خط <span class="ltr-text">L</span> برای تمام عناصر با اعداد اتمی بالاتر استفاده می‌شوند. نقطه دقیق تغییر بین طیف خط <span class="ltr-text">K</span> و خط <span class="ltr-text">L</span> به عواملی مانند کاربرد و ماده آند تیوب اشعه ایکس مورد استفاده بستگی دارد.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">روش‌های کمی‌سازی با استفاده از تکنیک‌های طیف‌سنجی روتین شامل اندازه‌گیری بلانک‌ها و استانداردهای با غلظت‌های عنصری متفاوت انجام می‌شود. شدت‌های اندازه‌گیری شده سپس برای پس‌زمینه و برای همپوشانی خط، در صورت لزوم، تصحیح می‌شوند. در تعدادی از موارد، یک رابطه خطی مستقیم بین شدت آنالیت و غلظت آن را می‌توان برقرار کرد. این به خصوص در مورد غلظت‌های پایین در یک ماتریس ثابت صادق است. با این حال، در حالت کلی‌تر، اصلاحات برای اثرات ماتریس مورد نیاز است. اثرات ماتریس عامل محدود کننده در دقت تجزیه و تحلیل نهایی نیستند، اما برای به دست آوردن یک اندازه‌گیری دقیق باید در نظر گرفته شوند.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">7.2 تکنیک‌های اصلاح ماتریس</h3>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">7.2.1 منشأ اثرات ماتریس</h4>
+        <p class="mb-4 text-gray-700 leading-relaxed"><span class="ltr-text">XRF</span> معمولاً برای نمونه‌های متراکم اعمال می‌شود، بدون متوسل شدن به انحلال نمونه در مقدار زیادی اسید یا سایر حلال‌ها. بنابراین، نمونه‌ها غلیظ باقی می‌مانند، در تضاد با بسیاری از تکنیک‌های دیگر. به همین دلیل، تکنیک <span class="ltr-text">XRF</span> مستعد اثرات ماتریس است، به این معنی که رابطه بین شدت یک آنالیت خاص و غلظت آن عموماً به سادگی و مستقیمی مانند نمونه‌های رقیق شده نیست. در مورد اخیر، این رابطه بین غلظت و شدت اغلب به صورت یک خط مستقیم بیان می‌شود. با این حال، وجود عناصر دیگر در غلظت‌های بالا می‌تواند باعث انحراف از این رابطه خط مستقیم شود. فیزیک انتشار و تشخیص اشعه ایکس به خوبی درک شده و برای مواد حجیم نسبتاً ساده است، و این یک پایه نظری محکم برای توصیف ریاضی اثرات ماتریس فراهم می‌کند. بنابراین اثرات ماتریس را می‌توان با استفاده از انواع تکنیک‌های ریاضی به دقت و درستی توصیف کرد، و چندین روش برای پرداختن به آنها توسعه یافته است. دو اثر ماتریس اصلی را می‌توان متمایز کرد و در ادامه مورد بحث قرار می‌گیرند - جذب و تقویت.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed"><strong>جذب:</strong> جذب به عنوان یک اثر ماتریس زمانی رخ می‌دهد که عناصر ماتریس و عنصر آنالیت خواص جذب متفاوتی برای تشعشع مشخصه آنالیت داشته باشند. اگر ضریب میرایی جرمی یک یا چند عنصر ماتریس بزرگتر از ضریب میرایی جرمی آنالیت باشد، ماتریس تشعشع آنالیت را بیشتر از حد انتظار جذب می‌کند و شدت اندازه‌گیری شده آنالیت کمتر خواهد بود. این منجر به یک منحنی کالیبراسیون مقعر می‌شود. اگر، از سوی دیگر، جذب عناصر ماتریس کمتر باشد، شدت بالاتری از آنالیت اندازه‌گیری خواهد شد و یک منحنی کالیبراسیون محدب مشاهده می‌شود. جذب به عنوان یک اثر ماتریس می‌تواند بزرگ باشد، شدت را تا <span class="ltr-text">100%</span> (و بیشتر) کاهش دهد یا آن را تا <span class="ltr-text">10%</span> "افزایش" دهد، بسته به آنالیت و عناصر ماتریس. بزرگی اثر جذب به طول موج خط تحلیلی مورد نظر و ترکیب نمونه بستگی دارد. در یک نمونه معین، اثر جذب می‌تواند برای خط مشخصه یک آنالیت قابل توجه باشد و برای دیگری نسبتاً ناچیز. اثر جذب همچنین می‌تواند برای همان آنالیت هنگام اندازه‌گیری بر روی دو خط مشخصه متفاوت، به طور قابل توجهی متفاوت باشد.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">سه فرآیندی که باعث جذب می‌شوند، اثر فوتوالکتریک، پراکندگی همدوس و پراکندگی ناهمدوس هستند. به طور کلی، فوتون‌ها با انرژی معین با افزایش عدد اتمی عنصر جاذب بیشتر جذب می‌شوند. همچنین، جذب توسط یک عنصر معین با افزایش انرژی فوتون به طور پیوسته و هموار کاهش می‌یابد. با این حال، هنگامی که انرژی فوتون از انرژی پیوند الکترون‌ها در یک پوسته داخلی فراتر می‌رود، اثر فوتوالکتریک (به <span class="ltr-text">3.1</span> یونیزاسیون و اثر فوتوالکتریک مراجعه کنید) باعث افزایش جذب می‌شود. این منجر به ناپیوستگی‌هایی در منحنی جذب در انرژی‌های مربوط به انرژی پیوند پوسته‌های الکترونی مربوطه می‌شود. این ناپیوستگی‌ها لبه‌های جذب نامیده می‌شوند؛ انرژی که در آن لبه جذب رخ می‌دهد برابر با انرژی پیوند پوسته الکترونی مربوطه است.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed"><strong>تقویت:</strong> تقویت به عنوان یک اثر ماتریس فرآیندی است که طی آن تشعشعات مشخصه عناصر ماتریس توسط اتم‌های آنالیت جذب می‌شوند و متعاقباً باعث تشعشعات مشخصه آنالیت می‌شوند. بنابراین شدت آنالیت تقویت می‌شود که منجر به منحنی‌های کالیبراسیون مقعر می‌شود. برای یک آنالیت معین، تمام خطوط مشخصه از یک سری به یک درجه تقویت می‌شوند. این به این دلیل است که علت اصلی تقویت، جذب فوتوالکتریک تشعشعات از عناصر ماتریس است. اثر تقویت معمولاً کوچکتر از اثر جذب است. این اثر در آلیاژهای عناصر واسطه ردیف اول، که می‌تواند به <span class="ltr-text">25%</span> برسد، بارزتر است. در بسیاری از کاربردهای دیگر، اثر تقویت کوچکتر است، اما هنوز به اندازه کافی مهم است که نیاز به بررسی و اصلاح داشته باشد.</p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">7.2.2 روش‌های پارامتر بنیادی</h4>
+        <p class="mb-4 text-gray-700 leading-relaxed">فرآیندهای فیزیکی درگیر در جذب و تحریک در <span class="ltr-text">XRF</span> به خوبی درک شده و مدل‌سازی ریاضی آنها آسان است. تمام موجودیت‌های مورد نیاز در انواع جداول و پایگاه‌های داده فهرست شده‌اند. محاسبات قبلاً خسته‌کننده و زمان‌بر بودند، اما با قدرت محاسباتی فعلی موجود، تلاش محاسباتی دیگر مانعی نیست. روش‌های پارامتر بنیادی بر اساس فرآیندهای فیزیکی زیربنایی حاکم بر فلوئورسانس اشعه ایکس، از جمله جزئیات هندسه ابزار، ماده آند تیوب اشعه ایکس، ولتاژ روی تیوب و ترکیب نمونه است. اشتقاق معادلات خارج از محدوده این فصل است، اما توسط کریس و بیرکس <span class="ltr-text">[10]</span> و شیرایوا و فوجینو <span class="ltr-text">[11]</span> مورد بررسی قرار گرفته است.</p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">7.2.3 اصلاح کامپتون</h4>
+        <p class="mb-4 text-gray-700 leading-relaxed">استفاده از تشعشعات پراکنده شده کامپتون به عنوان وسیله‌ای برای اصلاح اثرات ماتریس (و همچنین برای تغییرات در آماده‌سازی نمونه) توسط رینولدز <span class="ltr-text">[12]</span> و تیلور و آندرمان <span class="ltr-text">[13]</span> توصیف شده است. اصلاح کامپتون بر این واقعیت استوار است که شدت پراکندگی ناهمدوس (یا کامپتون) با ضریب میرایی جرمی نمونه رابطه معکوس دارد. در عمل، از یک خط مشخصه پرانرژی از آند تیوب استفاده می‌شود. اندازه‌گیری شدت خط تیوب پراکنده شده کامپتون بنابراین اطلاعاتی در مورد خواص جذب در طول موج خط پراکنده شده کامپتون را نشان می‌دهد. در نگاه اول این به نظر کاربرد محدودی دارد، اما در زمینه اشعه ایکس، مقادیر ضرایب میرایی جرمی برای همان نمونه در انرژی‌ها/طول موج‌های مختلف متناسب هستند. این رابطه، و این واقعیت که جذب منبع اصلی اثرات ماتریس است، توضیح می‌دهد که چرا اصلاح کامپتون یک روش اصلاح قدرتمند در انواع ماتریس‌ها است.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">با این حال، این روش به طور کلی قابل اجرا نیست و در مواردی که لبه‌های جذب قابل توجهی بین طول موج‌های تشعشعات پراکنده شده کامپتون، در طول موج خط تحلیلی مورد استفاده، وجود داشته باشد، شکست خواهد خورد. این اصلاح بر اساس رابطه بین پراکندگی کامپتون و خواص جذب نمونه است و تقویت را اصلاح نمی‌کند.</p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">7.2.4 الگوریتم‌های ضریب تأثیر</h4>
+        <p class="mb-4 text-gray-700 leading-relaxed">روش‌های اصلاح ماتریس مبتنی بر ضرایب تأثیر دارای فرمت کلی زیر هستند:</p>
+        <div class="formula-display">
+            \[C_i = I_i \left( 1 + \sum_{j=1}^{n-1} \alpha_{ij} C_j \right) \quad [18]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">(بر اساس لاشانس و تریل <span class="ltr-text">[14]</span>) که در آن <span class="ltr-text">Ci</span> و <span class="ltr-text">Cj</span> به ترتیب غلظت آنالیت <span class="ltr-text">i</span> و عنصر مزاحم <span class="ltr-text">j</span> هستند، و <span class="ltr-text">αij</span> ضریب تأثیر است که تأثیر عنصر مزاحم <span class="ltr-text">j</span> بر آنالیت <span class="ltr-text">i</span> را بیان می‌کند. تمام غلظت‌ها به عنوان کسر وزنی بیان می‌شوند. جمع در معادله <span class="ltr-text">[18]</span> دارای <span class="ltr-text">n − 1</span> جمله برای نمونه‌ای متشکل از <span class="ltr-text">n</span> عنصر یا ترکیب است؛ این یک ویژگی ساده و در عین حال اساسی این الگوریتم است. مجموعه معادلات مشابه با <span class="ltr-text">n</span> جمله در جمع منجر به مجموعه‌ای همگن از معادلات همزمان می‌شود که از آن فقط نسبت‌ها و نه مقادیر مطلق قابل استخراج هستند.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">زیرا مجموع غلظت‌های تمام عناصر (چه اندازه‌گیری شوند و چه نشوند) در یک نمونه همیشه برابر با <span class="ltr-text">1</span> است، یک عنصر را می‌توان حذف کرد. اکثر الگوریتم‌های ضریب تأثیر در نرم‌افزار بر اساس این معادله هستند، با این حال ممکن است در نحوه محاسبه مقادیر ضرایب تفاوت داشته باشند.</p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">7.2.5 ضرایب تأثیر تجربی</h4>
+        <p class="mb-4 text-gray-700 leading-relaxed">لاشانس و تریل <span class="ltr-text">[14]</span> اشاره می‌کنند که مقدار ضرایب باید از تئوری محاسبه شود، اما آنها فقط یک روش ساده و محدود ارائه می‌دهند که تقویت یا ماهیت چندرنگه پرتو فرودی را در نظر نمی‌گیرد. بنابراین، در بسیاری از موارد ضرایب با استفاده از روش‌های رگرسیون چندگانه تعیین می‌شدند. بسیاری از تغییرات اولیه در الگوریتم‌های ضریب تأثیر بر اساس تکنیک‌های رگرسیونی بودند که برای محاسبه مقدار ضرایب استفاده می‌شدند. با این حال، استفاده از روش‌های رگرسیون باید discouraged شود زیرا اغلب منجر به نشانه‌های بیش از حد خوش‌بینانه از دقت می‌شود و سپس اغلب در طول اعتبارسنجی شکست می‌خورند. این امر به خصوص در صورتی که به اندازه کافی مواد مرجع گواهی شده در کالیبراسیون استفاده نشود، مشکل‌ساز است. حداقل تعداد استانداردهای مورد استفاده باید حداقل <span class="ltr-text">3</span> برابر تعداد پارامترها باشد. هر یک از ضرایب تأثیر که مقدار آن توسط رگرسیون تعیین می‌شود، یک درجه آزادی را مصرف می‌کند، همانطور که تعیین شیب و عرض از مبدا نیز اینگونه است. تعداد کل پارامترهای قابل تعیین می‌تواند به سرعت برای یک آنالیت واحد افزایش یابد. به عنوان مثال، فرض کنید سه عنصر مزاحم وجود دارد، و بنابراین با شیب و عرض از مبدا، مجموعاً پنج پارامتر باید تعیین شوند. این به حداقل <span class="ltr-text">15</span> نمونه استاندارد مستقل و غیرهمبسته نیاز دارد. توجه داشته باشید که تکرارهای یک نمونه استاندارد به عنوان نمونه‌های منفرد شمارش نمی‌شوند، بلکه به عنوان یک نمونه واحد شمارش می‌شوند؛ این یک منبع رایج خطا است. همچنین، باید مراقب بود تا اطمینان حاصل شود که استانداردها غیرهمبسته هستند. این بدان معنی است که یک سری رقت از یک استاندارد معین را نمی‌توان زمانی که ضرایب تأثیر تجربی باید تعیین شوند، استفاده کرد. در یک سری رقت، دو (یا بیشتر) جزء <span class="ltr-text">A</span> و <span class="ltr-text">B</span> در یک جهت افزایش (یا کاهش) می‌یابند. بنابراین اثر جزء <span class="ltr-text">A</span> بر شدت آنالیت را نمی‌توان از اثرات جزء <span class="ltr-text">B</span> متمایز کرد، که منجر به مقادیر نادرست برای ضرایب تأثیر می‌شود.</p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">7.2.6 ضرایب تأثیر محاسبه شده نظری</h4>
+        <p class="mb-4 text-gray-700 leading-relaxed">د ژونگ <span class="ltr-text">[15]</span> اولین کسی بود که روشی را برای محاسبه ضرایب تأثیر، فقط با استفاده از تئوری برای حذف ترکیبی غیر از آنالیت، منتشر کرد. این الگوریتم هنوز امروزه رایج است. ترکیب حذف شده می‌تواند ماتریس غیر فلوئورسانس، مانند سلولز، یا ماتریس زمانی که غلظت آن گواهی نشده است، باشد. توجه داشته باشید که محدوده غلظتی که الگوریتم نتایج دقیق را ارائه می‌دهد، زمانی که اثرات ماتریس شدید هستند، نسبتاً محدود است. این یک نتیجه مستقیم از این واقعیت است که مقادیر ضریب تأثیر برای یک ترکیب خاص از نمونه محاسبه می‌شوند. برای تجزیه و تحلیل روتین که شامل محدوده‌های غلظت نسبتاً محدود است، این الگوریتم نتایج عالی ارائه می‌دهد. برخلاف حالتی که مقادیر ضرایب تأثیر توسط رگرسیون تعیین می‌شوند (به <span class="ltr-text">7.2.5</span> ضرایب تأثیر تجربی مراجعه کنید)، کالیبراسیون با استفاده از سری‌های رقت امکان‌پذیر است.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">7.3 توسعه روش اندازه‌گیری و کالیبراسیون</h3>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">7.3.1 مروری کلی</h4>
+        <p class="mb-4 text-gray-700 leading-relaxed">هنگامی که عناصر مورد علاقه شناسایی شدند، پارامترهای اندازه‌گیری طیف‌سنج باید به طور مناسب تنظیم شوند. این شامل تعیین شرایط اندازه‌گیری "ایده‌آل" برای هر عنصر است. لیست پارامترهایی که برای هر آنالیت باید انتخاب شوند می‌تواند شامل، به عنوان مثال، ولتاژ و جریان روی تیوب اشعه ایکس، بلور و کلیماتور (<span class="ltr-text">WDXRF</span>)، نوع فیلتر پرتو اولیه (در صورت استفاده) و سایر پارامترها باشد. برای عناصری که از نظر عدد اتمی مشابه هستند، تنظیمات کاملاً مشابه خواهند بود. دقت اندازه‌گیری‌های <span class="ltr-text">XRF</span> از نظر تئوری توسط <span class="ltr-text">CSE</span> محدود می‌شود. نشان داده شده است که <span class="ltr-text">CSE</span> اندازه‌گیری <span class="ltr-text">N</span> شمارش (فوتون) توسط ریشه دوم <span class="ltr-text">N</span> داده می‌شود. یک روش پذیرفته شده عمومی است که زمان‌های اندازه‌گیری را برای به دست آوردن یک <span class="ltr-text">CSE</span> قابل قبول برای هر عنصر مورد علاقه تعیین کنیم. خطاهای آماده‌سازی نمونه و <span class="ltr-text">CSE</span> بزرگترین عوامل موثر بر دقت کلی تحلیلی هستند. هنگامی که زمان اندازه‌گیری تعیین شد، اطمینان از مناسب بودن موقعیت‌های پس‌زمینه و روش‌های برازش قله نیز مهم است.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">پس از به دست آوردن شدت‌های خالص عناصر مورد علاقه از تعداد کافی استانداردهای مرجع، می‌توان کالیبراسیون را انجام داد. برای غلظت‌های پایین آنالیت‌ها در یک ماتریس ثابت، رگرسیون خطی ممکن است مناسب باشد. هنگام ارزیابی نمونه‌ها با غلظت‌های بالاتر آنالیت‌ها، کالیبراسیون شامل اصلاح اثرات ماتریس نیز می‌شود. این واقعیت که تکنیک <span class="ltr-text">EDXRF</span> قادر به اندازه‌گیری اجزای آلی یک ترکیب دارویی واقعی نیست، چندان نگران‌کننده نیست. این امر قطعاً درست است اگر ترکیب ماتریس ثابت باشد، و اگر محتوای کلی عناصر قابل اندازه‌گیری پایین باشد. اما اگر این دو شرط برآورده نشوند، تفاوت در خواص پراکندگی می‌تواند منجر به خطاهای محاسباتی شود در صورتی که اصلاح نشوند. خوشبختانه، استراتژی‌های متعددی وجود دارد که این تفاوت‌ها را در خود جای می‌دهند، مانند روش پارامترهای بنیادی یا روش اصلاح کامپتون. ماهیت اثرات ماتریس، و همچنین روش‌های اصلاح آنها، در بالا مورد بحث قرار گرفته‌اند. کاربرد این روش‌ها برای کالیبراسیون و تجزیه و تحلیل ناشناخته‌ها در بخش‌های زیر مورد بحث قرار خواهد گرفت.</p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">7.3.2 کالیبراسیون با استفاده از الگوریتم‌های ضریب تأثیر</h4>
+        <p class="mb-4 text-gray-700 leading-relaxed">کالیبراسیون با استفاده از ضرایب تأثیر کاملاً ساده است. هنگامی که مقادیر ضرایب برای هر یک از نمونه‌های استاندارد محاسبه شد، جمع‌بندی</p>
+        <div class="formula-display">
+            \[M_i = \left( 1 + \sum_{j=1}^{n-1} \alpha_{ij} C_j \right) \quad [19]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">را می‌توان محاسبه کرد که در آن برای نمونه‌های استاندارد، غلظت‌ها، <span class="ltr-text">Cj</span>، معلوم هستند. مقدار <span class="ltr-text">Mi</span> برای یک نمونه استاندارد با مقدار آن برای یک نمونه استاندارد دیگر متفاوت خواهد بود، و مهم نیست که این تفاوت قابل توجه یا جزئی (بزرگ یا کوچک) باشد. اگر اصلاحات کافی برای پس‌زمینه انجام شده باشد، کالیبراسیون سپس با</p>
+        <div class="formula-display">
+            \[C_i = K_i I_i M_i \quad [20]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">نشان داده می‌شود که در آن حاصل‌ضرب شدت اندازه‌گیری شده، <span class="ltr-text">Ii</span>، و مقدار مربوطه برای اثر ماتریس، <span class="ltr-text">Mi</span>، بر اساس غلظت معلوم <span class="ltr-text">Ci</span> رگرسیون می‌شود تا شیب <span class="ltr-text">Ki</span> تعیین شود. این معادله فرض می‌کند که شدت <span class="ltr-text">Ii</span> به درستی برای پس‌زمینه اصلاح شده است. در مواردی که شدت پس‌زمینه بین نمونه‌ها و استانداردها ثابت است، می‌توان از یک معادله کمی اصلاح شده استفاده کرد:</p>
+        <div class="formula-display">
+            \[C_i = B_i + K_i I_i M_i \quad [21]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">که در آن <span class="ltr-text">Bi</span> شدت پس‌زمینه است. در این حالت، هم <span class="ltr-text">Bi</span> و هم <span class="ltr-text">Ki</span> با تجزیه و تحلیل رگرسیون تعیین می‌شوند. در شرایطی که شدت پس‌زمینه بین نمونه‌ها، یا بین نمونه‌ها و استانداردها به طور قابل توجهی متفاوت است، باید اصلاح پس‌زمینه مناسب بر روی شدت‌های اندازه‌گیری شده اعمال شود و شدت‌های اصلاح شده برای کالیبراسیون استفاده شوند.</p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">7.3.3 کالیبراسیون با استفاده از اصلاح کامپتون</h4>
+        <p class="mb-4 text-gray-700 leading-relaxed">در این حالت، هم شدت آنالیت، <span class="ltr-text">Ii</span>، و هم شدت خط پراکنده شده کامپتون، <span class="ltr-text">IC</span>، اندازه‌گیری می‌شوند. شدت کامپتون با ضریب میرایی جرمی رابطه معکوس دارد <span class="ltr-text">[12]</span>، یا</p>
+        <div class="formula-display">
+            \[I_C = k / \mu_m \quad [22]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">ترکیب این با معادله <span class="ltr-text">[20]</span> منجر به:</p>
+        <div class="formula-display">
+            \[C_i = K'_i \cdot I_i / I_C \quad [23]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">شدت آنالیت و خط کامپتون بر روی مجموعه‌ای از نمونه‌های استاندارد اندازه‌گیری شده و بر اساس غلظت آنالیت رگرسیون می‌شوند تا مقدار شیب کالیبراسیون تعیین شود. یک عامل پس‌زمینه، <span class="ltr-text">Bi</span>، نیز قابل تعیین است.</p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">7.3.4 کالیبراسیون با استفاده از روش‌های پارامتر بنیادی</h4>
+        <p class="mb-4 text-gray-700 leading-relaxed">فرآیندهای فیزیکی درگیر در جذب و تحریک در طول <span class="ltr-text">XRF</span> به خوبی درک شده‌اند، و امکان محاسبه مقدار اثر ماتریس بر اساس چندین عامل وجود دارد: ترکیب نمونه، نوع و تنظیمات تیوب، هندسه طیف‌سنج، و پارامترهای بنیادی:</p>
+        <div class="formula-display">
+            \[M_i = f(C_i, C_j, \ldots, C_n, \text{tube, geometry, fp}) \quad [24]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">این مقدار <span class="ltr-text">Mi</span> برای هر استاندارد و برای هر آنالیت مورد علاقه محاسبه می‌شود و سپس به روش معمول اعمال می‌گردد.</p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">7.3.5 روش استاندارد داخلی</h4>
+        <p class="mb-4 text-gray-700 leading-relaxed">جایگزینی برای روش‌های توصیف شده در بالا، روش استاندارد داخلی است. مقدار ثابتی از یک عنصر <span class="ltr-text">s</span> (غیر از آنالیت <span class="ltr-text">i</span>) به تمام نمونه‌ها اضافه می‌شود. عنصر <span class="ltr-text">s</span> به گونه‌ای انتخاب می‌شود که در نمونه‌ها وجود نداشته باشد، بنابراین اطمینان حاصل می‌شود که غلظت آن برای تمام نمونه‌ها یکسان است. در غیاب اثرات ماتریس، شدت اندازه‌گیری شده تشعشعات مشخصه آن نیز ثابت خواهد بود. هرگونه تغییر در شدت آن (به غیر از تغییر ناشی از خطای آماری شمارش) به وجود اثرات ماتریس نسبت داده می‌شود. ایده این است که عنصر استاندارد داخلی <span class="ltr-text">s</span> را به گونه‌ای انتخاب کنیم که شدت تشعشعات مشخصه آن تحت تأثیر همان اثرات ماتریس به عنوان شدت عنصر آنالیت مورد نظر قرار گیرد. هر دو شدت – آنالیت و عنصر اضافه شده – بسته به اثر ماتریس به نسبت یکدیگر افزایش (یا کاهش) می‌یابند. معادله <span class="ltr-text">[22]</span> را می‌توان برای عنصر استاندارد داخلی <span class="ltr-text">s</span> اصلاح کرد:</p>
+        <div class="formula-display">
+            \[C_s = K_s I_s M_s \quad [25]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">در این معادله، <span class="ltr-text">Cs</span> یک ثابت است. با گرفتن نسبت معادله <span class="ltr-text">[20]</span> و معادله <span class="ltr-text">[25]</span> و حل برای تنها مجهول، <span class="ltr-text">Ci</span>، به دست می‌آید:</p>
+        <div class="formula-display">
+            \[C_i = \left( \frac{K_i C_s M_s}{K_s M_i} \right) \cdot \left( \frac{I_i}{I_s} \right) \quad [26]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">توجه به این نکته مهم است که جملات کسر اول در معادله <span class="ltr-text">[26]</span> یا همه ثابت هستند (<span class="ltr-text">Ki, Ks, and Cs</span>) یا با یکدیگر متناسب هستند (<span class="ltr-text">Mi/Ms</span>). بنابراین معادله <span class="ltr-text">[26]</span> را می‌توان به</p>
+        <div class="formula-display">
+            \[C_i = K^*_i \left( \frac{I_i}{I_s} \right) \quad [27]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">کاهش داد که در آن تمام این ثابت‌ها در یک متغیر واحد <span class="ltr-text">Ki*</span> جمع‌آوری شده‌اند.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">چالش اصلی در اعمال این روش، انتخاب عنصری است که به عنوان استاندارد داخلی استفاده شود. این عنصر نباید در نمونه‌ها وجود داشته باشد (یا حداکثر، در سطوح بسیار پایینی که در تجزیه و تحلیل تداخل ایجاد نمی‌کند، وجود داشته باشد). همچنین، تشعشعات مشخصه آن باید تحت تأثیر همان اثرات ماتریس به عنوان عنصر(های) آنالیت مورد نظر قرار گیرد، و طیف انتشار آن نباید باعث تداخل شود. به طور خاص، باید مراقب بود تا اطمینان حاصل شود که عنصر آنالیت و استاندارد داخلی هر دو تحت تأثیر (یا هر دو تحت تأثیر قرار نمی‌گیرند) تقویت توسط یک عنصر ماتریس قرار دارند. به همین ترتیب، هنگامی که آنالیت در حضور عناصر ماتریس است که به شدت تشعشعات مشخصه آنالیت را جذب می‌کنند، همین امر باید در مورد شدت مشخصه عنصر استاندارد داخلی نیز صدق کند.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">هنگامی که نمونه‌ها ماتریس‌های آلی معمولی دارو هستند، برآورده کردن نیاز اساسی که تشعشعات مشخصه هم آنالیت(ها) و هم استاندارد داخلی تحت تأثیر همان اثرات ماتریس قرار دارند، آسان است. این ماتریس‌های آلی تشعشعات مشخصه عناصر تشکیل‌دهنده خود را نشان نمی‌دهند، که یافتن یک عنصر استاندارد داخلی مناسب را آسان‌تر می‌کند. یک راهنمای ساده این است که عنصری را انتخاب کنید که در نمونه‌ها وجود نداشته باشد و دارای خط انتشار نزدیک به خط آنالیت (از نظر طول موج یا انرژی) باشد. خطوط مشخصه خود نیازی به یکسان بودن یا حتی از یک سری بودن ندارند، و این روش حتی زمانی که خط تحلیلی <span class="ltr-text">Kα</span> و خط استاندارد داخلی، به عنوان مثال، <span class="ltr-text">Lβ</span> باشد نیز کار می‌کند. لازم به ذکر است که هیچ الزامی برای خالص بودن عنصر استاندارد داخلی وجود ندارد. ترکیبات پایدار که به راحتی در یک حلال حل می‌شوند، می‌توانند استفاده شوند. حلال، در بسیاری از موارد، همان ماده پایه نمونه‌ها و استانداردهای کالیبراسیون است. اگر قرار است از بیش از یک عنصر استاندارد داخلی استفاده شود، توصیه می‌شود که هر دو عنصر/ترکیب در یک محلول استاندارد داخلی واحد اضافه شوند تا خطاها به حداقل برسند.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">7.4 معیارهای مناسبت سیستم</h3>
+        <p class="mb-4 text-gray-700 leading-relaxed">ویژگی‌های عملکردی که مناسبت یک روش <span class="ltr-text">XRF</span> را نشان می‌دهند، مشابه آنهایی هستند که برای هر روش تحلیلی مورد نیاز است. بحثی در مورد اصول کلی قابل اجرا در اعتبارسنجی روش‌های دارونامه‌ای <a href="1225.html" class="text-blue-600 hover:underline" target="_blank">1225</a> یافت می‌شود.</p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">7.4.1 حد تشخیص و حد کمی‌سازی</h4>
+        <p class="mb-4 text-gray-700 leading-relaxed">حد تشخیص پایین را می‌توان به صورت زیر بیان کرد:</p>
+        <div class="formula-display">
+            \[LLD = (3/S) \cdot \sqrt{I_b/t_b} \quad [28]\]
+        </div>
+        <p class="mb-4 text-gray-700 leading-relaxed">که در آن <span class="ltr-text">Inet</span> نشان‌دهنده نرخ شمارش خالص در غلظت <span class="ltr-text">C</span> است؛ <span class="ltr-text">Ib</span> نرخ شمارش پس‌زمینه است؛ و <span class="ltr-text">tb</span> زمان اندازه‌گیری پس‌زمینه است. قابل ذکر است که حد تشخیص با ریشه دوم زمان اندازه‌گیری بهبود می‌یابد.</p>
+        <p class="mb-4 text-gray-700 leading-relaxed">حد کمی‌سازی را می‌توان با محاسبه انحراف معیار <span class="ltr-text">NLT</span> شش اندازه‌گیری تکراری یک بلانک و ضرب در <span class="ltr-text">10</span> تخمین زد. روش‌های مناسب دیگر نیز ممکن است استفاده شوند (به <a href="1225.html" class="text-blue-600 hover:underline" target="_blank">1225</a> مراجعه کنید).</p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">7.4.2 پایداری طولانی‌مدت و اصلاح رانش</h4>
+        <p class="mb-4 text-gray-700 leading-relaxed">در شرایط عملیاتی استاندارد، رانش ابزاری طیف‌سنج‌های اشعه ایکس کمتر از <span class="ltr-text">1%</span> نسبی است و می‌تواند برای ابزارهای پیشرفته در آزمایشگاه‌های با نگهداری خوب در همان بازه زمانی تا <span class="ltr-text">0.1%</span> نسبی باشد. برای نظارت بر رانش ابزار، یک یا چند نمونه پایدار با شدت‌های معقول (برای به حداقل رساندن <span class="ltr-text">CSE</span>) برای آنالیت‌های مورد علاقه را می‌توان به طور منظم اندازه‌گیری کرد. نیازی به استفاده از نمونه‌های اصلاح رانش از نوع خاص نیست. استفاده از نمونه‌های شیشه‌ای و آلیاژها رایج است. اکثر ابزارها دارای روال‌های اصلاح رانش در نرم‌افزار هستند، و از آنجا که <span class="ltr-text">XRF</span> یک تکنیک بسیار قوی است، ممکن است فقط لازم باشد هر ماه یک بار از یک ناظر رانش استفاده شود. با این حال، توصیه می‌شود که اکثر آزمایشگاه‌ها نظارت بر رانش را با فرکانس بیشتری انجام دهند.</p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">7.4.3 تجزیه و تحلیل</h4>
+        <p class="mb-4 text-gray-700 leading-relaxed">هنگامی که یک روش از طریق فرآیند کالیبراسیون برقرار شد، می‌توان تجزیه و تحلیل نمونه را انجام داد. ضروری است که اطمینان حاصل شود نمونه‌ها و استانداردها دقیقاً به یک روش یکسان رفتار می‌شوند. این شامل آماده‌سازی نمونه و ارائه نمونه به ابزار است.</p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">7.4.4 محاسبات و گزارش‌دهی</h4>
+        <p class="mb-4 text-gray-700 leading-relaxed">در صورتی که از روش نمونه پلت فشرده آزاد (یعنی فشرده شده بدون چسب) استفاده شود، نتایج طیف‌سنج نمایانگر غلظت‌های نهایی نمونه هستند و نیازی به محاسبات بیشتر نیست. به همین ترتیب، هر دو پودر شل (یعنی مواد خالص و ریز) و مایعات رقیق نشده که در ظروف نمونه یکبار مصرف اندازه‌گیری می‌شوند، نیازی به محاسبه بیشتر ندارند و نتایج طیف‌سنج نمایانگر غلظت‌های نهایی نمونه هستند. هر ماده‌ای که رقیق شده باشد، مانند یک مایع یا پلت فشرده، به محاسبه اضافی نیاز خواهد داشت. اکثر ابزارهای <span class="ltr-text">XRF</span> مدرن همراه با بسته‌های نرم‌افزاری ارائه می‌شوند که شامل توابع محاسباتی هستند که عوامل رقت را در خود جای می‌دهند و به طور خودکار غلظت‌های نمونه را برمی‌گردانند. برای نمونه‌های پلت فشرده رقیق شده، واحدهای گزارش شده ممکن است درصد وزنی (<span class="ltr-text">%</span>) یا <span class="ltr-text">ppm</span> باشند. واحدهای واقعی برای غلظت‌ها اهمیت کمی دارند، تا زمانی که مراقبت لازم برای کار با عوامل تبدیل مناسب انجام شده باشد. اگر کالیبراسیون برای نمونه‌های مایع به گونه‌ای تنظیم شده باشد که نتایج را بر حسب <span class="ltr-text">µg/mL</span> ارائه دهد، غلظت نهایی یک عنصر معین را می‌توان بر حسب <span class="ltr-text">µg/g</span> از غلظت عنصر محلول بر حسب <span class="ltr-text">µg/mL</span> محاسبه کرد.</p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">8. منابع اطلاعاتی اضافی</h2>
+        <ol class="list-decimal list-inside space-y-1 text-gray-700">
+            <li><span class="ltr-text">Beckhoff B, Kanngießer B, Langhoff N, Wedell R, Wolff H, editors. In: Handbook of practical X-ray fluorescence analysis. Berlin: Springer Verlag; 2006. p. 1–878.</span></li>
+            <li><span class="ltr-text">Buhrke VE, Jenkins R, Smith DK, editors. A practical guide for the preparation of specimens for X-ray fluorescence and X-ray diffraction analysis. New York: John Wiley & Sons; 1998.</span></li>
+            <li><span class="ltr-text">Greiner W. Quantum mechanics: An introduction. 1st ed. Berlin: Springer Verlag; 1994.</span></li>
+            <li><span class="ltr-text">IUPAC. Compendium of chemical terminology (the “Gold Book”). 2nd ed. McNaught AD, Wilkinson A, compilers. Oxford: Blackwell Scientific Publications;1997. [Nic M, Jirat J, Kosata B. XML on-line corrected version available: http://goldbook.iupac.org. Jenkins A, updated compilation; 2006.]</span></li>
+            <li><span class="ltr-text">IUPAC. Nomenclature, symbols, units and their usage in spectrochemical analysis–VIII. Nomenclature system for X-ray spectroscopy. (Recommendations 1991).</span></li>
+            <li><span class="ltr-text">Jenkins R, Manne R, Robin R, Sénémaund C. Nomenclature, symbols, units and their usage in spectrochemical analysis. VIII. Nomenclature system for X-ray spectroscopy. Pure Appl Chem. 1991;63:735–746.</span></li>
+            <li><span class="ltr-text">Jenkins R, Manne R, Robin R, Sénémaund C. Nomenclature, symbols, units and their usage in spectrochemical analysis. VIII. Nomenclature system for X-ray spectroscopy. X-Ray Spectrom. 1991;20:149–155.</span></li>
+            <li><span class="ltr-text">Klockenkämper R. Total-reflection X-ray fluorescence analysis. New York: John Wiley & Sons; 1996.</span></li>
+            <li><span class="ltr-text">van Grieken R, Markowicz A, editors. In: Handbook of X-ray spectrometry. Second edition: revised and updated. New York: Marcel Dekker; 1968.</span></li>
+            <li><span class="ltr-text">Vrebos B. X-ray fluorescence analysis. In: Cullen M, editor. Atomic spectroscopy in elemental analysis. Boca Raton, FL: Blackwell Publishing Ltd.; 2003.</span></li>
+            <li><span class="ltr-text">Willis JP, Duncan AR. Understanding XRF spectrometry. 2nd ed. Vol 1. Almelo: PANalytical B.V.; 2013.</span></li>
+        </ol>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">9. منابع</h2>
+        <ol class="list-decimal list-inside space-y-1 text-gray-700">
+            <li><span class="ltr-text">Veigele WJ. In: Robinson JW, editor. Handbook of spectroscopy. Cleveland OH: CRC Press, 1974. p. 28.</span></li>
+            <li><span class="ltr-text">Bearden JA. X-ray wavelengths. Rev Mod Phys. 1967;39:78–124.</span></li>
+            <li><span class="ltr-text">Willis JP, Duncan AR. Understanding XRF spectrometry. Vol 1. Almelo: PANalytical B.V.; 2008.</span></li>
+            <li><span class="ltr-text">Greiner W. Quantum mechanics: an introduction. 4th ed. Berlin: Springer Verlag; 2001.</span></li>
+            <li><span class="ltr-text">Bambynek W, Crasemann B, Fink RW, Freund HU, Mark H, Swift CD, Price RE, Venugopala Rao P. Rev Mod Phys. 1972;44:716–813.</span></li>
+            <li><span class="ltr-text">Hubbell JH, Trehan PN, Singh N, Chand B, Mehta D, Garg ML, Garg RR, Singh S, Puri S. A review, bibliography, and tabulation of K, L, and higher atomic shell X-ray fluorescence yields. J Phys Chem Ref Data. 1994;23(2):339–364.</span></li>
+            <li><span class="ltr-text">Wolska J, Vrebos B, Brouwer P. Analysis of fuels, lubricants, and greases using X-ray fluorescence spectrometry. J ASTM Int. 2006;3(1):98–107.</span></li>
+            <li><span class="ltr-text">Venugopala Rao P, Chen MH, Craseman B. Atomic vacancy distributions produced by inner-shell ionization. Phys Rev A. 1972;5:997.</span></li>
+            <li><span class="ltr-text">Elam WT, Ravel BD, Sieber JR. A new atomic database for X-ray spectroscopic calculations. Rad Phys Chem. 2002;63:121–128.</span></li>
+            <li><span class="ltr-text">Criss JW, Birks LS. Calculation methods for fluorescent X-ray spectrometry empirical coefficients vs. fundamental parameters. Anal Chem. 1968;40:1080–1086.</span></li>
+            <li><span class="ltr-text">Shiraiwa T, Fujino N. Adv X-Ray Anal. 1968;11:63–94.</span></li>
+            <li><span class="ltr-text">Reynolds RC Jr. Matrix corrections in trace element analysis by X-ray fluorescence: estimation of the mass absorption coefficient by Compton scattering. Am Mineral. 1963;48:1133–1143.</span></li>
+            <li><span class="ltr-text">Taylor DL, Andermann G. Evaluation of an isolated-atom model for internal standardization in X-ray fluorescence analysis. Anal Chem. 1971;43:712–716.</span></li>
+            <li><span class="ltr-text">Lachance GR, Traill RJ. A practical solution to the matrix problem in X-ray analysis. Can J Spectrosc. 1966;11:43–48.</span></li>
+            <li><span class="ltr-text">de Jongh WK. X-ray fluorescence analysis applying theoretical matrix correction. Stainless steel. X-Ray Spectrom. 1973;2:151–158.</span></li>
+        </ol>
+    </div>
+</body>
+</html>

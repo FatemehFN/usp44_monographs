@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مونوگراف بنزوات سدیم (USP)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .tab-active {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        .tab-inactive {
+            border-color: transparent;
+            color: #6b7280;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+        .interactive-card {
+            background-color: #e0f2fe;
+            border: 1px solid #90cdf4;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">بنزوات سدیم (USP)</h1>
+
+        <div class="flex justify-center mb-6 border-b border-gray-200">
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" data-tab="definition">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="identification">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="assay">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="impurities">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="specific-tests">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="additional-requirements">الزامات اضافی</button>
+        </div>
+
+        <div id="definition" class="tab-content">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+                <p>بنزوات سدیم حاوی نلت <span class="ltr-text">99.0%</span> و نمت <span class="ltr-text">101.0%</span> بنزوات سدیم (<span class="ltr-text">C7H5NaO2</span>) است که بر اساس پایه انیدروس محاسبه می‌شود.</p>
+            </div>
+        </div>
+
+        <div id="identification" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+                <p>تغییر به صورت زیر:</p>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آزمون‌های شناسایی طیف‌سنجی</h4>
+                    <p>▲ <span class="ltr-text">197</span>▲، طیف‌سنجی مادون قرمز: <span class="ltr-text">197K</span>▲ (CN 1-May-2020)</p>
+                    <p>نمونه: نمونه خشک نشده</p>
+                    <p>معیارهای پذیرش: الزامات را برآورده می‌کند.</p>
+                </div>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آزمون‌های شناسایی — عمومی، سدیم</h4>
+                    <p><span class="ltr-text">191</span>: الزامات را برآورده می‌کند.</p>
+                </div>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">زمان حفظ</h4>
+                    <p>زمان حفظ پیک اصلی محلول نمونه با محلول استاندارد مطابقت دارد، همانطور که در سنجش به دست آمده است.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="assay" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">روش کار</h3>
+                <p>محلول A: یک محلول <span class="ltr-text">20-mM</span> از پتاسیم فسفات مونوبازیک را با اسید فسفریک به pH <span class="ltr-text">2.5</span> تنظیم کنید.</p>
+                <p>فاز متحرک: محلول A و استونیتریل (<span class="ltr-text">70:30</span>)</p>
+                <p>رقیق‌کننده: آب و استونیتریل (<span class="ltr-text">50:50</span>)</p>
+                <p>محلول سیستم مناسبت: <span class="ltr-text">0.1</span> میلی‌گرم بر میلی‌لیتر از USP سالیسیلیک اسید RS و <span class="ltr-text">0.1</span> میلی‌گرم بر میلی‌لیتر از USP بنزوئیک اسید RS در رقیق‌کننده.</p>
+                <p>محلول استاندارد: <span class="ltr-text">0.1</span> میلی‌گرم بر میلی‌لیتر از USP بنزوئیک اسید RS در رقیق‌کننده.</p>
+                <p>محلول نمونه: <span class="ltr-text">0.1</span> میلی‌گرم بر میلی‌لیتر از بنزوات سدیم در رقیق‌کننده.</p>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم کروماتوگرافی</h4>
+                <p>(به کروماتوگرافی á<span class="ltr-text">621</span>ñ، مناسبت سیستم مراجعه کنید.)</p>
+                <p>حالت: LC</p>
+                <p>آشکارساز: UV <span class="ltr-text">230</span> نانومتر</p>
+                <p>ستون: <span class="ltr-text">4.6-mm</span> × <span class="ltr-text">15-cm</span>؛ بسته‌بندی <span class="ltr-text">5-µm</span> L1</p>
+                <p>دمای ستون: <span class="ltr-text">25°</span></p>
+                <p>نرخ جریان: <span class="ltr-text">1.0</span> میلی‌لیتر در دقیقه</p>
+                <p>حجم تزریق: <span class="ltr-text">10</span> میکرولیتر</p>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مناسبت سیستم</h4>
+                <p>نمونه‌ها: محلول سیستم مناسبت و محلول استاندارد</p>
+                <p>[توجه — زمان‌های حفظ نسبی بنزوئیک اسید و سالیسیلیک اسید به ترتیب تقریباً <span class="ltr-text">1.0</span> و <span class="ltr-text">1.2</span> است.]</p>
+                <p>الزامات مناسبت</p>
+                <p>تفکیک: نلت <span class="ltr-text">3.0</span> بین بنزوئیک اسید و سالیسیلیک اسید، محلول سیستم مناسبت.</p>
+                <p>انحراف معیار نسبی: نمت <span class="ltr-text">0.5%</span> برای بنزوئیک اسید، محلول استاندارد.</p>
+                <p>ضریب دم‌داری: نمت <span class="ltr-text">2.0</span> برای بنزوئیک اسید، محلول استاندارد.</p>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل</h4>
+                <p>نمونه‌ها: محلول استاندارد و محلول نمونه</p>
+                <p>درصد بنزوات سدیم (<span class="ltr-text">C7H5NaO2</span>) را در قسمت برداشته شده از بنزوات سدیم محاسبه کنید:</p>
+                <div class="formula-display">
+                    <span>Result = (r<sub>U</sub>/r<sub>S</sub>) &times; (C<sub>S</sub>/C<sub>U</sub>) &times; (M<sub>r1</sub>/M<sub>r2</sub>) &times; 100</span>
+                </div>
+                <p><span class="ltr-text">r<sub>U</sub></span> = مساحت پیک بنزوئیک اسید از محلول نمونه</p>
+                <p><span class="ltr-text">r<sub>S</sub></span> = مساحت پیک بنزوئیک اسید از محلول استاندارد</p>
+                <p><span class="ltr-text">C<sub>S</sub></span> = غلظت بنزوئیک اسید در محلول استاندارد، تصحیح شده برای خلوص (میلی‌گرم بر میلی‌لیتر)</p>
+                <p><span class="ltr-text">C<sub>U</sub></span> = غلظت بنزوات سدیم در محلول نمونه (میلی‌گرم بر میلی‌لیتر)</p>
+                <p><span class="ltr-text">M<sub>r1</sub></span> = وزن مولکولی بنزوات سدیم، <span class="ltr-text">144.10</span></p>
+                <p><span class="ltr-text">M<sub>r2</sub></span> = وزن مولکولی بنزوئیک اسید، <span class="ltr-text">122.12</span></p>
+                <p>معیارهای پذیرش: <span class="ltr-text">99.0%–101.0%</span> بر اساس پایه انیدروس.</p>
+            </div>
+        </div>
+
+        <div id="impurities" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+                <p>این بخش در متن منبع ارائه نشده است.</p>
+            </div>
+        </div>
+
+        <div id="specific-tests" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تعیین آب، روش I</h4>
+                    <p><span class="ltr-text">921</span>: نمت <span class="ltr-text">1.5%</span></p>
+                </div>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">قلیایی بودن</h4>
+                    <p>محلول نمونه: <span class="ltr-text">2</span> گرم در <span class="ltr-text">20</span> میلی‌لیتر آب داغ.</p>
+                    <p>تحلیل: به محلول نمونه <span class="ltr-text">2</span> قطره فنل فتالئین TS اضافه کنید.</p>
+                    <p>معیارهای پذیرش: رنگ صورتی تولید شده، در صورت وجود، با افزودن <span class="ltr-text">0.20</span> میلی‌لیتر اسید سولفوریک <span class="ltr-text">0.10</span> نرم، حذف می‌شود.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="additional-requirements" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری</h3>
+                <p>در ظروف خوب بسته نگهداری شود.</p>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP</h3>
+                <p><span class="ltr-text">11</span></p>
+                <ul>
+                    <li>USP بنزوئیک اسید RS</li>
+                    <li>USP سالیسیلیک اسید RS</li>
+                    <li>USP بنزوات سدیم RS</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                tabContents.forEach(content => {
+                    content.classList.add('hidden');
+                });
+                tabButtons.forEach(btn => {
+                    btn.classList.remove('tab-active');
+                    btn.classList.add('tab-inactive');
+                });
+
+                const targetTab = document.getElementById(button.getAttribute('data-tab'));
+                targetTab.classList.remove('hidden');
+                button.classList.remove('tab-inactive');
+                button.classList.add('tab-active');
+            });
+        });
+
+        // Initialize with the first tab active
+        document.getElementById('definition').classList.remove('hidden');
+        document.querySelector('.tab-button[data-tab="definition"]').classList.add('tab-active');
+    </script>
+</body>
+</html>

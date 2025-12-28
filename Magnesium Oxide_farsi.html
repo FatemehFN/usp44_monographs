@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مونوگراف اکسید منیزیم (USP)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .tab-active {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        .tab-inactive {
+            border-color: transparent;
+            color: #6b7280;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+        .interactive-card {
+            background-color: #e0f2fe;
+            border: 1px solid #90cdf4;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 0.5rem;
+        }
+        .tab-button {
+            cursor: pointer;
+            transition: color 0.3s, border-color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">اکسید منیزیم</h1>
+
+        <div class="flex justify-center mb-6 border-b border-gray-200">
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab(event, 'definition')">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'identification')">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'assay')">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'impurities')">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'specific_tests')">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'additional_requirements')">الزامات اضافی</button>
+        </div>
+
+        <!-- Definition Tab -->
+        <div id="definition" class="tab-content">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+                <p class="mb-4">اکسید منیزیم، پس از احتراق، باید حداقل <span class="ltr-text">96.0%</span> و حداکثر <span class="ltr-text">100.5%</span> اکسید منیزیم (<span class="ltr-text">MgO</span>) را دارا باشد.</p>
+            </div>
+        </div>
+
+        <!-- Identification Tab -->
+        <div id="identification" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایش‌های شناسایی - عمومی á191ñ</h3>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آزمایش‌های شناسایی شیمیایی، منیزیم</h4>
+                <p class="mb-2">نمونه: محلولی در اسید هیدروکلریک رقیق شده.</p>
+                <p class="mb-2">معیارهای پذیرش: مطابق با الزامات.</p>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">اضافه کردن موارد زیر:</h4>
+                <div class="card interactive-card">
+                    <p class="mb-2">▲• B. زمان نگهداری پیک منیزیم محلول نمونه با زمان نگهداری محلول استاندارد مطابقت دارد، همانطور که در سنجش به دست می‌آید.▲ (لازم الاجرا از 1 ژوئن 2021)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Assay Tab -->
+        <div id="assay" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">تغییر برای خواندن:</h3>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش اجرا</h4>
+                <div class="card interactive-card">
+                    <p class="mb-2">▲از آب با مقاومت <span class="ltr-text">18</span> مگا اهم-سانتی‌متر یا بیشتر برای تهیه محلول‌ها استفاده کنید.</p>
+                    <p class="mb-2">فاز متحرک: <span class="ltr-text">48</span> میلی مولار اسید متانسولفونیک.</p>
+                    <p class="mb-2">[نکته—استفاده از تکنیک‌های مناسب به دام انداختن کاتیونی برای اطمینان از عاری بودن فاز متحرک از تمام ناخالصی‌های کاتیونی توصیه می‌شود.]</p>
+                    <p class="mb-2">رقیق کننده: اسید هیدروکلریک <span class="ltr-text">0.02</span> نرمال.</p>
+                    <p class="mb-2">محلول سازگاری سیستم: <span class="ltr-text">33</span> میکروگرم در میلی‌لیتر از USP Magnesium Oxide RS و <span class="ltr-text">5</span> میکروگرم در میلی‌لیتر از USP Calcium Carbonate RS در رقیق کننده.</p>
+                    <p class="mb-2">محلول استاندارد مادر: <span class="ltr-text">3.3</span> میلی‌گرم در میلی‌لیتر از USP Magnesium Oxide RS که به شرح زیر تهیه شده است. بخشی مناسب از USP Magnesium Oxide RS را به یک فلاسک حجمی مناسب منتقل کنید. حدود <span class="ltr-text">20%</span> از حجم نهایی اسید هیدروکلریک <span class="ltr-text">6</span> نرمال را اضافه کرده و حل کنید. با آب تا حجم نهایی رقیق کنید.</p>
+                    <p class="mb-2">محلول استاندارد: <span class="ltr-text">33</span> میکروگرم در میلی‌لیتر از USP Magnesium Oxide RS در آب از محلول استاندارد مادر.</p>
+                    <p class="mb-2">محلول نمونه مادر: <span class="ltr-text">3.3</span> میلی‌گرم در میلی‌لیتر اکسید منیزیم از اکسید منیزیم تازه احتراق شده، همانطور که در محلول استاندارد مادر ذکر شد، تهیه کنید.</p>
+                    <p class="mb-2">محلول نمونه: <span class="ltr-text">33</span> میکروگرم در میلی‌لیتر اکسید منیزیم در آب از محلول نمونه مادر.</p>
+                    <p class="mb-2">سیستم کروماتوگرافی</p>
+                    <p class="mb-2">(به کروماتوگرافی á621ñ، سازگاری سیستم مراجعه کنید.)</p>
+                    <p class="mb-2">حالت: LC</p>
+                    <p class="mb-2">آشکارساز: رسانایی با سرکوب</p>
+                    <p class="mb-2">ستون‌ها</p>
+                    <p class="mb-2">محافظ: <span class="ltr-text">5</span> میلی‌متر × <span class="ltr-text">5</span> سانتی‌متر؛ بستر <span class="ltr-text">5.5</span> میکرومتری L84</p>
+                    <p class="mb-2">تحلیلی: <span class="ltr-text">5</span> میلی‌متر × <span class="ltr-text">25</span> سانتی‌متر؛ بستر <span class="ltr-text">5.5</span> میکرومتری L84</p>
+                    <p class="mb-2">دمای ستون: <span class="ltr-text">40</span> درجه سانتی‌گراد</p>
+                    <p class="mb-2">نرخ جریان: <span class="ltr-text">1.0</span> میلی‌لیتر در دقیقه</p>
+                    <p class="mb-2">حجم تزریق: <span class="ltr-text">10</span> میکرولیتر</p>
+                    <p class="mb-2">زمان اجرا: حداقل <span class="ltr-text">2</span> برابر زمان نگهداری منیزیم</p>
+                    <p class="mb-2">سازگاری سیستم</p>
+                    <p class="mb-2">نمونه‌ها: محلول سازگاری سیستم و محلول استاندارد</p>
+                    <p class="mb-2">[نکته—زمان‌های نگهداری نسبی یون‌های منیزیم و کلسیم به ترتیب <span class="ltr-text">1.0</span> و <span class="ltr-text">1.3</span> هستند.]</p>
+                    <p class="mb-2">الزامات سازگاری</p>
+                    <p class="mb-2">تفکیک: حداقل <span class="ltr-text">3.0</span> بین یون‌های منیزیم و کلسیم، محلول سازگاری سیستم.</p>
+                    <p class="mb-2">ضریب دم: حداکثر <span class="ltr-text">2.0</span>، محلول استاندارد.</p>
+                    <p class="mb-2">انحراف استاندارد نسبی: حداکثر <span class="ltr-text">0.73%</span>، محلول استاندارد.</p>
+                    <p class="mb-2">تحلیل</p>
+                    <p class="mb-2">نمونه‌ها: محلول استاندارد و محلول نمونه.</p>
+                    <p class="mb-2">درصد اکسید منیزیم (<span class="ltr-text">MgO</span>) را در بخش برداشته شده اکسید منیزیم محاسبه کنید:</p>
+                    <div class="formula-display">
+                        <p>Result = \( (r_U/r_S) \times (C_S/C_U) \times 100 \)</p>
+                    </div>
+                    <p class="mb-2"><span class="ltr-text">rU</span> = پاسخ پیک منیزیم از محلول نمونه</p>
+                    <p class="mb-2"><span class="ltr-text">rS</span> = پاسخ پیک منیزیم از محلول استاندارد</p>
+                    <p class="mb-2"><span class="ltr-text">CS</span> = غلظت USP Magnesium Oxide RS در محلول استاندارد (<span class="ltr-text">µg/mL</span>)</p>
+                    <p class="mb-2"><span class="ltr-text">CU</span> = غلظت اکسید منیزیم در محلول نمونه (<span class="ltr-text">µg/mL</span>)▲ (لازم الاجرا از 1 ژوئن 2021)</p>
+                </div>
+                <p class="mb-2">معیارهای پذیرش: <span class="ltr-text">96.0%–100.5%</span> پس از احتراق.</p>
+            </div>
+        </div>
+
+        <!-- Impurities Tab -->
+        <div id="impurities" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">قلیایی آزاد و نمک‌های محلول</h3>
+                <div class="card interactive-card">
+                    <p class="mb-2">محلول نمونه: <span class="ltr-text">2.0</span> گرم را به مدت <span class="ltr-text">5</span> دقیقه در یک بشر درپوش‌دار بجوشانید، و در حالی که داغ است فیلتر کنید. اجازه دهید خنک شود و با آب به حجم <span class="ltr-text">100</span> میلی‌لیتر برسانید.</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل ۱:</h4>
+                    <p class="mb-2">به <span class="ltr-text">50</span> میلی‌لیتر از محلول نمونه، متیل رد TS اضافه کرده و با اسید سولفوریک <span class="ltr-text">0.10</span> نرمال تیتر کنید.</p>
+                    <p class="mb-2">معیارهای پذیرش ۱: حداکثر <span class="ltr-text">2.0</span> میلی‌لیتر از اسید مصرف می‌شود.</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل ۲:</h4>
+                    <p class="mb-2"><span class="ltr-text">25</span> میلی‌لیتر از محلول نمونه باقی‌مانده را تا خشکی تبخیر کرده و به مدت <span class="ltr-text">1</span> ساعت در دمای <span class="ltr-text">105°</span> خشک کنید.</p>
+                    <p class="mb-2">معیارهای پذیرش ۲: حداکثر <span class="ltr-text">10</span> میلی‌گرم (<span class="ltr-text">2.0%</span>) باقی‌مانده وجود دارد.</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">مواد نامحلول در اسید</h3>
+                <div class="card interactive-card">
+                    <p class="mb-2">نمونه: <span class="ltr-text">2.0</span> گرم.</p>
+                    <p class="mb-2">تحلیل: نمونه را با <span class="ltr-text">75</span> میلی‌لیتر آب مخلوط کنید، اسید هیدروکلریک را به آرامی با هم زدن اضافه کنید تا زمانی که دیگر حل نشود، و به مدت <span class="ltr-text">5</span> دقیقه بجوشانید. اگر بقایای نامحلول باقی ماند، فیلتر کرده، با آب تا زمانی که آخرین شستشو عاری از کلرید باشد، خوب بشویید و سپس احتراق کنید.</p>
+                    <p class="mb-2">معیارهای پذیرش: وزن باقی‌مانده پس از احتراق حداکثر <span class="ltr-text">2</span> میلی‌گرم (<span class="ltr-text">0.1%</span>) است.</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">حد کلسیم</h3>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تغییر برای خواندن:</h4>
+                <div class="card interactive-card">
+                    <p class="mb-2">▲فاز متحرک، رقیق کننده، محلول سازگاری سیستم، محلول نمونه و سیستم کروماتوگرافی: همانطور که در سنجش آمده است، عمل کنید.</p>
+                    <p class="mb-2">محلول استاندارد: <span class="ltr-text">0.9</span> میکروگرم در میلی‌لیتر USP Calcium Carbonate RS در رقیق کننده.</p>
+                    <p class="mb-2">سازگاری سیستم</p>
+                    <p class="mb-2">نمونه‌ها: محلول سازگاری سیستم و محلول استاندارد.</p>
+                    <p class="mb-2">[نکته—زمان‌های نگهداری نسبی یون‌های منیزیم و کلسیم به ترتیب <span class="ltr-text">1.0</span> و <span class="ltr-text">1.3</span> هستند.]</p>
+                    <p class="mb-2">الزامات سازگاری</p>
+                    <p class="mb-2">تفکیک: حداقل <span class="ltr-text">3.0</span> بین یون‌های منیزیم و کلسیم، محلول سازگاری سیستم.</p>
+                    <p class="mb-2">ضریب دم: حداکثر <span class="ltr-text">2.0</span>، محلول استاندارد.</p>
+                    <p class="mb-2">انحراف استاندارد نسبی: حداکثر <span class="ltr-text">5%</span>، محلول استاندارد.</p>
+                    <p class="mb-2">تحلیل</p>
+                    <p class="mb-2">نمونه‌ها: محلول استاندارد و محلول نمونه.</p>
+                    <p class="mb-2">پاسخ برای پیک کلسیم را اندازه‌گیری کنید.</p>
+                    <p class="mb-2">معیارهای پذیرش: حداکثر <span class="ltr-text">1.1%</span>؛ پاسخ پیک کلسیم از محلول نمونه از محلول استاندارد بیشتر نباشد.▲ (لازم الاجرا از 1 ژوئن 2021)</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">آهن á241ñ</h3>
+                <div class="card interactive-card">
+                    <p class="mb-2">نمونه: <span class="ltr-text">40</span> میلی‌گرم اکسید منیزیم.</p>
+                    <p class="mb-2">آماده‌سازی تست: نمونه را با <span class="ltr-text">5</span> میلی‌لیتر اسید نیتریک <span class="ltr-text">2</span> نرمال به مدت <span class="ltr-text">1</span> دقیقه بجوشانید. خنک کرده، با آب تا حجم <span class="ltr-text">50</span> میلی‌لیتر رقیق کنید و مخلوط کنید. <span class="ltr-text">25</span> میلی‌لیتر از این محلول را با آب تا حجم <span class="ltr-text">45</span> میلی‌لیتر رقیق کرده و <span class="ltr-text">2</span> میلی‌لیتر اسید هیدروکلریک اضافه کنید.</p>
+                    <p class="mb-2">معیارهای پذیرش: حداکثر <span class="ltr-text">0.05%</span>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Specific Tests Tab -->
+        <div id="specific_tests" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">از دست دادن وزن در اثر احتراق á733ñ</h3>
+                <div class="card interactive-card">
+                    <p class="mb-2">نمونه: <span class="ltr-text">500–1000</span> میلی‌گرم.</p>
+                    <p class="mb-2">تحلیل: نمونه را در یک کروسه پلاتینیوم وزن شده منتقل کرده و در دمای <span class="ltr-text">(800°–900°) ± 25°</span> تا وزن ثابت احتراق کنید.</p>
+                    <p class="mb-2">معیارهای پذیرش: حداکثر <span class="ltr-text">10.0%</span>.</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">چگالی توده و چگالی ضربه پودرها á616ñ</h3>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">چگالی توده، روش I:</h4>
+                <div class="card interactive-card">
+                    <p class="mb-2">با استفاده از روش مشخص شده در بخش، چگالی توده اکسید منیزیم را تعیین کنید.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Requirements Tab -->
+        <div id="additional_requirements" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته بندی و نگهداری:</h3>
+                <p class="mb-4">در ظروف در بسته نگهداری شود.</p>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">برچسب گذاری:</h3>
+                <p class="mb-4">با ذکر چگالی توده آن را برچسب گذاری کنید. چگالی ذکر شده می‌تواند به صورت بازه باشد.</p>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">اضافه کردن موارد زیر:</h3>
+                <div class="card interactive-card">
+                    <p>▲• استانداردهای مرجع USP á11ñ</p>
+                    <p>USP Calcium Carbonate RS</p>
+                    <p>USP Magnesium Oxide RS▲ (لازم الاجرا از 1 ژوئن 2021)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(event, tabId) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.add('hidden');
+            });
+
+            // Remove 'tab-active' and add 'tab-inactive' from all buttons
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('tab-active');
+                button.classList.add('tab-inactive');
+            });
+
+            // Show the selected tab content
+            document.getElementById(tabId).classList.remove('hidden');
+
+            // Add 'tab-active' and remove 'tab-inactive' from the clicked button
+            event.currentTarget.classList.remove('tab-inactive');
+            event.currentTarget.classList.add('tab-active');
+        }
+
+        // Activate the first tab by default
+        document.querySelector('.tab-button').click();
+    </script>
+</body>
+</html>

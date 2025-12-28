@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>781. چرخش نوری</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <div class="card">
+            <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">781. چرخش نوری</h1>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+            <p class="mb-4">بسیاری از مواد دارویی از نظر نوری فعال هستند به این معنا که صفحه نور پلاریزه تابیده شده را طوری می‌چرخانند که نور عبوری با زاویه‌ای قابل اندازه‌گیری نسبت به صفحه نور تابیده شده خارج می‌شود. این خاصیت مشخصه برخی از بلورها و بسیاری از مایعات دارویی یا محلول‌های جامد است. در مواردی که این خاصیت توسط یک مایع یا حل شونده در محلول دارا باشد، معمولاً نتیجه حضور یک یا چند مرکز نامتقارن است، که معمولاً یک اتم کربن با چهار جانشین متفاوت است. تعداد ایزومرهای نوری <span class="ltr-text">2<sup>n</sup></span> است، که <span class="ltr-text">n</span> تعداد مراکز نامتقارن است. پولاریمتری، اندازه‌گیری چرخش نوری، یک ماده دارویی ممکن است تنها راه مناسب برای تمایز ایزومرهای فعال نوری از یکدیگر باشد و بنابراین یک معیار مهم هویت و خلوص است.</p>
+            <p class="mb-4">موادی که ممکن است خواص چرخش نوری نشان دهند "کایرال" هستند. آنهایی که نور را در جهت عقربه‌های ساعت، هنگام مشاهده به سمت منبع نور، می‌چرخانند "دکسترو روتاتوری" یا ایزومرهای نوری "(+)" هستند، و آنهایی که نور را در جهت خلاف عقربه‌های ساعت می‌چرخانند "لِوو روتاتوری" یا ایزومرهای نوری "(-)" نامیده می‌شوند. (نمادهای d- و l-، که قبلاً برای نشان دادن ایزومرهای دکسترو روتاتوری و لِوو روتاتوری استفاده می‌شدند، به دلیل سردرگمی با D- و L-، که به پیکربندی نسبت به D-گلیسیرالدئید اشاره دارند، دیگر مجاز نیستند. نمادهای R و S، یا α و β، نیز برای نشان دادن پیکربندی، آرایش اتم‌ها یا گروه‌های اتم‌ها در فضا، استفاده می‌شوند.)</p>
+            <p class="mb-4">خواص فیزیکوشیمیایی مواد کایرال غیرقابل انطباق که نور پلاریزه صفحه را در جهت‌های مخالف و به یک اندازه می‌چرخانند، "انانتومرها"، یکسان هستند، به جز این خاصیت و در واکنش‌هایشان با سایر مواد کایرال. انانتومرها اغلب تفاوت‌های عمیقی در فارماکولوژی و سم‌شناسی از خود نشان می‌دهند، به این دلیل که گیرنده‌ها و آنزیم‌های بیولوژیکی خودشان کایرال هستند. بسیاری از مواد از منابع طبیعی، مانند اسیدهای آمینه، پروتئین‌ها، آلکالوئیدها، آنتی‌بیوتیک‌ها، گلیکوزیدها و قندها، به صورت ترکیبات کایرال وجود دارند. سنتز چنین ترکیباتی از مواد غیرکایرال معمولاً منجر به مقادیر مساوی انانتومرها، یعنی "راسمات‌ها"، می‌شود. راسِمات‌ها چرخش نوری خالص صفر دارند و خواص فیزیکی آنها ممکن است با خواص انانتومرهای تشکیل دهنده متفاوت باشد. برای به دست آوردن ایزومرهای نوری منفرد می‌توان از روش‌های سنتز استریو انتخابی یا استریو اختصاصی یا جداسازی مخلوط‌های راسمیک استفاده کرد.</p>
+            <p class="mb-4">اندازه‌گیری چرخش نوری با استفاده از پولاریمتر انجام می‌شود.<sup class="text-xs align-top"><a href="#ref1" class="text-blue-600 hover:underline">1</a></sup> معادله کلی مورد استفاده در پولاریمتری به شرح زیر است:</p>
+            <div class="formula-display">
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <mrow>
+                        <mo stretchy="false">[</mo>
+                        <mi>α</mi>
+                        <mo stretchy="false">]</mo>
+                        <msubsup>
+                            <mrow/>
+                            <mi>λ</mi>
+                            <mi>t</mi>
+                        </msubsup>
+                        <mo>=</mo>
+                        <mfrac>
+                            <mrow>
+                                <mn>100</mn>
+                                <mi>a</mi>
+                            </mrow>
+                            <mrow>
+                                <mi>l</mi>
+                                <mi>c</mi>
+                            </mrow>
+                        </mfrac>
+                    </mrow>
+                </math>
+            </div>
+            <p class="mb-4">که در آن:</p>
+            <ul class="list-disc list-inside mb-4 ml-4">
+                <li><span class="ltr-text">[α]<sup>t</sup><sub>λ</sub></span> = چرخش ویژه در طول موج <span class="ltr-text">λ</span></li>
+                <li><span class="ltr-text">t</span> = دما</li>
+                <li><span class="ltr-text">a</span> = چرخش مشاهده شده بر حسب درجه (°).</li>
+                <li><span class="ltr-text">l</span> = طول مسیر (dm)</li>
+                <li><span class="ltr-text">c</span> = غلظت آنالیت (g/100 mL)</li>
+            </ul>
+            <p class="mb-4">بنابراین، <span class="ltr-text">[α]</span> صد برابر مقدار اندازه‌گیری شده، بر حسب درجه (°)، برای محلولی حاوی <span class="ltr-text">1</span> گرم در <span class="ltr-text">100</span> میلی‌لیتر، اندازه‌گیری شده در سلول با طول مسیر <span class="ltr-text">1.0</span> دسی‌متر در شرایط مشخص طول موج نور فرودی و دما است. برای برخی از مواد دارویی، به ویژه مایعات مانند روغن‌های اسانس، الزام چرخش نوری بر حسب چرخش مشاهده شده، <span class="ltr-text">a</span>، اندازه‌گیری شده در شرایط مشخص شده در مونوگراف، بیان می‌شود.</p>
+            <p class="mb-4">به طور تاریخی، پولاریمتری با ابزاری انجام می‌شد که در آن میزان چرخش نوری با تطابق بصری شدت میدان‌های تقسیم شده تخمین زده می‌شد. به همین دلیل، خط D لامپ سدیم در طول موج قابل مشاهده <span class="ltr-text">589 nm</span> بیشتر مورد استفاده قرار می‌گرفت.<sup class="text-xs align-top"><a href="#ref2" class="text-blue-600 hover:underline">2</a></sup> چرخش ویژه تعیین شده در خط D با نماد زیر بیان می‌شود:</p>
+            <div class="formula-display">
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <mrow>
+                        <mo stretchy="false">[</mo>
+                        <mi>α</mi>
+                        <mo stretchy="false">]</mo>
+                        <mi>D</mi>
+                    </mrow>
+                </math>
+            </div>
+            <p class="mb-4">بسیاری از داده‌های موجود به این صورت بیان شده‌اند. استفاده از طول موج‌های کوتاه‌تر، مانند آنچه با خطوط لامپ جیوه که با فیلترهایی با حداکثر عبور در حدود <span class="ltr-text">546</span>، <span class="ltr-text">436</span>، <span class="ltr-text">405</span>، <span class="ltr-text">365</span>، و <span class="ltr-text">325 nm</span> در یک پولاریمتر فوتوالکتریک ایزوله شده‌اند، مزایایی در حساسیت و در نتیجه کاهش غلظت ترکیب آزمایشی ایجاد کرده است. به طور کلی، چرخش نوری مشاهده شده در <span class="ltr-text">436 nm</span> حدود دو برابر، و در <span class="ltr-text">365 nm</span>، حدود <span class="ltr-text">3</span> برابر مقدار آن در <span class="ltr-text">589 nm</span> است.<sup class="text-xs align-top"><a href="#ref2" class="text-blue-600 hover:underline">2</a></sup> کاهش غلظت حل شونده مورد نیاز برای اندازه‌گیری گاهی اوقات می‌تواند با تبدیل ماده تحت آزمایش به ماده‌ای با چرخش نوری بسیار بالاتر انجام شود. چرخش نوری همچنین تحت تأثیر حلال مورد استفاده برای اندازه‌گیری قرار می‌گیرد و این همیشه مشخص می‌شود.</p>
+            <div class="card mt-6">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">منابع</h3>
+                <p id="ref1" class="mb-2">1. کالیبراتورهای مناسب از دفتر مواد مرجع استاندارد، موسسه ملی استاندارد و فناوری (NIST)، گایترزبرگ، MD 20899، به عنوان بسته‌های فعلی مواد مرجع استاندارد، دکستروز و ساکارز در دسترس هستند. به طور جایگزین، کالیبراسیون را می‌توان با استفاده از استاندارد مرجع پلاریزاسیون، که شامل یک صفحه کوارتز نصب شده در نگهدارنده عمود بر مسیر نور است، بررسی کرد. کالیبراسیون‌های دوره‌ای قابل قبول ممکن است توسط یک موسسه ملی سنجش (NMI) که امضاکننده توافقنامه شناسایی متقابل کمیته بین‌المللی اوزان و معیارها (CIPM) (MRA) است یا یک آزمایشگاه دارای اعتبار ISO/IEC 17025 برای کالیبراسیون که در آن نهاد اعتباربخشی امضاکننده توافقنامه MRA همکاری اعتباربخشی آزمایشگاهی بین‌المللی (ILAC) است، انجام شود.</p>
+                <p id="ref2" class="mb-2">2. تمامی طول موج‌های ذکر شده در خلاء هستند. خط D سدیم در خلاء <span class="ltr-text">589.44</span> و در هوا <span class="ltr-text">589.3</span> است.</p>
+            </div>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">رویه‌های</h4>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">چرخش ویژه</h3>
+            <p class="mb-4">ارجاع "Optical Rotation á781Sñ, Procedures, Specific Rotation" در یک مونوگراف به این معنی است که چرخش ویژه باید از چرخش‌های نوری مشاهده شده در محلول آزمایشی یا محلول نمونه که طبق دستورالعمل‌های آنجا به دست آمده است، محاسبه شود. مگر اینکه در غیر این صورت دستور داده شود، اندازه‌گیری‌های چرخش نوری در یک لوله <span class="ltr-text">1.0</span> دسی‌متری در <span class="ltr-text">589 nm</span> در دمای <span class="ltr-text">25</span> درجه سانتی‌گراد انجام می‌شود.<sup class="text-xs align-top"><a href="#ref2" class="text-blue-600 hover:underline">2</a></sup> در جایی که از یک پولاریمتر فوتوالکتریک استفاده می‌شود، یک اندازه‌گیری واحد، تصحیح شده برای بلانک حلال، انجام می‌شود. در جایی که از پولاریمتر بصری استفاده می‌شود، میانگین حداقل پنج تعیین، تصحیح شده برای خوانش همان لوله با بلانک حلال، استفاده می‌شود. دما، که به محلول یا مایع تحت آزمایش اعمال می‌شود، باید در حد <span class="ltr-text">0.5</span> درجه سانتی‌گراد از مقدار مشخص شده حفظ شود. از همان سلول برای نمونه و بلانک استفاده کنید. جهت زاویه‌ای یکسان سلول را در هر خوانش حفظ کنید. سلول را طوری قرار دهید که نور هر بار در همان جهت از آن عبور کند. مگر اینکه در غیر این صورت مشخص شود، چرخش ویژه بر اساس پایه خشک در صورتی که Loss on Drying در مونوگراف مشخص شده باشد، یا بر اساس پایه انیدروس در صورتی که Water Determination مشخص شده باشد، محاسبه می‌شود.</p>
+            <p class="mb-4">چرخش نوری محلول‌ها باید ظرف <span class="ltr-text">30</span> دقیقه پس از آماده‌سازی تعیین شود. در مورد موادی که شناخته شده‌اند دچار راسمایزاسیون یا موتاروتاسیون می‌شوند، باید مراقب بود که زمان بین افزودن حل شونده به حلال و ورود محلول به لوله پولاریمتر استاندارد شود.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">چرخش زاویه‌ای</h3>
+            <p class="mb-4">ارجاع "Optical Rotation á781Añ, Procedures, Angular Rotation" در یک مونوگراف، مگر اینکه در غیر این صورت دستور داده شود، به این معنی است که چرخش نوری مایع خالص در یک لوله <span class="ltr-text">1.0</span> دسی‌متری در <span class="ltr-text">589 nm</span> در دمای <span class="ltr-text">25</span> درجه سانتی‌گراد، تصحیح شده برای خوانش لوله خشک و خالی، اندازه‌گیری می‌شود.<sup class="text-xs align-top"><a href="#ref2" class="text-blue-600 hover:underline">2</a></sup></p>
+        </div>
+    </div>
+</body>
+</html>

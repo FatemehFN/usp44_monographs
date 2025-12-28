@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مونوگراف گلوکونات مس (USP)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .tab-active {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        .tab-inactive {
+            border-color: transparent;
+            color: #6b7280;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+        .interactive-card {
+            background-color: #e0f2fe;
+            border: 1px solid #90cdf4;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">گلوکونات مس</h1>
+
+        <div class="flex justify-center mb-6 border-b border-gray-200">
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" data-tab="definition">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="identification">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="assay">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="impurities">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="special-tests">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="additional-requirements">الزامات اضافی</button>
+        </div>
+
+        <!-- Definition Tab -->
+        <div id="definition" class="tab-content">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+                <p>گلوکونات مس حاوی حداقل <span class="ltr-text">98.0%</span> و حداکثر <span class="ltr-text">102.0%</span> گلوکونات مس (<span class="ltr-text">C12H22CuO14</span>) است.</p>
+            </div>
+        </div>
+
+        <!-- Identification Tab -->
+        <div id="identification" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. آزمایش‌های شناسایی - عمومی، مس <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a></h3>
+                <div class="interactive-card card">
+                    <p>محلولی با غلظت <span class="ltr-text">50</span> میلی‌گرم بر میلی‌لیتر الزامات را برآورده می‌کند.</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">ب. آزمایش شناسایی کروماتوگرافی لایه نازک</h3>
+                <div class="interactive-card card">
+                    <p><strong>محلول استاندارد:</strong> <span class="ltr-text">10</span> میلی‌گرم بر میلی‌لیتر از USP پتاسیم گلوکونات RS</p>
+                    <p><strong>محلول نمونه:</strong> <span class="ltr-text">10</span> میلی‌گرم بر میلی‌لیتر گلوکونات مس، در صورت نیاز با حرارت دادن در حمام آب در دمای <span class="ltr-text">60°</span> برای انحلال.</p>
+                    <p><strong>سیستم کروماتوگرافی</strong></p>
+                    <p>(به کروماتوگرافی <a href="General chapters/621.html" class="text-blue-600 hover:underline" target="_blank">621</a>، کروماتوگرافی لایه نازک مراجعه کنید.)</p>
+                    <p><strong>حالت:</strong> TLC</p>
+                    <p><strong>جاذب:</strong> لایه <span class="ltr-text">0.25</span> میلی‌متری از سیلیکا ژل کروماتوگرافی</p>
+                    <p><strong>حجم اعمال:</strong> <span class="ltr-text">5</span> µL</p>
+                    <p><strong>سیستم حلال توسعه:</strong> الکل، اتیل استات، آمونیوم هیدروکسید، و آب (<span class="ltr-text">50:10:10:30</span>)</p>
+                    <p><strong>عامل اسپری:</strong> <span class="ltr-text">2.5</span> گرم مولیبدات آمونیوم را در <span class="ltr-text">50</span> میلی‌لیتر اسید سولفوریک <span class="ltr-text">2</span> نرمال در یک فلاسک حجمی <span class="ltr-text">100</span> میلی‌لیتر حل کنید، <span class="ltr-text">1.0</span> گرم سولفات سریم اضافه کنید، برای انحلال بچرخانید، و با اسید سولفوریک <span class="ltr-text">2</span> نرمال تا حجم نهایی رقیق کنید.</p>
+                    <p><strong>آنالیز</strong></p>
+                    <p><strong>نمونه‌ها:</strong> محلول استاندارد و محلول نمونه</p>
+                    <p>کروماتوگرام را تا زمانی که لبه حلال حدود سه‌چهارم طول صفحه حرکت کند، توسعه دهید. صفحه را از محفظه خارج کرده و در دمای <span class="ltr-text">110°</span> به مدت <span class="ltr-text">20</span> دقیقه خشک کنید. اجازه دهید خنک شود و با عامل اسپری اسپری کنید. صفحه را در دمای <span class="ltr-text">110°</span> به مدت حدود <span class="ltr-text">10</span> دقیقه حرارت دهید.</p>
+                    <p><strong>معیارهای پذیرش:</strong> نقطه اصلی محلول نمونه با رنگ، اندازه، و مقدار RF با محلول استاندارد مطابقت دارد.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Assay Tab -->
+        <div id="assay" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش</h4>
+                <div class="interactive-card card">
+                    <p><strong>نمونه:</strong> <span class="ltr-text">1.5</span> گرم گلوکونات مس</p>
+                    <p><strong>شستشو:</strong> <span class="ltr-text">100</span> میلی‌لیتر آب</p>
+                    <p><strong>سیستم تیتراسیون</strong></p>
+                    <p>(به تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید.)</p>
+                    <p><strong>حالت:</strong> تیتراسیون غیرمستقیم</p>
+                    <p><strong>تیترانت:</strong> سدیم تیوسولفات <span class="ltr-text">0.1</span> نرمال VS</p>
+                    <p><strong>تشخیص نقطه پایانی:</strong> بصری</p>
+                    <p><strong>آنالیز:</strong> نمونه را در <span class="ltr-text">100</span> میلی‌لیتر آب حل کنید. <span class="ltr-text">2</span> میلی‌لیتر اسید استیک گلاسیال و <span class="ltr-text">5</span> گرم پتاسیم یدید اضافه کنید، مخلوط کنید، و با تیتراژ با تیتراژ تا رنگ زرد کمرنگ تیتر کنید. <span class="ltr-text">2</span> گرم تیوسیانات آمونیوم اضافه کرده و مخلوط کنید. <span class="ltr-text">3</span> میلی‌لیتر نشاسته TS اضافه کرده و به تیتر کردن تا نقطه پایانی سفید شیری ادامه دهید. تعیین مقدار شستشو را انجام دهید.</p>
+                    <p>درصد گلوکونات مس (<span class="ltr-text">C12H22CuO14</span>) در نمونه گرفته شده را محاسبه کنید:</p>
+                    <div class="formula-display">
+                        <p>Result = {[(<span class="ltr-text">VS</span> − <span class="ltr-text">VB</span>) × <span class="ltr-text">N</span> × <span class="ltr-text">F</span>]/<span class="ltr-text">W</span>} × <span class="ltr-text">100</span></p>
+                    </div>
+                    <p><span class="ltr-text">VS</span> = حجم تیتراژ مصرفی توسط نمونه (mL)</p>
+                    <p><span class="ltr-text">VB</span> = حجم تیتراژ مصرفی توسط شستشو (mL)</p>
+                    <p><span class="ltr-text">N</span> = نرمالیته واقعی تیتراژ (mEq/mL)</p>
+                    <p><span class="ltr-text">F</span> = ضریب هم‌ارزی، <span class="ltr-text">453.8</span> mg/mEq</p>
+                    <p><span class="ltr-text">W</span> = وزن نمونه (mg)</p>
+                    <p><strong>معیارهای پذیرش:</strong> <span class="ltr-text">98.0%–102.0%</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Impurities Tab -->
+        <div id="impurities" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلراید و سولفات، کلراید <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a></h3>
+                <div class="interactive-card card">
+                    <p><strong>محلول استاندارد:</strong> <span class="ltr-text">1.0</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">0.020</span> نرمال</p>
+                    <p><strong>نمونه:</strong> <span class="ltr-text">1.0</span> گرم</p>
+                    <p><strong>معیارهای پذیرش:</strong> حداکثر <span class="ltr-text">0.07%</span></p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلراید و سولفات، سولفات <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a></h3>
+                <div class="interactive-card card">
+                    <p><strong>محلول استاندارد:</strong> <span class="ltr-text">1.0</span> میلی‌لیتر اسید سولفوریک <span class="ltr-text">0.020</span> نرمال</p>
+                    <p><strong>نمونه:</strong> <span class="ltr-text">2.0</span> گرم</p>
+                    <p><strong>معیارهای پذیرش:</strong> حداکثر <span class="ltr-text">0.05%</span></p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">آرسنیک، روش I <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a></h3>
+                <div class="interactive-card card">
+                    <p><strong>آماده‌سازی تست:</strong> <span class="ltr-text">1.0</span> گرم در <span class="ltr-text">35</span> میلی‌لیتر آب</p>
+                    <p><strong>معیارهای پذیرش:</strong> حداکثر <span class="ltr-text">3</span> ppm</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">محدودیت سرب</h3>
+                <div class="interactive-card card">
+                    <p>[<strong>نکته—</strong> برای تهیه تمام محلول‌های آبی و شستشوی ظروف شیشه‌ای قبل از استفاده، از آبی استفاده کنید که از یک رزین تبادل یونی مخلوط اسیدی قوی، بازی قوی عبور داده شده است. تمام معرف‌ها را با کمترین میزان سرب ممکن انتخاب کنید و تمام محلول‌های معرف را در ظروف شیشه‌ای بوروسیلیکات نگهداری کنید. ظروف شیشه‌ای را قبل از استفاده با خیساندن در اسید نیتریک <span class="ltr-text">8</span> نرمال گرم به مدت <span class="ltr-text">30</span> دقیقه و شستشو با آب دیونیزه تمیز کنید.]</p>
+                    <p><strong>محلول استاندارد مادر:</strong> <span class="ltr-text">10.0</span> میلی‌لیتر از محلول استاندارد مادر نیترات سرب TS را به یک فلاسک حجمی <span class="ltr-text">100</span> میلی‌لیتر منتقل کنید. <span class="ltr-text">40</span> میلی‌لیتر آب و <span class="ltr-text">5</span> میلی‌لیتر اسید نیتریک اضافه کرده و با آب تا حجم نهایی رقیق کنید.</p>
+                    <p><strong>محلول استاندارد:</strong> <span class="ltr-text">0.40</span> میلی‌لیتر از محلول استاندارد مادر را به یک فلاسک حجمی <span class="ltr-text">100</span> میلی‌لیتر منتقل کنید. <span class="ltr-text">50</span> میلی‌لیتر آب و <span class="ltr-text">1</span> میلی‌لیتر اسید نیتریک اضافه کرده و با آب تا حجم نهایی رقیق کنید. این محلول حاوی <span class="ltr-text">0.04</span> µg/mL سرب است.</p>
+                    <p><strong>محلول نمونه مادر:</strong> <span class="ltr-text">4</span> گرم گلوکونات مس را به یک فلاسک حجمی <span class="ltr-text">100</span> میلی‌لیتر منتقل کنید. <span class="ltr-text">50</span> میلی‌لیتر آب و <span class="ltr-text">5</span> میلی‌لیتر اسید نیتریک اضافه کرده و با سونوگرافی برای انحلال نمونه، مخلوط کنید. با آب تا حجم نهایی رقیق کنید. <span class="ltr-text">4.0</span> میلی‌لیتر از این محلول را به یک فلاسک حجمی <span class="ltr-text">100</span> میلی‌لیتر دیگر منتقل کنید. <span class="ltr-text">50</span> میلی‌لیتر آب و <span class="ltr-text">1</span> میلی‌لیتر اسید نیتریک اضافه کرده، با آب تا حجم نهایی رقیق کرده و مخلوط کنید.</p>
+                    <p><strong>شستشو:</strong> <span class="ltr-text">1.2</span> میلی‌لیتر اسید نیتریک را به یک فلاسک حجمی <span class="ltr-text">100</span> میلی‌لیتر منتقل کرده و با آب تا حجم نهایی رقیق کنید.</p>
+                    <p><strong>محلول نمونه A:</strong> <span class="ltr-text">10.0</span> میلی‌لیتر از محلول نمونه مادر را با <span class="ltr-text">10.0</span> میلی‌لیتر شستشو مخلوط کنید. این محلول حاوی <span class="ltr-text">0.00</span> µg/mL سرب اضافه شده از محلول استاندارد است.</p>
+                    <p><strong>محلول نمونه B:</strong> <span class="ltr-text">10.0</span> میلی‌لیتر از محلول نمونه مادر را با <span class="ltr-text">4.0</span> میلی‌لیتر از محلول استاندارد و <span class="ltr-text">6.0</span> میلی‌لیتر شستشو مخلوط کنید. این محلول حاوی <span class="ltr-text">0.008</span> µg/mL سرب اضافه شده از محلول استاندارد است.</p>
+                    <p><strong>محلول نمونه C:</strong> <span class="ltr-text">10.0</span> میلی‌لیتر از محلول نمونه مادر را با <span class="ltr-text">7.0</span> میلی‌لیتر از محلول استاندارد و <span class="ltr-text">3.0</span> میلی‌لیتر شستشو مخلوط کنید. این محلول حاوی <span class="ltr-text">0.014</span> µg/mL سرب اضافه شده از محلول استاندارد است.</p>
+                    <p><strong>محلول نمونه D:</strong> <span class="ltr-text">10.0</span> میلی‌لیتر از محلول نمونه مادر را با <span class="ltr-text">10.0</span> میلی‌لیتر از محلول استاندارد مخلوط کنید. این محلول حاوی <span class="ltr-text">0.020</span> µg/mL سرب اضافه شده از محلول استاندارد است.</p>
+                    <p><strong>شرایط دستگاهی</strong></p>
+                    <p>(به طیف‌سنجی جذب اتمی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید.)</p>
+                    <p><strong>حالت:</strong> طیف‌سنجی جذب اتمی کوره گرافیتی</p>
+                    <p><strong>طول موج تحلیلی:</strong> <span class="ltr-text">283.3</span> nm</p>
+                    <p><strong>لامپ:</strong> کاتد توخالی سرب</p>
+                    <p><strong>نرخ جریان آرگون:</strong> <span class="ltr-text">3</span> L/min، یا طبق یادداشت</p>
+                    <p><strong>دمای لوله گرافیتی:</strong> به جدول <span class="ltr-text">1</span> مراجعه کنید.</p>
+                    <p><strong>جدول 1</strong></p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>دما (°C)</th>
+                                <th>زمان (s)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="ltr-text">70</span></td>
+                                <td><span class="ltr-text">10</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="ltr-text">90</span></td>
+                                <td><span class="ltr-text">60</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="ltr-text">120</span></td>
+                                <td><span class="ltr-text">15</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="ltr-text">250 (بدون جریان گاز)</span></td>
+                                <td><span class="ltr-text">5</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="ltr-text">250</span></td>
+                                <td><span class="ltr-text">10</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="ltr-text">250 (بدون جریان گاز)</span></td>
+                                <td><span class="ltr-text">2</span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="ltr-text">2000</span></td>
+                                <td><span class="ltr-text">3.2</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><strong>حجم تزریق:</strong> <span class="ltr-text">20</span> µL</p>
+                    <p><strong>آنالیز:</strong> نمونه‌ها: محلول‌های شستشو و نمونه‌های A, B, C, و D. لوله گرافیتی برای رسیدن به <span class="ltr-text">2000°</span> در حدود <span class="ltr-text">2</span> دقیقه، همانطور که در جدول <span class="ltr-text">1</span> نشان داده شده است، برنامه دمایی دریافت می‌کند. هنگامی که دما به <span class="ltr-text">2000°</span> می‌رسد، جذب در <span class="ltr-text">283.3</span> nm، تصحیح شده برای جذب زمینه، تعیین می‌شود. محلول‌های نمونه و شستشو را تزریق کرده و جذب‌ها را تعیین کنید. مقادیر جذب محلول‌های نمونه را با کسر مقدار جذب شستشو از هر کدام، تصحیح کنید. جذب‌های تصحیح شده محلول‌های نمونه را در مقابل غلظت سرب اضافه شده، بر حسب µg/mL، رسم کنید. خط مستقیمی را که بهترین برازش را برای چهار نقطه دارد، رسم کرده و خط را تا زمانی که محور غلظت را قطع کند، بسط دهید. از نقطه تقاطع، غلظت، C، بر حسب µg/mL، سرب در محلول نمونه A را تعیین کنید.</p>
+                    <p>محتوای سرب در قسمت گلوکونات مس گرفته شده را محاسبه کنید:</p>
+                    <div class="formula-display">
+                        <p>Result = (<span class="ltr-text">C</span> × <span class="ltr-text">V</span>)/<span class="ltr-text">W</span></p>
+                    </div>
+                    <p><span class="ltr-text">C</span> = غلظت سرب در محلول نمونه A (µg/mL)، تعیین شده از نقطه تقاطع خط رگرسیون خطی</p>
+                    <p><span class="ltr-text">V</span> = حجم حلال گرفته شده برای تهیه محلول نمونه A (mL)</p>
+                    <p><span class="ltr-text">W</span> = وزن گلوکونات کلسیم گرفته شده برای تهیه محلول نمونه A (g)</p>
+                    <p><strong>معیارهای پذیرش:</strong> حداکثر <span class="ltr-text">25</span> µg/g</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">مواد کاهنده</h3>
+                <div class="interactive-card card">
+                    <p><strong>نمونه:</strong> <span class="ltr-text">1.0</span> گرم گلوکونات مس</p>
+                    <p><strong>شستشو:</strong> <span class="ltr-text">10</span> میلی‌لیتر آب</p>
+                    <p><strong>سیستم تیتراسیون</strong></p>
+                    <p>(به تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید.)</p>
+                    <p><strong>حالت:</strong> تیتراسیون باقی‌مانده</p>
+                    <p><strong>تیترانت:</strong> ید <span class="ltr-text">0.1</span> نرمال VS</p>
+                    <p><strong>تیتراژ برگشتی:</strong> سدیم تیوسولفات <span class="ltr-text">0.1</span> نرمال VS</p>
+                    <p><strong>تشخیص نقطه پایانی:</strong> بصری</p>
+                    <p><strong>آنالیز:</strong> نمونه را به یک فلاسک مخروطی <span class="ltr-text">250</span> میلی‌لیتر منتقل کرده، <span class="ltr-text">10</span> میلی‌لیتر آب برای انحلال نمونه اضافه کنید، سپس <span class="ltr-text">25</span> میلی‌لیتر سیترات مس قلیایی TS اضافه کنید. فلاسک را بپوشانید، به آرامی به مدت <span class="ltr-text">5</span> دقیقه بجوشانید، دقیقاً زمان‌بندی کنید، و به سرعت تا دمای اتاق خنک کنید. <span class="ltr-text">25</span> میلی‌لیتر اسید استیک <span class="ltr-text">0.6</span> نرمال، <span class="ltr-text">10.0</span> میلی‌لیتر تیتراژ، و <span class="ltr-text">10</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">3</span> نرمال اضافه کرده و با تیتراژ برگشتی تیتر کنید، در حالی که <span class="ltr-text">3</span> میلی‌لیتر نشاسته TS را هنگام نزدیک شدن به نقطه پایانی اضافه می‌کنید. تعیین مقدار شستشو را انجام دهید.</p>
+                    <p>درصد مواد کاهنده (به صورت دکستروز) در نمونه گرفته شده را محاسبه کنید:</p>
+                    <div class="formula-display">
+                        <p>Result = {[(<span class="ltr-text">VB</span> − <span class="ltr-text">VS</span>) × <span class="ltr-text">N</span> × <span class="ltr-text">F</span>]/<span class="ltr-text">W</span>} × <span class="ltr-text">100</span></p>
+                    </div>
+                    <p><span class="ltr-text">VB</span> = حجم تیتراژ برگشتی مصرفی توسط شستشو (mL)</p>
+                    <p><span class="ltr-text">VS</span> = حجم تیتراژ برگشتی مصرفی توسط نمونه (mL)</p>
+                    <p><span class="ltr-text">N</span> = نرمالیته واقعی تیتراژ برگشتی (mEq/mL)</p>
+                    <p><span class="ltr-text">F</span> = ضریب هم‌ارزی، <span class="ltr-text">27</span> mg/mEq</p>
+                    <p><span class="ltr-text">W</span> = وزن نمونه (mg)</p>
+                    <p><strong>معیارهای پذیرش:</strong> حداکثر <span class="ltr-text">1.0%</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Special Tests Tab -->
+        <div id="special-tests" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+                <p>این بخش از منبع PDF خالی است.</p>
+            </div>
+        </div>
+
+        <!-- Additional Requirements Tab -->
+        <div id="additional-requirements" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری:</h3>
+                <div class="interactive-card card">
+                    <p>در ظروف کاملاً بسته نگهداری شود.</p>
+                </div>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a>:</h3>
+                <div class="interactive-card card">
+                    <p>USP پتاسیم گلوکونات RS</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                tabButtons.forEach(btn => btn.classList.add('tab-inactive'));
+                btn.classList.remove('tab-active');
+
+                // Add active class to clicked button
+                button.classList.add('tab-active');
+                button.classList.remove('tab-inactive');
+
+                // Hide all tab content
+                tabContents.forEach(content => content.classList.add('hidden'));
+
+                // Show the corresponding tab content
+                const targetTab = document.getElementById(button.getAttribute('data-tab'));
+                if (targetTab) {
+                    targetTab.classList.remove('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

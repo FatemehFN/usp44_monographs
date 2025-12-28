@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محدودیت تعداد انحرافات بزرگ هنگام ارزیابی یکنواختی محتوا در نمونه‌های بزرگ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <div class="card">
+            <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">محدودیت تعداد انحرافات بزرگ هنگام ارزیابی یکنواختی محتوا در نمونه‌های بزرگ</h1>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+            <p class="mb-4">عدم اطمینان در مورد کاربرد معیار تحمل صفر (ZTC) برای اندازه‌های نمونه بزرگتر از 30 ممکن است جمع‌آوری داده‌های یکنواختی از نمونه‌های بزرگ را محدود کند. این فصل فرآیندی را برای محدود کردن تعداد نتایج مشاهده شده که خارج از ZTC (c2) قرار می‌گیرند، همانطور که در یکنواختی واحدهای دوز <a href="905.html" class="text-blue-600 hover:underline" target="_blank">905</a> توضیح داده شده است، هنگام جمع‌آوری نمونه‌های بزرگتر از 30 ارائه می‌دهد. شایان ذکر است که معیار شرح داده شده در این فصل به عنوان یک تست آزادسازی بچ، یا به عنوان جایگزین یا جایگزین <a href="905.html" class="text-blue-600 hover:underline" target="_blank">905</a> در نظر گرفته نشده است. همچنین به عنوان افزایشی برای فراتر رفتن از تست‌های سطح دوم در <a href="905.html" class="text-blue-600 hover:underline" target="_blank">905</a> در نظر گرفته نشده است. استفاده از آن صرفاً برای کمک به قضاوت در مورد اینکه آیا مجموعه داده بزرگ با عنصر ZTC از <a href="905.html" class="text-blue-600 hover:underline" target="_blank">905</a> سازگار است، می‌باشد؛ اینکه آیا مجموعه داده بزرگ با کل مجموعه الزامات در <a href="905.html" class="text-blue-600 hover:underline" target="_blank">905</a> مطابقت دارد، باید توسط سایر روش‌ها تصمیم‌گیری شود.</p>
+            <p class="mb-4">ZTC در <a href="905.html" class="text-blue-600 hover:underline" target="_blank">905</a> بیان می‌کند که هیچ محتوای فردی از هیچ واحد دوز نمی‌تواند کمتر از <span class="ltr-text">[1 − (0.01)(L2)]M</span> و یا بیشتر از <span class="ltr-text">[1 + (0.01)(L2)]M</span> باشد، که در آن L2 برابر <span class="ltr-text">25.0%</span> است مگر اینکه در مونوگراف مربوطه به طور متفاوتی مشخص شده باشد، و M، "مقدار مرجع"، بسته به میانگین نمونه، X (بیان شده به عنوان درصدی از ادعای برچسب)، به شرح زیر است:</p>
+            <p class="mb-4"><span class="ltr-text">M = 98.5%</span> اگر <span class="ltr-text">X &lt; 98.5</span>، <span class="ltr-text">M = 101.5%</span> اگر <span class="ltr-text">X &gt; 101.5</span>، و در غیر این صورت <span class="ltr-text">M = X</span>، با اندازه نمونه (N) برابر <span class="ltr-text">30</span>.</p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">روش</h2>
+            <p class="mb-4">هنگامی که نمونه‌ای شامل محتویات بیش از 30 واحد جمع‌آوری شده است، روش زیر می‌تواند برای تأیید سازگاری نتایج در آن نمونه با ZTC از <a href="905.html" class="text-blue-600 hover:underline" target="_blank">905</a> استفاده شود. این معیار هم زمانی که محتوا مستقیماً با سنجش تعدادی واحد تعیین می‌شود و هم زمانی که محتوا به طور غیرمستقیم با وزن کردن واحدها در موقعیت‌هایی که اجازه این کار را می‌دهند، همانطور که در <a href="905.html" class="text-blue-600 hover:underline" target="_blank">905</a> شرح داده شده است، قابل اجرا است. روش به شرح زیر است:</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">1.</h4>
+            <p class="mb-4">نتایج فردی <span class="ltr-text">x1, x2, ..., xN</span> را به عنوان درصدی از ادعای برچسب بیان کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">2.</h4>
+            <p class="mb-4">میانگین (X) محتویات N واحد در نمونه را محاسبه کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">3.</h4>
+            <p class="mb-4">مقدار مرجع M را تعیین کنید: <span class="ltr-text">M = 98.5%</span> اگر <span class="ltr-text">X &lt; 98.5</span>، <span class="ltr-text">M = 101.5%</span> اگر <span class="ltr-text">X &gt; 101.5</span>، و در غیر این صورت <span class="ltr-text">M = X</span>.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">4.</h4>
+            <p class="mb-4">SN، تعداد نتایج نمونه کمتر از <span class="ltr-text">[1 − (0.01)(L2)]M</span> یا بیشتر از <span class="ltr-text">[1 + (0.01)(L2)]M</span> را تعیین کنید، که در آن <span class="ltr-text">L2 = 25.0%</span> مگر اینکه در مونوگراف مربوطه به طور متفاوتی مشخص شده باشد.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.</h4>
+            <p class="mb-4">نمونه با ZTC از <a href="905.html" class="text-blue-600 hover:underline" target="_blank">905</a> سازگار است اگر <span class="ltr-text">SN ≤ c2</span>، که در آن c2 بسته به اندازه نمونه همانطور که در جدول 1 جزئیات آن ذکر شده است، تعیین می‌شود.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">جدول 1. محدودیت تعداد نتایج مشاهده شده خارج از ZTC بر اساس اندازه نمونه</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>N</th>
+                        <th>c2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">31–100</span></td>
+                        <td><span class="ltr-text">0</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">101–181</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">182–265</span></td>
+                        <td><span class="ltr-text">2</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">266–353</span></td>
+                        <td><span class="ltr-text">3</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">354–442</span></td>
+                        <td><span class="ltr-text">4</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">443–533</span></td>
+                        <td><span class="ltr-text">5</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">534–624</span></td>
+                        <td><span class="ltr-text">6</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">625–717</span></td>
+                        <td><span class="ltr-text">7</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">718–810</span></td>
+                        <td><span class="ltr-text">8</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">811–903</span></td>
+                        <td><span class="ltr-text">9</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">904–998</span></td>
+                        <td><span class="ltr-text">10</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">999–1092</span></td>
+                        <td><span class="ltr-text">11</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">1093–1187</span></td>
+                        <td><span class="ltr-text">12</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">1188–1283</span></td>
+                        <td><span class="ltr-text">13</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">1284–1379</span></td>
+                        <td><span class="ltr-text">14</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">1380–1475</span></td>
+                        <td><span class="ltr-text">15</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">1476–1571</span></td>
+                        <td><span class="ltr-text">16</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">1572–1667</span></td>
+                        <td><span class="ltr-text">17</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">1668–1764</span></td>
+                        <td><span class="ltr-text">18</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">1765–1861</span></td>
+                        <td><span class="ltr-text">19</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="mb-4">مقادیر c2 برای سایر اندازه‌های نمونه (N) به صورت زیر تعیین می‌شود:</p>
+            <div class="formula-display">
+                <span>$$c_2 = \max \{ k : \sum_{i=0}^{k} \binom{N}{i} p^i (1-p)^{N-i} \le 0.75 \}$$</span>
+            </div>
+            <p class="mb-4">که در آن <span class="ltr-text">f = 1 − 0.75^{1/30} = 0.00954357</span>. مقدار c2 را می‌توان در یک صفحه گسترده با تابع تجمعی دوجمله‌ای محاسبه کرد.</p>
+        </div>
+    </div>
+</body>
+</html>

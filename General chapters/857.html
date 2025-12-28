@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طیف‌سنجی فرابنفش-مرئی</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vazirmatn Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax CDN -->
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">طیف‌سنجی فرابنفش-مرئی</h1>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+            <p class="mb-4">
+                برای اهداف این فصل، طیف‌سنج فرابنفش-مرئی (<span class="ltr-text">UV-Vis</span>) به عنوان یک سیستم نوری تعریف می‌شود که قادر به تولید تابش تک‌رنگ در محدوده <span class="ltr-text">200–780 nm</span> و به عنوان وسیله‌ای که قادر به تشخیص عبور نوری، معمولاً به صورت جذب (<span class="ltr-text">A</span>) بیان می‌شود، و وظیفه اصلی آن اندازه‌گیری جذب/عبور مشخص شده در طول موج(های) تعریف شده است. <span class="ltr-text">[NOTE—</span>طیف‌سنج <span class="ltr-text">UV-Vis</span> ممکن است به عنوان طیف‌سنج نوری یا طیف‌سنج جذبی نیز نامیده شود.<span class="ltr-text">]</span> این عملکرد ممکن است برای گنجاندن اندازه‌گیری‌های چند کاناله، یا از طریق طراحی ابزاری یا با زمان، به عنوان مثال در مطالعات انحلال یا کینتیک، گسترش یابد.
+            </p>
+            <p class="mb-4">
+                دتکتورهای کروماتوگرافی به طور خاص از این فصل مستثنی هستند.
+            </p>
+            <p class="mb-4">
+                برای اطلاعات پشتیبانی ضروری در مورد بهترین روش‌ها و اصول اندازه‌گیری، به طیف‌سنجی فرابنفش-مرئی — نظریه و عمل <a href="1857.html" class="text-blue-600 hover:underline" target="_blank">1857</a> مراجعه کنید.
+            </p>
+            <p class="mb-4">
+                تناسب یک ابزار خاص برای یک روش معین با ارزیابی چرخه عمر مرحله‌ای برای کاربرد مورد نظر از انتخاب تا بازنشستگی ابزار تضمین می‌شود: صلاحیت طراحی (<span class="ltr-text">DQ</span>)؛ صلاحیت نصب (<span class="ltr-text">IQ</span>)؛ یک صلاحیت عملکرد اولیه تا مشخصات، همچنین به عنوان صلاحیت عملیاتی (<span class="ltr-text">OQ</span>) شناخته می‌شود؛ و یک صلاحیت عملکرد مداوم (<span class="ltr-text">PQ</span>). برای جزئیات بیشتر، به صلاحیت ابزار تحلیلی <a href="1058.html" class="text-blue-600 hover:underline" target="_blank">1058</a> مراجعه کنید. معیارهای پذیرش برای "تناسب برای هدف" بر اساس عدم قطعیت ماده مرجع و مشخصات عملکرد ابزار است.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">اصول اندازه‌گیری</h3>
+            <p class="mb-4">
+                طیف‌های <span class="ltr-text">UV-Vis</span> هنگامی به دست می‌آیند که برهم‌کنش بین تابش فرودی و ابر الکترونی در یک کروموفور منجر به یک گذار الکترونیکی شود که شامل ارتقای یک یا چند الکترون لایه بیرونی یا الکترون‌های پیوندی از حالت پایه به حالت انرژی بالاتر است. باندهای طیفی <span class="ltr-text">UV</span> و مرئی مواد عموماً پهن هستند و درجه بالایی از ویژگی برای شناسایی ترکیب ندارند. با این حال، آنها برای سنجش‌های کمی مناسب هستند و برای بسیاری از مواد، به عنوان وسیله‌ای اضافی برای شناسایی مفید هستند.
+            </p>
+            <p class="mb-4">
+                در قانون بیر-لامبرت، جذب (<span class="ltr-text">Aλ</span>) یک محلول در طول موج معین، <span class="ltr-text">λ</span>، به صورت لگاریتم در پایه <span class="ltr-text">10</span> معکوس عبور (<span class="ltr-text">Tλ</span>) تعریف می‌شود:
+            </p>
+            <div class="formula-display">
+                \[ A_\lambda = \log_{10} \frac{1}{T_\lambda} \quad \text{and} \quad T_\lambda = \frac{I_\lambda}{I_{\lambda0}} \]
+            </div>
+            <ul class="list-disc list-inside mb-4">
+                <li><span class="ltr-text">Tλ</span> = عبور</li>
+                <li><span class="ltr-text">Iλ</span> = شدت تابش منتقل شده در همان طول موج <span class="ltr-text">λ</span></li>
+                <li><span class="ltr-text">Iλ0</span> = شدت تابش فرودی در طول موج <span class="ltr-text">λ</span></li>
+            </ul>
+            <p class="mb-4">
+                در غیاب هر عامل فیزیکی یا شیمیایی دیگر، <span class="ltr-text">Aλ</span> متناسب با طول مسیر، <span class="ltr-text">b</span>، که تابش از آن عبور می‌کند، و غلظت، <span class="ltr-text">c</span>، ماده در محلول بر اساس فرمول زیر است:
+            </p>
+            <div class="formula-display">
+                \[ A_\lambda = \epsilon_\lambda cb \]
+            </div>
+            <ul class="list-disc list-inside mb-4">
+                <li><span class="ltr-text">ελ</span> = جذب مولار</li>
+                <li><span class="ltr-text">c</span> = غلظت حل‌شونده (<span class="ltr-text">mol/L</span>)</li>
+                <li><span class="ltr-text">b</span> = طول مسیر (<span class="ltr-text">cm</span>)</li>
+            </ul>
+            <p class="mb-4">
+                اگر غلظت، <span class="ltr-text">c</span>، بر حسب <span class="ltr-text">g/L</span> بیان شود، ثابت <span class="ltr-text">ελ</span> به <span class="ltr-text">aλ</span> تبدیل می‌شود که جذب‌پذیری نامیده می‌شود.
+            </p>
+            <p class="mb-4">
+                عبارت <span class="ltr-text">\(E_{1\%}^{1\text{ cm}}\)</span>، که جذب ویژه یک ماده محلول را نشان می‌دهد، به جذب یک محلول <span class="ltr-text">10-g/L</span> (<span class="ltr-text">1%, m/v</span>) در یک سلول <span class="ltr-text">1-cm</span> که در طول موج تعریف شده اندازه‌گیری می‌شود، اشاره دارد، به طوری که:
+            </p>
+            <div class="formula-display">
+                \[ E_{1\%}^{1\text{ cm}} = 10a_\lambda = 10\epsilon_\lambda/M \]
+            </div>
+            <ul class="list-disc list-inside mb-4">
+                <li><span class="ltr-text">aλ</span> = جذب‌پذیری</li>
+                <li><span class="ltr-text">ελ</span> = جذب مولار</li>
+                <li><span class="ltr-text">M</span> = غلظت مولار محلول</li>
+            </ul>
+            <p class="mb-4">
+                هنگامی که محلول‌ها در سلول‌های <span class="ltr-text">1-cm</span> مشاهده می‌شوند، غلظت‌های حدود <span class="ltr-text">10 µg/mL</span> اغلب جذب‌هایی از <span class="ltr-text">0.2–0.8</span> را در ناحیه <span class="ltr-text">UV</span> یا مرئی ایجاد می‌کنند.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">صلاحیت طیف‌سنج‌های <span class="ltr-text">UV-Vis</span></h2>
+            <p class="mb-4">
+                هدف این بخش از فصل، ارائه روش‌های آزمون و معیارهای پذیرش برای اطمینان از اینکه ابزار برای کاربرد مورد نظر خود (<span class="ltr-text">OQ</span>) مناسب است و به درستی در طول دوره‌های زمانی طولانی به عنوان بخشی از <span class="ltr-text">PQ</span> به کار خود ادامه خواهد داد. مانند هر دستگاه طیف‌سنجی، یک طیف‌سنج <span class="ltr-text">UV-Vis</span> باید برای دقت و صحت طول موج (محور <span class="ltr-text">x</span>) و فتومتری (محور <span class="ltr-text">y</span> یا محور سیگنال) واجد شرایط باشد و پارامترهای اساسی نور پراکنده و وضوح باید تعیین شوند. <span class="ltr-text">OQ</span> در سراسر محدوده‌های عملیاتی مورد نیاز در آزمایشگاه برای هر دو مقیاس جذب و طول موج انجام می‌شود.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">صلاحیت نصب</h3>
+            <p class="mb-4">
+                شواهد مستند از الزامات <span class="ltr-text">IQ</span> نشان می‌دهد که سخت‌افزار و نرم‌افزار به درستی در مکان مورد نظر نصب شده‌اند.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">صلاحیت عملیاتی</h3>
+            <p class="mb-4">
+                معیارهای پذیرش برای پارامترهای حیاتی ابزار که "تناسب برای هدف" را تعیین می‌کنند، در طول <span class="ltr-text">IQ</span> و <span class="ltr-text">OQ</span> تأیید می‌شوند. مشخصات برای ابزارها و کاربردهای خاص می‌تواند بسته به روش تحلیلی مورد استفاده و دقت مطلوب نتیجه نهایی متفاوت باشد. <span class="ltr-text">OQ</span> باید کنترل مناسبی را بر محدوده عملیاتی طول موج، جذب، و ارزیابی نور پراکنده و وضوح، یعنی پهنای باند طیفی (<span class="ltr-text">SBW</span>) ایجاد کند. تأمین‌کنندگان ابزار اغلب مواد مرجع و پروتکل‌هایی را به عنوان بخشی از بسته <span class="ltr-text">IQ/OQ</span> در دسترس دارند.
+            </p>
+            <p class="mb-4">
+                در هر کجا که ممکن است در روش‌های زیر، مواد مرجع تأیید شده (<span class="ltr-text">CRM</span>ها) به جای محلول‌های آماده شده در آزمایشگاه استفاده شوند. این <span class="ltr-text">CRM</span>ها باید از یک منبع معتبر شناخته شده تهیه شوند و شامل انتساب‌های ارزشی مستقل تأیید شده و قابل ردیابی با عدم قطعیت محاسبه شده مربوطه باشند. <span class="ltr-text">CRM</span>ها باید تمیز و عاری از گرد و غبار نگهداری شوند. تأیید مجدد باید به صورت دوره‌ای برای حفظ اعتبار گواهینامه انجام شود.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">کنترل طول موج‌ها</h3>
+            <p class="mb-4">
+                اطمینان حاصل کنید که دقت محور طول موج (محور <span class="ltr-text">x</span>) در محدوده عملیاتی مورد نظر در حدود قابل قبول صحیح است. کنترل طول موج <span class="ltr-text">OQ</span> باید شامل حداقل یک روش در هر محدوده عملیاتی باشد که قرار است استفاده شود. گزینه‌ها و معیارهای پذیرش در جدول <span class="ltr-text">1</span> خلاصه شده‌اند.
+            </p>
+
+            <div class="overflow-x-auto mb-6">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>روش</th>
+                            <th><span class="ltr-text">UV</span> (<span class="ltr-text">200–400 nm</span>)</th>
+                            <th><span class="ltr-text">Vis</span> (<span class="ltr-text">400–780 nm</span>)</th>
+                            <th><span class="ltr-text">Vis/NIR</span> (<span class="ltr-text">400–900 nm</span>)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>خطوط گسیل جیوه (<span class="ltr-text">Hg</span>)</td>
+                            <td>دقت <span class="ltr-text">±1 nm</span><br>صحت <span class="ltr-text">≤0.5 nm</span></td>
+                            <td>دقت <span class="ltr-text">±2 nm</span><br>صحت <span class="ltr-text">≤0.5 nm</span></td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td>خطوط گسیل دوتریوم (<span class="ltr-text">D2</span>)</td>
+                            <td>—</td>
+                            <td>دقت <span class="ltr-text">±2 nm</span><br>صحت <span class="ltr-text">≤0.5 nm</span></td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td>محلول‌های اکسید سریم</td>
+                            <td>دقت <span class="ltr-text">±1 nm</span><br>صحت <span class="ltr-text">≤0.5 nm</span></td>
+                            <td>—</td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td>محلول‌ها یا شیشه‌های اکسید هولمیوم</td>
+                            <td>دقت <span class="ltr-text">±1 nm</span><br>صحت <span class="ltr-text">≤0.5 nm</span></td>
+                            <td>دقت <span class="ltr-text">±2 nm</span><br>صحت <span class="ltr-text">≤0.5 nm</span></td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td>محلول‌ها یا شیشه‌های دیدیمیوم</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>دقت <span class="ltr-text">±2 nm</span><br>صحت <span class="ltr-text">≤0.5 nm</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="text-sm text-gray-600 mt-2">
+                    <span class="ltr-text">[NOTE—</span>استانداردهای مرجع تأیید شده، قابل ردیابی به موسسه ملی استاندارد و فناوری (<span class="ltr-text">NIST</span>) (<span class="ltr-text">www.nist.gov</span>) یا سایر سازمان‌های استانداردسازی شناخته شده، به صورت تجاری در دسترس هستند و باید در صورت امکان استفاده شوند.<span class="ltr-text">]</span>
+                </p>
+            </div>
+
+            <p class="mb-4">
+                برای ابزارهای غیر آرایه دیودی، دقت و صحت طول موج در محدوده عملیاتی با استفاده از حداقل شش اندازه‌گیری تکراری تعیین می‌شود. برای دقت طول موج، تفاوت میانگین مقدار اندازه‌گیری شده با مقدار تأیید شده <span class="ltr-text">CRM</span> باید در محدوده <span class="ltr-text">±1 nm</span> در ناحیه <span class="ltr-text">UV</span> (<span class="ltr-text">200–400 nm</span>) و در ناحیه مرئی (<span class="ltr-text">400–780 nm</span>) و ناحیه مرئی/<span class="ltr-text">NIR</span> (نزدیک فروسرخ) (<span class="ltr-text">400–900 nm</span>) باید در محدوده <span class="ltr-text">±2 nm</span> باشد.
+            </p>
+            <p class="mb-4">
+                برای صحت طول موج، انحراف معیار میانگین مقدار شش اندازه‌گیری طول موج نباید از <span class="ltr-text">0.5 nm</span> تجاوز کند. برای ابزارهای آرایه دیودی، تنها یک اندازه‌گیری دقت طول موج مورد نیاز است و نیازی به تعیین صحت نیست، به دلیل طراحی غیر مکانیکی تک‌رنگ‌کننده.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تعیین حدود پذیرش (طول موج) — انتخاب استانداردها</h4>
+            <p class="mb-4">
+                برای همه روش‌های دقت کنترل طول موج‌ها، حدود پذیرش برای کالیبراسیون کافی با اضافه کردن عدم قطعیت گسترده <span class="ltr-text">CRM</span> به مشخصات فروشنده ابزار در طول موج(های) مورد نیاز به صورت خطی تعیین می‌شوند و این مقادیر باید در مقادیر مشخص شده در جدول <span class="ltr-text">1</span> قرار گیرند. در موردی که از طیف خطوط اتمی استفاده می‌شود، این عدم قطعیت گسترده <span class="ltr-text">CRM</span> برای این فرآیند صفر در نظر گرفته می‌شود، یعنی حد به سادگی به مشخصات فروشنده ابزار تبدیل می‌شود.<a href="https://www.nist.gov/sites/default/files/documents/mml/csd/inorganic/NIST_SpecialPub829.pdf" class="text-blue-600 hover:underline" target="_blank">1</a>
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">طیف خطوط اتمی</h3>
+            <p class="mb-4">
+                این روش به عنوان کاربرد اولیه توصیف می‌شود زیرا خطوط گسیلی تولید شده از یک لامپ تخلیه مشخصه عنصر منبع هستند و به عنوان یک استاندارد فیزیکی بنیادی، این طول موج‌ها با عدم قطعیتی از <span class="ltr-text">NMT ±0.01 nm</span> اندازه‌گیری شده‌اند. در طیف‌سنجی محلول، دقت طول موج مورد نیاز به ندرت از <span class="ltr-text">1.0 nm</span> تجاوز می‌کند. به همین دلایل، مقادیر استاندارد خطوط اتمی بدون عدم قطعیت ذکر شده‌اند.
+            </p>
+            <p class="mb-4">
+                قوس منبع گسیل اتمی، یا تصویر آن، باید در همان مسیر نوری که تصویر منبع نور اولیه طیف‌سنج قرار دارد، قرار گیرد؛ بنابراین، تنها در طیف‌سنج‌هایی قابل استفاده است که می‌توانند در حالت شدت تک پرتو عمل کنند و عملاً فقط باید بر روی سیستمی پیاده‌سازی شود که برای جایگذاری این منابع طراحی شده است، به عنوان مثال، به عنوان یک لوازم جانبی. یک لامپ جیوه کم فشار رایج دارای تعدادی خطوط شدید است که بخش بزرگی از طیف‌های <span class="ltr-text">UV</span> و مرئی را پوشش می‌دهد. دو خط دوتریوم از منبع در <span class="ltr-text">486.0</span> و <span class="ltr-text">656.1 nm</span> اغلب توسط تولیدکنندگان به عنوان یک بررسی کالیبراسیون داخلی استفاده می‌شوند و می‌توانند برای اهداف تشخیصی استفاده شوند، همانطور که خط <span class="ltr-text">Xe</span> در <span class="ltr-text">260.6 nm</span>، در صورت لزوم (به جدول <span class="ltr-text">2</span> مراجعه کنید).<a href="https://www.astm.org/Standards/E275" class="text-blue-600 hover:underline" target="_blank">2</a>
+            </p>
+
+            <div class="overflow-x-auto mb-6">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>عنصر</th>
+                            <th><span class="ltr-text">nm</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><span class="ltr-text">Hg</span></td><td><span class="ltr-text">253.7</span></td></tr>
+                        <tr><td><span class="ltr-text">Xe</span></td><td><span class="ltr-text">260.6</span></td></tr>
+                        <tr><td><span class="ltr-text">Hg</span></td><td><span class="ltr-text">296.7</span></td></tr>
+                        <tr><td><span class="ltr-text">Hg</span></td><td><span class="ltr-text">313.2</span></td></tr>
+                        <tr><td><span class="ltr-text">Hg</span></td><td><span class="ltr-text">365.0</span></td></tr>
+                        <tr><td><span class="ltr-text">Hg</span></td><td><span class="ltr-text">404.7</span></td></tr>
+                        <tr><td><span class="ltr-text">Hg</span></td><td><span class="ltr-text">435.8</span></td></tr>
+                        <tr><td><span class="ltr-text">D2</span></td><td><span class="ltr-text">486.0</span></td></tr>
+                        <tr><td><span class="ltr-text">Hg</span></td><td><span class="ltr-text">546.1</span></td></tr>
+                        <tr><td><span class="ltr-text">Hg</span></td><td><span class="ltr-text">577.0</span></td></tr>
+                        <tr><td><span class="ltr-text">Hg</span></td><td><span class="ltr-text">579.1</span></td></tr>
+                        <tr><td><span class="ltr-text">D2</span></td><td><span class="ltr-text">656.1</span></td></tr>
+                    </tbody>
+                </table>
+                <p class="text-sm text-gray-600 mt-2">
+                    <span class="ltr-text">[NOTE—</span>نزدیک‌ترین طول موج(ها) را که محدوده عملیاتی مورد نیاز را پوشش می‌دهد، انتخاب کنید.<span class="ltr-text">]</span>
+                </p>
+            </div>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">محلول‌های اکسید خاکی کمیاب</h3>
+            <p class="mb-4">
+                این روش از محلول‌های اکسیدهای خاکی کمیاب که با انحلال در محیط اسیدی تهیه می‌شوند، استفاده می‌کند. پرکاربردترین آنها اکسید هولمیوم در اسید پرکلریک است.<a href="https://doi.org/10.1063/1.1873919" class="text-blue-600 hover:underline" target="_blank">3</a> محلول اکسید هولمیوم به عنوان یک استاندارد طول موج ذاتی در سطح بین‌المللی پذیرفته شده است و <span class="ltr-text">CRM</span>های مناسب به صورت تجاری در دسترس هستند.<a href="https://www.iso.org/standard/66655.html" class="text-blue-600 hover:underline" target="_blank">4</a>
+            </p>
+            <p class="mb-4">
+                ماکزیمم پیک‌های مشاهده شده با استفاده از حالت اسکن عادی در طیف‌سنج تعیین می‌شوند. ماکزیمم پیک‌ها برای یک محلول <span class="ltr-text">4% (m/v)</span> اکسید هولمیوم در اسید پرکلریک با <span class="ltr-text">SBW</span> <span class="ltr-text">1.0-nm</span> و طول مسیر <span class="ltr-text">1 cm</span> در جدول <span class="ltr-text">3</span> نشان داده شده‌اند.
+            </p>
+
+            <div class="overflow-x-auto mb-6">
+                <table>
+                    <thead>
+                        <tr>
+                            <th><span class="ltr-text">nm</span></th>
+                            <th><span class="ltr-text">nm</span></th>
+                            <th><span class="ltr-text">nm</span></th>
+                            <th><span class="ltr-text">nm</span></th>
+                            <th><span class="ltr-text">nm</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><span class="ltr-text">241.1</span></td><td><span class="ltr-text">249.9</span></td><td><span class="ltr-text">278.1</span></td><td><span class="ltr-text">287.2</span></td><td><span class="ltr-text">333.5</span></td></tr>
+                        <tr><td><span class="ltr-text">345.4</span></td><td><span class="ltr-text">361.3</span></td><td><span class="ltr-text">385.6</span></td><td><span class="ltr-text">416.3</span></td><td><span class="ltr-text">451.4</span></td></tr>
+                        <tr><td><span class="ltr-text">467.8</span></td><td><span class="ltr-text">485.2</span></td><td><span class="ltr-text">536.6</span></td><td><span class="ltr-text">640.5</span></td><td></td></tr>
+                    </tbody>
+                </table>
+                <p class="text-sm text-gray-600 mt-2">
+                    <span class="ltr-text">[NOTE—</span>نزدیک‌ترین طول موج(ها) را که محدوده عملیاتی مورد نیاز را پوشش می‌دهد، انتخاب کنید.<span class="ltr-text">]</span>
+                </p>
+            </div>
+
+            <p class="mb-4">
+                اگر محدوده عملیاتی طیف‌سنج خارج از محدوده <span class="ltr-text">240–650 nm</span> باشد، می‌توان از اکسیدهای خاکی کمیاب تأیید شده دیگر یا سایر محلول‌ها استفاده کرد، به شرطی که قابل ردیابی به یک استاندارد ملی یا بین‌المللی باشند.
+            </p>
+            <p class="mb-4">
+                سریم به عنوان یک محلول <span class="ltr-text">CRM</span> قابل ردیابی در محیط اسیدی، به عنوان مثال در اسید سولفوریک، موجود است. دارای ویژگی‌های پیک مفیدی در ناحیه <span class="ltr-text">200–300 nm</span> در حدود <span class="ltr-text">201.1</span>، <span class="ltr-text">211.4</span>، <span class="ltr-text">222.6</span>، <span class="ltr-text">240.4</span> و <span class="ltr-text">253.7 nm</span> است.
+            </p>
+            <p class="mb-4">
+                دیدیمیوم (مخلوطی از نئودیمیوم و پرازئودیمیوم) به عنوان یک <span class="ltr-text">CRM</span> قابل ردیابی هم به صورت محلول و هم به صورت شیشه موجود است. دیدیمیوم از نظر آماده‌سازی مشابه مواد هولمیوم است و دارای ویژگی‌های پیک مفیدی در ناحیه <span class="ltr-text">730–870 nm</span> است که ممکن است از ذوب به ذوب شیشه متفاوت باشد. پیک‌های مفید در محلول دیدیمیوم در حدود <span class="ltr-text">731.6</span>، <span class="ltr-text">740.0</span>، <span class="ltr-text">794.1</span>، <span class="ltr-text">800.0</span> و <span class="ltr-text">864.4 nm</span> یافت می‌شوند.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">شیشه‌های خاکی کمیاب</h3>
+            <p class="mb-4">
+                این روش از شیشه‌هایی استفاده می‌کند که با ذوب اکسید خاکی کمیاب مناسب در یک ماتریس شیشه‌ای پایه تولید می‌شوند. پرکاربردترین آنها هولمیوم است که طول موج‌های مرجع آن به خوبی تعریف شده‌اند. اگرچه تولید می‌تواند باعث تغییرات دسته‌ای در این شیشه‌ها شود، اما <span class="ltr-text">CRM</span>های قابل ردیابی به صورت تجاری در دسترس هستند و می‌توانند استفاده شوند. مقادیر نمونه برای یک شیشه هولمیوم با استفاده از <span class="ltr-text">SBW</span> <span class="ltr-text">1.0-nm</span> به شرح زیر است: <span class="ltr-text">241.5</span>، <span class="ltr-text">279.2</span>، <span class="ltr-text">287.5</span>، <span class="ltr-text">333.8</span>، <span class="ltr-text">360.9</span>، <span class="ltr-text">418.8</span>، <span class="ltr-text">445.8</span>، <span class="ltr-text">453.7</span>، <span class="ltr-text">460.2</span>، <span class="ltr-text">536.5</span> و <span class="ltr-text">637.7 nm</span>.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">کنترل جذب</h3>
+            <p class="mb-4">
+                برای تعیین دقت، صحت و خطی بودن عبور یک سیستم معین، لازم است دقت جذب یک سیستم در محدوده عملیاتی مورد نظر آن با انتخاب و استفاده از روش‌های زیر، بسته به محدوده طول موج و جذب مورد نیاز، تأیید شود.
+            </p>
+            <p class="mb-4">
+                کنترل جذب <span class="ltr-text">OQ</span> باید شامل حداقل یک ارزیابی در هر محدوده طول موج در ناحیه <span class="ltr-text">0–2.00 A</span> باشد. اگر جذب <span class="ltr-text">>2.00 A</span> برای اندازه‌گیری کمی استفاده شود، کنترل جذب نیز باید در محدوده <span class="ltr-text">>2.00 A</span> ارزیابی شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تعیین حدود پذیرش (جذب) — انتخاب استانداردها</h4>
+            <p class="mb-4">
+                برای همه روش‌های کنترل جذب، حدود پذیرش برای کالیبراسیون کافی با اضافه کردن عدم قطعیت گسترده <span class="ltr-text">CRM</span> به مشخصات فروشنده ابزار در طول موج(ها) و سطوح جذب مورد نیاز به صورت خطی تعیین می‌شوند و این مقادیر باید در مقادیر مشخص شده در جدول <span class="ltr-text">4</span> قرار گیرند.
+            </p>
+            <p class="text-sm text-gray-600 mt-2 mb-4">
+                <span class="ltr-text">[NOTE—CRM</span>های قابل ردیابی به مواد مرجع استاندارد <span class="ltr-text">NIST (SRMs)</span>، یا سایر استانداردهای بین‌المللی یا ملی، به صورت تجاری در دسترس هستند و باید در صورت امکان استفاده شوند.<span class="ltr-text">]</span>
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">کنترل پاسخ فتومتری (خطی بودن)</h3>
+            <p class="mb-4">
+                تأیید پاسخ فتومتری (خطی بودن) مورد نیاز است و باید با استفاده از یک نوع استاندارد مناسب برای طول موج(های) مورد نیاز ارزیابی شود، جایی که حداقل سه سطح جذب متفاوت مناسب و پوشاننده محدوده عملیاتی مورد نیاز اندازه‌گیری می‌شوند. گزینه‌ها و معیارهای پذیرش در جدول <span class="ltr-text">4</span> خلاصه شده‌اند.
+            </p>
+            <p class="text-sm text-gray-600 mt-2 mb-4">
+                <span class="ltr-text">[NOTE—</span>با توجه به الزامات فوق، محاسبه ضریب همبستگی پاسخ استاندارد برای اثبات خطی بودن ضروری نیست؛ فقط باید نشان داد که در سطوح جذب متفاوت انتخاب شده، معیارهای پذیرش برآورده شده‌اند.<span class="ltr-text">]</span>
+            </p>
+
+            <div class="overflow-x-auto mb-6">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>محدوده جذب</th>
+                            <th>استاندارد</th>
+                            <th><span class="ltr-text">UV</span> (<span class="ltr-text">200–400 nm</span>)</th>
+                            <th><span class="ltr-text">Vis</span> (<span class="ltr-text">400–780 nm</span>)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="ltr-text">0–1 A</span></td>
+                            <td>محلول تایید شده اسید نیکوتینیک</td>
+                            <td><span class="ltr-text">6–24 mg/L</span><br>ارزیابی در <span class="ltr-text">213</span> و <span class="ltr-text">261 nm</span>.<br>دقت <span class="ltr-text">±0.010 Aλ</span><br>صحت <span class="ltr-text">≤0.005 Aλ</span></td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td><span class="ltr-text">0–1 A</span></td>
+                            <td>محلول تایید شده پتاسیم دی‌کرومات (<span class="ltr-text">K2Cr2O7</span>)</td>
+                            <td><span class="ltr-text">20–60 mg/L</span><br>ارزیابی در <span class="ltr-text">235</span>، <span class="ltr-text">257</span>، <span class="ltr-text">313</span> و <span class="ltr-text">350 nm</span>.<br>دقت <span class="ltr-text">±0.010 Aλ</span><br>صحت <span class="ltr-text">≤0.005 Aλ</span></td>
+                            <td><span class="ltr-text">600 mg/L</span><br>ارزیابی در <span class="ltr-text">430 nm</span>.<br>دقت <span class="ltr-text">±0.010 Aλ</span><br>صحت <span class="ltr-text">≤0.005 Aλ</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="ltr-text">0–1 A</span></td>
+                            <td>فیلترهای شیشه‌ای چگالی خنثی تایید شده</td>
+                            <td>—</td>
+                            <td>ارزیابی در <span class="ltr-text">440</span>، <span class="ltr-text">465</span>، <span class="ltr-text">546.1</span>، <span class="ltr-text">590</span> و <span class="ltr-text">635 nm</span>.<br>دقت <span class="ltr-text">±0.008 Aλ</span><br>صحت <span class="ltr-text">≤0.005 Aλ</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="ltr-text">0–1 A</span></td>
+                            <td>فیلترهای فلز-بر-سیلیس-جوشی تایید شده</td>
+                            <td>ارزیابی در <span class="ltr-text">250</span>، <span class="ltr-text">280</span>، <span class="ltr-text">340</span>، <span class="ltr-text">360</span> و <span class="ltr-text">400 nm</span>.<br>دقت <span class="ltr-text">±0.010 Aλ</span><br>صحت <span class="ltr-text">≤0.005 Aλ</span></td>
+                            <td>ارزیابی در <span class="ltr-text">465</span>، <span class="ltr-text">500</span>، <span class="ltr-text">546.1</span>، <span class="ltr-text">590</span> و <span class="ltr-text">635 nm</span>.<br>دقت <span class="ltr-text">±0.008 Aλ</span><br>صحت <span class="ltr-text">≤0.005 Aλ</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="ltr-text">1–3 A</span></td>
+                            <td>محلول تایید شده پتاسیم دی‌کرومات (<span class="ltr-text">K2Cr2O7</span>)</td>
+                            <td><span class="ltr-text">80–200 mg/L</span><br>ارزیابی در <span class="ltr-text">235</span>، <span class="ltr-text">257</span>، <span class="ltr-text">313</span> و <span class="ltr-text">350 nm</span>.<br>دقت <span class="ltr-text">±1%</span><br>صحت <span class="ltr-text">≤0.5%</span></td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td><span class="ltr-text">1–3 A</span></td>
+                            <td>فیلترهای شیشه‌ای چگالی خنثی تایید شده</td>
+                            <td>—</td>
+                            <td>ارزیابی در <span class="ltr-text">440</span>، <span class="ltr-text">465</span>، <span class="ltr-text">546.1</span>، <span class="ltr-text">590</span> و <span class="ltr-text">635 nm</span>.<br>دقت <span class="ltr-text">±0.8%</span><br>صحت <span class="ltr-text">≤0.5%</span></td>
+                        </tr>
+                        <tr>
+                            <td>خطی بودن فتومتری <span class="ltr-text">UV</span></td>
+                            <td>محلول‌های اسید نیکوتینیک تایید شده</td>
+                            <td>همه غلظت‌ها معیارهای پذیرش دقت جذب را برآورده می‌کنند.</td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td>خطی بودن فتومتری</td>
+                            <td>محلول‌های پتاسیم دی‌کرومات (<span class="ltr-text">K2Cr2O7</span>) تایید شده</td>
+                            <td>همه غلظت‌ها معیارهای پذیرش دقت جذب را برآورده می‌کنند.</td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td>خطی بودن فتومتری</td>
+                            <td>فیلترهای فلز-بر-سیلیس-جوشی تایید شده</td>
+                            <td>حداقل سه فیلتر تایید شده در <span class="ltr-text">250</span>، <span class="ltr-text">280</span>، <span class="ltr-text">340</span>، <span class="ltr-text">360</span> یا <span class="ltr-text">400 nm</span> ارزیابی شدند.<br>همه فیلترها معیارهای پذیرش دقت جذب را برآورده می‌کنند.</td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td>خطی بودن فتومتری</td>
+                            <td>فیلترهای شیشه‌ای چگالی خنثی تایید شده</td>
+                            <td>—</td>
+                            <td>حداقل سه فیلتر تایید شده ارزیابی شدند.<br>همه فیلترها معیارهای پذیرش دقت جذب را برآورده می‌کنند.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="text-sm text-gray-600 mt-2">
+                    <span class="ltr-text">[NOTE—</span><span class="ltr-text">CRM</span>های جذب مناسب را که محدوده(های) عملیاتی مورد نیاز را پوشش می‌دهند، انتخاب کنید.<span class="ltr-text">]</span>
+                </p>
+            </div>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">محلول‌های اسید نیکوتینیک اسیدی در <span class="ltr-text">0.1 N</span> اسید هیدروکلریک</h3>
+            <p class="mb-4">
+                در محدوده <span class="ltr-text">0–24 mg/L</span>، محلول‌های اسید نیکوتینیک مقادیر مرجعی تا <span class="ltr-text">1.0 A</span> را در یکی از مقادیر تأیید شده <span class="ltr-text">213</span> یا <span class="ltr-text">261 nm</span> فراهم می‌کنند. این محلول‌ها به عنوان <span class="ltr-text">CRM</span>ها، در محدوده <span class="ltr-text">0–60 mg/L</span>، مقادیر مرجعی تا <span class="ltr-text">2.5 A</span> را فراهم می‌کنند. با استفاده از محلول‌های اسید نیکوتینیک، دقت جذب باید <span class="ltr-text">±0.010 Aλ</span> (برای مقادیر زیر <span class="ltr-text">1.00 Aλ</span>) باشد. صحت جذب را می‌توان به عنوان انحراف معیار از میانگین حداقل شش اندازه‌گیری تکراری تعیین کرد. این مجموعه از اندازه‌گیری‌ها باید در مقادیر جذب بالا و پایین محدوده عملیاتی انجام (تکرار) شوند. در هر مورد، انحرافات جذب از میانگین نباید از <span class="ltr-text">±0.005 Aλ</span> (برای مقادیر زیر <span class="ltr-text">1.0 Aλ</span>) تجاوز کند.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">محلول‌های اسیدی پتاسیم دی‌کرومات در <span class="ltr-text">0.001 M</span> اسید پرکلریک</h3>
+            <p class="mb-4">
+                در محدوده <span class="ltr-text">0–200 mg/L</span>، محلول‌های پتاسیم دی‌کرومات مقادیر مرجعی تا <span class="ltr-text">3.0</span> واحد جذب را در یکی از مقادیر تأیید شده <span class="ltr-text">235</span>، <span class="ltr-text">257</span>، <span class="ltr-text">313</span> یا <span class="ltr-text">350 nm</span> فراهم می‌کنند. این محلول‌ها به عنوان <span class="ltr-text">CRM</span>ها در دسترس هستند یا می‌توانند طبق <span class="ltr-text">NIST</span> از <span class="ltr-text">SRM</span>های مناسب موجود، به عنوان مثال <span class="ltr-text">SRM 935x</span> یا <span class="ltr-text">SRM 136x</span> (که <span class="ltr-text">x</span> می‌تواند هر حرفی از "<span class="ltr-text">a</span>" تا "<span class="ltr-text">z</span>" باشد) تهیه شوند. با استفاده از محلول‌های پتاسیم دی‌کرومات، دقت جذب باید <span class="ltr-text">±1% Aλ</span> (برای مقادیر بالای <span class="ltr-text">1.00 Aλ</span>) یا <span class="ltr-text">±0.010 Aλ</span> (برای مقادیر زیر <span class="ltr-text">1.00 Aλ</span>) باشد.
+            </p>
+            <p class="mb-4">
+                صحت جذب را می‌توان به عنوان انحراف معیار از میانگین حداقل شش اندازه‌گیری تکراری تعیین کرد. این مجموعه از اندازه‌گیری‌ها باید در مقادیر جذب بالا و پایین محدوده عملیاتی انجام (تکرار) شوند. در هر مورد، انحرافات جذب از میانگین نباید از <span class="ltr-text">±0.5% Aλ</span> (برای مقادیر بالای <span class="ltr-text">1.0 Aλ</span>) یا <span class="ltr-text">±0.005 Aλ</span> (برای مقادیر زیر <span class="ltr-text">1.0 Aλ</span>) تجاوز کند.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">فیلترهای شیشه‌ای چگالی خنثی</h3>
+            <p class="mb-4">
+                این فیلترهای شیشه‌ای خاکستری از شیشه دوپ شده تولید می‌شوند و طیف تقریباً مسطحی در ناحیه طول موج‌های کالیبراسیون دارند. آنها مقادیر مرجعی تا <span class="ltr-text">3.5</span> واحد جذب را در مقادیر تأیید شده <span class="ltr-text">440</span>، <span class="ltr-text">465</span>، <span class="ltr-text">546.1</span>، <span class="ltr-text">590</span> و <span class="ltr-text">635 nm</span> فراهم می‌کنند. این فیلترها به عنوان <span class="ltr-text">CRM</span>هایی در دسترس هستند که قابل ردیابی به <span class="ltr-text">NIST SRM 930e</span>، <span class="ltr-text">1930</span> و <span class="ltr-text">2930</span> هستند. سایر محلول‌های استاندارد تأیید شده یا فیلترهای نوری را می‌توان استفاده کرد، به شرطی که قابل ردیابی به یک استاندارد ملی یا بین‌المللی باشند. با استفاده از فیلترهای شیشه‌ای خاکستری، دقت جذب باید <span class="ltr-text">±0.8% Aλ</span> (برای مقادیر بالای <span class="ltr-text">1.00 Aλ</span>) یا <span class="ltr-text">±0.008 Aλ</span> (برای مقادیر زیر <span class="ltr-text">1.00 Aλ</span>) باشد. صحت جذب را می‌توان به عنوان انحراف معیار از میانگین حداقل شش اندازه‌گیری تکراری تعیین کرد. انحراف جذب از میانگین نباید از <span class="ltr-text">±0.5% A</span> (برای مقادیر بالای <span class="ltr-text">1.0 A</span>) یا <span class="ltr-text">±0.005 Aλ</span> (برای مقادیر زیر <span class="ltr-text">1.0 A</span>) تجاوز کند.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">فیلترهای فلز-بر-سیلیس-جوشی</h3>
+            <p class="mb-4">
+                این فیلترهای چگالی خنثی با رسوب یک فیلم فلزی بر روی بستر سیلیس تولید می‌شوند و طیف تقریباً مسطحی در ناحیه طول موج‌های کالیبراسیون دارند. آنها مقادیر مرجعی تا <span class="ltr-text">2 A</span> را در مقادیر معمولاً تأیید شده <span class="ltr-text">250</span>، <span class="ltr-text">280</span>، <span class="ltr-text">340</span>، <span class="ltr-text">360</span> و <span class="ltr-text">400 nm</span> در محدوده <span class="ltr-text">UV</span>، و مقادیر مرجعی از <span class="ltr-text">465</span>، <span class="ltr-text">500</span>، <span class="ltr-text">546.1</span>، <span class="ltr-text">590</span> و <span class="ltr-text">635 nm</span> در محدوده مرئی فراهم می‌کنند. این فیلترها به عنوان <span class="ltr-text">CRM</span>هایی در دسترس هستند که قابل ردیابی به <span class="ltr-text">NIST SRM 2031x</span> (که <span class="ltr-text">x</span> = "<span class="ltr-text">a</span>" تا "<span class="ltr-text">z</span>")، یا سایر استانداردهای ملی یا بین‌المللی هستند. در محدوده <span class="ltr-text">UV</span>، دقت جذب باید <span class="ltr-text">±1% Aλ</span> (برای مقادیر بالای <span class="ltr-text">1.00 Aλ</span>) یا <span class="ltr-text">±0.01 Aλ</span> (برای مقادیر زیر <span class="ltr-text">1.00 Aλ</span>) باشد. در محدوده مرئی، دقت جذب باید <span class="ltr-text">±0.8% Aλ</span> (برای مقادیر بالای <span class="ltr-text">1.00 Aλ</span>) یا <span class="ltr-text">±0.008 Aλ</span> (برای مقادیر زیر <span class="ltr-text">1.00 Aλ</span>) باشد. صحت جذب را می‌توان به عنوان انحراف معیار از میانگین حداقل شش اندازه‌گیری تکراری در مقادیر جذب بالا و پایین محدوده عملیاتی تعیین کرد. انحراف معیار از میانگین نباید از <span class="ltr-text">±0.5% Aλ</span> (برای مقادیر بالای <span class="ltr-text">1.00 Aλ</span>) یا <span class="ltr-text">±0.005 Aλ</span> (برای مقادیر زیر <span class="ltr-text">1.00 Aλ</span>) در هر دو محدوده <span class="ltr-text">UV</span> و مرئی تجاوز کند.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تخمین حد نور پراکنده (انرژی تابشی پراکنده)</h3>
+            <p class="mb-4">
+                اگرچه اندازه‌گیری جذب یا عبور یک اندازه‌گیری نسبت شدت‌ها است و بنابراین از نظر نظری مستقل از شدت منبع تک‌رنگ است، اندازه‌گیری‌های عملی تحت تأثیر حضور تابش ناخواسته به نام "انرژی تابشی پراکنده" یا "نور پراکنده" قرار می‌گیرند. علاوه بر این، اثر نامطلوب نور پراکنده با کهنه شدن اجزای نوری و لامپ‌ها در طیف‌سنج افزایش می‌یابد. این اثرات در نقاط انتهایی محدوده‌های عملیاتی دتکتور و لامپ بیشتر است. حد نور پراکنده <span class="ltr-text">OQ</span> باید شامل ارزیابی در یک یا چند طول موج <span class="ltr-text">UV</span> باشد، با انتخاب مواد مناسب نشان داده شده در جدول <span class="ltr-text">5</span> برای پوشش محدوده عملیاتی <span class="ltr-text">UV</span> مورد نیاز. در ناحیه مرئی، یعنی بالای <span class="ltr-text">400 nm</span>، نیازی به ارزیابی نور پراکنده نیست.
+            </p>
+            <p class="text-sm text-gray-600 mt-2 mb-4">
+                <span class="ltr-text">[NOTE—</span>مشخصات نور پراکنده منتشر شده برای یک طیف‌سنج معین باید در <span class="ltr-text">OQ</span> تأیید شود.<span class="ltr-text">]</span>
+            </p>
+            <p class="mb-4">
+                تحلیلگران باید مرجع(های) مناسب را برای نظارت بر سطح نور پراکنده به عنوان بخشی از <span class="ltr-text">PQ</span> انتخاب و استفاده کنند. نور پراکنده را می‌توان در یک طول موج معین با یک فیلتر مایع مناسب از طریق یکی از دو روش (<span class="ltr-text">A</span> یا <span class="ltr-text">B</span>) که در زیر توضیح داده شده‌اند، تشخیص داد.
+            </p>
+            <p class="text-sm text-gray-600 mt-2 mb-4">
+                <span class="ltr-text">[NOTE—</span>اگر اندازه‌گیری‌ها در ناحیه <span class="ltr-text">250–330 nm</span>، بر روی یک طیف‌سنج که از منابع جداگانه برای نواحی <span class="ltr-text">UV</span> و مرئی طیف استفاده می‌کند، انجام می‌شوند، پس یک تأیید <span class="ltr-text">PQ</span> اضافی با استفاده از استون باید انجام شود.<span class="ltr-text">]</span>
+            </p>
+            <p class="mb-4">
+                این محلول‌ها به عنوان <span class="ltr-text">CRM</span>ها در دسترس هستند یا می‌توانند در غلظت‌های نشان داده شده در جدول <span class="ltr-text">5</span> با استفاده از مواد درجه معرف تهیه شوند.
+            </p>
+
+            <div class="overflow-x-auto mb-6">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>طول موج توصیه شده (<span class="ltr-text">nm</span>)</th>
+                            <th>محدوده طیفی (<span class="ltr-text">nm</span>)</th>
+                            <th>مایع یا محلول</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="ltr-text">198</span></td>
+                            <td><span class="ltr-text">190–210</span></td>
+                            <td>کلرید پتاسیم آبی (<span class="ltr-text">12 g/L</span>)</td>
+                        </tr>
+                        <tr>
+                            <td><span class="ltr-text">220</span></td>
+                            <td><span class="ltr-text">210–270</span></td>
+                            <td>یدید سدیم یا یدید پتاسیم آبی (<span class="ltr-text">10 g/L</span>)</td>
+                        </tr>
+                        <tr>
+                            <td><span class="ltr-text">300</span></td>
+                            <td><span class="ltr-text">250–330</span></td>
+                            <td>استون</td>
+                        </tr>
+                        <tr>
+                            <td><span class="ltr-text">340</span></td>
+                            <td><span class="ltr-text">300–400</span></td>
+                            <td>نیتریت سدیم آبی (<span class="ltr-text">50 g/L</span>)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش <span class="ltr-text">A</span></h4>
+            <p class="mb-4">
+                هدف از این روش تولید طیف دیفرانسیل حاصل از کسر طیفی است که توسط یک سلول با طول مسیر <span class="ltr-text">5-mm</span> از طیف یک سلول <span class="ltr-text">10-mm</span> تولید شده است، هر دو با همان محلول فیلتر پر شده‌اند. این طیف شامل یک مقدار حداکثر جذب پیک خواهد بود و تحلیلگران می‌توانند مقدار نور پراکنده را از حداکثر جذب مشاهده شده با استفاده از فرمول زیر محاسبه کنند:
+            </p>
+            <div class="formula-display">
+                \[ s_\lambda = 0.25 \times 10^{-2A_\lambda} \]
+            </div>
+            <ul class="list-disc list-inside mb-4">
+                <li><span class="ltr-text">sλ</span> = مقدار نور پراکنده، بر حسب عبور (<span class="ltr-text">T</span>)</li>
+                <li><span class="ltr-text">Aλ</span> = حداکثر جذب مشاهده شده</li>
+            </ul>
+            <p class="mb-4">
+                این روش نیاز دارد که اندازه‌گیری سلول <span class="ltr-text">10-mm</span> از سلول <span class="ltr-text">5-mm</span> کسر شود، هر دو با همان محلول فیلتر قطع کننده پر شده باشند. این اندازه‌گیری را می‌توان با استفاده از قابلیت‌های فیزیکی طیف‌سنج، یعنی با استفاده از قابلیت دو پرتو، با سلول <span class="ltr-text">5-mm</span> به عنوان مرجع، یا با کسر ریاضی طیف‌های سلول <span class="ltr-text">10-mm</span> از سلول <span class="ltr-text">5-mm</span>، که به ترتیب با اندازه‌گیری متوالی هر دو سلول <span class="ltr-text">5-</span> و <span class="ltr-text">10-mm</span>، با استفاده از پرتو تک نمونه، و طیف‌سنج با مرجع هوا (نگهدارنده خالی) تولید شده‌اند، انجام داد.
+            </p>
+            <p class="mb-4 font-bold">معیارهای پذیرش: <span class="ltr-text">sλ ≤ 0.01</span> یا <span class="ltr-text">Aλ ≥ 0.7 A</span></p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش <span class="ltr-text">B</span></h4>
+            <p class="mb-4">
+                تحلیلگران می‌توانند جذب فیلترهای محلول قطع کننده مشخص شده در جدول <span class="ltr-text">5</span> را در مقابل یک سلول <span class="ltr-text">10-mm</span> پر شده با یک مرجع مناسب اندازه‌گیری کنند و مقدار حداکثر جذب (<span class="ltr-text">Amax</span>) یا حداقل درصد عبور (<span class="ltr-text">%Tmin</span>) را در طول موج توصیه شده لیست شده در جدول <span class="ltr-text">5</span> ثبت کنند.
+            </p>
+            <p class="mb-4 font-bold">معیارهای پذیرش: <span class="ltr-text">Amax ≥ 2.0 A</span> یا <span class="ltr-text">%Tmin < 1%T</span></p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">کنترل وضوح</h3>
+            <p class="mb-4">
+                اگر اندازه‌گیری‌های دقیق جذب باید بر روی ترکیبات بنزنویید یا سایر ترکیبات با باندهای جذبی تیز (پهنای باند طبیعی نصف حداکثر کمتر از <span class="ltr-text">15 nm</span>) انجام شود، <span class="ltr-text">SBW</span> طیف‌سنج مورد استفاده نباید بیشتر از <span class="ltr-text">1/8</span> پهنای باند طبیعی نصف حداکثر جذب ترکیب باشد؛ یعنی این به یک طیف‌سنج با <span class="ltr-text">SBW</span> <span class="ltr-text">2 nm</span> یا کمتر معادل است.
+            </p>
+            <p class="mb-4">
+                وضوح طیف‌سنج را در ناحیه <span class="ltr-text">UV</span> با استفاده از روش زیر تعیین کنید. با استفاده از <span class="ltr-text">n-hexane</span> درجه <span class="ltr-text">UV</span> به عنوان مرجع، جذب یک محلول <span class="ltr-text">0.020% (v/v)</span> تولوئن در <span class="ltr-text">n-hexane</span> درجه <span class="ltr-text">UV</span> را در حداکثر، حدود <span class="ltr-text">269 nm</span>، و حداقل، حدود <span class="ltr-text">266 nm</span>، اندازه‌گیری کنید. نسبت جذب در حداکثر به جذب در حداقل معمولاً در محدوده <span class="ltr-text">1.0–2.6</span> قرار می‌گیرد.
+            </p>
+            <p class="mb-4">
+                برای اکثر اهداف کمی فارماکوپه‌ای، <span class="ltr-text">SBW</span> <span class="ltr-text">2 nm</span> یا کمتر کافی است، و معیارهای پذیرش برای این نسبت <span class="ltr-text">NLT 1.3</span> است.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">صلاحیت عملکرد</h3>
+            <p class="mb-4">
+                هدف از <span class="ltr-text">PQ</span> تعیین این است که ابزار قادر به برآورده کردن الزامات کاربر برای تمام پارامترهایی است که ممکن است بر کیفیت اندازه‌گیری تأثیر بگذارند و اطمینان حاصل شود که به درستی در طول دوره‌های زمانی طولانی عمل خواهد کرد.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش</h4>
+            <p class="mb-4">
+                به جز چند مورد استثنا، آزمون‌ها و سنجش‌های طیف‌سنجی فارماکوپه‌ای نیاز به مقایسه با استاندارد مرجع <span class="ltr-text">USP</span> دارند. این به اطمینان از اندازه‌گیری تحت شرایط یکسان برای نمونه آزمایشی و ماده مرجع کمک می‌کند. این شرایط می‌تواند شامل تنظیم طول موج، انتخاب <span class="ltr-text">SBW</span>، قرارگیری و تصحیح سلول، و سطوح عبور باشد. سلول‌هایی که عبور یکسان را در یک طول موج معین نشان می‌دهند، ممکن است در عبور در طول موج‌های دیگر تفاوت قابل توجهی داشته باشند. تصحیحات سلولی مناسب باید ایجاد و در صورت لزوم استفاده شوند.
+            </p>
+            <p class="mb-4">
+                مقایسه‌های نمونه آزمایشی با استاندارد مرجع بهتر است در پیک جذب طیفی برای ترکیب مورد نظر انجام شود. سنجش‌هایی که طیف‌سنجی را تجویز می‌کنند، طول موج پذیرفته شده رایج را برای پیک جذب طیفی ماده مورد نظر می‌دهند. طیف‌سنج‌های مختلف ممکن است تغییرات جزئی در طول موج ظاهری این پیک نشان دهند. عمل خوب ایجاب می‌کند که مقایسه‌ها در طول موجی که جذب پیک رخ می‌دهد، انجام شود. اگر این مقدار بیش از <span class="ltr-text">±1 nm</span> (در محدوده <span class="ltr-text">200–400 nm</span>) یا <span class="ltr-text">±2 nm</span> (در محدوده <span class="ltr-text">400–800 nm</span>) از طول موج مشخص شده در مونوراف منفرد متفاوت باشد، ممکن است کالیبراسیون مجدد ابزار نشان داده شود.
+            </p>
+            <p class="mb-4">
+                عبارات "آماده‌سازی مشابه" و "محلول مشابه" که در آزمون‌ها و سنجش‌های شامل طیف‌سنجی استفاده می‌شوند، نشان می‌دهند که مقایسه‌کننده مرجع، عموماً یک استاندارد مرجع <span class="ltr-text">USP</span>، باید برای تمام اهداف عملی به همان روشی که برای نمونه آزمایشی استفاده می‌شود، آماده و مشاهده شود. معمولاً وقتی تحلیلگران محلول استاندارد مرجع مشخص شده را تهیه می‌کنند، محلولی با غلظت حدود (یعنی در <span class="ltr-text">10%</span>) غلظت مطلوب تهیه می‌کنند و جذب‌پذیری را بر اساس مقدار دقیق وزن شده محاسبه می‌کنند. اگر نمونه‌ای از استاندارد مرجع که قبلاً خشک شده است استفاده نشده باشد، جذب‌پذیری بر اساس انیدروس محاسبه می‌شود. عبارات "همزمان تعیین کنید" و "همزمان اندازه‌گیری کنید" که در آزمون‌ها و سنجش‌های شامل طیف‌سنجی استفاده می‌شوند، نشان می‌دهند که جذب‌های هر دو محلول حاوی نمونه آزمایشی و محلول حاوی نمونه مرجع، نسبت به خالی آزمایشی مشخص شده، باید بلافاصله پس از یکدیگر اندازه‌گیری شوند.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آماده‌سازی محلول نمونه</h4>
+            <p class="mb-4">
+                برای تعیین‌ها با استفاده از طیف‌سنجی <span class="ltr-text">UV</span> یا مرئی، نمونه عموماً در یک حلال حل می‌شود. مگر اینکه در مونوراف دستور دیگری داده شده باشد، تحلیلگران تعیین‌ها را در دمای اتاق با استفاده از طول مسیر <span class="ltr-text">1 cm</span> انجام می‌دهند. بسیاری از حلال‌ها برای این محدوده‌ها مناسب هستند، از جمله آب، الکل‌ها، هیدروکربن‌های پایین‌تر، اترها، و محلول‌های رقیق اسیدهای قوی و قلیاها. باید احتیاط شود که از حلال‌هایی استفاده شود که عاری از آلاینده‌هایی باشند که در ناحیه طیفی مورد بررسی جذب می‌کنند. برای حلال، تحلیلگران معمولاً باید از متانول یا الکل بدون آب یا الکل دناتوره شده با افزودن متانول اما بدون بنزن یا سایر ناخالصی‌های مزاحم استفاده کنند. حلال‌های با کیفیت طیف‌سنجی ویژه، تضمین شده برای عاری بودن از آلاینده‌ها، به صورت تجاری از چندین منبع در دسترس هستند. برخی از سایر حلال‌های آلی درجه معرف ممکن است حاوی آثاری از ناخالصی‌ها باشند که به شدت در ناحیه <span class="ltr-text">UV</span> جذب می‌کنند. دسته‌های جدید این حلال‌ها باید برای شفافیت آنها بررسی شوند، و تحلیلگران باید دقت کنند که از همان دسته حلال برای تهیه محلول آزمایشی، محلول استاندارد و خالی استفاده کنند. بهترین روش این است که از حلال‌هایی استفاده شود که حداقل <span class="ltr-text">40%</span> عبور (<span class="ltr-text">39.9% T = 0.399 A</span>) در طول موج مورد نظر داشته باشند.
+            </p>
+            <p class="mb-4">
+                سنجش‌ها در ناحیه مرئی معمولاً خواستار مقایسه همزمان جذب تولید شده توسط آماده‌سازی سنجش با جذب تولید شده توسط یک آماده‌سازی استاندارد حاوی تقریباً مقدار مساوی از یک استاندارد مرجع <span class="ltr-text">USP</span> هستند. در برخی شرایط، تحلیلگران می‌توانند استفاده از استاندارد مرجع را (به عنوان مثال، هنگامی که سنجش‌های طیف‌سنجی به صورت مکرر انجام می‌شوند) حذف کنند، در صورتی که یک منحنی استاندارد مناسب در دسترس باشد و با استاندارد مرجع <span class="ltr-text">USP</span> مناسب تهیه شده باشد، و زمانی که ماده سنجیده شده مطابق با قانون بیر-لامبرت در محدوده حدود <span class="ltr-text">75%–125%</span> از غلظت نهایی مورد استفاده در سنجش باشد. در این شرایط، جذب یافت شده در سنجش ممکن است بر روی منحنی استاندارد درونیابی شود و نتیجه سنجش قابل محاسبه است. چنین منحنی‌های استانداردی باید به طور مکرر و همیشه هنگامی که یک طیف‌سنج جدید یا دسته‌های جدید معرف‌ها به کار گرفته می‌شوند، تأیید شوند.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تأیید و اعتبار سنجی</h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تأیید</h3>
+            <p class="mb-4">
+                مقررات فعلی رویه‌های خوب تولید <span class="ltr-text">[21 CFR 211.194(a)(2)]</span> نشان می‌دهد که کاربران رویه‌های تحلیلی توصیف شده در <span class="ltr-text">USP–NF</span> نیازی به اعتبار سنجی این رویه‌ها در صورت ارائه در یک مونوراف ندارند. در عوض، آنها صرفاً باید تناسب آنها را تحت شرایط واقعی استفاده تأیید کنند.
+            </p>
+            <p class="mb-4">
+                هدف از تأیید روش <span class="ltr-text">UV-Vis</span> اثبات مناسب بودن یک روش آزمون تحت شرایط واقعی استفاده است. ویژگی‌های عملکردی که مناسب بودن یک روش <span class="ltr-text">UV-Vis</span> را تأیید می‌کنند، مشابه با مواردی هستند که برای هر روش تحلیلی مورد نیاز است. بحثی در مورد اصول کلی قابل اجرا در تأیید رویه‌های فارماکوپه‌ای <a href="1226.html" class="text-blue-600 hover:underline" target="_blank">1226</a> یافت می‌شود. تأیید معمولاً با استفاده از یک ماده مرجع و یک ماتریس به خوبی تعریف شده انجام می‌شود. تأیید رویه‌های <span class="ltr-text">UV-Vis</span> فارماکوپه‌ای شامل حداقل اجرای پارامترهای اعتبار سنجی برای ویژگی، دقت، صحت، و حد کمی سازی، در صورت لزوم، همانطور که در اعتبار سنجی نشان داده شده است، می‌باشد.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">اعتبار سنجی</h3>
+            <p class="mb-4">
+                اعتبار سنجی زمانی مورد نیاز است که یک روش <span class="ltr-text">UV-Vis</span> برای استفاده به عنوان جایگزینی برای روش رسمی برای آزمایش یک ماده رسمی یا زمانی که هیچ روش رسمی در <span class="ltr-text">USP–NF</span> فعلی وجود ندارد، در نظر گرفته شده باشد.
+            </p>
+            <p class="mb-4">
+                هدف از اعتبار سنجی روش <span class="ltr-text">UV-Vis</span> اثبات این است که اندازه‌گیری برای هدف مورد نظر خود مناسب است، از جمله تعیین کمی جزء اصلی در یک ماده دارویی یا یک محصول دارویی (سنجش‌های دسته <span class="ltr-text">I</span>)، تعیین کمی ناخالصی‌ها یا آزمون‌های حد (دسته <span class="ltr-text">II</span>)، و آزمون‌های شناسایی (دسته <span class="ltr-text">IV</span>). برای رویه‌های انحلال، به روش انحلال: توسعه و اعتبار سنجی <a href="1092.html" class="text-blue-600 hover:underline" target="_blank">1092</a> مراجعه کنید. بسته به دسته آزمون (به اعتبار سنجی رویه‌های فارماکوپه‌ای <a href="1225.html" class="text-blue-600 hover:underline" target="_blank">1225</a>، جدول <span class="ltr-text">2</span> مراجعه کنید)، فرآیند اعتبار سنجی روش تحلیلی برای <span class="ltr-text">UV-Vis</span> نیاز به آزمایش برای خطی بودن، محدوده، دقت، ویژگی، صحت، حد تشخیص، یا حد کمی سازی دارد. این ویژگی‌های عملکرد تحلیلی برای روش‌های استانداردسازی شده خارجی و آنهایی که از افزودنی‌های استاندارد استفاده می‌کنند، اعمال می‌شود.
+            </p>
+            <p class="mb-4">
+                فصل <a href="1225.html" class="text-blue-600 hover:underline" target="_blank">1225</a> تعاریف و راهنمایی‌های کلی در مورد اعتبار سنجی رویه‌های تحلیلی را بدون ذکر معیارهای اعتبار سنجی خاص برای هر ویژگی ارائه می‌دهد. هدف از بخش‌های زیر ارائه معیارهای اعتبار سنجی خاص به کاربر است که حداقل انتظارات را برای این فناوری نشان می‌دهد. برای هر کاربرد خاص، ممکن است معیارهای سخت‌گیرانه‌تری برای اثبات مناسب بودن برای استفاده مورد نظر مورد نیاز باشد.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">دقت</h4>
+            <p class="mb-4">
+                برای روش‌های دسته <span class="ltr-text">I</span>، <span class="ltr-text">II</span> و <span class="ltr-text">III</span>، دقت را می‌توان با انجام مطالعات بازیابی با ماتریس مناسب که با غلظت‌های مشخصی از آنالیت اسپایک شده است، تعیین کرد. تحلیلگران همچنین می‌توانند نتایج سنجش به دست آمده با استفاده از روش <span class="ltr-text">UV-Vis</span> تحت اعتبار سنجی را با نتایج حاصل از یک روش تحلیلی تثبیت شده مقایسه کنند.
+            </p>
+            <p class="mb-4 font-bold">معیارهای اعتبار سنجی: بازیابی میانگین <span class="ltr-text">98.0%–102.0%</span> برای مواد دارویی، بازیابی میانگین <span class="ltr-text">95.0%–105.0%</span> برای سنجش محصول دارویی، و بازیابی میانگین <span class="ltr-text">80.0%–120.0%</span> برای تجزیه و تحلیل ناخالصی. این معیارها در سراسر محدوده مورد نظر برآورده می‌شوند.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">صحت</h4>
+            <h5 class="text-base font-semibold text-gray-700 mt-2 mb-1">قابلیت تکرارپذیری</h5>
+            <p class="mb-4">
+                قابلیت تکرارپذیری روش تحلیلی با اندازه‌گیری غلظت شش محلول نمونه مستقل آماده شده در <span class="ltr-text">100%</span> غلظت آزمون سنجش ارزیابی می‌شود. متناوباً، می‌توان آن را با اندازه‌گیری غلظت سه تکرار از سه محلول نمونه جداگانه در غلظت‌های مختلف ارزیابی کرد. سه غلظت باید به اندازه کافی نزدیک باشند تا قابلیت تکرارپذیری در سراسر محدوده غلظت ثابت باشد. در این صورت، قابلیت تکرارپذیری در سه غلظت برای مقایسه با معیارهای پذیرش جمع‌آوری می‌شود.
+            </p>
+            <p class="mb-4 font-bold">معیارهای اعتبار سنجی: انحراف استاندارد نسبی <span class="ltr-text">NMT 1.0%</span> برای سنجش ماده دارویی، <span class="ltr-text">NMT 2.0%</span> برای سنجش محصول دارویی، و <span class="ltr-text">NMT 15.0%–20.0%</span> برای تجزیه و تحلیل ناخالصی.</p>
+
+            <h5 class="text-base font-semibold text-gray-700 mt-2 mb-1">صحت میانی</h5>
+            <p class="mb-4">
+                تأثیر وقایع تصادفی بر دقت تحلیلی روش باید مشخص شود. متغیرهای معمول شامل انجام تجزیه و تحلیل در روزهای مختلف، استفاده از ابزارهای مختلف، و/یا انجام روش توسط دو یا چند تحلیلگر است. حداقل، هر ترکیبی از حداقل دو مورد از این عوامل که مجموعاً شش آزمایش را تشکیل می‌دهند، تخمینی از دقت میانی را فراهم می‌کند.
+            </p>
+            <p class="mb-4 font-bold">معیارهای اعتبار سنجی: انحراف استاندارد نسبی <span class="ltr-text">NMT 1.5%</span> برای سنجش ماده دارویی، <span class="ltr-text">NMT 3.0%</span> برای سنجش محصول دارویی، و <span class="ltr-text">NMT 15.0%–25.0%</span> برای تجزیه و تحلیل ناخالصی.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ویژگی</h4>
+            <p class="mb-4">
+                در اندازه‌گیری‌های <span class="ltr-text">UV-Vis</span>، ویژگی با استفاده از یک استاندارد مرجع در هر کجا که ممکن است تضمین می‌شود و با عدم تداخل از سایر اجزا موجود در ماتریس نشان داده می‌شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد تشخیص</h4>
+            <p class="mb-4">
+                حد تشخیص (<span class="ltr-text">DL</span>) را می‌توان با محاسبه انحراف استاندارد حداقل <span class="ltr-text">6</span> اندازه‌گیری تکراری یک محلول خالی و ضرب آن در <span class="ltr-text">3.3</span> تخمین زد. متناوباً، انحراف استاندارد را می‌توان از خطای تقاطع از یک منحنی کالیبراسیون تعیین کرد یا با تعیین اینکه نسبت سیگنال به نویز <span class="ltr-text">>3.3</span> است. <span class="ltr-text">DL</span> تخمین زده شده باید با تجزیه و تحلیل نمونه‌ها در غلظت محاسبه شده تأیید شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد کمی سازی</h4>
+            <p class="mb-4">
+                حد کمی سازی (<span class="ltr-text">QL</span>) را می‌توان با محاسبه انحراف استاندارد حداقل <span class="ltr-text">6</span> اندازه‌گیری تکراری یک محلول خالی و ضرب آن در <span class="ltr-text">10</span> تخمین زد. متناوباً، انحراف استاندارد را می‌توان از خطای تقاطع از یک منحنی کالیبراسیون تعیین کرد یا با تعیین اینکه نسبت سیگنال به نویز <span class="ltr-text">>10</span> است.
+            </p>
+            <p class="mb-4">
+                اندازه‌گیری یک محلول آزمایشی که از یک ماتریس نمونه نماینده که در غلظت <span class="ltr-text">QL</span> مورد نیاز اسپایک شده است، باید برای تأیید حساسیت کافی و دقت مناسب انجام شود. نسبت سیگنال به نویز مشاهده شده در <span class="ltr-text">QL</span> مورد نیاز باید <span class="ltr-text">>10</span> باشد. <span class="ltr-text">[NOTE—</span>یک روش مناسب برای اندازه‌گیری نسبت سیگنال به نویز در <span class="ltr-text">ASTM 1657-98 (2011) Standard Practice for the Testing of Variable-Wavelength Photometric Detectors Used in Liquid Chromatography</span> ارائه شده است.<span class="ltr-text">]</span>
+            </p>
+            <p class="mb-4 font-bold">معیارهای اعتبار سنجی: برای اینکه حد کمی سازی تخمین زده شده معتبر تلقی شود، غلظت اندازه‌گیری شده باید دقیق و صحیح در سطحی <span class="ltr-text">≤50%</span> از مشخصات باشد.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">خطی بودن</h4>
+            <p class="mb-4">
+                یک رابطه خطی بین غلظت آنالیت و پاسخ <span class="ltr-text">UV-Vis</span> باید با تهیه حداقل <span class="ltr-text">5</span> محلول استاندارد در غلظت‌هایی که غلظت پیش‌بینی شده محلول آزمایشی را در بر می‌گیرند، نشان داده شود. سپس منحنی استاندارد با استفاده از روش‌های آماری مناسب مانند رگرسیون حداقل مربعات ارزیابی می‌شود. انحراف از خطی بودن ناشی از عوامل ابزاری یا نمونه، یا هر دو است و می‌تواند با کاهش غلظت آنالیت و در نتیجه مقادیر جذب مرتبط، به سطوح قابل قبول کاهش یابد.
+            </p>
+            <p class="mb-4">
+                ضریب همبستگی (پیرسون)، <span class="ltr-text">r</span>، قدرت و جهت ارتباط بین دو متغیر (<span class="ltr-text">x</span> و <span class="ltr-text">y</span>)، در این مورد، غلظت و جذب را اندازه‌گیری می‌کند.
+            </p>
+            <p class="mb-4">
+                ضریب تعیین، <span class="ltr-text">r²</span>، معیاری از کسری از تغییرات داده است که به طور کافی مدل‌سازی شده است و نه معیاری از خطی بودن. خطی بودن به خطای استاندارد معادله کالیبراسیون (و از این رو روش مرجع) و به محدوده داده‌های کالیبراسیون بستگی دارد. بنابراین، اگرچه مقادیر بسیار نزدیک به <span class="ltr-text">1.00</span>، مانند <span class="ltr-text">0.99</span> یا بیشتر، معمولاً یک رابطه خطی را نشان می‌دهند، مقادیر پایین‌تر بین عدم خطی بودن و تغییرپذیری تمایز قائل نمی‌شوند.
+            </p>
+            <p class="mb-4 font-bold">معیارهای اعتبار سنجی: ضریب تعیین، <span class="ltr-text">r²</span>، باید <span class="ltr-text">NLT 0.995</span> برای سنجش‌های دسته <span class="ltr-text">I</span> و <span class="ltr-text">NLT 0.99</span> برای آزمون‌های کمی دسته <span class="ltr-text">II</span> باشد. بازرسی بصری نمودارهای باقیمانده نباید هیچ الگوی قابل توجهی را نشان دهد.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محدوده</h4>
+            <p class="mb-4">
+                محدوده عملیاتی یک ابزار تحلیلی (و روش تحلیلی به طور کلی) فاصله بین غلظت‌های بالا و پایین (مقادیر) آنالیت در نمونه (شامل این غلظت‌ها) است که برای آنها اثبات شده است که تابع پاسخ ابزاری دارای سطح مناسبی از صحت، دقت و خطی بودن است.
+            </p>
+            <p class="mb-4 font-bold">معیارهای اعتبار سنجی: برای آزمون‌های دسته <span class="ltr-text">I</span>، محدوده اعتبار سنجی برای معیارهای پذیرش متمرکز بر <span class="ltr-text">100.0%</span>، <span class="ltr-text">80.0%–120.0%</span> است. برای معیارهای پذیرش غیر متمرکز، محدوده اعتبار سنجی <span class="ltr-text">10.0%</span> زیر حد پایین تا <span class="ltr-text">10.0%</span> بالای حد بالا است. برای یکنواختی محتوا، محدوده اعتبار سنجی <span class="ltr-text">70.0%–130.0%</span> است. برای آزمون‌های دسته <span class="ltr-text">II</span>، محدوده اعتبار سنجی <span class="ltr-text">50.0%–120.0%</span> از معیارهای پذیرش را پوشش می‌دهد.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">قدرت (<span class="ltr-text">Robustness</span>)</h4>
+            <p class="mb-4">
+                این پارامتر در طول توسعه روش ارزیابی می‌شود.
+            </p>
+            <p class="mb-4">
+                قابلیت اطمینان یک اندازه‌گیری تحلیلی با تغییرات عمدی در پارامترهای تجربی نشان داده می‌شود. برای <span class="ltr-text">UV-Vis</span>، این می‌تواند شامل اندازه‌گیری پایداری آنالیت تحت شرایط نگهداری مشخص، تغییر <span class="ltr-text">pH</span>، و افزودن گونه‌های مزاحم احتمالی، به عنوان چند مثال، باشد. قدرت به طور همزمان با استفاده از یک طراحی مناسب برای روش تجربی تعیین می‌شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">الزامات اندازه‌گیری غیر مستقیم</h4>
+            <p class="mb-4">
+                برای برخی از روش‌های <span class="ltr-text">UV-Vis</span>، واکنش‌های کروموژنیک به کار گرفته می‌شوند. عموماً، الزامات برای ویژگی‌های عملکرد تحلیلی استفاده می‌شود. در برخی موارد، معیارهای دقت و صحت مورد نیاز برای اندازه‌گیری‌های مستقیم ممکن است قابل دستیابی نباشند. در این شرایط، الزامات دقت و صحت را می‌توان تا <span class="ltr-text">50%</span> گسترش داد. هرگونه گسترش باید بر اساس دلایل علمی و با شواهد مستند توجیه شود. ممکن است لازم باشد مقدار تکرار مورد نیاز برای تولید یک مقدار قابل گزارش از نظر علمی صحیح افزایش یابد.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

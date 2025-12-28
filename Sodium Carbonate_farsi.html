@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مونوگراف سدیم کربنات (USP)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .tab-active {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        .tab-inactive {
+            border-color: transparent;
+            color: #6b7280;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+        .interactive-card {
+            background-color: #e0f2fe;
+            border: 1px solid #90cdf4;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">سدیم کربنات</h1>
+
+        <div class="flex justify-center mb-6 border-b border-gray-200">
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab('definition')">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('identification')">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('assay')">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('impurities')">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('specific-tests')">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('additional-requirements')">الزامات اضافی</button>
+        </div>
+
+        <!-- Definition Tab Content -->
+        <div id="definition" class="tab-content">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+                <p class="mb-4">سدیم کربنات، انیدروس یا حاوی یک مولکول آب هیدراتاسیون است. این ماده باید حاوی حداقل 99.5% و حداکثر 100.5% <span class="ltr-text">Na₂CO₃</span>، بر اساس پایه انیدروس باشد.</p>
+            </div>
+        </div>
+
+        <!-- Identification Tab Content -->
+        <div id="identification" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. تست‌های شناسایی - عمومی، سدیم <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a></h3>
+                <div class="interactive-card card">
+                    <p>مطابق الزامات است.</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">ب. تست‌های شناسایی - عمومی، کربنات <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a></h3>
+                <div class="interactive-card card">
+                    <p>مطابق الزامات است.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Assay Tab Content -->
+        <div id="assay" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش</h4>
+                <p class="mb-4">نمونه: 2 گرم سدیم کربنات، قبلاً خشک شده، از آزمون تعیین آب</p>
+                <p class="mb-4">شاهد: 50 میلی‌لیتر آب</p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم تیتراسیون</h4>
+                <p class="mb-4">(به تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید.)</p>
+                <p class="mb-4">حالت: تیتراسیون مستقیم</p>
+                <p class="mb-4">تیترانت: 1 نرمال اسید سولفوریک VS</p>
+                <p class="mb-4">تشخیص نقطه پایان: بصری</p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل</h4>
+                <p class="mb-4">نمونه را با کمک 50 میلی‌لیتر آب به یک فلاسک منتقل کنید. شناساگر متیل رد TS را اضافه کرده و با 1 نرمال اسید سولفوریک VS تیتر کنید. اسید را به آرامی، با هم زدن مداوم، اضافه کنید تا محلول به رنگ صورتی کمرنگ درآید. محلول را به جوش آورید، سرد کرده و تیتر کردن را ادامه دهید. دوباره به جوش آورید و در صورت لزوم بیشتر تیتر کنید تا زمانی که رنگ صورتی کمرنگ تحت تأثیر جوشیدن مداوم قرار نگیرد.</p>
+                <p class="mb-4">درصد سدیم کربنات (<span class="ltr-text">Na₂CO₃</span>) را در نمونه گرفته شده محاسبه کنید.</p>
+                <div class="formula-display">
+                    <p class="math-display">Result = \frac{[(V - B) \times N \times F \times 100]}{W}</p>
+                </div>
+                <p class="mb-4"><span class="ltr-text">V</span> = حجم تیتراسیون مصرف شده توسط نمونه (میلی‌لیتر)</p>
+                <p class="mb-4"><span class="ltr-text">B</span> = حجم تیتراسیون مصرف شده توسط شاهد (میلی‌لیتر)</p>
+                <p class="mb-4"><span class="ltr-text">N</span> = نرمالیته واقعی تیتراسیون (mEq/mL)</p>
+                <p class="mb-4"><span class="ltr-text">F</span> = ضریب هم‌ارزی، 52.99 میلی‌گرم/mEq</p>
+                <p class="mb-4"><span class="ltr-text">W</span> = وزن نمونه (میلی‌گرم)</p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
+                <p class="mb-4">99.5%–100.5% بر اساس پایه انیدروس</p>
+            </div>
+        </div>
+
+        <!-- Impurities Tab Content -->
+        <div id="impurities" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+                <p>این بخش از متن منبع فاقد اطلاعات خاصی درباره ناخالصی‌ها است.</p>
+            </div>
+        </div>
+
+        <!-- Specific Tests Tab Content -->
+        <div id="specific-tests" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">تعیین آب، روش III <a href="General chapters/921.html" class="text-blue-600 hover:underline" target="_blank">921</a></h3>
+                <p class="mb-4">نمونه: 2 گرم</p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل</h4>
+                <p class="mb-4">نمونه را در دمای 105 درجه سانتی‌گراد به مدت 4 ساعت خشک کنید.</p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
+                <div class="interactive-card card">
+                    <p>شکل انیدروس نباید بیش از 0.5% از وزن خود را از دست بدهد، و شکل هیدراته باید 12.0%–15.0% از وزن خود را از دست بدهد.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Requirements Tab Content -->
+        <div id="additional-requirements" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری</h3>
+                <div class="interactive-card card">
+                    <p>در ظروف کاملاً بسته نگهداری شود.</p>
+                </div>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">برچسب‌گذاری</h3>
+                <div class="interactive-card card">
+                    <p>باید به گونه‌ای برچسب‌گذاری شود که مشخص کند آیا محصول انیدروس است یا هیدراته.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.classList.add('hidden'));
+
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => {
+                button.classList.remove('tab-active');
+                button.classList.add('tab-inactive');
+            });
+
+            document.getElementById(tabId).classList.remove('hidden');
+            event.currentTarget.classList.remove('tab-inactive');
+            event.currentTarget.classList.add('tab-active');
+        }
+
+        // Initialize the first tab to be visible
+        document.addEventListener('DOMContentLoaded', () => {
+            showTab('definition');
+        });
+    </script>
+</body>
+</html>

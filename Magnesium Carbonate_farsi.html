@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مونوگراف کربنات منیزیم (USP)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .tab-active {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        .tab-inactive {
+            border-color: transparent;
+            color: #6b7280;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+        .interactive-card {
+            background-color: #e0f2fe;
+            border: 1px solid #90cdf4;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">کربنات منیزیم</h1>
+
+        <div class="flex justify-center mb-6 border-b border-gray-200">
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab(event, 'definition')">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'identification')">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'assay')">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'impurities')">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'specific_tests')">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'additional_requirements')">الزامات اضافی</button>
+        </div>
+
+        <div id="definition" class="tab-content">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+                <p class="mb-4">کربنات منیزیم، کربنات منیزیم هیدراته پایه یا کربنات منیزیم نرمال هیدراته است. این ماده حاوی معادل NLT 40.0% و NMT 43.5% اکسید منیزیم (MgO) است.</p>
+            </div>
+        </div>
+
+        <div id="identification" class="tab-content" style="display: none;">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایشات شناسایی – عمومی á191ñ، آزمایشات شناسایی شیمیایی، منیزیم</h3>
+                <div class="interactive-card card">
+                    <p><strong>محلول نمونه:</strong> هنگامی که با 3 N اسید کلریدریک تیمار شود، با جوش و خروش حل می‌شود.</p>
+                    <p><strong>معیارهای پذیرش:</strong> الزامات را برآورده می‌کند.</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">اضافه کردن موارد زیر:</h3>
+                <div class="interactive-card card">
+                    <p>▲• <strong>B.</strong> زمان ماند قله منیزیم محلول نمونه با محلول استاندارد مطابقت دارد، همانطور که در سنجش بدست آمده است.▲ (رسمی 1 ژوئن 2021)</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">اضافه کردن موارد زیر:</h3>
+                <div class="interactive-card card">
+                    <p>▲• <strong>C.</strong> آزمایشات شناسایی – عمومی á191ñ، آزمایشات شناسایی شیمیایی، کربنات</p>
+                    <p><strong>تحلیل:</strong> طبق روش هدایت کنید.</p>
+                    <p><strong>معیارهای پذیرش:</strong> الزامات را برآورده می‌کند.▲ (رسمی 1 ژوئن 2021)</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="assay" class="tab-content" style="display: none;">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تغییر به خواندن:</h4>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">• رویه</h3>
+                <div class="interactive-card card">
+                    <p>▲از آب با مقاومت 18 مگا اهم-سانتی‌متر NLT برای تهیه محلول‌ها استفاده کنید.</p>
+                    <p><strong>فاز متحرک:</strong> 48 میلی مولار اسید متانسولفونیک. [<strong>توجه</strong>—توصیه می‌شود از تکنیک‌های مناسب برای تله کاتیون برای اطمینان از عاری بودن فاز متحرک از تمام ناخالصی‌های کاتیونی استفاده شود.]</p>
+                    <p><strong>حلال رقیق کننده:</strong> 0.02 N اسید کلریدریک</p>
+                    <p><strong>محلول سیستم مناسب:</strong> 33 میکروگرم/میلی‌لیتر USP Magnesium Oxide RS و 5 میکروگرم/میلی‌لیتر USP Calcium Carbonate RS در حلال رقیق کننده</p>
+                    <p><strong>محلول استاندارد مادر:</strong> 3.3 میلی‌گرم/میلی‌لیتر USP Magnesium Oxide RS که به شرح زیر تهیه شده است. مقدار مناسبی از USP Magnesium Oxide RS را به یک فلاسک حجمی مناسب منتقل کنید. حدود 20% از حجم نهایی 6 N اسید کلریدریک اضافه کرده و حل کنید. با آب به حجم برسانید.</p>
+                    <p><strong>محلول استاندارد:</strong> 33 میکروگرم/میلی‌لیتر USP Magnesium Oxide RS در آب از محلول استاندارد مادر</p>
+                    <p><strong>محلول نمونه مادر:</strong> 8.0 میلی‌گرم/میلی‌لیتر کربنات منیزیم که طبق محلول استاندارد مادر تهیه شده است.</p>
+                    <p><strong>محلول نمونه:</strong> 80 میکروگرم/میلی‌لیتر کربنات منیزیم در آب از محلول نمونه مادر</p>
+                    <p><strong>سیستم کروماتوگرافی</strong></p>
+                    <p>(رجوع کنید به کروماتوگرافی á621ñ، مناسبت سیستم.)</p>
+                    <p><strong>حالت:</strong> LC</p>
+                    <p><strong>آشکارساز:</strong> رسانایی با سرکوب</p>
+                    <p><strong>ستون‌ها</strong></p>
+                    <p><strong>گارد:</strong> 5 میلی‌متر × 5 سانتی‌متر؛ 5.5 میکرومتر بسته‌بندی L84</p>
+                    <p><strong>تحلیلی:</strong> 5 میلی‌متر × 25 سانتی‌متر؛ 5.5 میکرومتر بسته‌بندی L84</p>
+                    <p><strong>دمای ستون:</strong> 40 درجه</p>
+                    <p><strong>نرخ جریان:</strong> 1.0 میلی‌لیتر/دقیقه</p>
+                    <p><strong>حجم تزریق:</strong> 10 میکرو‌لیتر</p>
+                    <p><strong>زمان اجرا:</strong> NLT 2 برابر زمان ماند منیزیم</p>
+                    <p><strong>مناسبت سیستم</strong></p>
+                    <p><strong>نمونه‌ها:</strong> محلول مناسبت سیستم و محلول استاندارد</p>
+                    <p>[<strong>توجه</strong>—زمان‌های ماند نسبی برای یون‌های منیزیم و کلسیم به ترتیب 1.0 و 1.3 هستند.]</p>
+                    <p><strong>الزامات مناسبت</strong></p>
+                    <p><strong>تفکیک:</strong> NLT 3.0 بین یون‌های منیزیم و کلسیم، محلول مناسبت سیستم</p>
+                    <p><strong>فاکتور دم:</strong> NMT 2.0، محلول استاندارد</p>
+                    <p><strong>انحراف معیار نسبی:</strong> NMT 0.73%، محلول استاندارد</p>
+                    <p><strong>تحلیل</strong></p>
+                    <p><strong>نمونه‌ها:</strong> محلول استاندارد و محلول نمونه</p>
+                    <p>درصد اکسید منیزیم (MgO) را در مقدار کربنات منیزیم گرفته شده محاسبه کنید:</p>
+                    <div class="formula-display">
+                        <p>Result = (rU/rS) × (CS/CU) × 100</p>
+                    </div>
+                    <p>rU = پاسخ قله منیزیم از محلول نمونه</p>
+                    <p>rS = پاسخ قله منیزیم از محلول استاندارد</p>
+                    <p>CS = غلظت USP Magnesium Oxide RS در محلول استاندارد (میکروگرم/میلی‌لیتر)</p>
+                    <p>CU = غلظت کربنات منیزیم در محلول نمونه (میکروگرم/میلی‌لیتر)▲ (رسمی 1 ژوئن 2021)</p>
+                </div>
+                <p class="mt-4"><strong>معیارهای پذیرش:</strong> 40.0%–43.5% اکسید منیزیم (MgO)</p>
+            </div>
+        </div>
+
+        <div id="impurities" class="tab-content" style="display: none;">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">نمک‌های محلول</h3>
+                <div class="interactive-card card">
+                    <p><strong>نمونه:</strong> 2.0 گرم</p>
+                    <p><strong>تحلیل:</strong> نمونه را با 100 میلی‌لیتر مخلوطی از حجم‌های مساوی n-پروپیل الکل و آب مخلوط کنید. مخلوط را با هم زدن مداوم به نقطه جوش برسانید، تا دمای اتاق خنک کنید، با آب به 100 میلی‌لیتر برسانید و فیلتر کنید. 50 میلی‌لیتر از فیلتر را روی حمام بخار تا خشکی تبخیر کنید و در دمای 105 درجه به مدت 1 ساعت خشک کنید.</p>
+                    <p><strong>معیارهای پذیرش:</strong> وزن باقی‌مانده از 10 میلی‌گرم تجاوز نمی‌کند (NMT 1.0%).</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">مواد نامحلول در اسید</h3>
+                <div class="interactive-card card">
+                    <p><strong>نمونه:</strong> 5.0 گرم</p>
+                    <p><strong>تحلیل:</strong> نمونه را با 75 میلی‌لیتر آب مخلوط کنید، اسید کلریدریک را به صورت دسته‌های کوچک اضافه کنید، همراه با هم زدن، تا زمانی که دیگر کربنات منیزیم حل نشود، و به مدت 5 دقیقه بجوشانید. اگر باقی‌مانده نامحلول باقی ماند، فیلتر کنید، به خوبی با آب بشویید تا آخرین شستشو عاری از کلرید باشد، و بسوزانید.</p>
+                    <p><strong>معیارهای پذیرش:</strong> وزن باقی‌مانده سوزانده شده از 2.5 میلی‌گرم تجاوز نمی‌کند (NMT 0.05%).</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">آرسنیک á211ñ، رویه‌ها، روش I</h3>
+                <div class="interactive-card card">
+                    <p><strong>آماده‌سازی تست:</strong> 750 میلی‌گرم در 25 میلی‌لیتر 3 N اسید کلریدریک</p>
+                    <p><strong>معیارهای پذیرش:</strong> NMT 4 ppm</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">محدودیت کلسیم</h3>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تغییر به خواندن:</h4>
+                <div class="interactive-card card">
+                    <p>▲<strong>فاز متحرک، حلال رقیق کننده، محلول مناسبت سیستم، محلول نمونه، و سیستم کروماتوگرافی:</strong> طبق رویه در سنجش عمل کنید.</p>
+                    <p><strong>محلول استاندارد:</strong> 0.9 میکروگرم/میلی‌لیتر USP Calcium Carbonate RS در حلال رقیق کننده</p>
+                    <p><strong>مناسبت سیستم</strong></p>
+                    <p><strong>نمونه‌ها:</strong> محلول مناسبت سیستم و محلول استاندارد</p>
+                    <p>[<strong>توجه</strong>—زمان‌های ماند نسبی برای یون‌های منیزیم و کلسیم به ترتیب 1.0 و 1.3 هستند.]</p>
+                    <p><strong>الزامات مناسبت</strong></p>
+                    <p><strong>تفکیک:</strong> NLT 3.0 بین یون‌های منیزیم و کلسیم، محلول مناسبت سیستم</p>
+                    <p><strong>فاکتور دم:</strong> NMT 2.0، محلول استاندارد</p>
+                    <p><strong>انحراف معیار نسبی:</strong> NMT 5%، محلول استاندارد</p>
+                    <p><strong>تحلیل</strong></p>
+                    <p><strong>نمونه‌ها:</strong> محلول نمونه و محلول استاندارد</p>
+                    <p>پاسخ قله کلسیم را اندازه‌گیری کنید.▲ (رسمی 1 ژوئن 2021)</p>
+                </div>
+                <p class="mt-4"><strong>معیارهای پذیرش:</strong> NMT 0.45%. ▲پاسخ قله کلسیم از محلول نمونه از پاسخ قله کلسیم از محلول استاندارد تجاوز نمی‌کند.▲ (رسمی 1 ژوئن 2021)</p>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">آهن á241ñ</h3>
+                <div class="interactive-card card">
+                    <p><strong>آماده‌سازی تست:</strong> 50 میلی‌گرم را با 5 میلی‌لیتر 2 N اسید نیتریک به مدت 1 دقیقه بجوشانید. خنک کنید، با آب به 45 میلی‌لیتر برسانید، 2 میلی‌لیتر اسید کلریدریک اضافه کنید و مخلوط کنید.</p>
+                    <p><strong>معیارهای پذیرش:</strong> NMT 200 ppm</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="specific_tests" class="tab-content" style="display: none;">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایشات شمارش میکروبی á61ñ و آزمایشات میکروارگانیسم‌های مشخص á62ñ</h3>
+                <div class="interactive-card card">
+                    <p>این ماده الزامات آزمایش عدم وجود اشریشیا کلی را برآورده می‌کند.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="additional_requirements" class="tab-content" style="display: none;">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تغییر به خواندن:</h4>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری</h3>
+                <div class="interactive-card card">
+                    <p>در ظروف ▲محکم▲ (رسمی 1 ژوئن 2021) نگهداری شود.</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">اضافه کردن موارد زیر:</h3>
+                <div class="interactive-card card">
+                    <p>▲• استانداردهای مرجع USP á11ñ</p>
+                    <p>USP Calcium Carbonate RS</p>
+                    <p>USP Magnesium Oxide RS▲ (رسمی 1 ژوئن 2021)</p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function showTab(event, tabName) {
+                // Hide all tab content
+                const tabContents = document.getElementsByClassName("tab-content");
+                for (let i = 0; i < tabContents.length; i++) {
+                    tabContents[i].style.display = "none";
+                }
+
+                // Remove active class from all tab buttons
+                const tabButtons = document.getElementsByClassName("tab-button");
+                for (let i = 0; i < tabButtons.length; i++) {
+                    tabButtons[i].classList.remove("tab-active");
+                    tabButtons[i].classList.add("tab-inactive");
+                }
+
+                // Show the specific tab content
+                document.getElementById(tabName).style.display = "block";
+
+                // Add active class to the clicked tab button
+                event.currentTarget.classList.remove("tab-inactive");
+                event.currentTarget.classList.add("tab-active");
+            }
+        </script>
+    </div>
+</body>
+</html>

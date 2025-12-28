@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تست پیروژن</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .container {
+            max-width: 768px; /* Equivalent to max-w-4xl in Tailwind for this example */
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <div class="card">
+            <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">تست پیروژن</h1>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+            <p class="mb-4">
+                تست پیروژن برای محدود کردن خطرات واکنش تب‌دار در بیمار به سطح قابل قبول در اثر تجویز، از طریق تزریق، محصول مورد نظر طراحی شده است. این تست شامل اندازه‌گیری افزایش دما در خرگوش‌ها پس از تزریق وریدی محلول تست است و برای محصولاتی طراحی شده که توسط خرگوش تست در دوزی که از <span class="ltr-text">10 mL/kg</span> تجاوز نکند و در مدت زمان حداکثر <span class="ltr-text">10 min</span> به صورت وریدی تزریق شود، قابل تحمل باشد. برای محصولاتی که نیاز به آماده‌سازی اولیه دارند یا تحت شرایط خاص تجویز هستند، دستورالعمل‌های اضافی داده شده در مونوگراف فردی یا، در مورد آنتی‌بیوتیک‌ها یا بیولوژیک‌ها، دستورالعمل‌های اضافی داده شده در مقررات فدرال (به بخش بیولوژیک‌ها <a href="1041.html" class="text-blue-600 hover:underline" target="_blank">1041</a> مراجعه کنید) را دنبال کنید. در صورت لزوم، می‌توان از تست پیروژن آزمایشگاهی معادل و معتبر برای تشخیص پیروژن یا اندوتوکسین باکتریایی به جای تست پیروژن در خرگوش استفاده کرد.<sup style="font-size: 0.7em;">1</sup>
+            </p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تجهیزات و رقیق‌کننده‌ها</h2>
+            <p class="mb-4">
+                سرنگ‌ها، سوزن‌ها و ظروف شیشه‌ای را با حرارت دادن در دمای <span class="ltr-text">250°</span> به مدت حداقل <span class="ltr-text">30 min</span> یا با هر روش مناسب دیگر، عاری از پیروژن کنید. تمام رقیق‌کننده‌ها و محلول‌های شستشو و آبکشی دستگاه‌ها یا مجموعه‌های تزریق وریدی را به گونه‌ای پردازش کنید که استریل و عاری از پیروژن بودن آن‌ها تضمین شود. به صورت دوره‌ای، تست‌های پیروژن کنترلی را بر روی قسمت‌های نمونه‌برداری شده از رقیق‌کننده‌ها و محلول‌های شستشو یا آبکشی تجهیزات انجام دهید. در مواردی که تزریق سدیم کلراید به عنوان رقیق‌کننده مشخص شده است، از تزریقی حاوی <span class="ltr-text">0.9%</span> کلرید سدیم (NaCl) استفاده کنید.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">ثبت دما</h2>
+            <p class="mb-4">
+                از یک دستگاه دقیق اندازه‌گیری دما مانند دماسنج بالینی، یا پروب‌های ترمیستور یا پروب‌های مشابه که برای اطمینان از دقت <span class="ltr-text">±0.1°</span> کالیبره شده‌اند و برای تعیین اینکه حداکثر خوانش در کمتر از <span class="ltr-text">5 min</span> حاصل می‌شود، تست شده‌اند، استفاده کنید. پروب سنجش دما را در راست روده خرگوش تست تا عمق حداقل <span class="ltr-text">7.5 cm</span> وارد کنید و پس از گذشت مدت زمانی که قبلاً کافی تعیین شده است، دمای بدن خرگوش را ثبت کنید.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">حیوانات تست</h2>
+            <p class="mb-4">
+                خرگوش‌های سالم و بالغ را به کار ببرید. خرگوش‌ها را به صورت جداگانه در فضایی با دمای یکنواخت بین <span class="ltr-text">20°</span> و <span class="ltr-text">23°</span> و عاری از اختلالاتی که ممکن است باعث هیجان آن‌ها شود، نگهداری کنید. دما حداکثر <span class="ltr-text">±3°</span> از دمای انتخاب شده متغیر است. قبل از استفاده از خرگوش برای اولین بار در تست پیروژن، آن را حداکثر <span class="ltr-text">7</span> روز قبل از استفاده با یک تست ساختگی که شامل تمام مراحل طبق دستورالعمل در روش کار است به جز تزریق، آماده کنید. از یک خرگوش بیش از یک بار در هر <span class="ltr-text">48 ساعت</span>، یا قبل از <span class="ltr-text">2</span> هفته پس از حداکثر افزایش دمای <span class="ltr-text">0.6°</span> یا بیشتر در حین انجام تست پیروژن، یا پس از دریافت نمونه تست که پیروژنی آن اثبات شده بود، برای تست پیروژن استفاده نکنید.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">روش کار</h2>
+            <p class="mb-4">
+                تست را در یک منطقه جداگانه که صرفاً برای تست پیروژن تعیین شده است و تحت شرایط محیطی مشابه با شرایط نگهداری حیوانات و عاری از اختلالات هیجان‌انگیز انجام دهید. تمام غذا را از خرگوش‌های مورد استفاده در طول دوره تست محروم کنید. دسترسی به آب در تمام اوقات مجاز است، اما ممکن است در طول تست محدود شود. اگر پروب‌های اندازه‌گیری دمای راست روده در طول دوره تست باقی بمانند، خرگوش‌ها را با قفس‌های گردنی سبک که به خرگوش اجازه می‌دهند وضعیت طبیعی استراحت را داشته باشد، مهار کنید. حداکثر <span class="ltr-text">30 min</span> قبل از تزریق دوز تست، "دمای کنترل" هر خرگوش را تعیین کنید: این مبنایی برای تعیین هرگونه افزایش دما ناشی از تزریق محلول تست است. در هر گروه از خرگوش‌های تست، فقط از خرگوش‌هایی استفاده کنید که دمای کنترل آن‌ها بیش از <span class="ltr-text">1°</span> از یکدیگر متغیر نباشد و از هیچ خرگوشی با دمای بیش از <span class="ltr-text">39.8°</span> استفاده نکنید.
+            </p>
+            <p class="mb-4">
+                مگر اینکه در مونوگراف فردی طور دیگری مشخص شده باشد، به ورید گوش هر سه خرگوش، <span class="ltr-text">10 mL</span> محلول تست به ازای هر کیلوگرم وزن بدن تزریق کنید و هر تزریق را ظرف <span class="ltr-text">10 min</span> پس از شروع تجویز به پایان برسانید. محلول تست یا محصول، در صورت لزوم طبق دستورالعمل برچسب، آماده شده است، یا ماده تحت آزمایش که طبق دستورالعمل مونوگراف فردی پردازش شده و در دوز مشخص شده در آن تزریق می‌شود. برای تست پیروژن دستگاه‌ها یا مجموعه‌های تزریق، از شستشوها یا آبکشی سطح‌هایی که با ماده تزریقی یا محل تزریق یا بافت‌های داخلی بیمار در تماس هستند، استفاده کنید. اطمینان حاصل کنید که تمام محلول‌های تست از آلودگی محافظت شده‌اند. تزریق را پس از گرم کردن محلول تست تا دمای <span class="ltr-text">37 ± 2°</span> انجام دهید. دما را در فواصل <span class="ltr-text">30-min</span> بین <span class="ltr-text">1</span> و <span class="ltr-text">3</span> ساعت پس از تزریق ثبت کنید.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تفسیر تست و ادامه</h2>
+            <p class="mb-4">
+                هرگونه کاهش دما را به عنوان صفر در نظر بگیرید. اگر هیچ خرگوشی افزایش دمای فردی <span class="ltr-text">0.5°</span> یا بیشتر نسبت به دمای کنترل مربوطه خود نشان ندهد، محصول الزامات مربوط به عدم وجود پیروژن را برآورده می‌کند. اگر هر خرگوشی افزایش دمای فردی <span class="ltr-text">0.5°</span> یا بیشتر نشان دهد، تست را با استفاده از پنج خرگوش دیگر ادامه دهید. اگر حداکثر سه خرگوش از هشت خرگوش افزایش دمای فردی <span class="ltr-text">0.5°</span> یا بیشتر نشان دهند و مجموع حداکثر افزایش دمای هشت خرگوش از <span class="ltr-text">3.3°</span> تجاوز نکند، ماده تحت بررسی الزامات مربوط به عدم وجود پیروژن را برآورده می‌کند.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">داروهای رادیواکتیو</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">دوز تست برای محصولات از پیش فرموله شده و آماده مصرف با برچسب رادیواکتیو</h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آلبومین انباشته و سایر محصولات حاوی ذرات</h4>
+            <p class="mb-4">
+                برای تست پیروژن در خرگوش، محصول را با تزریق سدیم کلراید رقیق کنید تا حداقل <span class="ltr-text">100 µCi/mL</span> شود و دوزی معادل <span class="ltr-text">3 mL/kg</span> وزن بدن به هر خرگوش تزریق کنید.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سایر محصولات</h4>
+            <p class="mb-4">
+                در مواردی که نیمه عمر فیزیکی رادیوایزوتوپ بیشتر از <span class="ltr-text">1</span> روز باشد: حداکثر حجم محصولی که ممکن است به یک انسان تزریق شود را محاسبه کنید. این محاسبه حداکثر دوز رادیواکتیو توصیه شده محصول، بر حسب µCi، و سنجش رادیواکتیو، بر حسب µCi/mL، محصول در تاریخ انقضا یا زمان آن را در نظر می‌گیرد. با استفاده از این اطلاعات، حداکثر دوز حجمی به ازای هر کیلوگرم برای یک سوژه انسانی <span class="ltr-text">70-kg</span> را محاسبه کنید.
+            </p>
+            <p class="mb-4">
+                برای تست پیروژن در خرگوش، حداقل <span class="ltr-text">10</span> برابر این دوز به ازای هر کیلوگرم وزن بدن به هر خرگوش تزریق کنید. در صورت لزوم، با تزریق سدیم کلراید رقیق کنید. حجم کل تزریقی به ازای هر خرگوش حداقل <span class="ltr-text">1 mL</span> و حداکثر <span class="ltr-text">10 mL</span> محلول است.
+            </p>
+            <p class="mb-4">
+                در مواردی که نیمه عمر فیزیکی رادیوایزوتوپ کمتر از <span class="ltr-text">1</span> روز باشد: برای محصولات با برچسب رادیوایزوتوپ‌هایی با نیمه عمر کمتر از <span class="ltr-text">1</span> روز، محاسبات دوز مشابه با موارد توصیف شده در بند اول در سایر محصولات است. این محصولات ممکن است قبل از اتمام تست پیروژن در خرگوش برای توزیع آزاد شوند، اما چنین تستی باید حداکثر <span class="ltr-text">36 h</span> پس از انتشار آغاز شود.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">دوز تست برای اجزا یا معرف‌های دارویی که باید برچسب‌گذاری شوند</h3>
+            <p class="mb-4">
+                الزامات دوز تست زیر به معرف‌هایی اطلاق می‌شود که باید قبل از استفاده با افزودن مستقیم محلول‌های رادیواکتیو مانند تزریق سدیم پرتنکتات Tc 99m، یعنی "کیت‌های سرد" برچسب‌گذاری یا ترکیب شوند.
+            </p>
+            <p class="mb-4">
+                فرض کنید تمام محتویات ویال معرف غیر رادیواکتیو به یک انسان <span class="ltr-text">70-kg</span> تزریق خواهد شد، یا <span class="ltr-text">1/70</span> از کل محتویات به ازای هر کیلوگرم تزریق خواهد شد. اگر محتویات خشک هستند، با حجم اندازه‌گیری شده‌ای از تزریق سدیم کلراید ترکیب کنید.
+            </p>
+            <p class="mb-4">
+                برای تست پیروژن در خرگوش، <span class="ltr-text">(1/7)</span> از محتویات ویال به ازای هر کیلوگرم وزن بدن به هر خرگوش تزریق کنید. حداکثر دوز به ازای هر خرگوش، کل محتویات یک ویال تکی است. حجم کل تزریقی به ازای هر خرگوش حداقل <span class="ltr-text">1 mL</span> و حداکثر <span class="ltr-text">10 mL</span> محلول است.
+            </p>
+
+            <div class="text-sm text-gray-500 mt-8 text-center">
+                <p>
+                    <sup>1</sup> United States Food and Drug Administration. Guidance for industry. Pyrogen and endotoxins testing: questions and answers. Rockville, MD: Food and
+                    Drug Administration; June 2012. <a href="http://www.fda.gov/downloads/drugs/guidancecomplianceregulatoryinformation/guidances/ucm310098.pdf" class="text-blue-600 hover:underline" target="_blank">http://www.fda.gov/downloads/drugs/guidancecomplianceregulatoryinformation/guidances/ucm310098.pdf</a>.
+                </p>
+                <p>Printed on: Mon Aug 09 2021, 06:45:50 PM (EST)</p>
+                <p>Official Status: Currently Official on 09-Aug-2021</p>
+                <p>DocId: 1_GUID-162C7E78-8A02-4423-970C-5DF047F57DC2_1_en-US</p>
+                <p>Printed by: Nguyen Nhan</p>
+                <p>Official Date: Official as of 01-May-2017</p>
+                <p>Document Type: GENERAL CHAPTER</p>
+                <p>&copy;2021 USPC</p>
+                <p><a href="https://online.uspnf.com/uspnf/document/1_GUID-162C7E78-8A02-4423-970C-5DF047F57DC2_1_en-US" class="text-blue-600 hover:underline" target="_blank">https://online.uspnf.com/uspnf/document/1_GUID-162C7E78-8A02-4423-970C-5DF047F57DC2_1_en-US</a></p>
+                <p>1/2 Official</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

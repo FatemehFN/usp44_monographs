@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تست‌های سریع میکروبی برای عرضه محصولات استریل با ماندگاری کوتاه: رویکرد مبتنی بر ریسک</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vazirmatn Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax CDN -->
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">تست‌های سریع میکروبی برای عرضه محصولات استریل با ماندگاری کوتاه: رویکرد مبتنی بر ریسک <span class="ltr-text">1071</span></h1>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+        <p class="mb-3">به طور گسترده‌ای پذیرفته شده است که تست‌های استریلیته مبتنی بر رشد فعلی با دوره انکوباسیون حداقل <span class="ltr-text">14 days</span> (به <a href="71.html" class="text-blue-600 hover:underline" target="_blank">71</a> مراجعه کنید) برای محصولاتی با ماندگاری کوتاه یا محصولاتی که برای استفاده فوری آماده شده‌اند و معمولاً قبل از اتمام تست به بیماران تزریق می‌شوند، مناسب نیستند (<span class="ltr-text">1</span>). این محصولات با ماندگاری کوتاه شامل آماده‌سازی‌های استریل ترکیبی (<span class="ltr-text">CSP</span>)، محصولات توموگرافی انتشار پوزیترون (<span class="ltr-text">PET</span>) و درمان‌های سلولی و ژنی هستند که نیازمند نسل جدیدی از رویکردهای مبتنی بر ریسک شامل تست‌های میکروبی سریع می‌باشند. برای بحث کلی در مورد عوامل دیگری به جز تست استریلیته که به تضمین استریلیته کمک می‌کنند، به <a href="1211.html" class="text-blue-600 hover:underline" target="_blank">1211</a> مراجعه کنید. لازم به ذکر است که مانند روش‌های تست جایگزین، تست داوری در صورت بروز اختلاف، <a href="71.html" class="text-blue-600 hover:underline" target="_blank">71</a> است.</p>
+        <p class="mb-3">اگر یک تست میکروبی انجام شود، ایمنی بیمار با اتمام تستی که آلودگی میکروبی را قبل از استفاده از محصول تشخیص می‌دهد، به بهترین وجه تامین می‌شود.</p>
+        <p class="mb-3">تست‌های میکروبی سریع (<span class="ltr-text">RMTs</span>) باید مبتنی بر ریسک باشند تا ذینفع بتواند فناوری ترجیحی را برای کاربرد مورد نظر خود انتخاب کند و مشخصات الزامات کاربر (<span class="ltr-text">URS</span>) از جمله زمان تا نتیجه، اختصاصیت، حد تشخیص (<span class="ltr-text">LOD</span>)، اندازه نمونه و ویژگی‌های محصول را متعادل کند. به عنوان مثال، بسیاری از رادیوداروها، به دلیل نیمه‌عمر کوتاه رادیوتریسرها، بیشترین بهره را از یک تست میکروبی در زمان واقعی می‌برند، در حالی که <span class="ltr-text">CSP</span>ها و محصولات سلول‌درمانی، به دلیل تاریخ مصرف کوتاه خود، از یک تست شبانه یا حداقل تستی که در <span class="ltr-text">48 h</span> تکمیل می‌شود، بهره‌مند می‌شوند.</p>
+        <p class="mb-3">این فصل اطلاعات عمومی نیازهای کسانی را که محصولات با ماندگاری کوتاه را تولید/آماده و تست می‌کنند و <span class="ltr-text">URS</span> آنها را مورد بحث قرار می‌دهد و شامل بحث مختصری از برخی روش‌های مناسب برای تست میکروبی سریع مبتنی بر ریسک برای عرضه محصولات استریل با ماندگاری کوتاه (که در این فصل از این پس به آنها "محصولات با ماندگاری کوتاه" گفته می‌شود) است.</p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">مشخصات الزامات کاربر برای یک تست میکروبی سریع برای عرضه محصولات استریل با ماندگاری کوتاه</h2>
+        <p class="mb-3">انتخاب یک فناوری مناسب برای تست میکروبی سریع برای عرضه یک محصول با ماندگاری کوتاه باید یک تصمیم مبتنی بر ریسک باشد. <span class="ltr-text">URS</span> (<span class="ltr-text">2</span>) فناوری‌های مختلف شامل موارد زیر است:</p>
+        <ul class="list-disc pr-8 mb-3">
+            <li>کوتاه‌ترین زمان ممکن برای رسیدن به نتیجه، ایده‌آل در زمان واقعی یا کمتر از <span class="ltr-text">24 hours</span>، ترجیحاً قبل از تجویز محصول</li>
+            <li>توانایی تشخیص، ترجیحاً کمتر از <span class="ltr-text">100</span> واحد تشکیل‌دهنده کلنی (<span class="ltr-text">cfu</span>) در نمونه تست</li>
+            <li>توانایی تشخیص طیف وسیعی از میکروارگانیسم‌های زنده در یک محصول</li>
+            <li>مقدار نمونه، یعنی حداقل تعداد اقلام تست شده و مقدار در هر ظرف تست شده که بخش زیادی از محصول موجود را مصرف نمی‌کند؛ در هر صورت که امکان‌پذیر باشد، تولیدکنندگان باید الزامات آزمایش را در طول طراحی فرآیند در نظر بگیرند.</li>
+            <li>جابجایی آسپتیک مواد تست، یعنی سیستم‌های بسته برای کاهش آلودگی ناخواسته در طول تست</li>
+            <li>در دسترس بودن ابزار و معرف‌ها از چندین فروشنده</li>
+            <li>در دسترس بودن استانداردهای مرجع، کنترل‌های منفی و مثبت، مناسب برای فناوری‌هایی که از سیگنال‌هایی غیر از واحد تشکیل‌دهنده کلنی استفاده می‌کنند.</li>
+            <li>سهولت استفاده/سادگی تست و تفسیر داده‌ها</li>
+            <li>نرخ پایین نتایج مثبت کاذب و منفی کاذب</li>
+            <li>یک استراتژی تست مناسب بودن روش برای هر محصول خاص</li>
+            <li>بهبود ایمنی بیمار ناشی از:</li>
+            <ul class="list-circle pr-8 mb-3">
+                <li>تکمیل تست قبل از تجویز</li>
+                <li>تست‌هایی که پایش پیشرونده و گزارش‌های تشخیص عدم موفقیت تست استریلیته را ارائه می‌دهند.</li>
+            </ul>
+            <li>توانایی شناسایی میکروارگانیسم‌های تشخیص داده شده، که ممکن است برای پزشک تجویز کننده محصولات و بررسی برای تعیین منبع آن مفید باشد.</li>
+            <li>قدرت و قابلیت اطمینان تجهیزات و معرف‌های مورد استفاده در تست</li>
+            <li>آماده‌سازی نمونه مناسب برای هر دو روش دستی و خودکار</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">مفهوم پایش میکروبی و تست عرضه مبتنی بر ریسک</h2>
+        <p class="mb-3">بررسی <span class="ltr-text">URS</span> برای یک <span class="ltr-text">RMT</span> نشان می‌دهد که برخی تصمیمات مبتنی بر ریسک باید اتخاذ شود، به ویژه در مورد زمان تا نتایج، <span class="ltr-text">LOD</span>، اندازه نمونه و طیف میکروب‌های شناسایی شده تا امکان استفاده از چنین تست‌هایی قبل از تجویز فراهم شود. ذینفعان باید یک ارزیابی ریسک برای انتخاب یک <span class="ltr-text">RMT</span> در مواردی که تست استریلیته مرجع فعلی نامناسب است، انجام دهند.</p>
+        <p class="mb-3">مزایای احتمالی شامل موارد زیر است:</p>
+        <ul class="list-disc pr-8 mb-3">
+            <li>استفاده از <span class="ltr-text">RMT</span> در مواردی که خطر قابل توجهی برای بقای بیمار در صورت تأخیر زیاد در تجویز محصول وجود دارد. یک مثال برجسته از ادبیات بالینی، عفونت‌های جریان خون است که عفونت‌های سریع پیشرونده‌ای با نرخ مرگ و میر تا <span class="ltr-text">40%</span> هستند و در آنها هر روز تأخیر در تجویز آنتی‌بیوتیک‌ها منجر به افزایش <span class="ltr-text">10%</span> در مرگ و میر می‌شود (<span class="ltr-text">3</span>). در این موارد، ایمنی بیمار به وضوح با تکمیل یک تست میکروبی قبل از تجویز ارتقا می‌یابد.</li>
+            <li>استفاده از <span class="ltr-text">RMT</span>‌های مبتنی بر رشد با خوانش مداوم که برای "منفی تا تاریخ" بر اساس ریسک عرضه به کار می‌روند، زیرا میکروارگانیسم‌های سریع‌الرشد می‌توانند زودتر شناسایی شوند و در صورت تشخیص عدم موفقیت، این امر به پزشک امکان می‌دهد تا زودتر با بیمار مداخله کند. هنگامی که یک محصول آلوده شناسایی می‌شود، سرپرست آزمایشگاه می‌تواند پزشک معالج بیمار را مطلع کند و احیای مایع داخل وریدی و درمان آنتی‌بیوتیکی ممکن است برای جلوگیری از شوک سپتیک آغاز شود. بنابراین، یک تست استریلیته که به طور پیشرونده پایش می‌کند و به طور خودکار هر عدم موفقیت را گزارش می‌دهد، مزایای اضافی نسبت به یک خوانش واحد در پایان دوره انکوباسیون خواهد داشت.</li>
+            <li>استفاده از <span class="ltr-text">RMT</span>‌های غیرمبتنی بر رشد با <span class="ltr-text">LOD</span> بالای <span class="ltr-text">1 cfu</span> که با رشد در محیط‌های میکروبیولوژیکی تقویت می‌شود اما زمان بسیار سریعی برای نتایج دارد. توانایی تشخیص آلودگی، در زمان واقعی، قبل از تجویز محصول با ماندگاری کوتاه ممکن است مهمتر از تشخیص یک واحد تشکیل‌دهنده کلنی واحد در محصول در نظر گرفته شود. هنگام در نظر گرفتن ریسک برای بیمار، انتخاب <span class="ltr-text">RMT</span> باید حساسیت آزمایش در مقابل زمان تشخیص را در نظر بگیرد. آزمایش‌ها باید به طور معقولی حساس باشند تا حضور یک آلودگی با سطح پایین را تشخیص دهند و این کار را در بازه زمانی انجام دهند که نتایج قبل از تجویز محصول در دسترس باشد.</li>
+            <li>مزایای دیگر روش‌های <span class="ltr-text">RMT</span> غیرمبتنی بر رشد ممکن است شامل عدم تأثیر آنتی‌بیوتیک‌ها در نمونه تست و تشخیص عوامل عفونی با کشت منفی باشد. برخی از آنتی‌بیوتیک‌های هدف‌دار <span class="ltr-text">DNA</span> (به عنوان مثال، پلی‌میکسین <span class="ltr-text">B</span> و باسی‌تراسین) نشان داده‌اند که تکثیر <span class="ltr-text">PCR</span> را مهار می‌کنند، در حالی که آنتی‌بیوتیک‌هایی مانند پنی‌سیلین <span class="ltr-text">G</span>، کلرامفنیکل، آمفوتریسین و نالیدیکسیک اسید بر پتانسیل تفکیک واکنش تأثیر نمی‌گذارند. این امر برای داروخانه‌های ترکیبی استریل که محلول‌های آنتی‌بیوتیک تزریقی تولید می‌کنند، بسیار مهم خواهد بود. مناسب بودن روش باید تعیین کند که آیا هر آنتی‌بیوتیکی در نمونه تست می‌تواند بر آزمایش تأثیر بگذارد.</li>
+        </ul>
+        <p class="mb-3">علاوه بر این، <span class="ltr-text">RMT</span>‌ها یا سایر روش‌های میکروبیولوژیکی سریع (<span class="ltr-text">RMM</span>‌ها) ممکن است به عنوان کنترل‌های حین فرآیند قبل از تست استریلیته عرضه محصول نهایی برای ارائه اطلاعات سریع‌تر در مورد اثربخشی کنترل‌های میکروبی و تشخیص زودهنگام آلودگی‌های گسترده (که امکان بررسی و راه‌اندازی مجدد تولید را زودتر فراهم می‌کند) یا احتمال عدم موفقیت محصول در استریلیته استفاده شوند.</p>
+        <p class="mb-3">برای ارزیابی ریسک، یک نکته که ممکن است نادیده گرفته شود، ریسک نسبی برای بیمار بر اساس حجم محصول تزریق شده یا تزریق شده و محل تجویز است. هرچه حجم بیشتر و تهاجمی‌تر باشد، خطر عفونت جریان خون برای بیمار بیشتر است. ریسک از حجم کمی از تزریق داخل پوستی تا حجم زیادی از تزریق داخل وریدی متغیر است (به جدول <span class="ltr-text">1</span> مراجعه کنید).</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">جدول <span class="ltr-text">1</span>. حجم‌های معمول بر اساس مسیر تجویز و سطح ریسک نسبی</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>مسیر تجویز</th>
+                    <th>حجم معمول تجویز شده (<span class="ltr-text">mL</span>)</th>
+                    <th>سطح ریسک</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>داخل پوستی</td>
+                    <td><span class="ltr-text">≤0.1</span></td>
+                    <td>بسیار کم</td>
+                </tr>
+                <tr>
+                    <td>زیر جلدی</td>
+                    <td><span class="ltr-text">≤1</span></td>
+                    <td>کم</td>
+                </tr>
+                <tr>
+                    <td>عضلانی</td>
+                    <td><span class="ltr-text">≤3</span></td>
+                    <td>متوسط</td>
+                </tr>
+                <tr>
+                    <td>داخل نخاعی</td>
+                    <td><span class="ltr-text">1–10</span></td>
+                    <td>زیاد</td>
+                </tr>
+                <tr>
+                    <td>تزریق وریدی سریع (پوش)</td>
+                    <td><span class="ltr-text">1–60</span></td>
+                    <td>متوسط تا زیاد</td>
+                </tr>
+                <tr>
+                    <td>تزریق وریدی همراه (پیگی‌بک)</td>
+                    <td><span class="ltr-text">25–250</span></td>
+                    <td>زیاد</td>
+                </tr>
+                <tr>
+                    <td>وریدی</td>
+                    <td><span class="ltr-text">>250</span></td>
+                    <td>زیاد</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">پارامترهای عملیاتی حیاتی که باید در تعیین تست میکروبی سریع مبتنی بر ریسک برای عرضه محصولات استریل با ماندگاری کوتاه استفاده شوند</h2>
+        <p class="mb-3">پارامترهای عملیاتی تخمینی، یعنی <span class="ltr-text">LOD</span>، زمان تا نتایج و اندازه نمونه، برای فناوری‌های کاندیدای مناسب برای یک <span class="ltr-text">RMT</span> در جدول <span class="ltr-text">2</span> یافت می‌شود.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">جدول <span class="ltr-text">2</span>. پارامترهای عملیاتی فناوری‌های میکروبی سریع پیشنهادی</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>فناوری پیشنهادی</th>
+                    <th><span class="ltr-text">LOD (cfu)</span></th>
+                    <th>زمان تا نتیجه</th>
+                    <th>محدوده اندازه نمونه (<span class="ltr-text">mL</span>)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>رنگ‌آمیزی گرم (فقط برای مقایسه)</td>
+                    <td><span class="ltr-text">104–105</span></td>
+                    <td><span class="ltr-text">30 min</span></td>
+                    <td><span class="ltr-text">0.1</span></td>
+                </tr>
+                <tr>
+                    <td><a href="71.html" class="text-blue-600 hover:underline" target="_blank">71</a></td>
+                    <td><span class="ltr-text">LOD</span> تئوریک <span class="ltr-text">1–3 cfu</span> بر اساس توزیع پواسون</td>
+                    <td><span class="ltr-text">14 days</span></td>
+                    <td><span class="ltr-text">40–500</span></td>
+                </tr>
+                <tr>
+                    <td>بیولومینسانس آدنوزین تری‌فسفات (<span class="ltr-text">ATP</span>)</td>
+                    <td><span class="ltr-text">1–10</span></td>
+                    <td><span class="ltr-text">2–7 days</span> (شامل پیش‌غنی‌سازی)</td>
+                    <td><span class="ltr-text">1–1000</span></td>
+                </tr>
+                <tr>
+                    <td>بیولومینسانس آدنوزین تری‌فسفات (<span class="ltr-text">ATP</span>)</td>
+                    <td><span class="ltr-text">103</span></td>
+                    <td><span class="ltr-text">30 min</span></td>
+                    <td><span class="ltr-text">1–1000</span></td>
+                </tr>
+                <tr>
+                    <td>فلوسایتومتری</td>
+                    <td><span class="ltr-text">10–100</span></td>
+                    <td><span class="ltr-text">6–8 h</span> (پیش‌غنی‌سازی)</td>
+                    <td><span class="ltr-text">0.1–2</span></td>
+                </tr>
+                <tr>
+                    <td>میکروکالریمتر ایزوترمال</td>
+                    <td><span class="ltr-text">104</span></td>
+                    <td><span class="ltr-text">2–7 days</span></td>
+                    <td><span class="ltr-text">1</span></td>
+                </tr>
+                <tr>
+                    <td>روش‌های مبتنی بر اسید نوکلئیک<span class="ltr-text">a</span></td>
+                    <td><span class="ltr-text">10–100</span></td>
+                    <td><span class="ltr-text">2–4 h</span></td>
+                    <td><span class="ltr-text">0.2–2</span></td>
+                </tr>
+                <tr>
+                    <td>تنفس</td>
+                    <td><span class="ltr-text">1–10</span></td>
+                    <td>شبانه تا <span class="ltr-text">7 days</span></td>
+                    <td>تا <span class="ltr-text">10</span></td>
+                </tr>
+                <tr>
+                    <td>فلوسایتومتری فاز جامد</td>
+                    <td><span class="ltr-text">1–10</span></td>
+                    <td><span class="ltr-text">2–3 h</span></td>
+                    <td><span class="ltr-text">1–1000</span></td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="text-right"><span class="ltr-text">a</span> برای این روش‌ها، سیگنال بر حسب واحدهای ژنومی خواهد بود.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">مواردی که <a href="71.html" class="text-blue-600 hover:underline" target="_blank">71</a> برای تست عرضه محصول نامناسب است</h2>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">ملاحظات اندازه نمونه</h3>
+        <p class="mb-3">اندازه نمونه تست شده ممکن است بر اساس قابلیت پردازش نمونه توسط فناوری یا نیاز به حفظ محصول مورد نیاز، کاهش یابد.</p>
+        <p class="mb-3">حداقل مقدار محصول مورد استفاده برای هر محیط و حداقل تعداد واحدهای قابل تست نسبت به اندازه بچ در <a href="71.html" class="text-blue-600 hover:underline" target="_blank">71</a>، جدول <span class="ltr-text">2</span> و جدول <span class="ltr-text">3</span> یافت می‌شود. به طور گسترده‌ای درک می‌شود که برای بچ‌های بزرگ محصولات دارویی، مقدار واحدهای تست شده از نظر آماری پایه نیست و توانایی کمتری برای تشخیص سطوح آلودگی پایین در بچ‌های محصول انفرادی دارد. با این حال، با بچ‌های کوچکتر بسیاری از محصولات با ماندگاری کوتاه، این محدودیت کاهش می‌یابد زیرا نسبت محصولات تست شده نسبت به اندازه بچ افزایش می‌یابد.</p>
+        <p class="mb-3">این طرح نمونه‌برداری سنتی برای یک محصول سلول‌درمانی مناسب نیست. به عنوان مثال، اگر <span class="ltr-text">10</span> کیسه <span class="ltr-text">IV</span> <span class="ltr-text">60-mL</span> از سلول‌ها آماده شود، آنگاه <span class="ltr-text">4</span> کیسه با برداشت <span class="ltr-text">20 mL</span> از هر کیسه نمونه‌برداری می‌شود. با این طرح نمونه‌برداری، <span class="ltr-text">40%</span> از بچ برای تست استریلیته مصرف می‌شود که نه تنها یک زیان اقتصادی بزرگ، بلکه مهم‌تر از آن، یک از دست دادن عظیم محصول درمانی را نشان می‌دهد که ممکن است از تجویز دوز کافی برای درمان بیمار جلوگیری کند. در مقابل، اگر <span class="ltr-text">40</span> ویال <span class="ltr-text">1-mL</span> برای تست استریلیته یک بچ <span class="ltr-text">40,000</span> ویالی از یک محصول دارویی تزریقی مصرف شود، این تنها <span class="ltr-text">0.1%</span> از بچ را نشان می‌دهد.</p>
+        <p class="mb-3">کاهش اندازه نمونه و تعداد واحدهای تست شده حساسیت تست استریلیته را کاهش می‌دهد. جداول <span class="ltr-text">3</span> و <span class="ltr-text">4</span> بی‌حساسیتی نسبی تست را برای یک محصول دارویی و یک <span class="ltr-text">CSP</span> نشان می‌دهند.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">جدول <span class="ltr-text">3</span>. احتمال موفقیت تست استریلیته <span class="ltr-text">20</span> واحدی با افزایش نرخ آلودگی برای یک محصول دارویی</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="2"></th>
+                    <th colspan="6">موارد آلوده در بچ (<span class="ltr-text">%</span>)</th>
+                </tr>
+                <tr>
+                    <th><span class="ltr-text">0.1</span></th>
+                    <th><span class="ltr-text">1</span></th>
+                    <th><span class="ltr-text">5</span></th>
+                    <th><span class="ltr-text">10</span></th>
+                    <th><span class="ltr-text">20</span></th>
+                    <th><span class="ltr-text">50</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="ltr-text">p</span></td>
+                    <td><span class="ltr-text">0.001</span></td>
+                    <td><span class="ltr-text">0.01</span></td>
+                    <td><span class="ltr-text">0.05</span></td>
+                    <td><span class="ltr-text">0.1</span></td>
+                    <td><span class="ltr-text">0.2</span></td>
+                    <td><span class="ltr-text">0.5</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">q</span></td>
+                    <td><span class="ltr-text">0.999</span></td>
+                    <td><span class="ltr-text">0.99</span></td>
+                    <td><span class="ltr-text">0.95</span></td>
+                    <td><span class="ltr-text">0.9</span></td>
+                    <td><span class="ltr-text">0.8</span></td>
+                    <td><span class="ltr-text">0.5</span></td>
+                </tr>
+                <tr>
+                    <td>احتمال (<span class="ltr-text">p</span>) کشیدن <span class="ltr-text">20</span> مورد استریل متوالی</td>
+                    <td><span class="ltr-text">0.98</span></td>
+                    <td><span class="ltr-text">0.82</span></td>
+                    <td><span class="ltr-text">0.36</span></td>
+                    <td><span class="ltr-text">0.12</span></td>
+                    <td><span class="ltr-text">0.012</span></td>
+                    <td><span class="ltr-text"><0.00001</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="text-right mb-1">محاسبه شده از موارد زیر (<span class="ltr-text">4</span>):</p>
+        <div class="formula-display">
+            \begin{equation*} p = (1 - p)^{20} = q^{20} \end{equation*}
+        </div>
+        <p class="text-right mb-1"><span class="ltr-text">p</span> = نسبت ظروف آلوده در بچ</p>
+        <p class="text-right mb-3"><span class="ltr-text">q</span> = نسبت ظروف غیرآلوده در بچ</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">جدول <span class="ltr-text">4</span>. احتمال موفقیت تست استریلیته <span class="ltr-text">6</span> واحدی با افزایش نرخ آلودگی برای یک <span class="ltr-text">CSP</span></h3>
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="2"></th>
+                    <th colspan="4">موارد آلوده در بچ (<span class="ltr-text">%</span>)</th>
+                </tr>
+                <tr>
+                    <th><span class="ltr-text">1</span></th>
+                    <th><span class="ltr-text">5</span></th>
+                    <th><span class="ltr-text">10</span></th>
+                    <th><span class="ltr-text">20</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="ltr-text">p</span></td>
+                    <td><span class="ltr-text">0.001</span></td>
+                    <td><span class="ltr-text">0.01</span></td>
+                    <td><span class="ltr-text">0.05</span></td>
+                    <td><span class="ltr-text">0.1</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">q</span></td>
+                    <td><span class="ltr-text">0.999</span></td>
+                    <td><span class="ltr-text">0.99</span></td>
+                    <td><span class="ltr-text">0.95</span></td>
+                    <td><span class="ltr-text">0.9</span></td>
+                </tr>
+                <tr>
+                    <td>احتمال (<span class="ltr-text">p</span>) کشیدن <span class="ltr-text">6</span> مورد استریل متوالی</td>
+                    <td><span class="ltr-text">0.995</span></td>
+                    <td><span class="ltr-text">0.94</span></td>
+                    <td><span class="ltr-text">0.73</span></td>
+                    <td><span class="ltr-text">0.53</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="mb-3">طرح‌های نمونه‌برداری جایگزین در سایر مراجع دارویی پیشنهاد شده‌اند. یک رویکرد توصیه شده برای تست استریلیته محصولات سلول‌درمانی برای بچ‌های کمتر از <span class="ltr-text">40</span> واحد در فصل <span class="ltr-text">2.6.27</span> فارماکوپه اروپا <span class="ltr-text">9.0</span> "بررسی میکروبیولوژیکی آماده‌سازی‌های مبتنی بر سلول" یافت می‌شود.</p>
+        <p class="mb-3">اندازه نمونه تست آلودگی برای یک آماده‌سازی سلولی با حجم بین <span class="ltr-text">10</span> و <span class="ltr-text">1000 mL</span>، <span class="ltr-text">1%</span> از حجم کل خواهد بود؛ برای یک آماده‌سازی سلولی با حجم بین <span class="ltr-text">1</span> و <span class="ltr-text">10 mL</span>، اندازه نمونه <span class="ltr-text">0.1 mL</span> خواهد بود؛ برای یک آماده‌سازی سلولی کمتر از <span class="ltr-text">1 mL</span>، آماده‌سازی تست نخواهد شد. همانطور که در <span class="ltr-text">21 CFR 610.12</span> (استریلیته) پیشنهاد شده است، تست‌های حین فرآیند با استفاده از روش‌های سریع ممکن است به جای تست محصول نهایی در صورت توجیه کامل استفاده شوند.</p>
+        <p class="mb-3">به شیوه‌ای مشابه آماده‌سازی‌های سلول‌درمانی، مقدار نمونه و طرح نمونه‌برداری برای رادیوداروهای <span class="ltr-text">PET</span> نیز باید تعداد محدود ویال‌ها (معمولاً یک) و حجم محصول تولید شده در یک بچ (معمولاً کمتر از <span class="ltr-text">15 mL</span>) را در نظر بگیرد. اگر بچ شامل یک ظرف واحد باشد، اندازه نمونه تست استریلیته حداقل <span class="ltr-text">1%</span> از حجم کل بچ است. به عنوان مثال، اگر یک بچ شامل <span class="ltr-text">1</span> ویال حاوی <span class="ltr-text">15 mL</span> باشد، حداقل <span class="ltr-text">0.15 mL</span> برای اهداف تست استریلیته استفاده کنید. اگر بچ شامل بیش از یک ظرف باشد، حجمی از یک ظرف واحد را استفاده کنید که حداقل <span class="ltr-text">1%</span> از حجم کل بچ را نشان دهد. اگر یک بچ شامل <span class="ltr-text">3</span> ویال حاوی <span class="ltr-text">25 mL</span> باشد، حداقل <span class="ltr-text">0.75 mL</span> از <span class="ltr-text">1</span> ویال را برای اهداف تست استریلیته استفاده کنید.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">حد تشخیص</h3>
+        <p class="mb-3">در محدودیت‌های آماده‌سازی تلقیح از سوسپانسیون سلولی با یک یا چند واحد تشکیل‌دهنده کلنی، تست‌های استریلیته مبتنی بر رشد می‌توانند حداقل یک <span class="ltr-text">LOD</span> تئوریک <span class="ltr-text">1–3 cfu</span> بر اساس توزیع پواسون داشته باشند. تعیین <span class="ltr-text">LOD</span> یک سلول زنده منفرد با تمام فناوری‌ها یک مانع غیرواقعی برای ورود هر تست استریلیته است، به ویژه هنگامی که سیگنال، واحد تشکیل‌دهنده کلنی نیست که با غنی‌سازی فرهنگی تقویت می‌شود.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">توانایی تشخیص طیف وسیعی از میکروارگانیسم‌ها</h3>
+        <p class="mb-3">اگرچه تمام پلتفرم‌های تحلیلی باید توانایی تشخیص طیف وسیعی از باکتری‌ها، مخمرها و کپک‌ها را داشته باشند، اما از اهمیت عملی برخوردار است که نشان داده شود فناوری انتخاب شده برای یک <span class="ltr-text">RMT</span> قادر به تشخیص میکروارگانیسم‌های دخیل در عدم موفقیت تست استریلیته، شیوع عفونت‌ها و فراخوان محصولات مرتبط با <span class="ltr-text">CSP</span>‌ها، رادیوداروها، سلول‌درمانی‌ها یا داروهای تولیدی است. این امر به ویژه صادق است اگر فناوری، پس از تجزیه و تحلیل ریسک، نشان دهد که ایمنی بیمار را با تجویز محصولات منحصر به فرد آن گروه ذینفع بهبود می‌بخشد.</p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">روش‌های تست میکروبی سریع برای عرضه محصولات استریل با ماندگاری کوتاه</h2>
+        <p class="mb-3">فناوری‌های توصیه شده بر اساس تطابق آنها با <span class="ltr-text">URS</span> بحث شده در بالا (<span class="ltr-text">2</span>) و مناسب برای یک <span class="ltr-text">RMT</span> به ترتیب حروف الفبا به شرح زیر لیست شده‌اند:</p>
+        <ul class="list-disc pr-8 mb-3">
+            <li>بیولومینسانس آدنوزین تری‌فسفات (<span class="ltr-text">ATP</span>)</li>
+            <li>فلوسایتومتری</li>
+            <li>میکروکالریمتر ایزوترمال</li>
+            <li>تکثیر اسید نوکلئیک</li>
+            <li>تنفس</li>
+            <li>فلوسایتومتری فاز جامد</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">توضیحات مختصر فناوری‌ها</h3>
+        <p class="mb-3">هر یک از این پلتفرم‌های تحلیلی پیشرفته پیشنهادی به طور مختصر و جداگانه مورد بحث قرار گرفته و مراجع اصلی ارائه شده‌اند. برای یک مرور کلی، به مولدن‌هاور (<span class="ltr-text">5</span>) مراجعه کنید.</p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">بیولومینسانس آدنوزین تری‌فسفات (<span class="ltr-text">ATP</span>)</h4>
+        <p class="mb-3">این یک فناوری جاافتاده با لومینومترها و معرف‌های موجود از چندین تولیدکننده ابزار است. انرژی از سلول‌های زنده به عنوان <span class="ltr-text">ATP</span> ذخیره می‌شود و می‌تواند به عنوان نور در معرض لوسیفراز از کرم شب‌تاب آمریکایی اندازه‌گیری شود. هر مولکول <span class="ltr-text">ATP</span> مصرف شده توسط لوسیفراز <span class="ltr-text">1</span> فوتون نور تولید می‌کند. نتیجه تشخیص داده شده توسط لومینومتر معمولاً بر حسب واحدهای نور نسبی (<span class="ltr-text">RLU</span>) بیان می‌شود و به ابزار، معرف و ارگانیسم وابسته است. محتوای <span class="ltr-text">ATP</span> میکروارگانیسم‌های مختلف از <span class="ltr-text">2</span> تا <span class="ltr-text">4 × 10−18 mole/cfu</span> برای باکتری‌های گرم منفی، <span class="ltr-text">5</span> تا <span class="ltr-text">8 × 10−18 mole/cfu</span> برای باکتری‌های گرم مثبت و <span class="ltr-text">300</span> تا <span class="ltr-text">800 × 10−18 mole/cfu</span> برای قارچ‌ها متغیر است (<span class="ltr-text">6</span>). با توجه به نسبت سیگنال به نویز بالای اندازه‌گیری و <span class="ltr-text">ATP</span> پس‌زمینه در محیط‌های کشت میکروبیولوژیکی، حد تشخیص ابزار مربوط به میکروبیولوژی در محیط کشت در حدود <span class="ltr-text">5000 RLU</span> معادل تقریباً <span class="ltr-text">103 cfu</span> است.</p>
+        <p class="mb-3"><span class="ltr-text">LOD</span> حضور میکروارگانیسم‌ها را در سطوحی که <span class="ltr-text">3–4 logs</span> کمتر از آن چیزی است که برای تشخیص بصری رشد در محیط کشت لازم است، در یک بخش از محیط کشت تشخیص می‌دهد. برای یک تست میکروبی سریع برای عرضه محصولات استریل با ماندگاری کوتاه، یک کشت غنی‌سازی یا در محیط مایع برای رسیدن به سطح آستانه <span class="ltr-text">ATP</span> یا بر روی یک فیلتر غشایی در محیط جامد برای تشکیل کلنی‌های میکروبی می‌تواند با زمان انکوباسیون <span class="ltr-text">2–7 days</span> استفاده شود.</p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فلوسایتومتری</h4>
+        <p class="mb-3">فلوسایتومتری ممکن است برای تشخیص سلول‌های میکروبی زنده با برچسب فلورسنت پس از مرحله کشت غنی‌سازی <span class="ltr-text">24–48 h</span> استفاده شود (<span class="ltr-text">7</span>). یک معرف برچسب‌گذاری شامل یک سوبسترای فلوروژنیک یا رنگ حیاتی برای تمایز سلول‌های زنده از سلول‌های مرده و بقایای سلولی استفاده می‌شود. در حالی که باکتری‌ها بسیار کوچک هستند و ممکن است تمایز آنها از بقایای سلولی دشوار باشد، می‌توان آنها را بر اساس اندازه، شکل و شدت فلورسنت تشخیص داد. زنده بودن سلول با توانایی غشای سلولی دست نخورده برای حفظ یک فلوروکروم تولید شده توسط استراز سلولی غیر اختصاصی، یا با برچسب‌گذاری سلول با رنگ‌های حیاتی اختصاصی اسید نوکلئیک نشان داده می‌شود. یک لیزر هر سلول را در جریان فلو روشن می‌کند و نور منتشر شده توسط یک آرایه فوتومولتی‌پلایر دوگانه تشخیص داده می‌شود. سیگنال دیجیتالی شده و توسط نرم‌افزار تفکیک تفسیر می‌شود. <span class="ltr-text">LOD</span> برای این فناوری ممکن است <span class="ltr-text">>1 cfu</span> باشد و یک مرحله غنی‌سازی ممکن است ضروری باشد.</p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">میکروکالریمتر ایزوترمال</h4>
+        <p class="mb-3">میکروکالریمترهای ایزوترمال تغییرات آنتالپی را در ویال‌های بسته (سیستم‌ها) مربوط به فعالیت متابولیکی و رشد میکروبی پایش می‌کنند. با ابزارهای فعلی، <span class="ltr-text">104</span> سلول میکروبی فعال می‌توانند به اندازه کافی گرما آزاد کنند تا تشخیص داده شوند و برای تشخیص نیاز به غنی‌سازی است (<span class="ltr-text">2–7 days</span> تا نتیجه). اخیراً کاربرد آن در میکروبیولوژی دارویی ارزیابی شده است، اگرچه کاربرد خاص آن برای تست عرضه محصولات استریل هنوز مشخص نشده است (<span class="ltr-text">8</span>).</p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تکثیر اسید نوکلئیک</h4>
+        <p class="mb-3"><span class="ltr-text">PCR</span> کمی در زمان واقعی پتانسیل پایش فاز لگاریتمی <span class="ltr-text">PCR</span> را از طریق <span class="ltr-text">36–48</span> چرخه تکثیر با استفاده از پرایمرها و پروب‌های جهانی (با عنوان روش‌های "پَن-باکتریال" و "پَن-قارچی") برای تخمین مقدار اولیه <span class="ltr-text">DNA</span> هدف دارد که به نوبه خود متناسب با تعداد سلول‌های میکروبی در نمونه تست است. برخلاف <span class="ltr-text">DNA</span>، <span class="ltr-text">RNA</span> سلولی به سرعت متابولیکی در گردش است و نشانگر بهتری برای میکروارگانیسم‌های زنده خواهد بود. به عنوان مثال، اشریشیا کلای حاوی <span class="ltr-text">2</span> مولکول <span class="ltr-text">DNA</span> و <span class="ltr-text">2 × 104</span> مولکول <span class="ltr-text">16S rRNA</span> در هر سلول است (<span class="ltr-text">9</span>). این فرآیند با تبدیل <span class="ltr-text">RNA</span> به یک کپی مکمل از <span class="ltr-text">DNA</span> (<span class="ltr-text">cDNA</span>) توسط آنزیم ترانس‌کریپتاز معکوس انجام می‌شود و <span class="ltr-text">cDNA</span> می‌تواند در زمان واقعی در یک آزمایش کمی (تست شمارش) یا کیفی (تست استریلیته) تجزیه و تحلیل شود. متناوباً، برای <span class="ltr-text">PCR</span>‌های مبتنی بر <span class="ltr-text">DNA</span>، پیش‌تیمار نمونه با اتییدیوم مونوازید یا پروپیدیوم مونوازید نیز ممکن است قابلیت تمایز سلول‌های میکروبی زنده از مرده را فراهم کند (<span class="ltr-text">10,11</span>)، یا <span class="ltr-text">DNA</span> میکروبی آزاد ممکن است با یک مرحله سانتریفیوژ/شستشو از نمونه تست حذف شود و گویچه باکتریایی برای تجزیه و تحلیل استفاده شود.</p>
+        <p class="mb-3">به طور واقع‌بینانه، <span class="ltr-text">LOD</span> یک سلول زنده منفرد احتمالاً یک چالش غیرقابل عبور است، به ویژه برای تستی که بر هدف <span class="ltr-text">DNA/RNA</span> و پرایمرهای جهانی تکیه دارد. چالش دیگر، مقادیر متفاوت مواد ژنومی در میکروارگانیسم‌های مختلف است.</p>
+        <p class="mb-3">به طور کلی، <span class="ltr-text">LOD</span> از <span class="ltr-text">10</span> تا <span class="ltr-text">1000</span> سلول زنده/<span class="ltr-text">mL</span> در یک نمونه و در برخی موارد گزارش شده، از <span class="ltr-text">10</span> تا <span class="ltr-text">100</span> سلول زنده/<span class="ltr-text">mL</span> متغیر است. اخیراً نشان داده شد که <span class="ltr-text">PCR</span> ممکن است واقعاً تشخیص میکروارگانیسم‌ها را با حد <span class="ltr-text">102</span> تا <span class="ltr-text">103 cfu/mL</span> در نمونه‌ای حاوی غلظت بالای تا <span class="ltr-text">106</span> سلول پستانداران/<span class="ltr-text">mL</span> بدون نیاز به پیش‌انکوباسیون در محیط کشت میکروبی به دست آورد (<span class="ltr-text">12</span>). اضافه کردن یک مرحله غنی‌سازی مبتنی بر رشد برای حداقل <span class="ltr-text">24–48 h</span> و مقایسه نتایج <span class="ltr-text">PCR</span> قبل و بعد از غنی‌سازی فرهنگی ممکن است یک راه‌حل عملی برای تست استریلیته فراهم کند. متناوباً، روش‌های غلظت‌دهی می‌توانند برای غنی‌سازی نمونه و کاهش حجم نمونه اعمال شوند. همانطور که توسط نویسندگان یک مطالعه اخیر در مورد استفاده از تست استریلیته <span class="ltr-text">PCR 16S rRNA</span> برای سلول‌های بنیادی اشاره شد، با حساسیت باکتریایی اثبات شده <span class="ltr-text">10–100 cfu/mL</span>، یک روش تست با حساسیت <span class="ltr-text">100 cfu/mL</span> برای تشخیص آلودگی باکتریایی بالینی معنی‌دار خون و محصولات سلولی مناسب خواهد بود (<span class="ltr-text">13</span>).</p>
+        <p class="mb-3">مقایسه مستقیم آزمایش‌های مبتنی بر رشد و مبتنی بر تکثیر اسید نوکلئیک با این واقعیت پیچیده می‌شود که آزمایش‌های مبتنی بر تکثیر اسید نوکلئیک ارگانیسم‌های غیرزنده را نیز تشخیص می‌دهند و معیاری برای تعداد نسخه‌های ژنوم میکروبی هستند، نه واحدهای تشکیل‌دهنده کلنی. به همین دلیل، <span class="ltr-text">LOD</span> برای یک آزمایش مبتنی بر تکثیر اسید نوکلئیک باید بر حسب معادل ژنوم در میلی‌لیتر تعریف شود.</p>
+        <p class="mb-3"><span class="ltr-text">RMT</span>‌های غیرمبتنی بر رشد برای عرضه محصولات استریل با ماندگاری کوتاه مانند تکثیر اسید نوکلئیک ممکن است مزایای اضافی به دلیل موارد زیر داشته باشند:</p>
+        <ul class="list-disc pr-8 mb-3">
+            <li>با تست تقریباً در زمان واقعی، تست قبل از تزریق محصولات با ماندگاری کوتاه به بیمار تکمیل خواهد شد.</li>
+            <li>تشخیص عوامل عفونی با کشت منفی</li>
+            <li>تست حداقل تحت تأثیر آنتی‌بیوتیک‌ها در نمونه تست قرار می‌گیرد، همانطور که قبلاً در فصل اشاره شد.</li>
+            <li>تست نسبت به پس‌زمینه ناشی از لیز سلول حیوانی (به عنوان مثال، ذرات، <span class="ltr-text">ATP</span>) در مقایسه با سایر فناوری‌ها حساسیت کمتری دارد، زیرا ژن‌های میکروبی خاصی هدف قرار می‌گیرند.</li>
+        </ul>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تنفس</h4>
+        <p class="mb-3">این دسته گسترده از رسپیرومترهای کلاسیک تا تحلیل‌گرهای فضای سر گازی و سیستم‌های خودکار کشت خون متغیر است. فرمولاسیون‌های محیط کشت هوازی و بی‌هوازی امکان بازیابی بیشتر میکروارگانیسم‌های مسئول عفونت‌های جریان خون را در یک انکوباسیون <span class="ltr-text">5</span> روزه فراهم می‌کنند. با برخی از ابزارها، این شامل انکوباسیون در هر دو <span class="ltr-text">20°–25°</span> و <span class="ltr-text">30°–35°</span> مانند <a href="71.html" class="text-blue-600 hover:underline" target="_blank">71</a> است. این فناوری با موفقیت به تست استریلیته محصولات سلول‌درمانی با استفاده از یک انکوباسیون <span class="ltr-text">7</span> روزه به عنوان جایگزینی برای تست استریلیته رسمی برای عرضه بچ گسترش یافته است (<span class="ltr-text">14</span>).</p>
+        <p class="mb-3">ابزارهای دیگری برای تشخیص و شمارش میکروارگانیسم‌های تنفس‌کننده موجود است. به عنوان مثال، طیف‌سنجی جذب لیزر دیود قابل تنظیم (<span class="ltr-text">TDLAS</span>) می‌تواند کاهش اکسیژن (<span class="ltr-text">O2</span>) یا افزایش دی‌اکسید کربن (<span class="ltr-text">CO2</span>) را در واحدهای بسته حاوی میکروارگانیسم‌های در حال رشد در محیط کشت اندازه‌گیری کند. این فناوری در ابتدا برای پایش ترکیب فضای سر گاز در واحدهای بسته توسعه یافته بود و همچنین می‌توانست برای بازرسی خودکار پر کردن محیط کشت استفاده شود (<span class="ltr-text">8,15</span>). این سیستم دارای استانداردهای کالیبراسیون گازی است و در صورت استفاده از سیستم برای تست استریلیته، نیاز به تغییرات جزئی دارد (به عنوان مثال، کالیبره کردن برای ظروف با حجم بالاتر). [توجه—همه سیستم‌های پلتفرم تنفس برای تشخیص نیاز به رشد میکروبی و فعالیت متابولیکی دارند، یعنی زمان معمول <span class="ltr-text">2–7 days</span> برای به دست آوردن نتایج لازم است. با این حال، هنگامی که نتایج ممکن است به طور پیشرونده پایش شوند تا عدم موفقیت تست استریلیته زودتر در دوره انکوباسیون تشخیص داده شود، این یک مزیت بزرگ برای محصولات با ماندگاری کوتاه است که در بخش ارزیابی ریسک در بالا توضیح داده شد.]</p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فلوسایتومتری فاز جامد</h4>
+        <p class="mb-3">سیستم‌های ابزاری بر اساس فلوسایتومتری فاز جامد وجود دارند که برچسب‌گذاری فلورسنت و اسکن لیزری فاز جامد را برای شمارش سریع میکروارگانیسم‌های زنده در مایعات قابل فیلتراسیون ترکیب می‌کنند (<span class="ltr-text">16</span>). میکروارگانیسم‌ها با فیلتراسیون بر روی غشاهای پلی‌استر <span class="ltr-text">0.45</span> میکرون جمع‌آوری می‌شوند و با رنگ‌های پس‌زمینه و زنده بودن تیمار می‌شوند. فیلترها در یک سیتومتر توسط یک لیزر آرگون <span class="ltr-text">488 nm</span> با سرعت بالا اسکن می‌شوند. چندین لوله فوتومولتی‌پلایر، که برای تمایز بین میکروارگانیسم‌های برچسب‌گذاری شده و نویز پس‌زمینه، بر اساس اندازه، شکل و شدت فلورسنت پردازش شده‌اند، فلورسنت را تشخیص می‌دهند. اسکن به عنوان یک نقشه نمایش داده می‌شود که موقعیت رویدادهای فلورسنت را شناسایی می‌کند که با استفاده از میکروسکوپ اپی‌فلورسنت با یک صفحه موتوردار خودکار برای مکان‌یابی رویدادهای منفرد تأیید می‌شوند. ادعا می‌شود که این سیستم میکروارگانیسم‌های زنده منفرد را در <span class="ltr-text">2–3 h</span> تشخیص می‌دهد. لازم به ذکر است که بیشتر محصولات سلول‌درمانی غیرقابل فیلتر هستند، بنابراین این فناوری ممکن است با این نوع محصولات سازگار نباشد.</p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">تست مناسب بودن روش</h2>
+        <p class="mb-3">الزامات مناسب بودن روش برای یک تست استریلیته مبتنی بر رشد در <a href="71.html" class="text-blue-600 hover:underline" target="_blank">71</a> ارائه شده است. مناسب بودن تست باید برای هر محصولی که قرار است تست شود، نشان داده شود. بازیابی ارگانیسم‌های چالش‌برانگیز <span class="ltr-text">USP</span> در سطحی کمتر از <span class="ltr-text">100 cfu</span>، در حضور محصول باقیمانده، به عنوان رشد واضح قابل مشاهده در محیط کشت میکروبیولوژیکی برای هر دو روش تلقیح مستقیم یا فیلتراسیون غشایی نشان داده می‌شود. با سیگنال‌هایی غیر از واحد تشکیل‌دهنده کلنی که از کشت آزمایشگاهی به دست می‌آیند (به عنوان مثال، اسید نوکلئیک، <span class="ltr-text">ATP</span> و برچسب‌گذاری فلورسنت سلول‌های میکروبی زنده)، نتایج حاصل از تست نمونه‌های واقعی ممکن است نتایجی را ارائه دهد که با نتایج حاصل از استفاده از فناوری‌های دیگر یکسان نیستند. با این حال، تست مناسب بودن روش تأیید می‌کند که باقی‌مانده‌های محصول در آنالیت، مراحل آنزیمی مرتبط با تولید سیگنال توسط روش سریع را مهار نمی‌کنند.</p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">واژه‌نامه</h2>
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">واحد تشکیل‌دهنده کلنی (<span class="ltr-text">cfu</span>):</h3>
+        <p class="mb-3">میکروارگانیسم‌های زنده‌ای که قادر به رشد در محیط‌های کشت میکروبی جامد و تشکیل کلنی‌های مجزا و قابل رویت هستند.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">حد تشخیص (<span class="ltr-text">LOD</span>):</h3>
+        <p class="mb-3">پایین‌ترین سیگنال نشان‌دهنده یک میکروارگانیسم زنده که می‌تواند به طور معمول شناسایی شود.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">ایمنی بیمار:</h3>
+        <p class="mb-3">کاهش بیماری و مرگ و میر دریافت‌کنندگان محصول آلوده که با تکمیل تست میکروبی سریع قبل از تجویز ترویج می‌شود.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">توموگرافی انتشار پوزیترون (<span class="ltr-text">PET</span>):</h3>
+        <p class="mb-3">یک تکنیک تصویربرداری عملکردی پزشکی هسته‌ای است که برای مشاهده فرآیندهای متابولیکی در بدن به عنوان کمکی برای تشخیص بیماری استفاده می‌شود. این سیستم جفت پرتوهای گاما را که به طور غیرمستقیم توسط یک رادیونوکلئید (ردیاب) ساطع‌کننده پوزیترون که به بدن وارد شده است، منتشر می‌شوند، شناسایی می‌کند.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">تست سریع میکروبی مبتنی بر ریسک:</h3>
+        <p class="mb-3">یک تست سریع میکروبی که توسط ذینفع پس از در نظر گرفتن <span class="ltr-text">LOD</span>، اندازه نمونه، اختصاصیت، و زمان تا نتیجه انتخاب می‌شود و ایمنی بیمار را با تکمیل تست قبل از تجویز محصول با ماندگاری کوتاه برای تشخیص آلودگی، در صورت وجود، ترویج می‌کند.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">اختصاصیت:</h3>
+        <p class="mb-3">توانایی تشخیص طیف وسیعی از باکتری‌ها، مخمرها و کپک‌های مختلف.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">زمان تا نتیجه:</h3>
+        <p class="mb-3">زمان لازم برای تکمیل تست میکروبی و رسیدن به نتیجه در مورد عدم آلودگی نمونه تست.</p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">مراجع</h2>
+        <ul class="list-decimal pr-8 mb-3">
+            <li class="mb-1"><span class="ltr-text">Cundell AM. The history of the development, applications and limitations of the USP sterility test. In: Moldenhauer J, ed. Rapid Sterility Testing. Bethesda, MD: PDA/DHI Publishing; 2011:127–170.</span></li>
+            <li class="mb-1"><span class="ltr-text">USP Modern Microbiological Methods Expert Panel. The development of compendial rapid sterility tests. Pharm Forum. 2017;43(5).</span></li>
+            <li class="mb-1"><span class="ltr-text">Martinez RM, Wolk DM. Bloodstream infections. Microbiol Spectr. 2016;4(4).</span></li>
+            <li class="mb-1"><span class="ltr-text">Sutton S. The sterility tests. In: Moldenhauer J, ed. Rapid Sterility Testing. Bethesda, MD: PDA/DHI Publishing; 2011:7–28.</span></li>
+            <li class="mb-1"><span class="ltr-text">Moldenhauer J, ed. Rapid Sterility Testing. Bethesda, MD: PDA/DHI Publishing; 2011.</span></li>
+            <li class="mb-1"><span class="ltr-text">La Duc MT, Dekas A, Osman S, Moissl C, Newcombe D, Venkateswaran K. Isolation and characterization of bacteria capable of tolerating the extreme conditions of clean room environments. Appl Environ Microbiol. 2007;73(8):2600–2611.</span></li>
+            <li class="mb-1"><span class="ltr-text">Baumstummler A, Chollet R, Meder H, Rofel C, Venchiarutti A, Ribault S. Detection of microbial contamination in mammalian cell cultures using a new fluorescence-based staining method. Lett Appl Microbiol. 2010;51(6):671–677.</span></li>
+            <li class="mb-1"><span class="ltr-text">Brueckner D, Roesti D, Zuber UG, Schmidt R, Kraehenbuehl S, Bonkat G, et al. Comparison of tunable diode laser absorption spectroscopy and isothermal micro-calorimetry for non-invasive detection of microbial growth in media fills. Sci Rep. 2016;6:27894. DOI: 10.1038/srep27894.</span></li>
+            <li class="mb-1"><span class="ltr-text">Overall macromolecular composition of E. coli cell. Adapted from Neidhardt FC, et al. Physiology of the bacterial cell. Sinauer, 1990 by Tummler K and Milo R. 13 Jan 2017.</span></li>
+            <li class="mb-1"><span class="ltr-text">Patel P, Garson JA, Tettmar KI, Ancliff S, McDonald C, Pitt T, et al. Development of an ethidium monoazide-enhanced internally controlled universal 16S rDNA real-time polymerase chain reaction assay for detection of bacterial contamination in platelet concentrates. Transfusion. 2012;52(7):1423–1432.</span></li>
+            <li class="mb-1"><span class="ltr-text">Nocker A, Cheung C-Y, Camper AK. Comparison of propidium monoazide with ethidium monoazide for differentiation of live vs. dead bacteria by selective removal of DNA from dead cells. J Microbiol Methods. 2006;67(2):310–320.</span></li>
+            <li class="mb-1"><span class="ltr-text">Kleinschmidt K, Wilkens E, Glaeser SP, Kaempfer P, Staerk A, Roesti D. Development of a qualitative real-time PCR for microbiological quality control testing in mammalian cell culture production. J Appl Microbiol. 2016;122(4):997–1008.</span></li>
+            <li class="mb-1"><span class="ltr-text">Tokuno O, Hayakawa A, Yanai T, Mori T, Ohnuma K, Tani A, et al. Sterility testing of stem cell products by broad-range bacterial 16S ribosomal DNA polymerase chain reaction. Lab Med. 2015;46(1):34–41.</span></li>
+            <li class="mb-1"><span class="ltr-text">Kielpinski G, Prinzi S, Duguid J, du Moulin G. Roadmap to approval: use of an automated sterility test method as a lot release test for Carticel, autologous cultured chondrocytes. Cytotherapy. 2005;7(6):531–541.</span></li>
+            <li class="mb-1"><span class="ltr-text">Duncan D, Cundell T, Levac L, Veale J, Kuiper S, Rao R. The application of noninvasive headspace analysis to media fill inspection. PDA J Pharm Sci Technol. May/June 2016;70:230–247.</span></li>
+            <li class="mb-1"><span class="ltr-text">Smith R, Von Tress M, Ubb C, Vanhaecke E. Evaluation of the ScanRDI(R) as a rapid alternative to the pharmacopoeial sterility test method: comparison of the limits of detection. PDA J Pharm Sci Technol. 2010;64(4):358–363.</span></li>
+        </ul>
+    </div>
+</body>
+</html>

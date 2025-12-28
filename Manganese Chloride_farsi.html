@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مونوگراف کلرید منگنز (USP)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .tab-active {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        .tab-inactive {
+            border-color: transparent;
+            color: #6b7280;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+        .interactive-card {
+            background-color: #e0f2fe;
+            border: 1px solid #90cdf4;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">کلرید منگنز</h1>
+
+        <div class="flex justify-center mb-6 border-b border-gray-200">
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" data-tab="definition">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="identification">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="assay">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="impurities">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="specific-tests">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="additional-requirements">الزامات اضافی</button>
+        </div>
+
+        <div id="definition">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+                <p>کلرید منگنز حاوی حداقل 98.0% و حداکثر 101.0% MnCl2، محاسبه شده بر اساس پایه خشک، می‌باشد.</p>
+            </div>
+        </div>
+
+        <div id="identification" style="display: none;">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. تست‌های شناسایی - عمومی، کلرید &#x2019;191&#x2018;</h3>
+                <p>رسوب سفید و پنیرکی کلرید نقره با نیترات نقره TS تولید می‌کند که در اسید نیتریک نامحلول است. پس از شستشو با آب، این رسوب در مقدار کمی بیش از آمونیوم هیدروکسید 6 مولار محلول است.</p>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرح تست</h4>
+                    <p>رسوب سفید و پنیرکی کلرید نقره با نیترات نقره TS تولید می‌کند که در اسید نیتریک نامحلول است. پس از شستشو با آب، این رسوب در مقدار کمی بیش از آمونیوم هیدروکسید 6 مولار محلول است.</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">ب. تست‌های شناسایی - عمومی، منگنز &#x2019;191&#x2018;</h3>
+                <p>الزامات را برآورده می‌کند.</p>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرح تست</h4>
+                    <p>الزامات را برآورده می‌کند.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="assay" style="display: none;">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">روش کار</h3>
+                <p>نمونه: <span class="ltr-text">425 mg</span></p>
+                <p>تجزیه و تحلیل: نمونه را در یک بشر 400 میلی‌لیتری منتقل کنید، در 25 میلی‌لیتر آب حل کنید، 300 میلی‌گرم آمونیوم کلرید و 0.5 گرم هیدروکسیل آمین هیدروکلراید اضافه کنید و بچرخانید تا حل شود. کمی روی صفحه داغ گرم کنید و با آب تا 100 میلی‌لیتر رقیق کنید. 3 میلی‌لیتر تری‌اتانول آمین اضافه کرده و محلول را هم بزنید، ترجیحاً با استفاده از همزن مغناطیسی. تیتراسیون را با افزودن 25 میلی‌لیتر از محلول <span class="ltr-text">0.05 M</span> ادتات دی‌سدیم VS آغاز کنید، سپس 10 میلی‌لیتر بافر آمونیاک-آمونیوم کلرید TS و 1 میلی‌لیتر از معرف اریکروم سیاه TS اضافه کنید. با تیتراسیون با محلول <span class="ltr-text">0.05 M</span> ادتات دی‌سدیم VS تا رسیدن به نقطه پایانی آبی ادامه دهید. هر میلی‌لیتر از محلول <span class="ltr-text">0.05 M</span> ادتات دی‌سدیم معادل <span class="ltr-text">6.292 mg</span> از MnCl2 است.</p>
+                <p>معیارهای پذیرش: <span class="ltr-text">98.0%–101.0%</span> از MnCl2 بر اساس پایه خشک</p>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرح تست</h4>
+                    <p>نمونه: <span class="ltr-text">425 mg</span></p>
+                    <p>تجزیه و تحلیل: نمونه را در یک بشر 400 میلی‌لیتری منتقل کنید، در 25 میلی‌لیتر آب حل کنید، 300 میلی‌گرم آمونیوم کلرید و 0.5 گرم هیدروکسیل آمین هیدروکلراید اضافه کنید و بچرخانید تا حل شود. کمی روی صفحه داغ گرم کنید و با آب تا 100 میلی‌لیتر رقیق کنید. 3 میلی‌لیتر تری‌اتانول آمین اضافه کرده و محلول را هم بزنید، ترجیحاً با استفاده از همزن مغناطیسی. تیتراسیون را با افزودن 25 میلی‌لیتر از محلول <span class="ltr-text">0.05 M</span> ادتات دی‌سدیم VS آغاز کنید، سپس 10 میلی‌لیتر بافر آمونیاک-آمونیوم کلرید TS و 1 میلی‌لیتر از معرف اریکروم سیاه TS اضافه کنید. با تیتراسیون با محلول <span class="ltr-text">0.05 M</span> ادتات دی‌سدیم VS تا رسیدن به نقطه پایانی آبی ادامه دهید. هر میلی‌لیتر از محلول <span class="ltr-text">0.05 M</span> ادتات دی‌سدیم معادل <span class="ltr-text">6.292 mg</span> از MnCl2 است.</p>
+                    <p>معیارهای پذیرش: <span class="ltr-text">98.0%–101.0%</span> از MnCl2 بر اساس پایه خشک</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="impurities" style="display: none;">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات، سولفات &#x2019;221&#x2018;</h3>
+                <p>نمونه: <span class="ltr-text">2.0 g</span></p>
+                <p>معیارهای پذیرش: نباید سولفات بیشتری نسبت به معادل <span class="ltr-text">0.10 mL</span> از اسید سولفوریک <span class="ltr-text">0.020 N</span> (معادل <span class="ltr-text">0.005%</span>) نشان دهد.</p>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرح تست</h4>
+                    <p>نمونه: <span class="ltr-text">2.0 g</span></p>
+                    <p>معیارهای پذیرش: نباید سولفات بیشتری نسبت به معادل <span class="ltr-text">0.10 mL</span> از اسید سولفوریک <span class="ltr-text">0.020 N</span> (معادل <span class="ltr-text">0.005%</span>) نشان دهد.</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">آهن &#x2019;241&#x2018;</h3>
+                <p>محلول نمونه: <span class="ltr-text">2.0 g</span> در <span class="ltr-text">40 mL</span> آب</p>
+                <p>معیارهای پذیرش: حداکثر <span class="ltr-text">5 ppm</span></p>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرح تست</h4>
+                    <p>محلول نمونه: <span class="ltr-text">2.0 g</span> در <span class="ltr-text">40 mL</span> آب</p>
+                    <p>معیارهای پذیرش: حداکثر <span class="ltr-text">5 ppm</span></p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">روی</h3>
+                <p>محلول نمونه: 1 گرم را در مخلوطی از <span class="ltr-text">48 mL</span> آب و <span class="ltr-text">2 mL</span> اسید سولفوریک حل کنید.</p>
+                <p>تجزیه و تحلیل: به محلول نمونه، به آرامی و با هم زدن مداوم، 1 میلی‌لیتر از محلول پتاسیم فروسیانید (1 در 100) اضافه کنید.</p>
+                <p>معیارهای پذیرش: ظرف مدت 5 دقیقه هیچ کدورت تولید نمی‌شود.</p>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرح تست</h4>
+                    <p>محلول نمونه: 1 گرم را در مخلوطی از <span class="ltr-text">48 mL</span> آب و <span class="ltr-text">2 mL</span> اسید سولفوریک حل کنید.</p>
+                    <p>تجزیه و تحلیل: به محلول نمونه، به آرامی و با هم زدن مداوم، 1 میلی‌لیتر از محلول پتاسیم فروسیانید (1 در 100) اضافه کنید.</p>
+                    <p>معیارهای پذیرش: ظرف مدت 5 دقیقه هیچ کدورت تولید نمی‌شود.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="specific-tests" style="display: none;">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">ماده نامحلول</h3>
+                <p>محلول نمونه: 10 گرم را در یک بشر 250 میلی‌لیتری منتقل کنید، 150 میلی‌لیتر آب اضافه کنید، بشر را بپوشانید و به جوش بیاورید.</p>
+                <p>تجزیه و تحلیل: محلول نمونه داغ را روی حمام بخار به مدت 1 ساعت هضم کنید و از طریق یک کروسه فیلتراسیون با سوراخ ریز و وزن شده عبور دهید. بشر را با آب داغ بشویید، آب شستشو را از فیلتر عبور دهید و در نهایت فیلتر را با آب داغ اضافی بشویید. فیلتر را در دمای 105 درجه سانتی‌گراد خشک کنید.</p>
+                <p>معیارهای پذیرش: باقی‌مانده وزنی حداکثر <span class="ltr-text">0.5 mg</span> (<span class="ltr-text">0.005%</span>) است.</p>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرح تست</h4>
+                    <p>محلول نمونه: 10 گرم را در یک بشر 250 میلی‌لیتری منتقل کنید، 150 میلی‌لیتر آب اضافه کنید، بشر را بپوشانید و به جوش بیاورید.</p>
+                    <p>تجزیه و تحلیل: محلول نمونه داغ را روی حمام بخار به مدت 1 ساعت هضم کنید و از طریق یک کروسه فیلتراسیون با سوراخ ریز و وزن شده عبور دهید. بشر را با آب داغ بشویید، آب شستشو را از فیلتر عبور دهید و در نهایت فیلتر را با آب داغ اضافی بشویید. فیلتر را در دمای 105 درجه سانتی‌گراد خشک کنید.</p>
+                    <p>معیارهای پذیرش: باقی‌مانده وزنی حداکثر <span class="ltr-text">0.5 mg</span> (<span class="ltr-text">0.005%</span>) است.</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">موادی که با سولفید آمونیوم رسوب نمی‌کنند</h3>
+                <p>محلول نمونه: 2.0 گرم را در 90 میلی‌لیتر آب حل کنید، 5 میلی‌لیتر آمونیوم هیدروکسید اضافه کنید و محلول را تا 80 درجه سانتی‌گراد گرم کنید. جریانی از هیدروژن سولفید را به مدت 30 دقیقه از محلول عبور دهید. با آب تا 100 میلی‌لیتر رقیق کنید، مخلوط کنید و اجازه دهید رسوب ته‌نشین شود. مایع رویی را از طریق فیلتر با سوراخ ریز عبور دهید و 50.0 میلی‌لیتر را به یک ظرف تبخیر که قبلاً احتراق و وزن شده است، منتقل کنید.</p>
+                <p>تجزیه و تحلیل: فیلتر را تا خشک شدن تبخیر کنید، خنک کنید، 0.5 میلی‌لیتر اسید سولفوریک اضافه کنید، به آرامی گرم کنید تا اسید اضافی حذف شود و به مدت 15 دقیقه در دمای 800 ± 25 درجه سانتی‌گراد احتراق کنید.</p>
+                <p>معیارهای پذیرش: وزن باقی‌مانده حداکثر 2.0 میلی‌گرم (حداکثر 0.2% به صورت سولفات) است.</p>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرح تست</h4>
+                    <p>محلول نمونه: 2.0 گرم را در 90 میلی‌لیتر آب حل کنید، 5 میلی‌لیتر آمونیوم هیدروکسید اضافه کنید و محلول را تا 80 درجه سانتی‌گراد گرم کنید. جریانی از هیدروژن سولفید را به مدت 30 دقیقه از محلول عبور دهید. با آب تا 100 میلی‌لیتر رقیق کنید، مخلوط کنید و اجازه دهید رسوب ته‌نشین شود. مایع رویی را از طریق فیلتر با سوراخ ریز عبور دهید و 50.0 میلی‌لیتر را به یک ظرف تبخیر که قبلاً احتراق و وزن شده است، منتقل کنید.</p>
+                    <p>تجزیه و تحلیل: فیلتر را تا خشک شدن تبخیر کنید، خنک کنید، 0.5 میلی‌لیتر اسید سولفوریک اضافه کنید، به آرامی گرم کنید تا اسید اضافی حذف شود و به مدت 15 دقیقه در دمای 800 ± 25 درجه سانتی‌گراد احتراق کنید.</p>
+                    <p>معیارهای پذیرش: وزن باقی‌مانده حداکثر 2.0 میلی‌گرم (حداکثر 0.2% به صورت سولفات) است.</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">pH &#x2019;791&#x2018;</h3>
+                <p>محلول نمونه: 10 گرم در 200 میلی‌لیتر آب عاری از دی‌اکسید کربن و آمونیاک</p>
+                <p>معیارهای پذیرش: 3.5–6.0</p>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرح تست</h4>
+                    <p>محلول نمونه: 10 گرم در 200 میلی‌لیتر آب عاری از دی‌اکسید کربن و آمونیاک</p>
+                    <p>معیارهای پذیرش: 3.5–6.0</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">از دست دادن وزن در هنگام خشک شدن &#x2019;731&#x2018;</h3>
+                <p>یک نمونه را به مدت 2 ساعت در دمای 50 درجه سانتی‌گراد خشک کنید، سپس دما را به مدت 24 ساعت به 150 درجه سانتی‌گراد افزایش دهید: 36.0%–38.5% از وزن خود را از دست می‌دهد.</p>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرح تست</h4>
+                    <p>یک نمونه را به مدت 2 ساعت در دمای 50 درجه سانتی‌گراد خشک کنید، سپس دما را به مدت 24 ساعت به 150 درجه سانتی‌گراد افزایش دهید: 36.0%–38.5% از وزن خود را از دست می‌دهد.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="additional-requirements" style="display: none;">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری</h3>
+                <p>در ظروف دربسته نگهداری شود.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const contentDivs = document.querySelectorAll('div[id]');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                tabButtons.forEach(btn => btn.classList.add('tab-inactive'));
+                btn.classList.remove('tab-inactive');
+                btn.classList.add('tab-active');
+
+                // Hide all content divs
+                contentDivs.forEach(div => div.style.display = 'none');
+
+                // Show the selected content div
+                const targetTab = button.getAttribute('data-tab');
+                document.getElementById(targetTab).style.display = 'block';
+            });
+        });
+
+        // Show the default tab content on page load
+        document.getElementById('definition').style.display = 'block';
+    </script>
+</body>
+</html>

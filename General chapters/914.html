@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ویسکوزیته—روش‌های رانش فشار</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <div class="card">
+            <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">914. ویسکوزیته—روش‌های رانش فشار</h1>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+            <p class="mb-4">ویسکومترها/رئومترهای گنجانده شده در این فصل می‌توانند برای اندازه‌گیری ویسکوزیته سیالات نیوتنی و غیرنیوتنی استفاده شوند. این دستگاه‌ها شامل ویسکومترها/رئومترهای شکافی و ویسکومترهای اکستروژن کاپیلاری هستند.</p>
+            <p class="mb-4">ویسکومترهای کاپیلاری که در ویسکوزیته—روش‌های کاپیلاری <a href="911.html" class="text-blue-600 hover:underline" target="_blank">911</a> توضیح داده شده‌اند، بر این اصل استوارند که جریان توسط گرانش رانده می‌شود و این ویسکومترها را می‌توان در زیرمجموعه روش‌های رانش فشار طبقه‌بندی کرد. با این حال، محدودیت‌های ویسکومترهای کاپیلاری شیشه‌ای، آن‌ها را به طور ذاتی برای مشخصه‌یابی سیالات غیرنیوتنی نامناسب می‌سازد و استفاده از آن‌ها در اندازه‌گیری سیالات با ویسکوزیته بالا نیز عملی نیست. فصل <a href="914.html" class="text-blue-600 hover:underline" target="_blank">914</a> به چنین ویسکومترهایی نمی‌پردازد.</p>
+            <p class="mb-4">[<strong>نکته—</strong> برای اطلاعات اضافی، به رئومتری <a href="1911.html" class="text-blue-600 hover:underline" target="_blank">1911</a> مراجعه کنید.]</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">روش I. ویسکومترها/رئومترهای شکافی</h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">دستگاه</h4>
+            <p class="mb-4"><strong>شکل 1 را ببینید.</strong></p>
+            <p class="mb-4">طراحی اساسی یک ویسکومتر/رئومتر شکافی شامل یک کانال شکافی مستطیلی با سطح مقطع یکنواخت است. یک مایع آزمایشی با نرخ جریان ثابت از طریق این کانال پمپ می‌شود. چندین سنسور فشار که در فواصل خطی در امتداد جهت جریان نصب شده‌اند، افت فشار را اندازه‌گیری می‌کنند، همانطور که در شکل 1 نشان داده شده است.</p>
+            
+            <p class="mb-4"><strong>شکل 1.</strong> طراحی اساسی ویسکومتر/رئومتر شکافی.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">اصل اندازه‌گیری</h4>
+            <p class="mb-4">ویسکومتر/رئومتر شکافی بر اساس اصل اساسی مقاومت مایع ویسکوز در برابر جریان، با افت فشار کاهنده در طول شکاف، عمل می‌کند. افت یا کاهش فشار (ΔP) با تنش برشی در مرز دیواره ارتباط دارد. نرخ برش ظاهری مستقیماً به نرخ جریان و ابعاد شکاف مرتبط است.</p>
+            <p class="mb-4">نرخ برش ظاهری (̇γa)، تنش برشی (σ) و ویسکوزیته ظاهری (ηa) به ترتیب به شرح زیر محاسبه می‌شوند:</p>
+
+            <div class="formula-display">
+                <span>
+                    $$\dot{\gamma}_a = \frac{6Q}{wh^2}$$
+                </span>
+            </div>
+            <div class="formula-display">
+                <span>
+                    $$\sigma = \frac{\Delta P \cdot w \cdot h}{2 \cdot l \cdot (w+h)}$$
+                </span>
+            </div>
+            <div class="formula-display">
+                <span>
+                    $$\eta_a = \frac{\sigma}{\dot{\gamma}_a}$$
+                </span>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>نماد</th>
+                        <th>توضیح</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">̇γa</span></td>
+                        <td>نرخ برش ظاهری (<span class="ltr-text">s⁻¹</span>)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Q</span></td>
+                        <td>نرخ جریان (<span class="ltr-text">µL/s</span>)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">w</span></td>
+                        <td>عرض کانال جریان (<span class="ltr-text">mm</span>)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">h</span></td>
+                        <td>عمق کانال جریان (<span class="ltr-text">mm</span>)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">σ</span></td>
+                        <td>تنش برشی (<span class="ltr-text">Pa</span>)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">ΔP</span></td>
+                        <td>اختلاف فشار بین سنسور فشار پیشرو و آخرین سنسور فشار (<span class="ltr-text">Pa</span>)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">l</span></td>
+                        <td>فاصله بین سنسور فشار پیشرو و آخرین سنسور فشار (<span class="ltr-text">mm</span>)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">ηa</span></td>
+                        <td>ویسکوزیته ظاهری (<span class="ltr-text">Pa · s</span>)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="mb-4">برای تعیین ویسکوزیته یک مایع، نمونه مایع را با نرخ جریان ثابت از طریق کانال شکافی پمپ کرده و افت فشار را اندازه‌گیری کنید. با استفاده از معادلات نشان داده شده در بالا، ویسکوزیته ظاهری را برای نرخ برش ظاهری محاسبه کنید. برای یک مایع نیوتنی، ویسکوزیته ظاهری همان ویسکوزیته واقعی است و یک اندازه‌گیری نرخ برش کافی است. برای سیالات غیرنیوتنی، ویسکوزیته ظاهری، ویسکوزیته واقعی نیست. برای دستیابی به ویسکوزیته واقعی، ویسکوزیته‌های ظاهری را در چندین نرخ برش ظاهری اندازه‌گیری کنید. ویسکوزیته‌های واقعی، η، را در نرخ‌های برش مختلف با استفاده از ضریب تصحیح وایسنبرگ–رابینوویچ–مونی محاسبه کنید:</p>
+
+            <div class="formula-display">
+                <span>
+                    $$\eta = \frac{\sigma}{4\left( \frac{d(\ln \sigma)}{d(\ln \dot{\gamma}_a)} \right) + 1} \cdot \frac{d(\ln \sigma)}{d(\ln \dot{\gamma}_a)}$$
+                </span>
+            </div>
+
+            <p class="mb-4">ویسکوزیته واقعی محاسبه شده باید با مقداری که با استفاده از یک رئومتر مخروطی-صفحه‌ای در همان نرخ برش به دست می‌آید، یکسان باشد.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش</h4>
+            <p class="mb-4">ابعاد شکاف و دامنه کامل فشار سنسورهای فشار را برای دستیابی به دامنه مورد نظر ویسکوزیته و نرخ برش انتخاب کنید. با استفاده از پمپ سرنگ برای کنترل نرخ جریان—یا به طور متناوب، نرخ برش—یک نمونه آزمایشی را در یک سرنگ شیشه‌ای بارگذاری کنید. در صورت لزوم، دمای نمونه را با استفاده از سرنگ و ویسکومتر شکافی مشخص شده در روش انفرادی به ±0.1 درجه سانتی‌گراد برسانید، مگر اینکه در غیر این صورت مشخص شده باشد. اجازه دهید برای حدود 3 تا 5 دقیقه در دمای مشخص شده تعادل برقرار شود. هر سنسور فشار را روی صفر تنظیم کنید. اولین نرخ جریان یا نرخ برش را انتخاب کنید. نمونه را با نرخ جریان پمپ کنید و پس از رسیدن به مقادیر حالت پایدار، قرائت فشار را اندازه‌گیری کنید. نرخ جریان (یا نرخ برش) را افزایش دهید تا زمانی که قرائت فشار سنسور پیشرو بیش از 5% مقدار کامل باشد. میانگین هر سنسور فشار را در طول زمان محاسبه کنید و افت فشار را محاسبه کنید. ویسکوزیته ظاهری را محاسبه کنید. در صورت لزوم برای روش، اندازه‌گیری‌ها را چهار بار تکرار کنید. اگر نمونه آزمایشی غیرنیوتنی است، نرخ برش را تغییر داده و ویسکوزیته‌های ظاهری مربوطه را محاسبه کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محاسبه و کالیبراسیون</h4>
+            <p class="mb-4">ویسکوزیته ظاهری را با تقسیم تنش برشی بر نرخ برش ظاهری محاسبه کنید. برای سیالات غیرنیوتنی، از تصحیحات وایسنبرگ–رابینوویچ–مونی برای به دست آوردن منحنی ویسکوزیته واقعی استفاده کنید. ویسکومترهای تجاری با تصحیح داخلی ارائه می‌شوند.</p>
+            <p class="mb-4">سنسورهای فشار انفرادی را با پیروی از توصیه‌های سازنده کالیبره کنید. با این حال، ویسکومتر شکافی را می‌توان با یک استاندارد نیوتنی با ویسکوزیته شناخته شده کالیبره کرد. استانداردی را انتخاب کنید که دامنه ویسکوزیته مورد نظر را برای شکاف و سنسورهای فشار انتخاب شده پوشش دهد. ویسکوزیته‌ها را در نرخ‌های برش برای 10%، 50% و 90% مقیاس کامل سنسور فشار پیشرو اندازه‌گیری کرده و میانگین بگیرید. ثابتی (k) را برای نسبت مقدار مرجع (ηref) به مقدار اندازه‌گیری شده (ηmeas) محاسبه کرده و ثبت کنید.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>نماد</th>
+                        <th>توضیح</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">ηref</span></td>
+                        <td>ویسکوزیته مرجع (<span class="ltr-text">Pa · s</span>)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">ηmeas</span></td>
+                        <td>ویسکوزیته اندازه‌گیری شده (<span class="ltr-text">Pa · s</span>)</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="formula-display">
+                <span>
+                    $$k = \frac{\eta_{ref}}{\eta_{meas}}$$
+                </span>
+            </div>
+
+            <p class="mb-4">داده‌های ویسکوزیته جدید را در <span class="ltr-text">k</span> ضرب کنید، زیرا مقدار <span class="ltr-text">k</span> برای عدم قطعیت و تغییر هندسه شکاف تصحیح می‌کند. در حالت ایده‌آل، مقدار <span class="ltr-text">k</span> در محدوده تغییر دما 100 درجه سانتی‌گراد ثابت باقی می‌ماند. اگر مقدار <span class="ltr-text">k</span> بیش از 1% تغییر کند، برای جبران دمایی سنسورهای فشار با سازنده مشورت کنید.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2232. آلاینده‌های عنصری در مکمل‌های غذایی</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">2232. آلاینده‌های عنصری در مکمل‌های غذایی</h1>
+        <div class="card">
+
+            <p class="mb-4">هدف این فصل کلی، محدود کردن مقادیر آلاینده‌های عنصری در اشکال دوز نهایی مکمل‌های غذایی است که برای مطابقت با استانداردهای USP یا NF برچسب‌گذاری شده‌اند. این فصل کلی برای تعیین محدودیت برای مواد تشکیل‌دهنده رژیم غذایی در نظر گرفته نشده است. آن محدودیت‌ها در مونوگراف‌های فردی مربوطه تعیین می‌شوند.</p>
+            <p class="mb-4">تمرکز این فصل کلی بر چهار عنصر اصلی با نگرانی‌های سمی‌شناختی است: آرسنیک، کادمیوم، سرب و جیوه. میزان آزمایش را می‌توان با استفاده از یک رویکرد مبتنی بر ریسک که احتمال آلودگی را در نظر می‌گیرد، تعیین کرد. تولیدکنندگان باید حضور آلاینده‌های عنصری غیرمنتظره را برای تعیین انطباق در نظر بگیرند.</p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">محدودیت‌های آلاینده‌های عنصری</h2>
+            <p class="mb-4">سطوح آلاینده‌های عنصری باید همانطور که در جدول 1 نشان داده شده است، محدود شود مگر اینکه در مونوگراف فردی به گونه‌ای دیگر بیان شود. مونوگراف‌های خاص ممکن است محدودیت‌های متفاوتی را برای موادی که نیاز به مصرف مقادیر زیاد دارند، ارائه دهند.</p>
+
+            <table class="mb-6">
+                <thead>
+                    <tr>
+                        <th>عنصر</th>
+                        <th>PDE<span class="ltr-text">(µg/day)</span><sup>a</sup></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>آرسنیک (غیرآلی)</td>
+                        <td><span class="ltr-text">15</span></td>
+                    </tr>
+                    <tr>
+                        <td>کادمیوم</td>
+                        <td><span class="ltr-text">5</span></td>
+                    </tr>
+                    <tr>
+                        <td>سرب</td>
+                        <td><span class="ltr-text">5</span></td>
+                    </tr>
+                    <tr>
+                        <td>جیوه (کل)</td>
+                        <td><span class="ltr-text">15</span></td>
+                    </tr>
+                    <tr>
+                        <td>متیل‌جیوه (به عنوان Hg)</td>
+                        <td><span class="ltr-text">2</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="text-sm mb-4"><sup>a</sup> قرار گرفتن روزانه مجاز (PDE) از حداقل مصرف هفتگی قابل تحمل موقت (PTWI) است که توسط سازمان غذا و کشاورزی سازمان ملل متحد و سازمان بهداشت جهانی (FAO/WHO) توصیه شده است، با کسر قرار گرفتن روزانه (<span class="ltr-text">µg/day</span>) در هر آلاینده عنصری از هوا، غذا و آب آشامیدنی. وزن بدن <span class="ltr-text">50 kg</span> و یک عامل ایمنی برای محاسبه PDE استفاده می‌شود. سایر مقررات (مثلاً Proposition 65 در کالیفرنیا) ممکن است نیاز به محدودیت‌های متفاوتی داشته باشند؛ تولیدکنندگان مسئول انطباق با الزامات محلی قابل اجرا که با این مقادیر PDE متفاوت هستند.</p>
+            <p class="mb-4">آرسنیک ممکن است با استفاده از روش غیر تخصص‌بندی تحت این فرض که تمام آرسنیک موجود در مکمل در فرم غیرآلی است، اندازه‌گیری شود. در جایی که حد با استفاده از روش غیر تخصص‌بندی تجاوز شد، انطباق با حد آرسنیک غیرآلی باید بر اساس روش تخصص‌بندی اثبات شود. تعیین متیل‌جیوه لازم نیست زمانی که محتوای کل جیوه کمتر از حد متیل‌جیوه باشد.</p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">گزینه‌های انطباق با محدودیت‌های آلاینده‌های عنصری</h2>
+            <p class="mb-4">به منظور اینکه فرم دوز نهایی مکمل غذایی با محدودیت‌های آلاینده‌های عنصری مطابق با آنچه در این فصل توضیح داده شده است، مطابقت داشته باشد، سطح آلاینده عنصری در مکمل غذایی نهایی باید NMT PDE باشد. سه گزینه زیر برای تعیین انطباق با محدودیت‌های آلاینده‌های عنصری در مکمل‌های غذایی موجود است.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">گزینه تجزیه و تحلیل مکمل غذایی</h3>
+            <p class="mb-4">این گزینه به طور کلی قابل اجرا است. در این گزینه، فرم دوز نهایی مکمل غذایی طبق رویه‌های فصل کلی "ناخالصی‌های عنصری—رویه‌ها" <a href="233.html" class="text-blue-600 hover:underline" target="_blank">233</a> یا رویه‌های تخصص‌بندی ارائه شده در این فصل تجزیه و تحلیل می‌شود. نتایج حاصل از تجزیه و تحلیل یک اندازه وعده غذایی معمول، مقیاس‌بندی شده به حداکثر مصرف روزانه، با PDE، همانطور که در جدول 1 ذکر شده است، مقایسه می‌شود.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
+            <p class="mb-4">همانطور که در زیر در این فصل آمده است، ادامه دهید.</p>
+            <p class="mb-4">مقدار اندازه‌گیری شده از هر آلاینده عنصری، در <span class="ltr-text">µg/daily intake</span>، را به صورت زیر محاسبه کنید:</p>
+            <div class="formula-display">
+                <span>Result = MVSS × N</span>
+            </div>
+            <p class="mb-4"><span class="ltr-text">MVSS</span> = مقدار اندازه‌گیری شده از هر آلاینده عنصری (<span class="ltr-text">µg/serving size</span>)</p>
+            <p class="mb-4"><span class="ltr-text">N</span> = حداکثر مصرف روزانه مکمل که در برچسب‌گذاری توصیه شده است (<span class="ltr-text">servings/day</span>)</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
+            <p class="mb-4">مقدار اندازه‌گیری شده/مصرف روزانه NMT مقدار PDE داده شده در جدول 1 است.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">گزینه مؤلفه فردی</h3>
+            <p class="mb-4">این گزینه برای فرم‌های دوز نهایی مکمل غذایی با حداکثر مصرف روزانه NMT <span class="ltr-text">10 g</span> از محصول نهایی مکمل غذایی قابل اجرا است.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
+            <p class="mb-4">مگر اینکه در مونوگراف فردی به گونه‌ای دیگر مشخص شده باشد، با مؤلفه فردی همانطور که در زیر در این فصل آمده است، ادامه دهید.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
+            <p class="mb-4">محصول زمانی الزامات را برآورده می‌کند که هر مؤلفه مورد استفاده برای آماده‌سازی مکمل غذایی نهایی، محدودیت‌های داده شده در جدول 2 را برآورده کند.</p>
+
+            <table class="mb-6">
+                <thead>
+                    <tr>
+                        <th>عنصر</th>
+                        <th>محدودیت‌های مؤلفه فردی<span class="ltr-text">(µg/g)</span><sup>a</sup></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>آرسنیک (غیرآلی)<sup>b</sup></td>
+                        <td><span class="ltr-text">1.5</span></td>
+                    </tr>
+                    <tr>
+                        <td>کادمیوم</td>
+                        <td><span class="ltr-text">0.5</span></td>
+                    </tr>
+                    <tr>
+                        <td>سرب</td>
+                        <td><span class="ltr-text">0.5</span></td>
+                    </tr>
+                    <tr>
+                        <td>جیوه (کل)</td>
+                        <td><span class="ltr-text">1.5</span></td>
+                    </tr>
+                    <tr>
+                        <td>متیل‌جیوه (به عنوان Hg)<sup>c</sup></td>
+                        <td><span class="ltr-text">0.2</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="text-sm mb-4"><sup>a</sup> محدودیت‌های مؤلفه‌های فردی بر اساس حداکثر مصرف روزانه <span class="ltr-text">10 g</span> از مکمل غذایی است و فقط برای استفاده با گزینه‌های انطباق با محدودیت‌های آلاینده‌های عنصری، گزینه مؤلفه فردی در نظر گرفته شده است.</p>
+            <p class="text-sm mb-4"><sup>b</sup> آرسنیک ممکن است با استفاده از روش غیر تخصص‌بندی تحت این فرض که تمام آرسنیک موجود در مکمل در فرم غیرآلی است، اندازه‌گیری شود. در جایی که حد با استفاده از روش غیر تخصص‌بندی تجاوز شد، انطباق با حد آرسنیک غیرآلی باید بر اساس روش تخصص‌بندی اثبات شود.</p>
+            <p class="text-sm mb-4"><sup>c</sup> تعیین متیل‌جیوه لازم نیست زمانی که محتوای کل جیوه کمتر از حد متیل‌جیوه باشد.</p>
+            <p class="mb-4">[نکته — اگر تمام مؤلفه‌ها در یک فرمولاسیون، محدودیت‌های داده شده برای محدودیت‌های مؤلفه فردی را برآورده کنند، این مؤلفه‌ها می‌توانند به هر نسبتی استفاده شوند. محاسبه بیشتر لازم نیست.]</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">گزینه جمع‌بندی</h3>
+            <p class="mb-4">این گزینه را می‌توان برای فرم‌های دوز نهایی مکمل غذایی که در مقادیر بیشتر از <span class="ltr-text">10 g/day</span> مصرف می‌شوند یا در جایی که حد پذیرش برای هر آلاینده در هر مؤلفه مکمل غذایی از محدودیت‌های مؤلفه فردی مربوطه تجاوز می‌کند، استفاده کرد.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
+            <p class="mb-4">مگر اینکه در مونوگراف فردی به گونه‌ای دیگر مشخص شده باشد، با مؤلفه فردی همانطور که در زیر در این فصل آمده است، ادامه دهید.</p>
+            <p class="mb-4">مقدار هر آلاینده عنصری، در <span class="ltr-text">µg/daily intake</span>، موجود در فرم دوز نهایی مکمل غذایی را به صورت زیر محاسبه کنید:</p>
+            <div class="formula-display">
+                <span>Result = &Sigma;(Ci &times; Wi) &times; N</span>
+            </div>
+            <p class="mb-4"><span class="ltr-text">Ci</span> = غلظت آلاینده عنصری در مؤلفه فردی (<span class="ltr-text">µg/g</span>)</p>
+            <p class="mb-4"><span class="ltr-text">Wi</span> = وزن هر مؤلفه فردی در هر وعده از مکمل غذایی (<span class="ltr-text">g/serving</span>)</p>
+            <p class="mb-4"><span class="ltr-text">N</span> = حداکثر مصرف روزانه مکمل که در برچسب‌گذاری توصیه شده است (<span class="ltr-text">servings/day</span>)</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
+            <p class="mb-4">مقدار محاسبه شده از هر آلاینده عنصری/مصرف روزانه NMT مقدار PDE داده شده در جدول 1 است.</p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">رویه‌های تجزیه و تحلیل برای آلاینده‌های عنصری کل</h2>
+            <p class="mb-4">روش‌شناسی مبتنی بر عملکرد برای تجزیه و تحلیل آلاینده‌های عنصری کل در فصل کلی "ناخالصی‌های عنصری—رویه‌ها" <a href="233.html" class="text-blue-600 hover:underline" target="_blank">233</a> برای مکمل‌های غذایی قابل اجرا است. نیاز به اعتبارسنجی بسته به موقعیت متفاوت خواهد بود. در هر سه گزینه شرح داده شده در بخش "گزینه‌های انطباق با محدودیت‌های آلاینده‌های عنصری"، استفاده از "اعتبارسنجی رویه‌های محدودیت" (به "ناخالصی‌های عنصری—رویه‌ها" <a href="233.html" class="text-blue-600 hover:underline" target="_blank">233</a> مراجعه کنید) ممکن است مناسب باشد. با این حال، برای گزینه جمع‌بندی، سطوح قابل قبول اعتبارسنجی باید به صورت موردی تعیین شود. اعتبارسنجی یک رویه با استفاده از "اعتبارسنجی رویه‌های کمی" (به "ناخالصی‌های عنصری—رویه‌ها" <a href="233.html" class="text-blue-600 hover:underline" target="_blank">233</a> مراجعه کنید) برای همه گزینه‌ها تحت همه شرایط قابل قبول است و به طور کلی ترجیح داده می‌شود. تعیین سطح نیاز به اعتبارسنجی در اختیار تولیدکننده و مقام نظارتی ذی‌صلاح است.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">رویه‌های تجزیه و تحلیل برای آرسنیک غیرآلی</h3>
+            <p class="mb-4">در جایی که سطح کل آرسنیک از حد توصیه شده در این فصل تجاوز کند، می‌توان از تخصص‌بندی برای تعیین مقدار آرسنیک غیرآلی موجود استفاده کرد. رویه زیر برای تعیین آرسنیک غیرآلی پیشنهاد شده است، اما هر رویه معتبر که نتایج معادل یا بهتر را ارائه دهد، می‌تواند مورد استفاده قرار گیرد.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">دستگاه</h4>
+            <p class="mb-4">به شکل 1 مراجعه کنید.</p>
+
+            <p class="mb-4">شکل 1. دستگاه مخصوص برای تعیین آرسنیک غیرآلی (A، فلاسک تقطیر 250 میلی‌لیتری؛ B، محفظه گیرنده، با ظرفیت تقریبی 50 میلی‌لیتر؛ C، کندانسور رفلاکس؛ D، سرپاش یا قیف امنیتی).</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مواد شیمیایی</h4>
+            <p class="mb-4">محلول کاهنده تقطیر: <span class="ltr-text">30.0 g</span> پتاسیم یدید در <span class="ltr-text">100 mL</span> آب. [نکته — در روز استفاده تازه تهیه کنید.]</p>
+            <p class="mb-4">کنترل: <span class="ltr-text">6.0 µg</span> آرسنیک (As) (<span class="ltr-text">6.0 mL</span> محلول استاندارد آرسنیک). [نکته — از این مقدار به جای <span class="ltr-text">3.0 mL</span> مشخص شده برای آماده‌سازی استاندارد در فصل کلی "آرسنیک" <a href="211.html" class="text-blue-600 hover:underline" target="_blank">211</a>، روش I، استفاده کنید.]</p>
+            <p class="mb-4">محلول نمونه: یک نمونه <span class="ltr-text">2.00-g</span> که قبلاً تا عبور از الک <span class="ltr-text">60-mesh</span> آسیاب شده است را در یک فلاسک تقطیر (A) بریزید. به فلاسک <span class="ltr-text">35 mL</span> اسید هیدروکلریک <span class="ltr-text">6.6 N</span> و <span class="ltr-text">15 mL</span> محلول کاهنده تقطیر اضافه کنید، <span class="ltr-text">5 min</span> صبر کنید تا کاهش آرسنیک [As(V)] تضمین شود، فلاسک را به محفظه گیرنده (B) وصل کنید، مونتاژ دستگاه را کامل کنید و شروع به گردش آب شیر از طریق کندانسور (C) کنید. دو پیاز پایینی سرپاش (D) را با آب پر کنید. شیر را طوری مانور دهید که محتویات محفظه گیرنده به فلاسک تقطیر تخلیه شود، فلاسک را حرارت دهید تا دمای بالای محلول به <span class="ltr-text">100°–110°</span> برسد و به مدت <span class="ltr-text">15 min</span> رفلاکس را در این دما ادامه دهید. شیر را ببندید، حرارت را در <span class="ltr-text">108°–110°</span> ادامه دهید و <span class="ltr-text">30–33 mL</span> تقطیر را در محفظه گیرنده جمع‌آوری کنید. منبع حرارت را بردارید و اجازه دهید دما به حدود <span class="ltr-text">80°</span> کاهش یابد.</p>
+            <p class="mb-4">شیر را ببندید و یک قسمت دوم <span class="ltr-text">35-mL</span> از هیدروکلریک اسید (<span class="ltr-text">HCl</span>) <span class="ltr-text">6.6 N</span> و <span class="ltr-text">15 mL</span> از محلول کاهنده تقطیر را از طریق دهانه دماسنج به فلاسک تقطیر اضافه کنید. دماسنج را دوباره قرار دهید، دما را به <span class="ltr-text">100°–110°</span> افزایش دهید و یک قسمت دوم <span class="ltr-text">30- to 33-mL</span> از تقطیر را در محفظه گیرنده جمع‌آوری کنید. تقطیر دوم را در بشر حاوی قسمت اول تخلیه کنید و تقطیر ترکیبی را تا دمای اتاق خنک کنید. سرپاش را بردارید و محتویات آن را در بشر بشویید. همچنین داخل کندانسور و محفظه گیرنده را با آب بشویید و شستشوها را در بشر جمع‌آوری کنید. به یک فلاسک حجمی <span class="ltr-text">100-mL</span> منتقل کنید و با آب به حجم برسانید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
+            <p class="mb-4">محتوای آرسنیک را با رویه ICP-MS در "ناخالصی‌های عنصری—رویه‌ها" <a href="233.html" class="text-blue-600 hover:underline" target="_blank">233</a> تعیین کنید. به طور جایگزین، <span class="ltr-text">2 mL</span> پتاسیم یدید TS و <span class="ltr-text">0.5 mL</span> اسید قوی استانیوس کلراید TS را به محلول نمونه موجود در فلاسک ارلن‌مایر اضافه کنید و همانطور که در "آرسنیک" <a href="211.html" class="text-blue-600 hover:underline" target="_blank">211</a>، روش I، رویه، شروع از "اجازه دهید در دمای اتاق به مدت <span class="ltr-text">30 minutes</span> بماند" ادامه دهید.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">رویه‌های تجزیه و تحلیل برای متیل‌جیوه</h3>
+            <p class="mb-4">در جایی که تعیین متیل‌جیوه لازم است، رویه زیر پیشنهاد شده است. با این حال، هر رویه معتبر که نتایج معادل یا بهتر را ارائه دهد، می‌تواند مورد استفاده قرار گیرد.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">رویه 1</h4>
+            <p class="mb-4">این رویه از استخراج آبی گونه‌های جیوه با محلول ال-سیستئین، جداسازی HPLC گونه‌های مشتق شده جیوه با فاز متحرک حاوی ال-سیستئین، و تشخیص ICP-MS استفاده می‌کند.</p>
+            <p class="mb-4">محلول سیستئین: <span class="ltr-text">1%</span> ال-سیستئین هیدروکلراید مونوهیدرات در آب</p>
+            <p class="mb-4">فاز متحرک: <span class="ltr-text">0.1%</span> ال-سیستئین هیدروکلراید مونوهیدرات و <span class="ltr-text">0.1%</span> ال-سیستئین آزاد در آب</p>
+            <p class="mb-4">محلول استاندارد پایه: <span class="ltr-text">1 µg/mL</span> جیوه (Hg) به عنوان متیل‌جیوه کلرید، و <span class="ltr-text">1 µg</span> جیوه (Hg) به عنوان کلرید جیوه در <span class="ltr-text">5%</span> اسید هیدروکلریک حاوی <span class="ltr-text">0.2 mg/mL</span> ال-سیستئین هیدروکلراید مونوهیدرات</p>
+            <p class="mb-4">محلول استاندارد: <span class="ltr-text">2 ng/mL</span> جیوه به عنوان متیل‌جیوه از محلول استاندارد پایه در محلول سیستئین</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول‌های نمونه</h4>
+            <p class="mb-4">برای مکمل‌ها در فرم قرص: تعداد مشخصی از قرص‌ها را وزن کرده و به صورت ریز آسیاب کنید. بخش وزن شده دقیق از پودر معادل <span class="ltr-text">0.5</span> برابر مصرف روزانه توصیه شده را در یک ویال تاره وزن شده انتقال دهید. <span class="ltr-text">50.0 mL</span> محلول سیستئین را با دقت وزن شده اضافه کنید، ویال را ببندید و به شدت تکان دهید. ویال را در حمام آب در دمای <span class="ltr-text">60°</span> به مدت <span class="ltr-text">60 min</span> قرار دهید. دوباره ویال را تکان دهید و برای یک دوره دیگر <span class="ltr-text">60 min</span> به حمام آب بازگردانید. دوباره ویال را تکان دهید و اجازه دهید تا حدود <span class="ltr-text">20 min</span> در دمای اتاق خنک شود. از طریق یک غشای پلی‌اتیلنی <span class="ltr-text">0.45-µm</span> فیلتر کنید.</p>
+            <p class="mb-4">[نکته — در روز استفاده تازه تهیه کنید.]</p>
+
+            <p class="mb-4">برای مکمل‌ها در فرم کپسول: حداقل <span class="ltr-text">20</span> کپسول را با دقت وزن کرده و میانگین وزن را تعیین کنید. تعدادی کپسول معادل حدود <span class="ltr-text">5</span> برابر مصرف روزانه توصیه شده را در یک مخلوط‌کن قرار دهید، <span class="ltr-text">500.0 mL</span> محلول سیستئین اضافه کنید و مخلوط کنید تا یک سوسپانسیون تجزیه و تحلیلی همگن بدست آید. <span class="ltr-text">50.0 mL</span> از این سوسپانسیون تجزیه و تحلیلی را در یک ویال انتقال دهید، ویال را ببندید و به شدت تکان دهید. ویال را در حمام آب در دمای <span class="ltr-text">60°</span> به مدت <span class="ltr-text">60 min</span> قرار دهید. دوباره ویال را تکان دهید و برای یک دوره دیگر <span class="ltr-text">60 min</span> به حمام آب بازگردانید. دوباره ویال را تکان دهید و اجازه دهید تا حدود <span class="ltr-text">20 min</span> در دمای اتاق خنک شود. از طریق یک غشای پلی‌اتیلنی <span class="ltr-text">0.45-µm</span> فیلتر کنید.</p>
+            <p class="mb-4">[نکته — در روز استفاده تازه تهیه کنید.]</p>
+
+            <p class="mb-4">برای مکمل‌ها در فرم مایع: مقدار مایع معادل <span class="ltr-text">0.5</span> برابر مصرف روزانه توصیه شده را با دقت در یک ویال وزن کرده و <span class="ltr-text">50.0 mL</span> محلول سیستئین اضافه کنید. ویال را ببندید و به شدت تکان دهید. ویال را در حمام آب در دمای <span class="ltr-text">60°</span> به مدت <span class="ltr-text">60 min</span> قرار دهید. دوباره ویال را تکان دهید و برای یک دوره دیگر <span class="ltr-text">60 min</span> به حمام آب بازگردانید. دوباره ویال را تکان دهید و اجازه دهید تا حدود <span class="ltr-text">20 min</span> در دمای اتاق خنک شود. از طریق یک غشای پلی‌اتیلنی <span class="ltr-text">0.45-µm</span> فیلتر کنید.</p>
+            <p class="mb-4">[نکته — در روز استفاده تازه تهیه کنید.]</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم کروماتوگرافی</h4>
+            <p class="mb-4">(به کروماتوگرافی <a href="621.html" class="text-blue-600 hover:underline" target="_blank">621</a>، مناسب بودن سیستم مراجعه کنید.)</p>
+            <p class="mb-4">حالت: LC</p>
+            <p class="mb-4">آشکارساز: ICP-MS در نسبت جرم به بار <span class="ltr-text">202</span></p>
+            <p class="mb-4">ستون: <span class="ltr-text">4.6-mm</span> × <span class="ltr-text">15-cm</span>؛ پر کردن <span class="ltr-text">4-µm</span> L1</p>
+            <p class="mb-4">نرخ جریان: <span class="ltr-text">1 mL/min</span></p>
+            <p class="mb-4">حجم تزریق: <span class="ltr-text">50 µL</span></p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مناسب بودن سیستم</h4>
+            <p class="mb-4">نمونه: محلول استاندارد</p>
+            <p class="mb-4">الزامات مناسب بودن</p>
+            <p class="mb-4">وضوح: NLT <span class="ltr-text">3</span> بین پیک نمایانگر گونه‌های جیوه (Hg<span class="ltr-text">2+</span>) در نسبت زمان حفظ نسبی حدود <span class="ltr-text">0.56</span> و پیک نمایانگر گونه‌های متیل‌جیوه (MeHg<span class="ltr-text">+</span>) در نسبت زمان حفظ نسبی <span class="ltr-text">1.0</span></p>
+            <p class="mb-4">انحراف معیار نسبی: NMT <span class="ltr-text">10.0%</span>، محلول استاندارد</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
+            <p class="mb-4">نمونه‌ها: محلول استاندارد و محلول نمونه مناسب</p>
+            <p class="mb-4">ناحیه پیک نماینده متیل‌جیوه را در کروماتوگرام‌های محلول نمونه و محلول استاندارد تعیین کنید.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
+            <p class="mb-4"><span class="ltr-text">0.2 µg/daily intake</span>: ناحیه پیک برای متیل‌جیوه در کروماتوگرام محلول نمونه NMT ناحیه پیک برای متیل‌جیوه در کروماتوگرام محلول استاندارد است.</p>
+
+        </div>
+    </div>
+</body>
+</html>

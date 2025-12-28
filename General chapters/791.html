@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>791. pH</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <div class="card">
+            <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">791. pH</h1>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+            <p class="mb-4">
+                برای مقاصد دارویی، pH به عنوان مقداری که توسط یک حسگر پتانسیومتری مناسب و کالیبره شده و سیستم اندازه‌گیری ارائه می‌شود، تعریف می‌شود.
+                [نکته — سیستم اندازه‌گیری به طور سنتی به عنوان "pH متر" ارجاع داده شده است. در حالی که pH متر هنوز در کاربرد رایج است، سیستم اندازه‌گیری می‌تواند در داخل حسگر pH نیز جاسازی شود و سیگنال pH می‌تواند به صورت دیجیتالی به یک دستگاه خارجی مانند کامپیوتر، کنترل‌کننده منطقی قابل برنامه‌ریزی (PLC)، سیستم کنترل توزیع شده (DCS)، سیستم جمع‌آوری داده، ترمینال یا سایر دستگاه‌های کنترل شده توسط ریزپردازنده منتقل شود.]
+                بر اساس تعریف، pH برابر با <span class="ltr-text">−log10[aH<span class="ltr-text">+</span>]</span> است که <span class="ltr-text">aH<span class="ltr-text">+</span></span> فعالیت یون هیدروژن (H<span class="ltr-text">+</span>) یا هیدروونیوم (H3O<span class="ltr-text">+</span>) است و فعالیت یون هیدروژن بسیار نزدیک به غلظت یون هیدروژن است.
+            </p>
+            <p class="mb-4">
+                مقیاس عملی pH تعریف شده است:
+            </p>
+            <div class="formula-display">
+                <p>pH = pHS + [(E − ES)/k]</p>
+            </div>
+            <p class="mb-4">
+                E = پتانسیل اندازه‌گیری شده که در آن سلول گالوانیکی حاوی محلول تحت آزمایش (pH) است
+            </p>
+            <p class="mb-4">
+                ES = پتانسیل اندازه‌گیری شده که در آن سلول گالوانیکی حاوی بافر محلول مناسب برای کالیبراسیون (pHS) است
+            </p>
+            <p class="mb-4">
+                k = تغییر پتانسیل بر حسب تغییر واحد pH و از معادله نرنست (به شرح زیر) مشتق شده است:
+            </p>
+            <div class="formula-display">
+                <p>k = loge(10) × (RT/nF)</p>
+            </div>
+            <p class="mb-4">
+                R = <span class="ltr-text">8.314 J/mole/°K</span>
+            </p>
+            <p class="mb-4">
+                T = دما (<span class="ltr-text">°K</span>)
+            </p>
+            <p class="mb-4">
+                n = مول بر نیم‌واکنش
+            </p>
+            <p class="mb-4">
+                F = ثابت فارادی، <span class="ltr-text">96485 C/mole</span>
+            </p>
+            <p class="mb-4">
+                معادله حاصل در دمای T برابر است با <span class="ltr-text">[0.05916 + 0.0001984(T − 25°)]</span> ولت. مقادیر k از <span class="ltr-text">15°–35°</span> در جدول 1 ارائه شده است.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">جدول 1. مقادیر k برای دماهای مختلف</h3>
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th>دما (°C)</th>
+                        <th>k (V)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">15.00</span></td>
+                        <td><span class="ltr-text">0.05718</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">20.00</span></td>
+                        <td><span class="ltr-text">0.05817</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">25.00</span></td>
+                        <td><span class="ltr-text">0.05916</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">30.00</span></td>
+                        <td><span class="ltr-text">0.06016</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">35.00</span></td>
+                        <td><span class="ltr-text">0.06115</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="mb-4">
+                مقادیر k در دماهای دیگر را می‌توان از معادله بالا تعیین کرد. برای مقاصد عملی، مقادیر k از کالیبراسیون حسگر pH تعیین می‌شوند.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سیستم اندازه‌گیری pH</h2>
+            <p class="mb-4">
+                سیستم اندازه‌گیری شامل 1) یک الکترود اندازه‌گیری حساس به فعالیت یون هیدروژن، معمولاً یک الکترود شیشه‌ای، اگرچه انواع دیگر الکترود نیز ممکن است؛ 2) یک الکترود مرجع مناسب، به عنوان مثال، یک الکترود نقره-کلرید نقره؛ و 3) یک سیستم اندازه‌گیری ولتاژ با مقاومت ورودی قادر به اندازه‌گیری در امپدانس ورودی بالای حسگر pH است.
+            </p>
+            <p class="mb-4">
+                الکترود اندازه‌گیری و مرجع ممکن است جداگانه یا ترکیبی باشند. سیستم اندازه‌گیری ولتاژ ممکن است از حسگر pH جدا شود یا در حسگر ادغام شود. برای اکثر کاربردها، اندازه‌گیری دما برای جبران تأثیر دمایی نرنست که در بالا توضیح داده شد، ضروری خواهد بود. یک دستگاه دما ممکن است در حسگر pH جاسازی شود، یا می‌توان از یک دستگاه دمای خارجی استفاده کرد.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات دستگاه</h2>
+            <p class="mb-4">
+                سیستم اندازه‌گیری باید قادر به انجام کالیبراسیون pH دو نقطه‌ای (یا بیشتر) باشد (به زیر مراجعه کنید). دقت سیستم اندازه‌گیری pH در بخش کالیبراسیون شرح داده شده است. وضوح سیستم اندازه‌گیری pH باید حداقل <span class="ltr-text">0.01</span> pH باشد. دستگاه باید قادر به جبران دمایی اندازه‌گیری حسگر pH برای تبدیل سیگنال میلی‌ولت به واحدهای pH در هر دمایی باشد، یا به طور خودکار با استفاده از یک دستگاه دما که در سیستم حسگر ساخته شده است، یا با ورود دستی دمای نمونه به سیستم اندازه‌گیری. دقت سیستم اندازه‌گیری دما باید <span class="ltr-text">±1°</span> باشد. وضوح سیستم اندازه‌گیری دما باید حداقل <span class="ltr-text">0.1°</span> باشد. اندازه‌گیری‌های pH مبتنی بر آزمایشگاه معمولاً در دمای <span class="ltr-text">25 ± 2°</span> انجام می‌شوند مگر اینکه در مونوگراف فردی یا در اینجا به طور متفاوتی مشخص شده باشد. با این حال، دماهای خارج از این محدوده قابل قبول هستند اگر نمونه‌ها در دماهای جایگزین راحت‌تر آماده شوند. نمونه‌هایی از اندازه‌گیری‌های غیرمبتنی بر آزمایشگاه شامل نمونه‌های آزمایشی در داخل لوله‌های فرآیندی، مخازن، تانک‌ها و سایر شرایط پردازش غیر استاندارد است.
+            </p>
+            <p class="mb-4">
+                [نکته — تعاریف pH، مقیاس pH و مقادیر اختصاص داده شده به محلول‌های بافر برای کالیبراسیون، برای ایجاد یک سیستم عملیاتی کاربردی است تا نتایج بتواند بین آزمایشگاه‌ها مقایسه شود. مقادیر pH اندازه‌گیری شده لزوماً با مقادیری که از تعریف <span class="ltr-text">pH = −log10 [aH<span class="ltr-text">+</span>]</span> به دست می‌آیند، مطابقت ندارند، بلکه مقادیر به دست آمده ارتباط نزدیکی با فعالیت یون هیدروژن در محلول‌های آبی دارند.]
+            </p>
+            <p class="mb-4">
+                [نکته — در مواردی که یک سیستم اندازه‌گیری pH با استفاده از یک بافر آبی کالیبره شده و سپس برای اندازه‌گیری pH سیستم‌های غیرآبی استفاده می‌شود، ثابت تفکیک اسید یا باز، ثابت دی‌الکتریک محیط، پتانسیل اتصال مایع (که ممکن است منجر به خطاهای تقریبی <span class="ltr-text">1</span> واحد pH شود) و پاسخ یون هیدروژن الکترود شیشه‌ای همگی تغییر می‌کنند. به دلایل زیر، مقادیر به دست آمده با محلول‌هایی که فقط تا حدی ماهیت آبی دارند، تنها می‌توانند مقادیر pH ظاهری در نظر گرفته شوند.]
+            </p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">محلول‌های بافر برای کالیبراسیون سیستم اندازه‌گیری pH</h2>
+            <p class="mb-4">
+                محلول‌های بافر برای کالیبراسیون طبق دستورالعمل جدول 2 آماده می‌شوند. نمک‌های بافر با خلوص لازم را می‌توان از موسسه ملی استاندارد و فناوری (NIST)، سایر مقامات ملی یا سایر تأمین‌کنندگان تهیه کرد. محلول‌های بافر باید در ظروف مناسب نگهداری شوند که پایداری pH را تا تاریخ انقضا تضمین کنند و با بستن محکم بسته شوند. برای محلول‌های بافر با pH بالاتر از <span class="ltr-text">11</span>، نگهداری باید در ظروفی باشد که در برابر نفوذ دی‌اکسید کربن مقاوم باشند یا آن را کاهش دهند، که باعث کاهش pH بافر می‌شود. برای محلول‌های بافر با pH کمتر از <span class="ltr-text">11</span>، باید معمولاً در فواصل زمانی که بیش از <span class="ltr-text">3</span> ماه نباشد، آماده شوند. برای محلول‌های بافر با pH بالاتر از <span class="ltr-text">11</span>، باید معمولاً تازه آماده و مصرف شوند مگر اینکه ورود دی‌اکسید کربن محدود شود. تمام محلول‌های بافر باید با استفاده از آب خالص آماده شوند. جدول 2 pH محلول‌های بافر را به عنوان تابعی از دما نشان می‌دهد. دستورالعمل‌های ارائه شده در اینجا برای آماده‌سازی محلول‌هایی با غلظت‌های مولی (m) مشخص شده است. با این حال، برای تسهیل آماده‌سازی آنها، دستورالعمل‌ها به صورت مولاریته داده شده است. تفاوت در غلظت بین آماده‌سازی‌های مولالیته و مولاریته برای این محلول‌های بافر کمتر از <span class="ltr-text">1%</span> است و تفاوت pH ناچیز است. کالیبراسیون با استفاده از محلول‌های بافر باید در محدوده دمایی بافرهای ذکر شده در جدول 2 انجام شود. [نکته — جبران دمایی نرنست فقط برای تغییر خروجی میلی‌ولت الکترود با دما تصحیح می‌کند، نه تغییر واقعی pH محلول بافر با دما، که برای هر بافر منحصر به فرد است.]
+            </p>
+            <p class="mb-4">
+                ویژگی‌هایی مانند تشخیص خودکار بافر یا تصحیح pH-دما بافر برای راحتی در سازگاری با تأثیر دما بر محلول‌های بافر در دسترس هستند. پاسخ pH-دما را می‌توان از مقادیر جدول 2 تعیین کرد.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">جدول 2. مقادیر pH محلول‌های بافر برای کالیبراسیون</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>دما (°C)</th>
+                        <th><span class="ltr-text">Tetra-oxalate</span> پتاسیم، <span class="ltr-text">0.05 m</span></th>
+                        <th><span class="ltr-text">Hydrogen Tartrate</span> پتاسیم، اشباع در <span class="ltr-text">25°</span></th>
+                        <th><span class="ltr-text">Dihydrogen Citrate</span> پتاسیم، <span class="ltr-text">0.05 M</span></th>
+                        <th><span class="ltr-text">Biphthalate</span> پتاسیم، <span class="ltr-text">0.05 m</span></th>
+                        <th>فسفات هم‌مولار، <span class="ltr-text">0.05 m</span></th>
+                        <th><span class="ltr-text">Dihydrogen Phosphate</span> پتاسیم، <span class="ltr-text">0.0087 M</span> و <span class="ltr-text">Hydrogen Phosphate Disodium</span>، <span class="ltr-text">0.0303 M</span></th>
+                        <th><span class="ltr-text">Tetraborate</span> سدیم، <span class="ltr-text">0.01 m</span></th>
+                        <th>کربنات سدیم، <span class="ltr-text">0.025 M</span> و بیکربنات سدیم، <span class="ltr-text">0.025 M</span></th>
+                        <th>هیدروکسید کلسیم، اشباع در <span class="ltr-text">25°</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">10</span></td>
+                        <td><span class="ltr-text">1.67</span></td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td><span class="ltr-text">4.00</span></td>
+                        <td><span class="ltr-text">6.92</span></td>
+                        <td>—</td>
+                        <td><span class="ltr-text">9.33</span></td>
+                        <td>—</td>
+                        <td><span class="ltr-text">13.00</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">15</span></td>
+                        <td><span class="ltr-text">1.67</span></td>
+                        <td>—</td>
+                        <td><span class="ltr-text">3.80</span></td>
+                        <td><span class="ltr-text">4.00</span></td>
+                        <td><span class="ltr-text">6.90</span></td>
+                        <td><span class="ltr-text">7.45</span></td>
+                        <td><span class="ltr-text">9.28</span></td>
+                        <td><span class="ltr-text">10.12</span></td>
+                        <td><span class="ltr-text">12.81</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">20</span></td>
+                        <td><span class="ltr-text">1.68</span></td>
+                        <td>—</td>
+                        <td><span class="ltr-text">3.79</span></td>
+                        <td><span class="ltr-text">4.00</span></td>
+                        <td><span class="ltr-text">6.88</span></td>
+                        <td><span class="ltr-text">7.43</span></td>
+                        <td><span class="ltr-text">9.23</span></td>
+                        <td><span class="ltr-text">10.06</span></td>
+                        <td><span class="ltr-text">12.63</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">25</span></td>
+                        <td><span class="ltr-text">1.68</span></td>
+                        <td><span class="ltr-text">3.56</span></td>
+                        <td><span class="ltr-text">3.78</span></td>
+                        <td><span class="ltr-text">4.01</span></td>
+                        <td><span class="ltr-text">6.86</span></td>
+                        <td><span class="ltr-text">7.41</span></td>
+                        <td><span class="ltr-text">9.18</span></td>
+                        <td><span class="ltr-text">10.01</span></td>
+                        <td><span class="ltr-text">12.45</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">30</span></td>
+                        <td><span class="ltr-text">1.68</span></td>
+                        <td><span class="ltr-text">3.55</span></td>
+                        <td><span class="ltr-text">3.77</span></td>
+                        <td><span class="ltr-text">4.02</span></td>
+                        <td><span class="ltr-text">6.85</span></td>
+                        <td><span class="ltr-text">7.40</span></td>
+                        <td><span class="ltr-text">9.14</span></td>
+                        <td><span class="ltr-text">9.97</span></td>
+                        <td><span class="ltr-text">12.29</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">35</span></td>
+                        <td><span class="ltr-text">1.69</span></td>
+                        <td><span class="ltr-text">3.55</span></td>
+                        <td><span class="ltr-text">3.76</span></td>
+                        <td><span class="ltr-text">4.02</span></td>
+                        <td><span class="ltr-text">6.84</span></td>
+                        <td><span class="ltr-text">7.39</span></td>
+                        <td><span class="ltr-text">9.10</span></td>
+                        <td><span class="ltr-text">9.93</span></td>
+                        <td><span class="ltr-text">12.13</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">40</span></td>
+                        <td><span class="ltr-text">1.69</span></td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td><span class="ltr-text">4.04</span></td>
+                        <td><span class="ltr-text">6.84</span></td>
+                        <td>—</td>
+                        <td><span class="ltr-text">9.07</span></td>
+                        <td>—</td>
+                        <td><span class="ltr-text">11.98</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">45</span></td>
+                        <td><span class="ltr-text">1.70</span></td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td><span class="ltr-text">4.05</span></td>
+                        <td><span class="ltr-text">6.83</span></td>
+                        <td>—</td>
+                        <td><span class="ltr-text">9.04</span></td>
+                        <td>—</td>
+                        <td><span class="ltr-text">11.84</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">50</span></td>
+                        <td><span class="ltr-text">1.71</span></td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td><span class="ltr-text">4.06</span></td>
+                        <td><span class="ltr-text">6.83</span></td>
+                        <td>—</td>
+                        <td><span class="ltr-text">9.01</span></td>
+                        <td>—</td>
+                        <td><span class="ltr-text">11.71</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">55</span></td>
+                        <td><span class="ltr-text">1.72</span></td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td><span class="ltr-text">4.08</span></td>
+                        <td><span class="ltr-text">6.83</span></td>
+                        <td>—</td>
+                        <td><span class="ltr-text">8.99</span></td>
+                        <td>—</td>
+                        <td><span class="ltr-text">11.57</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">60</span></td>
+                        <td><span class="ltr-text">1.72</span></td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td><span class="ltr-text">4.09</span></td>
+                        <td><span class="ltr-text">6.84</span></td>
+                        <td>—</td>
+                        <td><span class="ltr-text">8.96</span></td>
+                        <td>—</td>
+                        <td><span class="ltr-text">11.45</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">ΔpH/Δ°C</span></td>
+                        <td><span class="ltr-text">0.0010</span></td>
+                        <td><span class="ltr-text">−0.0014</span></td>
+                        <td><span class="ltr-text">−0.0022</span></td>
+                        <td><span class="ltr-text">0.0018</span></td>
+                        <td><span class="ltr-text">−0.0016</span></td>
+                        <td><span class="ltr-text">−0.0028</span></td>
+                        <td><span class="ltr-text">−0.0074</span></td>
+                        <td><span class="ltr-text">−0.0096</span></td>
+                        <td><span class="ltr-text">−0.0310</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="mb-4">
+                آماده‌سازی حجم‌های جایگزین با غلظت‌های مشابه با موارد ذکر شده در زیر قابل قبول است.
+            </p>
+            <p class="mb-4">
+                <span class="ltr-text">Tetra-oxalate</span> پتاسیم، <span class="ltr-text">0.05 m</span>: <span class="ltr-text">12.61 g</span> از <span class="ltr-text">KH3(C2O4)2 · 2H2O</span> را حل کرده و با آب به حجم <span class="ltr-text">1000.0 mL</span> برسانید.
+            </p>
+            <p class="mb-4">
+                <span class="ltr-text">Hydrogen Tartrate</span> پتاسیم، اشباع در <span class="ltr-text">25°</span>: <span class="ltr-text">C4H5KO6</span> را به آب اضافه کنید تا اشباع در <span class="ltr-text">25°</span> فراتر رود. سپس فیلتر یا دکانت کنید.
+            </p>
+            <p class="mb-4">
+                <span class="ltr-text">Dihydrogen Citrate</span> پتاسیم، <span class="ltr-text">0.05 M</span>: <span class="ltr-text">11.41 g</span> از <span class="ltr-text">C6H7KO4</span> را حل کرده و با آب به حجم <span class="ltr-text">1000.0 mL</span> برسانید.
+            </p>
+            <p class="mb-4">
+                <span class="ltr-text">Biphthalate</span> پتاسیم، <span class="ltr-text">0.05 m</span>: <span class="ltr-text">10.12 g</span> از <span class="ltr-text">KHC8H4O4</span> را که قبلاً به مدت <span class="ltr-text">1</span> ساعت در دمای <span class="ltr-text">110°</span> خشک شده است، حل کرده و با آب به حجم <span class="ltr-text">1000.0 mL</span> برسانید.
+            </p>
+            <p class="mb-4 text-sm italic">
+                1 محلول‌های بافر تجاری برای سیستم اندازه‌گیری pH، که با روش‌های قابل ردیابی به NIST یا سایر مقامات ملی کالیبره شده‌اند و با مقادیر pH دقیق تا <span class="ltr-text">0.02</span> واحد pH برچسب‌گذاری شده‌اند، قابل استفاده هستند. محلول‌های آماده شده از مواد درجه معرف ACS یا سایر مواد مناسب، ممکن است استفاده شوند به شرطی که pH محلول حاصل با pH محلول آماده شده از ماده گواهی شده NIST (یا سایر مقامات ملی) یکسان باشد.
+            </p>
+            <p class="mb-4">
+                محلول‌های بافر با pH بالاتر از <span class="ltr-text">12</span> باید بلافاصله استفاده شوند یا با آب جوشانده شده تازه آماده شوند و باید در شرایطی نگهداری شوند که جذب دی‌اکسید کربن به حداقل برسد.
+            </p>
+            <p class="mb-4">
+                فسفات هم‌مولار، <span class="ltr-text">0.05 m</span>: <span class="ltr-text">3.53 g</span> سدیم هیدروژن فسفات (Na2HPO4) و <span class="ltr-text">3.39 g</span> پتاسیم دی هیدروژن فسفات (KH2PO4)، که هر کدام قبلاً به مدت <span class="ltr-text">2</span> ساعت در دمای <span class="ltr-text">120°</span> خشک شده‌اند، حل کرده و با آب به حجم <span class="ltr-text">1000.0 mL</span> برسانید.
+            </p>
+            <p class="mb-4">
+                <span class="ltr-text">Potassium dihydrogen phosphate</span>، <span class="ltr-text">0.0087 M</span> و <span class="ltr-text">disodium hydrogen phosphate</span>، <span class="ltr-text">0.0303 M</span>: <span class="ltr-text">1.18 g</span> از <span class="ltr-text">KH2PO4</span> و <span class="ltr-text">4.30 g</span> از <span class="ltr-text">Na2HPO4</span>، که هر دو به مدت <span class="ltr-text">2</span> ساعت در دمای <span class="ltr-text">120 ± 2°</span> خشک شده‌اند، حل کرده و با آب به حجم <span class="ltr-text">1000.0 mL</span> برسانید.
+            </p>
+            <p class="mb-4">
+                <span class="ltr-text">Tetraborate</span> سدیم، <span class="ltr-text">0.01 m</span>: <span class="ltr-text">3.80 g</span> از <span class="ltr-text">Na2B4O7 · 10H2O</span> را حل کرده و با آب به حجم <span class="ltr-text">1000.0 mL</span> برسانید. از جذب دی‌اکسید کربن محافظت کنید.
+            </p>
+            <p class="mb-4">
+                کربنات سدیم، <span class="ltr-text">0.025 M</span> و بیکربنات سدیم، <span class="ltr-text">0.025 M</span>: <span class="ltr-text">2.64 g</span> کربنات سدیم (Na2CO3) و <span class="ltr-text">2.09 g</span> بیکربنات سدیم (NaHCO3) را حل کرده و با آب به حجم <span class="ltr-text">1000.0 mL</span> برسانید.
+            </p>
+            <p class="mb-4">
+                هیدروکسید کلسیم، اشباع در <span class="ltr-text">25°</span>: <span class="ltr-text">Ca(OH)2</span> را به آب اضافه کنید تا اشباع در <span class="ltr-text">25°</span> فراتر رود. از آبی استفاده کنید که اخیراً جوشانده شده و از هوا محافظت شده است تا جذب دی‌اکسید کربن محدود شود. سپس فیلتر یا دکانت کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تغییر به شرح زیر:</h4>
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">کالیبراسیون</h2>
+            <p class="mb-4">
+                به دلیل تنوع در ماهیت و عملکرد سیستم‌های اندازه‌گیری pH موجود، ارائه دستورالعمل‌های جهانی برای کالیبراسیون سیستم اندازه‌گیری عملی نیست. با این حال، اصول کلی که باید دنبال شوند در پاراگراف‌های زیر آمده است. الکترودها را بررسی کنید، به خصوص الکترود مرجع و سطح الکترولیت، اگر از الکترولیت مایع استفاده می‌شود. در صورت لزوم، منبع الکترولیت را مجدداً پر کنید و سایر اقدامات احتیاطی ذکر شده توسط تولیدکنندگان دستگاه و الکترود را رعایت کنید.
+            </p>
+            <p class="mb-4">
+                کالیبراسیون یا تأیید سیستم اندازه‌گیری pH باید به صورت دوره‌ای اجرا شود. عملکرد تاریخی سیستم اندازه‌گیری، اهمیت اندازه‌گیری pH، نگهداری حسگر pH و فرکانس عملیات اندازه‌گیری برای تعیین فرکانس کالیبراسیون/تأیید استفاده می‌شوند. ▲ رویه زیر اجازه چندین روش کالیبراسیون (کالیبراسیون دو نقطه‌ای، کالیبراسیون چند نقطه‌ای و کالیبراسیون چند بخشی) را می‌دهد.▲ (<span class="ltr-text">USP 1-Aug-2020</span>)
+            </p>
+            <p class="mb-4">
+                اگر pH بافر به دی‌اکسید کربن محیط حساس است، از آب خالص استفاده کنید که اخیراً جوشانده شده و سپس در ظرفی نگهداری شده است که ورود دی‌اکسید کربن را به حداقل برساند.
+            </p>
+            <ol class="list-decimal list-inside mb-4 pl-4">
+                <li>
+                    برای کالیبره کردن سیستم اندازه‌گیری pH، سه محلول بافر برای کالیبراسیون انتخاب کنید، ترجیحاً از موارد موجود در جدول 2، به طوری که pH مورد انتظار ماده تحت آزمایش در محدوده آنها قرار گیرد. دو بافر برای فرآیند کالیبراسیون استفاده می‌شوند و بافر سوم برای تأیید. مقدار بافر تأیید باید بین دو بافر کالیبراسیون باشد. اگر محدوده عملیاتی حسگر pH فراتر از محدوده pH محلول‌های بافر در جدول 2 باشد، آنگاه یا 1) دو بافر pH نزدیک از جدول 2 را انتخاب کنید یا 2) یکی از جدول 2 و یک بافر آماده شده مستند دیگر که خارج از محدوده است را انتخاب کنید.
+                </li>
+                <li>
+                    حسگر pH را چندین بار با آب و سپس با اولین محلول بافر بشویید.
+                </li>
+                <li>
+                    حسگر pH را در اولین محلول بافر در دمایی در محدوده جدول 2 غوطه‌ور کنید.
+                </li>
+                <li>
+                    اگر اندازه‌گیری و جبران خودکار دما در سیستم اندازه‌گیری گنجانده نشده است، دما و مقدار pH محلول بافر در آن دما را به صورت دستی وارد دستگاه کنید. برای دماهای ذکر نشده در جدول 2، از درون‌یابی خطی برای تعیین مقدار pH به عنوان تابعی از دما استفاده کنید.
+                </li>
+                <li>
+                    توالی کالیبراسیون دو نقطه‌ای را با اولین بافر طبق دستورالعمل سازنده شروع کنید.
+                </li>
+                <li>
+                    حسگر pH را از بافر اول خارج کرده و الکترود(ها) را با آب و سپس با دومین محلول بافر بشویید.
+                </li>
+                <li>
+                    حسگر pH را در دومین بافر در دمایی در محدوده جدول 2 غوطه‌ور کنید.
+                </li>
+                <li>
+                    اگر اندازه‌گیری و جبران خودکار دما در سیستم اندازه‌گیری گنجانده نشده است، دما و مقدار pH محلول بافر در آن دما را به صورت دستی وارد دستگاه کنید.
+                </li>
+                <li>
+                    توالی کالیبراسیون دو نقطه‌ای را با دومین بافر طبق دستورالعمل سازنده ادامه دهید.
+                </li>
+                <li>
+                    پس از اتمام فرآیند کالیبراسیون دو نقطه‌ای، تأیید کنید که شیب و افست pH در پارامترهای قابل قبول قرار دارند. پارامترهای قابل قبول معمول عبارتند از شیب <span class="ltr-text">90%–105%</span> و افست <span class="ltr-text">0 ± 30 mV</span> (<span class="ltr-text">0.5</span> واحد pH در <span class="ltr-text">25°</span>). بسته به ابزار pH، شیب و افست pH را می‌توان در نرم‌افزار یا با روش‌های دستی تعیین کرد. اگر از روش‌های دستی استفاده می‌کنید، برای محاسبه شیب/افست حسگر pH، دستورالعمل‌های تامین‌کننده را دنبال کنید. اگر این پارامترها در پارامترهای قابل قبول نباشند، حسگر باید به درستی تمیز، دوباره پر، سرویس یا تعویض شود و فرآیند کالیبراسیون دو نقطه‌ای باید تکرار شود.
+                </li>
+                <li>
+                    حسگر pH را از بافر دوم خارج کرده و به طور کامل با آب و سپس با بافر تأیید بشویید.
+                </li>
+                <li>
+                    حسگر pH را در بافر تأیید در دمایی در محدوده جدول 2 غوطه‌ور کنید.
+                </li>
+                <li>
+                    اگر اندازه‌گیری و جبران خودکار دما در سیستم اندازه‌گیری گنجانده نشده است، دما و مقدار pH محلول بافر در آن دما را به صورت دستی وارد دستگاه کنید.
+                </li>
+                <li>
+                    خواندن pH باید در محدوده <span class="ltr-text">±0.05</span> pH مقدار جدول 2 در دمای محلول بافر باشد.
+                </li>
+            </ol>
+            <p class="mb-4">
+                ▲نکته — اگر از فرآیند کالیبراسیون چند نقطه‌ای (سه یا بیشتر بافر کالیبراسیون) به اضافه حداقل یک بافر تأیید استفاده شود، مراحل <span class="ltr-text">9–14</span> را تکرار کنید و اطمینان حاصل کنید که معیارهای شیب و افست حسگر pH (به مرحله <span class="ltr-text">10</span> مراجعه کنید) و دقت کالیبراسیون (به مرحله <span class="ltr-text">14</span> مراجعه کنید) این محدوده برآورده شود. مقدار بافرهای تأیید باید بین بالاترین و پایین‌ترین بافرهای کالیبراسیون محدوده باشد.
+            </p>
+            <p class="mb-4">
+                نکته — اگر از فرآیند کالیبراسیون چند بخشی (سه یا بیشتر بافر کالیبراسیون با حداقل دو شیب و افست) به اضافه حداقل یک بافر تأیید برای هر بخش استفاده شود، مراحل <span class="ltr-text">9–14</span> را برای هر بخش تکرار کنید و اطمینان حاصل کنید که معیارهای شیب و افست حسگر pH (به مرحله <span class="ltr-text">10</span> مراجعه کنید) و دقت کالیبراسیون (به مرحله <span class="ltr-text">14</span> مراجعه کنید) هر بخش برآورده شود. مقدار هر بافر تأیید باید بین بالاترین و پایین‌ترین بافرهای کالیبراسیون برای هر بخش باشد.▲ (<span class="ltr-text">USP 1-Aug-2020</span>)
+            </p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">عملیات</h2>
+            <p class="mb-4">
+                تمام نمونه‌های آزمایشی باید با استفاده از آب خالص تهیه شوند، مگر اینکه در مونوگراف مشخص شده باشد. تمام اندازه‌گیری‌های آزمایشی باید از جبران دمایی نرنست دستی یا خودکار استفاده کنند.
+            </p>
+            <ol class="list-decimal list-inside mb-4 pl-4">
+                <li>
+                    ماده آزمایشی را طبق الزامات مونوگراف یا طبق رویه‌های خاص آماده کنید. اگر pH نمونه آزمایشی به دی‌اکسید کربن محیط حساس است، از آب خالص استفاده کنید که اخیراً جوشانده شده و سپس در ظرفی نگهداری شده است که ورود دی‌اکسید کربن را به حداقل برساند.
+                </li>
+                <li>
+                    حسگر pH را با آب و سپس با چند قسمت از ماده آزمایشی بشویید.
+                </li>
+                <li>
+                    حسگر pH را در ماده آزمایشی غوطه‌ور کرده و مقدار pH و دما را ثبت کنید.
+                </li>
+            </ol>
+            <p class="mb-4">
+                در تمام اندازه‌گیری‌های pH، زمان کافی برای تثبیت دما و اندازه‌گیری pH را در نظر بگیرید.
+            </p>
+            <p class="mb-4">
+                توابع تشخیصی مانند اندازه‌گیری مقاومت الکترود شیشه‌ای یا مرجع ممکن است برای تعیین نقص تجهیزات در دسترس باشند. برای ابزارهای تشخیصی برای اطمینان از عملکرد صحیح الکترود، به تامین‌کننده الکترود مراجعه کنید.
+            </p>
+            <p class="mb-4">
+                در مواردی که مقادیر pH تقریبی کافی است، ممکن است شناساگرها و کاغذی‌های آزمایشی (به بخش <a href="#" class="text-blue-600 hover:underline">مواد شیمیایی، شناساگرها و محلول‌ها — شناساگرها و کاغذی‌های آزمایشی شناساگر</a> مراجعه کنید) مناسب باشند.
+            </p>
+            <p class="mb-4">
+                برای بحث در مورد بافرها و برای ترکیب محلول‌های بافر استاندارد که در آزمایش‌ها و سنجش‌های دارویی مورد نیاز است، به بخش <a href="#" class="text-blue-600 hover:underline">مواد شیمیایی، شناساگرها و محلول‌ها — محلول‌ها، محلول‌های بافر</a> مراجعه کنید. این بخش ارجاع شده قصد جایگزینی استفاده از بافرهای کالیبراسیون pH در جدول 2 را ندارد.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

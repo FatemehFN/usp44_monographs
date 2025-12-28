@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>580. ویتامین C - تعیین کمی</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <div class="card">
+            <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">580. تعیین کمی ویتامین C</h1>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+            <p class="mb-4">روش‌های زیر برای تجزیه و تحلیل اشکال مختلف ویتامین C به صورت اسید اسکوربیک (<span class="ltr-text">C6H8O6</span>)، سدیم آسکوربات (<span class="ltr-text">C6H7NaO6</span>) و کلسیم آسکوربات دی‌هیدرات (<span class="ltr-text">C12H14CaO12 · 2H2O</span>) یا مخلوط‌های آنها در اشکال دارویی نهایی، مانند کپسول‌ها، قرص‌ها یا محلول‌های خوراکی ارائه شده است.</p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">روش اول - روش تیتراسیون</h2>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">رویه</h4>
+            <p class="mb-4">مگر اینکه در مونوگراف‌های فردی مشخص شده باشد، مراحل زیر را دنبال کنید.</p>
+
+            <p class="mb-4"><strong>محلول نمونه برای کپسول‌ها:</strong> حداقل <span class="ltr-text">20</span> کپسول را در یک بطری وزن‌کشی ترازووزن کنید. کپسول‌ها را بدون از دست دادن مواد پوسته باز کرده و محتویات را به یک بشر <span class="ltr-text">100-mL</span> منتقل کنید. مواد باقیمانده روی پوسته‌های خالی را در صورت لزوم با شستشو با چندین قسمت اتر پاک کنید. شستشوها را دور بریزید و پوسته‌های کپسول را با کمک جریان هوای خشک خشک کنید تا بوی اتر قابل استشمام نباشد. پوسته‌های خالی کپسول را در بطری وزن‌کشی ترازووزن کرده و وزن خالص متوسط ​​برای هر کپسول را محاسبه کنید. قسمتی از محتویات کپسول، معادل <span class="ltr-text">100 mg</span> اسید اسکوربیک، را به یک فلاسک حجمی <span class="ltr-text">200-mL</span> منتقل کرده و <span class="ltr-text">75 mL</span> از محلول TS اسید متا‌فسفریک-استیک اضافه کنید. یک درپوش به فلاسک وصل کرده و به مدت <span class="ltr-text">30 min</span> با استفاده از ابزار مکانیکی تکان دهید. با آب به حجم برسانید.</p>
+
+            <p class="mb-4"><strong>محلول نمونه برای محلول‌های خوراکی:</strong> حجمی از محلول خوراکی معادل <span class="ltr-text">50 mg</span> اسید اسکوربیک را، در صورت لزوم قبلاً با آب رقیق شده، به یک فلاسک حجمی <span class="ltr-text">100-mL</span> منتقل کنید. <span class="ltr-text">20 mL</span> از محلول TS اسید متا‌فسفریک-استیک اضافه کرده، با آب به حجم برسانید و مخلوط کنید.</p>
+
+            <p class="mb-4"><strong>محلول نمونه برای قرص‌ها:</strong> حداقل <span class="ltr-text">20</span> قرص را به صورت پودر ریز درآورید. قسمتی از پودر، معادل <span class="ltr-text">100 mg</span> اسید اسکوربیک، را به یک فلاسک حجمی <span class="ltr-text">200-mL</span> منتقل کرده و <span class="ltr-text">75 mL</span> از محلول TS اسید متا‌فسفریک-استیک اضافه کنید. یک درپوش به فلاسک وصل کرده و به مدت <span class="ltr-text">30 min</span> با استفاده از ابزار مکانیکی تکان دهید. با آب به حجم برسانید.</p>
+
+            <p class="mb-4"><strong>شاهد (Blank):</strong> مخلوطی از <span class="ltr-text">5.5 mL</span> از محلول TS اسید متا‌فسفریک-استیک و <span class="ltr-text">15 mL</span> آب.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم تیتراسیون</h4>
+            <p class="mb-4">(به <a href="541.html" class="text-blue-600 hover:underline" target="_blank">تیتراسیون á541ñ</a> مراجعه کنید.)</p>
+            <p class="mb-4"><strong>حالت:</strong> تیتراسیون مستقیم</p>
+            <p class="mb-4"><strong>تیترانت:</strong> محلول استاندارد دی‌کلروفنول-ایندوفنول VS</p>
+            <p class="mb-4"><strong>تشخیص نقطه پایانی:</strong> بصری</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
+            <p class="mb-4">قسمتی از محلول نمونه را به یک لوله سانتریفیوژ منتقل کرده و سانتریفیوژ کنید تا یک مایع رویی شفاف به دست آید. حجمی از محلول نمونه، معادل <span class="ltr-text">2 mg</span> اسید اسکوربیک، را به یک فلاسک ارلن‌مایر <span class="ltr-text">50-mL</span> منتقل کرده و <span class="ltr-text">5 mL</span> از محلول TS اسید متا‌فسفریک-استیک اضافه کنید. با تیترانت تا رسیدن به رنگ صورتی مایل به قرمز که حداقل <span class="ltr-text">5 s</span> باقی بماند، تیتر کنید. حجم تیترانت مصرف شده توسط شاهد را اصلاح کنید.</p>
+            <p class="mb-4">درصد اسید اسکوربیک (<span class="ltr-text">C6H8O6</span>) در قسمت نمونه گرفته شده را محاسبه کنید:</p>
+            <div class="formula-display">
+                <p class="math-tex">Result = \{[(V_S - V_B) \times F]/W\} \times 100</p>
+            </div>
+            <p class="mb-4"><span class="ltr-text">V<sub>S</sub></span> = حجم تیترانت مصرف شده توسط محلول نمونه (mL)</p>
+            <p class="mb-4"><span class="ltr-text">V<sub>B</sub></span> = حجم تیترانت مصرف شده توسط شاهد</p>
+            <p class="mb-4"><span class="ltr-text">F</span> = غلظت تیترانت بر حسب معادل آن از اسید اسکوربیک (mg/mL)</p>
+            <p class="mb-4"><span class="ltr-text">W</span> = مقدار نامی اسید اسکوربیک گرفته شده برای تجزیه و تحلیل (mg)</p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">روش دوم - روش کروماتوگرافی</h2>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">رویه ۱</h4>
+            <p class="mb-4">مگر اینکه در مونوگراف‌های فردی مشخص شده باشد، حلال رقیق‌کننده، محلول استاندارد و محلول‌های نمونه به شرح زیر تهیه می‌شوند.</p>
+            <p class="mb-4">[<strong>توجه:</strong> نمونه‌ها را از هوا، نور و حرارت محافظت کنید.]</p>
+
+            <p class="mb-4"><strong>بافر:</strong> <span class="ltr-text">2.04 g/L</span> فسفات پتاسیم مونوبازیک در آب. با اسید فسفریک به pH <span class="ltr-text">3.0</span> تنظیم کنید.</p>
+            <p class="mb-4"><strong>فاز متحرک:</strong> بافر</p>
+            <p class="mb-4"><strong>حلال رقیق‌کننده:</strong> <span class="ltr-text">0.56 g</span> ادتات دی‌سدیم دی‌هیدرات و <span class="ltr-text">2.04 g</span> فسفات پتاسیم مونوبازیک در <span class="ltr-text">1000 mL</span> آب. با اسید فسفریک به pH <span class="ltr-text">3.0</span> تنظیم کنید.</p>
+            <p class="mb-4"><strong>محلول استاندارد:</strong> <span class="ltr-text">0.25 mg/mL</span> USP Ascorbic Acid RS در حلال رقیق‌کننده</p>
+
+            <p class="mb-4"><strong>محلول نمونه برای کپسول‌ها:</strong> حداقل <span class="ltr-text">20</span> کپسول را در یک بطری وزن‌کشی ترازووزن کنید. کپسول‌ها را بدون از دست دادن مواد پوسته باز کرده و محتویات را به یک بشر <span class="ltr-text">100-mL</span> منتقل کنید. مواد باقیمانده روی پوسته‌های خالی را در صورت لزوم با شستشو با چندین قسمت اتر پاک کنید. شستشوها را دور بریزید و پوسته‌های کپسول را با کمک جریان هوای خشک خشک کنید تا بوی اتر قابل استشمام نباشد. پوسته‌های خالی کپسول را در بطری وزن‌کشی ترازووزن کرده و وزن خالص متوسط ​​برای هر کپسول را محاسبه کنید. قسمتی از محتویات کپسول، معادل حدود <span class="ltr-text">25 mg</span> اسید اسکوربیک، را به یک فلاسک حجمی <span class="ltr-text">100-mL</span> منتقل کنید. <span class="ltr-text">60 mL</span> حلال رقیق‌کننده اضافه کرده، به مدت <span class="ltr-text">15 min</span> به صورت مکانیکی تکان دهید، با حلال رقیق‌کننده به حجم برسانید، خوب مخلوط کنید و از فیلتر ممبران با اندازه منافذ <span class="ltr-text">0.45-µm</span> عبور دهید، ۴ میلی‌لیتر اول را دور بریزید.</p>
+
+            <p class="mb-4"><strong>محلول نمونه برای محلول‌های خوراکی:</strong> حجم دقیقی از محلول خوراکی را با حلال رقیق‌کننده رقیق کنید تا محلولی با غلظت <span class="ltr-text">0.25 mg/mL</span> اسید اسکوربیک به دست آید. با دقت مخلوط کنید.</p>
+
+            <p class="mb-4"><strong>محلول نمونه برای قرص‌ها:</strong> قسمتی از حداقل <span class="ltr-text">20</span> قرص پودر شده را، که نامی معادل حدود <span class="ltr-text">25 mg</span> اسید اسکوربیک دارد، به یک فلاسک حجمی <span class="ltr-text">100-mL</span> منتقل کنید. <span class="ltr-text">60 mL</span> حلال رقیق‌کننده اضافه کرده، به مدت <span class="ltr-text">15 min</span> به صورت مکانیکی تکان دهید، با حلال رقیق‌کننده به حجم برسانید، خوب مخلوط کنید و از فیلتر ممبران با اندازه منافذ <span class="ltr-text">0.45-µm</span> عبور دهید، ۴ میلی‌لیتر اول را دور بریزید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم کروماتوگرافی</h4>
+            <p class="mb-4">(به <a href="621.html" class="text-blue-600 hover:underline" target="_blank">کروماتوگرافی á621ñ، سازگاری سیستم</a> مراجعه کنید.)</p>
+            <p class="mb-4"><strong>حالت:</strong> LC</p>
+            <p class="mb-4"><strong>دیتکتور:</strong> UV <span class="ltr-text">245 nm</span></p>
+            <p class="mb-4"><strong>ستون:</strong> <span class="ltr-text">4.6-mm × 25-cm</span>؛ بسته بندی <span class="ltr-text">5-µm</span> L1</p>
+            <p class="mb-4"><strong>سرعت جریان:</strong> <span class="ltr-text">1.0 mL/min</span></p>
+            <p class="mb-4"><strong>حجم تزریق:</strong> <span class="ltr-text">5 µL</span></p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سازگاری سیستم</h4>
+            <p class="mb-4"><strong>نمونه:</strong> محلول استاندارد</p>
+            <p class="mb-4"><strong>الزامات سازگاری:</strong></p>
+            <p class="mb-4">انحراف معیار نسبی: حداکثر <span class="ltr-text">2.0%</span></p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
+            <p class="mb-4"><strong>نمونه‌ها:</strong> محلول استاندارد و محلول نمونه</p>
+            <p class="mb-4">درصد ویتامین C، به صورت اسید اسکوربیک (<span class="ltr-text">C6H8O6</span>)، در قسمت نمونه گرفته شده را محاسبه کنید:</p>
+            <div class="formula-display">
+                <p class="math-tex">Result = (r_U/r_S) \times (C_S/C_U) \times 100</p>
+            </div>
+            <p class="mb-4"><span class="ltr-text">r<sub>U</sub></span> = مساحت پیک اسید اسکوربیک از محلول نمونه</p>
+            <p class="mb-4"><span class="ltr-text">r<sub>S</sub></span> = مساحت پیک اسید اسکوربیک از محلول استاندارد</p>
+            <p class="mb-4"><span class="ltr-text">C<sub>S</sub></span> = غلظت USP Ascorbic Acid RS در محلول استاندارد (mg/mL)</p>
+            <p class="mb-4"><span class="ltr-text">C<sub>U</sub></span> = غلظت نامی اسید اسکوربیک در محلول نمونه (mg/mL)</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">رویه ۲</h4>
+            <p class="mb-4">مگر اینکه در مونوگراف‌های فردی مشخص شده باشد، حلال رقیق‌کننده، محلول استاندارد و محلول‌های نمونه به شرح زیر تهیه می‌شوند.</p>
+            <p class="mb-4">[<strong>توجه:</strong> نمونه‌ها را از هوا، نور و حرارت محافظت کنید. تمام نمونه‌های آماده شده باید ظرف مدت <span class="ltr-text">4 h</span> تجزیه و تحلیل شوند.]</p>
+
+            <p class="mb-4"><strong>بافر:</strong> <span class="ltr-text">7.8 g/L</span> سدیم دی‌هیدروژن فسفات دی‌هیدرات در آب. با اسید فسفریک به pH <span class="ltr-text">2.5</span> تنظیم کنید.</p>
+            <p class="mb-4"><strong>فاز متحرک:</strong> بافر و متانول. برای گرادیان به جدول ۱ مراجعه کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">جدول ۱</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>زمان (min)</th>
+                        <th>بافر (%)</th>
+                        <th>متانول (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">0</span></td>
+                        <td><span class="ltr-text">100</span></td>
+                        <td><span class="ltr-text">0</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">3</span></td>
+                        <td><span class="ltr-text">100</span></td>
+                        <td><span class="ltr-text">0</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">5</span></td>
+                        <td><span class="ltr-text">0</span></td>
+                        <td><span class="ltr-text">100</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">6</span></td>
+                        <td><span class="ltr-text">50</span></td>
+                        <td><span class="ltr-text">50</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">7</span></td>
+                        <td><span class="ltr-text">100</span></td>
+                        <td><span class="ltr-text">0</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">10</span></td>
+                        <td><span class="ltr-text">100</span></td>
+                        <td><span class="ltr-text">0</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="mb-4"><strong>حلال رقیق‌کننده:</strong> <span class="ltr-text">73 g</span> اسید متا‌فسفریک را در <span class="ltr-text">800 mL</span> آب حل کنید، <span class="ltr-text">84 mL</span> اسید استیک گلاسیال اضافه کنید و با آب به <span class="ltr-text">1000 mL</span> برسانید.</p>
+            <p class="mb-4"><strong>محلول پایه استاندارد:</strong> <span class="ltr-text">1 mg/mL</span> USP Ascorbic Acid RS در حلال رقیق‌کننده. [<strong>توجه:</strong> در صورت لزوم با لرزش متناوب برای کمک به حل شدن، اولتراسونیک کنید. هر بار تازه تهیه شود.]</p>
+            <p class="mb-4"><strong>محلول استاندارد:</strong> محلول پایه استاندارد را با حلال رقیق‌کننده رقیق کنید تا محلولی حاوی <span class="ltr-text">0.05 mg/mL</span> USP Ascorbic Acid RS به دست آید.</p>
+
+            <p class="mb-4"><strong>محلول نمونه برای کپسول‌ها:</strong> حداقل <span class="ltr-text">20</span> کپسول را در یک بطری وزن‌کشی ترازووزن کنید. کپسول‌ها را بدون از دست دادن مواد پوسته باز کرده و محتویات را به یک بشر <span class="ltr-text">100-mL</span> منتقل کنید. مواد باقیمانده روی پوسته‌های خالی را در صورت لزوم با شستشو با چندین قسمت اتر پاک کنید. شستشوها را دور بریزید و پوسته‌های کپسول را با کمک جریان هوای خشک خشک کنید تا بوی اتر قابل استشمام نباشد. پوسته‌های خالی کپسول را در بطری وزن‌کشی ترازووزن کرده و وزن خالص متوسط ​​برای هر کپسول را محاسبه کنید. قسمتی از محتویات کپسول، معادل حدود <span class="ltr-text">25 mg</span> اسید اسکوربیک، را به یک لوله سانتریفیوژ <span class="ltr-text">50-mL</span> منتقل کنید. <span class="ltr-text">25.0 mL</span> حلال رقیق‌کننده اضافه کرده، به مدت <span class="ltr-text">15 min</span> اولتراسونیک کنید و در حدود <span class="ltr-text">2000 rpm</span> به مدت <span class="ltr-text">5 min</span> سانتریفیوژ کنید. مایع رویی شفاف را به طور کمی با حلال رقیق‌کننده رقیق کنید تا محلولی حاوی <span class="ltr-text">0.05 mg/mL</span> اسید اسکوربیک به دست آید. مخلوط کرده و از فیلتر ممبران با اندازه منافذ <span class="ltr-text">0.45-µm</span> عبور دهید.</p>
+
+            <p class="mb-4"><strong>محلول نمونه برای محلول‌های خوراکی:</strong> حجم دقیقی از محلول خوراکی را با حلال رقیق‌کننده رقیق کنید تا محلولی با غلظت <span class="ltr-text">0.05 mg/mL</span> اسید اسکوربیک به دست آید. با دقت مخلوط کنید.</p>
+
+            <p class="mb-4"><strong>محلول نمونه برای قرص‌ها:</strong> قسمتی از حداقل <span class="ltr-text">20</span> قرص آسیاب شده را، که نامی معادل حدود <span class="ltr-text">25 mg</span> اسید اسکوربیک دارد، به یک لوله سانتریفیوژ <span class="ltr-text">50-mL</span> منتقل کنید. <span class="ltr-text">25.0 mL</span> حلال رقیق‌کننده اضافه کرده، به مدت <span class="ltr-text">15 min</span> اولتراسونیک کنید و در حدود <span class="ltr-text">2000 rpm</span> به مدت <span class="ltr-text">5 min</span> سانتریفیوژ کنید. مایع رویی شفاف را به طور کمی با حلال رقیق‌کننده رقیق کنید تا محلولی حاوی <span class="ltr-text">0.05 mg/mL</span> اسید اسکوربیک به دست آید. مخلوط کرده و از فیلتر ممبران با اندازه منافذ <span class="ltr-text">0.45-µm</span> عبور دهید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم کروماتوگرافی</h4>
+            <p class="mb-4">(به <a href="621.html" class="text-blue-600 hover:underline" target="_blank">کروماتوگرافی á621ñ، سازگاری سیستم</a> مراجعه کنید.)</p>
+            <p class="mb-4"><strong>حالت:</strong> LC</p>
+            <p class="mb-4"><strong>دیتکتور:</strong> UV <span class="ltr-text">245 nm</span></p>
+            <p class="mb-4"><strong>ستون:</strong> <span class="ltr-text">4.6-mm × 15-cm</span>؛ بسته بندی <span class="ltr-text">3.5-µm</span> L7</p>
+            <p class="mb-4"><strong>سرعت جریان:</strong> <span class="ltr-text">0.8 mL/min</span></p>
+            <p class="mb-4"><strong>حجم تزریق:</strong> <span class="ltr-text">10 µL</span></p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سازگاری سیستم</h4>
+            <p class="mb-4"><strong>نمونه:</strong> محلول استاندارد</p>
+            <p class="mb-4"><strong>الزامات سازگاری:</strong></p>
+            <p class="mb-4">انحراف معیار نسبی: حداکثر <span class="ltr-text">2.0%</span></p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
+            <p class="mb-4"><strong>نمونه‌ها:</strong> محلول استاندارد و محلول نمونه</p>
+            <p class="mb-4">درصد ویتامین C، به صورت اسید اسکوربیک (<span class="ltr-text">C6H8O6</span>)، در قسمت نمونه گرفته شده را محاسبه کنید:</p>
+            <div class="formula-display">
+                <p class="math-tex">Result = (r_U/r_S) \times (C_S/C_U) \times 100</p>
+            </div>
+            <p class="mb-4"><span class="ltr-text">r<sub>U</sub></span> = مساحت پیک اسید اسکوربیک از محلول نمونه</p>
+            <p class="mb-4"><span class="ltr-text">r<sub>S</sub></span> = مساحت پیک اسید اسکوربیک از محلول استاندارد</p>
+            <p class="mb-4"><span class="ltr-text">C<sub>S</sub></span> = غلظت USP Ascorbic Acid RS در محلول استاندارد (mg/mL)</p>
+            <p class="mb-4"><span class="ltr-text">C<sub>U</sub></span> = غلظت نامی اسید اسکوربیک در محلول نمونه (mg/mL)</p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP á11ñ</h3>
+            <p class="mb-4">USP Ascorbic Acid RS</p>
+        </div>
+    </div>
+</body>
+</html>

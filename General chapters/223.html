@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>223. دایمتیل‌آنیلین</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .container {
+            max-width: 4xl;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <div class="card">
+            <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">223. دایمتیل‌آنیلین</h1>
+
+            <p class="mb-4">آزمون حد زیر به عنوان یک روش کلی ارائه شده است، هنگامی که در مونوگراف‌های انفرادی برای تعیین با کروماتوگرافی گازی، مقادیر ناچیز دایمتیل‌آنیلین، که ممکن است در طی فرآیند باقی مانده باشد، مشخص شده باشد.</p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">روش</h2>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استاندارد داخلی</h4>
+            <p class="mb-4">مگر اینکه در مونوگراف انفرادی طور دیگری مشخص شده باشد، محلولی از نفتالین در سیکلوهگزان حاوی حدود 50 µg در هر mL آماده کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آماده‌سازی استاندارد</h4>
+            <p class="mb-4">مگر اینکه در مونوگراف انفرادی طور دیگری مشخص شده باشد، 50.0 میلی‌گرم N,N-دایمتیل‌آنیلین را به یک فلاسک حجمی 50 میلی‌لیتری منتقل کنید، 25 میلی‌لیتر اسید هیدروکلریک 1 نرم اضافه کنید، بچرخانید تا حل شود، با آب تا حجم رقیق کنید و مخلوط کنید. 5.0 میلی‌لیتر از محلول حاصل را به یک فلاسک حجمی 250 میلی‌لیتری منتقل کنید، با آب تا حجم رقیق کنید و مخلوط کنید. به یک لوله سانتریفیوژ مناسب 1.0 میلی‌لیتر از این محلول، 5.0 میلی‌لیتر سدیم هیدروکسید 1 نرم و 1.0 میلی‌لیتر محلول استاندارد داخلی اضافه کنید، به مدت 1 دقیقه به شدت تکان دهید و سانتریفیوژ کنید. مایع رویی شفاف را به عنوان آماده‌سازی استاندارد استفاده کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آماده‌سازی آزمون</h4>
+            <p class="mb-4">مگر اینکه در مونوگراف انفرادی طور دیگری مشخص شده باشد، 1.0 گرم از ماده مورد آزمایش را به یک لوله سانتریفیوژ مناسب منتقل کنید، 5 میلی‌لیتر سدیم هیدروکسید 1 نرم اضافه کنید، بچرخانید تا نمونه حل شود، 1.0 میلی‌لیتر محلول استاندارد داخلی اضافه کنید، به مدت 1 دقیقه به شدت تکان دهید و سانتریفیوژ کنید. مایع رویی شفاف را به عنوان آماده‌سازی آزمون استفاده کنید.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">سیستم کروماتوگرافی</h3>
+            <p class="mb-4">(به کروماتوگرافی <a href="621.html" class="text-blue-600 hover:underline" target="_blank">621</a> مراجعه کنید.)</p>
+            <p class="mb-4">کروماتوگراف گازی مجهز به آشکارساز شعله یونیزاسیون، که در حدود 250° نگه داشته می‌شود، و یک ستون کاپیلاری سیلیکای ذوب شده 0.53-mm × 30-m با لایه‌ای 1.0-µm از فاز G42 است. گاز حامل هلیوم است، با سرعتی خطی حدود 30 cm per second و نسبت تقسیم 10:1. دمای ستون به مدت 4 دقیقه اول پس از تزریق در 110° نگه داشته می‌شود، سپس از 110° به 200° با سرعت 8° در دقیقه افزایش یافته و سپس به مدت 5 دقیقه در 200° نگه داشته می‌شود. دمای پورت تزریق در 250° نگه داشته می‌شود. آماده‌سازی استاندارد را کروماتوگرافی کنید و پاسخ‌ها را طبق دستورالعمل روش ثبت کنید. پیک‌های دایمتیل‌آنیلین و نفتالین را با زمان‌های ماند نسبی آنها که به ترتیب 1.0 و 1.3 هستند، شناسایی کنید. نسبت سیگنال به نویز برای پیک دایمتیل‌آنیلین کمتر از 10 نباشد.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش</h4>
+            <p class="mb-4">حجم‌های مساوی (حدود 1 µL) از آماده‌سازی استاندارد و آماده‌سازی آزمون را به کروماتوگراف تزریق کنید، کروماتوگرام‌ها را ثبت کنید و مساحت پیک‌های اصلی را اندازه‌گیری کنید. نسبت پاسخ هر پیک دایمتیل‌آنیلین به پاسخ پیک نفتالین به دست آمده از آماده‌سازی آزمون، نباید بیشتر از نسبت به دست آمده از آماده‌سازی استاندارد باشد (0.002%).</p>
+
+            <p class="text-sm text-gray-500 mt-8">چاپ شده در: Mon Aug 09 2021, 06:51:18 PM (EST)</p>
+            <p class="text-sm text-gray-500">وضعیت رسمی: در حال حاضر رسمی در 09-Aug-2021</p>
+            <p class="text-sm text-gray-500">DocId: 1_GUID-1D864DCC-6080-4423-85B0-C97ADB3AF2FF_1_en-US</p>
+            <p class="text-sm text-gray-500">چاپ شده توسط: Nguyen Nhan</p>
+            <p class="text-sm text-gray-500">تاریخ رسمی: رسمی قبل از 2013</p>
+            <p class="text-sm text-gray-500">نوع سند: فصل عمومی</p>
+            <p class="text-sm text-gray-500">@2021 USPC</p>
+            <p class="text-sm text-gray-500"><a href="https://online.uspnf.com/uspnf/document/1_GUID-1D864DCC-6080-4423-85B0-C97ADB3AF2FF_1_en-US" class="text-blue-600 hover:underline" target="_blank">https://online.uspnf.com/uspnf/document/1_GUID-1D864DCC-6080-4423-85B0-C97ADB3AF2FF_1_en-US</a></p>
+            <p class="text-sm text-gray-500">1/1</p>
+            <p class="text-sm text-gray-500 font-bold">رسمی</p>
+        </div>
+    </div>
+</body>
+</html>

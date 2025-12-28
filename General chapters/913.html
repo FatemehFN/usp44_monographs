@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>913. ویسکوزیته - روش توپ غلتان</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .container {
+            max-width: 4xl; /* Adjusted for Tailwind's naming conventions */
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <div class="card">
+            <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">913. ویسکوزیته - روش توپ غلتان</h1>
+
+            <p>روش زیر برای تعیین ویسکوزیته یک سیال نیوتنی، یعنی سیالی که ویسکوزیته آن مستقل از تنش برشی یا نرخ برش است، استفاده می‌شود.</p>
+            <p>[نکته — برای اطلاعات بیشتر، به رئومتری <a href="1911.html" class="text-blue-600 hover:underline" target="_blank">1911</a> مراجعه کنید.]</p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تجهیزات</h2>
+            <p>شکل 1 را ببینید.</p>
+            <p>طراحی اساسی ویسکومتر توپ غلتان شامل یک لوله (یا مویینه) است که حاوی مایع نمونه تحت آزمایش و توپی است که به گونه‌ای انتخاب شده است که حداقل زمان غلتش <span class="ltr-text">20 s</span> در زاویه اندازه‌گیری در مایع نمونه نیاز داشته باشد.</p>
+
+            <p class="text-center">Figure 1. Basic design for rolling ball viscometer.</p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">اصل اندازه‌گیری</h2>
+            <p>اندازه‌گیری توپ غلتان بر اساس قانون استوکس استوار است، که تحت تأثیر زاویه شیب لوله (یا مویینه) قرار دارد.</p>
+            <p>ویسکوزیته نیوتنی، η، را بر حسب mPa · s محاسبه کنید:</p>
+            <div class="formula-display">
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mi>η</mi>
+                        <mo>=</mo>
+                        <mfrac>
+                            <mrow>
+                                <mo stretchy="false">(</mo>
+                                <msub>
+                                    <mi>ρ</mi>
+                                    <mn>1</mn>
+                                </msub>
+                                <mo>−</mo>
+                                <msub>
+                                    <mi>ρ</mi>
+                                    <mn>2</mn>
+                                </msub>
+                                <mo stretchy="false">)</mo>
+                                <mo>×</mo>
+                                <mi>g</mi>
+                                <mo>×</mo>
+                                <msup>
+                                    <mi>r</mi>
+                                    <mn>2</mn>
+                                </msup>
+                                <mo>×</mo>
+                                <mi>sin</mi>
+                                <mi>θ</mi>
+                            </mrow>
+                            <mi>v</mi>
+                            <mi>∞</mi>
+                        </mfrac>
+                    </math>
+                </math>
+            </div>
+            <p>ρ1 = چگالی توپ مورد استفاده (g/mL)</p>
+            <p>ρ2 = چگالی مایع نمونه (g/mL)</p>
+            <p>g = ثابت گرانشی (mm/s<sup class="ltr-text">2</sup>)</p>
+            <p>r = شعاع توپ (mm)</p>
+            <p>θ = زاویه شیب لوله (یا مویینه)</p>
+            <p>v∞ = سرعت نهایی توپ (mm/s)</p>
+            <p>ویسکوزیته یک مایع را با مشاهده زمان غلتش یک کره جامد (توپ) تحت تأثیر گرانش در یک لوله استوانه‌ای شیب‌دار پر شده با مایع نمونه تعیین کنید. زمان سپری شده توسط توپ برای طی کردن مسافت ثابت بین دو علامت حلقه یا سنسور اندازه‌گیری را اندازه‌گیری کنید. برای هر زمان غلتش اندازه‌گیری شده، ویسکوزیته حاصل را می‌توان به عنوان ویسکوزیته دینامیکی (mPa · s) و همچنین ویسکوزیته سینماتیکی (mm<sup class="ltr-text">2</sup>/s) برای نمونه‌ای با چگالی مشخص بیان کرد.</p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">روش</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">انتخاب سیستم اندازه‌گیری</h4>
+            <p>یک سیستم اندازه‌گیری [ترکیب لوله (یا مویینه) و توپ] را در محدوده ویسکوزیته مورد انتظار مایع نمونه انتخاب کنید. در صورت لزوم، لوله و توپ تمیز و خشک ویسکومتر را تا دمای مشخص شده در مونوگراف فردی گرم کنید و دما را تا <span class="ltr-text">±0.1°</span> کنترل کنید، مگر اینکه در مونوگراف فردی مشخص شده باشد. یک زاویه اندازه‌گیری انتخاب کنید تا حداقل زمان غلتش <span class="ltr-text">20 s</span> به دست آید. لوله را با مایع نمونه پر کنید، مراقب باشید از تشکیل حباب خودداری کنید. لوله را ببندید و آن را در دستگاه قرار دهید. اجازه دهید برای ویسکومتر توپ غلتان با لوله با قطر بزرگ، حداقل <span class="ltr-text">15 min</span> در دمای مشخص شده تعادل دمایی پیدا کند. برای ویسکومتر توپ غلتان میکرو، دستورالعمل‌های سازنده دستگاه را در مورد تعادل دمایی دنبال کنید. توپ را رها کنید و زمان لازم برای غلتش توپ از علامت حلقه بالایی به پایینی (یا سنسور اندازه‌گیری) را ثبت کنید. آزمایش را حداقل چهار بار تکرار کنید.</p>
+            <p>زمان غلتش در سیال مورد بررسی، میانگین حداقل چهار تعیین متوالی است. نتیجه معتبر است اگر انحراف معیار نسبی درصدی (%RSD) برای چهار قرائت حداکثر <span class="ltr-text">2.0%</span> باشد.</p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">محاسبه و کالیبراسیون</h2>
+            <p>ویسکوزیته نیوتنی، η، را بر حسب mPa · s محاسبه کنید:</p>
+            <div class="formula-display">
+                <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <mi>η</mi>
+                    <mo>=</mo>
+                    <mi>k</mi>
+                    <mo>×</mo>
+                    <mo stretchy="false">(</mo>
+                    <msub>
+                        <mi>ρ</mi>
+                        <mn>1</mn>
+                    </msub>
+                    <mo>−</mo>
+                    <msub>
+                        <mi>ρ</mi>
+                        <mn>2</mn>
+                    </msub>
+                    <mo stretchy="false">)</mo>
+                    <mo>×</mo>
+                    <mi>t</mi>
+                </math>
+            </div>
+            <p>k = ثابت کالیبراسیون دستگاه (mm<sup class="ltr-text">2</sup>/s<sup class="ltr-text">2</sup>) در زاویه اندازه‌گیری و دمای مشخص</p>
+            <p>ρ1 = چگالی توپ مورد استفاده (g/mL)</p>
+            <p>ρ2 = چگالی مایع نمونه (g/mL)</p>
+            <p>t = زمان غلتش توپ (s)</p>
+            <p>هر ترکیب لوله (یا مویینه) و توپ را در دمای آزمایش و زاویه آزمایش با استفاده از سیالات با ویسکوزیته و چگالی مشخص (استانداردهای ویسکوزیته) کالیبره کنید تا ثابت سیستم اندازه‌گیری، k، تعیین شود.</p>
+            <p>[نکته — برخی ویسکومترهای خودکار از تابع چندجمله‌ای برای تعیین کالیبراسیون برای زوایای مختلف و دماها استفاده می‌کنند.]</p>
+            <p>مقادیر ویسکوزیته استانداردهای کالیبراسیون باید مقدار ویسکوزیته مورد انتظار مایع نمونه را در بر بگیرند.</p>
+            <p>کالیبراسیون‌ها به شعاع توپ، چگالی توپ، دما و زاویه آزمایش بستگی دارند. کالیبراسیون مجدد زمانی لازم است که هر یک از این پارامترها تغییر کنند.</p>
+            <p>در مواردی که مقادیر مرجع در دمای آزمایش مورد نیاز در دسترس نیستند، دستورالعمل‌های سازنده را برای اصلاحات ریاضی تابع کالیبراسیون دنبال کنید. هنگامی که مواد توپ و لوله متفاوت هستند، اصلاحات محاسبه شده با استفاده از ضرایب انبساط حرارتی خطی مواد را اعمال کنید.</p>
+        </div>
+    </div>
+</body>
+</html>

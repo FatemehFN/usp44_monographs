@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>۲۳۲. ناخالصی‌های عنصری — حدود</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <div class="card">
+            <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">۲۳۲. ناخالصی‌های عنصری — حدود</h1>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+            <p class="mb-4">این فصل حدودی را برای میزان ناخالصی‌های عنصری در محصولات دارویی مشخص می‌کند. صرف نظر از رویکرد مورد استفاده، رعایت حدود مشخص شده برای تمام محصولات دارویی الزامی است، مگر اینکه در غیر این صورت در یک مونوگراف فردی مشخص شده باشد یا به طور خاص در این مقدمه مستثنی شده باشد.</p>
+            <p class="mb-4">ناخالصی‌های عنصری شامل کاتالیزورها و آلاینده‌های محیطی هستند که ممکن است در مواد دارویی، مواد افزودنی یا محصولات دارویی وجود داشته باشند. این ناخالصی‌ها ممکن است به طور طبیعی رخ دهند، به طور عمدی اضافه شوند، یا به طور سهوی معرفی شوند (به عنوان مثال، از طریق تعامل با تجهیزات فرآوری و سیستم کانتینر-بسته‌بندی). هنگامی که مشخص است ناخالصی‌های عنصری وجود دارند، اضافه شده‌اند، یا پتانسیل معرفی شدن دارند، اطمینان از انطباق با سطوح مشخص شده الزامی است. یک استراتژی کنترل مبتنی بر ریسک ممکن است هنگامی که تحلیلگران نحوه اطمینان از انطباق با این استاندارد را تعیین می‌کنند، مناسب باشد. به دلیل ماهیت همه‌گیر آرسنیک، کادمیوم، سرب و جیوه، این عناصر (حداقل) باید در ارزیابی ریسک در نظر گرفته شوند.</p>
+            <p class="mb-4">این فصل برای موارد زیر کاربرد ندارد:</p>
+            <ul class="list-disc list-inside mb-4 ml-6">
+                <li>داروهای رادیواکتیو</li>
+                <li>مقالات فقط برای استفاده دامپزشکی</li>
+                <li>واکسن‌ها</li>
+                <li>متابولیت‌های سلولی</li>
+                <li>محصولات DNA</li>
+                <li>عصاره‌های آلرژن</li>
+                <li>سلول‌ها، خون کامل، اجزای سلولی خون، یا مشتقات خون، از جمله پلاسما و مشتقات پلاسما</li>
+                <li>محصولات مبتنی بر ژن (ژنتراپی)</li>
+                <li>سلول‌ها (سلول‌تراپی)</li>
+                <li>بافت (مهندسی بافت)</li>
+                <li>محلول‌های دیالیز که برای گردش خون سیستمیک در نظر گرفته نشده‌اند</li>
+                <li>تغذیه وریدی کل (TPN)</li>
+                <li>عناصری که به دلیل مزیت درمانی به طور عمدی در محصول دارویی گنجانده شده‌اند</li>
+                <li>مکمل‌های غذایی و مواد تشکیل دهنده آنها، که در آلاینده‌های عنصری در مکمل‌های غذایی <a href="2232.html" class="text-blue-600 hover:underline" target="_blank">۲۲۳۲</a> مورد بحث قرار گرفته‌اند.</li>
+            </ul>
+            <p class="mb-4">حدود ارائه شده در این فصل به جز در مواردی که در یک مونوگراف فردی مشخص شده است، برای مواد افزودنی و مواد دارویی اعمال نمی‌شود. با این حال، تولیدکنندگان محصولات دارویی برای رعایت معیارهای این فصل به اطلاعات خاصی در مورد محتوای ناخالصی‌های عنصری در مواد دارویی یا مواد افزودنی نیاز دارند. تولیدکنندگان محصول دارویی می‌توانند از داده‌های تست ناخالصی عنصری در مورد اجزا از تست‌های انجام شده توسط تولیدکنندگان ماده دارویی یا مواد افزودنی استفاده کنند، که ممکن است داده‌های تست را ارائه دهند، یا در صورت لزوم، ارزیابی ریسک. داده‌های ناخالصی عنصری تولید شده توسط یک تامین کننده واجد شرایط اجزای محصول دارویی برای استفاده توسط یک تولیدکننده محصول دارویی برای اثبات انطباق با این فصل در محصول دارویی نهایی قابل قبول است. تولیدکنندگان ماده دارویی یا مواد افزودنی که تصمیم به انجام ارزیابی ریسک می‌گیرند، باید آن ارزیابی ریسک را با استفاده از جدول ۲ در این فصل انجام دهند. عناصری که ماهیت ذاتی ماده هستند، مانند مورد برخی مواد با منشاء طبیعی، باید در ارزیابی ریسک در نظر گرفته شوند.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">گونه‌شناسی (Speciation)</h3>
+            <p class="mb-4">تعیین حالت اکسیداسیون، کمپلکس آلی، یا ترکیبی "گونه‌شناسی" نامیده می‌شود. هر یک از ناخالصی‌های عنصری پتانسیل حضور در حالت‌های اکسیداسیون یا کمپلکساسیون متفاوت را دارد. با این حال، آرسنیک و جیوه به دلیل سمیت متفاوت اشکال معدنی و آلی کمپلکس شده آنها، نگرانی خاصی را ایجاد می‌کنند.</p>
+            <p class="mb-4">حدود آرسنیک بر اساس شکل معدنی (سمی‌ترین) است. آرسنیک را می‌توان با استفاده از روش کل آرسنیک اندازه‌گیری کرد، با این فرض که تمام آرسنیک موجود در ماده تحت آزمایش به شکل معدنی است. در مواردی که حد با استفاده از روش کل آرسنیک تجاوز می‌شود، ممکن است بتوان از طریق روشی که اشکال مختلف را کمی می‌کند، نشان داد که فرم معدنی با مشخصات مطابقت دارد.</p>
+            <p class="mb-4">حدود جیوه بر اساس حالت اکسیداسیون معدنی (۲+) است. فرم متیل جیوه (سمی‌ترین) به ندرت برای داروها مشکل‌ساز است. بنابراین، حد با فرض رایج‌ترین فرم معدنی (مرکوریک) تعیین شده است. حدود مقالات که پتانسیل حاوی متیل جیوه را دارند (به عنوان مثال، مواد مشتق شده از ماهی) باید در مونوگراف ارائه شوند.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">مسیرهای مواجهه</h3>
+            <p class="mb-4">عناصری که در جداول زیر گنجانده شده‌اند، بر اساس سمیت و احتمال وقوع آنها در محصول دارویی به سه دسته تقسیم شده‌اند. طرح طبقه‌بندی برای تمرکز ارزیابی ریسک بر روی عناصری است که سمی‌ترین هستند اما احتمال معقولی برای گنجانده شدن در محصول دارویی دارند (به جدول ۲ مراجعه کنید).</p>
+            <p class="mb-4">سمیت یک ناخالصی عنصری با میزان مواجهه (فراهمی زیستی) آن مرتبط است. میزان مواجهه برای هر یک از ناخالصی‌های عنصری مورد علاقه برای سه مسیر تجویز تعیین شده است: خوراکی، پارنترال و استنشاقی. این حدود بر اساس مواجهه مزمن است. مقادیر مجاز روزانه مواجهه (PDE) خوراکی در جدول ۱ را به عنوان نقطه شروعی برای توسعه PDEهای خاص برای سایر مسیرهای تجویز در نظر بگیرید، مگر اینکه در غیر این صورت در مونوگراف فردی ذکر شده باشد.</p>
+            <p class="mb-4">[یادداشت — مسیرهای تجویز محصولات دارویی در اشکال دارویی <a href="1151.html" class="text-blue-600 hover:underline" target="_blank">۱۱۵۱</a> تعریف شده‌اند.]</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محصولات دارویی</h4>
+            <p class="mb-4">حدود شرح داده شده در ستون‌های سوم تا پنجم جدول ۱، مقادیر مجاز روزانه مواجهه (PDE) مبنای ناخالصی‌های عنصری مورد علاقه برای یک محصول دارویی است که توسط بیمار طبق مسیرهای تجویز مشخص شده مصرف می‌شود.</p>
+
+            <h5 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محصولات پارنترال</h5>
+            <p class="mb-4">محصولات دارویی پارنترال با حداکثر حجم روزانه تا ۲ لیتر ممکن است از حداکثر حجم روزانه برای محاسبه غلظت‌های مجاز از PDEها استفاده کنند. برای محصولاتی که حجم روزانه آنها، طبق برچسب‌گذاری و/یا طبق عمل بالینی تعیین شده، ممکن است از ۲ لیتر تجاوز کند (به عنوان مثال، محلول‌های نمکی، دکستروز و محلول‌های شستشو)، می‌توان از حجم ۲ لیتر برای محاسبه غلظت‌های مجاز از PDEها استفاده کرد.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">جدول ۱. مقادیر مجاز روزانه مواجهه برای ناخالصی‌های عنصری</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>عنصر</th>
+                        <th>دسته</th>
+                        <th>PDE خوراکی (µg/روز)</th>
+                        <th>PDE پارنترال (µg/روز)</th>
+                        <th>PDE استنشاقی (µg/روز)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>کادمیوم</td>
+                        <td>۱</td>
+                        <td><span class="ltr-text">5</span></td>
+                        <td><span class="ltr-text">2</span></td>
+                        <td>▲<span class="ltr-text">3</span>▲ (USP 1-Dec-2020)</td>
+                    </tr>
+                    <tr>
+                        <td>سرب</td>
+                        <td>۱</td>
+                        <td><span class="ltr-text">5</span></td>
+                        <td><span class="ltr-text">5</span></td>
+                        <td><span class="ltr-text">5</span></td>
+                    </tr>
+                    <tr>
+                        <td>آرسنیک</td>
+                        <td>۱</td>
+                        <td><span class="ltr-text">15</span></td>
+                        <td><span class="ltr-text">15</span></td>
+                        <td><span class="ltr-text">2</span></td>
+                    </tr>
+                    <tr>
+                        <td>جیوه</td>
+                        <td>۱</td>
+                        <td><span class="ltr-text">30</span></td>
+                        <td><span class="ltr-text">3</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                    </tr>
+                    <tr>
+                        <td>کبالت</td>
+                        <td>۲A</td>
+                        <td><span class="ltr-text">50</span></td>
+                        <td><span class="ltr-text">5</span></td>
+                        <td><span class="ltr-text">3</span></td>
+                    </tr>
+                    <tr>
+                        <td>وانادیوم</td>
+                        <td>۲A</td>
+                        <td><span class="ltr-text">100</span></td>
+                        <td><span class="ltr-text">10</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                    </tr>
+                    <tr>
+                        <td>نیکل</td>
+                        <td>۲A</td>
+                        <td><span class="ltr-text">200</span></td>
+                        <td><span class="ltr-text">20</span></td>
+                        <td><span class="ltr-text">5</span></td>
+                    </tr>
+                    <tr>
+                        <td>تالیوم</td>
+                        <td>۲B</td>
+                        <td><span class="ltr-text">8</span></td>
+                        <td><span class="ltr-text">8</span></td>
+                        <td><span class="ltr-text">8</span></td>
+                    </tr>
+                    <tr>
+                        <td>طلا</td>
+                        <td>۲B</td>
+                        <td><span class="ltr-text">100</span></td>
+                        <td><span class="ltr-text">100</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                    </tr>
+                    <tr>
+                        <td>پالادیوم</td>
+                        <td>۲B</td>
+                        <td><span class="ltr-text">100</span></td>
+                        <td><span class="ltr-text">10</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                    </tr>
+                    <tr>
+                        <td>ایریدیوم</td>
+                        <td>۲B</td>
+                        <td><span class="ltr-text">100</span></td>
+                        <td><span class="ltr-text">10</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                    </tr>
+                    <tr>
+                        <td>اسمیم</td>
+                        <td>۲B</td>
+                        <td><span class="ltr-text">100</span></td>
+                        <td><span class="ltr-text">10</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                    </tr>
+                    <tr>
+                        <td>رودیوم</td>
+                        <td>۲B</td>
+                        <td><span class="ltr-text">100</span></td>
+                        <td><span class="ltr-text">10</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                    </tr>
+                    <tr>
+                        <td>روتنیم</td>
+                        <td>۲B</td>
+                        <td><span class="ltr-text">100</span></td>
+                        <td><span class="ltr-text">10</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                    </tr>
+                    <tr>
+                        <td>سلنیوم</td>
+                        <td>۲B</td>
+                        <td><span class="ltr-text">150</span></td>
+                        <td><span class="ltr-text">80</span></td>
+                        <td><span class="ltr-text">130</span></td>
+                    </tr>
+                    <tr>
+                        <td>نقره</td>
+                        <td>۲B</td>
+                        <td><span class="ltr-text">150</span></td>
+                        <td><span class="ltr-text">10</span></td>
+                        <td><span class="ltr-text">7</span></td>
+                    </tr>
+                    <tr>
+                        <td>پلاتین</td>
+                        <td>۲B</td>
+                        <td><span class="ltr-text">100</span></td>
+                        <td><span class="ltr-text">10</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                    </tr>
+                    <tr>
+                        <td>لیتیوم</td>
+                        <td>۳</td>
+                        <td><span class="ltr-text">550</span></td>
+                        <td><span class="ltr-text">250</span></td>
+                        <td><span class="ltr-text">25</span></td>
+                    </tr>
+                    <tr>
+                        <td>انتیموان</td>
+                        <td>۳</td>
+                        <td><span class="ltr-text">1200</span></td>
+                        <td><span class="ltr-text">90</span></td>
+                        <td><span class="ltr-text">20</span></td>
+                    </tr>
+                    <tr>
+                        <td>باریم</td>
+                        <td>۳</td>
+                        <td><span class="ltr-text">1400</span></td>
+                        <td><span class="ltr-text">700</span></td>
+                        <td><span class="ltr-text">300</span></td>
+                    </tr>
+                    <tr>
+                        <td>مولیبدن</td>
+                        <td>۳</td>
+                        <td><span class="ltr-text">3000</span></td>
+                        <td><span class="ltr-text">1500</span></td>
+                        <td><span class="ltr-text">10</span></td>
+                    </tr>
+                    <tr>
+                        <td>مس</td>
+                        <td>۳</td>
+                        <td><span class="ltr-text">3000</span></td>
+                        <td><span class="ltr-text">300</span></td>
+                        <td><span class="ltr-text">30</span></td>
+                    </tr>
+                    <tr>
+                        <td>قلع</td>
+                        <td>۳</td>
+                        <td><span class="ltr-text">6000</span></td>
+                        <td><span class="ltr-text">600</span></td>
+                        <td><span class="ltr-text">60</span></td>
+                    </tr>
+                    <tr>
+                        <td>کروم</td>
+                        <td>۳</td>
+                        <td><span class="ltr-text">11000</span></td>
+                        <td><span class="ltr-text">1100</span></td>
+                        <td><span class="ltr-text">3</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">جدول ۲. عناصری که باید در ارزیابی ریسک در نظر گرفته شوند</h3>
+            <p class="mb-4">جدول ۲ ناخالصی‌های عنصری را برای گنجاندن در ارزیابی ریسک شناسایی می‌کند. این جدول را می‌توان به تمام منابع ناخالصی‌های عنصری در محصول دارویی اعمال کرد.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>عنصر</th>
+                        <th>دسته</th>
+                        <th>در صورت اضافه شدن عمدی (تمام مسیرها)</th>
+                        <th>در صورت عدم اضافه شدن عمدی</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th>خوراکی</th>
+                        <th>پارنترال</th>
+                        <th>استنشاقی</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>کادمیوم</td>
+                        <td>۱</td>
+                        <td>بله</td>
+                        <td>بله</td>
+                        <td>بله</td>
+                        <td>بله</td>
+                    </tr>
+                    <tr>
+                        <td>سرب</td>
+                        <td>۱</td>
+                        <td>بله</td>
+                        <td>بله</td>
+                        <td>بله</td>
+                        <td>بله</td>
+                    </tr>
+                    <tr>
+                        <td>آرسنیک</td>
+                        <td>۱</td>
+                        <td>بله</td>
+                        <td>بله</td>
+                        <td>بله</td>
+                        <td>بله</td>
+                    </tr>
+                    <tr>
+                        <td>جیوه</td>
+                        <td>۱</td>
+                        <td>بله</td>
+                        <td>بله</td>
+                        <td>بله</td>
+                        <td>بله</td>
+                    </tr>
+                    <tr>
+                        <td>کبالت</td>
+                        <td>۲A</td>
+                        <td>بله</td>
+                        <td>بله</td>
+                        <td>بله</td>
+                        <td>بله</td>
+                    </tr>
+                    <tr>
+                        <td>وانادیوم</td>
+                        <td>۲A</td>
+                        <td>بله</td>
+                        <td>بله</td>
+                        <td>بله</td>
+                        <td>بله</td>
+                    </tr>
+                    <tr>
+                        <td>نیکل</td>
+                        <td>۲A</td>
+                        <td>بله</td>
+                        <td>بله</td>
+                        <td>بله</td>
+                        <td>بله</td>
+                    </tr>
+                    <tr>
+                        <td>تالیوم</td>
+                        <td>۲B</td>
+                        <td>بله</td>
+                        <td>خیر</td>
+                        <td>خیر</td>
+                        <td>خیر</td>
+                    </tr>
+                    <tr>
+                        <td>طلا</td>
+                        <td>۲B</td>
+                        <td>بله</td>
+                        <td>خیر</td>
+                        <td>خیر</td>
+                        <td>خیر</td>
+                    </tr>
+                    <tr>
+                        <td>پالادیوم</td>
+                        <td>۲B</td>
+                        <td>بله</td>
+                        <td>خیر</td>
+                        <td>خیر</td>
+                        <td>خیر</td>
+                    </tr>
+                    <tr>
+                        <td>ایریدیوم</td>
+                        <td>۲B</td>
+                        <td>بله</td>
+                        <td>خیر</td>
+                        <td>خیر</td>
+                        <td>خیر</td>
+                    </tr>
+                    <tr>
+                        <td>اسمیم</td>
+                        <td>۲B</td>
+                        <td>بله</td>
+                        <td>خیر</td>
+                        <td>خیر</td>
+                        <td>خیر</td>
+                    </tr>
+                    <tr>
+                        <td>رودیوم</td>
+                        <td>۲B</td>
+                        <td>بله</td>
+                        <td>خیر</td>
+                        <td>خیر</td>
+                        <td>خیر</td>
+                    </tr>
+                    <tr>
+                        <td>روتنیم</td>
+                        <td>۲B</td>
+                        <td>بله</td>
+                        <td>خیر</td>
+                        <td>خیر</td>
+                        <td>خیر</td>
+                    </tr>
+                    <tr>
+                        <td>سلنیوم</td>
+                        <td>۲B</td>
+                        <td>بله</td>
+                        <td>خیر</td>
+                        <td>خیر</td>
+                        <td>خیر</td>
+                    </tr>
+                    <tr>
+                        <td>نقره</td>
+                        <td>۲B</td>
+                        <td>بله</td>
+                        <td>خیر</td>
+                        <td>خیر</td>
+                        <td>خیر</td>
+                    </tr>
+                    <tr>
+                        <td>پلاتین</td>
+                        <td>۲B</td>
+                        <td>بله</td>
+                        <td>خیر</td>
+                        <td>خیر</td>
+                        <td>خیر</td>
+                    </tr>
+                    <tr>
+                        <td>لیتیوم</td>
+                        <td>۳</td>
+                        <td>بله</td>
+                        <td>خیر</td>
+                        <td>بله</td>
+                        <td>بله</td>
+                    </tr>
+                    <tr>
+                        <td>انتیموان</td>
+                        <td>۳</td>
+                        <td>بله</td>
+                        <td>خیر</td>
+                        <td>بله</td>
+                        <td>بله</td>
+                    </tr>
+                    <tr>
+                        <td>باریم</td>
+                        <td>۳</td>
+                        <td>بله</td>
+                        <td>خیر</td>
+                        <td>خیر</td>
+                        <td>بله</td>
+                    </tr>
+                    <tr>
+                        <td>مولیبدن</td>
+                        <td>۳</td>
+                        <td>بله</td>
+                        <td>خیر</td>
+                        <td>خیر</td>
+                        <td>بله</td>
+                    </tr>
+                    <tr>
+                        <td>مس</td>
+                        <td>۳</td>
+                        <td>بله</td>
+                        <td>خیر</td>
+                        <td>بله</td>
+                        <td>بله</td>
+                    </tr>
+                    <tr>
+                        <td>قلع</td>
+                        <td>۳</td>
+                        <td>بله</td>
+                        <td>خیر</td>
+                        <td>خیر</td>
+                        <td>بله</td>
+                    </tr>
+                    <tr>
+                        <td>کروم</td>
+                        <td>۳</td>
+                        <td>بله</td>
+                        <td>خیر</td>
+                        <td>خیر</td>
+                        <td>بله</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">گزینه‌های اثبات انطباق</h4>
+
+            <h5 class="text-lg font-semibold text-gray-700 mt-3 mb-2">گزینه تحلیل محصول دارویی</h5>
+            <p class="mb-4">نتایج حاصل از تحلیل یک واحد دوز معمولی، مقیاس شده به حداکثر دوز روزانه، با PDE روزانه مقایسه می‌شود.</p>
+            <div class="formula-display">
+                <span>Daily dose PDE ≥ measured value (µg/g) × maximum daily dose (g/day)</span>
+            </div>
+            <p class="mb-4">مقدار اندازه‌گیری شده هر ناخالصی، NMT PDE روزانه است، مگر اینکه در مونوگراف فردی خلاف آن ذکر شده باشد.</p>
+
+            <h5 class="text-lg font-semibold text-gray-700 mt-3 mb-2">گزینه جمع‌بندی</h5>
+            <p class="mb-4">به طور جداگانه، مقادیر هر ناخالصی عنصری (به µg/g) موجود در هر یک از اجزای محصول دارویی را اضافه کنید:</p>
+            <div class="formula-display">
+                <span>Daily dose PDE ≥ [ΣM<span class="ltr-text">1</span>(C<span class="ltr-text">M</span> × W<span class="ltr-text">M</span>)] × DD</span>
+            </div>
+            <p>
+                <span class="ltr-text">M</span> = هر ماده تشکیل دهنده مورد استفاده برای تولید یک واحد دوز<br>
+                <span class="ltr-text">C</span><span class="ltr-text">M</span> = غلظت عنصر در جزء (ماده دارویی یا افزودنی) (µg/g)<br>
+                <span class="ltr-text">W</span><span class="ltr-text">M</span> = وزن جزء در یک واحد دوز (g/unit dose)<br>
+                <span class="ltr-text">DD</span> = تعداد واحدها در حداکثر دوز روزانه (unit/day)
+            </p>
+            <p class="mb-4">نتیجه جمع‌بندی هر ناخالصی، NMT PDE روزانه است، مگر اینکه در مونوگراف فردی خلاف آن ذکر شده باشد. قبل از ارزیابی محصولات با استفاده از این گزینه، تولید کننده باید اطمینان حاصل کند که ناخالصی‌های عنصری اضافی از طریق فرآیند تولید یا سیستم کانتینر-بسته‌بندی در طول عمر محصول به طور سهوی اضافه نمی‌شوند.</p>
+
+            <h5 class="text-lg font-semibold text-gray-700 mt-3 mb-2">گزینه جزء منفرد</h5>
+            <p class="mb-4">برای محصولات دارویی با دوز روزانه NMT 10 g، اگر تمام مواد دارویی و افزودنی‌ها در یک فرمولاسیون با حدود غلظت نشان داده شده در جدول ۳ مطابقت داشته باشند، آنگاه این اجزا می‌توانند به هر نسبتی استفاده شوند. محاسبه بیشتر لازم نیست. اگرچه ناخالصی‌های عنصری ناشی از فرآیند تولید یا سیستم کانتینر-بسته‌بندی به طور خاص در گزینه جزء منفرد ارائه نشده‌اند، انتظار می‌رود که تولید کننده محصول دارویی اطمینان حاصل کند که این منابع به طور قابل توجهی به کل محتوای ناخالصی‌های عنصری کمک نمی‌کنند.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماده دارویی و مواد افزودنی</h4>
+            <p class="mb-4">سطوح قابل قبول ناخالصی‌های عنصری به استفاده نهایی ماده بستگی دارد. بنابراین، تولیدکنندگان محصولات دارویی برای رعایت معیارهای این فصل به اطلاعاتی در مورد محتوای ناخالصی‌های عنصری در مواد دارویی یا مواد افزودنی نیاز دارند. تولیدکنندگان محصول دارویی می‌توانند از داده‌های تست ناخالصی عنصری در مورد اجزا از تست‌های انجام شده توسط تولیدکنندگان ماده دارویی یا تولیدکنندگان مواد افزودنی استفاده کنند، که ممکن است داده‌های تست را ارائه دهند، یا در صورت لزوم، ارزیابی ریسک. داده‌های ناخالصی عنصری تولید شده توسط یک تامین کننده واجد شرایط اجزای محصول دارویی برای استفاده توسط یک تولیدکننده محصول دارویی برای اثبات انطباق با این فصل در محصول دارویی نهایی قابل قبول است. تولیدکنندگان ماده دارویی یا مواد افزودنی که تصمیم به انجام ارزیابی ریسک می‌گیرند، باید آن ارزیابی ریسک را با استفاده از جدول ۲ در این فصل انجام دهند. عناصری که ماهیت ذاتی ماده هستند، مانند مورد برخی مواد با منشاء طبیعی، باید در ارزیابی ریسک در نظر گرفته شوند.</p>
+            <p class="mb-4">مقادیر ارائه شده در جدول ۳ نمونه‌هایی از حدود غلظت برای اجزا (مواد دارویی و افزودنی‌ها) محصولات دارویی با حداکثر دوز روزانه ۱۰ گرم در روز هستند. این مقادیر به عنوان حدود غلظت پیش‌فرض برای کمک به بحث بین تولیدکنندگان محصولات دارویی و تامین کنندگان اجزای محصولات دارویی آنها عمل می‌کنند. [یادداشت — ممکن است لازم باشد اجزای منفرد در سطوحی متفاوت از جدول، بسته به عوامل تعدیل کننده خاص مونوگراف، محدود شوند.]</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">جدول ۳. غلظت‌های مجاز ناخالصی‌های عنصری برای گزینه جزء منفرد</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>عنصر</th>
+                        <th>دسته</th>
+                        <th>غلظت خوراکی (µg/g)</th>
+                        <th>غلظت پارنترال (µg/g)</th>
+                        <th>غلظت استنشاقی (µg/g)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>کادمیوم</td>
+                        <td>۱</td>
+                        <td><span class="ltr-text">0.5</span></td>
+                        <td><span class="ltr-text">0.2</span></td>
+                        <td>▲<span class="ltr-text">0.3</span>▲ (USP 1-Dec-2020)</td>
+                    </tr>
+                    <tr>
+                        <td>سرب</td>
+                        <td>۱</td>
+                        <td><span class="ltr-text">0.5</span></td>
+                        <td><span class="ltr-text">0.5</span></td>
+                        <td><span class="ltr-text">0.5</span></td>
+                    </tr>
+                    <tr>
+                        <td>آرسنیک</td>
+                        <td>۱</td>
+                        <td><span class="ltr-text">1.5</span></td>
+                        <td><span class="ltr-text">1.5</span></td>
+                        <td><span class="ltr-text">0.2</span></td>
+                    </tr>
+                    <tr>
+                        <td>جیوه</td>
+                        <td>۱</td>
+                        <td><span class="ltr-text">3</span></td>
+                        <td><span class="ltr-text">0.3</span></td>
+                        <td><span class="ltr-text">0.1</span></td>
+                    </tr>
+                    <tr>
+                        <td>کبالت</td>
+                        <td>۲A</td>
+                        <td><span class="ltr-text">5</span></td>
+                        <td><span class="ltr-text">0.5</span></td>
+                        <td><span class="ltr-text">0.3</span></td>
+                    </tr>
+                    <tr>
+                        <td>وانادیوم</td>
+                        <td>۲A</td>
+                        <td><span class="ltr-text">10</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                        <td><span class="ltr-text">0.1</span></td>
+                    </tr>
+                    <tr>
+                        <td>نیکل</td>
+                        <td>۲A</td>
+                        <td><span class="ltr-text">20</span></td>
+                        <td><span class="ltr-text">2</span></td>
+                        <td><span class="ltr-text">0.5</span></td>
+                    </tr>
+                    <tr>
+                        <td>تالیوم</td>
+                        <td>۲B</td>
+                        <td><span class="ltr-text">0.8</span></td>
+                        <td><span class="ltr-text">0.8</span></td>
+                        <td><span class="ltr-text">0.8</span></td>
+                    </tr>
+                    <tr>
+                        <td>طلا</td>
+                        <td>۲B</td>
+                        <td><span class="ltr-text">10</span></td>
+                        <td><span class="ltr-text">10</span></td>
+                        <td><span class="ltr-text">0.1</span></td>
+                    </tr>
+                    <tr>
+                        <td>پالادیوم</td>
+                        <td>۲B</td>
+                        <td><span class="ltr-text">10</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                        <td><span class="ltr-text">0.1</span></td>
+                    </tr>
+                    <tr>
+                        <td>ایریدیوم</td>
+                        <td>۲B</td>
+                        <td><span class="ltr-text">10</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                        <td><span class="ltr-text">0.1</span></td>
+                    </tr>
+                    <tr>
+                        <td>اسمیم</td>
+                        <td>۲B</td>
+                        <td><span class="ltr-text">10</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                        <td><span class="ltr-text">0.1</span></td>
+                    </tr>
+                    <tr>
+                        <td>رودیوم</td>
+                        <td>۲B</td>
+                        <td><span class="ltr-text">10</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                        <td><span class="ltr-text">0.1</span></td>
+                    </tr>
+                    <tr>
+                        <td>روتنیم</td>
+                        <td>۲B</td>
+                        <td><span class="ltr-text">10</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                        <td><span class="ltr-text">0.1</span></td>
+                    </tr>
+                    <tr>
+                        <td>سلنیوم</td>
+                        <td>۲B</td>
+                        <td><span class="ltr-text">15</span></td>
+                        <td><span class="ltr-text">8</span></td>
+                        <td><span class="ltr-text">13</span></td>
+                    </tr>
+                    <tr>
+                        <td>نقره</td>
+                        <td>۲B</td>
+                        <td><span class="ltr-text">15</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                        <td><span class="ltr-text">0.7</span></td>
+                    </tr>
+                    <tr>
+                        <td>پلاتین</td>
+                        <td>۲B</td>
+                        <td><span class="ltr-text">10</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                        <td><span class="ltr-text">0.1</span></td>
+                    </tr>
+                    <tr>
+                        <td>لیتیوم</td>
+                        <td>۳</td>
+                        <td><span class="ltr-text">55</span></td>
+                        <td><span class="ltr-text">25</span></td>
+                        <td><span class="ltr-text">2.5</span></td>
+                    </tr>
+                    <tr>
+                        <td>انتیموان</td>
+                        <td>۳</td>
+                        <td><span class="ltr-text">120</span></td>
+                        <td><span class="ltr-text">9</span></td>
+                        <td><span class="ltr-text">2</span></td>
+                    </tr>
+                    <tr>
+                        <td>باریم</td>
+                        <td>۳</td>
+                        <td><span class="ltr-text">140</span></td>
+                        <td><span class="ltr-text">70</span></td>
+                        <td><span class="ltr-text">30</span></td>
+                    </tr>
+                    <tr>
+                        <td>مولیبدن</td>
+                        <td>۳</td>
+                        <td><span class="ltr-text">300</span></td>
+                        <td><span class="ltr-text">150</span></td>
+                        <td><span class="ltr-text">1</span></td>
+                    </tr>
+                    <tr>
+                        <td>مس</td>
+                        <td>۳</td>
+                        <td><span class="ltr-text">300</span></td>
+                        <td><span class="ltr-text">30</span></td>
+                        <td><span class="ltr-text">3</span></td>
+                    </tr>
+                    <tr>
+                        <td>قلع</td>
+                        <td>۳</td>
+                        <td><span class="ltr-text">600</span></td>
+                        <td><span class="ltr-text">60</span></td>
+                        <td><span class="ltr-text">6</span></td>
+                    </tr>
+                    <tr>
+                        <td>کروم</td>
+                        <td>۳</td>
+                        <td><span class="ltr-text">1100</span></td>
+                        <td><span class="ltr-text">110</span></td>
+                        <td><span class="ltr-text">0.3</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آزمون تحلیلی</h4>
+            <p class="mb-4">اگر تولیدکنندگان بتوانند با نظارت بر فرآیند و کنترل زنجیره تامین، انطباق را اثبات کنند، ممکن است دیگر نیازی به آزمایش نباشد. هنگامی که آزمایش برای اثبات انطباق انجام می‌شود، طبق دستورالعمل ناخالصی‌های عنصری - رویه‌ها <a href="233.html" class="text-blue-600 hover:underline" target="_blank">۲۳۳</a> عمل کنید.</p>
+        </div>
+    </div>
+</body>
+</html>

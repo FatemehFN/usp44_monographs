@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>۸۵۴. طیف‌سنجی مادون قرمز میانی</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vazirmatn Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax CDN for LaTeX rendering -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <!-- Internal Styling -->
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">۸۵۴. طیف‌سنجی مادون قرمز میانی</h1>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+            <p class="mb-4">
+                طیف‌سنجی مادون قرمز میانی (<span class="ltr-text">mid-IR</span>) یک روش ابزاری است که برای اندازه‌گیری جذب تابش الکترومغناطیسی در محدوده عدد موج بین
+                <span class="ltr-text">4000</span> تا <span class="ltr-text">400 cm−1</span> (مطابق با طول موج‌های بین
+                <span class="ltr-text">2.5</span> تا <span class="ltr-text">25 µm</span>) استفاده می‌شود. مگر اینکه در یک مونوگراف یا روش معتبر دیگر، به طور دیگری مشخص شده باشد، منطقه از
+                <span class="ltr-text">3800</span> تا <span class="ltr-text">650 cm−1</span> (مطابق با طول موج‌های از
+                <span class="ltr-text">2.6</span> تا <span class="ltr-text">15 µm</span>) باید برای اطمینان از مطابقت با مشخصات مونوگراف برای جذب
+                <span class="ltr-text">IR</span> استفاده شود. جذب فوتون‌ها باعث ارتقاء مولکول‌ها از حالت پایه حالت ارتعاشی خود به یک حالت ارتعاشی برانگیخته می‌شود.
+            </p>
+            <p class="mb-4">
+                حالت‌های ارتعاشی توسط حرکت تمام اتم‌ها در یک مولکول تعریف می‌شوند. هنگامی که مولکول‌ها حاوی گروه‌های عاملی خاصی هستند، جذب
+                <span class="ltr-text">IR</span> اغلب در محدوده‌های طیفی باریک خاصی رخ می‌دهد. در این موارد، اعداد موجی که این انتقال‌ها در آن‌ها رخ می‌دهند، به عنوان فرکانس‌های گروهی شناخته می‌شوند. هنگامی که یک حالت ارتعاشی شامل حرکات اتمی بیش از چند اتم باشد، فرکانس‌ها در محدوده‌های طیفی وسیع‌تر رخ می‌دهند و مشخصه یک گروه عاملی خاص نیستند، بلکه بیشتر مشخصه مولکول‌ها به طور کلی هستند. چنین باند‌هایی به عنوان باند‌های اثر انگشت (fingerprint bands) شناخته می‌شوند. تمام باند‌های قوی که در اعداد موجی بالای
+                <span class="ltr-text">1500 cm−1</span> جذب می‌کنند، فرکانس‌های گروهی هستند. باند‌های قوی که در زیر
+                <span class="ltr-text">1500 cm−1</span> جذب می‌کنند می‌توانند هم فرکانس‌های گروهی و هم باند‌های اثر انگشت باشند.
+            </p>
+            <p class="mb-4">
+                برای بحث در مورد نظریه و اصول اندازه‌گیری، به <span class="ltr-text">Mid-Infrared Spectroscopy—Theory and Practice</span>
+                <a href="1854.html" class="text-blue-600 hover:underline" target="_blank">۱۸۵۴</a> مراجعه کنید که ممکن است منبعی مفید اما نه الزامی باشد.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">واجد شرایط‌سازی طیف‌سنج‌های <span class="ltr-text">IR</span></h2>
+            <p class="mb-4">
+                واجد شرایط‌سازی طیف‌سنج‌های <span class="ltr-text">mid-IR</span> به سه جزء تقسیم می‌شود: واجد شرایط‌سازی نصب (<span class="ltr-text">IQ</span>)، واجد شرایط‌سازی عملیاتی (<span class="ltr-text">OQ</span>)، و واجد شرایط‌سازی عملکرد (<span class="ltr-text">PQ</span>). برای اطلاعات بیشتر، به <span class="ltr-text">Analytical Instrument Qualification</span>
+                <a href="1058.html" class="text-blue-600 hover:underline" target="_blank">۱۰۵۸</a> مراجعه کنید.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">واجد شرایط‌سازی نصب</h3>
+            <p class="mb-4">
+                الزامات <span class="ltr-text">IQ</span> شواهدی را ارائه می‌دهد که سخت‌افزار و نرم‌افزار به درستی در مکان مورد نظر نصب شده‌اند.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">واجد شرایط‌سازی عملیاتی</h3>
+            <p class="mb-4">
+                از آنجایی که اکثر طیف‌های <span class="ltr-text">mid-IR</span> با طیف‌سنج‌های <span class="ltr-text">Fourier-transform IR (FTIR)</span> اندازه‌گیری می‌شوند، فقط این ابزارها مورد بحث قرار می‌گیرند.
+                [<span class="ltr-text">NOTE</span> — هیچ مقدار توصیه‌شده‌ای برای نسبت سیگنال به نویز یا پایداری خط
+                <span class="ltr-text">100%</span> در این فصل گنجانده نشده است زیرا این موارد با سازنده، مدل و عمر ابزار متفاوت است.]
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">دقت عدد موج</h3>
+            <p class="mb-4">
+                معمول‌ترین استاندارد عدد موجی برای طیف‌سنجی <span class="ltr-text">IR</span>، یک فیلم پلی‌استایرن مات با ضخامت تقریبی
+                <span class="ltr-text">35 µm</span> است. طیف چنین فیلمی دارای چندین باند تیز در
+                <span class="ltr-text">3060.0</span>، <span class="ltr-text">2849.5</span>، <span class="ltr-text">1942.9</span>، <span class="ltr-text">1601.2</span>، <span class="ltr-text">1583.0</span>، <span class="ltr-text">1154.5</span> و <span class="ltr-text">1028.3 cm−1</span> است. باندی که اغلب برای تعیین دقت عدد موج انتخاب می‌شود در
+                <span class="ltr-text">1601.2 cm−1</span> قرار دارد. با استفاده از یک فیلم پلی‌استایرن مناسب یا استاندارد عدد موجی معتبر دیگر، از
+                <span class="ltr-text">3800</span> تا <span class="ltr-text">650 cm−1</span> اسکن کنید و عدد موج حداکثر پاسخ باند انتخاب شده را با استفاده از روش مرکز ثقل، روش چندجمله‌ای اسپلین، یا سایر الگوریتم‌های انتخاب پیک، با عدد موج جذب شناخته شده استاندارد مقایسه کنید. تلرانس قابل قبول برای عدد موج اندازه‌گیری شده
+                <span class="ltr-text">±1.0 cm−1</span> است.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">واجد شرایط‌سازی عملکرد</h3>
+            <p class="mb-4">
+                هدف از واجد شرایط‌سازی عملکرد (<span class="ltr-text">PQ</span>) تعیین این است که ابزار قادر به برآوردن الزامات کاربر برای تمام پارامترهایی است که ممکن است بر کیفیت اندازه‌گیری تأثیر بگذارند.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">روش کار</h2>
+            <p class="mb-4">
+                طیف‌های <span class="ltr-text">mid-IR</span> را می‌توان با انتقال، بازتاب خارجی، بازتاب داخلی (اغلب بازتاب کلی تضعیف شده نامیده می‌شود)، بازتاب پراکنده و طیف‌سنجی فوتوآکوستیک اندازه‌گیری کرد. تکنیک‌های آماده‌سازی نمونه مختلفی برای این گزینه‌ها موجود است. رایج‌ترین تکنیک‌های آماده‌سازی نمونه در زیر ارائه شده‌اند.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">دیسک‌های پتاسیم برمید (<span class="ltr-text">KBr</span>)</h4>
+            <p class="mb-4">
+                برخی از هالیدهای قلیایی پودر شده مانند پتاسیم برمید، پتاسیم کلرید و سزیم یدید تحت فشار بالا به هم می‌پیوندند و می‌توانند به صورت دیسک‌های خودپایه که شفاف به تابش
+                <span class="ltr-text">mid-IR</span> هستند، تشکیل شوند. رایج‌ترین هالید قلیایی مورد استفاده، پتاسیم برمید پودر شده، خشک و بسیار خالص است که در بالای
+                <span class="ltr-text">400 cm−1</span> به تابش <span class="ltr-text">mid-IR</span> شفاف است. پرس‌ها و قالب‌های تجاری در طیف وسیعی از قطرها برای تهیه هالیدهای قلیایی و دیسک‌های مشابه موجود هستند.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مول‌های روغن معدنی</h4>
+            <p class="mb-4">
+                یک روش معمول برای تهیه مول این است که
+                <span class="ltr-text">10–20 mg</span> از نمونه را در یک هاون عقیق قرار داده و سپس نمونه را با حرکت چرخشی شدید دسته هاون به پودری با اندازه ذرات ریز خرد کنید. یک قطره کوچک از عامل مولینگ به هاون اضافه می‌شود. از حرکت چرخشی دسته هاون برای مخلوط کردن اجزاء به یک خمیر یکنواخت استفاده می‌شود که سپس به مرکز یک پنجره شفاف
+                <span class="ltr-text">IR</span> تمیز (مانند پتاسیم برمید، سدیم کلرید، نقره برمید یا سزیم یدید) منتقل می‌شود. یک پنجره تطبیق دهنده دوم روی مول قرار داده می‌شود و مول فشرده می‌شود تا یک فیلم نازک و شفاف و بدون حباب تشکیل شود. گسترده‌ترین عامل مولینگ برای منطقه
+                <span class="ltr-text">mid-IR</span> یک روغن معدنی هیدروکربن اشباع (پارافین مایع، <span class="ltr-text">Nujol</span>) است.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فیلم‌های پلیمری خودپایه</h4>
+            <p class="mb-4">
+                طیف عبوری <span class="ltr-text">mid-IR</span> بسیاری از پلیمرهای مورد استفاده به عنوان مواد بسته‌بندی گاهی از نمونه‌های تهیه شده به صورت فیلم‌های نازک خودپایه با استفاده از قالب‌گیری فشاری گرم یا میکروتومی ثبت می‌شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فیلم‌های مویین</h4>
+            <p class="mb-4">
+                مایعات غیرفرار را می‌توان به صورت خالص در قالب یک لایه نازک که بین دو پنجره مطابق و شفاف به تابش
+                <span class="ltr-text">mid-IR</span> قرار گرفته است، بررسی کرد. لایه مایع باید عاری از حباب باشد و باید به طور کامل قطر پرتو
+                <span class="ltr-text">IR</span> متمرکز بر روی نمونه را پوشش دهد.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مایعات و محلول‌ها در سلول‌های عبور</h4>
+            <p class="mb-4">
+                برای بررسی نمونه‌های مایع و محلول، مجموعه‌های سلول عبور که شامل یک جفت پنجره، اسپیسر، پورت‌های پر کردن و یک نگهدارنده هستند، به صورت تجاری در پیکربندی‌های ماکرو و میکرو نمونه موجود هستند. برای کاربردهای آزمایشگاهی، اسپیسرها معمولاً از سرب، پلی(تترا فلوئورواتیلن) یا پلی(اتیلن ترفتالات) تشکیل شده‌اند و می‌توانند، بسته به مواد اسپیسر، در ضخامت‌های مسیر استاندارد از تقریباً
+                <span class="ltr-text">6 µm</span> تا <span class="ltr-text">1 mm</span> یا بزرگتر عرضه شوند.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">گازها</h4>
+            <p class="mb-4">
+                سلول‌های عبور <span class="ltr-text">mid-IR</span> برای نمونه‌برداری گاز و بخار ساکن یا جریان‌یافته در طیف وسیعی از مواد برای کاربردهای مختلف، از مقیاس آزمایشگاهی تا فرآیندی، موجود هستند. در آزمایشگاه، سلول گازی سنتی یک استوانه
+                <span class="ltr-text">10 cm</span> طول از شیشه بوروسیلیکات یا فولاد ضد زنگ با یک دیافراگم تقریباً
+                <span class="ltr-text">40-mm</span> در هر انتها بوده است. هر انتهای باز با یک کلاهک پوشانده می‌شود که یکی از یک جفت پنجره شفاف به
+                <span class="ltr-text">mid-IR</span> را شامل می‌شود، ساخته شده از، برای مثال، پتاسیم برمید، سلنیم روی یا فلورید کلسیم.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">بازتاب کلی تضعیف شده</h4>
+            <p class="mb-4">
+                طیف‌سنجی بازتاب کلی تضعیف شده بر پدیده نوری تابش متکی است که از محیطی با ضریب شکست بالا در یک زاویه تابش خاص عبور می‌کند و به طور کامل در یک مرز در تماس با ماده‌ای با ضریب شکست پایین‌تر به صورت داخلی بازتاب می‌شود. محیط با ضریب شکست بالا به عنوان عنصر بازتاب داخلی (<span class="ltr-text">IRE</span>) نیز شناخته می‌شود. نمونه تحت بررسی باید در تماس نزدیک با <span class="ltr-text">IRE</span> مانند الماس، ژرمانیوم، سلنید روی یا سایر مواد مناسب با ضریب شکست بالا قرار گیرد. اطمینان حاصل کنید که تماس نزدیک و یکنواخت بین ماده و کل سطح بلور با اعمال فشار در مورد نمونه‌های جامد یا با حل کردن ماده در یک حلال مناسب و سپس پوشاندن <span class="ltr-text">IRE</span> با محلول و تبخیر تا خشکی انجام می‌شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">بازتاب پراکنده</h4>
+            <p class="mb-4">
+                مهمترین و رایج‌ترین شکل آماده‌سازی نمونه برای بازتاب پراکنده، رقیق کردن نمونه با مخلوط کردن دقیق آن با
+                <span class="ltr-text">90%–99%</span> از رقیق‌کننده‌های غیرجذبنده مانند پتاسیم برمید یا پتاسیم کلرید پودر شده ریز است. رقیق‌سازی نمونه مزیت اضافی کاهش شدت باند جذب به سطح مناسب را دارد.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه‌برداری میکروسکوپی</h4>
+            <p class="mb-4">
+                کوپل کردن یک میکروسکوپ نوری با یک طیف‌سنج <span class="ltr-text">mid-IR</span> امکان دستیابی به طیف‌ها را از نمونه‌های بسیار کوچک فراهم می‌کند. به طور کلی در حالت‌های عبوری یا بازتابی اعمال می‌شود، برای مثال، ابزار قدرتمندی را برای به دست آوردن داده‌های طیف‌سنجی از آلاینده‌ها در نمونه‌های دارویی فراهم می‌کند.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">اعتبارسنجی و تأیید</h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">اعتبارسنجی</h3>
+            <p class="mb-4">
+                اعتبارسنجی زمانی لازم است که یک روش <span class="ltr-text">IR</span> برای استفاده به عنوان جایگزینی برای روش رسمی آزمایش یک ماده رسمی در نظر گرفته شده باشد.
+            </p>
+            <p class="mb-4">
+                هدف از اعتبارسنجی یک روش <span class="ltr-text">IR</span> نشان دادن این است که اندازه‌گیری برای هدف مورد نظر آن مناسب است، شامل: تعیین کمی جزء اصلی در یک ماده دارویی یا یک محصول دارویی (آزمون‌های <span class="ltr-text">Category I</span>)، تعیین کمی ناخالصی‌ها یا آزمون‌های حدی (<span class="ltr-text">Category II</span>)، و آزمون‌های شناسایی (<span class="ltr-text">Category IV</span>، به جدول <span class="ltr-text">2</span> در <span class="ltr-text">Validation of Compendial Procedures</span>
+                <a href="1225.html" class="text-blue-600 hover:underline" target="_blank">۱۲۲۵</a> مراجعه کنید). بسته به رده آزمون، فرآیند اعتبارسنجی برای <span class="ltr-text">IR</span> ممکن است نیازمند آزمایش خطی بودن، محدوده، دقت، ویژگی، صحت، حد تشخیص، حد کمی‌سازی و پایایی باشد. اگر روش <span class="ltr-text">IR</span> از یک مدل کمومتریک محاسبه شده در برابر پاسخ یک فناوری تحلیلی دیگر (به عنوان مثال، <span class="ltr-text">HPLC</span>) استفاده می‌کند، آنگاه اصول <span class="ltr-text">Near-Infrared Spectroscopy—Theory and Practice</span>
+                <a href="1856.html" class="text-blue-600 hover:underline" target="_blank">۱۸۵۶</a> (<span class="ltr-text">CN 1-May-2020</span>)، به ویژه بخش <span class="ltr-text">Method Validation</span>، باید اعمال شود.
+            </p>
+            <p class="mb-4">
+                فصل
+                <a href="1225.html" class="text-blue-600 hover:underline" target="_blank">۱۲۲۵</a> تعاریف و راهنمایی کلی در مورد اعتبارسنجی روش‌های تحلیلی را بدون اشاره به اعتبارسنجی خاص برای هر ویژگی ارائه می‌دهد. بخش‌های زیر به منظور ارائه معیارهای اعتبارسنجی خاص به کاربر است که حداقل انتظارات برای این فناوری را نشان می‌دهد. برای هر کاربرد خاص، ممکن است معیارهای سخت‌گیرانه‌تری برای نشان دادن مناسب بودن برای استفاده مورد نظر لازم باشد.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">دقت</h4>
+            <p class="mb-4">
+                برای روش‌های <span class="ltr-text">Category I</span> و <span class="ltr-text">II</span>، دقت را می‌توان با انجام مطالعات بازیابی با ماتریس مناسب که با غلظت‌های شناخته شده آنالیت اسپایک شده است، تعیین کرد. همچنین یک روش قابل قبول این است که نتایج آزمون به دست آمده با استفاده از روش <span class="ltr-text">IR</span> تحت اعتبارسنجی را با نتایج به دست آمده از یک روش تحلیلی جایگزین معتبر مقایسه کنیم.
+            </p>
+            <p class="mb-4">
+                معیارهای اعتبارسنجی: بازیابی متوسط
+                <span class="ltr-text">98.0%–102.0%</span> برای مواد دارویی، بازیابی متوسط
+                <span class="ltr-text">95.0%–105.0%</span> برای آزمون محصول دارویی، و بازیابی متوسط
+                <span class="ltr-text">70.0%–150.0%</span> برای تجزیه و تحلیل ناخالصی. این معیارها در سراسر محدوده مورد نظر برآورده می‌شوند.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">صحت</h4>
+
+            <h5 class="text-base font-semibold text-gray-600 mt-2 mb-1">تکرارپذیری</h5>
+            <p class="mb-4">
+                روش تحلیلی با اندازه‌گیری غلظت‌های <span class="ltr-text">six</span> آماده‌سازی نمونه مستقل در
+                <span class="ltr-text">100%</span> غلظت آزمون ارزیابی می‌شود. به طور جایگزین می‌توان آن را بر اساس اندازه‌گیری <span class="ltr-text">three</span> تکرار از <span class="ltr-text">three</span> محلول نمونه جداگانه در غلظت‌های مختلف انجام داد. سه غلظت باید به اندازه کافی نزدیک باشند تا تکرارپذیری در محدوده غلظت ثابت باشد. اگر این کار انجام شود، تکرارپذیری در سه غلظت برای مقایسه با معیارهای پذیرش جمع‌آوری می‌شود.
+            </p>
+            <p class="mb-4">
+                معیارهای اعتبارسنجی: انحراف استاندارد نسبی
+                <span class="ltr-text">NMT 1.0%</span> برای ماده دارویی، <span class="ltr-text">NMT 2.0%</span> برای محصول دارویی، و <span class="ltr-text">NMT 20.0%</span> برای تجزیه و تحلیل ناخالصی است.
+            </p>
+
+            <h5 class="text-base font-semibold text-gray-600 mt-2 mb-1">صحت میانی</h5>
+            <p class="mb-4">
+                تأثیر بر دقت تحلیلی ناشی از تغییرات در متغیرهایی مانند انجام تجزیه و تحلیل در روزهای مختلف، استفاده از ابزارهای مختلف، یا انجام روش توسط <span class="ltr-text">two</span> یا بیشتر تحلیلگر باید ارزیابی شود. حداقل، هر ترکیبی از حداقل <span class="ltr-text">two</span> از این عوامل که مجموعاً <span class="ltr-text">six</span> آزمایش باشد، تخمینی از صحت میانی را فراهم می‌کند.
+            </p>
+            <p class="mb-4">
+                معیارهای اعتبارسنجی: انحراف استاندارد نسبی
+                <span class="ltr-text">NMT 1.0%</span> برای ماده دارویی، <span class="ltr-text">NMT 3.0%</span> برای آزمون محصول دارویی، و <span class="ltr-text">NMT 25.0%</span> برای تجزیه و تحلیل ناخالصی است.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ویژگی</h4>
+            <p class="mb-4">
+                برای آزمون‌های <span class="ltr-text">Category IV</span>، هویت آنالیت باید تضمین شود. در مورد روش‌های <span class="ltr-text">Category I</span> و <span class="ltr-text">II</span>، الزام دقت همچنین ویژگی را برای آنالیت‌های هدف نشان می‌دهد.
+            </p>
+            <p class="mb-4">
+                در مورد آزمون‌های شناسایی، توانایی انتخاب بین ترکیبات با ساختار نزدیک که احتمالاً حضور دارند باید نشان داده شود. این باید با به دست آوردن نتایج مثبت (شاید با مقایسه با یک ماده مرجع شناخته شده) از نمونه‌های حاوی آنالیت، همراه با نتایج منفی از نمونه‌هایی که حاوی آنالیت نیستند و با تأیید اینکه پاسخ مثبت از مواد ساختاری مشابه یا نزدیک به آنالیت به دست نمی‌آید، تأیید شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد کمی‌سازی</h4>
+            <p class="mb-4">
+                حد کمی‌سازی را می‌توان با محاسبه انحراف استاندارد از <span class="ltr-text">NLT 6</span> اندازه‌گیری تکراری یک آماده‌سازی خالی تقسیم بر شیب خط کالیبراسیون و ضرب در <span class="ltr-text">10</span> تخمین زد. رویکردهای مناسب دیگر نیز می‌توانند استفاده شوند (به
+                <a href="1225.html" class="text-blue-600 hover:underline" target="_blank">۱۲۲۵</a> مراجعه کنید). اندازه‌گیری یک ماتریس نمونه نماینده که در غلظت حد کمی‌سازی تخمینی اسپایک شده است باید برای تأیید دقت انجام شود.
+            </p>
+            <p class="mb-4">
+                معیارهای اعتبارسنجی: برای اینکه حد کمی‌سازی تخمین زده شده معتبر تلقی شود، غلظت اندازه‌گیری شده باید در سطحی برابر یا کمتر از
+                <span class="ltr-text">50%</span> از مشخصات، دقیق و صحیح باشد.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">خطی بودن</h4>
+            <p class="mb-4">
+                رابطه خطی بین غلظت آنالیت و پاسخ طیفی <span class="ltr-text">IR</span> با آماده‌سازی <span class="ltr-text">NLT 5</span> آماده‌سازی استاندارد در غلظت‌هایی که شامل غلظت پیش‌بینی شده آماده‌سازی آزمون است، نشان داده می‌شود. منحنی استاندارد باید سپس با استفاده از روش‌های آماری مناسب مانند رگرسیون حداقل مربعات ارزیابی شود. برای آزمایش‌هایی که رابطه خطی بین غلظت آنالیت و پاسخ طیفی <span class="ltr-text">IR</span> ندارند، روش‌های آماری مناسب باید برای توصیف پاسخ تحلیلی اعمال شوند.
+            </p>
+            <p class="mb-4">
+                معیارهای اعتبارسنجی: ضریب همبستگی (<span class="ltr-text">R</span>)، <span class="ltr-text">NLT 0.995</span> برای آزمون‌های <span class="ltr-text">Category I</span> و <span class="ltr-text">NLT 0.99</span> برای آزمون‌های کمی <span class="ltr-text">Category II</span>.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محدوده</h4>
+            <p class="mb-4">
+                این پارامتر با برآورده کردن الزامات خطی بودن، صحت و دقت نشان داده می‌شود.
+            </p>
+            <p class="mb-4">
+                معیارهای اعتبارسنجی: برای آزمون‌های <span class="ltr-text">Category I</span>، محدوده اعتبارسنجی برای معیارهای پذیرش
+                <span class="ltr-text">100.0%</span> مرکزی
+                <span class="ltr-text">80.0%–120.0%</span> است. برای معیارهای پذیرش غیرمرکزی، محدوده اعتبارسنجی
+                <span class="ltr-text">10.0%</span> زیر حد پایین تا
+                <span class="ltr-text">10.0%</span> بالای حد بالا است. برای یکنواختی محتوا، محدوده اعتبارسنجی
+                <span class="ltr-text">70.0%–130.0%</span> است. برای آزمون‌های <span class="ltr-text">Category II</span>، محدوده اعتبارسنجی
+                <span class="ltr-text">50.0%–120.0%</span> از معیارهای پذیرش را پوشش می‌دهد.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">پایایی</h4>
+            <p class="mb-4">
+                قابلیت اطمینان یک اندازه‌گیری تحلیلی باید با تغییرات عمدی در پارامترهای آزمایشگاهی نشان داده شود. برای
+                <span class="ltr-text">mid-IR</span> این می‌تواند شامل (اما محدود به آن نیست) تغییرات در روش آماده‌سازی نمونه یا تغییرات در تنظیمات سخت‌افزاری باشد.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تأیید</h3>
+            <p class="mb-4">
+                مقررات <span class="ltr-text">U.S. Current Good Manufacturing Practices</span> [<span class="ltr-text">21 CFR 211.194(a)(2)</span>] نشان می‌دهد که کاربران روش‌های تحلیلی توصیف شده در
+                <span class="ltr-text">USP–NF</span> ملزم به اعتبارسنجی این روش‌ها در صورتی که در یک مونوگراف ارائه شده باشند، نیستند. در عوض، آنها فقط باید مناسب بودن آنها را تحت شرایط واقعی استفاده تأیید کنند.
+            </p>
+            <p class="mb-4">
+                هدف از تأیید روش <span class="ltr-text">IR</span> نشان دادن این است که روش، همانطور که در مونوگراف‌های خاص تجویز شده است، با دقت، حساسیت و صحت مناسب اجرا می‌شود. <span class="ltr-text">Verification of Compendial Procedures</span>
+                <a href="1226.html" class="text-blue-600 hover:underline" target="_blank">۱۲۲۶</a> اشاره می‌کند که اگر تأیید روش رسمی، مطابق با مونوگراف، موفقیت‌آمیز نباشد، روش برای استفاده با ماده تحت آزمایش مناسب نیست. ممکن است لازم باشد یک روش جایگزین توسعه و اعتبارسنجی شود، همانطور که در <span class="ltr-text">General Notices, 6.30 Alternative and Harmonized Methods and Procedures</span> مجاز است.
+            </p>
+            <p class="mb-4">
+                اگرچه اعتبارسنجی کامل یک روش رسمی مورد نیاز نیست، اما تأیید روش رسمی
+                <span class="ltr-text">Mid-IR</span> شامل اجرای پارامترهای حیاتی خاصی است. هنگامی که روش در حال تأیید برای اهداف شناسایی است، ویژگی تنها پارامتر مورد نیاز است. برای کاربردهای کمی، پارامترهای اعتبارسنجی اضافی مورد مطالعه قرار می‌گیرند. به طور معمول اینها شامل دقت، صحت و حد کمی‌سازی است، همانطور که در اعتبارسنجی نشان داده شده است.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

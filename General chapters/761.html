@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طیف‌سنجی تشدید مغناطیسی هسته (NMR)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+            overflow-x: auto; /* Allow horizontal scrolling for long formulas */
+        }
+    </style>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6"><span class="ltr-text">761.</span> طیف‌سنجی تشدید مغناطیسی هسته (NMR)</h1>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+        <p class="mb-4">طیف‌سنجی تشدید مغناطیسی هسته (<span class="ltr-text">NMR</span>) یک روش تحلیلی است که بر اساس خواص مغناطیسی هسته‌های اتمی خاص بنا شده است. همانند سایر انواع طیف‌سنجی، جذب یا انتشار انرژی الکترومغناطیسی در فرکانس‌های مشخص، اطلاعات ساختاری را فراهم می‌کند. <span class="ltr-text">NMR</span> با سایر انواع طیف‌سنجی متفاوت است زیرا سطوح انرژی گسسته‌ای که انتقال بین آن‌ها رخ می‌دهد، تنها زمانی وجود دارند که هسته‌ها در یک میدان مغناطیسی قرار می‌گیرند.</p>
+        <p class="mb-4">اگرچه به طور گسترده‌ای به عنوان یکی از قدرتمندترین ابزارهای موجود برای تعیین ساختار شناخته می‌شود، اما با طراحی تجربی مناسب، می‌توان از آن برای اندازه‌گیری‌های کیفی و کمی دقیق نیز استفاده کرد. به فصل اطلاعات عمومی کاربردهای طیف‌سنجی تشدید مغناطیسی هسته <a href="1761.html" class="text-blue-600 hover:underline" target="_blank">1761</a> مراجعه کنید. [نکته—فصول بالای <span class="ltr-text">1000</span> فقط برای اهداف اطلاعاتی هستند.]</p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">صلاحیت‌سنجی دستگاه‌های <span class="ltr-text">NMR</span></h2>
+        <p class="mb-4">صلاحیت‌سنجی دستگاه <span class="ltr-text">NMR</span> را می‌توان به سه بخش تقسیم کرد: صلاحیت‌سنجی نصب (<span class="ltr-text">IQ</span>)، صلاحیت‌سنجی عملیاتی (<span class="ltr-text">OQ</span>)، و صلاحیت‌سنجی عملکرد (<span class="ltr-text">PQ</span>). برای بحث بیشتر، به فصل اطلاعات عمومی صلاحیت‌سنجی ابزار تحلیلی <a href="1058.html" class="text-blue-600 hover:underline" target="_blank">1058</a> مراجعه کنید.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">صلاحیت‌سنجی نصب</h3>
+        <p class="mb-4">الزامات <span class="ltr-text">IQ</span> شواهدی را ارائه می‌دهد که سخت‌افزار و نرم‌افزار به گونه‌ای نصب شده‌اند که استفاده ایمن و موثر از دستگاه را در محل مورد نظر فراهم کنند.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">صلاحیت‌سنجی عملیاتی</h3>
+        <p class="mb-4">در <span class="ltr-text">OQ</span>، عملکرد یک دستگاه با استفاده از استانداردها برای تأیید اینکه سیستم در محدوده مشخصات هدف عمل می‌کند، مشخص می‌شود. هدف <span class="ltr-text">OQ</span> نشان دادن این است که عملکرد دستگاه برای یک کاربرد معین مناسب است. از آنجایی که رویکردهای مختلفی برای اندازه‌گیری طیف‌های <span class="ltr-text">NMR</span> وجود دارد، استفاده از استانداردهایی با خواص طیفی شناخته‌شده برای <span class="ltr-text">OQ</span> توصیه می‌شود. عموماً، لوله‌های <span class="ltr-text">NMR</span> مهر و موم شده به عنوان استانداردهای مرجع برای اندازه‌گیری نسبت سیگنال به نویز (<span class="ltr-text">S/N</span>) و شکل خط در دسترس هستند.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">صلاحیت‌سنجی عملکرد</h3>
+        <p class="mb-4"><span class="ltr-text">PQ</span> کمک می‌کند تا مشخص شود که دستگاه قادر به برآوردن الزامات کاربر برای تمام معیارهای حیاتی برای کیفیت (<span class="ltr-text">CTQ</span>) است. مستندات <span class="ltr-text">PQ</span> باید موارد زیر را تشریح کند:</p>
+        <ol class="list-decimal list-inside mr-4 mb-4">
+            <li class="mb-2">تعریف معیارهای عملکرد خاص و رویه‌های دقیق آزمایش از جمله نمونه‌های آزمایش و پارامترهای دستگاه.</li>
+            <li class="mb-2">عناصری که برای ارزیابی معیارها و مشخصات از پیش تعریف شده اندازه‌گیری خواهند شد.</li>
+            <li class="mb-2">بازه زمانی آزمایش، که ممکن است بر اساس زمان استفاده باشد.</li>
+            <li class="mb-2">استفاده از نمونه‌های براکتینگ یا گروه‌هایی از نمونه‌ها.</li>
+            <li class="mb-2">اقدامات اصلاحی تعریف شده که در صورت عدم گذر طیف‌سنج از مشخصات، اجرا خواهند شد.</li>
+        </ol>
+        <p class="mb-4"><span class="ltr-text">PQ</span> دوره‌ای باید شامل زیرمجموعه‌ای از آزمایش‌های <span class="ltr-text">OQ</span> باشد تا اطمینان حاصل شود که آن جنبه‌های دستگاه که ارائه می‌شوند، در سطحی عمل می‌کنند که داده‌های مناسب برای استفاده مورد نظر را تولید می‌کنند. بسته به استفاده معمول، مشخصات برای <span class="ltr-text">PQ</span> ممکن است بالاتر یا پایین‌تر از مشخصات نصب سازنده باشد. <span class="ltr-text">CTQ</span>‌های معمول شامل نسبت <span class="ltr-text">S/N</span> و آزمایش‌های رزولوشن برای تمام هسته‌های مورد علاقه است. آزمایش‌های <span class="ltr-text">PQ</span> خاص روش، که به عنوان آزمایش‌های مناسب بودن سیستم نیز شناخته می‌شوند، ممکن است به جای الزامات <span class="ltr-text">PQ</span> برای رویه‌های تایید شده استفاده شوند.</p>
+        <p class="mb-4">نمونه‌ها و آزمایش‌های <span class="ltr-text">PQ</span> در زیربخش‌های زیر تنها نمونه‌های معمولی هستند. آزمایش‌ها و نمونه‌های دیگر ممکن است برای تعیین مشخصات برای اهداف خاص استفاده شوند. فروشندگان دستگاه اغلب نمونه‌ها و پارامترهای آزمایشی را ارائه می‌دهند که می‌توانند به عنوان بخشی از بسته <span class="ltr-text">PQ</span> استفاده شوند.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">اندازه‌گیری رزولوشن و شکل خط — <span class="ltr-text">1H NMR</span> (به شکل <span class="ltr-text">1</span> مراجعه کنید)</h3>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه:</h4>
+        <p class="mb-2"><span class="ltr-text">1% chloroform in acetone-d6 (≥ 500 MHz), 3% chloroform in acetone-d6, degassed and sealed</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">عرض طیفی:</h4>
+        <p class="mb-2"><span class="ltr-text">< 1 KHz</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">زمان جمع‌آوری داده:</h4>
+        <p class="mb-2"><span class="ltr-text">NLT 10 s</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">زاویه تکرار:</h4>
+        <p class="mb-2"><span class="ltr-text">90°</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">زمان آسایش:</h4>
+        <p class="mb-2"><span class="ltr-text">60 s</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نرخ چرخش:</h4>
+        <p class="mb-2"><span class="ltr-text">Static or 20 Hz</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توالی پالس:</h4>
+        <p class="mb-2"><span class="ltr-text">Delay-pulse-acquire with no decoupling</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">پردازش:</h4>
+        <p class="mb-4"><span class="ltr-text">No line broadening, zero-filling to 128 k</span></p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شکل 1.</h4>
+        <p class="mb-4">طیف <span class="ltr-text">1H NMR</span> کلروفرم در استون-<span class="ltr-text">d6</span> که در <span class="ltr-text">400 MHz</span> به دست آمده است. پهنای خط اندازه‌گیری شده در <span class="ltr-text">0.55%</span> و <span class="ltr-text">0.11%</span> ماهواره‌های <span class="ltr-text">13C</span> به ترتیب <span class="ltr-text">2.7</span> و <span class="ltr-text">5.5 Hz</span> بود.</p>
+        <p class="mb-4">مگنت را با توجه ویژه به شیم‌های خارج از محور، شیم کنید، یک بار جمع‌آوری داده را انجام دهید، فاز را به جذب خالص تنظیم کنید، و پهنای خط را در <span class="ltr-text">50%</span>، <span class="ltr-text">0.55%</span> و <span class="ltr-text">0.11%</span> از حداکثر شدت اندازه‌گیری کنید. پهنای خط باید در این موقعیت‌ها از مشخصات عبور کند، و علاوه بر این، شکل خط باید لورنتزی باشد. در طیف‌سنج‌های <span class="ltr-text">NMR</span> مدرن، شکل خط اغلب بر روی نمونه‌ای بدون چرخش به دست می‌آید زیرا شیم‌های خارج از محور را می‌توان به قدری خوب تنظیم کرد که اساساً تفاوتی بین طیف‌های به دست آمده با چرخش و بدون چرخش وجود ندارد. علاوه بر این، طیف‌های دو بعدی باید بر روی یک نمونه ساکن به دست آیند.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">اندازه‌گیری‌های <span class="ltr-text">S/N</span> — <span class="ltr-text">1H NMR</span> (به شکل <span class="ltr-text">2</span> مراجعه کنید)</h3>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه:</h4>
+        <p class="mb-2"><span class="ltr-text">0.1% ethylbenzene in chloroform-d, 1% ethylbenzene in chloroform-d (< 200 MHz) degassed and sealed</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">عرض طیفی:</h4>
+        <p class="mb-2"><span class="ltr-text">10 ppm</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">زمان جمع‌آوری داده:</h4>
+        <p class="mb-2"><span class="ltr-text">400 ms</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">زاویه تکرار:</h4>
+        <p class="mb-2"><span class="ltr-text">90°</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تأخیر آسایش:</h4>
+        <p class="mb-2"><span class="ltr-text">60 s</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نرخ چرخش:</h4>
+        <p class="mb-2"><span class="ltr-text">0 or approximately 20 Hz</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توالی پالس:</h4>
+        <p class="mb-2"><span class="ltr-text">Delay-pulse-acquire with no decoupling</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">پردازش:</h4>
+        <p class="mb-2"><span class="ltr-text">Exponential with 1-Hz line broadening</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مرجع‌دهی:</h4>
+        <p class="mb-4"><span class="ltr-text">Tetramethylsilane (TMS) = 0.0 ppm or the center of the quartet = 2.65 ppm</span></p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شکل 2.</h4>
+        <p class="mb-4">طیف <span class="ltr-text">1H NMR</span> اتیل‌بنزن <span class="ltr-text">0.1%</span> که در <span class="ltr-text">400 MHz</span> با نسبت <span class="ltr-text">S/N</span> <span class="ltr-text">550:1</span> به دست آمده است.</p>
+        <p class="mb-4">غلظت اتیل‌بنزن باید به گونه‌ای انتخاب شود که مشخصات نسبت <span class="ltr-text">S/N</span> در محدوده <span class="ltr-text">20–1000</span> حاصل شود. غلظت‌هایی که معمولاً منجر به اندازه‌گیری‌هایی خارج از این محدوده می‌شوند، در ارزیابی عملکرد دستگاه کاربرد محدودی دارند. با این حال، محلول‌های استاندارد تثبیت شده به طور معمول استفاده می‌شوند. مگنت باید تا حد امکان شیم شود. در حالت ایده‌آل، این آزمایش باید بلافاصله پس از آزمایش شکل خط انجام شود زیرا بیشتر شیم‌ها تقریباً حداکثر شده‌اند. یک بار جمع‌آوری داده را انجام دهید، طیف را در حالت جذب خالص فازبندی کنید و نسبت <span class="ltr-text">S/N</span> کوارتت اتیل‌بنزن را اندازه‌گیری کنید. این آزمایش را می‌توان با یا بدون چرخش نمونه انجام داد. با یک نمونه در حال چرخش، مقدار <span class="ltr-text">S/N</span> اندازه‌گیری شده تنها باید حدود <span class="ltr-text">10%</span> بیشتر از مقداری باشد که با یک نمونه بدون چرخش به دست می‌آید، اگر شیم‌های خارج از محور به خوبی تنظیم شده باشند. نسبت بالاتر نشان می‌دهد که تعیین از شیم‌بندی بیشتر با شیم‌های خارج از محور بهره‌مند خواهد شد.</p>
+        <p class="mb-4">اکثر طیف‌سنج‌های مدرن دارای نرم‌افزارهایی هستند که اندازه‌گیری <span class="ltr-text">S/N</span> را پس از شناسایی مناطق سیگنال و نویز توسط اپراتور انجام می‌دهند. محاسبات دستی نیز قابل انجام است. دامنه (<span class="ltr-text">A</span>) را از مرکز خط پایه تا قله بالاترین خط از دو خط مرکزی در کوارتت اندازه‌گیری کنید. ارتفاع نویز قله به قله (<span class="ltr-text">H</span>) را از پایین‌ترین قله نویز تا بالاترین قله نویز در منطقه <span class="ltr-text">3–5 ppm</span> اندازه‌گیری کنید. نویز را می‌توان به صورت عمودی با یک عامل برای اندازه‌گیری دقیق طیف‌های <span class="ltr-text">S/N</span> بالا ضرب کرد. نسبت <span class="ltr-text">S/N</span> را به شرح زیر محاسبه کنید:</p>
+        <div class="formula-display">
+            $$S/N = k \times 2.5 \times A/H \quad [1]$$
+        </div>
+        <p class="mb-4">که در آن <span class="ltr-text">k</span> عامل انبساط عمودی منطقه نویز مورد استفاده است. عامل <span class="ltr-text">2.5</span> نسبت <span class="ltr-text">S/N</span> قله به قله را به نویز ریشه میانگین مربع (<span class="ltr-text">rms</span>) تبدیل می‌کند که یک روش استاندارد برای گزارش نسبت <span class="ltr-text">S/N</span> در طیف‌سنجی <span class="ltr-text">NMR</span> است. محاسبات کامپیوتری <span class="ltr-text">S/N</span> می‌توانند استفاده شوند مشروط بر اینکه مشخصات با همان رویه تنظیم و آزمایش شوند. به تشخیص طیف‌سنج، مقدار <span class="ltr-text">S/N</span> کمتر از آنچه توسط سازنده مشخص شده است، ممکن است استفاده شود اگر برای کاربرد فعلی کافی تشخیص داده شود.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">اندازه‌گیری‌های <span class="ltr-text">S/N</span> — <span class="ltr-text">13C NMR</span> (به شکل <span class="ltr-text">3</span> مراجعه کنید)</h3>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه:</h4>
+        <p class="mb-2"><span class="ltr-text">40% p-dioxane in benzene-d6 (v/v) (degassed and sealed)</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">عرض طیفی:</h4>
+        <p class="mb-2"><span class="ltr-text">Approximately 200 ppm</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">زاویه تکرار:</h4>
+        <p class="mb-2"><span class="ltr-text">90°</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تأخیر آسایش:</h4>
+        <p class="mb-2"><span class="ltr-text">300 s</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نرخ چرخش:</h4>
+        <p class="mb-2"><span class="ltr-text">Approximately 20 Hz</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توالی پالس:</h4>
+        <p class="mb-2"><span class="ltr-text">Delay-pulse-acquire with no decoupling</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">پردازش:</h4>
+        <p class="mb-2"><span class="ltr-text">Exponential with 3.5-Hz line broadening, zero-filling to 32k</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مرجع‌دهی:</h4>
+        <p class="mb-4"><span class="ltr-text">TMS = 0.0 ppm or the center of the benzene triplet = 128.4 ppm</span></p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شکل 3.</h4>
+        <p class="mb-4">طیف <span class="ltr-text">13C NMR</span> استاندارد <span class="ltr-text">ASTM 40% p-dioxane</span> در بنزن-<span class="ltr-text">d6 (v/v)</span> که در <span class="ltr-text">100.6 MHz</span> با نسبت <span class="ltr-text">S/N</span> <span class="ltr-text">140:1</span> به دست آمده است.</p>
+        <p class="mb-4">با یک مگنت به خوبی شیم شده، یک بار جمع‌آوری داده را پس از حداقل تأخیر <span class="ltr-text">300 s</span> انجام دهید، طیف را در حالت جذب خالص فازبندی کنید، و ارتفاع تریپلت بنزن را در تقریباً <span class="ltr-text">128.4 ppm</span> از مرکز خط پایه اندازه‌گیری کنید. نویز قله به قله را می‌توان همانند بالا با انبساط عمودی مناسب در محدوده <span class="ltr-text">80–120 ppm</span> اندازه‌گیری کرد. محاسبات <span class="ltr-text">S/N</span> را می‌توان مانند معادله <span class="ltr-text">1</span> یا با محاسبه کامپیوتری انجام داد.</p>
+        <p class="mb-4">تریپلت بنزن-<span class="ltr-text">d6</span> فاقد افزایش اورهاوزر هسته‌ای (<span class="ltr-text">NOE</span>) است. در نتیجه، این آزمایش تنها عملکرد کانال <span class="ltr-text">13C</span> را تأیید می‌کند.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">عملکرد هر دو کانال <span class="ltr-text">13C</span> و <span class="ltr-text">1H</span> (به شکل <span class="ltr-text">4</span> مراجعه کنید)</h3>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه:</h4>
+        <p class="mb-2"><span class="ltr-text">up to 10% ethylbenzene in chloroform-d (degassed and sealed)</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">عرض طیفی:</h4>
+        <p class="mb-2"><span class="ltr-text">200 ppm</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">طول جمع‌آوری داده:</h4>
+        <p class="mb-2"><span class="ltr-text">64k points</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">زاویه تکرار:</h4>
+        <p class="mb-2"><span class="ltr-text">90°</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تأخیر آسایش:</h4>
+        <p class="mb-2"><span class="ltr-text">300 s</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نرخ چرخش:</h4>
+        <p class="mb-2"><span class="ltr-text">Approximately 20 Hz</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توالی پالس:</h4>
+        <p class="mb-2"><span class="ltr-text">Delay-pulse-acquire with composite pulse decoupling set to the center of the 1H spectrum</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">پردازش:</h4>
+        <p class="mb-2"><span class="ltr-text">Exponential with 0.3-Hz line-broadening</span></p>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مرجع‌دهی:</h4>
+        <p class="mb-4"><span class="ltr-text">TMS = 0.0 ppm or the center of the chloroform-d, triplet = 77.23 ppm</span></p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شکل 4.</h4>
+        <p class="mb-4">طیف <span class="ltr-text">13C NMR</span> اتیل‌بنزن <span class="ltr-text">10%</span> که با استفاده از یک پروب دوگانه <span class="ltr-text">1H/13C</span> خنک‌شده با سرما در <span class="ltr-text">150.9 MHz</span> و نسبت <span class="ltr-text">S/N</span> <span class="ltr-text">640:1</span> به دست آمده است.</p>
+        <p class="mb-4">شیم‌بندی باید برای گذراندن آزمایش‌های رزولوشن و شکل خط که در بالا توضیح داده شد، کافی باشد. اندازه‌گیری <span class="ltr-text">S/N</span> از ارتفاع قله رزونانس بزرگتر از دو قله نزدیک <span class="ltr-text">128 ppm</span> انجام می‌شود. نویز همانند بالا در ناحیه <span class="ltr-text">80–120 ppm</span> با انبساط عمودی مناسب اندازه‌گیری می‌شود. <span class="ltr-text">S/N</span> توسط کامپیوتر یا همانند معادله <span class="ltr-text">1</span> محاسبه می‌شود.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">اندازه‌گیری‌های رلاکومتری — <span class="ltr-text">NMR</span> میدان پایین (<span class="ltr-text">LF-NMR</span>)</h3>
+        <p class="mb-4"><span class="ltr-text">PQ</span> باید قبل از جمع‌آوری داده‌های تجربی انجام شود.</p>
+        <p class="mb-4">مقدار دقیق وزن شده‌ای از تتراهیدرات منگنز (<span class="ltr-text">II</span>) کلرید (<span class="ltr-text">MW 197.91</span>) را در آب حل کرده و به صورت کمی با آب رقیق کنید تا محلول‌های بررسی با غلظت‌های شناخته شده <span class="ltr-text">0.9</span>، <span class="ltr-text">2.7</span> و <span class="ltr-text">4.5 mM</span> به دست آید.</p>
+        <p class="mb-4">بخشی از هر یک از محلول‌ها را در نگهدارنده‌های نمونه مناسب برای پیکربندی مدل خاص طیف‌سنج <span class="ltr-text">LF-NMR</span> قرار دهید. تا <span class="ltr-text">40°</span> به مدت حداقل <span class="ltr-text">10 min</span> گرم کنید و زمان آسایش اسپین-شبکه (<span class="ltr-text">T1</span>) آب را اندازه‌گیری کنید. میانگین <span class="ltr-text">T1</span> برای اندازه‌گیری‌های تکراری باید در محدوده <span class="ltr-text">5%</span> از <span class="ltr-text">156</span>، <span class="ltr-text">52</span> و <span class="ltr-text">32 ms</span> برای محلول‌های <span class="ltr-text">0.9</span>، <span class="ltr-text">2.7</span> و <span class="ltr-text">4.5 mM</span> باشد.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">مشخصه‌سازی عملکرد دستگاه</h3>
+        <p class="mb-4">رویه‌های خاص، معیارهای پذیرش، و بازه‌های زمانی برای مشخصه‌سازی عملکرد طیف‌سنج <span class="ltr-text">NMR</span> به دستگاه و کاربرد مورد نظر آن بستگی دارد. بسیاری از کاربردهای <span class="ltr-text">NMR</span> از آزمایش‌های قبلاً تأیید شده‌ای استفاده می‌کنند که طیف‌های <span class="ltr-text">NMR</span> را به یک خاصیت فیزیکی یا شیمیایی مورد علاقه مرتبط می‌کنند. عملکرد پایدار دستگاه در دوره‌های زمانی طولانی باید نشان داده شود. این عمل اطمینان می‌دهد که اندازه‌گیری‌های قابل اعتماد را می‌توان از طیف‌های نمونه با استفاده از آزمایش‌های <span class="ltr-text">NMR</span> قبلاً تأیید شده انجام داد.</p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">آنالیز <span class="ltr-text">NMR</span> کیفی و کمی</h2>
+        <p class="mb-4">طیف‌سنجی <span class="ltr-text">NMR</span> برای طیف گسترده‌ای از کاربردها مانند تعیین ساختار؛ مطالعات ترمودینامیکی، سینتیکی و مکانیکی؛ و آنالیز کمی استفاده شده است. برخی از این کاربردها فراتر از دامنه روش‌های فارماکوپه‌ای هستند. تمام مشخصات سیگنال—تغییر شیمیایی، چندگانگی، پهنای خط، ثابت‌های کوپلینگ، شدت نسبی و زمان آسایش—اطلاعات تحلیلی را ارائه می‌دهند.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">کاربردهای کیفی</h3>
+        <p class="mb-4">مقایسه طیف از ادبیات یا از یک استاندارد معتبر با طیف یک نمونه آزمایشی می‌تواند برای تأیید هویت یک ترکیب و تشخیص وجود ناخالصی‌هایی که سیگنال‌های اضافی تولید می‌کنند، استفاده شود. طیف‌های <span class="ltr-text">NMR</span> ساختارهای ساده را می‌توان به طور کافی با مقدار تغییرات شیمیایی و ثابت‌های کوپلینگ و با تعداد نسبی هسته‌هایی که توسط انتگرال هر سیگنال نمایش داده می‌شوند، توصیف کرد. (نرم‌افزار دستگاه‌های مدرن دارای برنامه‌هایی است که طیف‌های شبیه‌سازی شده را با استفاده از این داده‌ها تولید می‌کنند.) جزئیات تجربی، مانند حلال مورد استفاده و مرجع تغییر شیمیایی، نیز باید ارائه شود.</p>
+        <p class="mb-4">برای نمونه‌های ناشناخته، آنالیز <span class="ltr-text">NMR</span>، که معمولاً با سایر تکنیک‌های تحلیلی همراه است، ابزاری قدرتمند برای تعیین ساختار است. تغییرات شیمیایی اطلاعاتی در مورد محیط شیمیایی هسته‌ها فراهم می‌کنند. ادبیات گسترده‌ای با نمودارهای همبستگی و قوانینی برای پیش‌بینی تغییرات شیمیایی در دسترس است. چندگانگی سیگنال‌ها اطلاعات ساختاری مهمی را ارائه می‌دهد. بزرگی ثابت کوپلینگ اسکالر، <span class="ltr-text">J</span>، بین پروتون‌های باقیمانده بر روی ساختارهای آروماتیک، اولفینی یا سیکلوآلکیل جانشین شده برای شناسایی موقعیت نسبی جانشین‌ها استفاده می‌شود. طیف‌های روتین <span class="ltr-text">13C</span> تحت شرایط دکوپلینگ پروتون به دست می‌آیند که تمام کوپلینگ‌های هتروهسته‌ای <span class="ltr-text">13C-1H</span> را حذف می‌کنند. در نتیجه این دکوپلینگ، سیگنال‌های کربن به صورت سینگلت ظاهر می‌شوند، مگر اینکه هسته‌های دیگری که دکوپله نشده‌اند (مانند <span class="ltr-text">19F</span>، <span class="ltr-text">31P</span>) وجود داشته باشند.</p>
+        <p class="mb-4">تبادل شیمیایی نمونه‌ای از اثر فرآیندهای نرخ بین مولکولی و درون مولکولی بر طیف‌های <span class="ltr-text">NMR</span> است. اگر یک پروتون بتواند محیط‌های مختلفی را به واسطه چنین فرآیندی (تاتومری، چرخش حول یک پیوند، تعادلات تبادل، وارونگی حلقه و غیره) تجربه کند، ظاهر طیف تابعی از نرخ فرآیند خواهد بود. فرآیندهای آهسته (در مقیاس زمانی <span class="ltr-text">NMR</span>) منجر به بیش از یک سیگنال از گونه‌های در حال تبدیل می‌شوند؛ فرآیندهای سریع این سیگنال‌ها را به یک خط میانگین‌گیری می‌کنند؛ و فرآیندهای متوسط سیگنال‌های پهن تولید می‌کنند که گاهی اوقات به راحتی در طیف‌ها یافت نمی‌شوند.</p>
+        <p class="mb-4">نرم‌افزار طیف‌سنج‌های <span class="ltr-text">FT-NMR</span> مدرن امکان توالی پالس‌های بسیار پیچیده‌تر از تجمع تکراری گذراهایی که در بالا توضیح داده شد را فراهم می‌کند. چنین آزمایش‌هایی شامل آنالیز چند بعدی هم‌هسته‌ای یا هتروهسته‌ای است که همبستگی کوپلینگ‌ها را تعیین می‌کند و ممکن است تفسیر طیف‌های پیچیده را ساده کند. برای توضیحات دقیق آزمایش‌های دو بعدی رایج، به فصل <a href="1761.html" class="text-blue-600 hover:underline" target="_blank">1761</a> مراجعه کنید.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">کاربردهای کمی</h3>
+        <ol class="list-decimal list-inside mr-4 mb-4">
+            <li class="mb-2">ملاحظات کلی <span class="ltr-text">NMR</span> کمی: به <a href="1761.html" class="text-blue-600 hover:underline" target="_blank">1761</a> مراجعه کنید.</li>
+            <li class="mb-2">دامنه این بخش محدود به کمی‌سازی با <span class="ltr-text">NMR</span> تک بعدی است. اگرچه هر یک از هسته‌های فعال <span class="ltr-text">NMR</span> را می‌توان برای به دست آوردن داده‌های کمی استفاده کرد، بحث اینجا محدود به <span class="ltr-text">1H</span> خواهد بود. دو نوع کمی‌سازی با <span class="ltr-text">NMR</span> وجود دارد: نسبی و مطلق.
+                <ol class="list-decimal list-inside mr-4 mt-2">
+                    <li class="mb-2">کمی‌سازی نسبی شامل اندازه‌گیری مقادیر نسبی گونه‌ها در یک نمونه بر اساس انتگرال‌گیری از پیک‌های مربوط به هر یک از اجزای اندازه‌گیری شده است. انتگرال‌ها با فاکتور <span class="ltr-text">N</span> نرمالیزه می‌شوند، یعنی انتگرال بر تعداد هسته‌های معادل که توسط آن پیک نمایش داده می‌شوند تقسیم می‌شود تا غلظت مولار نسبی هر جزء را بدهد.</li>
+                    <li class="mb-2">کمی‌سازی مطلق، اندازه‌گیری مستقیم مقدار واقعی آنالیت مستقل از سایر اجزای موجود در آن نمونه است. دو روش اساسی برای کمی‌سازی مطلق بر اساس نوع استاندارد مرجعی که برای کالیبره کردن سیگنال <span class="ltr-text">NMR</span> استفاده می‌شود، وجود دارد.
+                        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">الف. استاندارد مرجع داخلی</h4>
+                        <ol class="list-[upper-roman] list-inside mr-4 mt-2">
+                            <li class="mb-2">تعریف: استاندارد مرجع به طور همزمان در محلول آزمایشی آنالیت حل می‌شود.</li>
+                            <li class="mb-2">روش کار
+                                <p class="mb-2">آماده‌سازی محلول <span class="ltr-text">NMR</span> معمولی: یک محلول <span class="ltr-text">NMR</span> با وزن‌های دقیق هم آنالیت و هم استاندارد مرجع تهیه می‌شود. بزرگترین منبع خطا در این روش <span class="ltr-text">NMR</span> کمی از وزن‌کشی است، بنابراین استفاده از وزن‌های بیشتر برای به حداقل رساندن این خطا توصیه می‌شود. این روش کمی بر اساس مقایسه پیک‌های <span class="ltr-text">NMR</span> استاندارد مرجع و آنالیت و غلظت‌های مربوطه آن‌ها است. از آنجایی که آنالیت و استاندارد مرجع در یک محلول قرار دارند، آنالیت و استاندارد مرجع در یک حجم قرار دارند و فقط جرم‌های آن‌ها مقایسه می‌شوند. بنابراین، حجم دقیق مورد نیاز نیست. به طور معمول، حداقل سه تکرار تهیه می‌شود.</p>
+                                <p class="mb-2">جمع‌آوری داده: داده‌ها تحت شرایط کمی جمع‌آوری می‌شوند، به <a href="1761.html" class="text-blue-600 hover:underline" target="_blank">1761</a> مراجعه کنید. به عنوان مثال، زمان تکرار پالس باید حداقل <span class="ltr-text">5</span> برابر طولانی‌ترین <span class="ltr-text">T1</span> باشد وقتی از پالس <span class="ltr-text">90°</span> استفاده می‌شود.</p>
+                                <p class="mb-2">پردازش داده: داده‌ها را پردازش کنید، در صورت لزوم از <span class="ltr-text">zero-filling</span> استفاده کنید، به گونه‌ای که تعداد کافی از نقاط یک پیک را تعریف کنند. به عنوان مثال، تجربه نشان داده است که حداقل <span class="ltr-text">16</span> نقطه یک نمایش کمی خوب از یک پیک را ارائه می‌دهد.</p>
+                                <p class="mb-2">آنالیز: پیک‌های مناسب را انتگرال‌گیری کنید. به عنوان مثال، از استفاده از پیک‌هایی که همپوشانی دارند، یا به دلیل هیدروژن‌های قادر به تبادل هستند، خودداری کنید. تعیین مقدار آنالیت از تناسب اساسی بین شدت پیک و غلظت ماده حل شده ناشی می‌شود.</p>
+                                <p class="mb-2">که در آن <span class="ltr-text">I</span> = انتگرال؛ <span class="ltr-text">N</span> = عامل نرمال‌سازی؛ و <span class="ltr-text">[]1 H</span> = غلظت مولار نسبی <span class="ltr-text">1H</span> است، و زیرنویس‌های <span class="ltr-text">A</span> و <span class="ltr-text">RS</span> به ترتیب نشان‌دهنده آنالیت و استاندارد مرجع هستند.</p>
+                                <div class="formula-display">
+                                    $$(I_A / N_A) / (I_{RS} / N_{RS}) = [A]_{1H} / [RS]_{1H} \quad [2]$$
+                                </div>
+                                <p class="mb-2">بنابراین، جرم آنالیت طبق معادله زیر محاسبه می‌شود.</p>
+                                <div class="formula-display">
+                                    $$M_A = \frac{(I_A / N_A) \times P_{RS} \times MM_A \times M_{RS}}{ (I_{RS} / N_{RS}) \times MM_{RS} } \quad [3]$$
+                                </div>
+                                <p class="mb-2">که در آن <span class="ltr-text">M_A</span> = جرم آنالیت، <span class="ltr-text">MM</span> = جرم مولار، و <span class="ltr-text">P</span> = خلوص استاندارد مرجع است.</p>
+                            </li>
+                            <li class="mb-2">یک کاربرد رایج کمی‌سازی مطلق، تعیین خلوص یک نمونه است. درصد وزنی خلوص توسط
+                                <div class="formula-display">
+                                    $$Weight\ \% \ purity = (M_A / M_S) \times 100 \quad [4]$$
+                                </div>
+                                <p class="mb-2">که در آن <span class="ltr-text">M_S</span> جرم کل نمونه با مشارکت‌های آنالیت به علاوه هر آلاینده‌ای است که ممکن است در نمونه وجود داشته باشد مانند آب و نمک‌ها. با ترکیب معادلات <span class="ltr-text">3</span> و <span class="ltr-text">4</span>، درصد وزنی خلوص توسط</p>
+                                <div class="formula-display">
+                                    $$Weight\ \% \ purity = \frac{I_A / N_A \times P_{RS} \times MM_A \times M_{RS}}{(I_{RS} / N_{RS}) \times MM_{RS} \times M_S} \times 100 \quad [5]$$
+                                </div>
+                            </li>
+                        </ol>
+                        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ب. استاندارد مرجع خارجی</h4>
+                        <ol class="list-[upper-roman] list-inside mr-4 mt-2">
+                            <li class="mb-2">تعریف: روش کلاسیک استاندارد مرجع خارجی شامل محلول‌هایی از یک استاندارد مرجع و آنالیت است که هر یک در لوله‌های <span class="ltr-text">NMR</span> جداگانه قرار دارند. یک تغییر از استاندارد مرجع خارجی، محلول آزمایشی استانداردی است که در یک لوله کواکسیال قرار دارد و در یک محلول آزمایشی آنالیت موجود در لوله <span class="ltr-text">NMR</span> وارد می‌شود. تغییر دیگر، معرفی یک سیگنال تولید شده توسط کامپیوتر به طیف محلول استاندارد مرجع با غلظت شناخته شده برای کالیبره کردن پاسخ سیگنال (شدت در غلظت مولار <span class="ltr-text">1H</span>، در مورد <span class="ltr-text">1H NMR</span>)، و به دنبال آن درج آن سیگنال کالیبره شده تولید شده توسط کامپیوتر در طیف محلول آزمایشی آنالیت است. این بخش به استفاده از یک مرجع خارجی به معنای کلاسیک می‌پردازد.</li>
+                            <li class="mb-2">روش کار
+                                <p class="mb-2">آماده‌سازی محلول <span class="ltr-text">NMR</span>: محلول‌های <span class="ltr-text">NMR</span> با غلظت‌های شناخته شده از هر یک از آنالیت و استاندارد مرجع با استفاده از وزن‌ها و حجم‌های دقیق تهیه می‌شوند. مجدداً، استفاده از وزن‌های بیشتر برای به حداقل رساندن خطای وزن‌کشی توصیه می‌شود. به طور معمول، تکرارهایی از محلول‌های آنالیت و محلول‌های استاندارد مرجع تهیه می‌شوند. آنالیت و مرجع باید در یک حلال تهیه شوند تا تفاوت‌های تنظیم پروب به حداقل برسد.</p>
+                                <p class="mb-2">جمع‌آوری و پردازش داده: مشابه بخش <span class="ltr-text">II.B.1.b</span>، استاندارد مرجع داخلی. پارامترهای جمع‌آوری و پردازش یکسان را برای طیف‌های آنالیت و استاندارد مرجع اعمال کنید.</p>
+                                <p class="mb-2">آنالیز: پیک‌های مناسب را در طیف‌های آنالیت و استاندارد مرجع انتگرال‌گیری کنید. مقدار آنالیت طبق معادله زیر محاسبه می‌شود:</p>
+                                <div class="formula-display">
+                                    $$M_A = \frac{(I_A / N_A) \times P_{RS} \times MM_A \times M_{RS} \times V_A}{ (I_{RS} / N_{RS}) \times MM_{RS} \times V_{RS} } \quad [6]$$
+                                </div>
+                                <p class="mb-2">که در آن <span class="ltr-text">V</span> = حجم است.</p>
+                                <p class="mb-2">کاربرد برای درصد وزنی خلوص: مقادیر درصد وزنی خلوص ممکن است مشابه معادله <span class="ltr-text">5</span> محاسبه شوند.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="mb-2">روش‌های استاندارد مرجع داخلی و خارجی هر یک مزایا و معایب خاص خود را دارند.
+                        <ol class="list-[upper-alpha] list-inside mr-4 mt-2">
+                            <li class="mb-2">برهم‌کنش‌های شیمیایی: تهیه استاندارد مرجع و ماده آزمایشی در محلول‌های جداگانه از برهم‌کنش‌های شیمیایی بین نمونه آزمایشی و استاندارد مرجع که ممکن است در غیر این صورت با یک استاندارد مرجع داخلی رخ دهد، جلوگیری می‌کند.</li>
+                            <li class="mb-2">همپوشانی طیفی: استفاده از استاندارد مرجع خارجی همچنین از همپوشانی احتمالی بین پیک‌های استاندارد مرجع و نمونه آزمایشی که می‌تواند با یک استاندارد داخلی رخ دهد، جلوگیری می‌کند.</li>
+                            <li class="mb-2">کالیبراسیون: هنگامی که پاسخ <span class="ltr-text">NMR</span> با محلول‌های استاندارد مرجع خارجی کالیبره شد، این کالیبراسیون ممکن است برای هر نمونه دیگری در همان حلال اعمال شود، با این فرض که i) پایداری دستگاه در طول زمان بین انجام کالیبراسیون و جمع‌آوری داده‌ها بر روی ماده آزمایشی نشان داده شده باشد، ii) مناسب بودن سیستم در روزی که اندازه‌گیری بر روی ماده آزمایشی انجام می‌شود، برقرار شده باشد، و iii) انتگرال‌های مطلق مقایسه شوند. در مورد استانداردهای مرجع داخلی، اندازه‌گیری بر روی استاندارد مرجع و نمونه آزمایشی تحت شرایط کاملاً یکسان انجام می‌شود.</li>
+                            <li class="mb-2">دقت و صحت: چندین محلول استاندارد مرجع خارجی ممکن است برای میانگین‌گیری خطاها در اندازه‌گیری جرم و حجم در طول آماده‌سازی نمونه تهیه شوند، بدین ترتیب دقت پاسخ <span class="ltr-text">NMR</span> کالیبره شده بهبود می‌یابد. در مورد استانداردهای مرجع داخلی، اندازه‌گیری‌های تکی استاندارد مرجع و آنالیت برای هر محلول آزمایشی تکراری انجام می‌شود. خطاهای ترکیبی از اندازه‌گیری‌های جرم استاندارد مرجع و نمونه آزمایشی و همچنین تغییرات الکترونیکی دستگاهی، انحراف معیار میانگین <span class="ltr-text">M_A</span> یا مقادیر درصد وزنی خلوص را تعیین می‌کنند.</li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">اعتبارسنجی و تأیید رویه‌های آنالیز <span class="ltr-text">NMR</span></h2>
+        <p class="mb-4">اگر یک رویه <span class="ltr-text">NMR</span> در یک مونوگراف ارائه شده باشد، تأیید مناسب بودن (به <a href="1226.html" class="text-blue-600 hover:underline" target="_blank">1226</a> مراجعه کنید) تحت شرایط واقعی استفاده ضروری است. اعتبارسنجی تنها زمانی لازم است که یک روش <span class="ltr-text">NMR</span> جایگزینی برای رویه رسمی برای آزمایش یک مقاله رسمی باشد. هدف از اعتبارسنجی یک رویه متکی بر روش <span class="ltr-text">NMR</span>، نشان دادن این است که اندازه‌گیری برای هدف مورد نظر خود مناسب است، از جمله: تعیین کمی جزء اصلی در یک ماده دارویی یا یک محصول دارویی (آزمایش‌های دسته <span class="ltr-text">I</span>)، تعیین کمی ناخالصی‌ها (دسته <span class="ltr-text">II</span>)، و آزمایش‌های شناسایی (دسته <span class="ltr-text">IV</span>). [نکته—برای تعریفی از دسته‌های مختلف، به اعتبارسنجی رویه‌های فارماکوپه‌ای <a href="1225.html" class="text-blue-600 hover:underline" target="_blank">1225</a> مراجعه کنید.] بسته به دسته آزمایش، اعتبارسنجی رویه تحلیلی نیاز به آزمایش ویژگی، خطی بودن، دامنه، دقت، صحت، حد کمی‌سازی و پایایی دارد. این مشخصات عملکرد تحلیلی برای روش‌های استاندارد شده خارجی و روش افزودن استانداردها اعمال می‌شود.</p>
+        <p class="mb-4">فصل <a href="1225.html" class="text-blue-600 hover:underline" target="_blank">1225</a> تعاریف و راهنمایی‌های عمومی در مورد اعتبارسنجی رویه‌های تحلیلی را بدون نشان دادن معیارهای اعتبارسنجی خاص برای هر مشخصه ارائه می‌دهد. هدف بخش‌های زیر ارائه معیارهای اعتبارسنجی خاص به کاربر است که حداقل انتظارات برای این فناوری را نشان می‌دهد. برای هر کاربرد خاص، ممکن است معیارهای سخت‌گیرانه‌تری برای نشان دادن مناسب بودن برای استفاده مورد نظر لازم باشد.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">اعتبارسنجی رویه آنالیز</h3>
+        <p class="mb-4">هدف از اعتبارسنجی یک رویه تحلیلی، نشان دادن این است که رویه تحلیلی برای هدف مورد نظر خود مناسب است با انجام آزمایش‌ها و به دست آوردن نتایجی که معیارهای پذیرش از پیش تعریف شده را برآورده می‌کنند. رویه‌های آنالیز <span class="ltr-text">NMR</span> می‌توانند شامل موارد زیر باشند: آزمایش‌های کمی برای جزء اصلی و محتوای ناخالصی‌ها، آزمایش‌های حدی برای وجود ناخالصی‌ها، کمی‌سازی جزء در یک محصول یا فرمولاسیون، و/یا آزمایش‌های شناسایی.</p>
+        <p class="mb-4">مشخصات عملکردی که مناسب بودن یک رویه تحلیلی را نشان می‌دهند، مشابه مواردی هستند که برای هر رویه تحلیلی لازم است. بحثی در مورد اصول کلی قابل اجرا در فصل <a href="1225.html" class="text-blue-600 hover:underline" target="_blank">1225</a> یافت می‌شود. معیارهای پذیرش خاص برای هر پارامتر اعتبارسنجی باید با استفاده مورد نظر از رویه تحلیلی سازگار باشد.</p>
+        <p class="mb-4">مشخصات عملکردی که به عنوان بخشی از اعتبارسنجی برای هر یک از دسته‌های رویه تحلیلی مورد نیاز است، در زیر آورده شده است.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">ویژگی (<span class="ltr-text">Specificity</span>)</h3>
+        <p class="mb-4">هدف از آزمایش ویژگی، نشان دادن این است که اندازه‌گیری‌های سیگنال‌های آنالیت مورد نظر عاری از تداخل ناشی از اجزا و ناخالصی‌ها در ماده آزمایشی هستند. ویژگی ممکن است برای همه دسته‌ها اعمال شود و یک الزام برای دسته <span class="ltr-text">IV</span> است. آزمایش‌های ویژگی را می‌توان برای مقایسه طیف‌های <span class="ltr-text">NMR</span> سایر اجزا و ناخالصی‌هایی که از فرآیندهای سنتزی و فرمولاسیون‌ها و آماده‌سازی‌های آزمایشی شناخته شده‌اند، انجام داد. برای یک رویه آنالیز <span class="ltr-text">NMR</span> شناسایی (دسته <span class="ltr-text">IV</span>)، آزمایش‌های اعتبارسنجی ممکن است شامل آزمایش‌های <span class="ltr-text">NMR</span> چند بعدی برای اعتبارسنجی انتساب‌های صحیح تغییرات شیمیایی و تأیید ساختار آنالیت باشد.</p>
+        <p class="mb-4">معیارهای اعتبارسنجی: ویژگی با استفاده از یک استاندارد مرجع در هر کجا که ممکن باشد و عدم تداخل قابل اثبات از سایر اجزا تضمین می‌شود.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">خطی بودن (<span class="ltr-text">Linearity</span>)</h3>
+        <p class="mb-4">یک رابطه خطی بین غلظت آنالیت و پاسخ دستگاه نمایش داده می‌شود؛ این باید با اندازه‌گیری پاسخ‌های آنالیت از حداقل <span class="ltr-text">5</span> محلول استاندارد در غلظت‌هایی که محدوده غلظت پیش‌بینی شده آنالیت(ها) محلول آزمایشی را پوشش می‌دهند، نشان داده شود. برای دسته <span class="ltr-text">I</span>، محلول‌های استاندارد را می‌توان از مواد مرجع در یک حلال <span class="ltr-text">NMR</span> مناسب تهیه کرد. برای دسته <span class="ltr-text">II</span>، رویه‌های آنالیز <span class="ltr-text">NMR</span> که برای کمی‌سازی ناخالصی‌ها استفاده می‌شوند، نمونه‌های خطی بودن را می‌توان با افزودن مقادیر مشخص آنالیت به نمونه‌های آزمایشی مناسب که حاوی مقادیر کمی از آنالیت هستند یا با افزودن مقادیر مشخص به نمونه‌های ماتریکس در غلظت‌های محدوده مورد انتظار تهیه کرد. منحنی استاندارد باید با استفاده از رویه‌های آماری تحلیلی مناسب مانند رگرسیون حداقل مربعات ساخته شود. ضریب همبستگی (<span class="ltr-text">R</span>)، عرض از مبدأ <span class="ltr-text">y</span> و شیب خط رگرسیون باید تعیین شوند. مقادیر مطلقی که برای این عوامل تعیین می‌شوند باید برای رویه مورد اعتبارسنجی مناسب باشند.</p>
+        <p class="mb-4">معیارهای اعتبارسنجی: ضریب همبستگی (<span class="ltr-text">R</span>) باید حداقل <span class="ltr-text">0.995</span> برای آزمایش‌های دسته <span class="ltr-text">I</span> و حداقل <span class="ltr-text">0.99</span> برای آزمایش‌های کمی دسته <span class="ltr-text">II</span> باشد.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">دامنه (<span class="ltr-text">Range</span>)</h3>
+        <p class="mb-4">دامنه بین غلظت‌های پایین و بالا آنالیت توسط رویه آنالیز <span class="ltr-text">NMR</span> کمی داده می‌شود. این معمولاً بر اساس مشخصات مقاله آزمایشی در مونوگراف <span class="ltr-text">USP</span> است. این دامنه‌ای است که در آن رویه تحلیلی می‌تواند درجه قابل قبولی از خطی بودن، دقت و صحت را نشان دهد و ممکن است از ارزیابی آن رویه تحلیلی به دست آید. دامنه‌های توصیه شده برای رویه‌های آنالیز <span class="ltr-text">NMR</span> مختلف در زیر آورده شده است.</p>
+        <p class="mb-4">معیارهای اعتبارسنجی: برای آزمایش‌های دسته <span class="ltr-text">I</span>، دامنه اعتبارسنجی برای معیارهای پذیرش متمرکز <span class="ltr-text">100.0%</span>، <span class="ltr-text">80.0%–120.0%</span> است. برای معیارهای پذیرش غیرمتمرکز، دامنه اعتبارسنجی <span class="ltr-text">10.0%</span> زیر حد پایین تا <span class="ltr-text">10.0%</span> بالای حد بالا است. برای یکنواختی محتوا، <span class="ltr-text">70.0%–130.0%</span> است. برای آزمایش‌های کمی دسته <span class="ltr-text">II</span>، دامنه اعتبارسنجی <span class="ltr-text">50.0%–120.0%</span> از معیارهای پذیرش را پوشش می‌دهد.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">دقت (<span class="ltr-text">Accuracy</span>)</h3>
+        <p class="mb-4">دقت یک رویه آنالیز <span class="ltr-text">NMR</span> کمی باید در سراسر دامنه تحلیلی مورد نیاز تعیین شود. به طور معمول، سه سطح از غلظت‌ها با استفاده از آماده‌سازی‌های سه تایی در هر سطح ارزیابی می‌شوند.</p>
+        <p class="mb-4">برای آزمایش‌های ماده دارویی (دسته <span class="ltr-text">I</span>)، دقت را می‌توان با آنالیز یک استاندارد مرجع با خلوص شناخته شده تعیین کرد. برای محصول دارویی (دسته <span class="ltr-text">I</span>)، یک نمونه ترکیبی از استاندارد مرجع و سایر اجزا در یک محصول دارویی نهایی باید برای اعتبارسنجی رویه تحلیلی استفاده شود. نتایج آزمایش با مقدار نظری استاندارد مرجع مقایسه می‌شود تا خطاها یا درصد بازیابی تخمین زده شود. برای کمی‌سازی ناخالصی‌ها (دسته <span class="ltr-text">II</span>)، دقت رویه تحلیلی را می‌توان با انجام مطالعات با مواد دارویی یا محصولاتی که با غلظت‌های شناخته شده آنالیت مورد آزمایش افزوده‌شده‌اند، تعیین کرد. همچنین قابل قبول است که نتایج آزمایش از رویه تحلیلی در حال اعتبارسنجی با نتایج یک رویه تحلیلی جایگزین و تثبیت شده مقایسه شود.</p>
+        <p class="mb-4">معیارهای اعتبارسنجی: <span class="ltr-text">98.0%–102.0%</span> بازیابی برای مواد دارویی، <span class="ltr-text">95.0%–105.0%</span> بازیابی برای آزمایش محصول نهایی دارویی ترکیبی، و <span class="ltr-text">80.0%–120.0%</span> بازیابی برای آنالیز کمی ناخالصی. این معیارها باید در سراسر دامنه مورد نظر برآورده شوند.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">صحت (<span class="ltr-text">Precision</span>)</h3>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تکرارپذیری (<span class="ltr-text">Repeatability</span>)</h4>
+        <p class="mb-4">رویه تحلیلی باید با اندازه‌گیری غلظت شش محلول استاندارد جداگانه در <span class="ltr-text">100%</span> غلظت آزمایشی ارزیابی شود. انحراف استاندارد نسبی از اندازه‌گیری‌های تکراری باید برای برآورده کردن معیارهای پذیرش ارزیابی شود. به صورت جایگزین، می‌توانند غلظت سه تکرار از سه محلول نمونه جداگانه در غلظت‌های مختلف را اندازه‌گیری کنند. سه غلظت باید به اندازه‌ای نزدیک باشند که تکرارپذیری در سراسر محدوده غلظت ثابت باشد. در این صورت، تکرارپذیری در سه غلظت برای مقایسه با معیارهای پذیرش جمع‌آوری می‌شود.</p>
+        <p class="mb-4">معیارهای اعتبارسنجی: انحراف استاندارد نسبی برای مواد دارویی حداکثر <span class="ltr-text">1.0%</span>، برای محصولات نهایی دارویی ترکیبی حداکثر <span class="ltr-text">2.0%</span>، و برای آنالیز کمی ناخالصی حداکثر <span class="ltr-text">20.0%</span> است.</p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">صحت میانی (<span class="ltr-text">Intermediate Precision</span>)</h4>
+        <p class="mb-4">تأثیر رویدادهای تصادفی بر صحت تحلیلی رویه آنالیز باید مشخص شود. متغیرهای معمول شامل انجام آنالیز در روزهای مختلف، استفاده از ابزار دقیق متفاوت که طبق رویه آنالیز مناسب هستند، و/یا انجام رویه آنالیز توسط دو یا چند آنالیست است. حداقل، هر ترکیبی از حداقل دو عامل از این عوامل که مجموعاً شش آزمایش را شامل شود، تخمینی از صحت میانی را ارائه خواهد داد.</p>
+        <p class="mb-4">معیارهای اعتبارسنجی: انحراف استاندارد نسبی برای مواد دارویی حداکثر <span class="ltr-text">1.0%</span>، برای محصولات نهایی دارویی ترکیبی حداکثر <span class="ltr-text">3.0%</span>، و برای آنالیز کمی ناخالصی حداکثر <span class="ltr-text">25.0%</span> است.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">حد کمی‌سازی (<span class="ltr-text">QL</span>)</h3>
+        <p class="mb-4"><span class="ltr-text">QL</span> را می‌توان با اندازه‌گیری شش تکرار از نمونه‌های آزمایشی که با آنالیت در <span class="ltr-text">50%</span> از مشخصات افزوده‌شده‌اند، اعتبارسنجی کرد. از این تکرارها، دقت و صحت قابل تعیین است. نمونه‌هایی از مشخصات برای تعیین کمی دسته <span class="ltr-text">II</span> این است که غلظت اندازه‌گیری شده در محدوده <span class="ltr-text">70.0%–130.0%</span> از غلظت افزوده شده باشد و انحراف استاندارد نسبی حداکثر <span class="ltr-text">15%</span> باشد.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">پایایی (<span class="ltr-text">Robustness</span>)</h3>
+        <p class="mb-4">قابلیت اطمینان یک اندازه‌گیری تحلیلی باید با تغییرات عمدی در پارامترهای تجربی حیاتی نشان داده شود. این می‌تواند شامل اندازه‌گیری پایداری آنالیت تحت شرایط نگهداری مشخص، تأخیر بین پالسی با تغییرات جزئی، دمای پروب، و گونه‌های تداخلی احتمالی باشد، تا چند نمونه را نام ببریم. پایایی برای روش‌های کمی دسته <span class="ltr-text">I</span> و دسته <span class="ltr-text">II</span> مورد نیاز است.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">تأیید رویه آنالیز</h3>
+        <p class="mb-4">مقررات فعلی رویه‌های خوب تولید <span class="ltr-text">U.S.</span> [<span class="ltr-text">21 CFR 211.194(a)(2)</span>] نشان می‌دهد که کاربران رویه‌های تحلیلی توصیف شده در <span class="ltr-text">USP–NF</span> نیازی به اعتبارسنجی این رویه‌ها ندارند اگر در یک مونوگراف ارائه شده باشند. در عوض، آنها باید صرفاً مناسب بودن آنها را تحت شرایط واقعی استفاده تأیید کنند.</p>
+        <p class="mb-4">هدف از تأیید یک رویه <span class="ltr-text">NMR</span> نشان دادن این است که رویه همانطور که در یک مونوگراف خاص تجویز شده است، می‌تواند توسط کاربر با دقت، ویژگی و صحت مناسب با استفاده از ابزار، آنالیست‌ها و ماتریس‌های نمونه موجود اجرا شود. طبق فصل اطلاعات عمومی تأیید رویه‌های فارماکوپه‌ای <a href="1226.html" class="text-blue-600 hover:underline" target="_blank">1226</a>، اگر تأیید رویه فارماکوپه‌ای با پیروی از مونوگراف موفقیت‌آمیز نباشد، رویه ممکن است برای استفاده با مقاله تحت آزمایش مناسب نباشد. ممکن است لازم باشد یک رویه جایگزین توسعه و اعتبارسنجی شود، همانطور که در اطلاعیه‌های عمومی، <span class="ltr-text">6.30</span> روش‌ها و رویه‌های جایگزین و هماهنگ مجاز است.</p>
+        <p class="mb-4">تأیید یک رویه <span class="ltr-text">NMR</span> فارماکوپه‌ای باید حداقل شامل اجرای پارامترهای اعتبارسنجی برای ویژگی، دقت، صحت، و حد کمی‌سازی، در صورت لزوم، همانطور که در این بخش نشان داده شده است، باشد.</p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">واژه‌نامه</h2>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">استاندارد داخلی</h3>
+        <p class="mb-4">استاندارد داخلی (<span class="ltr-text">IS</span>) ماده‌ای است که با غلظت شناخته شده به محلول نمونه اضافه می‌شود. باید <span class="ltr-text">IS</span> ای انتخاب شود که حداقل یک رزونانس <span class="ltr-text">NMR</span> تکی داشته باشد که با رزونانس‌های آنالیت همپوشانی نداشته باشد. نسبت مساحت پیک استاندارد داخلی خاص و مساحت پیک آنالیت برای تعیین غلظت آنالیت استفاده می‌شود. تعداد هسته‌های مربوط به پیک‌های انتگرال‌گیری شده در طیف‌های <span class="ltr-text">IS</span> و آنالیت باید مشخص باشد.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">مرجع <span class="ltr-text">NMR</span></h3>
+        <p class="mb-4">مرجع <span class="ltr-text">NMR</span>، که به عنوان مرجع شیفت <span class="ltr-text">NMR</span> نیز شناخته می‌شود، ماده‌ای است که به یک نمونه اضافه می‌شود و از آن تغییر شیمیایی برای مقیاس <span class="ltr-text">δ</span> تعیین می‌شود. نمونه‌های رایج برای آنالیزهای <span class="ltr-text">NMR</span> پروتون و کربن، تترامتیل‌سیلان (<span class="ltr-text">TMS</span>) برای استفاده در حلال‌های آلی و نمک سدیم <span class="ltr-text">2,2-dimethyl-2-silapentane-5-sulfonic acid (DSS)</span> یا <span class="ltr-text">sodium-3-trimethylsilylpropionate (TMSP)</span> برای استفاده در محیط‌های آبی هستند. در هر دو مورد، تغییر شیمیایی پیک‌های متیل به عنوان <span class="ltr-text">0.0 ppm</span> تعریف می‌شود.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">استاندارد مرجع</h3>
+        <p class="mb-4">استاندارد مرجع ماده‌ای است که با ابزارهای تجربی مناسب برای داشتن یک ساختار شیمیایی خاص تأیید شده است. در طیف‌سنجی <span class="ltr-text">NMR</span>، یک استاندارد مرجع معمولاً برای آنالیز کیفی یک ماده آزمایشی استفاده می‌شود. ساختار را می‌توان تأیید کرد اگر کسی تغییرات شیمیایی و چندگانگی پیک‌ها را در طیف <span class="ltr-text">NMR</span> ماده آزمایشی مستقیماً با طیف استاندارد مرجع که تحت شرایط تجربی مشابه به دست آمده است، مقایسه کند.</p>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>روش‌های ارزیابی عملکرد افکتور میانجی‌گری شده توسط قطعه کریستال‌شونده (Fc)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">روش‌های ارزیابی عملکرد افکتور میانجی‌گری شده توسط قطعه کریستال‌شونده (<span class="ltr-text">Fc</span>)</h1>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">پیش‌زمینه</h3>
+        <p class="mb-4">
+            روش‌های درمانی مانند آنتی‌بادی‌ها و مولکول‌های همجوشی قطعه کریستال‌شونده (<span class="ltr-text">Fc</span>) اغلب با یک ایزوتایپ و زیرگروه ایمونوگلوبولین <span class="ltr-text">G</span> (<span class="ltr-text">IgG</span>) خاص مهندسی می‌شوند تا قابلیت‌های ویژه‌ای مانند افزایش نیمه‌عمر یا القای فعالیت سیتوتوکسیک را فراهم کنند. از طرف دیگر، ممکن است یک ایزوتایپ و زیرگروه خاص برای کاهش یا تخفیف القای احتمالی فعالیت‌های بیولوژیکی ناخواسته انتخاب شود. این روش‌ها دارای دامنه‌های ساختار/عملکرد مشخصی هستند که مزیت درمانی را ایجاد می‌کنند.
+        </p>
+        <p class="mb-4">
+            آزمایش‌های <span class="ltr-text">in vitro</span> که تعاملات پیچیده دامنه <span class="ltr-text">Fc</span> را ارزیابی می‌کنند، برای مشخصه‌یابی بیولوژیکی داروهای حاوی <span class="ltr-text">Fc</span> حیاتی هستند. این فصل اطلاعات و نکاتی را درباره رایج‌ترین تکنیک‌های موجود در هر دو فرمت مبتنی بر سلول و غیرمبتنی بر سلول برای اندازه‌گیری این تعاملات ارائه می‌دهد. در نهایت، این فصل همچنین معرف‌های حیاتی، که اساس این آزمایش‌های مختلف هستند، و همچنین اعتبارسنجی آزمایش، تجزیه و تحلیل داده‌ها و استراتژی‌های گزارش‌دهی را مورد بحث قرار می‌دهد، اما هدف آن پوشش تمام تکنیک‌های بالقوه قابل اجرا نیست.
+        </p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">پیش‌زمینه</h3>
+        <p class="mb-4">
+            نمونه‌ای از آنتی‌بادی مونوکلونال <span class="ltr-text">IgG1</span> (<span class="ltr-text">mAb</span>) در شکل <span class="ltr-text">1</span> نشان داده شده است. تعاملات میانجی‌گری شده توسط هر دامنه ساختاری، از جمله اتصال آنتی‌ژن از طریق دامنه اتصال آنتی‌ژن قطعه (<span class="ltr-text">Fab</span>)، اتصال گیرنده گاما <span class="ltr-text">Fc</span> (<span class="ltr-text">FcγR</span>)، اتصال جزء <span class="ltr-text">1q</span> کمپلمان (<span class="ltr-text">C1q</span>) و اتصال گیرنده <span class="ltr-text">Fc</span> نوزادی (<span class="ltr-text">FcRn</span>) برجسته شده‌اند. گلیكان‌های مختلفی که ممکن است در دامنه <span class="ltr-text">Fc</span> وجود داشته باشند نیز ذکر شده‌اند.
+        </p>
+        <p class="mb-4 text-center">
+            <span class="ltr-text">Figure 1. Basic structure of an IgG1 mAb.</span>
+        </p>
+        <p class="mb-4">
+            فعالیت‌های عملکرد افکتور میانجی‌گری شده توسط <span class="ltr-text">Fc</span> ممکن است شامل یک یا چند مورد از موارد زیر باشد:
+        </p>
+        <ul class="list-disc pr-8 mb-4">
+            <li>سیتوتوکسیسیته وابسته به آنتی‌بادی میانجی‌گری شده توسط سلول (<span class="ltr-text">ADCC</span>)</li>
+            <li>سیتوتوکسیسیته وابسته به کمپلمان (<span class="ltr-text">CDC</span>)</li>
+            <li>فاگوسیتوز سلولی وابسته به آنتی‌بادی (<span class="ltr-text">ADCP</span>)</li>
+            <li>آپوپتوز وابسته به <span class="ltr-text">Fc</span></li>
+        </ul>
+        <p class="mb-4">
+            فعالیت‌های عملکرد افکتور <span class="ltr-text">Fc</span> از طریق تعامل دامنه <span class="ltr-text">Fab</span> با آنتی‌ژن هدف، و تعامل دامنه <span class="ltr-text">Fc</span> با کمپلمان یا گیرنده‌های مختلف <span class="ltr-text">FcγR</span> بیان شده بر روی سلول‌های با منشاء خونساز (مانند سلول‌های کشنده طبیعی، ماکروفاژ، دندریتیک، مونوسیت و نوتروفیل) میانجی‌گری می‌شوند. در برخی موارد، کشتن یا تخریب هدفمند سلول‌ها بخشی از مکانیسم اثر (<span class="ltr-text">MOA</span>) درمانی است و به اثربخشی بالینی آن مرتبط است. در موارد دیگر، کشتار ناخواسته سلول‌های طبیعی از طریق این مکانیسم‌ها می‌تواند یک پیامد نامطلوب درمانی با تأثیر بالقوه بر ایمنی باشد. علاوه بر این، تعاملات دامنه <span class="ltr-text">Fc</span> با <span class="ltr-text">FcRn</span> پیامدهایی برای نیمه‌عمر گردش خون دارد.
+        </p>
+        <p class="mb-4">
+            گیرنده‌های <span class="ltr-text">Fc</span> (<span class="ltr-text">FcRs</span>) یک کلاس بزرگ از گلیکوپروتئین‌ها در ابرخانواده ایمونوگلوبولین‌ها را نشان می‌دهند. زیرکلاس <span class="ltr-text">FcγR</span> بیشترین درگیری را در تعاملات با داروهای حاوی <span class="ltr-text">Fc</span> دارد. تعامل <span class="ltr-text">Fc–FcγR</span> به دلیل وجود زیرگروه‌های متعدد <span class="ltr-text">FcγR</span> با میل ترکیبی‌های متفاوت نسبت به <span class="ltr-text">Fc</span> زیرگروه‌های مختلف <span class="ltr-text">IgG</span> انسانی: <span class="ltr-text">IgG1</span>، <span class="ltr-text">IgG2</span>، <span class="ltr-text">IgG3</span> و <span class="ltr-text">IgG4</span>، پیچیده است. جدول <span class="ltr-text">1</span> گیرنده‌های <span class="ltr-text">FcγR</span> و میل ترکیبی نسبی آنها را به هر زیرگروه <span class="ltr-text">IgG</span> نشان می‌دهد.
+        </p>
+
+        <div class="card mb-4">
+            <table>
+                <thead>
+                    <tr>
+                        <th>نوع گیرنده</th>
+                        <th><span class="ltr-text">IgG1</span></th>
+                        <th><span class="ltr-text">IgG2</span></th>
+                        <th><span class="ltr-text">IgG3</span></th>
+                        <th><span class="ltr-text">IgG4</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">FcRn</span></td>
+                        <td><span class="ltr-text">+++</span></td>
+                        <td><span class="ltr-text">+++</span></td>
+                        <td><span class="ltr-text">++</span></td>
+                        <td><span class="ltr-text">+++</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">FcγRI</span></td>
+                        <td><span class="ltr-text">+++</span></td>
+                        <td><span class="ltr-text">–</span></td>
+                        <td><span class="ltr-text">+++</span></td>
+                        <td><span class="ltr-text">++</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">FcγRIIa 131H</span></td>
+                        <td><span class="ltr-text">++</span></td>
+                        <td><span class="ltr-text">+</span></td>
+                        <td><span class="ltr-text">++</span></td>
+                        <td><span class="ltr-text">+</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">FcγRIIa 131R</span></td>
+                        <td><span class="ltr-text">++</span></td>
+                        <td><span class="ltr-text">+</span></td>
+                        <td><span class="ltr-text">++</span></td>
+                        <td><span class="ltr-text">+</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">FcγRIIb</span></td>
+                        <td><span class="ltr-text">+</span></td>
+                        <td><span class="ltr-text">+/–</span></td>
+                        <td><span class="ltr-text">+</span></td>
+                        <td><span class="ltr-text">+</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">FcγRIIc</span></td>
+                        <td><span class="ltr-text">+</span></td>
+                        <td><span class="ltr-text">+/–</span></td>
+                        <td><span class="ltr-text">+</span></td>
+                        <td><span class="ltr-text">+</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">FcγRIIIa 158V</span></td>
+                        <td><span class="ltr-text">++</span></td>
+                        <td><span class="ltr-text">+/–</span></td>
+                        <td><span class="ltr-text">++</span></td>
+                        <td><span class="ltr-text">+</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">FcγRIIIa 158F</span></td>
+                        <td><span class="ltr-text">+</span></td>
+                        <td><span class="ltr-text">+/–</span></td>
+                        <td><span class="ltr-text">++</span></td>
+                        <td><span class="ltr-text">+</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">FcγRIIIb</span></td>
+                        <td><span class="ltr-text">+</span></td>
+                        <td><span class="ltr-text">–</span></td>
+                        <td><span class="ltr-text">++</span></td>
+                        <td><span class="ltr-text">–</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="text-xs text-gray-600">
+                جدول <span class="ltr-text">1</span>. کلاس و میل ترکیبی <span class="ltr-text">FcR</span><span class="ltr-text">a, b</span>
+            </p>
+            <p class="text-xs text-gray-600">
+                <span class="ltr-text">a</span> کلید: «<span class="ltr-text">–</span>» به معنای عدم میل ترکیبی قابل اندازه‌گیری؛ «<span class="ltr-text">+/–</span>» به معنای میل ترکیبی پایین، به سختی قابل تشخیص؛ «<span class="ltr-text">+</span>» تا «<span class="ltr-text">+++</span>» به معنای افزایش میل ترکیبی.
+            </p>
+            <p class="text-xs text-gray-600">
+                <span class="ltr-text">b Stewart R, Hammond SA, Oberst M, Wilkinson, RW. The role of Fc gamma receptors in the activity of immunomodulatory antibodies for cancer. J ImmunoTherapy of Cancer, 2014;2(1):1.</span>
+            </p>
+        </div>
+
+        <p class="mb-4">
+            لازم به ذکر است که اندازه‌گیری‌های میل ترکیبی به شدت به فرمت و پارامترهای آزمایش وابسته هستند. در نتیجه، میل ترکیبی‌های نسبی در جدول <span class="ltr-text">1</span> مجموعه‌ای از روندهای عمومی گزارش شده از مطالعات متعدد است و به همین دلیل برای مقایسه ارائه شده‌اند. اگرچه برای اکثر زیرگروه‌های <span class="ltr-text">IgG</span>، تعامل <span class="ltr-text">IgG</span> مونومریک با <span class="ltr-text">FcγRI</span> از میل ترکیبی نسبتاً بالایی برخوردار است، در حالی که برای سایر <span class="ltr-text">FcγR</span> ها میل ترکیبی نسبتاً پایین است، اما تعاملات با اَویدیتاس بالاتر ناشی از تعاملات القا شده توسط اتصال عرضی <span class="ltr-text">FcγR</span> ها با کمپلکس‌های ایمنی ممکن است رخ دهد. این موضوع برای عملکرد بیولوژیکی <span class="ltr-text">FcγR</span> ها و برای عملکرد افکتور میانجی‌گری شده توسط <span class="ltr-text">Fc</span> از <span class="ltr-text">IgG</span> های متصل به آنتی‌ژن هدف به عنوان بخشی از کمپلکس‌های ایمنی مهم است، که اهمیت آزمایش‌های عملکرد افکتور <span class="ltr-text">Fc</span> مبتنی بر سلول را علاوه بر آزمایش‌های اتصال، در صورت وجود پتانسیل برای عملکرد افکتور <span class="ltr-text">Fc</span> شناخته شده، برجسته می‌کند. یک یا چند <span class="ltr-text">FcγR</span> روی سلول‌های خونساز بیان کننده <span class="ltr-text">FcγR</span> ممکن است در میانجی‌گری <span class="ltr-text">ADCC</span>، <span class="ltr-text">ADCP</span> یا آپوپتوز وابسته به <span class="ltr-text">Fc</span> نقش داشته باشند. همچنین توجه داشته باشید که تراکم آنتی‌ژن و ترکیب <span class="ltr-text">N</span>-گلیکان <span class="ltr-text">Fc</span> می‌تواند بر تعاملات اتصال <span class="ltr-text">FcγR</span> و عملکردهای افکتور مرتبط تأثیر بگذارد.
+        </p>
+        <p class="mb-4">
+            مسیر کلاسیک سیستم کمپلمان که در <span class="ltr-text">CDC</span> دخیل است، یک آبشار از تشکیل کمپلکس پروتئین کمپلمان است که شامل چندین پروتئین کمپلمان مختلف است و در نهایت یک کمپلکس حمله به غشاء را تشکیل می‌دهد که می‌تواند سلول‌های هدف متصل به کمپلمان را از بین ببرد. تشکیل این کمپلکس کمپلمان وابسته به مرحله اولی است که در آن <span class="ltr-text">C1q</span>، جزئی از کمپلمان، به ناحیه <span class="ltr-text">Fc</span> داروی حاوی <span class="ltr-text">Fc</span> متصل می‌شود که به نوبه خود از طریق <span class="ltr-text">Fab</span> یا دامنه اتصال آنتی‌بادی مونوکلونال جایگزین به آنتی‌ژن یا شریک اتصال دیگر متصل شده است. زیرگروه‌های <span class="ltr-text">IgG1</span> و <span class="ltr-text">IgG3</span> فعالیت <span class="ltr-text">CDC</span> بالاتری نسبت به <span class="ltr-text">IgG2</span> و <span class="ltr-text">IgG4</span> دارند. به طور کلی، مقایسه هر چهار زیرگروه با هم نشان می‌دهد که فعالیت اتصال <span class="ltr-text">C1q</span> نسبی <span class="ltr-text">IgG1≈IgG3 > IgG2≈IgG4</span> است. (<span class="ltr-text">1</span>) همچنین مهم است که در نظر گرفته شود که نمایش اپیتوپ، تراکم آنتی‌ژن و ترکیب <span class="ltr-text">N</span>-گلیکان <span class="ltr-text">Fc</span> می‌تواند بر اتصال <span class="ltr-text">C1q</span> و فعالیت <span class="ltr-text">CDC</span> تأثیر بگذارد.
+        </p>
+        <p class="mb-4">
+            بازیافت آنتی‌بادی‌ها پس از اتصال از طریق ناحیه <span class="ltr-text">Fc</span> به <span class="ltr-text">FcRn</span> برای افزایش پایداری آنها در جریان خون شناخته شده است. پروتئین‌های همجوشی <span class="ltr-text">Fc</span> با <span class="ltr-text">Fc</span> برای این منظور مهندسی شده‌اند. تعامل دامنه <span class="ltr-text">Fc</span> با <span class="ltr-text">FcRn</span> به روشی کاملاً وابسته به <span class="ltr-text">pH</span> رخ می‌دهد که در آن حداکثر اتصال در <span class="ltr-text">pH</span> کمی اسیدی (<span class="ltr-text">6.0</span>) و گسست در <span class="ltr-text">pH</span> خنثی مشاهده می‌شود. اگرچه همیشه بهترین کار است که کنترل دما و <span class="ltr-text">pH</span> آزمایش در هر اندازه‌گیری تعامل پروتئین–پروتئین حفظ شود، اما هنگام ارزیابی اتصال <span class="ltr-text">FcRn</span> به <span class="ltr-text">Fc</span> باید توجه ویژه‌ای به سطح <span class="ltr-text">pH</span> شود.
+        </p>
+        <p class="mb-4">
+            به طور خاص، پروتئین حاوی <span class="ltr-text">Fc</span> در سطح سلول پینوسیتوز می‌شود و در محیط اسیدی اندوزوم با <span class="ltr-text">FcRn</span> مرتبط می‌شود. سپس به سطح سلول بازیافت می‌شود و در آنجا در <span class="ltr-text">pH</span> خنثی‌تر خون از <span class="ltr-text">FcRn</span> آزاد می‌گردد. <span class="ltr-text">IgG1</span>، <span class="ltr-text">IgG2</span> و <span class="ltr-text">IgG4</span> انسانی به خوبی به <span class="ltr-text">FcRn</span> متصل می‌شوند، در حالی که بیشتر <span class="ltr-text">IgG3</span> انسانی به طور ضعیفی متصل می‌شود. نیمه‌عمر سرمی با میل ترکیبی پایین‌تر به طور قابل توجهی کوتاه می‌شود، و این یکی از دلایلی است که <span class="ltr-text">IgG3</span> و دامنه <span class="ltr-text">Fc</span> <span class="ltr-text">IgG3</span> معمولاً به عنوان داروهای پروتئینی استفاده نمی‌شوند. در طول مطالعات انجام شده در <span class="ltr-text">pH 5.8</span> و <span class="ltr-text">25°</span> که هر چهار زیرگروه <span class="ltr-text">IgG</span> را با هم مقایسه کردند، ترتیب رتبه میل ترکیبی اتصال به <span class="ltr-text">FcRn</span> به صورت <span class="ltr-text">IgG1≈IgG2≈IgG4 > IgG3</span> بود. بر خلاف <span class="ltr-text">FcγR</span> ها، به نظر نمی‌رسد الگوهای گلیکوزیلاسیون متفاوت در <span class="ltr-text">Fc</span> اتصال <span class="ltr-text">FcRn</span> را بر اساس اندازه‌گیری‌های میل ترکیبی از آزمایش‌های انجام شده در <span class="ltr-text">pH 5.8</span> و <span class="ltr-text">25°</span> تغییر دهند.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایش‌های عملکردی مبتنی بر سلول</h2>
+        <p class="mb-4">
+            این بخش رایج‌ترین آزمایش‌های مبتنی بر سلول را توصیف می‌کند. مهم است که توجه داشته باشید که هدف توصیف این آزمایش‌ها از منظر شیمی، ساخت و کنترل است، نه از منظر تحقیقات اکتشافی. به همین دلیل، تمایز بین استفاده از معرف‌ها و مواد مرتبط، مانند سلول‌های اولیه، در مقابل خطوط سلولی مهندسی شده که پروتئین‌های خاصی را بیش‌بیان می‌کنند، در صورت لزوم برجسته خواهد شد.
+        </p>
+        <p class="mb-4">
+            برای اهداف مطالعات ترخیص دارو، پایداری و مقایسه‌پذیری، داشتن آزمایش‌های تحلیلی قوی، دقیق، قابل اعتماد و نشان‌دهنده پایداری که به طور مناسب توسعه یافته و واجد شرایط شده باشند، مهم است. این فرآیند باید شامل ارزیابی حساسیت روش به تغییرات پس از ترجمه، از جمله گلیکوزیلاسیون، باشد که شناخته شده است که بر عملکرد <span class="ltr-text">Fc</span> تأثیر می‌گذارد. با این حال، بحث عمیق درباره هر گلیکان و تأثیر مربوطه آن پیچیده و فراتر از محدوده این فصل است.
+        </p>
+        <p class="mb-4">
+            سه جزء مشترک در آزمایش‌های مبتنی بر سلول که ملاحظات فنی در آنها مهم هستند عبارتند از: <span class="ltr-text">1</span>) انتخاب سلول هدف، <span class="ltr-text">2</span>) غلظت‌های آنتی‌بادی درمانی، و <span class="ltr-text">3</span>) تشخیص نقطه پایانی برای کشتن سلول یا نشانگر جایگزین.
+        </p>
+        <p class="mb-4">
+            ارزیابی عدم عملکرد افکتور برای یک روش چالش‌برانگیز است. نکات قابل تأمل عبارتند از:
+        </p>
+        <ul class="list-disc pr-8 mb-4">
+            <li>کنترل مثبت <span class="ltr-text">IgG1</span> برای روش‌های <span class="ltr-text">IgG2</span> و <span class="ltr-text">IgG4</span></li>
+            <li>خطوط سلولی فیزیولوژیکی مرتبط در مقابل خطوط سلولی مهندسی شده که اهداف را بیش‌بیان می‌کنند</li>
+            <li>اهداف محلول متصل به گیرنده‌های سطح سلول یا نسخه‌های بیان شده غشایی از اهداف محلول</li>
+        </ul>
+        <p class="mb-4">
+            موثرترین گزینه ممکن است بررسی دقیق طراحی آزمایش برای رفع عدم عملکرد افکتور باشد، که به طور بالقوه شامل فرمت‌های آزمایش اثبات شده برای روش‌هایی با عملکرد افکتور نشان داده شده است.
+        </p>
+        <p class="mb-4">
+            جدول <span class="ltr-text">2</span> فرمت‌های آزمایش مبتنی بر سلول رایج را برای هر فعالیت عملکرد افکتور میانجی‌گری شده توسط <span class="ltr-text">Fc</span> خلاصه می‌کند. سپس هر آزمایش با جزئیات بیشتر توضیح داده می‌شود. از آنجا که رویکردهای اساسی بهینه‌سازی آزمایش مانند طراحی آزمایش (<span class="ltr-text">DOE</span>)، و همچنین استراتژی‌های صلاحیت‌سنجی یا اعتبارسنجی آزمایش، عموماً برای اکثر آزمایش‌های بیولوژیکی قابل اجرا هستند و در طراحی و توسعه آزمایش‌های بیولوژیکی <a href="1032.html" class="text-blue-600 hover:underline" target="_blank">1032</a> و اعتبارسنجی آزمایش بیولوژیکی <a href="1033.html" class="text-blue-600 hover:underline" target="_blank">1033</a> پوشش داده شده‌اند، این مباحث به طور گسترده در این فصل پوشش داده نخواهند شد.
+        </p>
+
+        <div class="card mb-4">
+            <table>
+                <thead>
+                    <tr>
+                        <th>فعالیت</th>
+                        <th>فرمت آزمایش</th>
+                        <th>نکات قابل تأمل</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>سیتوتوکسیسیته وابسته به آنتی‌بادی میانجی‌گری شده توسط سلول (<span class="ltr-text">ADCC</span>)</td>
+                        <td>
+                            سیتوتوکسیسیته: آزمایش‌های مبتنی بر سلول‌های تک‌هسته‌ای خون محیطی (<span class="ltr-text">PBMCs</span>)، یا سلول‌های <span class="ltr-text">NK</span> با استفاده از رادیواکتیویته کروم-<span class="ltr-text">51</span> (<span class="ltr-text">51Cr</span>) یا سلول‌های هدف با برچسب فلورسنت، یا آزادسازی آنزیم‌های درون سلولی یا آدنوزین تری‌فسفات (<span class="ltr-text">ATP</span>) به عنوان خروجی.
+                        </td>
+                        <td class="text-right">
+                            <ul class="list-disc pr-4 text-sm">
+                                <li>سلول‌های اولیه در مقابل خطوط سلولی مهندسی شده</li>
+                                <li>سلول‌های اولیه گران هستند و ممکن است غیرقابل اعتماد باشند؛ تغییرات سلول افکتور از اهداکننده به اهداکننده و پلی‌مورفیسم‌های <span class="ltr-text">FcγR</span> وجود دارد.</li>
+                                <li>پایداری سلول‌های <span class="ltr-text">NK</span> مهندسی شده یا سلول‌های هدف باید مشخص شود.</li>
+                                <li>فرمت سلول‌ها (مثلاً کشت مداوم، ذوب و استفاده، یا سلول‌های هدف از قبل برچسب‌گذاری شده ذوب و استفاده)</li>
+                                <li>کروم-<span class="ltr-text">51</span> (<span class="ltr-text">51Cr</span>) برای سلول‌ها غیرسمی است؛ بدون پس‌زمینه از سلول‌های افکتور، اما رادیواکتیویته با ایمنی مرتبط است؛ نگرانی‌های مربوط به پسماند.</li>
+                                <li>برچسب‌های فلورسنت ممکن است برای سلول‌ها سمی باشند؛ زمان اضافی برای برچسب‌گذاری/شستشوی سلول‌ها مورد نیاز است؛ بانک‌های سلول هدف از قبل برچسب‌گذاری شده ذوب و استفاده می‌توانند استفاده شوند.</li>
+                                <li>برای آزمایش‌هایی که از آزادسازی آنزیم‌های درون سلولی یا <span class="ltr-text">ATP</span> استفاده می‌کنند، سیگنال‌های ناشی از مرگ خودبخودی سلول‌های افکتور یا سلول‌های هدف پس‌زمینه را افزایش می‌دهند و کنترل‌های آزمایش باید برای محاسبه مرگ سلولی خاص <span class="ltr-text">ADCC</span> گنجانده شوند.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            آزمایش‌های ژن گزارشگر: خروجی که فعال‌سازی مسیر سیگنال‌دهی <span class="ltr-text">ADCC</span> را در سلول‌های افکتور مهندسی شده کمی‌سازی می‌کند.
+                        </td>
+                        <td class="text-right">
+                            <ul class="list-disc pr-4 text-sm">
+                                <li>سریع‌تر و سازگارتر هستند، برای کنترل کیفیت (<span class="ltr-text">QC</span>) مناسب هستند، و اغلب نسبت سیگنال به پس‌زمینه بالاتری می‌دهند، اما هزینه‌های مجوز می‌تواند گران باشد.</li>
+                                <li>انتخاب فرمت آزمایش <span class="ltr-text">ADCC</span> را برای بهترین تناسب با کاربرد مورد نظر در نظر بگیرید (مثلاً مناسب برای <span class="ltr-text">QC</span> در مقابل اثبات کشتار سلول هدف)؛ مطالعات پل‌زنی را در نظر بگیرید.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>سیتوتوکسیسیته وابسته به کمپلمان (<span class="ltr-text">CDC</span>)</td>
+                        <td>
+                            سیتوتوکسیسیته: آزمایش‌های مبتنی بر سلول هدف منفرد با استفاده از نشانگرهای زنده‌مانی، سلول‌های هدف با برچسب فلورسنت، یا آزادسازی آنزیم‌های درون سلولی یا <span class="ltr-text">ATP</span> به عنوان خروجی.
+                        </td>
+                        <td class="text-right">
+                            <ul class="list-disc pr-4 text-sm">
+                                <li>یک سلول در آزمایش درگیر است؛ تشخیص فعالیت آسان در صورت استفاده از معرف زنده‌مانی سلول زیرا نیازی به برچسب‌گذاری نیست.</li>
+                                <li>خواندن زنده‌مانی سلول ممکن است طولانی‌تر از ارزیابی برچسب آزاد شده باشد.</li>
+                                <li>برچسب‌های فلورسنت ممکن است برای سلول‌ها سمی باشند، زمان اضافی برای برچسب‌گذاری/شستشوی سلول‌ها مورد نیاز است؛ بانک‌های سلول هدف از قبل برچسب‌گذاری شده ذوب و استفاده می‌توانند استفاده شوند.</li>
+                                <li>منبع کمپلمان و انتخاب خط سلولی هدف حیاتی هستند؛ برخی از سلول‌ها نسبت به <span class="ltr-text">CDC</span> حساس‌تر از بقیه هستند.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            آزمایش‌های ژن گزارشگر: با استفاده از سلول‌های هدف که به طور ساختاری لوسیفراز بیان می‌کنند.
+                        </td>
+                        <td class="text-right">
+                            <ul class="list-disc pr-4 text-sm">
+                                <li>سریع‌تر و سازگارتر هستند و اغلب نسبت سیگنال به پس‌زمینه بالاتری می‌دهند، اما هزینه‌های مجوز می‌تواند گران باشد؛ مطالعات پل‌زنی را در نظر بگیرید.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>فاگوسیتوز سلولی وابسته به آنتی‌بادی (<span class="ltr-text">ADCP</span>)</td>
+                        <td>
+                            فاگوسیتوز: ماکروفاژهای اولیه یا خطوط سلولی مونوسیت با آزمایش فلوسیتومتری، تصویربرداری دیجیتال سلول زنده، استفاده از رنگ حساس به <span class="ltr-text">pH</span> برای تأیید فاگوسیتوز واقعی.
+                        </td>
+                        <td class="text-right">
+                            <ul class="list-disc pr-4 text-sm">
+                                <li>آزمایش‌های پیچیده با استفاده از ماکروفاژهای اولیه یا خطوط سلولی مونوسیت؛ دشوار برای انتقال؛ متغیر؛ مناسب <span class="ltr-text">QC</span> نیستند.</li>
+                                <li>سلول‌های اولیه در مقابل خطوط سلولی مهندسی شده.</li>
+                                <li>سلول‌های اولیه گران هستند و ممکن است غیرقابل اعتماد باشند؛ تغییرات سلول افکتور از اهداکننده به اهداکننده و پلی‌مورفیسم‌های <span class="ltr-text">FcγR</span> وجود دارد؛ نیاز به تمایز <span class="ltr-text">in vitro</span> به ماکروفاژها می‌تواند به تغییرپذیری بین آزمایشگاهی اضافه کند.</li>
+                                <li>پایداری خطوط سلولی مهندسی شده باید مشخص شود.</li>
+                                <li>فرمت سلول‌ها (مثلاً کشت مداوم، ذوب و استفاده، سلول‌های هدف از قبل برچسب‌گذاری شده ذوب و استفاده)</li>
+                                <li>دقت و صحت آزمایش؛ قابلیت اعتبارسنجی آزمایش برای استفاده در <span class="ltr-text">QC</span>.</li>
+                                <li>تأیید فاگوسیتوز واقعی: ماکروفاژهای اولیه یا خطوط سلولی مونوسیتی که همراه با رنگ‌های حساس به <span class="ltr-text">pH</span> یا تصویربرداری سلول زنده استفاده می‌شوند.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            آزمایش‌های ژن گزارشگر: خروجی که فعال‌سازی مسیر سیگنال‌دهی <span class="ltr-text">ADCP</span> را در سلول‌های افکتور مهندسی شده کمی‌سازی می‌کند.
+                        </td>
+                        <td class="text-right">
+                            <ul class="list-disc pr-4 text-sm">
+                                <li>سریع‌تر، سازگارتر و دقیق‌تر؛ مناسب <span class="ltr-text">QC</span>؛ <span class="ltr-text">FcγRIIa</span> را که اغلب در <span class="ltr-text">ADCP</span> غالب است، مورد توجه قرار می‌دهد.</li>
+                                <li>انتخاب فرمت آزمایش <span class="ltr-text">ADCP</span> را برای بهترین تناسب با کاربرد مورد نظر در نظر بگیرید (مثلاً مناسب برای <span class="ltr-text">QC</span> در مقابل اثبات فاگوسیتوز واقعی)؛ مطالعات پل‌زنی را در نظر بگیرید.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>آپوپتوز وابسته به <span class="ltr-text">Fc</span></td>
+                        <td>
+                            آپوپتوز: آزمایش مبتنی بر سلول با معرف‌های اتصال عرضی؛ حالت‌های تشخیص شامل فعال‌کننده‌های کاسپاز، شکستگی رشته <span class="ltr-text">DNA</span> از طریق رنگ‌های اسید نوکلئیک، و تغییرات پتانسیل غشای میتوکندری توسط پروب‌های فلورسنت؛ تشخیص فلورسنت فسفولیپید غشایی فسفاتیدیل‌سرین.
+                        </td>
+                        <td class="text-right">
+                            <ul class="list-disc pr-4 text-sm">
+                                <li>سلول‌های اولیه در مقابل خطوط سلولی مهندسی شده.</li>
+                                <li>پایداری خطوط سلولی مهندسی شده باید مشخص شود.</li>
+                                <li>فرمت‌های همگن موجود.</li>
+                                <li>دستیابی به تراکم آنتی‌ژن روی سلول هدف ممکن است دشوار باشد.</li>
+                                <li>بهینه‌سازی و کیفیت معرف‌های اتصال عرضی مهم است.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="text-xs text-gray-600">
+                جدول <span class="ltr-text">2</span>. فرمت‌های رایج آزمایش عملکرد افکتور مبتنی بر سلول
+            </p>
+        </div>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">سیتوتوکسیسیته وابسته به آنتی‌بادی میانجی‌گری شده توسط سلول</h3>
+        <p class="mb-4">
+            <span class="ltr-text">ADCC</span> یک مکانیسم ایمنی ذاتی میانجی‌گری شده توسط سلول است که به موجب آن یک سلول افکتور از سیستم ایمنی (مثلاً سلول <span class="ltr-text">NK</span>، مونوسیت، ماکروفاژ یا ائوزینوفیل) به طور فعال یک سلول هدف را که توسط آنتی‌بادی‌های خاص هدف شناسایی شده است، لیز می‌کند. <span class="ltr-text">ADCC</span> می‌تواند برای اثربخشی و مکانیسم عملکرد (<span class="ltr-text">MOA</span>) برخی از داروهای درمانی <span class="ltr-text">mAb</span> مهم باشد. با این حال، برای مولکول‌های دیگر، فعالیت <span class="ltr-text">ADCC</span> ممکن است یک مسئولیت بالقوه باشد که نیاز به ارزیابی دارد؛ به عنوان مثال، اگر هدف روی سلول‌های طبیعی قرار داشته باشد. همانطور که شکل <span class="ltr-text">2</span> نشان می‌دهد، برای القای <span class="ltr-text">ADCC</span>، دامنه <span class="ltr-text">Fab</span> آنتی‌بادی باید به آنتی‌ژن روی سطح سلول هدف متصل شود در حالی که دامنه <span class="ltr-text">Fc</span> آن به <span class="ltr-text">FcγR</span> روی سطح سلول افکتور متصل می‌شود.
+        </p>
+        <p class="mb-4 text-center">
+            <span class="ltr-text">Figure 2. ADCC assay.</span>
+        </p>
+        <p class="mb-4">
+            توسعه آزمایش‌های <span class="ltr-text">ADCC</span> پیچیده است زیرا دو نوع سلول مختلف درگیر هستند و بسیاری از پارامترها نیاز به بهینه‌سازی دارند، مانند تعداد سلول‌های هدف و افکتور؛ نسبت سلول هدف به افکتور؛ روش کشت، محیط کشت و ماتریکس خارج سلولی؛ غلظت و رقت دارو؛ حجم‌ها؛ زمان‌های انکوباسیون؛ خوانش سیگنال؛ و پردازش و تحلیل داده‌ها. علاوه بر این، نوع <span class="ltr-text">FcγR</span> و پلی‌مورفیسم ژنتیکی باید در نظر گرفته شوند زیرا این اجزا می‌توانند بر میل ترکیبی اتصال <span class="ltr-text">Fc</span> تأثیر بگذارند.
+        </p>
+        <p class="mb-4">
+            آزمایش‌های سنتی <span class="ltr-text">ADCC</span> از <span class="ltr-text">PBMCs</span> یا سلول‌های <span class="ltr-text">NK</span> جدا شده از اهداکنندگان انسانی برای القای آزادسازی کروم-<span class="ltr-text">51</span> (<span class="ltr-text">51Cr</span>) از سلول‌های هدف از پیش بارگذاری شده پس از لیز استفاده می‌کنند. اگرچه چنین سلول‌های افکتوری از نظر فیزیولوژیکی مرتبط‌ترین هستند، اما منبع مواد گران، متغیر و غیرقابل اعتمادی را نیز نشان می‌دهند. مهم‌تر اینکه، تفاوت‌های بین اهداکنندگان که عمدتاً به دلیل پلی‌مورفیسم <span class="ltr-text">FcγR</span> است، می‌تواند به طور قابل توجهی بر دقت و صحت نتایج تأثیر بگذارد. در نتیجه، سلول‌ها معمولاً از چندین اهداکننده جمع‌آوری می‌شوند.
+        </p>
+        <p class="mb-4">
+            استفاده از یک خوانش رادیواکتیو در روش‌های سنتی <span class="ltr-text">ADCC</span> نیز مزایا و معایبی نشان داده است. کروم برای سلول‌ها غیرسمی است، و از آنجا که فقط سلول‌های هدف با آن بارگذاری می‌شوند، هیچ پس‌زمینه‌ای از سلول‌های افکتور وجود ندارد. با این حال، استفاده از رادیواکتیویته با نگرانی‌های ایمنی و پسماند مرتبط است. به طور کلی، انجام و انتقال آزمایش‌های سنتی <span class="ltr-text">ADCC</span> چالش‌برانگیز است.
+        </p>
+        <p class="mb-4">
+            برای جلوگیری از رادیواکتیویته، سلول‌های هدف می‌توانند با رنگ‌های فلورسنت مانند <span class="ltr-text">calcein O,O′-diacetate tetrakis(acetoxymethyl) ester (calcein AM)</span>، <span class="ltr-text">carboxyfluorescein succinimidyl ester (CFSE)</span>، <span class="ltr-text">2′,7′-bis-(2-carboxyethyl)-5-(and-6)-carboxyfluorescein (BCECF)</span> یا <span class="ltr-text">europium</span> از پیش بارگذاری شوند. توجه داشته باشید که این معرف‌ها ممکن است برای سلول‌ها سمی باشند و حساسیت به این رنگ‌ها ممکن است بین انواع مختلف سلولی به طور قابل توجهی متفاوت باشد. نفوذ رنگ‌ها به سلول و توانایی حفظ رنگ‌ها به صورت درون سلولی نیز ممکن است وابسته به نوع سلول باشد.
+        </p>
+        <p class="mb-4">
+            مزیت برچسب‌گذاری قبلی سلول‌ها این است که فقط مرگ سلول هدف اندازه‌گیری می‌شود و هیچ پس‌زمینه‌ای از سلول‌های افکتور وجود ندارد، که معمولاً نسبت سیگنال به پس‌زمینه بالاتری را فراهم می‌کند، به ویژه برای رنگ‌های فلورسنت با تقویت‌کنندگی. عیب کلی، زمان اضافی و دستکاری مورد نیاز برای مراحل بارگذاری و شستشو است. با این حال، با اجرای بانک‌های سلولی «ذوب و استفاده» که از قبل با رنگ فلورسنت برچسب‌گذاری شده‌اند، می‌توان آن را کاهش داد.
+        </p>
+        <p class="mb-4">
+            به طور جایگزین، آزادسازی آنزیم‌های درون سلولی مانند لاکتات دهیدروژناز (<span class="ltr-text">LDH</span>) یا سایر نشانگرها مانند <span class="ltr-text">ATP</span> با خوانش‌های لومینسانس، فلورسنت یا رنگ‌سنجی می‌تواند برای ارزیابی <span class="ltr-text">ADCC</span> استفاده شود. با این حال، سیگنال‌های ناشی از سلول‌های افکتور یا مرگ خودبخودی سلول‌های هدف، پس‌زمینه آزمایش را افزایش می‌دهد. استفاده از یک خط سلولی هدف که به طور ساختاری یک نشانگر، مانند لوسیفراز، را بیان می‌کند، نیز یک گزینه جذاب است، زیرا یک فرمت آزمایش همگن را امکان‌پذیر می‌سازد.
+        </p>
+        <p class="mb-4">
+            خطوط سلولی افکتور مهندسی شده را می‌توان به جای سلول‌های اولیه جمع‌آوری شده از اهداکنندگان انسانی به کار برد. استفاده از سلول‌های مهندسی شده به طور قابل توجهی تغییرپذیری آزمایش را کاهش می‌دهد و منبع قابل اعتماد و نامحدودی از یک معرف حیاتی را فراهم می‌کند که امکان انجام با توان بالا را می‌دهد؛ این امر باعث می‌شود این آزمایش‌ها برای انجام در تست ترخیص محصول و پایداری مناسب‌تر باشند. اگرچه این نوع سلول‌ها برای اهداف ترخیص و پایداری پذیرفته شده‌اند، اما درک چگونگی مقایسه داده‌های تولید شده با استفاده از خطوط سلولی مهندسی شده با داده‌های حاصل از سلول‌های اولیه که از نظر بیولوژیکی مرتبط‌تر هستند، مهم است.
+        </p>
+        <p class="mb-4">
+            نتایج نهایی از یک آزمایش <span class="ltr-text">ADCC</span> می‌تواند بر حسب قدرت نسبی به یک استاندارد مرجع ارائه شود. با این حال، محاسبه درصد سیتوتوکسیسیته نیز باید در طول توسعه و صلاحیت‌سنجی آزمایش انجام شود تا درک شود که چه درصدی از جمعیت سلولی واقعاً کشته می‌شود. این محاسبه طبق فرمول زیر انجام می‌شود:
+        </p>
+        <div class="formula-display">
+            $$ \text{% Cytotoxicity} = \frac{\text{Experimental lysis} - \text{Spontaneous lysis}}{\text{Maximal lysis} - \text{Spontaneous lysis}} \times 100 $$
+        </div>
+        <p class="mb-4">
+            «لیز خودبخودی» در این مورد، لیزی است که در غیاب آنتی‌بادی اما در حضور سلول‌های افکتور رخ می‌دهد.
+        </p>
+        <p class="mb-4">
+            استفاده از آزمایش‌های ژن گزارشگر به عنوان یک فرمت نیز یک گزینه است؛ به عنوان مثال، آن آزمایش‌هایی که از سلول‌های افکتور مهندسی شده بیان کننده <span class="ltr-text">FcγRIIIa</span> و یک ژن گزارشگر با عناصر پاسخ‌دهنده مرتبط با <span class="ltr-text">MOA</span> و خاص <span class="ltr-text">ADCC</span> مانند عامل هسته‌ای سلول‌های <span class="ltr-text">T</span> فعال شده (<span class="ltr-text">NFAT</span>) استفاده می‌کنند. آزمایش ژن گزارشگر فعال‌سازی اولیه مسیر <span class="ltr-text">ADCC</span> را به عنوان جایگزینی برای مرگ سلولی منعکس می‌کند. فعال‌سازی مسیر در این آزمایش‌ها تنها زمانی می‌تواند رخ دهد که آنتی‌بادی به هر دو سلول هدف و افکتور متصل باشد. این آزمایش‌ها معمولاً سریع‌تر و دقیق‌تر هستند و نسبت سیگنال به پس‌زمینه بالاتری دارند، که آنها را برای اثبات سازگاری ساخت و برای ترخیص دسته‌ای داروهای درمانی بسیار مناسب می‌سازد. این آزمایش‌ها همچنین امکان ارزیابی قدرت نسبی را فراهم می‌کنند، اما نه سیتوتوکسیسیته را. آزمایش‌های ژن گزارشگر برای مشخصه‌یابی و نیازهای مقایسه‌پذیری که در آنها <span class="ltr-text">ADCC</span> یک <span class="ltr-text">MOA</span> مفروض است، مفید هستند، به ویژه از آنجا که دقت و صحت آنها بهتر از آزمایش‌های <span class="ltr-text">ADCC</span> با استفاده از سلول‌های افکتور اولیه است.
+        </p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">سیتوتوکسیسیته وابسته به کمپلمان</h3>
+        <p class="mb-4">
+            <span class="ltr-text">CDC</span> مکانیسم دیگری را نشان می‌دهد که توسط آن یک آنتی‌بادی مونوکلونال درمانی می‌تواند سلول‌های هدف را از بین ببرد. همانطور که شکل <span class="ltr-text">3</span> نشان می‌دهد، <span class="ltr-text">CDC</span> با اتصال دامنه <span class="ltr-text">Fab</span> آنتی‌بادی به هدف مرتبط با سلول، و اتصال بخش <span class="ltr-text">Fc</span> به پروتئین <span class="ltr-text">C1q</span> پلاسما آغاز می‌شود، که آبشار کمپلمان را تحریک می‌کند و منجر به تشکیل کمپلکس حمله به غشاء (<span class="ltr-text">MAC</span>) (<span class="ltr-text">C5b</span> تا <span class="ltr-text">C9</span>) در سطح سلول هدف می‌شود و در نتیجه سلول هدف از بین می‌رود. با توجه به اهمیت این فعالیت، یک آزمایش <span class="ltr-text">CDC</span> قوی و کمی می‌تواند یک ابزار تحلیلی مهم برای هدایت فرآیند دارو و توسعه محصول به عنوان بخشی از یک استراتژی کنترل تحلیلی کامل باشد. ایزوتایپ‌های مختلف <span class="ltr-text">IgG</span> بر اساس تعدادی از عوامل از جمله میل ترکیبی ذاتی به پروتئین <span class="ltr-text">C1q</span>، پتانسیل متفاوتی برای القای <span class="ltr-text">CDC</span> دارند. به طور کلی، سطح <span class="ltr-text">CDC</span> برای <span class="ltr-text">IgG1</span> و <span class="ltr-text">IgG3</span> انسانی بالا و برای <span class="ltr-text">IgG2</span> و <span class="ltr-text">IgG4</span> پایین است. توانایی یک آنتی‌بادی برای میانجی‌گری <span class="ltr-text">CDC</span> نیز به محل اپیتوپ روی گیرنده هدف بستگی دارد. اتصال به یک اپیتوپ خاص می‌تواند بر نمایش ساختاری آنتی‌بادی تأثیر بگذارد، و در نتیجه بر تعامل آن با پروتئین <span class="ltr-text">C1q</span> تأثیر می‌گذارد. علاوه بر اپیتوپ‌های خاص، تراکم آنتی‌ژن هدف می‌تواند بر سطح و میزان فعالیت <span class="ltr-text">CDC</span> تأثیر بگذارد. به طور کلی، خطوط سلولی با تراکم‌های آنتی‌ژن هدف بالاتر، تمایل به حساسیت بیشتری نسبت به فعالیت <span class="ltr-text">CDC</span> نسبت به خطوط سلولی با تراکم‌های آنتی‌ژن هدف پایین‌تر دارند.
+        </p>
+        <p class="mb-4 text-center">
+            <span class="ltr-text">Figure 3. CDC assay.</span>
+        </p>
+        <p class="mb-4">
+            سلول هدف انتخاب شده ممکن است سلولی باشد که از نظر فیزیولوژیکی نماینده نشانگر بیماری باشد، یا به طور جایگزین، یک خط سلولی باشد که آنتی‌ژن هدف را به صورت نوترکیب بیان می‌کند. با این حال، ممکن است مفید باشد که اطمینان حاصل شود که سطوح هدف در یک خط سلولی مهندسی شده نماینده سطوح هدف در سلول‌های فیزیولوژیکی مرتبط هستند، که می‌توان با تکنیک‌هایی مانند فلوسیتومتری به آن دست یافت.
+        </p>
+        <p class="mb-4">
+            انتخاب پروتئین کمپلمان نیز یک ملاحظه مهم برای توسعه آزمایش <span class="ltr-text">CDC</span> است. منابع مختلف کمپلمان مانند خرگوش، نخستی‌سانان یا انسان استفاده شده‌اند. مهم است که توجه داشته باشید که برخی از خطوط سلولی سرطانی گیرنده‌هایی را بیان می‌کنند که فعال‌سازی کمپلمان را مهار می‌کنند، و در نتیجه فعالیت بالقوه درمانی را پنهان می‌کنند. این امر بار دیگر بر اهمیت انتخاب خط سلولی هدف و همچنین انتخاب کمپلمان تأکید می‌کند.
+        </p>
+        <p class="mb-4">
+            گزینه‌های تشخیص مرگ سلولی برای توسعه آزمایش <span class="ltr-text">CDC</span> متعدد هستند و می‌توانند بر حساسیت، دقت و استحکام آزمایش تأثیر بگذارند. گزینه‌ها مشابه مواردی هستند که در بخش سیتوتوکسیسیته وابسته به آنتی‌بادی میانجی‌گری شده توسط سلول برای آزمایش <span class="ltr-text">ADCC</span> ذکر شد.
+        </p>
+        <p class="mb-4">
+            مرگ سلولی همچنین می‌تواند با اندازه‌گیری فعالیت آنزیم‌های آزاد شده پس از مرگ سلولی، مانند <span class="ltr-text">LDH</span> یا آدنيلات کیناز، ارزیابی شود. این روش مزیت عدم بارگذاری قبلی سلول‌ها را دارد و بر اساس از دست دادن یکپارچگی غشاء است. با این حال، آزمایش به دلیل مراحل اضافی و دستکاری‌های انجام آزمایش نیز می‌تواند متغیر باشد. یک فرمت آزمایش جایگزین، اندازه‌گیری <span class="ltr-text">ATP</span> در یک آزمایش با خوانش‌های لومینسانس، فلورسنت یا رنگ‌سنجی است. آزمایش‌های مبتنی بر لومینسانس که سطح <span class="ltr-text">ATP</span> را اندازه‌گیری می‌کنند، به ویژه محبوبیت بیشتری پیدا کرده‌اند زیرا مرگ سلولی را می‌توان با افزودن معرف تشخیص بدون نیاز به دستکاری بیشتر اندازه‌گیری کرد و آزمایش‌ها حساس هستند. علاوه بر این، مانند آزمایش <span class="ltr-text">ADCC</span> در بخش سیتوتوکسیسیته وابسته به آنتی‌بادی میانجی‌گری شده توسط سلول، یک خط سلولی که به طور ساختاری یک نشانگر، مانند لوسیفراز، را به عنوان یک اندازه‌گیری جایگزین برای تعداد سلول‌های زنده بیان می‌کند، نیز ممکن است به کار گرفته شود.
+        </p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">فاگوسیتوز سلولی وابسته به آنتی‌بادی</h3>
+        <p class="mb-4">
+            <span class="ltr-text">ADCP</span> یک مکانیسم ایمنی ذاتی میانجی‌گری شده توسط <span class="ltr-text">Fc</span> و سلول است که در آن سلول‌های هدف اوپسونیزه شده با آنتی‌بادی، یا در برخی موارد، پروتئین‌های فیبریل خاص، با <span class="ltr-text">FcγR</span> روی سطح سلول‌های افکتور ایمنی درگیر می‌شوند تا فاگوسیتوز را القا کنند. این امر باعث درونی‌سازی و تخریب هدف می‌شود (به شکل <span class="ltr-text">4</span> مراجعه کنید).
+        </p>
+        <p class="mb-4 text-center">
+            <span class="ltr-text">Figure 4. ADCP assay.</span>
+        </p>
+        <p class="mb-4">
+            سلول‌های افکتور قادر به میانجی‌گری <span class="ltr-text">ADCP</span> شامل ماکروفاژها، مونوسیت‌ها، نوتروفیل‌ها و میکروگلیا هستند. آزمایش‌های <span class="ltr-text">ADCP</span> عموماً پیچیده‌تر از آزمایش‌های <span class="ltr-text">ADCC</span> یا <span class="ltr-text">CDC</span> هستند. بخشی از این پیچیدگی ناشی از انواع سلول‌های ایمنی قادر به القای <span class="ltr-text">ADCP</span> است. بر خلاف <span class="ltr-text">ADCC</span> میانجی‌گری شده توسط سلول‌های <span class="ltr-text">NK</span> بیان‌کننده <span class="ltr-text">FcγRIIIa</span>، سلول‌های افکتور ماکروفاژ، مونوسیت یا نوتروفیل درگیر در <span class="ltr-text">ADCP</span> بیش از یک نوع <span class="ltr-text">FcγR</span> را بیان می‌کنند. <span class="ltr-text">FcγR</span> های موجود و نسبت بیان آنها در سطح سلول می‌تواند با نوع سلول و القای سیتوکین متفاوت باشد، اگرچه <span class="ltr-text">FcγRIIa</span> اغلب به عنوان <span class="ltr-text">FcγR</span> غالب بیان شده ظاهر می‌شود. علاوه بر این، زیرگروه‌های مختلف <span class="ltr-text">IgG</span> پتانسیل متفاوتی برای القای <span class="ltr-text">ADCP</span> از طریق <span class="ltr-text">FcγR</span> های مختلف دارند. پلی‌مورفیسم‌های گیرنده <span class="ltr-text">Fcγ</span> نیز می‌توانند بر فعالیت <span class="ltr-text">ADCP</span> تأثیر بگذارند، به ویژه برای تعاملات <span class="ltr-text">IgG2</span> با <span class="ltr-text">FcγRIIa</span>، اگرچه برای تعاملات <span class="ltr-text">IgG1</span> با <span class="ltr-text">FcγRIIIa</span> روی سلول‌های ایمنی قادر به <span class="ltr-text">ADCP</span> نیز همین‌طور است. همچنین، مهندسی <span class="ltr-text">Fc</span> که عملکرد افکتور را افزایش می‌دهد ممکن است سهم بالقوه <span class="ltr-text">in vivo</span> سلول‌های افکتور خاص و <span class="ltr-text">FcγR</span> های آنها را بر فعالیت <span class="ltr-text">ADCP</span> تغییر دهد (این موضوع برای <span class="ltr-text">ADCC</span> نیز صادق است). ملاحظه این پیچیدگی‌ها باید برای تصمیم‌گیری در مورد آزمایش‌های <span class="ltr-text">ADCP</span> <span class="ltr-text">in vitro</span> که در طول توسعه داروی آنتی‌بادی استفاده می‌شوند، به کار رود.
+        </p>
+        <p class="mb-4">
+            به طور سنتی، آزمایش‌های <span class="ltr-text">ADCP</span> از ماکروفاژهای اولیه به عنوان سلول‌های افکتور فیزیولوژیکی مرتبط استفاده می‌کنند. از آنجا که ماکروفاژها یک نوع سلول ایمنی در گردش خون نیستند، ماکروفاژهای اولیه انسانی برای آزمایش‌های <span class="ltr-text">ADCP</span> باید از مونوسیت‌های اهداکننده خون تهیه و به مدت یک هفته در کشت تمایز یابند. ترجیحاً از روش‌های تمایز استفاده شود که منجر به ماکروفاژهایی می‌شوند که زیرگروه مورد نظر را نشان می‌دهند (یعنی زیرگروهی که بیشترین شباهت را به وضعیت خاص <span class="ltr-text">in vivo</span> دارد).
+        </p>
+        <p class="mb-4">
+            مونوسیت‌ها نیز ممکن است به عنوان سلول‌های افکتور برای ارزیابی فعالیت <span class="ltr-text">ADCP</span> استفاده شوند، اما در <span class="ltr-text">ADCP</span> کمتر مؤثر هستند.
+        </p>
+        <p class="mb-4">
+            پیچیدگی آماده‌سازی سلول افکتور اولیه، به ویژه برای ماکروفاژها، پتانسیل ایجاد تغییرپذیری در آزمایش را دارد. کنترل کیفیت دقیق و توسعه یک فرآیند قوی برای آماده‌سازی سلول، از جمله تمایز سلولی، ضروری است. فلوسیتومتری را می‌توان برای ارزیابی نشانگرهای خاصی که سلول‌های مورد نظر را نشان می‌دهند، استفاده کرد تا میزان نمایش آنها در جمعیت درک شود و بتوان برای تصمیم‌گیری‌های «بله/خیر» در مورد استفاده از آنها استفاده کرد. بیان <span class="ltr-text">FcγR</span> های خاص را می‌توان با استفاده از فلوسیتومتری تأیید و با استفاده از کیت‌های موجود تجاری کمی‌سازی کرد. فلوسیتومتری <a href="1027.html" class="text-blue-600 hover:underline" target="_blank">1027</a> بررسی کاملی از بهترین شیوه‌ها برای فلوسیتومتری ارائه می‌دهد و شامل منابعی برای روش‌های عملکردی اندازه‌گیری آپوپتوز، زنده‌مانی سلولی و بیان سیتوکین درون سلولی است. جمع‌آوری سلول‌های افکتور <span class="ltr-text">ADCP</span> از اهداکنندگان مختلف به دلیل محدودیت‌های سازگاری بافتی عمده (<span class="ltr-text">MHC</span>) امکان‌پذیر نیست، که منجر به پتانسیل کلی بیشتر برای تغییرپذیری اجرای آزمایش می‌شود.
+        </p>
+        <p class="mb-4">
+            چندین خط سلولی تثبیت شده، مانند <span class="ltr-text">THP-1</span> مونوسیتی، <span class="ltr-text">U937</span> پرومونوسیتی و میکروگلیای <span class="ltr-text">BV-2</span>، به عنوان سلول‌های افکتور برای توسعه آزمایش <span class="ltr-text">ADCP</span> استفاده می‌شوند. علاوه بر این، خطوط سلولی مانند تخمدان همستر چینی (<span class="ltr-text">CHO</span>) و سلول‌های ژورکات (<span class="ltr-text">Jurkat</span>) بیان کننده <span class="ltr-text">FcγRIIa</span> یا سایر <span class="ltr-text">FcR</span> ها با موفقیت به عنوان جایگزین‌هایی برای آزمایش‌های سنتی <span class="ltr-text">ADCP</span> استفاده شده‌اند.
+        </p>
+        <p class="mb-4">
+            انتخاب سلول هدف مناسب به همان اندازه مهم است. پایداری سطح بیان آنتی‌ژن در طول پاساژ سلولی قابل نظارت است. اندازه و شکل سلول هدف نیز می‌تواند بر فعالیت <span class="ltr-text">ADCP</span> تأثیر بگذارد. سلول‌های هدف فیزیولوژیکی مرتبط مختلف باید برای مناسب بودن یا پل‌زنی به داده‌های استفاده از خط(های) سلولی مهندسی شده، به عنوان بخشی از توسعه آزمایش، مورد تجزیه و تحلیل قرار گیرند. هنگامی که هدف فیبریل‌های خارج سلولی هستند، آماده‌سازی فیبریل‌ها نیز نیاز به توسعه کامل دارد.
+        </p>
+        <p class="mb-4">
+            آزمایش‌های <span class="ltr-text">ADCP</span> معمولاً شامل ردیابی سلول‌های هدف برچسب‌گذاری شده فلورسنت با فلوسیتومتری یا میکروسکوپ کانفوکال است. به همین ترتیب، <span class="ltr-text">ADCP</span> پیچیده‌تر از آزمایش <span class="ltr-text">ADCC</span> است. برای فلوسیتومتری، سلول‌های افکتور و هدف مورد استفاده در آزمایش <span class="ltr-text">ADCP</span> از طریق برچسب‌گذاری افتراقی رنگ فلورسنت نشانگرهای سلولی خاص برای هر نوع سلول، قابل تمایز می‌شوند. دو یا چند فلوروکروم را می‌توان به طور همزمان در فلوسیتومتری استفاده کرد اگر طول موج‌های پیک انتشار آنها به یکدیگر نزدیک نباشند و بنابراین توسط آشکارسازهای مختلفی تشخیص داده شوند. میزان سیگنال فلورسنت متناسب با تعداد مولکول‌های حاوی فلوروکروم مرتبط با سلول‌های خاص است. آزمایش <span class="ltr-text">ADCP</span> شامل واکنش سلول‌های افکتور و هدف انکوبه شده با طیف دوز آنتی‌بادی است. شرایط مختلفی را می‌توان ارزیابی کرد از جمله نسبت سلول افکتور به هدف، مدت زمان آزمایش و طیف دوز آنتی‌بادی. یک کنترل ایزوتایپ آنتی‌بادی باید به عنوان یک کنترل منفی گنجانده شود.
+        </p>
+        <p class="mb-4">
+            یک مرحله شستشوی بعدی انجام می‌شود و سپس از فلوسیتومتری برای ارزیابی درصد سلول‌های هدف فاگوسیتوز شده استفاده می‌شود. یک جمعیت یکنواخت از سلول‌های افکتور، مانند یک خط سلولی تثبیت شده، آزمایش را به طور قابل توجهی ساده می‌کند. به عنوان مثال، درصد سلول‌های برچسب‌گذاری شده که به طور مضاعف رنگ‌آمیزی شده‌اند در مقایسه با کل سلول‌های هدف که به صورت منفرد رنگ‌آمیزی شده‌اند، می‌تواند درصد سلول‌های هدف فاگوسیتوز شده را نشان دهد. تجزیه و تحلیل شامل شناسایی و کمی‌سازی سلول‌های مختلف و همچنین دروازه‌بندی است، که تنظیم یک مرز عددی یا گرافیکی برای تجزیه و تحلیل زیرمجموعه‌ای از داده‌ها است. زیرمجموعه می‌تواند شامل سلول‌های هدف تنها یا سلول‌های مثبت برای نشانگرهای خاص هر دو سلول افکتور و هدف باشد. پراکندگی رو به جلو و جانبی سلول‌ها اغلب به عنوان یک فرآیند دروازه‌بندی اولیه برای حذف debris از تجزیه و تحلیل قبل از تمرکز بر دروازه‌بندی بر اساس نشانگرهای خاص و برچسب‌گذاری شده فلورسنت استفاده می‌شود.
+        </p>
+        <p class="mb-4">
+            به عنوان جایگزینی برای استفاده از سلول‌های هدف در آزمایش‌های <span class="ltr-text">ADCP</span>، برخی محققان از مهره‌های فلورسنت پوشیده شده با آنتی‌ژن یا فیبریل‌های برچسب‌گذاری شده فلورسنت استفاده کرده‌اند. این مهره‌ها یا فیبریل‌ها با آنتی‌بادی‌ها انکوبه می‌شوند در حالی که کمپلکس‌های ایمنی با سلول‌های افکتور انکوبه می‌شوند. سپس سلول‌های افکتور را می‌توان برای جذب مهره یا فیبریل فلورسنت با استفاده از فلوسیتومتری تجزیه و تحلیل کرد و فعالیت <span class="ltr-text">ADCP</span> نیز قابل ارزیابی است؛ با این حال، مهره‌های پوشیده شده با آنتی‌ژن ممکن است به طور دقیق سلول‌های هدف را منعکس نکنند. مهم است که درک شود داده‌های تولید شده از این رویکرد چگونه با داده‌های حاصل از سلول‌های هدف فیزیولوژیکی مرتبط مقایسه می‌شوند.
+        </p>
+        <p class="mb-4">
+            از آنجا که فلوسیتومتری با استفاده از برچسب‌گذاری خاص نشانگرهای خارجی سلول‌های هدف و افکتور در واقع شواهدی از ارتباط سطح سلولی را نشان می‌دهد نه اثبات فاگوسیتوز، توصیه می‌شود فاگوسیتوز را تأیید کنید. این کار را می‌توان با استفاده از یک رنگ فلورسنت حساس به <span class="ltr-text">pH</span>، که به صورت تجاری موجود است، برای برچسب‌گذاری سلول‌های هدف و در نتیجه تشخیص حضور آنها در محیط اسیدی لیزوزوم‌های فاگوسیت‌ها انجام داد. به طور جایگزین، بلع سلول هدف را می‌توان با میکروسکوپ فلورسانس کانفوکال یا تصویربرداری سلول زنده مبتنی بر میکروسکوپ، از جمله تایم لپس، برای ارزیابی <span class="ltr-text">ADCP</span> توسط سلول‌های زنده تأیید کرد. سلول‌های افکتور را می‌توان با تریپسین نیز برای حذف فلورسانس متصل اما درونی نشده، تیمار کرد. تجهیزات تصویربرداری دیجیتال سلول زنده و نرم‌افزارهای مرتبط به سطحی پیشرفت کرده‌اند که قادر به کمی‌سازی پاسخ‌های دوز <span class="ltr-text">ADCP</span> هستند؛ این علاوه بر ارزیابی کیفی با استفاده از رنگ‌های فلورسنت، حساس به <span class="ltr-text">pH</span> یا سایر رنگ‌ها است، و یک جایگزین قابل اعتماد و با کیفیت بالا برای تجزیه و تحلیل فلوسیتومتری فراهم می‌کند. برخی از گزینه‌های اضافی این سیستم‌ها شامل قابلیت کنترل محیطی برای سلول‌ها در صفحات آزمایش در اتاقک‌هایی است که سلول‌ها به صورت دیجیتالی تصویربرداری می‌شوند. این فرآیند همچنین امکان ارزیابی پاسخ‌های سلولی را در زمان‌های مختلف در طول واکنش آزمایش فراهم می‌کند. برای این نوع تجزیه و تحلیل، تعادل مناسب بین نیازهای تصویربرداری و سلول‌ها مهم است.
+        </p>
+        <p class="mb-4">
+            فرمت‌های آزمایش ژن گزارشگر نیز یک گزینه هستند (مثلاً آزمایش‌هایی که از سلول‌های افکتور مهندسی شده بیان کننده یک <span class="ltr-text">FcγR</span> مرتبط و یک ژن گزارشگر با عناصر پاسخ‌دهنده مرتبط با <span class="ltr-text">MOA</span> و خاص <span class="ltr-text">ADCP</span> مانند <span class="ltr-text">NFAT</span> استفاده می‌کنند). آزمایش ژن گزارشگر فعال‌سازی اولیه مسیر <span class="ltr-text">ADCP</span> را به عنوان جایگزینی برای فاگوسیتوز سلولی منعکس می‌کند. فعال‌سازی مسیر در این آزمایش‌ها تنها زمانی می‌تواند رخ دهد که آنتی‌بادی‌ها به هر دو سلول هدف و افکتور متصل باشند. سلول‌های افکتور مهندسی شده مختلف که <span class="ltr-text">FcγRIIa</span>، <span class="ltr-text">FcγRIIIa</span> یا <span class="ltr-text">FcγRI</span> را بیان می‌کنند، امکان ارزیابی تأثیر بالقوه عواملی مانند تغییرات تولید بر <span class="ltr-text">FcγR</span> های مختلف درگیر در <span class="ltr-text">ADCP</span> را فراهم می‌کنند. این آزمایش‌ها معمولاً سریع‌تر، دقیق‌تر و صحیح‌تر هستند و نسبت سیگنال به پس‌زمینه بالاتری دارند، که آنها را برای اثبات سازگاری تولید و برای مشخصه‌یابی، به عنوان مثال، بسیار مناسب می‌سازد. آنها امکان ارزیابی قدرت نسبی را فراهم می‌کنند، اما نه فاگوسیتوز را. مقایسه با داده‌های تولید شده از آزمایش‌هایی که فاگوسیتوز سلولی واقعی را اندازه‌گیری می‌کنند، توصیه می‌شود، و از آنجا که همبستگی ممکن است بین داروهای درمانی خاص متفاوت باشد، همبستگی باید برای هر یک مورد بررسی قرار گیرد.
+        </p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">آپوپتوز وابسته به <span class="ltr-text">Fc</span></h3>
+        <p class="mb-4">
+            آپوپتوز، یا مرگ برنامه‌ریزی شده سلولی، تخریب ژنتیکی کنترل شده سلول‌ها است که به عنوان بخشی طبیعی از رشد یا تکوین یک ارگانیسم رخ می‌دهد. آپوپتوز با چگالش هسته‌ای، کوچک شدن سلول، تاول‌زدگی غشاء و قطعه‌قطعه شدن <span class="ltr-text">DNA</span> کروموزومی مشخص می‌شود. آپوپتوز وابسته به <span class="ltr-text">Fc</span> یکی از عملکردهای افکتور <span class="ltr-text">Fc</span> است که در آن اتصال مولکول‌های خاص سطح سلولی توسط آنتی‌بادی‌ها در حضور آنتی‌بادی‌های اتصال عرضی یا سلول‌های بیان‌کننده <span class="ltr-text">FcγR</span>، رویدادهای انتقال سیگنال را آغاز می‌کند که منجر به آپوپتوز سلول‌ها می‌شود.
+        </p>
+        <p class="mb-4">
+            آپوپتوز وابسته به <span class="ltr-text">Fc</span> به عنوان یک مکانیسم عملکرد بالقوه (<span class="ltr-text">MOA</span>) برای چندین آنتی‌بادی درمانی مطرح شده است. همانطور که شکل <span class="ltr-text">5</span> نشان می‌دهد، القای آپوپتوز وابسته به <span class="ltr-text">Fc</span> <span class="ltr-text">in vivo</span> به مولکول‌های هدف خاصی که قادر به فعال‌سازی مسیرهای آپوپتوز هستند بستگی دارد و نیاز به اتصال عرضی ناحیه‌های <span class="ltr-text">Fc</span> توسط <span class="ltr-text">FcγR</span> روی سلول‌های <span class="ltr-text">NK</span> و سایر سلول‌های افکتور مانند نوتروفیل‌ها و مونوسیت‌ها دارد. بسته به سلول‌های افکتور درگیر، آپوپتوز وابسته به <span class="ltr-text">Fc</span> ممکن است از طریق اتصال عرضی توسط هر یک از زیرکلاس‌های <span class="ltr-text">FcγR</span> ها (یعنی <span class="ltr-text">I</span>، <span class="ltr-text">IIa</span>، <span class="ltr-text">IIb</span>، <span class="ltr-text">IIIa</span>، <span class="ltr-text">IIIb</span>) القا شود. عواملی که بر فعالیت اتصال <span class="ltr-text">FcγR</span> تأثیر می‌گذارند، مانند ایزوتایپ‌ها و گلیکوفورم‌های آنتی‌بادی، نیز بر آپوپتوز وابسته به <span class="ltr-text">Fc</span> تأثیر می‌گذارند. علاوه بر این، میزان آپوپتوز وابسته به <span class="ltr-text">Fc</span> با سطح بیان آنتی‌ژن رابطه مثبت دارد.
+        </p>
+        <p class="mb-4 text-center">
+            <span class="ltr-text">Figure 5. Fc-dependent apoptosis.</span>
+        </p>
+        <p class="mb-4">
+            طراحی آزمایش‌های آپوپتوز وابسته به <span class="ltr-text">Fc</span> <span class="ltr-text">in vitro</span> شامل انتخاب سلول‌های هدف مرتبط و عوامل اتصال عرضی است. ملاحظات برای سلول‌های هدف مشابه مواردی است که برای <span class="ltr-text">ADCC</span> و <span class="ltr-text">ADCP</span> بیان شد. عوامل اتصال عرضی رایج شامل آنتی‌بادی‌های ضد <span class="ltr-text">Fc</span> و پروتئین <span class="ltr-text">A</span> هستند. توجه داشته باشید که ترکیب بهینه آنتی‌بادی و عوامل اتصال عرضی در آزمایش باید به صورت تجربی تعیین شود. آپوپتوز سلول‌های هدف را می‌توان با تشخیص چگالش کروماتین، شکستگی یا قطعه‌قطعه شدن رشته <span class="ltr-text">DNA</span> با رنگ‌های مختلف اسید نوکلئیک، تغییرات در نفوذپذیری غشاهای سلولی یا پتانسیل غشای میتوکندری توسط پروب‌های فلورسنت، ترالوکاسیون فسفولیپید آنیونی فسفاتیدیل‌سرین با کونژوگه‌های فلورسنت آنکسین <span class="ltr-text">V</span>، و/یا فعال‌سازی آنزیم‌های کاسپاز با آزمایش‌های فعالیت کاسپاز ارزیابی کرد. از آنجا که برخی از این ابزارها رویدادهایی را اندازه‌گیری می‌کنند که ممکن است همیشه منجر به آپوپتوز نشوند، انتخاب آنها باید بر اساس دانش مسیرهای آپوپتوز در سلول هدف خاص توجیه شود.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">فرمت‌های آزمایش اتصال</h2>
+        <p class="mb-4">
+            بخش آزمایش‌های عملکردی مبتنی بر سلول اطلاعاتی درباره مسیرهای بیولوژیکی و پروتئین‌های مرتبط که برای اندازه‌گیری این مکانیسم‌های عملکرد حیاتی هستند، ارائه داد. در مقابل، این بخش برای توصیف رایج‌ترین فرمت‌های آزمایش اتصال و پیوند ابزارهای مختلف مورد استفاده با بیولوژی توصیف شده در آزمایش‌های عملکردی مبتنی بر سلول، ساختار یافته است. فرمت‌های آزمایش اتصال مبتنی بر سلول به اندازه آزمایش‌های غیرمبتنی بر سلول به طور رایج استفاده نمی‌شوند. خلاصه‌ای از رایج‌ترین فرمت‌های مورد استفاده برای آزمایش‌های اتصال مبتنی بر سلول به دنبال توضیحات دقیق‌تر آزمایش‌های اتصال غیرمبتنی بر سلول ارائه می‌شود.
+        </p>
+        <p class="mb-4">
+            جدول <span class="ltr-text">3</span> فرمت‌های رایج آزمایش اتصال غیرمبتنی بر سلول و فرمت‌های اتصال مبتنی بر سلول را خلاصه می‌کند. سپس هر یک از این آزمایش‌ها با جزئیات بیشتر توضیح داده می‌شود.
+        </p>
+
+        <div class="card mb-4">
+            <table>
+                <thead>
+                    <tr>
+                        <th>فرمت آزمایش</th>
+                        <th>مزایا/محدودیت‌ها</th>
+                        <th>نکات قابل تأمل</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>سنجش ایمونوسربنت متصل به آنزیم (<span class="ltr-text">ELISA</span>)</td>
+                        <td class="text-right">
+                            <ul class="list-disc pr-4 text-sm">
+                                <li>توان بالا، قابل اتوماسیون، تجهیزات استاندارد، اقتصادی، به راحتی قابل انتقال</li>
+                                <li>مراحل شستشوی متعدد، طولانی، نیاز به پوشش قبلی صفحه</li>
+                            </ul>
+                        </td>
+                        <td class="text-right">
+                            <ul class="list-disc pr-4 text-sm">
+                                <li>وجود آگراگیت‌ها ممکن است تفسیر نتایج را پیچیده کند، به ویژه برای اتصال <span class="ltr-text">IgG2</span>، <span class="ltr-text">IgG4</span> و <span class="ltr-text">FcRn</span></li>
+                                <li>اتصال عرضی را برای بهبود حساسیت در نظر بگیرید، به ویژه هنگامی که تعاملات اتصال ضعیف هستند (مثلاً با <span class="ltr-text">FcγRII</span> و <span class="ltr-text">FcγRIII</span>)</li>
+                                <li>کیفیت و غلظت معرف حیاتی بر میل ترکیبی تعامل اندازه‌گیری شده تأثیر می‌گذارد</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>رزونانس پلاسمون سطحی (<span class="ltr-text">SPR</span>)، تداخل‌سنجی لایه زیستی (<span class="ltr-text">BLI</span>)</td>
+                        <td class="text-right">
+                            <ul class="list-disc pr-4 text-sm">
+                                <li>فرمت‌های بدون برچسب؛ داده‌های جنبشی دقیق‌تر؛ می‌تواند طیف نسبتاً وسیعی از میل ترکیبی‌های اتصال را اندازه‌گیری کند؛ آماده‌سازی نمونه و تجزیه و تحلیل داده‌ها می‌تواند خودکار شود؛ می‌تواند استفاده از ماده مرجع را برای بیان ثابت تفکیک تعادل نسبی (<span class="ltr-text">KD</span>) در بر گیرد.</li>
+                                <li>توان متوسط؛ نیاز به تجهیزات تخصصی و تخصص فنی دارد؛ انتقال آن دشوارتر است؛ نیاز به مهارت‌های فنی بیشتری نسبت به سایر روش‌های غیرمبتنی بر سلول دارد.</li>
+                            </ul>
+                        </td>
+                        <td class="text-right">
+                            <ul class="list-disc pr-4 text-sm">
+                                <li>تولید داده‌های اتصال معتبر و مفید عموماً وابسته به مشخصه‌یابی کامل و کیفیت بالا و سازگار معرف‌های حیاتی مانند <span class="ltr-text">FcγR</span>، <span class="ltr-text">FcRn</span> و معرف‌های حاوی <span class="ltr-text">Fc</span>، و فرمت طراحی تجربی (مثلاً <span class="ltr-text">pH</span> اتصال <span class="ltr-text">FcRn</span>، تجزیه و تحلیل داده‌ها) است.</li>
+                                <li>برای راه‌اندازی تجربی، نوع تراشه بیوسنسور و رویکردهای جایگزین برای تثبیت لیگاند، از جمله تراکم لیگاند، بر روی سطح تراشه حسگر را در نظر بگیرید؛ انتقال جرم، ممانعت فضایی و تعاملات غیرخاص را به حداقل برسانید؛ از آثار اَویدیتاس ناشی از بارگذاری بیش از حد لیگاند روی تراشه خودداری کنید؛ تثبیت مستقیم یا غیرمستقیم لیگاند امکان‌پذیر است، اگرچه تثبیت غیرمستقیم ترجیح داده می‌شود؛ جریان غلظت بالاتری از آنالیت را روی سطح تراشه برای کاهش تعاملات با میل ترکیبی پایین (مثلاً <span class="ltr-text">FcγRII</span>، <span class="ltr-text">FcγRIII</span>) در نظر بگیرید.</li>
+                                <li>ترجیحاً، پروتئین <span class="ltr-text">FcRn</span> باید شامل دامنه خارج سلولی زنجیره آلفای <span class="ltr-text">FcRn</span> و بتا-<span class="ltr-text">2</span> میکروگلوبولین (<span class="ltr-text">β2M</span>) برای اتصال کارآمد و وابسته به <span class="ltr-text">pH</span> به <span class="ltr-text">IgG</span> باشد. زنجیره آلفای <span class="ltr-text">FcRn</span> نیز به تنهایی در مطالعات مقایسه‌ای اتصال <span class="ltr-text">SPR</span> مولکول‌های حاوی <span class="ltr-text">Fc</span> استفاده شده است؛ با این حال، اتصال <span class="ltr-text">IgG</span> نسبت به آنچه با استفاده از هترودیمر <span class="ltr-text">FcRn</span> بومی مشاهده می‌شود، کاهش می‌یابد. چه به صورت تجاری تولید شود و چه در داخل، بیان سلول پستانداران برای به حداکثر رساندن تاخوردگی صحیح پروتئین و تغییرات پس از ترجمه توصیه می‌شود.</li>
+                                <li><span class="ltr-text">BLI</span> کمتر از <span class="ltr-text">SPR</span> حساس است اما عموماً توان بالاتری دارد.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>حذف جنبشی</td>
+                        <td class="text-right">
+                            <ul class="list-disc pr-4 text-sm">
+                                <li>فرمت بدون برچسب تعاملات با میل ترکیبی بالا را اندازه‌گیری می‌کند؛ می‌تواند اتصال را فراتر از محدودیت‌های روش‌های محبوب مبتنی بر سطح (مثلاً تفکیک بسیار آهسته) اندازه‌گیری کند؛ در طیف وسیعی از میل ترکیبی‌ها مفید است؛ اندازه‌گیری‌ها را می‌توان با مخلوط‌های غیرخالص انجام داد؛ می‌تواند غلظت‌ها را اندازه‌گیری کند.</li>
+                                <li>توان پایین تا متوسط؛ اتصال غیرخاص احتمالی به مهره‌ها؛ برای تعاملات اتصال ضعیف‌تر مانند برخی تعاملات <span class="ltr-text">FcγR</span> با آنتی‌بادی‌ها کمتر مفید است؛ ممکن است اتصال فیزیولوژیکی را منعکس نکند اگر اتصال فیزیولوژیکی در محیط <span class="ltr-text">in vivo</span> در محلول نباشد؛ نیاز به تجهیزات تخصصی.</li>
+                            </ul>
+                        </td>
+                        <td class="text-right">
+                            <ul class="list-disc pr-4 text-sm">
+                                <li>تأیید کنید که شرکای اتصال به طور معمول در محلول متصل می‌شوند؛ در نظر بگیرید که کدام شریک اتصال در سلول جریان گیر می‌افتد؛ در دسترس بودن شرکای اتصال خالص را تعیین کنید.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>فرمت آزمایش مجاورت مبتنی بر مهره</td>
+                        <td class="text-right">
+                            <ul class="list-disc pr-4 text-sm">
+                                <li>توان بالا، همگن، مناسب برای تعاملات با میل ترکیبی پایین‌تر، نسبت سیگنال به نویز بالا، به راحتی قابل اتوماسیون، قابل انتقال.</li>
+                                <li>معرف‌های گران‌قیمت نیاز به برچسب‌گذاری و خواننده صفحه نسبتاً گران‌قیمت دارند؛ به وجود آگراگیت‌ها در نمونه‌ها به دلیل اثرات اَویدیتاس حساس است.</li>
+                            </ul>
+                        </td>
+                        <td class="text-right">
+                            <ul class="list-disc pr-4 text-sm">
+                                <li>غلظت‌های <span class="ltr-text">FcR</span> و مولکول‌های حاوی <span class="ltr-text">Fc</span> باید تغییر کنند تا مطلوب‌ترین منحنی پاسخ به دوز تولید شود.</li>
+                                <li>نسبت‌های اتصال مهره باید بر اساس مقدار هر شریک اتصال مورد استفاده در آزمایش بهینه‌سازی شوند.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>انتقال انرژی رزونانس فلورسانس</td>
+                        <td class="text-right">
+                            <ul class="list-disc pr-4 text-sm">
+                                <li>توان بالا، همگن، سریع، پنجره پاسخ آزمایش گسترده، به راحتی قابل اتوماسیون، قابل انتقال.</li>
+                                <li>برای تعاملات با میل ترکیبی پایین‌تر به خوبی کار نمی‌کند؛ نیاز به برچسب‌گذاری و خواننده صفحه تخصصی دارد.</li>
+                            </ul>
+                        </td>
+                        <td class="text-right">
+                            <ul class="list-disc pr-4 text-sm">
+                                <li>فاصله بین شرکای اتصال باید کوچکتر از آزمایش‌های مجاورت مبتنی بر مهره باشد.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>آزمایش‌های اتصال مبتنی بر سلول</td>
+                        <td class="text-right">
+                            <ul class="list-disc pr-4 text-sm">
+                                <li>از نظر فیزیولوژیکی مرتبط‌تر هستند زیرا گیرنده‌ها در محیط غشای سلولی ارائه می‌شوند؛ از تجهیزات استاندارد استفاده می‌کند؛ توان متوسط تا بالا.</li>
+                                <li>نیاز به نگهداری خطوط سلولی در کشت؛ پایداری بیان گیرنده‌های مرتبط در طول زمان در کشت را در نظر بگیرید؛ چالش‌برانگیزتر برای اتوماسیون و انتقال نسبت به آزمایش‌های غیرمبتنی بر سلول؛ سطوح گیرنده‌ها ممکن است منجر به آثار اَویدیتاس برای آگراگیت‌های با وزن مولکولی بالا شود.</li>
+                                <li>هزینه‌های مجوز سلول.</li>
+                                <li>جدا شدن سلول می‌تواند یک چالش باشد؛ اثرات صفحه بالقوه قوی‌تر؛ مراحل شستشوی متعدد؛ طولانی؛ نیاز به پوشش قبلی صفحات با سلول‌ها.</li>
+                                <li>در آزمایش‌های اتصال مبتنی بر سلول <span class="ltr-text">FcRn</span>، سلول‌های <span class="ltr-text">HEK</span> و <span class="ltr-text">CHO</span> بیان‌کننده <span class="ltr-text">FcRn</span> برای مطالعه تعامل <span class="ltr-text">Fc-FcRn</span> استفاده شده‌اند. برای دستیابی به عملکرد کامل <span class="ltr-text">FcRn</span> بیان شده، کل کمپلکس باید ترانسفکت و همزمان بیان شود، از جمله زیرواحد بزرگ <span class="ltr-text">p51 (FCGRT)</span> و <span class="ltr-text">p14 (β2M)</span>.</li>
+                            </ul>
+                        </td>
+                        <td class="text-right">
+                            <ul class="list-disc pr-4 text-sm">
+                                <li>برای آزمایش‌های اتصال <span class="ltr-text">FcRn</span> مبتنی بر سلول، سلول‌های <span class="ltr-text">HEK</span> و <span class="ltr-text">CHO</span> بیان‌کننده <span class="ltr-text">FcRn</span> برای مطالعه تعامل <span class="ltr-text">Fc-FcRn</span> استفاده شده‌اند. برای دستیابی به عملکرد کامل <span class="ltr-text">FcRn</span> بیان شده، کل کمپلکس باید ترانسفکت و همزمان بیان شود، از جمله زیرواحد بزرگ <span class="ltr-text">p51 (FCGRT)</span> و <span class="ltr-text">p14 (β2M)</span>.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="text-xs text-gray-600">
+                جدول <span class="ltr-text">3</span>. فرمت‌های رایج آزمایش اتصال
+            </p>
+        </div>
+
+        <p class="mb-4">
+            برای همه این فرمت‌های آزمایش، معرف‌های مورد استفاده در آزمایش برای عملکرد آزمایش حیاتی هستند. در برخی موارد، پروتئین‌های نوترکیب خاصی باید به دست آیند، در حالی که در موارد دیگر، آنتی‌بادی‌های ثانویه، معرف‌های تشخیص، و صفحات یا سطوح اتصال تخصصی توسط فروشنده مورد نیاز است.
+        </p>
+        <p class="mb-4">
+            به دلیل تعداد زیاد فرمت‌های آزمایش مورد بحث در بخش‌های زیر، هر یک به گونه‌ای ساختار یافته است که تکنیک را معرفی کرده و سپس مزایا، معایب و نکات قابل تأمل را مورد بحث قرار می‌دهد.
+        </p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایش‌های اتصال غیرمبتنی بر سلول</h3>
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2"><span class="ltr-text">ELISA</span></h4>
+        <p class="mb-4">
+            سنجش ایمونوسربنت متصل به آنزیم (<span class="ltr-text">ELISA</span>) رایج‌ترین نوع آزمایش اتصال است. این فرمت آزمایش غیرمبتنی بر سلول انعطاف‌پذیر است و فرمت‌های مختلفی وجود دارد. روش‌های آزمایش ایمونولوژیک - سنجش ایمونوسربنت متصل به آنزیم (<span class="ltr-text">ELISA</span>) <a href="1103.html" class="text-blue-600 hover:underline" target="_blank">1103</a> اطلاعاتی درباره فرمت‌های مختلف ارائه می‌دهد. آزمایش‌های <span class="ltr-text">ELISA</span> مختلفی برای ارزیابی اتصال پروتئین حاوی <span class="ltr-text">Fc</span> به <span class="ltr-text">C1q</span> و به <span class="ltr-text">FcγR</span> های مختلف، و برای ارزیابی اتصال وابسته به <span class="ltr-text">pH</span> به <span class="ltr-text">FcRn</span> توسعه یافته و استفاده شده‌اند.
+        </p>
+        <p class="mb-4">
+            <strong>مزایا:</strong> توان بالا، قابل اتوماسیون، تجهیزات استاندارد، اقتصادی، به راحتی قابل انتقال.
+        </p>
+        <p class="mb-4">
+            <strong>معایب:</strong> مراحل شستشوی متعدد، طولانی، نیاز به پوشش قبلی صفحه، ممکن است به وجود آگراگیت‌ها در نمونه‌ها بسته به فرمت آزمایش حساس باشد. وجود آگراگیت‌ها ممکن است تفسیر نتایج را پیچیده کند، به ویژه برای اتصال <span class="ltr-text">IgG2</span>، <span class="ltr-text">IgG4</span> و <span class="ltr-text">FcRn</span>. علاوه بر این، فرمت <span class="ltr-text">ELISA</span> ممکن است محدودیت‌های اتصال داشته باشد، به ویژه هنگامی که تعاملات اتصال ضعیف هستند (مثلاً <span class="ltr-text">FcγRII</span> و <span class="ltr-text">FcγRIII</span>). در این موارد، اتصال عرضی را برای بهبود حساسیت در نظر بگیرید (به <a href="1103.html" class="text-blue-600 hover:underline" target="_blank">1103</a> مراجعه کنید).
+        </p>
+        <p class="mb-4">
+            <strong>نکات قابل تأمل:</strong> کیفیت معرف حیاتی، موجودی و غلظت، میل ترکیبی تعامل اندازه‌گیری شده.
+        </p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">رزونانس پلاسمون سطحی</h4>
+        <p class="mb-4">
+            فناوری رزونانس پلاسمون سطحی (<span class="ltr-text">SPR</span>) را می‌توان برای تشخیص و مشخصه‌یابی بدون برچسب و در زمان واقعی اتصال و تفکیک لیگاند در تعاملات پروتئین‌های <span class="ltr-text">FcR</span> و پروتئین‌های حاوی <span class="ltr-text">Fc</span> استفاده کرد. ثابت‌های سرعت اتصال (<span class="ltr-text">ka</span>) و تفکیک (<span class="ltr-text">kd</span>)، و ثابت تفکیک تعادل یا ثابت میل ترکیبی (<span class="ltr-text">KD = kd/ka</span>) را می‌توان تعیین کرد. سیستم‌های معمولی از سلول‌های جریان میکروفلوئیدیک استفاده می‌کنند. یکی از پروتئین‌های در حال تعامل به صورت لیگاند روی سطح تراشه بیوسنسور در سیستم میکروفلوئیدیک ثابت می‌شود، چه به طور مستقیم و چه به طور غیرمستقیم از طریق جذب. به طور معمول، شریک پروتئین دیگر، به عنوان آنالیت، سپس در محلولی روی سطح تراشه بیوسنسور با لیگاند ثابت شده به سطح اتصال دلخواه جریان می‌یابد تا اتصال را اندازه‌گیری کند؛ سپس یک مرحله تفکیک بعدی با بافر تنها دنبال می‌شود. اتصال و تفکیک <span class="ltr-text">FcR</span> با پروتئین حاوی <span class="ltr-text">Fc</span> را می‌توان از طریق تغییر در <span class="ltr-text">SPR</span> یا واحدهای پاسخ <span class="ltr-text">SPR</span> (<span class="ltr-text">RUs</span>) اندازه‌گیری کرد که به نوبه خود، تغییر در جرم در سطح تراشه حسگر را منعکس کننده اتصال نشان می‌دهد.
+        </p>
+        <p class="mb-4">
+            این تکنیک حساس است و فرمت‌ها و شرایط مختلفی را می‌توان برای به دست آوردن داده‌ها در شرایط خاص استفاده کرد. برای تعاملاتی که تعادل حالت پایدار بین اتصال و تفکیک نمی‌تواند در زمان معقولی حاصل شود، اما اطلاعات جنبشی وجود دارد، یک تجزیه و تحلیل جنبشی برای به دست آوردن <span class="ltr-text">ka</span> و <span class="ltr-text">kd</span> امکان تعیین ثابت میل ترکیبی <span class="ltr-text">KD</span> را فراهم می‌کند. هنگامی که جنبش اتصال و تفکیک بسیار سریع است و می‌توان در زمان معقولی به حالت پایدار رسید، یک تجزیه و تحلیل تعادل حالت پایدار را می‌توان برای تعیین <span class="ltr-text">KD</span> استفاده کرد. مدل‌های مختلفی از برازش داده‌های اتصال برای تعیین اطلاعات بیشتر در مورد تعامل اتصال (مثلاً بهترین برازش به مدل اتصال <span class="ltr-text">1:1</span>) و همچنین برای به دست آوردن مقادیر برای پارامترهای اتصال مورد نظر استفاده می‌شوند. بحث گسترده‌تری از <span class="ltr-text">SPR</span> به عنوان یک روش آزمایش ایمونولوژیک در روش‌های آزمایش ایمونولوژیک - رزونانس پلاسمون سطحی <a href="1105.html" class="text-blue-600 hover:underline" target="_blank">1105</a> ارائه شده است که راهنمایی‌هایی درباره جنبه‌های عملی روش‌ها، کنترل‌ها و تجزیه و تحلیل‌ها، از جمله موارد مربوط به به دست آوردن اطلاعات دقیق درباره <span class="ltr-text">ka</span>، <span class="ltr-text">kd</span> و <span class="ltr-text">KD</span>، و همچنین چگونگی اجتناب از مشکلات، ارائه می‌دهد.
+        </p>
+        <p class="mb-4">
+            <strong>مزایا:</strong> نیاز به برچسب‌گذاری ندارد؛ داده‌های جنبشی دقیق‌تر را فراهم می‌کند؛ می‌تواند طیف نسبتاً وسیعی از میل ترکیبی‌ها را اندازه‌گیری کند؛ می‌تواند آماده‌سازی نمونه را خودکار کند؛ تجزیه و تحلیل داده‌ها ساده است؛ و می‌توان با یک ماده مرجع برای بیان <span class="ltr-text">KD</span> نسبی استفاده کرد.
+        </p>
+        <p class="mb-4">
+            <strong>معایب:</strong> توان پایین‌تر، نیاز به تجهیزات تخصصی، انتقال و اعتبارسنجی دشوارتر، و نیاز به تخصص فنی بیشتر نسبت به برخی روش‌های غیرمبتنی بر سلول دیگر.
+        </p>
+        <p class="mb-4">
+            <strong>نکات قابل تأمل:</strong> این فناوری نیاز به تخصص خاص و ارزیابی دقیق کیفیت معرف حیاتی دارد.
+        </p>
+        <p class="mb-4">
+            تولید یک مجموعه داده اتصال <span class="ltr-text">SPR</span> معتبر و مفید برای تعامل پروتئین <span class="ltr-text">FcR</span> و پروتئین حاوی <span class="ltr-text">Fc</span> را می‌توان به طور کلی وابسته به سه عامل اصلی دانست: کیفیت معرف‌های <span class="ltr-text">FcγR</span> یا <span class="ltr-text">FcRn</span> و حاوی <span class="ltr-text">Fc</span>، فرمت طراحی تجربی، و تجزیه و تحلیل داده‌ها.
+        </p>
+        <p class="mb-4">
+            به طور خاص، برای <span class="ltr-text">FcRn</span>، اتصال در <span class="ltr-text">pH</span> کمی اسیدی (حدود <span class="ltr-text">pH 6</span>) در اندوزوم پس از پینوسیتوز شدن داروی درمانی حاوی <span class="ltr-text">Fc</span>، مانند یک آنتی‌بادی مونوکلونال، در سطح سلول و اتصال آن با <span class="ltr-text">FcRn</span> هنگامی که در اندوزوم آزاد می‌شود، اتفاق می‌افتد. به طور معمول، در آزمایش‌های <span class="ltr-text">FcRn</span> مبتنی بر <span class="ltr-text">SPR</span>، اتصال و تفکیک در <span class="ltr-text">pH 6</span> برای به دست آوردن ثابت تفکیک تعادل یا میل ترکیبی، <span class="ltr-text">KD</span>، در این <span class="ltr-text">pH</span> تجزیه و تحلیل می‌شوند. علاوه بر این، اتصال در <span class="ltr-text">pH 6</span> و تفکیک در <span class="ltr-text">pH</span> خنثی، مانند <span class="ltr-text">pH 7.2–7.4</span>، را می‌توان برای درک تفکیک در <span class="ltr-text">pH</span> خنثی انجام داد؛ تفکیک در <span class="ltr-text">pH</span> خنثی برای بازیافت آنتی‌بادی <span class="ltr-text">in vivo</span> از طریق آزادسازی مجدد در سطح سلول ضروری است. مهندسی آنتی‌بادی برای بهبود اتصال به <span class="ltr-text">FcRn</span>، به عنوان جزئی که به طور بالقوه به بهبود فارماکوکینتیک (<span class="ltr-text">PK</span>) کمک می‌کند، ممکن است توانایی <span class="ltr-text">FcRn</span> در آزادسازی آنتی‌بادی در <span class="ltr-text">pH</span> خنثی را تغییر دهد، بنابراین ارزیابی تفکیک تحت جریان بافر <span class="ltr-text">pH</span> خنثی می‌تواند اطلاعات مهمی در چنین کارهایی ارائه دهد. برای پروتئین‌های حاوی <span class="ltr-text">Fc</span> که اهداف محلول را هدف قرار می‌دهند، ارزیابی اتصال <span class="ltr-text">FcRn</span> پروتئین در حضور هدف محلول آن نیز باید در نظر گرفته شود.
+        </p>
+        <p class="mb-4">
+            پروتئین <span class="ltr-text">FcRn</span> ترجیحاً باید شامل دامنه خارج سلولی محلول زنجیره سنگین (زنجیره <span class="ltr-text">α</span>) <span class="ltr-text">FcRn</span> و بتا-<span class="ltr-text">2</span> میکروگلوبولین (<span class="ltr-text">β2M</span>) مرتبط باشد زیرا <span class="ltr-text">β2M</span> برای اتصال کارآمد و وابسته به <span class="ltr-text">pH</span> <span class="ltr-text">IgG</span> مهم است و اتصال فیزیولوژیکی را دقیق‌تر منعکس می‌کند. هترودیمر <span class="ltr-text">FcRn</span> نوترکیب به صورت تجاری در دسترس است یا می‌توان آن را در داخل تولید کرد تا کنترل بهتری بر کیفیت، سازگاری و عرضه به دست آید. بیان سلول پستانداران برای به حداکثر رساندن تاخوردگی صحیح پروتئین و تغییرات پس از ترجمه بهترین است. دامنه خارج سلولی محلول <span class="ltr-text">FcRn</span> با <span class="ltr-text">β2M</span> مرتبط و گونه خاص که به طور مشترک خالص شده است را می‌توان استفاده کرد، یا یک پروتئین همجوشی از دامنه خارج سلولی <span class="ltr-text">FcRn</span> با <span class="ltr-text">β2M</span> نیز امکان‌پذیر است. به طور جایگزین، زنجیره سنگین (زنجیره <span class="ltr-text">α</span>) <span class="ltr-text">FcRn</span> می‌تواند، و اغلب به تنهایی، در مطالعات مقایسه‌ای اتصال <span class="ltr-text">SPR</span> مولکول‌های حاوی <span class="ltr-text">Fc</span> استفاده شود، اگرچه اتصال <span class="ltr-text">IgG</span> در مقایسه با هترودیمر <span class="ltr-text">FcRn</span> بومی کاهش می‌یابد.
+        </p>
+        <p class="mb-4">
+            برای <span class="ltr-text">FcγR</span> ها (به جز <span class="ltr-text">FcγRI</span>) اتصال پروتئین‌های حاوی <span class="ltr-text">Fc</span> مانند آنتی‌بادی‌ها یک تعامل با میل ترکیبی پایین است. برای به دست آوردن نتایج مناسب، ممکن است نیاز باشد غلظت بالاتری از آنالیت نسبت به معمول روی سطح تراشه که شریک اتصال به آن متصل است، جریان یابد.
+        </p>
+        <p class="mb-4">
+            برای همه <span class="ltr-text">FcR</span> ها، مشخصه‌یابی کامل و کیفیت عملکردی بالا و سازگار پروتئین برای یک آزمایش دقیق و قابل تکرار مهم است. به عنوان مثال، در به دست آوردن <span class="ltr-text">ka</span> در تجزیه و تحلیل جنبشی مهم است زیرا غلظت یک عامل <span class="ltr-text">ka</span> است و غلظت باید منعکس کننده پروتئین فعال عملکردی باشد.
+        </p>
+        <p class="mb-4">
+            باید در نظر گرفته شود که آیا <span class="ltr-text">FcR</span> یا پروتئین حاوی <span class="ltr-text">Fc</span> به سطح تراشه <span class="ltr-text">SPR</span> ثابت شود، زیرا هر دو فرمت امکان‌پذیر هستند. سطوح مختلف آماده شده بیوسنسور به صورت تجاری در دسترس هستند. برخی از سطوح تراشه می‌توانند اتصال شرکای اتصال خاص را کند کنند تا محدودیت‌های انتقال جرم یا ممانعت فضایی برای به دست آوردن نتایج دقیق اجتناب شود. تراکم پایین لیگاند روی سطح تراشه به همین دلایل مطلوب است. تثبیت مستقیم یا غیرمستقیم لیگاند امکان‌پذیر است. به طور کلی، آماده‌سازی سطح که از آثار اَویدیتاس جلوگیری می‌کند و به اتصال لیگاند در سطح نسبتاً پایین تحت تثبیت ملایم دست می‌یابد تا از شرایط محدود شده با انتقال جرم جلوگیری کند و اتصال ساده آنالیت را هدایت کند، ممکن است بهترین بازتاب شرایط روی سلول باشد.
+        </p>
+        <p class="mb-4">
+            تثبیت غیرمستقیم لیگاند ترجیح داده می‌شود زیرا ملایم‌تر است. نمونه‌ها شامل نوترآویدین تثبیت شده با آمین برای جذب لیگاند <span class="ltr-text">IgG</span> بیوتینیله شده یا آنتی‌ژن تثبیت شده برای جذب لیگاند <span class="ltr-text">IgG</span> هستند. فرمت‌های تثبیت مستقیم، مانند اتصال آمین لیگاند به طور مستقیم به تراشه، را می‌توان در نظر گرفت، اما با احتیاط، زیرا این نوع تثبیت مستقیم از طریق چندین محل در سراسر پروتئین پتانسیل تغییر ساختار و ویژگی‌های اتصال پروتئین را دارد. خروجی‌های تجزیه و تحلیل <span class="ltr-text">SPR</span> که نشان‌دهنده دستیابی به شرایط اتصال مناسب هستند شامل برازش خوب به مدل‌های اتصال ساده و باقی‌مانده‌های کم و به صورت تصادفی پراکنده در اطراف داده‌های برازش شده است. تعیین قبلی غلظت آنالیت فعال مورد آزمایش در برابر یک شریک ثابت شده خاص، ورودی دقیق‌تری از مقادیر را برای تعیین پارامترهای اتصال امکان‌پذیر می‌سازد.
+        </p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تداخل‌سنجی لایه زیستی</h4>
+        <p class="mb-4">
+            تداخل‌سنجی لایه زیستی (<span class="ltr-text">BLI</span>) یک فناوری تشخیص بدون برچسب و در زمان واقعی دیگر است که برای تشخیص تعاملات بین مولکولی استفاده می‌شود. این فناوری برای اندازه‌گیری تعاملات پروتئین‌های <span class="ltr-text">FcR</span> و پروتئین‌های حاوی <span class="ltr-text">Fc</span> مناسب است. این یک روش تحلیلی نوری است که تغییرات الگوی تداخل طول موج‌های نور (تداخل‌سنجی نوری) را اندازه‌گیری می‌کند و به یک بیوسنسور فیبر نوری وابسته است. هنگامی که مولکول‌های هدف به سطح بیوسنسور که شریک اتصال به آن متصل است، متصل یا از آن جدا می‌شوند، یک تغییر طیفی به میزانی متناسب با تعداد مولکول‌های شریک اتصال در محلول که به سطح بیوسنسور متصل هستند، رخ می‌دهد. تغییر در زمان واقعی نظارت می‌شود و می‌تواند داده‌های جنبشی یا داده‌های <span class="ltr-text">KD</span> نسبی را در مورد تعاملات مولکولی بین دو شریک اتصال ارائه دهد. <span class="ltr-text">BLI</span> همچنین می‌تواند برای به دست آوردن غلظت مولکول‌ها استفاده شود.
+        </p>
+        <p class="mb-4">
+            <strong>مزایا:</strong> بدون برچسب‌گذاری؛ توان بالا؛ می‌تواند داده‌های جنبشی و کمی‌سازی را ارائه دهد؛ نیمه‌خودکار.
+        </p>
+        <p class="mb-4">
+            <strong>معایب:</strong> نیاز به تجهیزات و بیوسنسورهای تخصصی؛ انتقال دشوارتر.
+        </p>
+        <p class="mb-4">
+            <strong>نکات قابل تأمل:</strong> انتخاب بیوسنسور و جهت‌گیری آزمایش مناسب (یعنی کدام مولکول را ثابت کنیم) مهم است. میل ترکیبی تعاملات <span class="ltr-text">FcγR–IgG</span> اغلب نسبتاً پایین است و نیاز به استفاده از غلظت‌های بالای آنالیت دارد. مازاد مولکول‌های لیگاند روی بیوسنسورها می‌تواند به دلیل تراکم، ممانعت فضایی، اَویدیتاس، اثرات انتقال جرم و اتصال غیرخاص، منجر به آثار داده‌ای شود، در حالی که تراکم بارگذاری پایین می‌تواند منجر به نسبت سیگنال به نویز ضعیف شود. شرایط بافر باید برای اتصال بهینه در نظر گرفته شود، اما تا حد امکان اتصال غیرخاص را کاهش دهد. طول مرحله اتصال باید در نظر گرفته شود زیرا زمان‌های کوتاه‌تر ممکن است از تعاملات ثانویه جلوگیری کند.
+        </p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آزمایش حذف جنبشی</h4>
+        <p class="mb-4">
+            آزمایش حذف جنبشی یک روش مبتنی بر تعادل/حذف محلول است. این روش به ویژه در تعیین <span class="ltr-text">KD</span> در محدوده <span class="ltr-text">pM</span> تا <span class="ltr-text">nM</span> پایین حساس است، اما تعاملات با میل ترکیبی پایین به دلیل نیازهای حجم و/یا غلظت نمونه چالش‌برانگیزتر هستند. آزمایش حذف جنبشی همچنین می‌تواند غلظت شرکای اتصال در حال تعامل را تعیین کند. در این آزمایش، غلظت یک شریک اتصال ثابت نگه داشته می‌شود، شریک دیگر به محلول تیتر می‌شود و اجازه داده می‌شود اتصال به تعادل برسد. برای تعاملات آنتی‌بادی–آنتی‌ژن، آنتی‌بادی به طور معمول تیتر می‌شود. سپس محلول به سرعت به یک سلول جریان منتقل می‌شود. سلول جریان حاوی مهره‌های پوشیده شده با آنتی‌ژن است که هر آنتی‌بادی آزاد را متصل می‌کنند، اما آنتی‌بادی‌های متصل به آنتی‌ژن در محلول زمان برای تفکیک ندارند؛ آنها به صورت جنبشی از اتصال به مهره حذف می‌شوند. آنتی‌بادی آزاد متصل به مهره‌ها سپس با آنتی‌بادی‌های ثانویه برچسب‌گذاری شده فلورسنت با ویژگی مناسب تشخیص داده می‌شود؛ سپس کمی‌سازی می‌شوند و اندازه‌گیری آنتی‌بادی آزاد باقی‌مانده در تعادل را ارائه می‌دهند. این مقدار سپس می‌تواند برای تعیین پارامترهای اتصال استفاده شود.
+        </p>
+        <p class="mb-4">
+            <strong>مزایا:</strong> می‌تواند تعاملات با میل ترکیبی بالا و طیف وسیعی از میل ترکیبی‌ها را اندازه‌گیری کند؛ اندازه‌گیری‌ها را می‌توان با مخلوط‌های غیرخالص و پروتئین‌های تغییر نیافته انجام داد؛ می‌تواند غلظت‌ها و اتصال را فراتر از محدودیت‌های روش‌های محبوب مبتنی بر سطح (مثلاً تفکیک بسیار آهسته) اندازه‌گیری کند.
+        </p>
+        <p class="mb-4">
+            <strong>معایب:</strong> توان پایین تا متوسط؛ اتصال غیرخاص احتمالی به مهره‌ها؛ برای تعاملات اتصال ضعیف‌تر مانند برخی تعاملات <span class="ltr-text">FcγR</span> با آنتی‌بادی‌ها کمتر مفید است؛ ممکن است اتصال فیزیولوژیکی را منعکس نکند اگر اتصال فیزیولوژیکی در محیط <span class="ltr-text">in vivo</span> در محلول نباشد؛ نیاز به تجهیزات تخصصی.
+        </p>
+        <p class="mb-4">
+            <strong>نکات قابل تأمل:</strong> آیا شرکای اتصال به طور معمول در محلول متصل می‌شوند؛ جهت‌گیری آزمایش (یعنی کدام شریک اتصال در سلول جریان گیر می‌افتد)؛ آیا یک شریک اتصال تنها در حالت غیرخالص در دسترس است.
+        </p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آزمایش مجاورت مبتنی بر مهره</h4>
+        <p class="mb-4">
+            فناوری‌های آزمایش مبتنی بر مهره اکنون به طور گسترده برای مطالعه تعاملات بیومولکولی در فرمت میکروپلیت استفاده می‌شوند. این فناوری‌ها آزمایش‌های مجاورت همگن و غیررادیواکتیو هستند. اتصال مولکول‌های جذب شده روی مهره‌ها منجر به انتقال انرژی از یک مهره به مهره دیگر می‌شود و در نهایت یک سیگنال لومینسانس/فلورسنت تولید می‌کند. این فناوری امکان تشخیص مولکول‌ها را در طیف وسیعی از ماتریس‌های نمونه فراهم می‌کند. تقریباً هر آزمایش ساندویچی را می‌توان برای تشخیص یک آنالیت مورد علاقه توسعه داد. یک مثال از آزمایش <span class="ltr-text">FcR</span> ممکن است فرمت رقابتی زیر را داشته باشد. یک پروتئین <span class="ltr-text">Fc</span> یا پروتئین درمانی حاوی <span class="ltr-text">Fc</span> را می‌توان بیوتینیله کرده و به مهره‌های دهنده استرپتاویدین متصل کرد، در حالی که یک مولکول <span class="ltr-text">FcR</span> با برچسب هیستیدین نوترکیب (<span class="ltr-text">FcR-His</span>) به مهره‌های گیرنده کونژوگه می‌شود. در غیاب یک نمونه حاوی <span class="ltr-text">Fc</span> بدون برچسب، مهره‌ها به هم نزدیک می‌شوند و یک سیگنال (مثلاً لومینسانس) تولید می‌شود. با این حال، هنگامی که یک جزء حاوی <span class="ltr-text">Fc</span> متفاوت (یعنی ماده آزمایشی) به واکنش اضافه می‌شود، ناحیه <span class="ltr-text">Fc</span> با معرف <span class="ltr-text">Fc</span>-بیوتین در محلول در <span class="ltr-text">pH 6.0</span> برای اتصال به <span class="ltr-text">FcR-His</span> رقابت می‌کند. این آزمایش کاهش وابسته به دوز سیگنال را هنگامی که یک ماده آزمایشی حاوی <span class="ltr-text">Fc</span> به یک واکنش حاوی <span class="ltr-text">FcR-His</span> و <span class="ltr-text">Fc</span>-بیوتین اضافه می‌شود، اندازه‌گیری می‌کند. فعالیت نمونه آزمایشی با مقایسه پاسخ نمونه آزمایشی با پاسخ به دست آمده برای استاندارد مرجع تعیین می‌شود. نتایج به عنوان مقادیر درصد اتصال نسبی گزارش می‌شوند.
+        </p>
+        <p class="mb-4">
+            <strong>مزایا:</strong> توان بالا؛ همگن؛ مناسب برای تعاملات با میل ترکیبی پایین‌تر؛ نسبت سیگنال به نویز بالا؛ به راحتی قابل اتوماسیون؛ قابل انتقال.
+        </p>
+        <p class="mb-4">
+            <strong>معایب:</strong> معرف‌های گران‌قیمت؛ نیاز به برچسب‌گذاری و خواننده صفحه نسبتاً گران‌قیمت؛ به وجود آگراگیت‌ها در نمونه‌ها به دلیل اثرات اَویدیتاس حساس‌تر.
+        </p>
+        <p class="mb-4">
+            <strong>نکات قابل تأمل:</strong> تعدادی متغیر باید در طول توسعه و بهینه‌سازی آزمایش در نظر گرفته شوند. غلظت مولکول‌های <span class="ltr-text">FcR</span> و حاوی <span class="ltr-text">Fc</span> باید تغییر کند تا مطلوب‌ترین منحنی پاسخ به دوز تولید شود. نسبت‌های اتصال مهره باید بر اساس مقدار هر شریک اتصال مورد استفاده در آزمایش بهینه‌سازی شوند.
+        </p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">انتقال انرژی رزونانس فلورسانس</h4>
+        <p class="mb-4">
+            انتقال انرژی رزونانس فلورسانس (<span class="ltr-text">FRET</span>) بر اساس انتقال انرژی بین دو فلوروفور، یک دهنده و یک گیرنده، هنگامی که در نزدیکی یکدیگر قرار دارند، است. تعاملات مولکولی بین بیومولکول‌ها را می‌توان با اتصال هر شریک با یک برچسب فلورسنت و با تشخیص سطح انتقال انرژی ارزیابی کرد. یک کمپلکس دهنده–گیرنده را می‌توان بدون نیاز به جداسازی فیزیکی از شرکای غیرمتصل تشخیص داد، که امکان آزمایش‌های کاملاً همگن را فراهم می‌کند که نیازی به مراحل جداسازی مانند سانتریفیوژ، شستشو یا فیلتراسیون ندارند.
+        </p>
+        <p class="mb-4">
+            با این حال، <span class="ltr-text">FRET</span> سنتی تحت تأثیر فلورسانس از اجزای نمونه مانند بافرها، پروتئین‌ها، ترکیبات شیمیایی و لیزات سلولی قرار می‌گیرد. این نوع فلورسانس پس‌زمینه بسیار گذرا است و بنابراین می‌توان با استفاده از روش‌های زمان‌حل شده آن را حذف کرد. فلورسانس زمان‌حل شده همگن (<span class="ltr-text">HTRF</span>) فناوری <span class="ltr-text">FRET</span> استاندارد را با اندازه‌گیری زمان‌حل شده فلورسانس ترکیب می‌کند و فلورسانس پس‌زمینه کوتاه‌مدت را از بین می‌برد. معرفی یک تأخیر زمانی تقریباً <span class="ltr-text">50–150 µs</span> بین تحریک سیستم و اندازه‌گیری فلورسانس، امکان پاکسازی سیگنال از تمام انتشارهای غیرخاص و کوتاه‌مدت را فراهم می‌کند. در مقابل، گیرنده‌های <span class="ltr-text">HTRF</span> هنگامی که در یک فرآیند <span class="ltr-text">FRET</span> درگیر هستند، فلورسانس طولانی‌مدت را منتشر می‌کنند. بنابراین، انتشارهای طولانی‌مدت نشان‌دهنده انتقال انرژی به دلیل نزدیکی بیومولکول‌های برچسب‌گذاری شده است. همچنین، <span class="ltr-text">FRET</span> توسط فیزیک نزدیکی مولکولی اداره می‌شود، که تنها زمانی اجازه می‌دهد این پدیده رخ دهد که فاصله بین دهنده و گیرنده به اندازه کافی کوتاه باشد. در عمل، سیستم‌های <span class="ltr-text">FRET</span> با شعاع فورستر (<span class="ltr-text">R0</span>) فاصله ای که در آن کارایی <span class="ltr-text">FRET</span> <span class="ltr-text">50%</span> است، مشخص می‌شوند. برای <span class="ltr-text">HTRF</span>، <span class="ltr-text">R0</span> بین <span class="ltr-text">50</span> و <span class="ltr-text">90 Å</span> قرار دارد، بسته به گیرنده مورد استفاده.
+        </p>
+        <p class="mb-4">
+            <strong>مزایا:</strong> توان بالا، همگن، سریع، پنجره پاسخ آزمایش گسترده، به راحتی قابل اتوماسیون، قابل انتقال.
+        </p>
+        <p class="mb-4">
+            <strong>معایب:</strong> برای تعاملات با میل ترکیبی پایین‌تر به خوبی کار نمی‌کند، نیاز به برچسب‌گذاری و خواننده صفحه تخصصی دارد.
+        </p>
+        <p class="mb-4">
+            <strong>نکات قابل تأمل:</strong> فاصله بین شرکای اتصال کوچکتر از آزمایش‌های مجاورت مبتنی بر مهره است.
+        </p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایش‌های اتصال مبتنی بر سلول</h3>
+        <p class="mb-4">
+            این فرمت می‌تواند یک انتخاب مناسب باشد هنگامی که یک معرف نوترکیب مانند یک دامنه خارج سلولی گیرنده (<span class="ltr-text">ECD</span>) به صورت تجاری موجود نیست یا هنگامی که تولید معرف نوترکیب به مقدار کافی چالش‌برانگیز است. دو نوع آزمایش اتصال مبتنی بر سلول را می‌توان ایجاد کرد، همانطور که در جدول <span class="ltr-text">4</span> نشان داده شده است. یک آزمایش اتصال مبتنی بر سلول اغلب برای اندازه‌گیری اتصال <span class="ltr-text">FcRn</span> به دلیل ساختار <span class="ltr-text">FcRn</span> ترجیح داده می‌شود. به همین ترتیب، این فرمت آزمایش در زمینه یک آزمایش اتصال <span class="ltr-text">FcRn</span> مورد بحث قرار می‌گیرد.
+        </p>
+
+        <div class="card mb-4">
+            <table>
+                <thead>
+                    <tr>
+                        <th>نوع</th>
+                        <th>پلتفرم</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>آزمایش مستقیم</td>
+                        <td>متداول</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>مبتنی بر پلیت یا فلوسیتومتری</td>
+                    </tr>
+                    <tr>
+                        <td>آزمایش رقابتی</td>
+                        <td>ناهمگن</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>مبتنی بر پلیت</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>همگن</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>فلوسیتومتری، <span class="ltr-text">HTRF</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="text-xs text-gray-600">
+                جدول <span class="ltr-text">4</span>. فرمت‌های آزمایش اتصال مبتنی بر سلول
+            </p>
+        </div>
+
+        <p class="mb-4">
+            <strong>مزایا:</strong> به طور قابل بحث از نظر فیزیولوژیکی مرتبط‌تر هستند زیرا گیرنده‌ها در یک محیط غشایی ارائه می‌شوند؛ نیازی به خالص‌سازی گیرنده‌ها نیست؛ تجهیزات استاندارد؛ توان متوسط تا بالا.
+        </p>
+        <p class="mb-4">
+            <strong>معایب:</strong> نیاز به بیان گیرنده‌ها و نگهداری خطوط سلولی برای مدت زمان طولانی‌تر. به طور کلی اتوماسیون و انتقال آن دشوارتر از روش‌های غیرمبتنی بر سلول است. سطوح گیرنده‌ها ممکن است منجر به آثار اَویدیتاس برای آگراگیت‌های با وزن مولکولی بالا شود. جدا شدن سلول می‌تواند یک چالش باشد؛ مراحل شستشو باید ملایم باشد تا جدا شدن سلول از کف چاهک‌ها را کاهش دهد، که ممکن است تا حدی با استفاده از پلیت‌های چاهک ته گرد و سانتریفیوژ کاهش یابد. اثرات صفحه بالقوه قوی‌تر؛ مراحل شستشوی متعدد؛ طولانی؛ نیاز به پوشش قبلی صفحات با سلول‌ها. علاوه بر این، هزینه‌های مجوز سلول ممکن است یک ملاحظه باشد.
+        </p>
+        <p class="mb-4">
+            <strong>نکات قابل تأمل:</strong> نکات زیر برای آزمایش‌های مبتنی بر سلول <span class="ltr-text">FcRn</span> اعمال می‌شود. یک آزمایش مبتنی بر سلول که در آن ناحیه <span class="ltr-text">Fc</span> <span class="ltr-text">IgG</span> به کمپلکس <span class="ltr-text">FcRn</span> بیان شده در سطح سلول متصل می‌شود، ممکن است بیشتر نشان‌دهنده فیزیولوژی باشد که در آن <span class="ltr-text">FcRn</span> به صورت متصل به غشاء وجود دارد و <span class="ltr-text">IgG</span> به صورت محلول آزادانه شناور است. بنابراین، این سیستم مدل ممکن است برای اندازه‌گیری تعاملات <span class="ltr-text">Fc-FcRn</span> مناسب‌تر باشد. به طور معمول، اتصال <span class="ltr-text">Fc</span> به <span class="ltr-text">FcRn</span> تحت شرایط کمی اسیدی (<span class="ltr-text">pH 6–6.5</span>) رخ می‌دهد و <span class="ltr-text">IgG</span> را در <span class="ltr-text">pH</span> خنثی تا بازی (<span class="ltr-text">7–7.4</span>) آزاد می‌کند.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">معرف‌های حیاتی</h2>
+        <p class="mb-4">
+            اعتبار نتایج آزمایش برای عملکرد <span class="ltr-text">Fc</span> به شدت به کیفیت معرف‌های حیاتی مورد استفاده در این آزمایش‌ها بستگی دارد. همانطور که خلوص و ترکیب گلیکان می‌تواند بر فعالیت عملکرد افکتور یک داروی درمانی حاوی <span class="ltr-text">Fc</span> تأثیر بگذارد، ترکیب معرف‌هایی که با آنها تعامل دارند به همان اندازه مهم است. همانطور که در بخش آزمایش‌های عملکردی مبتنی بر سلول برجسته شد، مهم است که <span class="ltr-text">FcR</span> های خالص شده مورد استفاده در آزمایش‌های مبتنی بر اتصال، پلی‌مورفیسم‌های ژنتیکی مناسب در آن گیرنده را نشان دهند. برای آزمایش‌های مبتنی بر سلول، خود سلول‌ها معرف‌های حیاتی محسوب می‌شوند. به طور خاص، مشخصه‌یابی تراکم گیرنده و تغییرات در بیان گیرنده روی سلول‌های مورد استفاده در آزمایش‌های <span class="ltr-text">ADCC</span>، <span class="ltr-text">ADCP</span> و <span class="ltr-text">CDC</span> مهم است زیرا این تغییرات می‌توانند بر حساسیت آزمایش تأثیر بگذارند. اجرای استانداردهای معرف حیاتی یک ایده جذاب است که امکان استانداردسازی ارزیابی دامنه <span class="ltr-text">Fc</span> در طیف وسیعی از داروهای درمانی را فراهم می‌کند.
+        </p>
+        <p class="mb-4">
+            همانند اکثر آزمایش‌های قدرت، آزمایش‌های عملکرد افکتور میانجی‌گری شده توسط <span class="ltr-text">Fc</span> به استانداردهای مرجع محصولی نیاز دارند که به خوبی مشخصه یابی و کنترل شده باشند. استانداردهای مرجع عموماً از یک دسته محصول نماینده به دست می‌آیند. مهم است که توجه داشته باشید که گلیکوزیلاسیون و الگوهای گلیکان باید در استانداردهای مرجع به خوبی مشخصه یابی شوند زیرا این ویژگی‌ها بر عملکرد <span class="ltr-text">Fc</span> تأثیر می‌گذارند. مشاهده تفاوت‌های آماری معنی‌دار در سطوح ساختارهای گلیکان هنگام مقایسه دسته‌های مختلف غیرمعمول نیست. به همین دلیل، انتخاب یک دسته به عنوان استاندارد مرجع مهم می‌شود. یکی از رویکردهایی که می‌توان در نظر گرفت، انتخاب دسته‌ای است که نقطه میانی تغییرپذیری فرآیند را به عنوان دسته استاندارد مرجع نشان می‌دهد.
+        </p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">کمپلمان</h3>
+        <p class="mb-4">
+            سرم، کمپلمان و سلول‌ها معرف‌های حیاتی مهمی برای آزمایش‌های <span class="ltr-text">CDC</span> هستند. آزمایش‌ها از کسرهای کمپلمان سرمی موجود تجاری و تیمار نشده با حرارت استفاده می‌کنند. آزمایش‌ها همچنین شامل منابع کمپلمان می‌شوند که شامل انسان، خرگوش، خوکچه هندی و موش هستند. مهم است که توجه داشته باشید که تغییرپذیری بین دسته‌ای از دسته‌های کمپلمان می‌تواند نتایج را پیچیده کند. این مشکل را می‌توان با خرید و صلاحیت‌سنجی یک دسته بزرگ که می‌تواند برای چند سال بر اساس الزامات آزمایشگاهی دوام بیاورد، کاهش داد.
+        </p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">گیرنده‌های <span class="ltr-text">Fc</span> نوترکیب</h3>
+        <p class="mb-4">
+            بسیاری از <span class="ltr-text">FcR</span> ها به صورت تجاری در دسترس هستند یا می‌توانند در داخل یا توسط یک سازمان تولید قراردادی خارجی (<span class="ltr-text">CMO</span>) تولید شوند. <span class="ltr-text">FcR</span> با زنجیره گامای ثابت برای فعالیت عملکردی هترودیمر می‌شود، یا در مورد <span class="ltr-text">FcγRII</span>، زنجیره گاما با ناحیه <span class="ltr-text">FcR</span> پیوسته است. با این حال، از آنجا که زنجیره گاما در هیچ تعامل مستقیمی با ناحیه <span class="ltr-text">Fc</span> دخالتی ندارد، جزء <span class="ltr-text">FcR</span> هترودیمر برای مطالعات تعامل مستقیم کافی است. اگر <span class="ltr-text">FcR</span> ها به عنوان یک آیتم کاتالوگ از یک فروشنده خارجی خریداری می‌شوند، اطمینان از تغییرپذیری بین دسته‌ای مواد خریداری شده مهم است. این مشکل را می‌توان با خرید یک دسته بزرگ که می‌تواند برای چندین ماه تا سال بر اساس الزامات آزمایشگاهی دوام بیاورد، کاهش داد. خط سلولی میزبان یک ملاحظه مهم است زیرا گلیکوزیلاسیون برخی از <span class="ltr-text">FcR</span> ها، مانند <span class="ltr-text">FcγRIIIa</span>، می‌تواند بر اتصال به نواحی <span class="ltr-text">Fc</span> تأثیر بگذارد.
+        </p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">کیفیت معرف‌ها</h3>
+        <p class="mb-4">
+            کیفیت و سازگاری معرف‌های حیاتی <span class="ltr-text">FcR</span> مورد استفاده در آزمایش‌های عملکرد <span class="ltr-text">Fc</span> باید با استفاده از تکنیک‌های تحلیلی بیوشیمیایی برای ارزیابی خلوص، همگنی، پایداری، تغییرپذیری بین دسته‌ای و خواص عملکردی مطلوب مانند اختصاصیت <span class="ltr-text">pH</span> اتصال برای <span class="ltr-text">FcRn</span> تضمین شود. این تجزیه و تحلیل‌ها به اطمینان از تاخوردگی صحیح پروتئین که برای اتصال <span class="ltr-text">FcR</span> به پروتئین حاوی <span class="ltr-text">Fc</span> ضروری است، کمک می‌کنند. اگر معرف‌ها از فروشندگان خریداری شده باشند، این اطلاعات هنوز برای جمع‌آوری و تکمیل آنچه توسط فروشنده ارائه شده است، مهم هستند. درک بهترین طراحی برای پروتئین‌های مهندسی شده مانند زنجیره آلفای <span class="ltr-text">FcRn</span> و <span class="ltr-text">β2M</span> هم‌بیان شده مهم است. برای پروتئین درمانی حاوی <span class="ltr-text">Fc</span>، آگراگیت و سایر تغییرات (مثلاً اکسیداسیون‌های متیونین خاص در ناحیه <span class="ltr-text">Fc</span> که بر اتصال <span class="ltr-text">FcRn</span> یا سطوح سایر تغییرات پس از ترجمه مانند <span class="ltr-text">N</span>-گلیکان‌ها که بر اتصال <span class="ltr-text">FcγR</span> تأثیر می‌گذارند، تأثیر می‌گذارند) نیز باید قبل از آزمایش ارزیابی شوند تا این اطلاعات بتوانند به تفسیر نتایج کمک کنند.
+        </p>
+        <p class="mb-4">
+            کیفیت معرف‌های سلولی حیاتی باید از طریق ارزیابی پایداری، تغییرپذیری بین دسته‌ای و خواص عملکردی ثابت و مطلوب تضمین شود. پایداری خط سلولی باید در طول چندین پاساژ مشخص شود تا یک آزمایش عملکردی و توانایی ایجاد بانک‌های سلولی تضمین شود. پایداری را می‌توان با استفاده از فلوسیتومتری برای ارزیابی، به عنوان مثال، بیان گیرنده، و همچنین با ارزیابی سازگاری پاسخ آزمایش، ارزیابی کرد. اگر سلول‌ها قبل از آزمایش نیاز به پیش‌درمان دارند، سازگاری پاسخ به این پیش‌درمان نیز باید مشخص شود.
+        </p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">صلاحیت‌سنجی معرف‌ها</h3>
+        <p class="mb-4">
+            برای صلاحیت‌سنجی معرف‌ها، معیارهای مناسبی باید توسعه داده شوند که نه تنها بر اساس گذراندن معیارهای پذیرش روش بلکه بر اساس سازگاری و ارتباط با داده‌های تولید شده از دسته‌های قبلی باشد. صلاحیت‌سنجی دقیق برای جلوگیری از رانش در پاسخ آزمایش هنگام تغییر دسته‌های معرف حیاتی ضروری است. پایداری پروتئین‌های <span class="ltr-text">FcR</span> و <span class="ltr-text">FcRn</span> باید به طور کافی در طول ذخیره‌سازی طولانی‌مدت نظارت شود.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">اعتبارسنجی آزمایش</h2>
+        <p class="mb-4">
+            اصول اعتبارسنجی آزمایش قدرت، از جمله پارامترهای روش کلیدی برای ارزیابی، در <a href="1033.html" class="text-blue-600 hover:underline" target="_blank">1033</a> توضیح داده شده است. استفاده از یک آزمایش معتبر برای آزمایش‌هایی که از ترخیص دسته محصول و تست پایداری پشتیبانی می‌کنند، یک الزام است. آزمایش‌های مشخصه‌یابی مشمول شیوه‌های جاری تولید خوب (<span class="ltr-text">cGMPs</span>) یا شیوه‌های آزمایشگاهی خوب (<span class="ltr-text">GLPs</span>) نیستند. با این حال، اصول اعتبارسنجی آزمایش قدرت باید برای اثبات ویژگی‌های عملکرد روش و مناسب بودن نتایج آزمایش برای استفاده، در نظر گرفته شوند.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">تجزیه و تحلیل و گزارش‌دهی داده‌ها</h2>
+        <p class="mb-4">
+            تجزیه و تحلیل داده‌ها و گزارش‌دهی نتایج، خروجی‌های مهمی از هر آزمایش هستند. جنبه‌های اساسی این موارد در <a href="1032.html" class="text-blue-600 hover:underline" target="_blank">1032</a>، تجزیه و تحلیل آزمایش‌های بیولوژیکی <a href="1034.html" class="text-blue-600 hover:underline" target="_blank">1034</a>، و طراحی و تجزیه و تحلیل آزمایش‌های بیولوژیکی <a href="111.html" class="text-blue-600 hover:underline" target="_blank">111</a> توضیح داده شده‌اند. برای ترخیص دسته و تست پایداری، عرف این است که برای گزارش‌دهی نتایج از «قدرت نسبی» یا «درصد قدرت نسبی» استفاده شود. با این رویکرد، پاسخ یک نمونه آزمایشی با پاسخ به دست آمده با یک استاندارد مرجع مقایسه می‌شود. همانطور که در <a href="1032.html" class="text-blue-600 hover:underline" target="_blank">1032</a> و <a href="1034.html" class="text-blue-600 hover:underline" target="_blank">1034</a> توضیح داده شده است، اصل اساسی این رویکرد این فرض است که همان ماده فعال در هر دو ماده وجود دارد. تنها پس از اینکه موازی‌گرایی، یا شباهت، برای پاسخ نمونه نسبت به پاسخ استاندارد مرجع برقرار شد، مجاز است نتیجه قدرت نسبی محاسبه شود. برای فرمت‌های آزمایش اتصال غیرمبتنی بر سلول مانند <span class="ltr-text">SPR</span>، <span class="ltr-text">BLI</span> و حذف جنبشی، تعدادی استراتژی را می‌توان برای تعیین فعالیت استفاده کرد، مانند گزارش ثابت‌های میل ترکیبی مطلق، مقادیر <span class="ltr-text">KD</span>، اندازه‌گیری‌های جنبشی یا اتصال نسبی.
+        </p>
+        <p class="mb-4">
+            یکی از ملاحظات کلیدی برای مشخصه‌یابی بیولوژیکی عملکرد افکتور <span class="ltr-text">Fc</span>، تغییرات پس از ترجمه و تأثیر آنها بر فعالیت است. پس از مدل‌سازی پاسخ، باید مقایسه منحنی‌های پاسخ به دوز برای استاندارد مرجع و نمونه(ها)ی آزمایشی و همچنین تأثیر ویژگی‌های خاص، مانند گلیکان‌ها، بر آن پاسخ‌ها در نظر گرفته شود. در برخی موارد، استفاده از قدرت نسبی به عنوان خروجی نتیجه ممکن است موجه نباشد.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">منابع</h2>
+        <ol class="list-decimal pr-8 mb-4">
+            <li>
+                <span class="ltr-text">Noubia Abdiche Y, et al. The neonatal Fc receptor (FcRn) binds independently to both sites of the IgG homodimer with identical affinity. MAbs 2015;7(2):331–343.</span>
+            </li>
+        </ol>
+        <p class="text-sm text-gray-500">
+            <span class="ltr-text">▲ (USP 1-Dec-2020)</span>
+        </p>
+    </div>
+</body>
+</html>

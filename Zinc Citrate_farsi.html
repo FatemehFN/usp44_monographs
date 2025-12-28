@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مونوگراف سیترات روی (USP)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .tab-active {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        .tab-inactive {
+            border-color: transparent;
+            color: #6b7280;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+        .interactive-card {
+            background-color: #e0f2fe;
+            border: 1px solid #90cdf4;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">سیترات روی (USP)</h1>
+
+        <div class="flex justify-center mb-6 border-b border-gray-200">
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab('definition')">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('identification')">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('assay')">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('impurities')">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('specific_tests')">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('additional_requirements')">الزامات اضافی</button>
+        </div>
+
+        <!-- Definition Tab -->
+        <div id="definition" class="tab-content">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+            <div class="card">
+                <p>سیترات روی حاوی نباید کمتر از <span class="ltr-text">31.3%</span> روی (Zn) باشد، محاسبه شده بر اساس پایه خشک.</p>
+            </div>
+        </div>
+
+        <!-- Identification Tab -->
+        <div id="identification" class="tab-content hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+
+            <div class="card">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایش‌های شناسایی</h3>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">الف. آزمایش‌های شناسایی - عمومی، روی &#x201C;191&#x201D;:</h4>
+                    <p>محلول (<span class="ltr-text">1</span> در <span class="ltr-text">10</span>) الزامات را برآورده می‌کند.</p>
+                </div>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ب. آزمایش‌های شناسایی - عمومی، سیترات &#x201C;191&#x201D;:</h4>
+                    <p>محلول (<span class="ltr-text">1</span> در <span class="ltr-text">10</span>) الزامات را برآورده می‌کند.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Assay Tab -->
+        <div id="assay" class="tab-content hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+
+            <div class="card">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">روش کار</h3>
+                <p><strong>نمونه:</strong> <span class="ltr-text">350</span> mg سیترات روی، قبلاً در <span class="ltr-text">105°</span> به مدت <span class="ltr-text">2</span> ساعت خشک شده است.</p>
+                <p><strong>شاهد:</strong> <span class="ltr-text">60</span> mL آب</p>
+                <p><strong>سیستم تیتراسیون</strong></p>
+                <p>(به تیتراسیون &#x201C;<span class="ltr-text">541</span>&#x201D; مراجعه کنید.)</p>
+                <p><strong>حالت:</strong> تیتراسیون مستقیم</p>
+                <p><strong>تیترانت:</strong> <span class="ltr-text">0.05</span> M ادتات دی‌سدیم VS</p>
+                <p><strong>تشخیص نقطه پایانی:</strong> بصری</p>
+                <p><strong>تجزیه و تحلیل:</strong> نمونه را در <span class="ltr-text">60</span> mL آب حل کنید. <span class="ltr-text">10</span> mL بافر آمونیاک-کلرید آمونیوم TS و <span class="ltr-text">0.1</span> mL اریکروم سیاه TS اضافه کنید. با تیتترانت تا نقطه پایانی آبی تیتر کنید. تعیین شاهد را انجام دهید.</p>
+                <p>درصد روی (Zn) را در نمونه سیترات روی گرفته شده محاسبه کنید:</p>
+                <div class="formula-display">
+                    <p>Result = \(\frac{[(V - B) \times M \times F \times 100]}{W}\)</p>
+                </div>
+                <p><span class="ltr-text">V</span> = حجم تیتترانت نمونه (mL)</p>
+                <p><span class="ltr-text">B</span> = حجم تیتترانت شاهد (mL)</p>
+                <p><span class="ltr-text">M</span> = مولاریته تیتترانت (mM/mL)</p>
+                <p><span class="ltr-text">F</span> = ضریب هم‌ارزی، <span class="ltr-text">65.4</span> mg/mM</p>
+                <p><span class="ltr-text">W</span> = وزن نمونه (mg)</p>
+                <p><strong>معیارهای پذیرش:</strong> نباید کمتر از <span class="ltr-text">31.3%</span> بر اساس پایه خشک باشد.</p>
+            </div>
+        </div>
+
+        <!-- Impurities Tab -->
+        <div id="impurities" class="tab-content hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+
+            <div class="card">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات</h3>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کلرید &#x201C;<span class="ltr-text">221</span>&#x201D;:</h4>
+                    <p>یک نمونه <span class="ltr-text">1.0</span>-g نباید کلرید بیشتری نسبت به معادل <span class="ltr-text">0.7</span> mL اسید هیدروکلریک <span class="ltr-text">0.020</span> N نشان دهد (نباید بیشتر از <span class="ltr-text">0.05%</span>).</p>
+                </div>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سولفات &#x201C;<span class="ltr-text">221</span>&#x201D;:</h4>
+                    <p>یک نمونه <span class="ltr-text">1.8</span>-g نباید سولفات بیشتری نسبت به معادل <span class="ltr-text">0.5</span> mL اسید سولفوریک <span class="ltr-text">0.020</span> N نشان دهد (نباید بیشتر از <span class="ltr-text">0.05%</span>).</p>
+                </div>
+            </div>
+
+            <div class="card mt-4">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">حد آرسنیک، کادمیوم و سرب</h3>
+                <p><strong>محلول استاندارد آرسنیک:</strong> <span class="ltr-text">1.0</span> µg/mL در اسید نیتریک <span class="ltr-text">1%</span>، تهیه شده از محلول استاندارد آرسنیک (<span class="ltr-text">10</span> mg/L)</p>
+                <p><strong>محلول استاندارد کادمیوم:</strong> <span class="ltr-text">1.0</span> µg/mL در اسید نیتریک <span class="ltr-text">1%</span>، تهیه شده از محلول استاندارد کادمیوم (<span class="ltr-text">10</span> mg/L)</p>
+                <p><strong>محلول استاندارد سرب:</strong> <span class="ltr-text">1.0</span> µg/mL در اسید نیتریک <span class="ltr-text">1%</span>، تهیه شده از محلول استاندارد سرب (<span class="ltr-text">10</span> mg/L)</p>
+                <p><strong>محلول استاندارد چند عنصری:</strong> <span class="ltr-text">10</span> µg/L سرب، <span class="ltr-text">5</span> µg/L کادمیوم، و <span class="ltr-text">3</span> µg/L آرسنیک در اسید نیتریک <span class="ltr-text">1%</span>، تهیه شده به ترتیب از محلول استاندارد سرب، محلول استاندارد کادمیوم، و محلول استاندارد آرسنیک.</p>
+                <p><strong>محلول نمونه:</strong> <span class="ltr-text">2</span> mg/mL سیترات روی در اسید نیتریک <span class="ltr-text">1%</span></p>
+                <p><strong>شرایط دستگاهی</strong></p>
+                <p>(به طیف‌سنجی پلاسما &#x201C;<span class="ltr-text">730</span>&#x201D; مراجعه کنید.)</p>
+                <p><strong>حالت:</strong> ICP-MS</p>
+                <p><strong>فرکانس رادیویی:</strong> <span class="ltr-text">1350</span> وات</p>
+                <p><strong>نرخ جریان نبولایزر:</strong> <span class="ltr-text">0.9</span> L/min</p>
+                <p>[<strong>توجه:</strong> تنظیمات فرکانس رادیویی و نرخ جریان نبولایزر ممکن است بر اساس توصیه سازنده توسعه یافته و بهینه شوند.]</p>
+                <p><strong>جرم‌های اتمی تشخیص:</strong> As، Cd، و Pb</p>
+                <p><strong>شاهد:</strong> محلول اسید نیتریک <span class="ltr-text">1%</span></p>
+                <p><strong>تجزیه و تحلیل:</strong></p>
+                <p><strong>نمونه‌ها:</strong> محلول استاندارد چند عنصری، محلول نمونه، و شاهد.</p>
+                <p>پاسخ‌های محلول استاندارد چند عنصری، محلول نمونه، و شاهد را در جرم‌های مشخص شده در بالا تعیین کنید.</p>
+                <p>محتوای هر عنصر را بر حسب µg/g در نمونه سیترات روی گرفته شده محاسبه کنید:</p>
+                <div class="formula-display">
+                    <p>Result = \(\frac{rU}{rS} \times \frac{CS}{CU}\)</p>
+                </div>
+                <p><span class="ltr-text">rU</span> = پاسخ پیک عنصر مربوطه از محلول نمونه</p>
+                <p><span class="ltr-text">rS</span> = پاسخ پیک عنصر مربوطه از محلول استاندارد چند عنصری</p>
+                <p><span class="ltr-text">CS</span> = غلظت عنصر مربوطه در محلول استاندارد چند عنصری (µg/L)</p>
+                <p><span class="ltr-text">CU</span> = غلظت سیترات روی در محلول نمونه (g/L)</p>
+                <p><strong>معیارهای پذیرش</strong></p>
+                <p><strong>آرسنیک:</strong> نباید بیشتر از <span class="ltr-text">3</span> µg/g باشد.</p>
+                <p><strong>کادمیوم:</strong> نباید بیشتر از <span class="ltr-text">5</span> µg/g باشد.</p>
+                <p><strong>سرب:</strong> نباید بیشتر از <span class="ltr-text">10</span> µg/g باشد.</p>
+            </div>
+        </div>
+
+        <!-- Specific Tests Tab -->
+        <div id="specific_tests" class="tab-content hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+
+            <div class="card">
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">اتلاف در خشک شدن &#x201C;<span class="ltr-text">731</span>&#x201D;:</h4>
+                    <p>نمونه را در <span class="ltr-text">105°</span> به مدت <span class="ltr-text">2</span> ساعت خشک کنید: وزن آن نباید بیشتر از <span class="ltr-text">1.0%</span> کاهش یابد.</p>
+                </div>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آزمایشات شمارش میکروبی &#x201C;<span class="ltr-text">2021</span>&#x201D;:</h4>
+                    <p>تعداد کل میکروب‌های هوازی نباید از <span class="ltr-text">103</span> cfu/g تجاوز کند. تعداد کل مخمرها و کپک‌ها نباید از <span class="ltr-text">102</span> cfu/g تجاوز کند.</p>
+                </div>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش‌های میکروبیولوژیکی برای عدم حضور میکروارگانیسم‌های مشخص شده &#x201C;<span class="ltr-text">2022</span>&#x201D;:</h4>
+                    <p>الزامات آزمایش عدم حضور اشریشیا کلی را برآورده می‌کند.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Requirements Tab -->
+        <div id="additional_requirements" class="tab-content hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+
+            <div class="card">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری</h3>
+                <p>در ظروف کاملاً بسته نگهداری شود.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.add('hidden');
+            });
+            document.getElementById(tabId).classList.remove('hidden');
+
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('tab-active');
+                button.classList.add('tab-inactive');
+            });
+            event.target.classList.remove('tab-inactive');
+            event.target.classList.add('tab-active');
+        }
+
+        // Show the first tab by default
+        document.getElementById('definition').classList.remove('hidden');
+    </script>
+</body>
+</html>

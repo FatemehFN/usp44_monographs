@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>۳۱. ظروف حجمی</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <div class="card">
+            <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">۳۱. ظروف حجمی</h1>
+
+            <p class="mb-4">بیشتر ظروف حجمی موجود در ایالات متحده در دمای <span class="ltr-text">20°</span> کالیبره شده‌اند و موسسه ملی استاندارد و فناوری (NIST) دمای <span class="ltr-text">20°</span> را به عنوان دمای مرجع برای کالیبراسیون ظروف شیشه‌ای آزمایشگاهی پذیرفته است، اگرچه دماهای معمول در آزمایشگاه‌ها معمولاً بین <span class="ltr-text">20°</span> و <span class="ltr-text">25°</span> است. برای به حداقل رساندن خطای حجمی، دما باید برای ظرف حجمی، ماده در حال آماده‌سازی، حلال‌های مورد استفاده برای تهیه محلول‌های حجمی، ناحیه آماده‌سازی و تنظیم حجم نهایی یکسان باشد. برای دستیابی به درجه دقت مورد نیاز در بسیاری از سنجش‌های دارویی که شامل اندازه‌گیری‌های حجمی و دستور "به دقت اندازه‌گیری شود" هستند، باید با دقت انتخاب و استفاده شود.</p>
+
+            <p class="mb-4">تغییر به خواندن:</p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">استانداردهای دقت</h2>
+
+            <p class="mb-4">تلورانس‌های ظرفیت برای فلاسک‌های حجمی، پیپت‌های انتقالی و بورت‌ها، آنهایی هستند که توسط NIST (کلاس A)<sup class="inline-block"><a href="854.html" class="text-blue-600 hover:underline" target="_blank">1</a></sup> پذیرفته شده‌اند، همانطور که در جداول ۱، ۲ و ۳ نشان داده شده است. [توجه - جداول این فصل تلورانس‌ها را برای رایج‌ترین اندازه‌ها فهرست می‌کنند. برای فهرست کامل تلورانس‌ها و سایر معیارهای قابل اجرا به استانداردهای ASTM مراجعه کنید.] از ظروف حجمی کلاس A مگر اینکه در مونوگراف فردی به طور متفاوتی مشخص شده باشد، استفاده کنید. هنگامی که ظروف حجمی پلاستیکی مشخص شده است، تلورانس‌های ظرفیت پذیرفته شده برابر با شیشه کلاس B<sup class="inline-block"><a href="854.html" class="text-blue-600 hover:underline" target="_blank">2</a></sup> است.</p>
+
+            <p class="mb-4">تلورانس‌های ظرفیت برای پیپت‌های اندازه‌گیری (یعنی "مدرج") با ظرفیت تا و شامل <span class="ltr-text">10-mL</span> کمی بیشتر از پیپت‌های انتقالی متناظر است، یعنی <span class="ltr-text">10</span>، <span class="ltr-text">20</span> و <span class="ltr-text">30 µL</span> برای اندازه‌های <span class="ltr-text">2-</span>، <span class="ltr-text">5-</span> و <span class="ltr-text">10-mL</span> به ترتیب.<sup class="inline-block"><a href="854.html" class="text-blue-600 hover:underline" target="_blank">3</a></sup></p>
+
+            <p class="mb-4">پیپت‌های انتقالی و اندازه‌گیری کالیبره شده "برای تحویل" باید به طور کامل در حالت عمودی تخلیه شوند و سپس برای تخلیه نوک پیپت، به دیواره ظرف گیرنده لمس شوند (ERR 1-Nov-2020). قرائت حجم در بورت‌ها باید حداقل تا نزدیکترین نیم زیرمجموعه تخمین زده شود. پیپت‌های کالیبره شده "برای نگهداری" در موارد خاص، معمولاً برای اندازه‌گیری مایعات ویسکوز مانند شربت‌ها، درخواست می‌شوند؛ با این حال، یک فلاسک حجمی ممکن است جایگزین پیپت "برای نگهداری" شود. در چنین مواردی، پیپت یا فلاسک باید پس از تخلیه تمیز شسته شود و آبکشی‌ها باید به قسمت اندازه‌گیری شده اضافه شوند.</p>
+
+            <table class="mb-6">
+                <thead>
+                    <tr>
+                        <th>حجم تعیین شده، mL</th>
+                        <th>حد خطا، mL</th>
+                        <th>حد خطا، %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">10</span></td>
+                        <td><span class="ltr-text">0.02</span></td>
+                        <td><span class="ltr-text">0.20</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">25</span></td>
+                        <td><span class="ltr-text">0.03</span></td>
+                        <td><span class="ltr-text">0.12</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">50</span></td>
+                        <td><span class="ltr-text">0.05</span></td>
+                        <td><span class="ltr-text">0.10</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">100</span></td>
+                        <td><span class="ltr-text">0.08</span></td>
+                        <td><span class="ltr-text">0.08</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">250</span></td>
+                        <td><span class="ltr-text">0.12</span></td>
+                        <td><span class="ltr-text">0.05</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">500</span></td>
+                        <td><span class="ltr-text">0.20</span></td>
+                        <td><span class="ltr-text">0.04</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">1000</span></td>
+                        <td><span class="ltr-text">0.30</span></td>
+                        <td><span class="ltr-text">0.03</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="text-sm text-gray-500 mb-6 text-center">جدول ۱. فلاسک‌های حجمی</div>
+
+            <table class="mb-6">
+                <thead>
+                    <tr>
+                        <th>حجم تعیین شده، mL</th>
+                        <th>حد خطا، mL</th>
+                        <th>حد خطا، %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">1</span></td>
+                        <td><span class="ltr-text">0.006</span></td>
+                        <td><span class="ltr-text">0.60</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">2</span></td>
+                        <td><span class="ltr-text">0.006</span></td>
+                        <td><span class="ltr-text">0.30</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">5</span></td>
+                        <td><span class="ltr-text">0.01</span></td>
+                        <td><span class="ltr-text">0.20</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">10</span></td>
+                        <td><span class="ltr-text">0.02</span></td>
+                        <td><span class="ltr-text">0.20</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">25</span></td>
+                        <td><span class="ltr-text">0.03</span></td>
+                        <td><span class="ltr-text">0.12</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">50</span></td>
+                        <td><span class="ltr-text">0.05</span></td>
+                        <td><span class="ltr-text">0.10</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">100</span></td>
+                        <td><span class="ltr-text">0.08</span></td>
+                        <td><span class="ltr-text">0.08</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="text-sm text-gray-500 mb-6 text-center">جدول ۲. پیپت‌های انتقالی</div>
+
+            <table class="mb-6">
+                <thead>
+                    <tr>
+                        <th>حجم تعیین شده، mL</th>
+                        <th>زیرمجموعه‌ها، mL</th>
+                        <th>حد خطا، mL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">10 ("micro" type)</span></td>
+                        <td><span class="ltr-text">0.02</span></td>
+                        <td><span class="ltr-text">0.02</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">25</span></td>
+                        <td><span class="ltr-text">0.1</span></td>
+                        <td><span class="ltr-text">0.03</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">50</span></td>
+                        <td><span class="ltr-text">0.1</span></td>
+                        <td><span class="ltr-text">0.05</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="text-sm text-gray-500 mb-6 text-center">جدول ۳. بورت‌ها</div>
+
+            <div class="text-sm text-gray-500 mt-4">
+                <p>
+                    <sup class="inline-block"><a href="854.html" class="text-blue-600 hover:underline" target="_blank">1</a></sup> به ASTM E288-10، ASTM E287-02، ASTM E1189-00 و ASTM E969-02 مراجعه کنید.
+                </p>
+                <p>
+                    <sup class="inline-block"><a href="854.html" class="text-blue-600 hover:underline" target="_blank">2</a></sup> به ASTM E288-10 و ISO 384:2015 مراجعه کنید.
+                </p>
+                <p>
+                    <sup class="inline-block"><a href="854.html" class="text-blue-600 hover:underline" target="_blank">3</a></sup> به ASTM E1293-02 مراجعه کنید.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1121. نامگذاری</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body class="rtl">
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">1121. نامگذاری</h1>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+            <p class="mb-3">
+                عناوین <span class="ltr-text">USP</span> (یا <span class="ltr-text">NF</span>) برای مقالات مونُوگراف، طبق قانون فدرال غذا، دارو و آرایشی-بهداشتی، به عنوان نامگذاری‌های قانونی برای استفاده در برچسب‌گذاری مقالاتی که به آنها اعمال می‌شوند، به رسمیت شناخته شده‌اند.
+            </p>
+            <p class="mb-3">
+                اهمیت تعیین هر ماده دارویی با تنها یک نام غیرانحصاری<span class="ltr-text">1</span> در دستیابی به سادگی و یکنواختی در نامگذاری داروها مهم است. در حمایت از برنامه نام‌های پذیرفته شده ایالات متحده (<span class="ltr-text">USAN</span>) (به ماموریت و مقدمه در <span class="ltr-text">USP–NF</span> مراجعه کنید)، که کنوانسیون فارماکوپه ایالات متحده یکی از حامیان آن است، شورای متخصصان <span class="ltr-text">USP</span>، پذیرش نام پذیرفته شده ایالات متحده، در صورت وجود، را به عنوان عنوان رسمی برای هر ترکیبی که به رسمیت فارماکوپه‌ای دست یابد، مورد بررسی قرار می‌دهد.
+            </p>
+            <p class="mb-3">
+                مجموعه‌ای از نام‌های پذیرفته شده ایالات متحده (<span class="ltr-text">USAN</span>) که از ابتدای برنامه <span class="ltr-text">USAN</span> در سال <span class="ltr-text">1961</span> منتشر شده‌اند، و همچنین سایر نام‌های دارویی، چه جاری و چه گذشته‌نگر، در واژه‌نامه <span class="ltr-text">USP</span> از <span class="ltr-text">USAN</span> و نام‌های بین‌المللی دارویی ارائه شده است. این نشریه به عنوان کتابی از نام‌ها برای شناسایی و تمایز انواع نام‌های مواد دارویی، اعم از عمومی، انحصاری، شیمیایی یا کدگذاری شده، مفید است.<span class="ltr-text">2</span>
+            </p>
+            <p class="mb-3">
+                یک نام غیرانحصاری برای یک دارو اهداف متعدد و متنوعی دارد. وظیفه اصلی آن شناسایی ماده‌ای است که به آن اعمال می‌شود، از طریق نامگذاری‌ای که می‌تواند توسط متخصصان و عموم مردم بدون محدودیت‌های مرتبط با علائم تجاری ثبت شده استفاده شود. آموزش در علوم بهداشتی نیازمند یک نامگذاری مشترک است، به ویژه برای دارویی که از چندین منبع در دسترس است یا در یک فرآورده دارویی ترکیبی گنجانده شده است؛ نام‌های غیرانحصاری ارتباط بین ارائه دهندگان مراقبت‌های بهداشتی را تسهیل می‌کنند؛ نام‌های غیرانحصاری باید به عنوان عناوین مقالات به رسمیت شناخته شده توسط فارماکوپه‌های رسمی دارویی استفاده شوند؛ یک نام غیرانحصاری برای تولید کننده دارویی به عنوان وسیله‌ای برای محافظت از حقوق علامت تجاری در نام تجاری مربوط به مقاله مورد نظر ضروری است؛ و در نهایت، تولید کننده طبق قانون فدرال موظف است نام غیرانحصاری تثبیت شده را در تبلیغات و برچسب‌گذاری درج کند.
+            </p>
+            <p class="mb-3">
+                بر اساس مفاد اصلاحات دارویی سال <span class="ltr-text">1962</span> قانون فدرال غذا، دارو و آرایشی-بهداشتی، که در <span class="ltr-text">10</span> اکتبر <span class="ltr-text">1962</span> به قانون تبدیل شد، وزیر بهداشت و خدمات انسانی مجاز است نام رسمی برای هر دارویی را در هر کجا که "لازم یا مطلوب در جهت مفید بودن و سادگی" تشخیص دهد، تعیین کند.<span class="ltr-text">3</span>
+            </p>
+            <p class="mb-3">
+                کمیسر غذا و دارو و وزیر بهداشت و خدمات انسانی در ثبت فدرال مقرراتی را منتشر کردند که از <span class="ltr-text">26</span> نوامبر <span class="ltr-text">1984</span> لازم‌الاجرا شد و بخشی از آن بیان می‌کند:
+            </p>
+            <p class="mb-3">
+                <span class="ltr-text">“Sec. 299.4 Established names of drugs.”</span>
+            </p>
+            <p class="mb-3">
+                <span class="ltr-text">“(e) The Food and Drug Administration will not routinely designate official names under section 508 of the act. As a result, the established name under section 502(e) of the act will ordinarily be either the compendial name of the drug or, if there is no compendial name, the common and usual name of the drug. Interested persons, in the absence of the designation by the Food and Drug Administration of an official name, may rely on as the established name for any drug the current compendial name or the USAN adopted name listed in USAN and the USP Dictionary of Drug Names.”</span><span class="ltr-text">4</span>
+            </p>
+            <p class="mb-3">
+                لازم به ذکر است که مونُوگراف‌های مربوط به بیولوژیک‌ها، که تحت مجوزهای صادر شده توسط وزیر وزارت بهداشت و خدمات انسانی ایالات متحده تولید می‌شوند، یک مورد خاص را نشان می‌دهند. اگرچه تلاش‌ها برای دستیابی به یکنواختی ادامه دارد، ممکن است بین عنوان مربوطه مورد نیاز قانون فدرال و عنوان <span class="ltr-text">USP</span> تفاوت وجود داشته باشد. چنین تفاوت‌هایی کمتر از بازنگری‌های گذشته فارماکوپه است. عنوان <span class="ltr-text">USP</span>، در جایی که با عنوان مرکز ارزیابی و تحقیقات بیولوژیک <span class="ltr-text">FDA</span> متفاوت است، لزوماً مترادف برای اهداف برچسب‌گذاری نیست؛ شرایط صدور مجوز بیولوژیک مربوطه ایجاب می‌کند که هر چنین ماده‌ای با نامی که در مجوز محصول صادر شده به تولید کننده ظاهر می‌شود، تعیین شود. در جایی که عنوان <span class="ltr-text">USP</span> با عنوان موجود در مقررات فدرال متفاوت است، عنوان اول با توجه به مفید بودن، سادگی و مطابقت با اصول حاکم بر انتخاب عناوین مونُوگراف به طور کلی پذیرفته شده است.
+            </p>
+            <p class="text-sm text-gray-500 mt-4">
+                <span class="ltr-text">1</span> اصطلاح "ژانریک" به طور گسترده به جای اصطلاح دقیق‌تر و توصیفی‌تر "غیرانحصاری" در اشاره به نامگذاری داروها استفاده شده است.<br>
+                <span class="ltr-text">2</span> واژه‌نامه <span class="ltr-text">USP</span> از <span class="ltr-text">USAN</span> و نام‌های بین‌المللی دارویی قابل سفارش از بخش خدمات مشتریان فارماکوپه ایالات متحده، <span class="ltr-text">12601 Twinbrook Parkway, Rockville, MD 20852</span> است.<br>
+                <span class="ltr-text">3 F.D.&C. Act, Sec. 508 [358].</span><br>
+                <span class="ltr-text">4 53 Fed. Reg. 5369 (1988) amending 21 CFR § 299.4.</span>
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سیاست نامگذاری مونُوگراف برای مواد دارویی نمکی در فرآورده‌های دارویی و فرآورده‌های ترکیبی</h2>
+            <p class="mb-3">
+                عناوین مونُوگراف‌های <span class="ltr-text">USP</span> برای فرآورده‌های دارویی و فرآورده‌های ترکیبی که با نمک یک اسید یا باز فرموله شده‌اند، از نام جزء فعال، همانطور که در زیر تعریف شده است، استفاده می‌کنند. قدرت فرآورده یا ترکیب نیز بر حسب جزء فعال بیان می‌شود.
+            </p>
+            <p class="mb-3">
+                یک جزء فعال، مولکول یا یون است، به استثنای بخش‌های اضافه شده از مولکول که باعث می‌شود دارو نمک باشد (از جمله نمک با هیدروژن یا پیوندهای کوئوردیناسیون)، یا دیگر مشتقات غیرکووالانسی (مانند کمپلکس، کلات، یا کلاترات) مولکول. جزء فعال مسئول عمل فیزیولوژیکی یا فارماکولوژیکی ماده دارویی است، بدون توجه به وضعیت باردار واقعی مولکول در بدن (<span class="ltr-text">in vivo</span>). به عنوان مثال، جزء فعال نمک هیدروکلراید یک باز، باز آزاد است و نه شکل پروتونه شده باز. جزء فعال نمک فلزی یک اسید، اسید آزاد است.
+            </p>
+            <p class="mb-3">
+                این سیاست توسط <span class="ltr-text">USP</span> در نامگذاری فرآورده‌های دارویی و فرآورده‌های ترکیبی که به تازگی در <span class="ltr-text">USP</span> به رسمیت شناخته شده‌اند، دنبال می‌شود. بازنگری مونُوگراف‌های موجود برای مطابقت با این سیاست مورد نظر نیست، مگر در مواردی که شورای متخصصان <span class="ltr-text">USP</span> تشخیص دهد که به دلایلی مانند ایمنی، تغییر نامگذاری ضروری است.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">برچسب‌گذاری</h3>
+            <p class="mb-3">
+                برچسب‌گذاری به وضوح شکل نمکی خاص جزء فعال موجود در فرآورده یا ترکیب را بیان می‌کند، زیرا این اطلاعات ممکن است برای پزشکان و بیماران مفید باشد. نام‌ها و قدرت‌های هم جزء فعال و هم شکل نمکی خاص (در صورت لزوم) در برچسب‌گذاری ارائه می‌شوند.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">استثناها</h3>
+            <p class="mb-3">
+                در موارد نادری که استفاده از شکل نمکی خاص جزء فعال در عنوان اطلاعات حیاتی را از منظر بالینی ارائه می‌دهد، ممکن است استثنایی برای این سیاست در نظر گرفته شود. در چنین مواردی، هنگامی که عنوان مونُوگراف حاوی شکل نمکی خاص جزء فعال باشد، قدرت فرآورده یا ترکیب نیز بر حسب شکل نمکی خاص بیان می‌شود.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">اشکال کلی نامگذاری</h2>
+            <p class="mb-3">
+                لیست فرآورده‌های دارویی خاص با مثال‌های گسترده را می‌توان در دستورالعمل‌های نامگذاری <span class="ltr-text">USP</span> (<span class="ltr-text">www.usp.org</span>) یافت. <span class="ltr-text">USP</span> همچنین برخی از رویکردهای کلی را برای نامگذاری فرآورده‌های دارویی توسعه داده است:
+            </p>
+            <ul class="list-disc pr-6 mb-3">
+                <li class="mb-2">
+                    <span class="ltr-text">[ROUTE OF ADMINISTRATION]</span> برای اشکال دوز که مسیر تجویز برای آنها مشخص است، حذف می‌شود. شکل کلی سپس به سادگی <span class="ltr-text">[DRUG] [DOSAGE FORM]</span> می‌شود.
+                    <ul class="list-circle pr-6 mt-2">
+                        <li class="mb-1">
+                            بنابراین، <span class="ltr-text">oral</span> به عنوان مسیر تجویز برای کپسول‌ها، قرص‌ها و لوزانج‌های خوراکی گنجانده نخواهد شد.
+                        </li>
+                        <li class="mb-1">
+                            مسیر تجویز برای فرآورده‌های موضعی – کرم‌ها، پمادها، لوسیون‌ها و خمیرها – حذف می‌شود. با این حال، اگر مسیر تجویز دیگری (مانند <span class="ltr-text">ophthalmic</span>) مورد نظر باشد، در عنوان مونُوگراف گنجانده خواهد شد.
+                        </li>
+                    </ul>
+                </li>
+                <li class="mb-2">
+                    در برخی موارد، دارو در یک شکل دوز برای تهیه شکل دوز مورد نظر عرضه می‌شود. در چنین مواردی، شکل دوز ارائه شده در ظرف ابتدا نامگذاری می‌شود و کلمه "برای" ظاهر می‌شود، و به دنبال آن شکل دوز نهایی که برای تجویز مناسب است. قالب کلی به <span class="ltr-text">[DRUG] [DOSAGE FORM] for [ROUTE OF ADMINISTRATION] [DOSAGE FORM].</span>، به عنوان مثال، <span class="ltr-text">Aspirin Effervescent Tablets for Oral Solution</span> تبدیل می‌شود.
+                </li>
+                <li class="mb-2">
+                    اصطلاح "برای" در نام‌های فرآورده‌های جامد که باید در یک مایع مناسب حل یا سوسپانسیون شوند تا یک شکل دوز مناسب برای تجویز به دست آید، گنجانده می‌شود و قالب کلی به <span class="ltr-text">[DRUG] for [ROUTE OF ADMINISTRATION] [DOSAGE FORM].</span>، به عنوان مثال، <span class="ltr-text">Ampicillin for Oral Suspension, Cytarabine for Injection</span> تبدیل می‌شود.
+                </li>
+                <li class="mb-2">
+                    اصطلاح "فرآورده‌های واژینال" (<span class="ltr-text">Vaginal Inserts</span>)، به جای "قرص‌های واژینال" (<span class="ltr-text">Vaginal Tablets</span>)، "کپسول‌های واژینال" (<span class="ltr-text">Vaginal Capsules</span>) یا "شیاف‌های واژینال" (<span class="ltr-text">Vaginal Suppositories</span>) در عنوان این نوع فرآورده واژینال استفاده می‌شود تا پتانسیل سوء تجویز این محصولات کاهش یابد.
+                </li>
+                <li class="mb-2">
+                    اصطلاح "شیاف‌ها" (<span class="ltr-text">Suppositories</span>) در عناوین فرآورده‌های جامد که برای تجویز رکتال در نظر گرفته شده‌اند، استفاده می‌شود.
+                </li>
+                <li class="mb-2">
+                    محلول‌های تزریقی به طور رسمی تزریقات نامیده می‌شوند (به <a href="1.html" class="text-blue-600 hover:underline" target="_blank">1</a> تزریقات و فرآورده‌های دارویی کاشته شده مراجعه کنید). مسیر تجویز برای داروهای تزریقی حذف می‌شود، زیرا مسیر (مانند وریدی، عضلانی، زیرجلدی و غیره) باید روی برچسب‌ها و در برچسب‌گذاری ظاهر شود. <span class="ltr-text">USP</span> هفت نوع تزریق را تعریف می‌کند:
+                    <ol class="list-decimal pr-6 mt-2">
+                        <li class="mb-1"><span class="ltr-text">[DRUG] Injection</span> – فرآورده‌های مایع که مواد دارویی یا محلول‌های آنها هستند.</li>
+                        <li class="mb-1"><span class="ltr-text">[DRUG] for Injection</span> – جامدات خشکی که با افزودن وسایل نقلیه مناسب، محلول‌هایی را تولید می‌کنند که از همه جهات با الزامات تزریقات مطابقت دارند.</li>
+                        <li class="mb-1"><span class="ltr-text">[DRUG] Injectable Emulsion</span> – فرآورده‌های مایع از مواد دارویی که در یک محیط امولسیونی مناسب حل یا پراکنده شده‌اند.</li>
+                        <li class="mb-1"><span class="ltr-text">[DRUG] Injectable Suspension</span> – فرآورده‌های مایع از جامدات معلق در یک محیط مایع مناسب.</li>
+                        <li class="mb-1"><span class="ltr-text">[DRUG] for Injectable Suspension</span> – جامدات خشکی که با افزودن وسایل نقلیه مناسب، فرآورده‌هایی را تولید می‌کنند که از همه جهات با الزامات سوسپانسیون‌های تزریقی مطابقت دارند.</li>
+                        <li class="mb-1"><span class="ltr-text">[DRUG] Extended-Release Injectable Suspension</span> – فرآورده‌های مایع از جامدات معلق در یک محیط مایع مناسب و فرموله شده به گونه‌ای که <span class="ltr-text">API</span> موجود در آن در یک دوره زمانی طولانی‌تر در دسترس باشد.</li>
+                        <li class="mb-1"><span class="ltr-text">[DRUG] for Extended-Release Injectable Suspension</span> – جامدات خشکی که با افزودن وسایل نقلیه مناسب، فرآورده‌هایی را تولید می‌کنند که از همه جهات با الزامات سوسپانسیون‌های تزریقی با رهش طولانی مطابقت دارند.</li>
+                    </ol>
+                </li>
+            </ul>
+            <p class="mb-3">
+                تزریقاتی که قرار است از طریق یک خط ثانویه وریدی ("پیگی‌بک") تجویز شوند و در وسایل نقلیه به غیر از آب برای تزریق فرموله شده‌اند، <span class="ltr-text">[DRUG] in [VEHICLE]</span> نامیده می‌شوند. مثال‌هایی از قالب‌های حامل که در حال حاضر در عناوین مونُوگراف <span class="ltr-text">USP</span> ظاهر می‌شوند:
+            </p>
+            <ol class="list-decimal pr-6 mb-3">
+                <li class="mb-1"><span class="ltr-text">[DRUG] in Dextrose Injection</span></li>
+                <li class="mb-1"><span class="ltr-text">[DRUG] in Dextrose and Sodium Chloride Injection</span></li>
+                <li class="mb-1"><span class="ltr-text">[DRUG] in Lactated Ringer’s and Dextrose Injection</span></li>
+                <li class="mb-1"><span class="ltr-text">[DRUG] in Sodium Chloride Injection</span></li>
+            </ol>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سیاست اجرای بازنگری‌های نامگذاری</h2>
+            <p class="mb-3">
+                رویه <span class="ltr-text">USP</span> این است که تاریخ‌های رسمی بازنگری‌های نامگذاری (تغییر نام تثبیت شده یا جنبه‌های نامگذاری بخش‌های برچسب‌گذاری در مونُوگراف‌ها) را تعیین کند تا زمان معقولی برای انجام تغییرات برچسب محصول و آشنایی متخصصان بهداشت و مصرف‌کنندگان با اصطلاحات جدید فراهم شود. تعیین یک برنامه زمان‌بندی اجرا توسط کمیته کارشناسان <span class="ltr-text">USP</span> انجام می‌شود. برنامه زمان‌بندی اجرای <span class="ltr-text">USP</span>، که در زیر نشان داده شده است، خودکار است، مگر اینکه استثنایی درخواست شود.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">18 ماه</h3>
+            <p class="mb-3">
+                دوره اجرای <span class="ltr-text">18</span> ماهه معمولاً زمانی اعمال می‌شود که تنها یک یا تعداد کمی از محصولات تحت تأثیر قرار گیرند.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">30 ماه</h3>
+            <p class="mb-3">
+                دوره اجرای <span class="ltr-text">30</span> ماهه معمولاً زمانی اعمال می‌شود که نام‌ها یا برچسب‌گذاری محصولات چندمنبعی یا خطوط تولید چند محصولی یک شرکت در حال تغییر باشد.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">60 ماه</h3>
+            <p class="mb-3">
+                دوره اجرای <span class="ltr-text">60</span> ماهه معمولاً برای تغییرات عنوان و برچسب‌گذاری که بر مواد جانبی تأثیر می‌گذارد، اعمال می‌شود، زیرا چنین تغییراتی نیازمند بازبرچسب‌گذاری تعداد بسیار زیادی از فرآورده‌های فقط نسخه‌ای و بدون نسخه (<span class="ltr-text">OTC</span>) خواهد بود.
+            </p>
+            <p class="mb-3">
+                ممکن است استثنائاتی برای این برنامه زمان‌بندی وجود داشته باشد که در آن زمان کوتاه‌تری برای تعیین تغییرات نامگذاری و برچسب‌گذاری در مواردی که سلامت و ایمنی عمومی نگران‌کننده است، لازم باشد. تمدید برنامه‌های زمان‌بندی اجرا به ندرت انجام می‌شود و باید توجیه مناسب و همچنین تأیید کمیته کارشناسان <span class="ltr-text">USP</span> را داشته باشد. هرگونه سوال یا نگرانی در مورد این برنامه زمان‌بندی تعویق را می‌توان با رابط کارکنان <span class="ltr-text">USP</span> که به کمیته کارشناسان اختصاص یافته است، مطرح کرد.
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طیف‌سنجی تشدید مغناطیسی هسته‌ای برای آزمایش هویت پلی‌ساکاریدهای باکتریایی مورد استفاده در ساخت واکسن</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vazirmatn Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax CDN -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">طیف‌سنجی تشدید مغناطیسی هسته‌ای برای آزمایش هویت پلی‌ساکاریدهای باکتریایی مورد استفاده در ساخت واکسن</h1>
+
+        <div class="card mb-6">
+            <p class="mb-4">موارد زیر اضافه شود:</p>
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">1. مقدمه و دامنه کاربرد</h2>
+            <p class="mb-4">
+                این فصل کاربرد طیف‌سنجی تشدید مغناطیسی هسته‌ای (<span class="ltr-text">NMR</span>) را برای آزمایش هویت پلی‌ساکاریدهای باکتریایی مورد استفاده در ساخت واکسن توصیف می‌کند. هویت جزء ساکاریدی در واکسن‌های پلی‌ساکارید و گلیکوکانژوگه باید در مراحل مختلف فرآیند تولید، از جمله پلی‌ساکارید تک‌ظرفیتی عمده، پلی‌ساکارید مخلوط عمده، پلی‌ساکارید فعال‌شده (در صورت جداسازی)، کونژوگه تک‌ظرفیتی عمده، کونژوگه‌های مخلوط عمده، و پرکننده‌های نهایی، تأیید شود. <span class="ltr-text">NMR</span> یک روش مناسب برای تأیید هویت پلی‌ساکاریدها است، اگرچه بیشتر برای پلی‌ساکاریدهای تک‌ظرفیتی عمده و پلی‌ساکاریدهای فعال‌شده (در صورت جداسازی) مفید است. این فصل استفاده از طیف‌سنجی <span class="ltr-text">NMR</span> را برای این منظور توصیف می‌کند، اما رویکردهای جایگزین تأیید شده نیز ممکن است مناسب باشند.
+            </p>
+            <p class="mb-4">
+                برای اطلاعات بیشتر در مورد <span class="ltr-text">NMR</span>، از جمله اصول کلی و کاربردهای آن، به کاربردهای طیف‌سنجی تشدید مغناطیسی هسته‌ای <a href="1761.html" class="text-blue-600 hover:underline" target="_blank">1761</a> مراجعه کنید. اطلاعات خاص‌تر در مورد صلاحیت ابزار، اعتبارسنجی روش، و استانداردهای مرجع در طیف‌سنجی تشدید مغناطیسی هسته‌ای <a href="761.html" class="text-blue-600 hover:underline" target="_blank">761</a> گنجانده شده است.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">1.1 طیف‌های NMR</h3>
+            <p class="mb-4">
+                طیف‌های <span class="ltr-text">NMR</span> برای آزمایش هویت معمولاً برای نمونه‌های حل شده در آب دوتریوم‌دار (<span class="ltr-text">D2O</span>) یا ترکیبی از آب دوتریوم‌دار و مقادیر کمی از یک یا چند استاندارد داخلی برای کالیبراسیون تغییر شیمیایی، کمی‌سازی یا اهداف دیگر جمع‌آوری می‌شوند. تغییر شیمیایی رزونانس حاصل از آب باقیمانده در حلال دوتریوم‌دار (<span class="ltr-text">HOD</span>) نسبت به سایر رزونانس‌های حلال حساسیت بیشتری به دما دارد. جداسازی طیفی و وضوح رزونانس <span class="ltr-text">HOD</span> را می‌توان با انتخاب دمایی که در آن طیف به دست می‌آید، بهینه کرد.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">1.2 پلی‌ساکاریدهای O-استیله</h3>
+            <p class="mb-4">
+                برای آن دسته از پلی‌ساکاریدهایی که <span class="ltr-text">O</span>-استیله هستند، ثبات درجه <span class="ltr-text">O</span>-استیلاسیون به عنوان بخشی از آزمایش هویت در نظر گرفته می‌شود. این امر می‌تواند از طریق استفاده از طیف یک پلی‌ساکارید مرجع با درجه <span class="ltr-text">O</span>-استیلاسیون قابل قبول، کمی‌سازی رزونانس‌های مشخصه <span class="ltr-text">O</span>-استیلاسیون در طیف پلی‌ساکارید دست‌نخورده، یا <span class="ltr-text">de-O</span>-استیلاسیون شیمیایی و کمی‌سازی نسبی آنیون استات حاصل در مقایسه با پلی‌ساکارید ارزیابی شود (به <span class="ltr-text">2.4</span> روش‌های تجربی مراجعه کنید). اجرای هر رویکردی احتمالاً محصول خاص خواهد بود.
+            </p>
+            <p class="mb-4">
+                برای برخی از پلی‌ساکاریدها، ممکن است یک مشخصه کمی برای حداقل درجه <span class="ltr-text">O</span>-استیلاسیون وجود داشته باشد؛ رویکردهای توصیف شده در این فصل، با اعتباربخشی مناسب، می‌توانند برای انجام این سنجش استفاده شوند. الزامات مربوط به محتوای <span class="ltr-text">O</span>-استیل پلی‌ساکاریدها معمولاً به عنوان حداقل مقدار "باقی‌مانده‌های <span class="ltr-text">O</span>-استیل" (اندازه‌گیری شده توسط سنجش <span class="ltr-text">Hestrin</span>) در <span class="ltr-text">میلی‌مول</span> بر گرم وزن خشک پلی‌ساکارید ذکر می‌شوند. این روش سنجش <span class="ltr-text">NMR</span> توصیف شده در این فصل، مقداری را بر اساس میانگین تعداد گروه‌های <span class="ltr-text">O</span>-استیل در هر واحد تکرار گزارش می‌کند. یک روش برای کالیبراسیون بین دو رویکرد باید در طول اعتبارسنجی روش توسعه یابد.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">2. روش کار</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">2.1 الزامات تجهیزات</h3>
+            <p class="mb-4">
+                توصیفی از یک طیف‌سنج <span class="ltr-text">NMR</span> نمونه در <a href="1761.html" class="text-blue-600 hover:underline" target="_blank">1761</a> ارائه شده است، و رویکردهای نصب، عملکرد، و صلاحیت عملیاتی در <a href="761.html" class="text-blue-600 hover:underline" target="_blank">761</a> آورده شده است. این بخش، و بقیه فصل، به الزامات خاص برای آزمایش هویت پلی‌ساکاریدهای باکتریایی اشاره دارد.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">طیف‌سنج NMR</h4>
+            <p class="mb-4">
+                باید از یک طیف‌سنج <span class="ltr-text">NMR</span> با حداقل قدرت میدان اسمی مطابق با فرکانس رزونانس پروتون <span class="ltr-text">NLT 400 MHz</span> و با کنترل دمای نمونه استفاده شود. کالیبراسیون دما در محدوده <span class="ltr-text">±3°</span> از دمای مورد نظر کافی است، به شرطی که دمای نمونه ثابت بین نمونه‌های آزمایشی و مرجع حاصل شود (یا در اعتبارسنجی روش نشان داده شود)، با پایداری دما در یک اجرا از <span class="ltr-text">NMT 0.5°</span>. باید از پروب‌های <span class="ltr-text">NMR</span> بهینه‌سازی شده برای تشخیص پروتون و مناسب برای لوله‌های <span class="ltr-text">NMR</span> با قطر خارجی <span class="ltr-text">5-mm</span> استفاده شود. گزینه‌های دیگر پروب نیز ممکن است، اما باید قبل از استفاده مناسب بودن آن‌ها اثبات شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">پارامترهای پردازش</h4>
+            <p class="mb-4">
+                یک تابع وزن‌دهی ممکن است قبل از تبدیل فوریه به پوسیدگی القای آزاد (<span class="ltr-text">FID</span>) اعمال شود: یک تابع پهن‌کننده خط مناسب ممکن است اعمال شود، و در برخی موارد <span class="ltr-text">0.3 Hz</span> مناسب تشخیص داده شده است. پس از تبدیل <span class="ltr-text">FID</span>، فاز برای فاز جذب خالص تنظیم می‌شود. تصحیح خط پایه باید به طور مداوم اعمال شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">لوله‌های NMR</h4>
+            <p class="mb-4">
+                این‌ها باید از کیفیتی مناسب برای استفاده در طیف‌سنج‌های با میدان بالا باشند و برای استفاده در سنجش صلاحیت داشته باشند.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">2.2 معرف‌ها برای محلول‌های نمونه پلی‌ساکارید واکسن</h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حلال‌ها</h4>
+            <p class="mb-4">
+                حلال‌های دوتریوم‌دار که در معرض تبادل پروتون با پلی‌ساکارید هستند (مثلاً، آب دوتریوم‌دار (<span class="ltr-text">D2O</span>)) باید با بالاترین نسبت دوتریوم انتخاب شوند (مثلاً، <span class="ltr-text">>99.9 atom % D</span>).
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ترکیبات مرجع تغییر شیمیایی</h4>
+            <p class="mb-4">
+                سدیم <span class="ltr-text">2,2-dimethyl-2-silapentane-5-sulfonate (DSS;</span> ارجح)، سدیم <span class="ltr-text">trimethylsilylpropionate (TSP)</span>، یا یک آنالوگ دوتریوم‌دار (<span class="ltr-text">TSP–d4</span>) به طور کلاسیک استفاده می‌شوند و برای سیگنال‌های متیل روی <span class="ltr-text">0 ppm</span> تنظیم می‌شوند. ماده مرجع معمولاً به مقدار کم [<span class="ltr-text">0.1%–0.01% (w/v)</span> مناسب تشخیص داده شده است] به آب دوتریوم‌دار مورد استفاده برای حل کردن نمونه نهایی اضافه می‌شود.
+            </p>
+            <p class="mb-4 ltr-text">[NOTE—Deuterated water >99.96% 2H containing 0.01% DSS (w/v) is commercially available.]</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">دوتراکسید سدیم</h4>
+            <p class="mb-4">
+                محلول <span class="ltr-text">40% w/v (10 M)</span> دوتراکسید سدیم (<span class="ltr-text">NaOD</span>) در آب دوتریوم‌دار (<span class="ltr-text">>99 atom % D</span>) معمولاً برای القای <span class="ltr-text">de-O</span>-استیلاسیون پلی‌ساکاریدها استفاده می‌شود.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">2.3 الزامات نمونه</h3>
+            <p class="mb-4">
+                یک بخش از پلی‌ساکارید خالص شده عمده یا واسطه‌های فرآیند مناسب در حالت جامد یا مایع که حاوی <span class="ltr-text">0.5–20 mg</span> محتوای ساکارید است، برای تهیه نمونه‌های تحلیلی <span class="ltr-text">NMR</span> مناسب است. برای به دست آوردن یک بخش جامد، مقدار مربوطه از ماده در محلول مایع تحت خلاء (با استفاده از خشک‌کن انجمادی، لیوفیلیزر، یا سایر تبخیرکننده‌های حلال) خشک می‌شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">طیف‌های مرجع برای ناخالصی‌های پیش‌بینی شده</h4>
+            <p class="mb-4">
+                طیف‌های مرجع برای ناخالصی‌های مرتبط با فرآیند پیش‌بینی شده (مانند اتانول، عوامل ضد کف، فنل، برمید ستیل تری‌متیل‌آمونیوم) باید تحت همان شرایط تجربی که برای تجزیه و تحلیل نمونه آزمایشی استفاده می‌شود و در غلظت‌هایی مشابه با نمونه‌های آزمایشی معمول به دست آیند. این طیف‌ها شواهدی برای آن رزونانس‌هایی ارائه می‌دهند که ممکن است هنگام تعیین هویت نمونه‌ها از بررسی بیشتر حذف شوند.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">طیف‌های مرجع برای پلی‌ساکاریدها</h4>
+            <p class="mb-4">
+                طیف‌های مرجع برای نمونه‌های پلی‌ساکارید مورد آزمایش باید با جمع‌آوری طیف نمونه‌های اصیل تحت شرایط آماده‌سازی نمونه و اکتساب طیف‌سنج و پردازش داده یکسان با نمونه‌های آزمایشی به دست آیند. مقایسه طیف‌های نمونه‌های آزمایشی با این طیف‌های مرجع امکان تأیید هویت نمونه‌های آزمایشی را فراهم می‌کند.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">2.4 روش‌های تجربی</h3>
+            <p class="mb-4">
+                دو پروتکل تجربی در زیر شرح داده شده است. پروتکل اول برای نمونه‌هایی مناسب است که در آن‌ها یک طیف <span class="ltr-text">1H NMR</span> تک‌بعدی تمام اطلاعات مورد نیاز را تولید می‌کند. پروتکل دوم شامل <span class="ltr-text">de-O</span>-استیلاسیون کاتالیز شده با باز در محل پلی‌ساکارید برای آزادسازی گروه‌های <span class="ltr-text">O</span>-استیل به عنوان آنیون‌های استات است که هم طیف پلی‌ساکارید را ساده می‌کند و هم امکان کمی‌سازی درجه <span class="ltr-text">O</span>-استیلاسیون را فراهم می‌آورد. یک طیف <span class="ltr-text">1H NMR</span> تک‌بعدی دوم پس از مرحله <span class="ltr-text">de-O</span>-استیلاسیون جمع‌آوری می‌شود. انتخاب پروتکل مورد استفاده بستگی به محصول مورد آزمایش و اطلاعات مورد نیاز دارد؛ بسیاری از مراحل در این دو پروتکل مشابه هستند (مثلاً آماده‌سازی نمونه).
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آماده‌سازی نمونه</h4>
+            <p class="mb-4">
+                نمونه‌های تحلیلی <span class="ltr-text">NMR</span> از پلی‌ساکارید و مشتقات آن را می‌توان به صورت بخش‌های جامد یا مایع آماده کرد. نمونه‌های تحلیلی <span class="ltr-text">NMR</span> معمولاً با حل کردن بخش جامد در حدود <span class="ltr-text">0.7 mL</span> حلال دوتریوم‌دار یا، به ندرت، با افزودن حداقل <span class="ltr-text">10% (v/v)</span> حلال دوتریوم‌دار به بخش مایع، آماده می‌شوند. محلول برای به دست آوردن غلظت یکنواخت مخلوط می‌شود و متعاقباً به یک لوله <span class="ltr-text">NMR</span> با قطر <span class="ltr-text">5-mm</span> منتقل می‌شود.
+            </p>
+            <p class="mb-4 ltr-text">[NOTE—NMR instrument design may allow or require the use of smaller volumes; users should confirm this for their instrument configuration.]</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تبادل دوتریوم</h4>
+            <p class="mb-4">
+                با اعتباربخشی مناسب روش، لیوفیلیزاسیون از اکسید دوتریوم ("تبادل دوتریوم") ممکن است برای کاهش شدت رزونانس ناشی از آب باقیمانده (<span class="ltr-text">H2O</span>)/<span class="ltr-text">HOD</span> استفاده شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">PH</h4>
+            <p class="mb-4">
+                در برخی شرایط، کنترل <span class="ltr-text">pH</span> نمونه ممکن است مناسب باشد.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">2.5 روش کار 1a</h3>
+            <p class="mb-4">
+                این روش از مقایسه بصری با طیف‌های مرجع و/یا مقایسه تغییرات شیمیایی آزمایشی با مقادیر تغییر شیمیایی مرجع استفاده می‌کند.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">دامنه کاربرد</h4>
+            <p class="mb-4">
+                این رویکرد با پلی‌ساکاریدهایی که فاقد <span class="ltr-text">O</span>-استیلاسیون هستند، مانند <span class="ltr-text">Haemophilus influenzae type b</span> یا بسیاری از پلی‌ساکاریدهای پنوموکوکی، یا با پلی‌ساکاریدهای <span class="ltr-text">O</span>-استیله، مانند <span class="ltr-text">Neisseria meningitidis</span> یا بسیاری از پلی‌ساکاریدهای پنوموکوکی که ثبات محصول و طیف اجازه می‌دهد هویت از طریق مقایسه مستقیم طیف‌های آزمایشی و مرجع تعیین شود، سازگار است.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">طیف NMR نمونه آزمایشی</h4>
+            <p class="mb-4">
+                طیف <span class="ltr-text">NMR</span> نمونه آزمایشی تحت همان پارامترهای عملیاتی ابزار و پردازش داده که برای به دست آوردن طیف مرجع استفاده شده‌اند، به دست می‌آید. تأیید هویت می‌تواند بر اساس مقایسه بصری طیف‌های آزمایشی و مرجع خاص محصول، مقایسه موقعیت رزونانس، پهنای خط، شدت نسبی و چندگانگی باشد. طیف کامل، نواحی متمایز طیف، یا مجموعه‌ای از حداقل پنج رزونانس (یا سه رزونانس متمایز در پلی‌ساکاریدها با واحدهای تکرار مونوساکارید یا دی‌ساکارید) می‌تواند در این مقایسه استفاده شود (به شرطی که این‌ها تشخیصی نشان داده شوند).
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">رزونانس‌ها</h4>
+            <p class="mb-4">
+                در یک سنجش به خوبی درک شده، رزونانس‌هایی که از ناخالصی‌های مرتبط با فرآیند شناخته شده‌اند که در مرحله بعدی فرآیند تولید حذف می‌شوند یا به هر نحو دیگری ثابت شده که بر کیفیت محصول تأثیر نمی‌گذارند، می‌توانند از تعیین هویت حذف شوند.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">2.6 روش کار 1b</h3>
+            <p class="mb-4">
+                این روش از نمونه‌های تحلیلی در آب دوتریوم‌دار (<span class="ltr-text">D2O</span>) و مقایسه با یک طیف مرجع با محاسبه ضریب همبستگی استفاده می‌کند.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">دامنه کاربرد</h4>
+            <p class="mb-4">
+                این رویکرد با پلی‌ساکاریدهای <span class="ltr-text">Streptococcus pneumoniae</span> سازگار است، جایی که ثبات محصول و طیف اجازه می‌دهد هویت از طریق مقایسه ریاضی مستقیم طیف‌های آزمایشی و مرجع تعیین شود.
+            </p>
+            <p class="mb-4">
+                با مقایسه‌های ریاضی، یک ناحیه متمایز از هر طیف (مثلاً <span class="ltr-text">4.64–5.89 ppm</span>) با طیف‌های تولید شده برای نمونه‌های مرجع تعیین شده برای هر پلی‌ساکارید مورد علاقه مقایسه می‌شود. شباهت دو پروفایل طیفی برای یک نمونه آزمایشی و مرجع که تحت شرایط یکسان و در ماتریس یکسان به دست آمده‌اند، با استفاده از ضریب همبستگی (<span class="ltr-text">ρ</span>) ارزیابی می‌شود. یک شناسایی مثبت از پلی‌ساکارید نمونه زمانی حاصل می‌شود که <span class="ltr-text">ρ</span> بین طیف‌های نمونه و مرجع <span class="ltr-text">NLT 0.95</span> (یا مقدار تأیید شده دیگری) باشد.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">2.7 روش کار 2</h3>
+            <p class="mb-4">
+                این روش <span class="ltr-text">de-O</span>-استیلاسیون کاتالیز شده با باز در لوله و کمی‌سازی محتوای استات است.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">دامنه کاربرد</h4>
+            <p class="mb-4">
+                در برخی موارد، درجه <span class="ltr-text">O</span>-استیلاسیون و موقعیت آن‌ها، همراه با مهاجرت خودبه‌خودی <span class="ltr-text">O</span>-استیل در محلول، می‌تواند پروفایل <span class="ltr-text">NMR</span> را پیچیده کند. <span class="ltr-text">de-O</span>-استیلاسیون کاتالیز شده با باز پلی‌ساکارید در لوله <span class="ltr-text">NMR</span> برای پلی‌ساکاریدهای <span class="ltr-text">Salmonella typhi Vi</span> و گروه‌های <span class="ltr-text">A, C, W135, and Y</span> مننگوکوکی مفید ثابت شده است. افزودن باز ممکن است پهنای خطوط را نیز کاهش دهد.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مدیریت نمونه</h4>
+            <p class="mb-4">
+                نمونه همانند آماده‌سازی نمونه در <span class="ltr-text">2.4</span> روش‌های تجربی آماده می‌شود و یک طیف <span class="ltr-text">1H NMR</span> تک‌بعدی همانند <span class="ltr-text">2.5</span> روش کار <span class="ltr-text">1a</span> به دست می‌آید. این طیف اطلاعاتی در مورد حضور/مقدار آنیون استات در نمونه بومی ارائه می‌دهد. دوتراکسید سدیم (<span class="ltr-text">NaOD</span>) در آب دوتریوم‌دار (<span class="ltr-text">D2O</span>) به نمونه در لوله <span class="ltr-text">NMR</span> تا غلظت نهایی تقریباً <span class="ltr-text">200 mM</span> اضافه می‌شود [معادل افزودن <span class="ltr-text">14 µL</span> از <span class="ltr-text">10 M</span> دوتراکسید سدیم (<span class="ltr-text">NaOD</span>) در آب دوتریوم‌دار (<span class="ltr-text">D2O</span>) به یک نمونه <span class="ltr-text">0.7-mL</span>]. <span class="ltr-text">De-O</span>-استیلاسیون برای تقریباً همه پلی‌ساکاریدها بسیار سریع است، اما شرایط مناسب باید در توسعه و اعتبارسنجی روش ارزیابی شود. طیف <span class="ltr-text">NMR</span> نمونه پس از <span class="ltr-text">de-O</span>-استیلاسیون با استفاده از شرایط اکتساب مناسب برای طیف‌سنجی کمی دوباره به دست می‌آید. طیف ماده <span class="ltr-text">de-O</span>-استیله مشخصه ستون فقرات پلی‌ساکارید است و درجه <span class="ltr-text">O</span>-استیلاسیون در نمونه اصلی از انتگرال‌های آنیون استات و یک رزونانس مناسب ناشی از ستون فقرات ساکارید محاسبه می‌شود. اگر مقدار آنیون استات در نمونه بومی کم باشد، برای مثال <span class="ltr-text"><5%</span>، تصحیح شدت رزونانس آنیون استات در نمونه <span class="ltr-text">de-O</span>-استیله ضروری نیست.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">2.8 معیارهای سنجش</h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">دما</h4>
+            <p class="mb-4">
+                دمای نمونه باید در محدوده‌های تعیین شده در طول اعتبارسنجی روش، مشابه دمای استاندارد مرجع باشد، و دمای نمونه را می‌توان با اختلاف تغییر شیمیایی بین رزونانس <span class="ltr-text">HOD</span> و استاندارد مرجع تغییر شیمیایی داخلی تعیین کرد. به عنوان مثال، هنگام استفاده از <span class="ltr-text">TSP-d4</span> به عنوان استاندارد مرجع، دمای واقعی را با استفاده از معادله زیر بر اساس تغییر شیمیایی سیگنال <span class="ltr-text">HOD</span> محاسبه کنید:
+            </p>
+            <div class="formula-display">
+                $$\delta = 5.051 - 0.0111(T)$$
+            </div>
+            <p class="mb-4">
+                که در آن <span class="ltr-text">δ</span> تغییر شیمیایی پیک <span class="ltr-text">HOD</span> است، و <span class="ltr-text">T</span> دما بر حسب <span class="ltr-text">سانتی‌گراد (°C)</span> است.
+            </p>
+            <p class="mb-4">
+                معادلات دیگری در صورت استفاده از استانداردهای مرجع تغییر شیمیایی متفاوت اعمال می‌شوند. ثبات در اختلاف تغییر شیمیایی بین <span class="ltr-text">HOD</span> و استاندارد مرجع تغییر شیمیایی، جایگزینی برای دمای نمونه است.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">استاندارد مرجع تغییر شیمیایی</h4>
+            <p class="mb-4">
+                پهنای خط نیمه ارتفاع کامل (<span class="ltr-text">fwhh</span>) یک رزونانس تعریف شده از یک مولکول کوچک (مثلاً استاندارد مرجع تغییر شیمیایی) در نمونه آزمایشی باید در محدوده‌های تعیین شده در طول اعتبارسنجی روش باشد تا هم شیمینگ قابل قبول مگنت و هم پایداری دمای نمونه در طول تجزیه و تحلیل را نشان دهد. نسبت سیگنال به نویز یک سیگنال تعریف شده در طیف ماده پلی‌ساکارید باید از مشخصات تعیین شده در طول اعتبارسنجی روش فراتر رود.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">2.9 مناسب بودن سیستم</h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول مناسب بودن سیستم</h4>
+            <p class="mb-4">
+                یک ویال از <span class="ltr-text">USP PS NMR System Suitability RS</span> را در آب دوتریوم‌دار (<span class="ltr-text">>99.9% D, 1 mL</span>) حاوی <span class="ltr-text">0.01% DSS</span> با مخلوط کردن کوتاه حل کنید.
+            </p>
+            <p class="mb-4 ltr-text">[NOTE—For example, for 10 s using a rotary mixer.]</p>
+            <p class="mb-4">
+                <span class="ltr-text">0.7 mL</span> از این محلول را به یک لوله <span class="ltr-text">NMR</span> (قطر خارجی <span class="ltr-text">5-mm</span>) منتقل کنید.
+            </p>
+            <p class="mb-4 ltr-text">[NOTE—NMR instrument design may allow or require the use of smaller volumes; users should confirm this for their instrument configuration.]</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مناسب بودن سیستم: روش کار</h4>
+            <p class="mb-4">
+                با استفاده از یک طیف‌سنج <span class="ltr-text">NMR</span> که با فرکانس اسمی <span class="ltr-text">NLT 400 MHz</span> برای <span class="ltr-text">1H</span> کار می‌کند، یک <span class="ltr-text">FID</span> را با استفاده از <span class="ltr-text">NLT 64</span> اسکن با پالس <span class="ltr-text">90°</span>، عرض طیفی <span class="ltr-text">12 ppm</span>، تأخیر بازیافت <span class="ltr-text">NLT 30 s</span>، تعداد نقاط داده <span class="ltr-text">NLT 64,000</span>، و با پنجره طیفی متمرکز در <span class="ltr-text">4 ppm</span> به دست آورید. طیف‌های <span class="ltr-text">1H NMR</span> محلول مناسب بودن سیستم را در دمای ثابت <span class="ltr-text">25 ± 3°C</span> ثبت کنید. طیف را با استفاده از پارامترهای فوق به دست آورید. داده‌ها را پس از ضرب نمایی (پهن‌شدگی خط <span class="ltr-text">0.3 Hz</span>) تبدیل کنید. سیگنال متیل <span class="ltr-text">DSS</span> باید روی <span class="ltr-text">0.00 ppm</span> تنظیم شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
+            <ul class="list-disc pr-8 mb-4">
+                <li class="mb-2">تغییرات شیمیایی برای رزونانس‌های <span class="ltr-text">N-acetyl, GlcA H-2, and GlcNAc H-1</span> آنومریک در محلول مناسب بودن سیستم باید به ترتیب در <span class="ltr-text">2.01 ± 0.05, 3.33 ± 0.05, and 5.15 ± 0.05 ppm</span> مشاهده شوند.</li>
+                <li class="mb-2">پهنای خط (<span class="ltr-text">fwhh</span>) رزونانس <span class="ltr-text">N-acetyl</span> در <span class="ltr-text">2.01 ppm</span> باید <span class="ltr-text">NMT 3.5 Hz</span> باشد.</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">2.10 استانداردهای مرجع USP <a href="11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">USP PS NMR System Suitability RS</h4>
+            <p class="mb-4 ltr-text">▲ 1S (USP41)</p>
+        </div>
+    </div>
+</body>
+</html>

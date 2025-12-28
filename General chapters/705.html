@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فصل 705. ویژگی‌های کیفی قرص‌های دارای قابلیت تقسیم‌بندی عملکردی</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">فصل <span class="ltr-text">705</span>. ویژگی‌های کیفی قرص‌های دارای قابلیت تقسیم‌بندی عملکردی</h1>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">هدف</h2>
+            <p class="mb-4">این فصل ویژگی‌های کیفی را برای محصولاتی ارائه می‌دهد که برچسب‌گذاری تایید شده آنها نشان می‌دهد قرص‌ها می‌توانند به بخش‌های متعدد تقسیم شوند که دوز کسری دقیقی دارند (که به عنوان دارای قابلیت تقسیم‌بندی عملکردی برچسب‌گذاری شده‌اند). ادعای برچسب برای بخش‌های تقسیم شده باید یک قسمت کسری ساده از ادعای قرص دست‌نخورده باشد که بر اساس تعداد خطوط تقسیم و اندازه بخش تقسیم شده است (به عنوان مثال، یک دوم، یک سوم، یا یک چهارم). در زمان تقسیم، قرص‌های دست‌نخورده باید با مشخصات تک‌نگاره مطابقت داشته باشند. به استثنای دوز، هر بخش تقسیم شده از قرص‌های دارای قابلیت تقسیم‌بندی عملکردی انتظار می‌رود که با ویژگی‌های کیفی قرص‌های کامل مطابقت داشته باشد. بخش‌های تقسیم شده حاصل از تقسیم یک قرص دارای قابلیت تقسیم‌بندی عملکردی باید با آزمون‌های تقسیم قرص‌های دارای قابلیت تقسیم‌بندی عملکردی و انحلال یا فروپاشی که در این فصل ارائه شده است، مطابقت داشته باشند.</p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">دامنه کاربرد</h2>
+            <p class="mb-4">این فصل برای قرص‌هایی که دارای قابلیت تقسیم‌بندی عملکردی برچسب‌گذاری شده‌اند و برای بخش‌های تقسیم شده‌ای که هر کسر برچسب‌گذاری شده از دوز کامل قرص دارای قابلیت تقسیم‌بندی عملکردی را نشان می‌دهند، اعمال می‌شود. قرص‌ها باید به عنوان بخشی از روش آزمون تقسیم شوند و شرایط نگهداری برای بخش‌های تقسیم شده باید در روش آزمون تعریف شود. برای آزمون انحلال یا فروپاشی، تحلیل‌گران باید فقط از بخش‌های تقسیم شده قرص‌هایی استفاده کنند که طبق آزمون تقسیم قرص‌های دارای قابلیت تقسیم‌بندی عملکردی قابل قبول تشخیص داده شده‌اند.</p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تقسیم قرص‌های دارای قابلیت تقسیم‌بندی عملکردی</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش آزمون</h4>
+            <ol class="list-decimal list-inside space-y-2 mb-4">
+                <li><span class="ltr-text">1</span>. یک نمونه تصادفی از <span class="ltr-text">30</span> قرص دست‌نخورده بردارید و به شرح زیر عمل کنید.</li>
+                <li><span class="ltr-text">2</span>. هر قرص را به دقت وزن کرده و وزن آن را ثبت کنید.</li>
+                <li><span class="ltr-text">3</span>. برای هر قرص دست‌نخورده، وزن مورد انتظار بخش‌های تقسیم شده را با تقسیم وزن کل قرص بر تعداد مشخص شده بخش‌های تقسیم شده که روی برچسب‌گذاری نشان داده شده است، تعیین کنید.</li>
+                <li><span class="ltr-text">4</span>. هر قرص را با دست (بدون کمک مکانیکی) به تعداد مشخص شده بخش‌های تقسیم شده تقسیم کرده و هر بخش تقسیم شده را وزن کنید.</li>
+                <li><span class="ltr-text">5</span>. برای هر قرص، درصد وزن مورد انتظار در هر بخش تقسیم شده را تعیین کنید.</li>
+            </ol>
+            <p class="mb-4">یک قرص قابل قبول به تعداد مشخص شده قطعات تقسیم می‌شود، و هر بخش تقسیم شده باید <span class="ltr-text">NLT 75%</span> و <span class="ltr-text">NMT 125%</span> از وزن مورد انتظار بخش قرص تقسیم شده را داشته باشد. <span class="font-bold">[نکته—بخش‌های قرص تقسیم شده حاصل از قرص‌های قابل قبول را برای آزمون‌های بعدی انحلال یا فروپاشی کنار بگذارید.]</span></p>
+            <p class="mb-4"><span class="font-bold">معیارهای پذیرش:</span> <span class="ltr-text">NLT 28</span> از <span class="ltr-text">30</span> قرص قابل قبول باشند.</p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">انحلال</h2>
+            <p class="mb-4">از بخش‌های تقسیم شده قرص‌هایی استفاده کنید که طبق آزمون تقسیم قرص‌های دارای قابلیت تقسیم‌بندی عملکردی قابل قبول هستند.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">قرص‌های با رهش فوری</h3>
+            <p class="mb-4">آزمون انحلال برای قرص‌های با رهش فوری در مرحله <span class="ltr-text">S2</span> انجام می‌شود (به انحلال <a href="711.html" class="text-blue-600 hover:underline" target="_blank">711</a> مراجعه کنید). تعداد <span class="ltr-text">12</span> بخش قرص تقسیم شده را طبق محیط، دستگاه، زمان‌ها و آنالیز مشخص شده آزمایش کنید. میانگین <span class="ltr-text">12</span> نتیجه باید <span class="ltr-text">NLT Q</span> باشد و هیچ نتیجه‌ای کمتر از <span class="ltr-text">Q – 15%</span> نباشد.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">قرص‌های با رهش طولانی</h3>
+            <p class="mb-4">آزمون انحلال بخش‌های قرص تقسیم شده از قرص‌های با رهش طولانی را با یکی از دو روش جایگزین انجام دهید. روشی که باید استفاده شود در تک‌نگاره مشخص شده است.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش <span class="ltr-text">1</span> (روش برای اشکال دوز با رهش طولانی، انحلال <a href="711.html" class="text-blue-600 hover:underline" target="_blank">711</a>)</h4>
+            <p class="mb-4"><span class="ltr-text">12</span> بخش قرص تقسیم شده و <span class="ltr-text">12</span> قرص دست‌نخورده را به صورت جداگانه آزمایش کنید.</p>
+            <p class="mb-4"><span class="font-bold">محیط، دستگاه و آنالیز:</span> همانطور که در تک‌نگاره پس از شماره آزمون مناسب که روی برچسب‌گذاری یافت می‌شود، آمده است.</p>
+            <p class="mb-4"><span class="font-bold">نقاط زمانی آزمون پروفایل انحلال:</span> نقاط زمانی آزمون پروفایل انحلال به شرح زیر تعیین می‌شود. از آزمون انحلال مناسب در تک‌نگاره، از نقاط زمانی داده شده استفاده کنید. حداقل از سه نقطه زمانی استفاده کنید که در آن بیش از یک نقطه زمانی نتایج بیش از <span class="ltr-text">85%</span> انحلال را نشان ندهد.</p>
+            <p class="mb-4">فاکتور شباهت (<span class="ltr-text">f2</span>) را برای نتایج قرص دست‌نخورده و نتایج بخش قرص تقسیم شده محاسبه کنید:</p>
+            <div class="formula-display">
+                $$f_2 = 50 \cdot \log \left\{ \left[ 1 + \left( \frac{1}{n} \right) \sum_{t=1}^{n} (R_t - T_t)^2 \right]^{-0.5} \cdot 100 \right\}$$
+            </div>
+            <p class="mb-2"><span class="ltr-text">R t</span> = درصد تجمعی داروی برچسب‌گذاری شده حل شده در هر یک از <span class="ltr-text">n</span> نقطه زمانی انتخاب شده از قرص‌های دست‌نخورده</p>
+            <p class="mb-4"><span class="ltr-text">T t</span> = درصد تجمعی داروی برچسب‌گذاری شده حل شده در هر یک از <span class="ltr-text">n</span> نقطه زمانی انتخاب شده از بخش‌های قرص تقسیم شده</p>
+            <p class="mb-4"><span class="font-bold">معیارهای پذیرش:</span> <span class="ltr-text">f2</span> محاسبه شده <span class="ltr-text">NLT 50</span> باشد (دامنه قابل قبول: <span class="ltr-text">50–100</span>).</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش <span class="ltr-text">2</span> (روش برای اشکال دوز با رهش طولانی، انحلال <a href="711.html" class="text-blue-600 hover:underline" target="_blank">711</a>)</h4>
+            <p class="mb-4">از یک بخش قرص تقسیم شده به عنوان واحد دوز استفاده کنید. <span class="ltr-text">12</span> واحد دوز را به صورت جداگانه آزمایش کنید.</p>
+            <p class="mb-4"><span class="font-bold">محیط، دستگاه، زمان‌ها و آنالیز:</span> همانطور که در تک‌نگاره پس از شماره آزمون مناسب که روی برچسب‌گذاری یافت می‌شود، آمده است.</p>
+            <p class="mb-4"><span class="font-bold">معیارهای پذیرش:</span> درصدهای مقدار برچسب‌گذاری شده آزاد شده در زمان‌های مشخص شده با معیارهای سطح <span class="ltr-text">L2</span> جدول پذیرش <span class="ltr-text">2</span> در <a href="711.html" class="text-blue-600 hover:underline" target="_blank">711</a> مطابقت دارند.</p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">فروپاشی</h2>
+            <p class="mb-4">آزمون فروپاشی تنها زمانی ضروری است که به عنوان جایگزینی برای آزمون انحلال طبق مشخصات تک‌نگاره استفاده شود. روش را با استفاده از بخش‌های تقسیم شده از قرص‌هایی که طبق آزمون تقسیم قرص‌های دارای قابلیت تقسیم‌بندی عملکردی قابل قبول هستند، به عنوان واحد دوز دنبال کنید (به فروپاشی <a href="701.html" class="text-blue-600 hover:underline" target="_blank">701</a> مراجعه کنید).</p>
+        </div>
+    </div>
+</body>
+</html>

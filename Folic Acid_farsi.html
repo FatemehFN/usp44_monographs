@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مونوگراف اسید فولیک (USP)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .tab-active {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        .tab-inactive {
+            border-color: transparent;
+            color: #6b7280;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+        .interactive-card {
+            background-color: #e0f2fe;
+            border: 1px solid #90cdf4;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">اسید فولیک</h1>
+
+        <div class="flex justify-center mb-6 border-b border-gray-200">
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab('definition')">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('identification')">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('assay')">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('impurities')">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('specific-tests')">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('additional-requirements')">الزامات اضافی</button>
+        </div>
+
+        <div id="definition" class="tab-content">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+                <p>اسید فولیک حاوی حداقل 97.0% و حداکثر 102.0% اسید فولیک (C<span class="ltr-text">19</span>H<span class="ltr-text">19</span>N<span class="ltr-text">7</span>O<span class="ltr-text">6</span>)، محاسبه شده بر اساس پایه انیدروس است.</p>
+            </div>
+        </div>
+
+        <div id="identification" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. تست‌های شناسایی طیف‌سنجی á197ñ</h3>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">طیف‌سنجی فرابنفش-مرئی</h4>
+                <p>نمونه محلول: 10 میکروگرم بر میلی‌لیتر در محلول سدیم هیدروکسید 0.1 نرمال</p>
+                <p>معیارهای پذیرش: الزامات را برآورده می‌کند. نسبت A<span class="ltr-text">256</span>/A<span class="ltr-text">365</span> برابر 2.80–3.00 است.</p>
+            </div>
+        </div>
+
+        <div id="assay" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش</h4>
+                <p>[نکته — در طول روش زیر از ظروف شیشه‌ای کم‌نور استفاده کنید.]</p>
+                <p>اسید فسفریک 3 نرمال: 98 گرم در لیتر اسید فسفریک در آب</p>
+                <p>هیدروکسید آمونیوم 6 نرمال: 40 میلی‌لیتر آمونیوم هیدروکسید را با آب به 100 میلی‌لیتر رقیق کنید.</p>
+                <p>فاز متحرک: 2.0 گرم پتاسیم فسفات مونوبازیک را در یک فلاسک حجمی 1000 میلی‌لیتری بریزید و در 650 میلی‌لیتر آب حل کنید. 15.0 میلی‌لیتر از محلول 0.5 مولار تترا بوتیل آمونیوم هیدروکسید در متانول، 7.0 میلی‌لیتر اسید فسفریک 3 نرمال و 270 میلی‌لیتر متانول اضافه کنید. تا دمای اتاق خنک کنید، با اسید فسفریک 3 نرمال یا هیدروکسید آمونیوم 6 نرمال pH را به 5.0 تنظیم کنید و با آب تا حجم برسانید. قبل از استفاده pH را مجدداً بررسی کنید.</p>
+                <p>محلول استاندارد داخلی: 2 میلی‌گرم بر میلی‌لیتر متیل پارابن در فاز متحرک. متیل پارابن را ابتدا با متانول (حدود 4% از حجم نهایی) حل کرده و با فاز متحرک تا حجم برسانید.</p>
+                <p>محلول استوک استاندارد: 1 میلی‌گرم بر میلی‌لیتر USP Folic Acid RS در فاز متحرک. اسید فولیک را با کمک 10% آمونیوم هیدروکسید (حدود 1% از حجم نهایی) حل کرده و با فاز متحرک تا حجم برسانید.</p>
+                <p>محلول استاندارد: 4.0 میلی‌لیتر از محلول استوک استاندارد و 4.0 میلی‌لیتر از محلول استاندارد داخلی را در یک فلاسک حجمی 50 میلی‌لیتری ریخته و با فاز متحرک تا حجم برسانید.</p>
+                <p>محلول استوک نمونه: 100 میلی‌گرم اسید فولیک را در یک فلاسک حجمی 100 میلی‌لیتری ریخته، در 40 میلی‌لیتر فاز متحرک و 1 میلی‌لیتر 10% آمونیوم هیدروکسید حل کنید. با فاز متحرک تا حجم برسانید.</p>
+                <p>محلول نمونه: 4.0 میلی‌لیتر از محلول استوک نمونه و 4.0 میلی‌لیتر از محلول استاندارد داخلی را در یک فلاسک حجمی 50 میلی‌لیتری ریخته و با فاز متحرک تا حجم برسانید.</p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم کروماتوگرافی</h4>
+                <p>(به کروماتوگرافی á621ñ، ارزیابی سیستم مراجعه کنید.)</p>
+                <p>حالت: LC</p>
+                <p>آشکارساز: UV 280 نانومتر</p>
+                <p>ستون: 4.0 میلی‌متر × 25 سانتی‌متر؛ بسته L1</p>
+                <p>نرخ جریان: 1.2 میلی‌لیتر بر دقیقه</p>
+                <p>حجم تزریق: 10 میکرولیتر</p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ارزیابی سیستم</h4>
+                <p>نمونه: محلول استاندارد</p>
+                <p>الزامات ارزیابی</p>
+                <p>تفکیک: حداقل 3.6 بین متیل پارابن و اسید فولیک</p>
+                <p>انحراف معیار نسبی: حداکثر 2.0% برای نسبت مساحت پیک اسید فولیک به مساحت پیک استاندارد داخلی</p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل</h4>
+                <p>نمونه‌ها: محلول استاندارد و محلول نمونه</p>
+                <p>درصد اسید فولیک (C<span class="ltr-text">19</span>H<span class="ltr-text">19</span>N<span class="ltr-text">7</span>O<span class="ltr-text">6</span>) را در نمونه گرفته شده محاسبه کنید:</p>
+                <div class="formula-display">
+                    <p>Result = (RU/RS) × (CS/CU) × 100</p>
+                </div>
+                <p>RU = نسبت استاندارد داخلی (پاسخ پیک اسید فولیک / پاسخ پیک استاندارد داخلی) از محلول نمونه</p>
+                <p>RS = نسبت استاندارد داخلی (پاسخ پیک اسید فولیک / پاسخ پیک استاندارد داخلی) از محلول استاندارد</p>
+                <p>CS = غلظت USP Folic Acid RS در محلول استوک استاندارد (میلی‌گرم بر میلی‌لیتر)</p>
+                <p>CU = غلظت اسید فولیک در محلول استوک نمونه (میلی‌گرم بر میلی‌لیتر)</p>
+                <p>معیارهای پذیرش: 97.0%–102.0% بر اساس پایه انیدروس</p>
+            </div>
+        </div>
+
+        <div id="impurities" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">باقیمانده پس از احتراق á281ñ: حداکثر 0.3%</h4>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ترکیبات مرتبط</h4>
+                <p>اسید فسفریک 3 نرمال، هیدروکسید آمونیوم 6 نرمال، محلول استاندارد داخلی، محلول استوک استاندارد، محلول استاندارد و سیستم کروماتوگرافی: طبق دستورالعمل در بخش سنجش عمل کنید.</p>
+                <p>محلول نمونه: از محلول استوک نمونه، آماده شده طبق دستورالعمل در بخش سنجش، استفاده کنید.</p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل</h4>
+                <p>نمونه: محلول نمونه</p>
+                <p>اجازه دهید محلول نمونه حداقل 2 برابر زمان ماند اسید فولیک الیوت شود. کروماتوگرام را ثبت کرده و مساحت تمام پیک‌ها را اندازه بگیرید.</p>
+                <p>درصد کل پیک‌های ثانویه را در قسمت گرفته شده اسید فولیک محاسبه کنید:</p>
+                <div class="formula-display">
+                    <p>Result = (rU/rT) × 100</p>
+                </div>
+                <p>rU = مجموع مساحت تمام پیک‌ها به جز پیک اسید فولیک</p>
+                <p>rT = مجموع مساحت تمام پیک‌ها</p>
+                <p>معیارهای پذیرش: حداکثر 2.0%</p>
+            </div>
+        </div>
+
+        <div id="specific-tests" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تعیین آب، روش I á921ñ</h4>
+                <p>تحلیل: طبق دستورالعمل فصل عمل کنید، به جز اینکه حلال متانول قبل و در حین افزودن نمونه آزمایشی و در طول تیتراسیون هم زده شود.</p>
+                <p>معیارهای پذیرش: حداکثر 8.5%</p>
+            </div>
+        </div>
+
+        <div id="additional-requirements" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">بسته‌بندی و نگهداری</h4>
+                <p>در ظروف کاملاً بسته، مقاوم در برابر نور نگهداری شود.</p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">استانداردهای مرجع USP á11ñ</h4>
+                <p>USP Folic Acid RS</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => {
+                content.classList.add('hidden');
+            });
+
+            const activeTab = document.getElementById(tabId);
+            activeTab.classList.remove('hidden');
+
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => {
+                button.classList.remove('tab-active');
+                button.classList.add('tab-inactive');
+            });
+
+            const clickedButton = document.querySelector(`button[onclick="showTab('${tabId}')"]`);
+            clickedButton.classList.remove('tab-inactive');
+            clickedButton.classList.add('tab-active');
+        }
+
+        // Show the first tab by default
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('definition').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>

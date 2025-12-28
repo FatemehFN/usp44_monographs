@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>á1430ñ روش‌های تحلیلی مبتنی بر پدیده‌های پراکندگی — کلی</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vazirmatn Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax CDN -->
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">á1430ñ روش‌های تحلیلی مبتنی بر پدیده‌های پراکندگی — کلی</h1>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">1. مرور کلی: فصول عمومی مبتنی بر پدیده‌های پراکندگی</h2>
+            <p class="mb-4">
+                این فصل یک مرور کلی از اصول علمی و روش‌های تحلیلی مورد استفاده در تکنیک‌های پراکندگی و کاربردهای آن‌ها ارائه می‌دهد. <span class="ltr-text">شکل 1</span> طبقه‌بندی (نمودار درختی) تکنیک‌هایی را که در این فصل پوشش داده شده‌اند، نشان می‌دهد. شاخه اول، تکنیک‌ها را بر اساس طول موج تابش الکترومغناطیسی (<span class="ltr-text">EM</span>) فرودی طبقه‌بندی می‌کند: نور مرئی (<span class="ltr-text">700–400 nm</span>)، اشعه ایکس (<span class="ltr-text">0.33–0.06 nm</span>)، و همچنین نوترون‌ها (<span class="ltr-text">2.5–0.15 nm</span>). شاخه بعدی، تکنیک‌ها را به آنهایی که بر اساس شدت‌های اندازه‌گیری شده (یعنی پراکندگی) هستند، که در آن تابش خروجی از نمونه در یک زاویه نسبت به پرتو فرودی اندازه‌گیری می‌شود، یا عبور، که در آن این زاویه برابر با صفر است، طبقه‌بندی می‌کند. تکنیک‌های پراکندگی را می‌توان بر اساس نحوه کمی‌سازی تابش خروجی، به دو حالت میانگین زمانی (استاتیک) یا وابسته به زمان (دینامیک) دسته‌بندی کرد. در نهایت، از آنجا که تکنیک‌های پراکندگی اغلب با تکنیک‌های جداسازی، مانند کروماتوگرافی یا تفکیک جریان میدانی، همراه هستند، این موارد نیز شامل می‌شوند.
+            </p>
+            <p class="mb-4">
+                دو پارامتر مهم از تعامل تابش <span class="ltr-text">EM</span>-ماده، طول موج تابش <span class="ltr-text">EM</span> فرودی (<span class="ltr-text">λ = λ0/m0</span>، که در آن <span class="ltr-text">λ0</span> طول موج در خلاء و <span class="ltr-text">m0</span> ضریب شکست محیط است) و اندازه ذره، که اغلب به عنوان شعاع کروی معادل (<span class="ltr-text">r</span>) بیان می‌شود، هستند. یک پارامتر بی‌بعد (<span class="ltr-text">α = 2πr/λ</span>) می‌تواند برای توصیف رژیم‌های پراکندگی مختلف استفاده شود. برای <span class="ltr-text">α&lt;&lt;1</span>، پراکندگی در رژیم ریلی در نظر گرفته می‌شود و نظریه پراکندگی ریلی اعمال می‌گردد (نامگذاری شده به افتخار لرد ریلی، که این نظریه را در سال <span class="ltr-text">1871</span> توسعه داد)؛ برای <span class="ltr-text">α∼1</span>، پراکندگی در رژیم می در نظر گرفته می‌شود و نظریه پراکندگی می اعمال می‌گردد (نامگذاری شده به افتخار گوستاو می، که این نظریه را در سال <span class="ltr-text">1908</span> توسعه داد)؛ و برای <span class="ltr-text">α&gt;&gt;1</span>، اپتیک هندسی اعمال می‌شود. این نظریه‌ها در فصول مربوطه که در آن‌ها به کار می‌روند، بیشتر مورد بررسی قرار می‌گیرند. <span class="ltr-text">جدول 1</span> تمام فصولی را که اصول فیزیکی بنیادی آن‌ها در این فصل جامع مورد بررسی قرار گرفته‌اند، فهرست می‌کند. این فصول به پراکندگی نور الاستیک در سیستم‌های ناهمگن و کاربردهای آن در صنعت داروسازی می‌پردازند.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">جدول 1. فهرست خانواده فصول عمومی á1430.Xñ</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>شماره فصل</th>
+                        <th>عنوان فصل</th>
+                        <th>ویژگی اندازه‌گیری شده</th>
+                        <th>هدف اصلی</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="1430.html" class="text-blue-600 hover:underline" target="_blank">á1430ñ</a></td>
+                        <td>روش‌های تحلیلی مبتنی بر پدیده‌های پراکندگی — کلی</td>
+                        <td>فصل جامع</td>
+                        <td>مرور کلی؛ <span class="ltr-text">N/A</span></td>
+                    </tr>
+                    <tr>
+                        <td><a href="1430.1.html" class="text-blue-600 hover:underline" target="_blank">á1430.1ñ</a></td>
+                        <td>روش‌های تحلیلی مبتنی بر پدیده‌های پراکندگی — پراکندگی نور استاتیک</td>
+                        <td>شدت نور پراکنده شده به عنوان تابعی از زاویه آشکارساز</td>
+                        <td>وزن مولکولی، اندازه، شکل؛ برهم‌کنش‌های مولکولی</td>
+                    </tr>
+                    <tr>
+                        <td><a href="1430.2.html" class="text-blue-600 hover:underline" target="_blank">á1430.2ñ</a></td>
+                        <td>روش‌های تحلیلی مبتنی بر پدیده‌های پراکندگی — اندازه‌گیری اندازه ذرات با پراش نور</td>
+                        <td>شدت نور پراش یافته در زوایای متعدد</td>
+                        <td>توزیع اندازه ذرات در محدوده تقریبی <span class="ltr-text">0.01–3000 µm</span></td>
+                    </tr>
+                    <tr>
+                        <td><a href="1430.3.html" class="text-blue-600 hover:underline" target="_blank">á1430.3ñ</a></td>
+                        <td>روش‌های تحلیلی مبتنی بر پدیده‌های پراکندگی — پراکندگی نور دینامیک</td>
+                        <td>نوسانات شدت نور پراکنده شده</td>
+                        <td>قطر هیدرودینامیکی متوسط و شاخص چندپراکندگی</td>
+                    </tr>
+                    <tr>
+                        <td><a href="1430.4.html" class="text-blue-600 hover:underline" target="_blank">á1430.4ñ</a></td>
+                        <td>روش‌های تحلیلی مبتنی بر پدیده‌های پراکندگی — پراکندگی نور الکتروفورتیک (تعیین پتانسیل زتا)</td>
+                        <td>جابجایی دوپلر فرکانس نور پراکنده شده</td>
+                        <td>پایداری سوسپانسیون‌ها و امولسیون‌ها</td>
+                    </tr>
+                    <tr>
+                        <td><a href="1430.5.html" class="text-blue-600 hover:underline" target="_blank">á1430.5ñ</a></td>
+                        <td>روش‌های تحلیلی مبتنی بر پدیده‌های پراکندگی — پراکندگی اشعه ایکس با زاویه کوچک و پراکندگی نوترون با زاویه کوچک</td>
+                        <td>شدت پراکنده شده پرتو اشعه ایکس یا نوترون</td>
+                        <td>بررسی مستقیم اندازه، شکل، نظم و برهم‌کنش‌های مولکول‌های منفرد، تجمعات آن‌ها در مقیاس‌های طولی تقریبی از <span class="ltr-text">0.1–2500 nm</span> برای <span class="ltr-text">SAXS</span> و <span class="ltr-text">0.2–1000+ nm</span> برای <span class="ltr-text">SANS</span>. همچنین خواص فازهای متراکم (مانند تخلخل و بلورینگی) قابل تعیین است.</td>
+                    </tr>
+                    <tr>
+                        <td><a href="1430.6.html" class="text-blue-600 hover:underline" target="_blank">á1430.6ñ</a><span class="ltr-text">a</span></td>
+                        <td>روش‌های تحلیلی مبتنی بر پدیده‌های پراکندگی — شمارش ذرات از طریق پراکندگی نور</td>
+                        <td>نور پراکنده شده از ذرات منفرد که از یک پرتو نور عبور می‌کنند</td>
+                        <td>کمی‌سازی ذرات در مایعات و گازها از <span class="ltr-text">0.1–2 µm</span></td>
+                    </tr>
+                    <tr>
+                        <td><a href="1430.7.html" class="text-blue-600 hover:underline" target="_blank">á1430.7ñ</a><span class="ltr-text">a</span></td>
+                        <td>روش‌های تحلیلی مبتنی بر پدیده‌های پراکندگی — نفلومتری و توربیدیمتری</td>
+                        <td>اندازه‌گیری مستقیم یا غیرمستقیم شدت‌های نور پراکنده شده</td>
+                        <td>ذرات معلق در نمونه‌های مایع یا گاز؛ نفلومتری برای اندازه‌های تجمعی و غلظت‌های آنالیت پایین‌تر؛ توربیدیمتری برای اندازه‌های تجمعی و غلظت‌های آنالیت بالاتر</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="mb-4 text-sm">
+                <span class="ltr-text">a</span> این فصل در شماره‌ای آتی از Pharmacopeial Forum (<span class="ltr-text">PF</span>) منتشر خواهد شد.
+            </p>
+            <p class="mb-4">
+                از آنجا که این روش‌ها بر اساس فیزیک زیربنایی یکسانی هستند، اصول کلی تنها یک بار در این فصل جامع ارائه شده است. روابط بین این روش‌ها در <span class="ltr-text">شکل 1</span> نشان داده شده است.
+            </p>
+            <figure class="mb-4">
+                <img src="placeholder_figure1.png" alt="Taxonomy of scattering methods" class="mx-auto block"> <!-- Placeholder for Figure 1 -->
+                <figcaption class="text-center text-sm text-gray-600 mt-2">شکل 1. طبقه‌بندی روش‌های پراکندگی.</figcaption>
+            </figure>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">2. مقدمه</h2>
+            <p class="mb-4">
+                هنگامی که یک موج <span class="ltr-text">EM</span> به یک جسم کوچک (یک ذره یا یک مولکول) برخورد/با آن تعامل می‌کند و بدین ترتیب جهت خود را تغییر می‌دهد، این پدیده پراکندگی نامیده می‌شود. اگر تابش <span class="ltr-text">EM</span> پراکنده شده دقیقاً همان انرژی (طول موج) تابش فرودی را داشته باشد، پراکندگی الاستیک نامیده می‌شود. هنگامی که انرژی (طول موج) تابش <span class="ltr-text">EM</span> پراکنده شده با تابش <span class="ltr-text">EM</span> فرودی متفاوت باشد، فرآیند پراکندگی "غیرالاستیک" نامیده می‌شود. پراکندگی غیرالاستیک، به عنوان مثال، توسط طیف‌سنجی رامان مورد بهره‌برداری قرار می‌گیرد (به <a href="1858.html" class="text-blue-600 hover:underline" target="_blank">á1858ñ</a> Raman Spectroscopy—Theory and Practice مراجعه کنید). تابش پراکنده شده ممکن است به صورت مستقیم شناسایی و اندازه‌گیری شود: به عنوان تابعی از زاویه بین جهت پرتو فرودی و آشکارساز، یا به صورت غیرمستقیم: زمانی که اندازه‌گیری واقعی، اندازه‌گیری نور عبوری باشد. مورد دوم برای هر دو روش کدورت و انسداد نور صادق است (به فصول زیر در مورد کدورت و انسداد نور مراجعه کنید: <a href="855.html" class="text-blue-600 hover:underline" target="_blank">á855ñ</a> Nephelometry, Turbidimetry, and Visual Comparison، <a href="787.html" class="text-blue-600 hover:underline" target="_blank">á787ñ</a> Subvisible Particulate Matter in Therapeutic Protein Injections، <a href="788.html" class="text-blue-600 hover:underline" target="_blank">á788ñ</a> Particulate Matter in Injections، و <a href="1788.html" class="text-blue-600 hover:underline" target="_blank">á1788ñ</a> Methods for the Determination of Subvisible Particulate Matter (<span class="ltr-text">CN 1-May-2021</span>)). هر دو روش از سیگنال‌های میانگین زمانی بهره‌برداری می‌کنند.
+            </p>
+            <p class="mb-4">
+                در پراکندگی نور استاتیک (<span class="ltr-text">SLS</span>)، نوسانات زمانی کوتاه مدت اجتناب‌ناپذیر در شدت پراکندگی ناشی از حرکت براونی، در دامنه‌ای از ده‌ها تا صدها میلی‌ثانیه میانگین‌گیری می‌شوند. بنابراین <span class="ltr-text">SLS</span> شدت "میانگین زمانی" نور پراکنده شده از ذرات را در یک نمونه (به طور مناسب آماده شده) اندازه‌گیری می‌کند. بسته به تکنیک خاص، <span class="ltr-text">SLS</span> اطلاعاتی در مورد وزن مولکولی، اندازه ذرات، شکل ذرات، و برهم‌کنش‌های مولکولی ارائه می‌دهد (به <a href="1430.1.html" class="text-blue-600 hover:underline" target="_blank">á1430.1ñ</a> Analytical Methodologies Based on Scattering Phenomena—Static Light Scattering مراجعه کنید). نور پراکنده شده در جهت نزدیک به جلو توسط ذرات، مشابه پراش نور از طریق یک دیافراگم است. این مورد توسط تکنیک‌های پراش (لیزر) مورد بهره‌برداری قرار می‌گیرد، که برای ارائه یک توزیع اندازه کامل، با وضوح متوسط تا بالا، به جای یک اندازه مشخصه واحد مانند پراکندگی نور با زاویه کم (<span class="ltr-text">LALS</span>)/پراکندگی نور چندزاویه‌ای (<span class="ltr-text">MALS</span>) بهینه‌سازی شده‌اند.
+            </p>
+            <p class="mb-4">
+                پراکندگی اشعه ایکس با زاویه کوچک (<span class="ltr-text">SAXS</span>) و پراکندگی نوترون با زاویه کوچک (<span class="ltr-text">SANS</span>) نیز تکنیک‌های استاتیک هستند به این معنا که از سیگنال‌های میانگین زمانی استفاده می‌کنند. اینها با <span class="ltr-text">LALS</span> (و <span class="ltr-text">MALS</span>) متفاوت هستند زیرا بر اساس پراکندگی اشعه ایکس (<span class="ltr-text">SAXS</span>) یا نوترون‌ها (<span class="ltr-text">SANS</span>) به جای نور مرئی هستند. مانند <span class="ltr-text">SLS</span>، این تکنیک‌ها نیز اندازه، شکل و برهم‌کنش‌ها را اندازه‌گیری می‌کنند اما در مقیاس‌های طولی بسیار کوتاه‌تر، معمولاً در محدوده تقریبی <span class="ltr-text">1 nm</span> تا چند صد <span class="ltr-text">nanometers</span>. آنالوگ‌های با زاویه بسیار/فوق کوچک (<span class="ltr-text">VSAXS/VSANS, USAXS/USANS</span>) و با زاویه باز (<span class="ltr-text">WAXS/WANS</span>) این مقیاس‌های طولی را به رژیم‌های <span class="ltr-text">micrometer</span> و زیر <span class="ltr-text">nanometer</span> گسترش می‌دهند. این کاربردها در <a href="1430.5.html" class="text-blue-600 hover:underline" target="_blank">á1430.5ñ</a> Analytical Methodologies Based on Scattering Phenomena—Small-Angle X-Ray Scattering and Small-Angle Neutron Scattering مورد بحث قرار می‌گیرند.
+            </p>
+            <p class="mb-4">
+                پراکندگی نور دینامیک (<span class="ltr-text">DLS</span>)، که در <a href="430.html" class="text-blue-600 hover:underline" target="_blank">á430ñ</a><span class="ltr-text">1</span> Particle Size Analysis by Dynamic Light Scattering و <a href="1430.3.html" class="text-blue-600 hover:underline" target="_blank">á1430.3ñ</a> Analytical Methodologies Based on Scattering Phenomena—Dynamic Light Scattering مورد بررسی قرار گرفته است، با <span class="ltr-text">SLS</span> تفاوت دارد در این که <span class="ltr-text">DLS</span> نوسان شدت نور پراکنده شده را در فواصل زمانی بسیار کوتاه (مانند تقریباً <span class="ltr-text">200, 400 ns</span>) اندازه‌گیری می‌کند.
+            </p>
+            <p class="mb-4">
+                پراکندگی نور الکتروفورتیک (تعیین پتانسیل زتا)، که با جزئیات بیشتر در <a href="432.html" class="text-blue-600 hover:underline" target="_blank">á432ñ</a><span class="ltr-text">1</span> Determination of Zeta Potential by Electrophoretic Light Scattering و <a href="1430.4.html" class="text-blue-600 hover:underline" target="_blank">á1430.4ñ</a> Analytical Methodologies Based on Scattering Phenomena—Electrophoretic Light Scattering (Determination of Zeta Potential) مورد بررسی قرار گرفته است، جابجایی دوپلر فرکانس نور پراکنده شده را در نتیجه حرکات ذرات ناشی از اثر تجمعی الکتروفورز و الکترواسمز اندازه‌گیری می‌کند.
+            </p>
+            <p class="mb-4 text-sm">
+                <span class="ltr-text">1</span> این فصل در شماره‌ای آتی از Pharmacopeial Forum (<span class="ltr-text">PF</span>) منتشر خواهد شد.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">3. نظریه (اصول کلی پراکندگی)</h2>
+            <p class="mb-4">
+                پراکندگی نور/<span class="ltr-text">EM</span> نتیجه یک تعامل پیچیده بین امواج نور/<span class="ltr-text">EM</span> فرودی و ماده است. موج <span class="ltr-text">EM</span> که هنگام برخورد با موانعی مانند یک مولکول یا تجمعات مولکولی، یا ذرات، تغییر جهت می‌دهد، گفته می‌شود که پراکنده شده است. همانطور که تابش <span class="ltr-text">EM</span>، مانند نور یا اشعه ایکس، با یک ذره گسسته تعامل می‌کند، مدارهای الکترونی درون اتم‌ها یا مولکول‌های تشکیل دهنده ذره به صورت دوره‌ای با همان فرکانس (<span class="ltr-text">ν0</span>) میدان الکتریکی موج فرودی مختل می‌شوند. نوسان یا اختلال ابر الکترونی منجر به جداسازی دوره‌ای بار در مولکول می‌شود که یک گشتاور دو قطبی القایی نامیده می‌شود. گشتاور دو قطبی القایی نوسانی خود را به عنوان منبع تابش <span class="ltr-text">EM</span> نشان می‌دهد (به <span class="ltr-text">شکل 2</span> مراجعه کنید). از طرف دیگر، نوترون‌ها همیشه توسط یک برهم‌کنش هسته‌ای با برد بسیار کوتاه با هسته‌های اتم‌ها پراکنده می‌شوند.
+            </p>
+            <figure class="mb-4">
+                <img src="placeholder_figure2.png" alt="Scattering of an incident EM wave by an induced dipole moment" class="mx-auto block"> <!-- Placeholder for Figure 2 -->
+                <figcaption class="text-center text-sm text-gray-600 mt-2">شکل 2. پراکندگی موج <span class="ltr-text">EM</span> فرودی توسط یک گشتاور دو قطبی القایی.</figcaption>
+            </figure>
+            <p class="mb-4">
+                شدت (میانگین زمانی) <span class="ltr-text">(I)</span> پرتو نور در حین تعامل با ماده در طول مسیر خود (یعنی زمانی که نور فرودی در زاویه صفر شناسایی می‌شود) به صورت نمایی با ضخامت <span class="ltr-text">x</span> لایه ماده مطابق <span class="ltr-text">معادله 1</span> کاهش می‌یابد:
+            </p>
+            <div class="formula-display">
+                $$\text{I} = \text{I}_0 \text{e}^{-\tau \text{x}} \quad (1)$$
+            </div>
+            <p class="mb-4">
+                که در آن <span class="ltr-text">τ</span> کدورت و <span class="ltr-text">x</span> فاصله ای است که نور فرودی از طریق نمونه طی می کند.
+            </p>
+            <p class="mb-4">
+                این معادله اساس توربیدیمتری و نفلومتری است (به <a href="855.html" class="text-blue-600 hover:underline" target="_blank">á855ñ</a> مراجعه کنید).
+            </p>
+            <p class="mb-4">
+                در <span class="ltr-text">SLS</span>، توصیف نظری رابطه بین شدت‌های (میانگین زمانی) نور فرودی و پراکنده شده، اگرچه کاملاً پیچیده است، اما از رابطه ساده زیر (<span class="ltr-text">معادله 2</span>) سرچشمه می‌گیرد.<span class="ltr-text">2</span>
+            </p>
+            <div class="formula-display">
+                $$\text{I} = \text{I}_0 \frac{\sigma_{\text{scat}}}{\text{r}^2} \quad (2)$$
+            </div>
+            <p class="mb-4">
+                ضریب پراکندگی، <span class="ltr-text">σscat</span>، و به همراه آن شدت نور پراکنده شده، به عواملی بستگی دارد که توسط تعامل نور فرودی با خود ماده/ذرات و همچنین عواملی که از تجهیزات مورد استفاده برای تولید و تشخیص سیگنال نشأت می‌گیرند (مانند <span class="ltr-text">r</span>، فاصله آشکارساز از نمونه؛ <span class="ltr-text">I0</span>، شدت نور فرودی؛ و <span class="ltr-text">Θ</span>، زاویه مشاهده) تعیین می‌شوند.
+            </p>
+            <p class="mb-4">
+                از طرف دیگر، هنگام مطالعه نوسانات در شدت پراکنده شده (<span class="ltr-text">DLS</span>)، راه استخراج اطلاعات کمی مفید، محاسبه "تابع خودهمبستگی" نامیده می‌شود، که با <span class="ltr-text">g2(τ)</span> بر اساس شدت‌های اندازه‌گیری شده (<span class="ltr-text">معادله 3</span>) نشان داده می‌شود:
+            </p>
+            <div class="formula-display">
+                $$\text{g}_{2,\text{theory}}(\tau) = \left(\sum \text{A}_{\text{i}}\text{e}^{\text{B}_{\text{i}}\tau}\right)^2 + 1 \quad (3)$$
+            </div>
+            <p class="mb-4">
+                که در این مورد، <span class="ltr-text">τ</span> نشان دهنده یک زمان همبستگی است (نباید با <span class="ltr-text">τ</span> در <span class="ltr-text">معادله 1</span> بالا اشتباه شود)، و استفاده از اندیس <span class="ltr-text">i</span>، انواع مختلف ذرات (مانند اندازه‌های مختلف) موجود را در نظر می‌گیرد. یک برنامه کامپیوتری برای یافتن پارامترهای <span class="ltr-text">Ai, Bi</span> (<span class="ltr-text">= A1, B1, A2, B2,…</span>) استفاده می‌شود که بهترین توافق را بین تابع خودهمبستگی اندازه‌گیری شده و نظری تولید می‌کنند.
+            </p>
+            <p class="mb-4">
+                بسته به روش‌شناسی، معادلات بالا برای به دست آوردن یک معیار که شدت‌های اندازه‌گیری شده، <span class="ltr-text">I</span> و <span class="ltr-text">I0</span>، و تابع خودهمبستگی <span class="ltr-text">g2(τ)</span> را به خود ماده، مستقل از ویژگی‌های تجهیزات، مرتبط می‌کند، تبدیل می‌شوند. این موارد بیشتر در فصول خاص در <span class="ltr-text">USP–NF</span> اختصاص داده شده به تکنیک‌های مربوطه مورد بحث قرار می‌گیرند (به <span class="ltr-text">جدول 1</span> مراجعه کنید).
+            </p>
+            <p class="mb-4 text-sm ltr-text">
+                <span class="ltr-text">2</span> Hahn DW. Light Scattering Theory. University of Florida; 2009. <a href="http://plaza.ufl.edu/dwhahn/Rayleigh%20and%20Mie%20Light%20Scattering.pdf" class="text-blue-600 hover:underline" target="_blank">http://plaza.ufl.edu/dwhahn/Rayleigh%20and%20Mie%20Light%20Scattering.pdf</a>.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>846. سطح ویژه</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vazirmatn Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax CDN for LaTeX rendering -->
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr; /* Ensure formulas are LTR */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">
+            <a href="846.html" class="text-blue-700 hover:underline" target="_blank">846</a>. سطح ویژه
+        </h1>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+            <p class="mb-4">
+                سطح ویژه یک پودر با جذب فیزیکی گاز بر روی سطح جامد و محاسبه مقدار گاز جاذب مطابق با یک لایه تک‌مولکولی
+                روی سطح تعیین می‌شود. جذب فیزیکی از نیروهای نسبتاً ضعیف (نیروهای واندروالسی) بین مولکول‌های گاز جاذب و سطح
+                جاذب پودر مورد آزمایش ناشی می‌شود. این تعیین معمولاً در دمای نیتروژن مایع انجام می‌شود. مقدار گاز جذب شده
+                را می‌توان با روش حجمی یا جریان پیوسته اندازه‌گیری کرد.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">
+                نظریه بروناور، امت و تلر (<span class="ltr-text">BET</span>) و تعیین سطح ویژه
+            </h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">اندازه‌گیری چندنقطه‌ای</h3>
+            <p class="mb-2">
+                داده‌ها طبق معادله ایزوترم جذب بروناور، امت و تلر (<span class="ltr-text">BET</span>) پردازش می‌شوند:
+            </p>
+            <div class="formula-display">
+                $$ \frac{1}{V_a((P_0/P) - 1)} = \frac{(C - 1)}{V_mC} \times \frac{P}{P_0} + \frac{1}{V_mC} \quad (1) $$
+            </div>
+            <dl class="mb-4 space-y-2">
+                <dt class="font-bold"><span class="ltr-text">P</span></dt>
+                <dd class="mr-6">
+                    فشار بخار جزئی گاز جاذب در تعادل با سطح در <span class="ltr-text">77.4 K</span> (نقطه جوش نیتروژن مایع)، بر حسب <span class="ltr-text">Pa</span>.
+                </dd>
+                <dt class="font-bold"><span class="ltr-text">Po</span></dt>
+                <dd class="mr-6">
+                    فشار اشباع گاز جاذب، بر حسب <span class="ltr-text">Pa</span>.
+                </dd>
+                <dt class="font-bold"><span class="ltr-text">Va</span></dt>
+                <dd class="mr-6">
+                    حجم گاز جذب شده در دمای و فشار استاندارد (<span class="ltr-text">STP</span>) [<span class="ltr-text">273.15 K</span> و فشار اتمسفریک (<span class="ltr-text">1.013 × 10<sup>5</sup> Pa</span>)]، بر حسب <span class="ltr-text">mL</span>.
+                </dd>
+                <dt class="font-bold"><span class="ltr-text">Vm</span></dt>
+                <dd class="mr-6">
+                    حجم گاز جذب شده در <span class="ltr-text">STP</span> برای تولید یک تک‌لایه ظاهری روی سطح نمونه، بر حسب <span class="ltr-text">mL</span>.
+                </dd>
+                <dt class="font-bold"><span class="ltr-text">C</span></dt>
+                <dd class="mr-6">
+                    ثابت بدون بعد که به آنتالپی جذب گاز جاذب روی نمونه پودر مرتبط است.
+                </dd>
+            </dl>
+            <p class="mb-4">
+                مقدار <span class="ltr-text">Va</span> در حداقل سه مقدار از <span class="ltr-text">P/Po</span> اندازه‌گیری می‌شود. سپس مقدار <span class="ltr-text">BET</span> <span class="ltr-text">1/[Va((Po/P) − 1)]</span> در مقابل <span class="ltr-text">P/Po</span>، طبق معادله (<span class="ltr-text">1</span>) رسم می‌شود. این نمودار باید یک خط مستقیم را نشان دهد، معمولاً در محدوده فشار نسبی تقریبی <span class="ltr-text">0.05</span> تا <span class="ltr-text">0.3</span>. داده‌ها در صورتی قابل قبول تلقی می‌شوند که ضریب همبستگی، <span class="ltr-text">r</span>، رگرسیون خطی کمتر از <span class="ltr-text">0.9975</span> نباشد؛ یعنی <span class="ltr-text">r<sup>2</sup></span> کمتر از <span class="ltr-text">0.995</span> نباشد. از نمودار خطی حاصل، شیب، که برابر با <span class="ltr-text">(C − 1)/VmC</span> است، و عرض از مبدأ، که برابر با <span class="ltr-text">1/VmC</span> است، با تحلیل رگرسیون خطی ارزیابی می‌شوند. از این مقادیر، <span class="ltr-text">Vm</span> به صورت <span class="ltr-text">1/(slope + intercept)</span> محاسبه می‌شود، در حالی که <span class="ltr-text">C</span> به صورت <span class="ltr-text">(slope/intercept) + 1</span> محاسبه می‌شود. از مقدار <span class="ltr-text">Vm</span> تعیین شده، سطح ویژه، <span class="ltr-text">S</span>، بر حسب <span class="ltr-text">m<sup>2</sup> · g<sup>-1</sup></span>، با معادله زیر محاسبه می‌شود:
+            </p>
+            <div class="formula-display">
+                $$ S = \frac{V_m N a}{m \times 22400} \quad (2) $$
+            </div>
+            <dl class="mb-4 space-y-2">
+                <dt class="font-bold"><span class="ltr-text">N</span></dt>
+                <dd class="mr-6">
+                    ثابت آووگادرو (<span class="ltr-text">6.022 × 10<sup>23</sup> mol<sup>-1</sup></span>).
+                </dd>
+                <dt class="font-bold"><span class="ltr-text">a</span></dt>
+                <dd class="mr-6">
+                    مساحت مقطع عرضی مؤثر یک مولکول جاذب، بر حسب متر مربع (<span class="ltr-text">0.162 nm<sup>2</sup></span> برای نیتروژن و <span class="ltr-text">0.195 nm<sup>2</sup></span> برای کریپتون).
+                </dd>
+                <dt class="font-bold"><span class="ltr-text">m</span></dt>
+                <dd class="mr-6">
+                    جرم پودر آزمایش، بر حسب <span class="ltr-text">g</span>.
+                </dd>
+                <dt class="font-bold"><span class="ltr-text">22,400</span></dt>
+                <dd class="mr-6">
+                    حجم، بر حسب <span class="ltr-text">mL</span>، اشغال شده توسط یک مول از گاز جاذب در <span class="ltr-text">STP</span> با در نظر گرفتن انحرافات جزئی از حالت ایده‌آل.
+                </dd>
+            </dl>
+            <p class="mb-4">
+                حداقل سه نقطه داده مورد نیاز است. اندازه‌گیری‌های اضافی ممکن است انجام شود، به ویژه زمانی که عدم خطی بودن در مقدار <span class="ltr-text">P/Po</span> نزدیک به <span class="ltr-text">0.3</span> به دست می‌آید. از آنجا که عدم خطی بودن اغلب در مقدار <span class="ltr-text">P/Po</span> کمتر از <span class="ltr-text">0.05</span> به دست می‌آید، مقادیر در این منطقه توصیه نمی‌شوند. آزمون خطی بودن، پردازش داده‌ها و محاسبه سطح ویژه نمونه در بالا توضیح داده شده است.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">اندازه‌گیری تک‌نقطه‌ای</h3>
+            <p class="mb-4">
+                به طور معمول، حداقل سه اندازه‌گیری از <span class="ltr-text">Va</span>، هر یک در مقادیر مختلف <span class="ltr-text">P/Po</span>، برای تعیین سطح ویژه با تکنیک جذب گاز جریان دینامیک (روش <span class="ltr-text">I</span>) یا با جذب گاز حجمی (روش <span class="ltr-text">II</span>) مورد نیاز است. با این حال، تحت شرایط خاصی که در زیر توضیح داده شده است، ممکن است قابل قبول باشد که سطح ویژه یک پودر را از یک مقدار واحد <span class="ltr-text">Va</span> که در یک مقدار واحد <span class="ltr-text">P/Po</span> مانند <span class="ltr-text">0.300</span> (معادل <span class="ltr-text">0.300 mole</span> نیتروژن یا <span class="ltr-text">0.001038 mole fraction</span> کریپتون) اندازه‌گیری شده است، با استفاده از معادله زیر برای محاسبه <span class="ltr-text">Vm</span> تعیین کنیم:
+            </p>
+            <div class="formula-display">
+                $$ V_m = V_a[1 - (P/P_0)] \quad (3) $$
+            </div>
+            <p class="mb-4">
+                سپس سطح ویژه از مقدار <span class="ltr-text">Vm</span> با معادله (<span class="ltr-text">2</span>) که در بالا آورده شد، محاسبه می‌شود.
+            </p>
+            <p class="mb-4">
+                روش تک‌نقطه‌ای ممکن است مستقیماً برای مجموعه‌ای از نمونه‌های پودری از یک ماده خاص که ثابت ماده <span class="ltr-text">C</span> آن بسیار بزرگتر از واحد است، به کار رود. این شرایط را می‌توان با مقایسه مقادیر سطح ویژه تعیین شده با روش تک‌نقطه‌ای با آنچه توسط روش چندنقطه‌ای برای مجموعه‌ای از نمونه‌های پودری تعیین شده است، تأیید کرد. شباهت نزدیک بین مقادیر تک‌نقطه‌ای و چندنقطه‌ای نشان می‌دهد که <span class="ltr-text">1/C</span> به صفر نزدیک می‌شود.
+            </p>
+            <p class="mb-4">
+                روش تک‌نقطه‌ای ممکن است به طور غیرمستقیم برای مجموعه‌ای از نمونه‌های پودری بسیار مشابه از یک ماده خاص که ثابت ماده <span class="ltr-text">C</span> آن بی‌نهایت نیست اما می‌توان آن را ثابت فرض کرد، به کار رود. تحت این شرایط، خطای مرتبط با روش تک‌نقطه‌ای را می‌توان با استفاده از روش چندنقطه‌ای برای ارزیابی <span class="ltr-text">C</span> برای یکی از نمونه‌های این مجموعه از نمودار <span class="ltr-text">BET</span> کاهش یا حذف کرد، که از آن <span class="ltr-text">C</span> به صورت <span class="ltr-text">(1 + slope/intercept)</span> محاسبه می‌شود. سپس <span class="ltr-text">Vm</span> از مقدار واحد <span class="ltr-text">Va</span> اندازه‌گیری شده در یک مقدار واحد <span class="ltr-text">P/Po</span>، با معادله زیر محاسبه می‌شود:
+            </p>
+            <div class="formula-display">
+                $$ V_m = V_a\left[\left(\frac{P_0}{P}\right) - 1\right] \left[\frac{1}{C} + \left(\frac{C - 1}{C}\right) \times \left(\frac{P}{P_0}\right)\right] \quad (4) $$
+            </div>
+            <p class="mb-4">
+                سطح ویژه از <span class="ltr-text">Vm</span> با معادله (<span class="ltr-text">2</span>) که در بالا آورده شد، محاسبه می‌شود.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تکنیک‌های تجربی</h2>
+            <p class="mb-4">
+                این بخش روش‌های مورد استفاده برای آماده‌سازی نمونه، تکنیک جذب گاز جریان دینامیک (روش <span class="ltr-text">I</span>) و تکنیک جذب گاز حجمی (روش <span class="ltr-text">II</span>) را توصیف می‌کند.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آماده‌سازی نمونه</h3>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">گاززدایی</h4>
+            <p class="mb-4">
+                قبل از اینکه سطح ویژه نمونه قابل تعیین باشد، لازم است گازها و بخارهایی که ممکن است پس از ساخت و در طول
+                فرآوری، جابجایی و نگهداری به صورت فیزیکی روی سطح جذب شده باشند، حذف شوند. اگر گاززدایی انجام نشود، سطح ویژه
+                ممکن است کاهش یابد یا متغیر باشد، زیرا یک منطقه میانی از سطح با مولکول‌های گازها یا بخارهای قبلاً جذب شده
+                پوشیده شده است. شرایط گاززدایی برای دستیابی به دقت و صحت مورد نیاز اندازه‌گیری‌های سطح ویژه در داروها به دلیل
+                حساسیت سطح مواد، حیاتی است.
+            </p>
+            <p class="mb-4">
+                باید نشان داده شود که شرایط گاززدایی منجر به نمودارهای <span class="ltr-text">BET</span> قابل تکرار، وزن ثابت
+                پودر آزمایش و عدم تغییرات فیزیکی یا شیمیایی قابل تشخیص در پودر آزمایش می‌شود.
+            </p>
+            <p class="mb-4">
+                شرایط گاززدایی تعریف شده توسط دما، فشار و زمان به گونه‌ای انتخاب می‌شوند که سطح اولیه جامد تا حد امکان
+                بازسازی شود. گاززدایی بسیاری از مواد اغلب با اعمال خلاء، با پاکسازی نمونه در جریان پیوسته یک گاز خشک
+                غیرفعال یا با اعمال روش چرخه جذب-واسرایش انجام می‌شود. در هر دو مورد، گاهی اوقات دماهای بالا برای افزایش
+                سرعت خروج آلاینده‌ها از سطح اعمال می‌شود. هنگام گاززدایی نمونه‌های پودری با استفاده از دماهای بالا باید
+                احتیاط کرد تا از تأثیر بر ماهیت سطح و یکپارچگی نمونه جلوگیری شود.
+            </p>
+            <p class="mb-4">
+                اگر از حرارت استفاده می‌شود، دمای و زمان توصیه شده برای گاززدایی باید تا حد امکان پایین باشد تا اندازه‌گیری
+                قابل تکرار سطح ویژه در زمان قابل قبول حاصل شود. برای گاززدایی نمونه‌های حساس، روش‌های دیگر گاززدایی مانند
+                روش چرخه جذب-واسرایش ممکن است به کار گرفته شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">جاذب</h4>
+            <p class="mb-4">
+                تکنیک استاندارد جذب نیتروژن با کیفیت تحلیلی در دمای نیتروژن مایع است.
+            </p>
+            <p class="mb-4">
+                برای پودرهای با سطح ویژه کم (<span class="ltr-text">&lt; 0.2 m<sup>2</sup>g<sup>-1</sup></span>)، نسبت جذب شده کم است.
+                در چنین مواردی، استفاده از کریپتون در دمای نیتروژن مایع ترجیح داده می‌شود زیرا فشار بخار پایین اعمال شده
+                توسط این گاز به طور قابل توجهی خطا را کاهش می‌دهد. استفاده از مقادیر بیشتر نمونه، در صورت امکان (معادل
+                <span class="ltr-text">1 m<sup>2</sup></span> یا بیشتر از کل سطح با استفاده از نیتروژن)، ممکن است خطاهای
+                تعیین سطوح پایین را جبران کند.
+            </p>
+            <p class="mb-4">
+                تمام گازهای مورد استفاده باید فاقد رطوبت باشند.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مقدار نمونه</h4>
+            <p class="mb-4">
+                مقدار دقیقی از پودر آزمایش وزن می‌شود به گونه‌ای که کل سطح نمونه حداقل <span class="ltr-text">1 m<sup>2</sup></span>
+                هنگامی که جاذب نیتروژن است و <span class="ltr-text">0.5 m<sup>2</sup></span> هنگامی که جاذب کریپتون است، باشد.
+            </p>
+            <p class="mb-4">
+                مقادیر کمتر از نمونه ممکن است پس از تأیید مناسب استفاده شود.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">اندازه‌گیری‌ها</h3>
+            <p class="mb-4">
+                از آنجا که مقدار گاز جذب شده تحت فشار معین با کاهش دما افزایش می‌یابد، اندازه‌گیری‌های جذب معمولاً در دمای
+                پایین انجام می‌شوند. اندازه‌گیری در <span class="ltr-text">77.4 K</span>، نقطه جوش نیتروژن مایع، انجام می‌شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش <span class="ltr-text">I</span>: روش جریان دینامیک</h4>
+            <h5 class="text-base font-semibold text-gray-700 mt-2 mb-1">اصول</h5>
+            <p class="mb-4">
+                در روش جریان دینامیک (به شکل <span class="ltr-text">1</span> مراجعه کنید)، گاز جاذب توصیه شده نیتروژن خشک یا کریپتون است،
+                در حالی که هلیوم به عنوان گاز رقیق‌کننده استفاده می‌شود که تحت شرایط توصیه شده جذب نمی‌شود.
+            </p>
+            <p class="mb-4">
+                حداقل سه مخلوط از گاز جاذب مناسب با هلیوم در محدوده <span class="ltr-text">P/Po</span> از <span class="ltr-text">0.05</span>
+                تا <span class="ltr-text">0.30</span> مورد نیاز است. آشکارساز-انتگرال‌گیر گاز باید سیگنالی ارائه دهد که تقریباً
+                متناسب با حجم گازی است که تحت شرایط تعریف شده دما و فشار از آن عبور می‌کند. برای این منظور، یک آشکارساز
+                رسانایی حرارتی با یک انتگرال‌گیر الکترونیکی یکی از انواع مناسب است. حداقل سه نقطه داده در محدوده توصیه شده
+                <span class="ltr-text">0.05</span> تا <span class="ltr-text">0.30</span> برای <span class="ltr-text">P/Po</span> تعیین می‌شود.
+            </p>
+            <figure class="mb-4 text-center">
+                <!-- Placeholder for Fig. 1. Image not provided. -->
+                <img src="placeholder-for-fig1.png" alt="نمودار شماتیک دستگاه روش جریان دینامیک" class="mx-auto" />
+                <figcaption class="text-sm text-gray-600 mt-2">
+                    شکل <span class="ltr-text">1</span>. نمودار شماتیک دستگاه روش جریان دینامیک.
+                </figcaption>
+            </figure>
+
+            <h5 class="text-base font-semibold text-gray-700 mt-2 mb-1">روش کار</h5>
+            <p class="mb-4">
+                مخلوطی شناخته شده از گازها، معمولاً نیتروژن و هلیوم، از یک سلول رسانایی حرارتی عبور داده می‌شود، سپس دوباره
+                از نمونه عبور کرده، مجدداً از سلول رسانایی حرارتی و سپس به یک پتانسیومتر ضبط‌کننده می‌رود.
+            </p>
+            <p class="mb-4">
+                سلول نمونه در نیتروژن مایع غوطه‌ور می‌شود و نمونه نیتروژن را از فاز متحرک جذب می‌کند. این امر سلول رسانایی
+                حرارتی را نامتعادل می‌کند و یک پالس بر روی نمودار ضبط‌کننده ایجاد می‌شود.
+            </p>
+            <p class="mb-4">
+                نمونه از خنک‌کننده خارج می‌شود؛ این امر یک پیک واسرایش ایجاد می‌کند که از نظر مساحت برابر و در جهت مخالف
+                پیک جذب است. از آنجا که این پیک واضح‌تر از پیک جذب است، برای تعیین استفاده می‌شود.
+            </p>
+            <p class="mb-4">
+                برای کالیبراسیون، مقدار شناخته شده‌ای از جاذب، کافی برای ایجاد پیکی با بزرگی مشابه پیک واسرایش، به سیستم
+                تزریق می‌شود و نسبت حجم گاز به ازای هر واحد مساحت پیک به دست می‌آید.
+            </p>
+            <p class="mb-4">
+                مخلوطی از نیتروژن و هلیوم برای تعیین تک‌نقطه‌ای استفاده می‌شود؛ و چندین چنین مخلوطی یا پیش‌مخلوط کردن دو
+                جریان گاز برای تعیین چندنقطه‌ای استفاده می‌شود.
+            </p>
+            <p class="mb-4">
+                محاسبه همانند روش حجمی است.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش <span class="ltr-text">II</span>: روش حجمی</h4>
+            <h5 class="text-base font-semibold text-gray-700 mt-2 mb-1">اصول</h5>
+            <p class="mb-4">
+                در روش حجمی (به شکل <span class="ltr-text">2</span> مراجعه کنید)، گاز جاذب توصیه شده نیتروژن است که به فضای
+                خلاء بالای نمونه پودر قبلاً گاززدایی شده وارد می‌شود تا یک فشار تعادلی تعریف شده، <span class="ltr-text">P</span>،
+                از گاز ایجاد شود. بنابراین، استفاده از یک گاز رقیق‌کننده، مانند هلیوم، ضروری نیست، اگرچه هلیوم ممکن است
+                برای اهداف دیگر، مانند اندازه‌گیری حجم مرده، به کار گرفته شود.
+            </p>
+            <p class="mb-4">
+                از آنجا که فقط گاز جاذب خالص، به جای مخلوط گاز، استفاده می‌شود، اثرات تداخلی انتشار حرارتی در این روش
+                اجتناب می‌شود.
+            </p>
+            <figure class="mb-4 text-center">
+                <!-- Placeholder for Fig. 2. Image not provided. -->
+                <img src="placeholder-for-fig2.png" alt="نمودار شماتیک دستگاه روش حجمی" class="mx-auto" />
+                <figcaption class="text-sm text-gray-600 mt-2">
+                    شکل <span class="ltr-text">2</span>. نمودار شماتیک دستگاه روش حجمی.
+                </figcaption>
+            </figure>
+
+            <h5 class="text-base font-semibold text-gray-700 mt-2 mb-1">روش کار</h5>
+            <p class="mb-4">
+                مقدار کمی نیتروژن خشک به لوله نمونه وارد می‌شود تا از آلودگی سطح تمیز جلوگیری شود، لوله نمونه خارج شده،
+                درپوشی وارد می‌شود، لوله وزن می‌شود و وزن نمونه محاسبه می‌گردد. سپس لوله نمونه به دستگاه حجمی متصل می‌شود.
+                نمونه با احتیاط تا فشار مشخص شده (به عنوان مثال، بین <span class="ltr-text">2 Pa</span> و <span class="ltr-text">10 Pa</span>)
+                تخلیه می‌شود. به طور متناوب، برخی از دستگاه‌ها با تخلیه تا نرخ تغییر فشار تعریف شده (به عنوان مثال، کمتر از
+                <span class="ltr-text">13 Pa/30 s</span>) و نگه داشتن برای مدت زمان تعریف شده قبل از شروع مرحله بعدی کار می‌کنند.
+            </p>
+            <p class="mb-4">
+                اگر اصول عملکرد دستگاه نیازمند تعیین حجم مرده در لوله نمونه باشد، به عنوان مثال، با ورود یک گاز غیرجاذب،
+                مانند هلیوم، این روش در این مرحله انجام می‌شود و سپس نمونه تخلیه می‌گردد. تعیین حجم مرده ممکن است با استفاده
+                از اندازه‌گیری‌های تفاضلی اجتناب شود: یعنی با استفاده از لوله‌های مرجع و نمونه که توسط یک مبدل تفاضلی متصل
+                شده‌اند. سپس جذب گاز نیتروژن به شرح زیر اندازه‌گیری می‌شود.
+            </p>
+            <p class="mb-4">
+                یک ظرف دوار حاوی نیتروژن مایع در <span class="ltr-text">77.4 K</span> را تا نقطه مشخصی روی سلول نمونه بالا بیاورید.
+                حجم کافی از گاز جاذب را وارد کنید تا پایین‌ترین فشار نسبی مطلوب حاصل شود. حجم جذب شده، <span class="ltr-text">Va</span>،
+                را اندازه‌گیری کنید. برای اندازه‌گیری‌های چندنقطه‌ای، اندازه‌گیری <span class="ltr-text">Va</span> را در مقادیر بالاتر
+                <span class="ltr-text">P/Po</span> تکرار کنید. هنگامی که نیتروژن به عنوان گاز جاذب استفاده می‌شود، مقادیر
+                <span class="ltr-text">P/Po</span> از <span class="ltr-text">0.10</span>، <span class="ltr-text">0.20</span>، و
+                <span class="ltr-text">0.30</span> اغلب مناسب هستند.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مواد مرجع</h2>
+            <p class="mb-4">
+                عملکرد دستگاه را به صورت دوره‌ای با استفاده از مواد مرجع مناسب با سطح ویژه شناخته شده که سطح ویژه‌ای مشابه
+                نمونه مورد بررسی دارند، تأیید کنید.
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>

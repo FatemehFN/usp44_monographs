@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1227. اعتبارسنجی بازیابی میکروبی از مقالات فارماکوپه‌ای</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Vazirmatn -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax CDN for LaTeX rendering -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body class="p-4">
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">1227. اعتبارسنجی بازیابی میکروبی از مقالات فارماکوپه‌ای</h1>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+            <p class="mb-4">این فصل رهنمودهایی را برای اعتبارسنجی روش‌های بازیابی جهت تخمین تعداد میکروارگانیسم‌های زنده، شناسایی شاخص‌ها یا میکروارگانیسم‌های مشخص، و آزمایش استریلیته مقالات فارماکوپه‌ای ارائه می‌دهد. روش‌های آزمایش در <span class="ltr-text">Antimicrobial Effectiveness Testing</span> <a href="51.html" class="text-blue-600 hover:underline" target="_blank">51</a>، <span class="ltr-text">Sterility Tests</span> <a href="71.html" class="text-blue-600 hover:underline" target="_blank">71</a>، <span class="ltr-text">Microbial Enumeration Tests</span> <a href="61.html" class="text-blue-600 hover:underline" target="_blank">61</a>، و <span class="ltr-text">Tests for Specified Microorganisms</span> <a href="62.html" class="text-blue-600 hover:underline" target="_blank">62</a> معتبر تلقی می‌شوند. با این حال، استفاده از روش‌های رسمی نیاز به اثبات مناسب بودن روش برای نشان دادن بازیابی ارگانیسم‌های چالش‌برانگیز در حضور محصول دارد. جایگزین‌ها/اصلاحات این روش‌های بازیابی فراتر از آنچه در این فصل‌ها توضیح داده شده است (مانند رقیق‌سازی، خنثی‌سازی شیمیایی یا آنزیمی، و فیلتراسیون غشایی) نیاز به اعتبارسنجی دارند. به طور کلی مشخص است که اگر محصولی به دلیل وجود یک نگهدارنده خاص یا به دلیل فرمولاسیون خود دارای خواص ضدمیکروبی باشد، این خاصیت ضدمیکروبی باید خنثی شود تا میکروارگانیسم‌های زنده بازیابی شوند. این خنثی‌سازی ممکن است با استفاده از یک خنثی‌کننده خاص، با رقیق‌سازی، با ترکیبی از رقیق‌سازی، فیلتراسیون و شستشو، یا با هر ترکیبی از این روش‌ها انجام شود. هنگامی که محصول فعالیت ضدمیکروبی ذاتی برای یک میکروارگانیسم معین از خود نشان می‌دهد و با توجه به این فعالیت ضدمیکروبی، خطر آلودگی میکروبی پایین است، این روش می‌تواند برای ارائه یک دلیل قوی مناسب تلقی شود.</p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">عوامل تأثیرگذار</h2>
+            <p class="mb-4">عوامل متعددی بر اندازه‌گیری فعالیت ضدمیکروبی محلول آزمایشی تأثیر می‌گذارند و باید در طراحی اعتبارسنجی در نظر گرفته شوند. این عوامل شامل ماهیت میکروارگانیسم‌های مورد استفاده به عنوان ارگانیسم‌های چالش‌برانگیز، آماده‌سازی تلقیح ارگانیسم‌های چالش‌برانگیز، شرایط خاص آزمایش و شرایط بازیابی هستند. این عوامل همچنین بر اعتبارسنجی روش‌های بازیابی برای محصولات آبی یا غیرآبی، بدون توجه به خواص ضدمیکروبی آنها، تأثیر می‌گذارند؛ بنابراین، تمام روش‌های آزمایش باید با در نظر گرفتن این عوامل اعتبارسنجی شوند.</p>
+            <p class="mb-4">ماهیت میکروارگانیسم چالش‌برانگیز تأثیر شدیدی بر پاسخ به عامل ضدمیکروبی و در نتیجه بر خنثی‌سازی مورد نیاز برای بازیابی دارد. در بین این ارگانیسم‌ها در آزمایش‌های رسمی، باکتری‌های گرم مثبت، باکتری‌های گرم منفی، باکتری‌های بی‌هوازی، مخمرها و کپک‌ها وجود دارند. هر ارگانیسم مورد استفاده در آزمایش باید در اعتبارسنجی گنجانده شود.</p>
+            <p class="mb-4">آماده‌سازی تلقیح میکروارگانیسم‌های چالش‌برانگیز نیز بر آزمایش محصولاتی که دارای خواص ضدمیکروبی هستند تأثیر می‌گذارد. رشد و آماده‌سازی ارگانیسم چالش‌برانگیز وضعیت فیزیولوژیکی سلول را تعیین می‌کند. این وضعیت تأثیر مستقیمی بر نتایج هر آزمایش کارایی ضدمیکروبی دارد. آزمایش‌های میکروبی از سلول‌های منفرد استفاده نمی‌کنند؛ بلکه جمعیت‌های سلولی برای مطالعه جمع‌آوری می‌شوند. داده‌های تولید شده از این مطالعات اگر جمعیت‌های سلولی همگن باشند، کمتر متغیر هستند. کشت‌های مایع یا رشد‌های هم‌جوشی بر روی محیط جامد برای آماده‌سازی کشت با قابلیت تکثیر مجدد مناسب‌تر هستند. شرایط آماده‌سازی و نگهداری ارگانیسم باید برای ارزیابی خنثی‌کننده استاندارد شوند و باید منعکس‌کننده شرایط سنجش ضدمیکروبی باشند.</p>
+            <p class="mb-4">شرایط خاص آزمایش، از جمله بافرها، آب، شرایط نور و دما، باید در مطالعه اعتبارسنجی بازتولید شوند. تمام شرایط آزمایش نیز باید استاندارد شوند و دقیقاً همانند آزمایش در مطالعه اعتبارسنجی انجام شوند.</p>
+            <p class="mb-4">شرایط بازیابی میکروبی از حیاتی‌ترین عوامل در تخمین دقیق تعداد میکروارگانیسم‌های موجود در محلول آزمایشی هستند. اولین ملاحظه، محیط بازیابی است که برای حمایت از رشد بازماندگان استفاده می‌شود. این نگرانی در ادامه به تفصیل مورد بحث قرار می‌گیرد. ملاحظه دوم، شرایط انکوباسیون است. شرایط بهینه برای رشد باید وجود داشته باشد تا رشد کامل و نتایج قابل تکثیر مجدد تضمین شود.</p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">روش‌های خنثی‌سازی خواص ضدمیکروبی</h2>
+            <p class="mb-4">سه روش رایج برای خنثی‌سازی خواص ضدمیکروبی یک محصول استفاده می‌شود: <span class="ltr-text">1</span>) مهار شیمیایی، <span class="ltr-text">2</span>) رقیق‌سازی، و <span class="ltr-text">3</span>) فیلتراسیون و شستشو.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">خنثی‌سازی شیمیایی</h3>
+            <p class="mb-4">جدول <span class="ltr-text">1</span> خنثی‌کننده‌های شناخته شده برای انواع عوامل ضدمیکروبی شیمیایی و سمیت گزارش شده برخی از خنثی‌کننده‌های شیمیایی برای میکروارگانیسم‌های خاص را نشان می‌دهد. با این حال، با وجود سمیت احتمالی، راحتی و عمل سریع مهارکننده‌های شیمیایی استفاده از آنها را تشویق می‌کند. خنثی‌سازی شیمیایی عوامل ضدمیکروبی روش ترجیحی برای آزمایش کارایی ضدمیکروبی است. پتانسیل خنثی‌کننده‌های شیمیایی باید در فیلتراسیون غشایی و آزمایش‌های استریلیته تلقیح مستقیم در نظر گرفته شود. آنتی‌بیوتیک‌ها ممکن است به خنثی‌سازی شیمیایی حساس نباشند، بلکه با درمان آنزیمی (مانند پنی‌سیلیناز) خنثی شوند. این آنزیم‌ها در صورت لزوم می‌توانند استفاده شوند.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>خنثی‌کننده</th>
+                        <th>رده ضدمیکروبی</th>
+                        <th>عمل بالقوه عوامل ضدمیکروبی</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">Bisulfate</span></td>
+                        <td>گلوتارآلدئید، ترکیبات جیوه</td>
+                        <td>باکتری‌های غیرهاگ‌زا</td>
+                    </tr>
+                    <tr>
+                        <td>رقیق‌سازی</td>
+                        <td>فنول‌ها، الکل، آلدئیدها، سوربات</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Glycine</span></td>
+                        <td>آلدئیدها</td>
+                        <td>سلول‌های در حال رشد</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Lecithin</span></td>
+                        <td>ترکیبات آمونیوم چهارتایی (<span class="ltr-text">QACs</span>)، پارابن‌ها، بیس‌بیگوانیدها</td>
+                        <td>باکتری‌ها</td>
+                    </tr>
+                    <tr>
+                        <td>یون‌های <span class="ltr-text">Mg+2</span> یا <span class="ltr-text">Ca+2</span></td>
+                        <td><span class="ltr-text">EDTA</span></td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Polysorbate</span></td>
+                        <td><span class="ltr-text">QACs</span>، ید، پارابن‌ها</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Thioglycollate</span></td>
+                        <td>ترکیبات جیوه</td>
+                        <td>استافیلوکوک‌ها و هاگ‌ها</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Thiosulfate</span></td>
+                        <td>ترکیبات جیوه، هالوژن‌ها، آلدئیدها</td>
+                        <td>استافیلوکوک‌ها</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">رقیق‌سازی</h3>
+            <p class="mb-4">رویکرد دوم برای خنثی‌سازی خواص ضدمیکروبی یک محصول از طریق رقیق‌سازی است، زیرا غلظت یک عامل ضدمیکروبی شیمیایی تأثیر زیادی بر قدرت آن دارد. رابطه بین غلظت و اثر ضدمیکروبی در عوامل باکتری‌کش متفاوت است اما برای یک عامل ضدمیکروبی خاص ثابت است. این رابطه ماهیت نمایی دارد، با فرمول کلی:</p>
+            <div class="formula-display">
+                \[C^{\eta}t = k\]
+            </div>
+            <p class="mb-4">که در آن:</p>
+            <ul class="list-disc list-inside mb-4">
+                <li><span class="ltr-text">C</span> = غلظت عامل ضدمیکروبی</li>
+                <li><span class="ltr-text">η</span> = توان غلظت (ضریب رقیق‌سازی)، شیب نمودار <span class="ltr-text">log t</span> در برابر <span class="ltr-text">log C</span></li>
+                <li><span class="ltr-text">t</span> = زمان مورد نیاز برای از بین بردن یک تلقیح استاندارد</li>
+                <li><span class="ltr-text">k</span> = یک ثابت</li>
+            </ul>
+            <p class="mb-4">عوامل ضدمیکروبی با مقادیر بالای <span class="ltr-text">η</span> به سرعت با رقیق‌سازی خنثی می‌شوند، در حالی که آنهایی که مقادیر پایین <span class="ltr-text">η</span> دارند کاندیدای خوبی برای خنثی‌سازی با رقیق‌سازی نیستند (به جدول <span class="ltr-text">2</span> مراجعه کنید).</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>عامل ضدمیکروبی نماینده</th>
+                        <th>مقادیر <span class="ltr-text">η</span></th>
+                        <th>ضریب افزایش زمان (<span class="ltr-text">x</span>) برای کشتن میکروارگانیسم‌ها هنگامی که غلظت به:</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th>نصف</th>
+                        <th>یک‌سوم</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>فنول‌ها</td>
+                        <td><span class="ltr-text">6</span></td>
+                        <td><span class="ltr-text">64</span></td>
+                        <td><span class="ltr-text">729</span></td>
+                    </tr>
+                    <tr>
+                        <td>الکل</td>
+                        <td><span class="ltr-text">10</span></td>
+                        <td><span class="ltr-text">1024</span></td>
+                        <td><span class="ltr-text">59,000</span></td>
+                    </tr>
+                    <tr>
+                        <td>پارابن‌ها</td>
+                        <td><span class="ltr-text">2.5</span></td>
+                        <td><span class="ltr-text">6</span></td>
+                        <td><span class="ltr-text">16</span></td>
+                    </tr>
+                    <tr>
+                        <td>کلرهگزیدین</td>
+                        <td><span class="ltr-text">2</span></td>
+                        <td><span class="ltr-text">4</span></td>
+                        <td><span class="ltr-text">8</span></td>
+                    </tr>
+                    <tr>
+                        <td>ترکیبات جیوه</td>
+                        <td><span class="ltr-text">1</span></td>
+                        <td><span class="ltr-text">2</span></td>
+                        <td><span class="ltr-text">3</span></td>
+                    </tr>
+                    <tr>
+                        <td>ترکیبات آمونیوم چهارتایی</td>
+                        <td><span class="ltr-text">1</span></td>
+                        <td><span class="ltr-text">2</span></td>
+                        <td><span class="ltr-text">3</span></td>
+                    </tr>
+                    <tr>
+                        <td>فرمالدئید</td>
+                        <td><span class="ltr-text">1</span></td>
+                        <td><span class="ltr-text">2</span></td>
+                        <td><span class="ltr-text">3</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">فیلتراسیون غشایی</h3>
+            <p class="mb-4">رویکردی که اغلب مورد استفاده قرار می‌گیرد، به ویژه در آزمایش استریلیته، خنثی‌سازی با فیلتراسیون غشایی است. این رویکرد بر نگهداری فیزیکی میکروارگانیسم بر روی فیلتر غشایی متکی است، در حالی که عامل ضدمیکروبی از فیلتر عبور کرده و وارد فیلترات می‌شود. سپس فیلتر برای بازیابی میکروارگانیسم‌های زنده انکوبه می‌شود. با این حال، فیلتراسیون به تنهایی ممکن است مقادیر کافی از عامل ضدمیکروبی را حذف نکند تا امکان رشد میکروارگانیسم‌های بازمانده فراهم شود. چسبیدن عوامل ضدمیکروبی باقیمانده به غشای فیلتر ممکن است باعث مهار رشد شود. فیلتراسیون از طریق یک ماده فیلتر با اتصال کم، مانند دی‌فلوئورید پلی‌وینیلیدن، به حداقل رساندن این مهار رشد کمک می‌کند. علاوه بر این، نگهدارنده ممکن است با شستشو با یک مایع غیرسمی، مانند مایع رقیق‌کننده <span class="ltr-text">A</span> (برای ترکیبات مایع رقیق‌کننده، به <span class="ltr-text">Sterility Tests</span> <a href="71.html" class="text-blue-600 hover:underline" target="_blank">71</a>، <span class="ltr-text">Diluting and Rinsing Fluids for Membrane Filtration</span> مراجعه کنید)، رقیق یا از فیلتر شسته شود. خنثی‌کننده‌های شیمیایی در مایع شستشو می‌توانند اطمینان حاصل کنند که هر گونه باقیمانده ضدمیکروبی روی غشاء با بازیابی میکروارگانیسم‌های زنده تداخل نداشته باشد.</p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">اعتبارسنجی روش‌های خنثی‌سازی—مقایسه بازیابی</h2>
+            <p class="mb-4">یک روش معتبر برای خنثی‌سازی خواص ضدمیکروبی یک محصول باید دو معیار را برآورده کند: کارایی خنثی‌کننده و عدم سمیت خنثی‌کننده. مطالعه اعتبارسنجی مستند می‌کند که روش خنثی‌سازی به کار گرفته شده در مهار خواص ضدمیکروبی محصول (کارایی خنثی‌کننده) بدون آسیب رساندن به بازیابی میکروارگانیسم‌های زنده (عدم سمیت خنثی‌کننده) مؤثر است. پروتکل‌های اعتبارسنجی ممکن است این دو معیار را با مقایسه نتایج بازیابی برای گروه‌های درمانی برآورده کنند.</p>
+            <p class="mb-4">اولین گروه، گروه آزمایش است که در آن محصول تحت روش خنثی‌سازی قرار می‌گیرد، سپس سطح پایینی از میکروارگانیسم چالش‌برانگیز (کمتر از <span class="ltr-text">100</span> واحد تشکیل‌دهنده کلنی (<span class="ltr-text">cfu</span>)) برای بازیابی تلقیح می‌شود. دومین گروه، گروه کنترل پپتون است که در آن روش خنثی‌سازی با پپتون یا مایع رقیق‌کننده <span class="ltr-text">A</span> (به <span class="ltr-text">Sterility Tests</span> <a href="71.html" class="text-blue-600 hover:underline" target="_blank">71</a>، <span class="ltr-text">Diluting and Rinsing Fluids for Membrane Filtration</span> مراجعه کنید) به عنوان محلول آزمایشی استفاده می‌شود. سومین گروه، گروه قابلیت زیست است که در آن از تلقیح واقعی بدون قرار گرفتن در معرض طرح خنثی‌سازی استفاده می‌شود. بازیابی مشابه بین گروه آزمایش و گروه پپتون، کارایی کافی خنثی‌کننده را نشان می‌دهد؛ بازیابی مشابه بین گروه پپتون و گروه قابلیت زیست، عدم سمیت کافی خنثی‌کننده را نشان می‌دهد.</p>
+            <p class="mb-4">اصولاً، پروتکل باید نشان دهد که بازیابی یک تلقیح پایین (کمتر از <span class="ltr-text">100</span> <span class="ltr-text">cfu</span>) توسط نمونه آزمایش و روش خنثی‌سازی مهار نمی‌شود. پروتکل‌های اعتبارسنجی ممکن است این دو معیار را با مقایسه بازیابی بین سه گروه آزمایشی متمایز برآورده کنند: <span class="ltr-text">1</span>) محصول خنثی شده با تلقیح، <span class="ltr-text">2</span>) کنترل تلقیح چالش‌برانگیز در محلول بافر، و <span class="ltr-text">3</span>) تلقیح در غیاب محصول یا خنثی‌کننده. این می‌تواند با مقایسه مستقیم نتیجه در محلول تیمار شده (<span class="ltr-text">1</span>) با تلقیح (<span class="ltr-text">3</span>) بالا برقرار شود. اگر رشد در محلول تیمار شده با رشد در گروه تلقیح قابل مقایسه نباشد، باید مشخص شود که آیا خود روش خنثی‌سازی برای میکروارگانیسم‌ها سمی است یا خیر.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">بازیابی روی محیط آگار</h3>
+            <p class="mb-4">در آزمایش‌های تحت <a href="51.html" class="text-blue-600 hover:underline" target="_blank">51</a> و <a href="61.html" class="text-blue-600 hover:underline" target="_blank">61</a>، تعداد میکروارگانیسم‌های زنده چالش‌برانگیز در محصول با محاسبه غلظت <span class="ltr-text">cfu</span> در میلی‌لیتر توسط روش شمارش صفحه تخمین زده می‌شود. یک طراحی برای اعتبارسنجی خنثی‌سازی، گروه‌های درمانی را که در بخش اعتبارسنجی روش‌های خنثی‌سازی—مقایسه بازیابی توضیح داده شده‌اند، در خود جای می‌دهد. حداقل سه تکرار مستقل از آزمایش باید انجام شود و هر یک باید میانگین شمارش هر یک از ارگانیسم‌های آزمایشی را نشان دهد که با فاکتوری بزرگتر از <span class="ltr-text">2</span>، یعنی <span class="ltr-text">50%–200%</span> بازیابی، از مقدار کنترل بدون محصول متفاوت نباشد. اگر لازم باشد نمونه آزمایش حل شود، اثرات روش حل کردن بر میکروارگانیسم‌های زنده باید تعیین شود. این وضعیت ممکن است هنگام آزمایش پمادها، سوسپانسیون‌ها یا سایر مقالات رخ دهد.</p>
+            <p class="mb-4">اگر تعداد بیشتری تکرار در مطالعه اعتبارسنجی مورد نیاز باشد، مقایسه‌ها را می‌توان با تبدیل اعداد <span class="ltr-text">cfu</span> به مقادیر لگاریتمی آنها و تجزیه و تحلیل آماری داده‌ها با آزمون <span class="ltr-text">t Student</span> (مقایسه‌های زوجی) یا با تحلیل واریانس (<span class="ltr-text">ANOVA</span>) (برای مقایسه همه گروه‌ها) ارزیابی کرد. اگر <span class="ltr-text">ANOVA</span> استفاده شود و تفاوت‌های معنی‌داری بین جمعیت‌ها تعیین شود، می‌توان از آزمونی مانند آزمون <span class="ltr-text">Dunnett’s</span> استفاده کرد، با استفاده از گروه پپتون به عنوان گروه کنترل.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">بازیابی توسط فیلتراسیون غشایی</h3>
+            <p class="mb-4">این اعتبارسنجی از روش توضیح داده شده در <span class="ltr-text">Sterility Tests</span> <a href="71.html" class="text-blue-600 hover:underline" target="_blank">71</a>، <span class="ltr-text">Method Suitability Test</span> پیروی می‌کند، به استثنای کشت روی محیط جامد برای کمی‌سازی بازیابی. باید تأکید شود که برای نشان دادن مناسب بودن آزمایش استریلیته، بازیابی کمی مورد نیاز نیست. فقط یک ارزیابی کیفی (کدورت بصری) لازم است. سه شستشوی <span class="ltr-text">100-mL</span> فرض می‌شود، اما حجم و تعداد شستشوها مشمول اعتبارسنجی است. حداکثر پنج شستشوی <span class="ltr-text">100-mL</span> باید برای آزمایش‌های روتین استفاده شود حتی اگر در طول مناسب بودن روش نشان داده شده باشد که چنین چرخه‌ای فعالیت ضدمیکروبی را به طور کامل از بین نمی‌برد. هر مرحله اعتبارسنجی باید حداقل سه بار به طور مستقل انجام شود.</p>
+            <p class="mb-4">در گروه محلول آزمایشی، محصول از فیلتر غشایی عبور داده می‌شود، سپس دو بخش <span class="ltr-text">100-mL</span> از مایع رقیق‌کننده-خنثی‌کننده. پس از فیلتر شدن شستشوی دوم، یک بخش نهایی <span class="ltr-text">100-mL</span> حاوی کمتر از <span class="ltr-text">100</span> <span class="ltr-text">cfu</span> از میکروارگانیسم چالش‌برانگیز خاص از فیلتر عبور داده می‌شود. سپس این فیلتر روی محیط بازیابی آگار مناسب قرار داده شده و برای بازیابی انکوبه می‌شود.</p>
+            <p class="mb-4">تلقیح مستقیماً روی محیط جامد کشت داده می‌شود. این امکان وجود دارد که فیلتراسیون منجر به کاهش بازیابی میکروارگانیسم چالش‌برانگیز شود، یا از طریق سمیت ذاتی غشاء یا از طریق چسبیدن میکروارگانیسم به دیواره‌های ظرف فیلتراسیون. یک گروه کنترل می‌تواند برای ارزیابی این جزء از اعتبارسنجی فیلتراسیون غشایی استفاده شود. مایع رقیق‌کننده <span class="ltr-text">A</span> به عنوان محیط رقیق‌سازی بدون قرار دادن فیلتر در معرض محصول استفاده می‌شود. پس از افزودن تلقیح سطح پایین به شستشوی نهایی، فیلتر مانند بالا کشت داده می‌شود. از دست دادن میکروارگانیسم‌ها مختص تکنیک را می‌توان با مقایسه بازیابی در گروه مایع رقیق‌کننده <span class="ltr-text">A</span> (به <span class="ltr-text">Sterility Tests</span> <a href="71.html" class="text-blue-600 hover:underline" target="_blank">71</a>، <span class="ltr-text">Diluting and Rinsing Fluids for Membrane Filtration</span> مراجعه کنید) با شمارش تلقیح تخمین زد.</p>
+            <p class="mb-4">در این بحث فرض بر این است که نمونه آزمایش می‌تواند فیلتر شود. اگر لازم باشد نمونه آزمایش حل شود، اثرات روش حل کردن بر میکروارگانیسم‌های زنده باید تعیین شود. این وضعیت ممکن است هنگام آزمایش پمادها، سوسپانسیون‌ها یا سایر مقالات رخ دهد.</p>
+            <p class="mb-4">اگر میزان بازیابی در سه تکرار مستقل برای محلول آزمایش و کنترل مایع رقیق‌کننده <span class="ltr-text">A</span> (به <span class="ltr-text">Sterility Tests</span> <a href="71.html" class="text-blue-600 hover:underline" target="_blank">71</a>، <span class="ltr-text">Diluting and Rinsing Fluids for Membrane Filtration</span> مراجعه کنید) مشابه باشد، روش می‌تواند معتبر تلقی شود.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">بازیابی در محیط مایع</h3>
+            <p class="mb-4">در <span class="ltr-text">Sterility Tests</span> <a href="71.html" class="text-blue-600 hover:underline" target="_blank">71</a>، <span class="ltr-text">Test for Sterility of the Product to be Examined</span>، <span class="ltr-text">Direct Inoculation of the Culture Medium</span> فرض بر این است که محیط بازیابی امکان رشد همه میکروارگانیسم‌های بازمانده را فراهم می‌کند. محیط کشت در آن آزمایش باید هم برای خنثی‌سازی خواص ضدمیکروبی محلول آزمایش و هم برای حمایت از رشد میکروارگانیسم‌ها عمل کند. گروه‌های درمانی توضیح داده شده در بخش اعتبارسنجی روش‌های خنثی‌سازی—مقایسه بازیابی را می‌توان برای اعتبارسنجی روش بازیابی استفاده کرد، با نسبت‌های محصول و محیط بازیابی که برای دستیابی به خنثی‌سازی کافی تغییر داده می‌شوند. روش را می‌توان معتبر تلقی کرد اگر همه گروه‌ها رشد کاملاً قابل مشاهده و قابل مقایسه با آنچه در ظرف کنترل بدون محصول در دوره زمانی مشخص شده در <a href="71.html" class="text-blue-600 hover:underline" target="_blank">71</a> بود را نشان دهند.</p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">بازیابی میکروارگانیسم‌های آسیب‌دیده</h2>
+            <p class="mb-4">مطالعات اعتبارسنجی توضیح داده شده در بالا از میکروارگانیسم‌های چالش‌برانگیز استفاده می‌کنند که هرگز در معرض عوامل ضدمیکروبی قرار نگرفته‌اند و بنابراین با ارگانیسم‌هایی که در آزمایش کارایی ضدمیکروبی یا هنگام انجام آزمایش استریلیته بر روی یک محصول نگهدارنده مشاهده می‌شوند، یکسان نیستند. اگر استفاده از محیط‌های جایگزین مورد نظر باشد، بازیابی میکروارگانیسم‌های آسیب‌دیده باید در مطالعه اعتبارسنجی مورد توجه قرار گیرد. این کار را می‌توان با مقایسه مستقیم بازیابی هر میکروارگانیسم چالش‌برانگیز روی محیط ترجیحی و روی محیط جایگزین، پس از قرار گرفتن در معرض محصول انجام داد. این قرار گرفتن در معرض باید شامل حداقل دو دوره زمانی باشد که بقای کمتر از <span class="ltr-text">100</span> <span class="ltr-text">cfu/mL</span> را نشان می‌دهد، مگر اینکه نرخ کشت عامل ضدمیکروبی به گونه‌ای باشد که حتی اگر میکروارگانیسم در عرض چند دقیقه پس از قرار گرفتن در معرض کشت شود، بازیابی امکان‌پذیر نباشد. این مقایسه باید حداقل سه بار انجام شود. محیط جایگزین معتبر است اگر بازیابی مشاهده شده در آن محیط کمتر از آنچه در محیط ترجیحی مشاهده شده است، در حدود خطای <span class="ltr-text">0.5</span> واحد لگاریتم نباشد.</p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تخمین تعداد واحدهای تشکیل‌دهنده کلنی</h2>
+            <p class="mb-4">دقت هر تخمینی از <span class="ltr-text">cfu</span> زنده تحت تأثیر تعداد کشت داده شده قرار می‌گیرد. با افزایش تعداد سلول‌های زنده کشت داده شده، اثرات ازدحام دقت شمارش را کاهش می‌دهد و تخمین را پایین می‌آورد. با کاهش تعداد، خطای تصادفی نقش فزاینده‌ای در تخمین ایفا می‌کند.</p>
+            <p class="mb-4">محدوده قابل قبول برای کلنی‌های قابل شمارش روی یک صفحه آگار استاندارد بین <span class="ltr-text">25</span> و <span class="ltr-text">250</span> برای اکثر باکتری‌ها و <span class="ltr-text">Candida albicans</span> است. این محدوده در صنعت غذا برای شمارش باکتری‌های کلیفرم در شیر تعیین شده است. این محدوده برای ارگانیسم‌های رسمی، به جز قارچ‌ها، قابل قبول است. برای شمارش همه ایزوله‌های محیطی بهینه نیست. محدوده شمارش توصیه شده برای <span class="ltr-text">Aspergillus brasiliensis</span> بین <span class="ltr-text">8</span> و <span class="ltr-text">80</span> <span class="ltr-text">cfu/plate</span> است.</p>
+            <p class="mb-4">آستانه‌های شمارش پایین‌تر برای رقیق‌سازی‌های بیشتر در سری باید توجیه شوند. تعداد کلنی‌ها روی یک صفحه از توزیع پواسون پیروی می‌کند، بنابراین واریانس میانگین برابر با میانگین شمارش‌ها است. بنابراین، با کاهش میانگین تعداد <span class="ltr-text">cfu</span> در هر صفحه، درصد خطای تخمین افزایش می‌یابد (به جدول <span class="ltr-text">3</span> مراجعه کنید). برای مثال، <span class="ltr-text">3</span> <span class="ltr-text">cfu/plate</span> در رقت <span class="ltr-text">10–1</span> تخمینی برابر با <span class="ltr-text">30</span> <span class="ltr-text">cfu/mL</span>، با خطای <span class="ltr-text">58%</span> از تخمین را ارائه می‌دهد.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th><span class="ltr-text">cfu/Plate</span></th>
+                        <th>خطای استاندارد</th>
+                        <th>خطا به صورت درصد از میانگین</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="ltr-text">30</span></td><td><span class="ltr-text">5.48</span></td><td><span class="ltr-text">18.3</span></td></tr>
+                    <tr><td><span class="ltr-text">29</span></td><td><span class="ltr-text">5.39</span></td><td><span class="ltr-text">18.6</span></td></tr>
+                    <tr><td><span class="ltr-text">28</span></td><td><span class="ltr-text">5.29</span></td><td><span class="ltr-text">18.9</span></td></tr>
+                    <tr><td><span class="ltr-text">27</span></td><td><span class="ltr-text">5.20</span></td><td><span class="ltr-text">19.2</span></td></tr>
+                    <tr><td><span class="ltr-text">26</span></td><td><span class="ltr-text">5.10</span></td><td><span class="ltr-text">19.6</span></td></tr>
+                    <tr><td><span class="ltr-text">25</span></td><td><span class="ltr-text">5.00</span></td><td><span class="ltr-text">20.0</span></td></tr>
+                    <tr><td><span class="ltr-text">24</span></td><td><span class="ltr-text">4.90</span></td><td><span class="ltr-text">20.4</span></td></tr>
+                    <tr><td><span class="ltr-text">23</span></td><td><span class="ltr-text">4.80</span></td><td><span class="ltr-text">20.9</span></td></tr>
+                    <tr><td><span class="ltr-text">22</span></td><td><span class="ltr-text">4.69</span></td><td><span class="ltr-text">21.3</span></td></tr>
+                    <tr><td><span class="ltr-text">21</span></td><td><span class="ltr-text">4.58</span></td><td><span class="ltr-text">21.8</span></td></tr>
+                    <tr><td><span class="ltr-text">20</span></td><td><span class="ltr-text">4.47</span></td><td><span class="ltr-text">22.4</span></td></tr>
+                    <tr><td><span class="ltr-text">19</span></td><td><span class="ltr-text">4.36</span></td><td><span class="ltr-text">22.9</span></td></tr>
+                    <tr><td><span class="ltr-text">18</span></td><td><span class="ltr-text">4.24</span></td><td><span class="ltr-text">23.6</span></td></tr>
+                    <tr><td><span class="ltr-text">17</span></td><td><span class="ltr-text">4.12</span></td><td><span class="ltr-text">24.3</span></td></tr>
+                    <tr><td><span class="ltr-text">16</span></td><td><span class="ltr-text">4.00</span></td><td><span class="ltr-text">25.0</span></td></tr>
+                    <tr><td><span class="ltr-text">15</span></td><td><span class="ltr-text">3.87</span></td><td><span class="ltr-text">25.8</span></td></tr>
+                    <tr><td><span class="ltr-text">14</span></td><td><span class="ltr-text">3.74</span></td><td><span class="ltr-text">26.7</span></td></tr>
+                    <tr><td><span class="ltr-text">13</span></td><td><span class="ltr-text">3.61</span></td><td><span class="ltr-text">27.7</span></td></tr>
+                    <tr><td><span class="ltr-text">12</span></td><td><span class="ltr-text">3.46</span></td><td><span class="ltr-text">28.9</span></td></tr>
+                    <tr><td><span class="ltr-text">11</span></td><td><span class="ltr-text">3.32</span></td><td><span class="ltr-text">30.2</span></td></tr>
+                    <tr><td><span class="ltr-text">10</span></td><td><span class="ltr-text">3.16</span></td><td><span class="ltr-text">31.6</span></td></tr>
+                    <tr><td><span class="ltr-text">9</span></td><td><span class="ltr-text">3.00</span></td><td><span class="ltr-text">33.3</span></td></tr>
+                    <tr><td><span class="ltr-text">8</span></td><td><span class="ltr-text">2.83</span></td><td><span class="ltr-text">35.4</span></td></tr>
+                    <tr><td><span class="ltr-text">7</span></td><td><span class="ltr-text">2.65</span></td><td><span class="ltr-text">37.8</span></td></tr>
+                    <tr><td><span class="ltr-text">6</span></td><td><span class="ltr-text">2.45</span></td><td><span class="ltr-text">40.8</span></td></tr>
+                    <tr><td><span class="ltr-text">5</span></td><td><span class="ltr-text">2.24</span></td><td><span class="ltr-text">44.7</span></td></tr>
+                    <tr><td><span class="ltr-text">4</span></td><td><span class="ltr-text">2.00</span></td><td><span class="ltr-text">50.0</span></td></tr>
+                    <tr><td><span class="ltr-text">3</span></td><td><span class="ltr-text">1.73</span></td><td><span class="ltr-text">57.7</span></td></tr>
+                    <tr><td><span class="ltr-text">2</span></td><td><span class="ltr-text">1.41</span></td><td><span class="ltr-text">70.7</span></td></tr>
+                    <tr><td><span class="ltr-text">1</span></td><td><span class="ltr-text">1.00</span></td><td><span class="ltr-text">100.0</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</body>
+</html>

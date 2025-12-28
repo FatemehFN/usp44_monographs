@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>871. نخ‌های جراحی - اتصال سوزن</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <div class="card">
+            <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">871. نخ‌های جراحی - اتصال سوزن</h1>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تغییر برای خواندن:</h2>
+            <p class="mb-4">نخ‌های جراحی قابل جذب ▲▲ (USP 1-Dec-2019) و غیرقابل جذب با اتصال استاندارد سوزن به گونه‌ای هستند که سوزن‌ها محکم متصل شده و نباید جدا شوند. نخ‌های عرضه شده با سوزن‌های بدون چشم متصل، یا به دسته اتصال استاندارد سوزن یا دسته اتصال قابل جدا شدن سوزن تعلق دارند. اتصال قابل جدا شدن سوزن برای هر دو نوع نخ جراحی قابل جذب و غیرقابل جذب به گونه‌ای است که سوزن را می‌توان با یک کشش سریع عمداً از نخ جدا کرد. هر دو نوع اتصال با تجهیزات مشخص شده در آزمون مقاومت کششی á881ñ آزمایش می‌شوند.</p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تغییر برای خواندن:</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش اجرایی</h4>
+            <p class="mb-4">هر یک از 5 نخ جراحی را در دستگاه آزمون کششی ▲tensile testing device▲ (USP 1-Dec-2019) گیره کنید به طوری که سوزن در گیره ثابت قرار گیرد و تمام قسمت سُوهان شده در راستای نیروی اعمال شده به نخ توسط گیره متحرک قرار گیرد. نیروی لازم برای جدا کردن نخ از سوزن را تعیین کنید. در مورد اتصال استاندارد سوزن، ممکن است نخ بدون جدا شدن سوزن پاره شود.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">اتصال استاندارد سوزن</h3>
+            <p class="mb-4">اگر میانگین 5 مقدار و هیچ مقدار منفردی کمتر از ▲حدود▲ (USP 1-Dec-2019) تعیین شده برای اندازه مشخص شده در جدول 1 نباشد، الزامات رعایت شده است.</p>
+
+            <div class="overflow-x-auto">
+                <table class="my-4">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">اندازه متریک (شماره گیج)</th>
+                            <th colspan="4">حدود در اتصال سوزن</th>
+                        </tr>
+                        <tr>
+                            <th>قابل جذب</th>
+                            <th>کلاژن</th>
+                            <th>غیر قابل جذب و قابل جذب مصنوعی</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>—</td>
+                            <td>0.1</td>
+                            <td class="ltr-text">11-0 ▲and smaller▲</td>
+                            <td>0.007</td>
+                            <td>0.005</td>
+                            <td>0.069</td>
+                            <td>0.049</td>
+                        </tr>
+                        <tr>
+                            <td>—</td>
+                            <td>0.2</td>
+                            <td class="ltr-text">10-0</td>
+                            <td>0.014</td>
+                            <td>0.010</td>
+                            <td>0.137</td>
+                            <td>0.098</td>
+                        </tr>
+                        <tr>
+                            <td>0.4</td>
+                            <td>0.3</td>
+                            <td class="ltr-text">9-0</td>
+                            <td>0.021</td>
+                            <td>0.015</td>
+                            <td>0.206</td>
+                            <td>0.147</td>
+                        </tr>
+                        <tr>
+                            <td>0.5</td>
+                            <td>0.4</td>
+                            <td class="ltr-text">8-0</td>
+                            <td>0.050</td>
+                            <td>0.025</td>
+                            <td>0.490</td>
+                            <td>0.245</td>
+                        </tr>
+                        <tr>
+                            <td>0.7</td>
+                            <td>0.5</td>
+                            <td class="ltr-text">7-0</td>
+                            <td>0.080</td>
+                            <td>0.040</td>
+                            <td class="ltr-text">▲0.785▲</td>
+                            <td>0.392</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0.7</td>
+                            <td class="ltr-text">6-0</td>
+                            <td>0.17</td>
+                            <td>0.08</td>
+                            <td>1.67</td>
+                            <td>0.784</td>
+                        </tr>
+                        <tr>
+                            <td>1.5</td>
+                            <td>1</td>
+                            <td class="ltr-text">5-0</td>
+                            <td>0.23</td>
+                            <td>0.11</td>
+                            <td class="ltr-text">▲2.26▲</td>
+                            <td>1.08</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>1.5</td>
+                            <td class="ltr-text">4-0</td>
+                            <td>0.45</td>
+                            <td>0.23</td>
+                            <td>4.41</td>
+                            <td class="ltr-text">▲2.26▲</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>2</td>
+                            <td class="ltr-text">3-0</td>
+                            <td>0.68</td>
+                            <td>0.34</td>
+                            <td>6.67</td>
+                            <td>3.33</td>
+                        </tr>
+                        <tr>
+                            <td>3.5</td>
+                            <td>3</td>
+                            <td class="ltr-text">2-0</td>
+                            <td>1.10</td>
+                            <td>0.45</td>
+                            <td>10.8</td>
+                            <td>4.41</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>3.5</td>
+                            <td class="ltr-text">0</td>
+                            <td>1.50</td>
+                            <td>0.45</td>
+                            <td>14.7</td>
+                            <td>4.41</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>4</td>
+                            <td class="ltr-text">1</td>
+                            <td>1.80</td>
+                            <td>0.60</td>
+                            <td class="ltr-text">▲17.7▲</td>
+                            <td>5.88</td>
+                        </tr>
+                        <tr>
+                            <td>6 and larger</td>
+                            <td>5 and larger</td>
+                            <td class="ltr-text">2 and larger</td>
+                            <td>1.80</td>
+                            <td>0.70</td>
+                            <td class="ltr-text">▲17.7▲</td>
+                            <td>6.86</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">اتصال قابل جدا شدن سوزن</h3>
+            <p class="mb-4">▲For USP sizes 5-0 through 2-0,▲ (USP 1-Dec-2019) الزامات رعایت شده است اگر مقادیر منفرد 5 نخ برابر با ▲NLT 0.028 kgf (0.275 N) و NMT 1.59 kgf (15.6 N)▲ (USP 1-Dec-2019) باشند.</p>
+
+            <p class="mt-4">
+                [توجه — برای هر یک از انواع اتصال، اگر NMT یکی از مقادیر منفرد خارج از حدود تعیین شده باشد، آزمون را روی 10 نخ اضافی تکرار کنید. الزامات آزمون در صورتی رعایت می‌شود که هیچ یک از 10 مقدار اضافی خارج از الزامات حد منفرد نباشد.]
+            </p>
+
+            <p class="text-sm text-gray-500 mt-8">
+                ▲▲ (USP 1-Dec-2019)
+                <a href="854.html" class="text-blue-600 hover:underline" target="_blank">1</a>
+                چاپ شده در: Tue Aug 10 2021, 06:36:02 PM (EST)
+                وضعیت رسمی: در حال حاضر رسمی در 10-Aug-2021
+                DocId: 1_GUID-7FD9987C-F83E-4997-BB04-0B4D4A3FE179_3_en-US
+                چاپ شده توسط: Le Tran
+                تاریخ رسمی: رسمی از 01-Dec-2019
+                نوع سند: فصل عمومی
+                @2021 USPC
+                https://online.uspnf.com/uspnf/document/1_GUID-7FD9987C-F83E-4997-BB04-0B4D4A3FE179_3_en-US
+                1/1
+                رسمی
+            </p>
+        </div>
+    </div>
+</body>
+</html>

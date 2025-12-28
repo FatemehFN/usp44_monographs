@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1025. پانکرئاتین - مونوگراف USP</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vazirmatn Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax CDN for LaTeX rendering -->
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">1025. پانکرئاتین</h1>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">خلاصه</h2>
+            <ul class="list-disc pr-5 leading-relaxed">
+                <li><span class="ltr-text">1.</span> مقدمه</li>
+                <li><span class="ltr-text">2.</span> جمع‌آوری پانکراس و تولید پانکرئاتین</li>
+                <li><span class="ltr-text">3.</span> کنترل کیفیت</li>
+                <li><span class="ltr-text">4.</span> برچسب‌گذاری</li>
+                <li><span class="ltr-text">5.</span> گواهینامه و مستندات</li>
+                <li><span class="ltr-text">6.</span> آزمایش و کنترل عوامل عفونی عرضی
+                    <ul class="list-disc pr-5 mt-1">
+                        <li><span class="ltr-text">6.1</span> نمای کلی</li>
+                        <li><span class="ltr-text">6.2</span> استراتژی‌های ارزیابی ریسک</li>
+                        <li><span class="ltr-text">6.3</span> شناسایی پانل ویروسی آزمایشی مرتبط</li>
+                        <li><span class="ltr-text">6.4</span> حذف ویروس توسط مراحل فرآیند تولید</li>
+                        <li><span class="ltr-text">6.5</span> آزمایش ویروسی</li>
+                    </ul>
+                </li>
+                <li><span class="ltr-text">7.</span> خصوصیات پانکرئاتین
+                    <ul class="list-disc pr-5 mt-1">
+                        <li><span class="ltr-text">7.1</span> توضیحات و خواص فیزیکوشیمیایی</li>
+                        <li><span class="ltr-text">7.2</span> محتویات پروتئین و آنزیم
+                            <ul class="list-disc pr-5 mt-1">
+                                <li><span class="ltr-text">7.2.1</span> پروتئازهای پانکراس</li>
+                                <li><span class="ltr-text">7.2.2</span> لیپاز و کولیپاز پانکراس</li>
+                                <li><span class="ltr-text">7.2.3</span> فسفولیپاز <span class="ltr-text">A2</span> پانکراس</li>
+                                <li><span class="ltr-text">7.2.4</span> آمیلاز پانکراس</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><span class="ltr-text">8.</span> اندازه‌گیری فعالیت آنزیم
+                    <ul class="list-disc pr-5 mt-1">
+                        <li><span class="ltr-text">8.1</span> فعالیت لیپاز</li>
+                        <li><span class="ltr-text">8.2</span> فعالیت پروتئاز</li>
+                        <li><span class="ltr-text">8.3</span> فعالیت آمیلاز</li>
+                    </ul>
+                </li>
+                <li><span class="ltr-text">9.</span> پیوست <span class="ltr-text">1</span>: کتاب‌شناسی مقرراتی</li>
+                <li><span class="ltr-text">10.</span> پیوست <span class="ltr-text">2</span>: کتاب‌شناسی ادبیات</li>
+            </ul>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4"><span class="ltr-text">1.</span> مقدمه</h2>
+            <p class="mb-3 leading-relaxed">
+                پانکرئاتین یک فرآورده آنزیمی پانکراس است که حاوی آنزیم‌های آمیلاز، پروتئاز و لیپاز است که از غده پانکراس خوک، <span class="ltr-text">Sus scrofa L. var. domesticus Gray (Fam. Suidae)</span> جدا می‌شود. پانکراس یک ارگان ترشحی است که نقش حیاتی در فرآیند گوارش ایفا می‌کند، با تولید بی‌کربنات برای خنثی کردن محیط اسیدی در دوازدهه، هورمون‌ها برای تنظیم عملکردهای کاتابولیک مختلف، و انواع آنزیم‌های گوارشی برای تجزیه غذا در روده کوچک. پانکرئاتین و محصولات دارویی حاوی پانکرئاتین برای کمک به گوارش و جذب غذا (کربوهیدرات‌ها، چربی و پروتئین‌ها) در بیماران مبتلا به نارسایی پانکراس اگزوکرین (<span class="ltr-text">EPI</span>) ناشی از فیبروز کیستیک، پانکراتیت مزمن و سایر شرایطی که ممکن است باعث کمبود در ترشح آنزیم‌های پانکراس شوند، استفاده می‌شوند.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                محصولات آنزیم پانکراس (<span class="ltr-text">PEPs</span>) با منشأ خوک قبل از تصویب قانون فدرال غذا، دارو و آرایشی بهداشتی در سال <span class="ltr-text">1938</span> در ایالات متحده برای درمان <span class="ltr-text">EPI</span> به بازار عرضه شده‌اند. آنزیم‌های پانکراس مکمل به صورت نسخه‌ای و بدون نسخه در دسترس هستند. از سال <span class="ltr-text">2004</span>، سازمان غذا و داروی ایالات متحده (<span class="ltr-text">FDA</span>) الزامی کرده است که تمام محصولات دارویی آنزیم پانکراس که در ایالات متحده به بازار عرضه می‌شوند، از طریق درخواست داروی جدید (<span class="ltr-text">NDA</span>) تأییدیه <span class="ltr-text">FDA</span> را دریافت کنند. اگرچه محصولات آنزیم پانکراس بدون نسخه در دسترس هستند، اما آنها به عنوان مکمل‌های غذایی و نه داروها طبقه‌بندی می‌شوند. پانکرئاتین و پانکرلیپاز عملکردهای و کاربردهای مشابهی دارند؛ با این حال، پانکرلیپاز، که فقط به عنوان یک داروی نسخه‌ای در دسترس است، حاوی آنزیم لیپاز فعال بیشتر و همچنین عصاره پانکراس خالص‌شده بیشتری نسبت به پانکرئاتین است.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                این فصل بهترین روش‌های مربوط به منبع‌یابی و تولید مواد اولیه پانکرئاتین مورد استفاده در محصولات دارویی پانکرئاتین و پانکرلیپاز را توصیف می‌کند؛ این بهترین روش‌ها به تضمین ایمنی و اثربخشی محصولات دارویی ساخته شده از این ماده فعال دارویی (<span class="ltr-text">API</span>) کمک می‌کنند. لیستی از اسناد راهنمای نظارتی قابل اجرا در پیوست <span class="ltr-text">1</span>: کتاب‌شناسی مقرراتی ارائه شده است.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4"><span class="ltr-text">2.</span> جمع‌آوری پانکراس و تولید پانکرئاتین</h2>
+            <p class="mb-3 leading-relaxed">
+                ماده اولیه با منشأ حیوانی (غدد پانکراس) که برای فرآوری دارویی در نظر گرفته شده است، یک محصول جانبی تولید گوشت است و در کشتارگاه‌هایی جمع‌آوری می‌شود که توسط مرجع صلاحیت‌دار ملی تأیید شده و توسط مرجع دامپزشکی مربوطه بازرسی می‌شوند. حیواناتی که پانکرئاتین از آنها گرفته می‌شود باید الزامات سلامت حیوانات مناسب برای مصرف انسان را برآورده کنند.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                مثالی از یک فرآیند تولید معمولی در توضیحات و نمودار جریان (شکل <span class="ltr-text">1</span>) در زیر خلاصه شده است.
+            </p>
+            <figure class="mb-4">
+                <img src="https://via.placeholder.com/600x300?text=Flowchart+Figure+1" alt="Flow chart showing the steps in the manufacturing process for pancreatin." class="mx-auto block" />
+                <figcaption class="text-center text-gray-600 mt-2">شکل <span class="ltr-text">1.</span> نمودار جریان مراحل فرآیند تولید پانکرئاتین را نشان می‌دهد.</figcaption>
+            </figure>
+            <p class="mb-3 leading-relaxed">
+                غدد پانکراس باید منجمد نگه داشته شوند تا از دست دادن فعالیت آنزیمی در طول نگهداری و حمل و نقل جلوگیری شود. پس از اینکه تولیدکننده مواد منجمد را می‌پذیرد، پانکرئاتین تحت شرایطی که بار میکروبی و سایر ناخالصی‌های بالقوه را کاهش می‌دهد، استخراج و خالص‌سازی می‌شود. برای انجام این کار، غدد پانکراس منجمد به صورت خمیر ریز آسیاب شده و با فعال‌کننده‌ها تیمار می‌شوند تا پیش‌سازهای آنزیمی غیرفعال پانکراس (زیموژن‌ها) را به آنزیم‌های فعال تبدیل کنند. فعال‌سازی تحت شرایط کنترل‌شده انجام می‌شود؛ عواملی مانند زمان، دما، قدرت یونی یا غلظت طبق فرآیند هر تولیدکننده کنترل می‌شوند. پس از اتمام فعال‌سازی، مرحله فعال‌سازی با افزودن حلال‌هایی مانند استون، ایزوپروپیل الکل یا سایر حلال‌های سازگار با آنزیم متوقف می‌شود. پس از جداسازی از مواد نامحلول (در صورت لزوم)، مخلوط با حلال ترکیب می‌شود تا پانکرئاتین رسوب کند. مایع رویی جدا شده و باقیمانده جامد با حلال شسته می‌شود. در نهایت، پانکرئاتین در دمای مناسب و تحت خلاء خشک می‌شود. فعالیت بیولوژیکی ممکن است با افزودن پرکننده‌های مناسب، مانند لاکتوز؛ ساکارز حاوی بیش از <span class="ltr-text">3.25%</span> نشاسته؛ پانکرئاتین با قدرت گوارشی کمتر؛ سلولز میکروکریستال؛ مالتودکسترین؛ یا کلرید سدیم تنظیم و/یا تثبیت شود.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4"><span class="ltr-text">3.</span> کنترل کیفیت</h2>
+            <p class="mb-3 leading-relaxed">
+                هر سری از پانکرئاتین تحت آزمایش کنترل کیفیت مناسب قرار می‌گیرد. آزمایش کنترل کیفیت باید الزامات مونوگراف مربوطه و همچنین سایر پارامترهای کیفی شناسایی شده را پوشش دهد. این آزمایش‌ها باید شامل ظاهر، شناسایی، خلوص و فعالیت پانکرئاتین باشد. ناخالصی‌های مربوط به فرآیند و محصول، مانند حلال‌های باقیمانده از استخراج و رسوب و چربی، باید مورد توجه قرار گیرند.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                آب برای فعالیت و پایداری آنزیم حیاتی است، بنابراین حد محتوای آب باید مشخص و با روش‌های تحلیلی مناسب مانند کاهش وزن در خشک شدن (<span class="ltr-text">LOD</span>) (رجوع به فصل <a href="731.html" class="text-blue-600 hover:underline" target="_blank">731</a> کاهش وزن در خشک شدن) نظارت شود. آزمایش‌های فعالیت برای تأیید اینکه پانکرئاتین حدود از پیش تعریف شده برای سطوح فعالیت لیپاز، آمیلاز و پروتئازها را برآورده می‌کند، اعمال می‌شوند که ویژگی‌های کیفیت حیاتی در نظر گرفته می‌شوند.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                از آنجایی که پانکرئاتین منشأ بیولوژیکی دارد، کنترل کیفیت شامل آزمایش میکروبی و همچنین آزمایش برای عدم وجود عوامل عرضی خاصی است که برای انسان بیماری‌زا هستند.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4"><span class="ltr-text">4.</span> برچسب‌گذاری</h2>
+            <p class="mb-3 leading-relaxed">
+                محصول باید مطابق با مونوگراف و الزامات نظارتی برچسب‌گذاری شود، اما همچنین باید با الزامات مشتری در صورت لزوم مطابقت داشته باشد. برچسب حاوی اطلاعاتی مانند نام و آدرس تولیدکننده، تاریخ تولید، تاریخ آزمایش مجدد، تاریخ انقضا، شماره سری، شرایط نگهداری و اقدامات احتیاطی خاص (مثلاً "در برابر رطوبت محافظت شود") و بیانیه‌ای حاوی هدف استفاده است.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4"><span class="ltr-text">5.</span> گواهینامه و مستندات</h2>
+            <p class="mb-3 leading-relaxed">
+                محصول باید با گواهینامه‌ها و مستندات مورد نیاز، در صورت لزوم، همراه باشد. این مستندات باید شامل گواهینامه تحلیل (<span class="ltr-text">COA</span>) یا گواهینامه دیگری که انطباق با الزامات مونوگراف و نتایج آزمایش کنترل کیفیت را مستند می‌کند؛ گواهینامه منشأ که گونه حیوانی را نشان می‌دهد؛ و گواهینامه‌های مربوط به عوامل عرضی، از جمله، در صورت لزوم، بیانیه‌های مربوط به آنسفالوپاتی اسفنجی قابل انتقال/آنسفالوپاتی اسفنجی گاوی (<span class="ltr-text">TSE/BSE</span>) باشد. سایر اطلاعات مربوطه و مورد نیاز، مانند تاریخ آزمایش مجدد یا انقضا، نگهداری و توصیه‌های بسته‌بندی نیز باید در صورت لزوم گنجانده شود.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                تولیدکننده/تامین‌کننده همچنین باید بتواند مستندات لازم برای اهداف نظارتی حاوی اطلاعات زیر را ارائه دهد:
+            </p>
+            <ul class="list-disc pr-5 leading-relaxed">
+                <li>اطلاعات مربوط به شماره تأییدیه/مجوز آژانس نظارتی و آدرس کامل محل تولید پانکرئاتین.</li>
+                <li>بیانیه‌ای مبنی بر اینکه مواد اولیه با منشأ حیوانی که برای فرآوری دارویی در نظر گرفته شده‌اند، تحت نظارت مقامات مسئول/صلاحیت‌دار جمع‌آوری و تحویل داده شده‌اند.</li>
+                <li>لیستی از کشورهای مبدأ مواد اولیه جمع‌آوری شده.</li>
+                <li>بیانیه‌ای مبنی بر اینکه در طول حمل و نقل، غدد پانکراس را می‌توان برای محصولات جانبی حیوانی که برای اهداف دارویی در نظر گرفته شده‌اند، با مستندات مناسب مطابق با مقررات قانونی مربوطه (مانند گواهینامه‌های بهداشت حیوانات از دامپزشکان رسمی یا اسناد تجاری فنی) شناسایی کرد.</li>
+                <li>بیانیه‌ای مبنی بر اینکه غدد پانکراس در کشتارگاه‌های تأیید شده جمع‌آوری می‌شوند و حیواناتی که غدد پانکراس از آنها جمع‌آوری می‌شوند، تحت بازرسی مطابق با قوانین قابل اجرای فعلی قرار گرفته‌اند و مناسب برای مصرف انسان اعلام شده‌اند، یا هیچ نشانه قابل مشاهده‌ای از بیماری‌های قابل انتقال به انسان یا حیوانات در زمان کشتار مشاهده نشده است.</li>
+            </ul>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4"><span class="ltr-text">6.</span> آزمایش و کنترل عوامل عفونی عرضی</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2"><span class="ltr-text">6.1</span> نمای کلی</h3>
+            <p class="mb-3 leading-relaxed">
+                اگرچه هیچ گزارشی وجود ندارد که بیماری عفونی متعاقب استفاده از محصولات دارویی مشتق از پانکرئاتین را مستند کند، اما خطر نظری انتقال عوامل بیماری‌زای خوک از پانکرئاتین وجود دارد.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                ایمنی <span class="ltr-text">PEPs</span> مشتق از خوک باید با اجرای استراتژی‌های متعدد مکمل و/یا همپوشانی برای مهار، پاکسازی و کنترل عامل عرضی افزایش یابد. تولیدکنندگان باید یک رویکرد مستمر و مبتنی بر ریسک را برای افزایش ایمنی این محصولات با توجه به عوامل عرضی اتخاذ کنند که شامل ترکیب ارزیابی ریسک، کاهش ریسک و استراتژی‌های مدیریت مواد فرآیند باشد. آزمایش باید در صورت لزوم گنجانده شود تا حداکثر اطمینان ممکن از یک خطر آسیب به اندازه کافی پایین را فراهم کند که به طور قابل توجهی توسط مزایای درمانی و اطمینان همزمان از در دسترس بودن دارو برای بیماران پیشی گرفته است.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2"><span class="ltr-text">6.2</span> استراتژی‌های ارزیابی ریسک</h3>
+            <p class="mb-3 leading-relaxed">
+                "راهنمای <span class="ltr-text">FDA</span> برای صنعت: محصولات دارویی نارسایی پانکراس اگزوکرین" یک رویکرد مبتنی بر ریسک را برای احتمال آلودگی ویروسی محصولات آنزیم پانکراس تشویق می‌کند، مطابق با <span class="ltr-text">ICH Q5A(R1)</span> و فصل <a href="1050.html" class="text-blue-600 hover:underline" target="_blank">1050</a> ارزیابی ایمنی ویروسی محصولات بیوتکنولوژی مشتق از رده‌های سلولی انسانی یا حیوانی. پروفایل ریسک عامل عرضی محصولات بیولوژیکی به طور کلی به عوامل مختلفی از جمله منشأ بیولوژیکی، نوع مواد اولیه مورد استفاده، فرآیندهای تولید و مسیر تجویز بستگی دارد. از آنجایی که منبع‌یابی و تولید ممکن است بین تولیدکنندگان متفاوت باشد، هر تولیدکننده باید ارزیابی ریسک عامل عرضی فردی و کاملی را ایجاد و اجرا کند.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                اگرچه دامنه <span class="ltr-text">ICH Q5A(R1)</span> ارزیابی ایمنی ویروسی محصولات بیوتکنولوژی مشتق از رده‌های سلولی انسانی و حیوانی را پوشش می‌دهد، اما اصول و رویکردهای ارزیابی ریسک می‌تواند مبنایی برای استراتژی ارزیابی ریسک برای محصولات پانکرئاتین فراهم کند. با اعمال اصول <span class="ltr-text">ICH Q5A(R1)</span>، استراتژی به حداقل رساندن ریسک برای محافظت از بیماران در برابر قرار گرفتن ناخواسته در معرض عامل عرضی باید ترکیبی از سه جزء زیر را منعکس کند:
+            </p>
+            <ol class="list-decimal pr-5 leading-relaxed">
+                <li><strong class="font-bold">منبع‌یابی:</strong> استفاده از منبع‌یابی دقیق برای محدود کردن دسترسی عوامل عرضی به فرآیند تولید. از آنجایی که ماده پانکرئاتین یک محصول جانبی صنعت گوشت است، مهم است که اطمینان حاصل شود که <span class="ltr-text">API</span> پانکرئاتین فقط از حیوانات مناسب برای مصرف انسان تولید می‌شود.</li>
+                <li><strong class="font-bold">پاکسازی:</strong> گنجاندن مراحل پاکسازی قوی در فرآیند تولید. اثربخشی این استراتژی‌ها به مقاومت عوامل عرضی در برابر نوع غیرفعال‌سازی فیزیکی و شیمیایی مورد استفاده بستگی دارد.</li>
+                <li><strong class="font-bold">آزمایش:</strong> کنترل و آزمایش عوامل عرضی در مراحل مناسب فرآیند تولید برای اطمینان از اینکه هر بار باقی‌مانده از عامل عرضی بالقوه مضر در سطوح به اندازه کافی پایین است. این امر با استفاده از آزمایش‌های غربالگری مناسب در برابر یک پانل ویروسی آزمایشی مرتبط انجام می‌شود. در این بخش از ارزیابی ریسک، پتانسیل ویروس‌های خوک برای ایجاد خطر برای انسان باید در نظر گرفته شود.</li>
+            </ol>
+            <p class="mb-3 leading-relaxed">
+                برای شناسایی عوامل عرضی بالقوه که ممکن است در یک فرآورده پانکرئاتین وجود داشته باشند، تولیدکنندگان باید عوامل عرضی موجود در خوک را شناسایی کرده و احتمال وجود آنها در مواد اولیه و <span class="ltr-text">API</span> را ارزیابی کنند. فصل‌های <a href="61.html" class="text-blue-600 hover:underline" target="_blank">61</a> آزمایش میکروبیولوژیکی محصولات غیر استریل: آزمایش‌های شمارش میکروبی و <a href="62.html" class="text-blue-600 hover:underline" target="_blank">62</a> آزمایش میکروبیولوژیکی محصولات غیر استریل: آزمایش‌های برای میکروارگانیسم‌های مشخص‌شده به آزمایش آلودگی میکروبیولوژیکی خاص، همانطور که در مونوگراف‌های محصول مرتبط با پانکرئاتین تعریف شده است، می‌پردازند. علاوه بر این، تولیدکنندگان باید به طور خاص حضور احتمالی ویروس‌های خوک را ارزیابی کنند. در این ارزیابی، مراحل تولیدی که قادر به حذف یا غیرفعال کردن ویروس‌ها هستند باید شناسایی شوند و کارایی فرآیند برای حذف و/یا غیرفعال کردن ویروس‌ها باید با مطالعات اعتباربخشی ویروسی که از دستورالعمل‌های قابل اجرا پیروی می‌کنند، نشان داده شود. هنگامی که لیستی از ویروس‌های حیاتی که به طور بالقوه در ماده اولیه و/یا در <span class="ltr-text">API</span> وجود دارند، ایجاد شد، تولیدکنندگان در مورد مراحل فرآیند مناسب برای آزمایش ویروسی و سطح آزمایش ویروسی که باید به صورت سری به سری انجام شود، تصمیم خواهند گرفت. آزمایش‌ها برای ویروس‌های خاص باید توسعه و تأیید شوند و معیارهای پذیرش باید تعیین و برای تصمیم‌گیری در مورد پذیرش/رد سری‌های <span class="ltr-text">API</span> پانکرئاتین استفاده شوند.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                ماهیت بیماری‌زای حیوانی (<span class="ltr-text">zoonotic</span>) یا غیر بیماری‌زای حیوانی ویروس باید در هنگام تعیین معیارهای پذیرش، هم از نظر حساسیت آزمایش و هم از نظر تعیین حد مشخصات، در نظر گرفته شود.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2"><span class="ltr-text">6.3</span> شناسایی پانل ویروسی آزمایشی مرتبط</h3>
+            <p class="mb-3 leading-relaxed">
+                استراتژی ارزیابی ریسک که در بالا توضیح داده شد، شناسایی آلاینده‌های ویروسی بالقوه مواد اولیه مشتق از خوک را الزامی می‌کند. جدول <span class="ltr-text">1</span> مروری بر ویروس‌های پوشش‌دار و بدون پوشش‌دار شناخته شده در خوک‌ها را ارائه می‌دهد که ممکن است هنگام استفاده از خوک‌هایی که برای مصرف انسان مناسب تشخیص داده شده‌اند به عنوان حیوانات منبع، خطر آلودگی را ایجاد کنند. ارزیابی ریسک باید حداقل ویروس‌های لیست شده را مورد توجه قرار دهد؛ با این حال، بسته به منشأ حیوانات و قابلیت فرآیند تولید، لیست ممکن است تطبیق داده شود و ویروس‌های اضافی ممکن است در نظر گرفته شوند (به مثال در شکل <span class="ltr-text">2</span> مراجعه کنید). تولیدکنندگان باید سیستم‌هایی را برای شناسایی ظهور ویروس‌های جدید و بالقوه مرتبط اجرا کنند.
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">جدول <span class="ltr-text">1.</span> شناسایی خطر: ویروس‌های شناخته شده در خوک‌ها</th>
+                    </tr>
+                    <tr>
+                        <th>ویروس‌های پوشش‌دار</th>
+                        <th>ویروس‌های بدون پوشش‌دار</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">Classical swine fever virus</span></td>
+                        <td><span class="ltr-text">Encephalomyocarditis virus (EMCV)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">African swine fever virus (ASFV)</span></td>
+                        <td><span class="ltr-text">Swine vesicular disease virus (SVDV)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Influenza virus</span></td>
+                        <td><span class="ltr-text">Foot and mouth disease virus (FMDV)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">West Nile virus (WNV)</span></td>
+                        <td><span class="ltr-text">Reoviruses (REO)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Vesicular stomatitis virus (VSV)</span></td>
+                        <td><span class="ltr-text">Swine hepatitis E virus (swHEV)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Eastern equine encephalitis virus (EEEV)</span></td>
+                        <td><span class="ltr-text">Porcine rotaviruses (pRotaV)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Rabies virus (RABV)</span></td>
+                        <td><span class="ltr-text">Porcine enteroviruses (PEVs)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Porcine reproductive and respiratory syndrome virus (PRRSV)</span></td>
+                        <td><span class="ltr-text">Porcine parvoviruses (PPV)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Transmissible gastroenteritis virus (TGEV)</span></td>
+                        <td><span class="ltr-text">Porcine circovirus types 1 and 2 (PCV1/2)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Pseudorabies virus (SuHV-1)</span></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Nipah virus</span></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Porcine endogenous retroviruses (PERVs)</span></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2"><span class="ltr-text">6.4</span> حذف ویروس توسط مراحل فرآیند تولید</h3>
+            <p class="mb-3 leading-relaxed">
+                نشان دادن حذف ویروس یک جزء حیاتی برای تضمین ایمنی کلی محصولات مشتق از پانکرئاتین است. هدف مطالعات ارزیابی حذف ویروس نه تنها ارزیابی توانایی فرآیند تولید در حذف آلاینده‌های ویروسی شناخته شده و تخمین کمی سطح کلی کاهش ویروس حاصل از فرآیند تولید، بلکه تخمین قابلیت مراحل فرآیند تولید در حذف ویروس‌ها به طور کلی است. مطالعات حذف ویروس برای فرآیند تولید پانکرئاتین باید مطابق با دستورالعمل قابل اجرا و فعلی، <span class="ltr-text">ICH Q5A(R1)</span> انجام شود.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                فرآیندهای تولید پانکرئاتین فعلی، طبق نتایج مطالعات حذف ویروس، برای غیرفعال کردن ویروس‌های پوشش‌دار مؤثر در نظر گرفته می‌شوند. با این حال، ویروس‌های بدون پوشش‌دار در برابر غیرفعال‌سازی فیزیکی-شیمیایی مقاوم‌تر هستند که غیرفعال‌سازی آنها را متغیرتر می‌کند. نمونه‌هایی از ویروس‌هایی که به عنوان دارای مقاومت ویروسی بالا در برابر درمان طبقه‌بندی می‌شوند و غیرفعال‌سازی متوسط تا محدودی را نشان می‌دهند شامل <span class="ltr-text">PPV</span> و <span class="ltr-text">PCV1/2</span> هستند (به شکل <span class="ltr-text">2</span> مراجعه کنید).
+            </p>
+            <figure class="mb-4">
+                <img src="https://via.placeholder.com/600x300?text=Risk+Assessment+Figure+2" alt="Example of a risk-assessment approach to virus identification for the test panel." class="mx-auto block" />
+                <figcaption class="text-center text-gray-600 mt-2">شکل <span class="ltr-text">2.</span> مثالی از رویکرد ارزیابی ریسک برای شناسایی ویروس برای پانل آزمایش.</figcaption>
+            </figure>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2"><span class="ltr-text">6.5</span> آزمایش ویروسی</h3>
+            <p class="mb-3 leading-relaxed">
+                هنگامی که توانایی فرآیند برای حذف یا غیرفعال کردن یک ویروس خاص به سطوح مناسب نشان داده نشده باشد، یک استراتژی آزمایش لازم است. ماهیت بیماری‌زای حیوانی یا غیر بیماری‌زای حیوانی ویروس باید در هنگام تعیین معیارهای پذیرش، هم از نظر حساسیت آزمایش و هم از نظر تعیین حد مشخصات، در نظر گرفته شود. سری‌های <span class="ltr-text">API</span> که برای ویروس‌های بیماری‌زای حیوانی مثبت هستند باید رد شوند. به عنوان بخشی از کنترل کیفیت، آزمایش ویروسی باید روی هر سری از <span class="ltr-text">API</span> انجام شود. آزمایش‌های مورد استفاده باید اجازه حذف هر بار قابل تشخیص از سطوح بالقوه مضر عامل عرضی را بدهند. <span class="ltr-text">9 CFR</span> الزامات آزمایش برای محصولات بیولوژیکی خوک از جمله واکسن‌های ویروس زنده و محصولات آنتی‌بادی را توصیف می‌کند اما به طور خاص به پانکرئاتین نمی‌پردازد. با اعمال اصول <span class="ltr-text">9 CFR</span>، آزمایش‌ها برای تشخیص ویروس‌های خوک می‌توانند، به عنوان مثال، بر اساس نظارت کشت سلولی برای اثرات سایتوپاتوژنیک برای یک زمان جوجه‌کشی مناسب، آزمایش همادسورپشن، تکنیک‌های رنگ‌آمیزی اختصاصی ویروس یا ترکیبات مناسبی از آنها باشند (همچنین به فصل <a href="1237.html" class="text-blue-600 hover:underline" target="_blank">1237</a> روش‌های آزمایش ویروس‌شناسی مراجعه کنید). علاوه بر فناوری‌ها و ویروس‌های تحت پوشش <span class="ltr-text">9 CFR</span>، فناوری‌های جدید مبتنی بر زیست‌شناسی مولکولی ممکن است استفاده شوند و ویروس‌های دیگری با پتانسیل بیماری‌زایی حیوانی که شناسایی می‌شوند ممکن است نیاز به آزمایش داشته باشند. نمونه‌هایی از ویروس‌های خاص که توسط راهنمای آزمایش ویروس فعلی پوشش داده نشده‌اند ممکن است شامل <span class="ltr-text">swHEV</span> باشند.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                تعریف پانل ویروس آزمایشی، انتخاب مرحله فرآیند مناسب، مناسب بودن روش آزمایش و حساسیت روش آزمایش باید توسط تولیدکننده توجیه شود. تمام آزمایش‌ها برای ویروس‌های خاص باید مطابق با راهنمای فعلی، به عنوان مثال، فصل‌های <a href="1225.html" class="text-blue-600 hover:underline" target="_blank">1225</a> اعتبارسنجی روش‌های کمپندیال و <a href="1033.html" class="text-blue-600 hover:underline" target="_blank">1033</a> اعتبارسنجی آزمایش بیولوژیکی، در صورت لزوم، توسعه و تأیید شوند و معیارهای پذیرش باید تعیین و برای تصمیم‌گیری در مورد پذیرش/رد سری‌های <span class="ltr-text">API</span> پانکرئاتین استفاده شوند.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4"><span class="ltr-text">7.</span> خصوصیات پانکرئاتین</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2"><span class="ltr-text">7.1</span> توضیحات و خواص فیزیکوشیمیایی</h3>
+            <p class="mb-3 leading-relaxed">
+                پانکرئاتین یک پودر بی‌شکل کمی قهوه‌ای تا قهوه‌ای مایل به زرد با بوی و طعم گوشت خام است. پانکرئاتین تا حدی در آب محلول است و یک محلول کدر ضعیف تشکیل می‌دهد و در الکل و اتر نامحلول است. شرایط زیر ممکن است پانکرئاتین را تخریب کند: اسیدهای معدنی، هیدروکسیدهای قلیایی، عوامل اکسیدکننده، بسیاری از نمک‌های فلزی و رطوبت و دماهای بالا.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                محلول‌های حاوی پانکرئاتین باید با احتیاط فیلتر شوند، به دلیل نگهداری احتمالی لیپاز و پروتئازها روی فیلتر. فعالیت آنزیمی در محلول‌های خنثی تا کمی قلیایی به حداکثر می‌رسد. فعالیت به سرعت در محلول‌های اسیدی یا قلیایی قوی کاهش می‌یابد. همین امر در مورد جوشاندن محلول‌های آبی حاوی پانکرئاتین نیز صادق است. در فرمولاسیون‌های بدون پوشش روده‌ای، قرار گرفتن محصول در <span class="ltr-text">pH</span> برابر <span class="ltr-text">4.5</span> یا کمتر توصیه نمی‌شود، زیرا تقریباً از دست دادن کامل فعالیت لیپولیتیک مشاهده شده است.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                از آنجایی که پانکرئاتین منشأ بیولوژیکی دارد، اجزای دیگری علاوه بر پروتئین‌های فعال آنزیمی در آن وجود دارند. این اجزا شامل پروتئین‌ها، اسیدهای آمینه، پپتیدها، اسیدهای نوکلئیک و قطعات آنها، اجزای بافتی، چربی و مواد غیرآلی هستند. این اجزا ممکن است بر کیفیت ماده نهایی تأثیر بگذارند.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2"><span class="ltr-text">7.2</span> محتویات پروتئین و آنزیم</h3>
+            <p class="mb-3 leading-relaxed">
+                پانکرئاتین حاوی آنزیم‌های گوارشی مختلفی است که بیشتر آنها به عنوان زیموژن‌ها (پیش‌سازهای غیرفعال) در سلول‌های آسینار پانکراس تولید و ذخیره می‌شوند. تحت شرایط فیزیولوژیکی، زیموژن‌های پانکراس پس از رسیدن ترشحات پانکراس به روده کوچک فوقانی، به آنزیم‌های فعال تبدیل می‌شوند. یک پروتئاز روده، انتروکیناز، فرآیند فعال‌سازی را با شکافت زیموژن تریپسین آغاز می‌کند، که سپس پروتئازهای دیگر را فعال می‌کند. در طول فرآیند تولید، آنزیم‌های موجود در پانکرئاتین توسط تریپسین فعال می‌شوند (به شکل <span class="ltr-text">1</span> مراجعه کنید).
+            </p>
+            <p class="mb-3 leading-relaxed">
+                جدول <span class="ltr-text">2</span> برخی از ویژگی‌های مهم آنزیم‌های اصلی پانکراس موجود در پانکرئاتین را خلاصه می‌کند.
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="8">جدول <span class="ltr-text">2.</span> خصوصیات آنزیم‌های شناخته شده موجود در پانکرئاتین خوک</th>
+                    </tr>
+                    <tr>
+                        <th>نام</th>
+                        <th>شماره <span class="ltr-text">E.C.</span></th>
+                        <th>شماره دسترسی <span class="ltr-text">UniProtKB/Swiss-Prot</span></th>
+                        <th>سوبستراها</th>
+                        <th>به صورت پیش‌ساز تولید شده است</th>
+                        <th>جرم مولکولی (<span class="ltr-text">kDa</span>)</th>
+                        <th>طول توالی</th>
+                        <th>نقطه ایزوالکتریک</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>تریپسین</td>
+                        <td><span class="ltr-text">3.4.21.4</span></td>
+                        <td><span class="ltr-text">P00761.1</span></td>
+                        <td>پروتئین‌ها</td>
+                        <td>بله</td>
+                        <td><span class="ltr-text">23.8</span> (زیموژن)، <span class="ltr-text">23.5</span> (فعال‌شده)</td>
+                        <td><span class="ltr-text">231 a.a.</span> (زیموژن)، <span class="ltr-text">223 a.a.</span> (فعال‌شده)</td>
+                        <td><span class="ltr-text">9.3</span> (زیموژن)، <span class="ltr-text">10.5</span> (فعال‌شده)</td>
+                    </tr>
+                    <tr>
+                        <td>کیموتریپسین</td>
+                        <td><span class="ltr-text">3.4.21.1</span></td>
+                        <td><span class="ltr-text">G1ARD6_PIG</span></td>
+                        <td>پروتئین‌ها</td>
+                        <td>بله</td>
+                        <td><span class="ltr-text">29.1</span> (زیموژن)، <span class="ltr-text">25.6</span> (فعال‌شده)</td>
+                        <td><span class="ltr-text">268 a.a.</span> (زیموژن)، <span class="ltr-text">221 a.a.</span> (فعال‌شده)</td>
+                        <td><span class="ltr-text">8.7</span></td>
+                    </tr>
+                    <tr>
+                        <td>الاستاز</td>
+                        <td><span class="ltr-text">3.4.21.36</span></td>
+                        <td><span class="ltr-text">P00772.1</span></td>
+                        <td>پروتئین‌ها</td>
+                        <td>بله</td>
+                        <td><span class="ltr-text">25.9</span> (فعال‌شده)</td>
+                        <td><span class="ltr-text">250 a.a.</span> (زیموژن)، <span class="ltr-text">240 a.a.</span> (فعال‌شده)</td>
+                        <td><span class="ltr-text">8.5</span></td>
+                    </tr>
+                    <tr>
+                        <td>کربوکسی‌پپتیداز <span class="ltr-text">A1</span></td>
+                        <td><span class="ltr-text">3.4.17.1</span></td>
+                        <td><span class="ltr-text">P09954</span></td>
+                        <td>پروتئین‌ها</td>
+                        <td>بله</td>
+                        <td><span class="ltr-text">34.7</span> (فعال‌شده)</td>
+                        <td><span class="ltr-text">308 a.a.</span> (فعال‌شده)</td>
+                        <td>نامشخص</td>
+                    </tr>
+                    <tr>
+                        <td>کربوکسی‌پپتیداز <span class="ltr-text">B</span></td>
+                        <td><span class="ltr-text">3.4.17.2</span></td>
+                        <td><span class="ltr-text">P09955.5</span></td>
+                        <td>پروتئین‌ها</td>
+                        <td>بله</td>
+                        <td><span class="ltr-text">34.7</span> (فعال‌شده)</td>
+                        <td><span class="ltr-text">305 a.a.</span> (فعال‌شده)</td>
+                        <td><span class="ltr-text">6.0</span></td>
+                    </tr>
+                    <tr>
+                        <td>کالیکرین، غده‌ای</td>
+                        <td><span class="ltr-text">3.4.21.35</span></td>
+                        <td><span class="ltr-text">P00752.4</span></td>
+                        <td>پروتئین‌ها</td>
+                        <td>بله</td>
+                        <td><span class="ltr-text">25–28 kDa</span></td>
+                        <td><span class="ltr-text">246 a.a.</span> (زیموژن)، <span class="ltr-text">239 a.a.</span> (فعال‌شده)</td>
+                        <td><span class="ltr-text">4.2–4.3</span></td>
+                    </tr>
+                    <tr>
+                        <td>تری‌آسیل‌گلیسرول لیپاز</td>
+                        <td><span class="ltr-text">3.1.1.3</span></td>
+                        <td><span class="ltr-text">P00591.2</span></td>
+                        <td>تری‌گلیسیریدها، دی‌گلیسیریدها</td>
+                        <td>خیر</td>
+                        <td><span class="ltr-text">50.1</span> (دو ایزوفرم گلیکوزیلاسیون، لیپاز <span class="ltr-text">A</span> و <span class="ltr-text">B</span>)</td>
+                        <td><span class="ltr-text">450 a.a.</span> (بالغ)</td>
+                        <td><span class="ltr-text">4.9</span> (لیپاز <span class="ltr-text">A</span>)، <span class="ltr-text">5.0</span> (لیپاز <span class="ltr-text">B</span>)</td>
+                    </tr>
+                    <tr>
+                        <td>کولیپاز</td>
+                        <td></td>
+                        <td><span class="ltr-text">P02703.3</span></td>
+                        <td>عدم فعالیت آنزیمی، کوفاکتور لیپاز پانکراس</td>
+                        <td>بله</td>
+                        <td><span class="ltr-text">10.3</span> (پروکولیپاز <span class="ltr-text">A</span> خوک)، <span class="ltr-text">10.1</span> (پروکولیپاز <span class="ltr-text">B</span> خوک)</td>
+                        <td><span class="ltr-text">93 a.a.</span> (پروکولیپاز <span class="ltr-text">A</span>)، <span class="ltr-text">95 a.a.</span> (پروکولیپاز <span class="ltr-text">B</span>)</td>
+                        <td>نامشخص</td>
+                    </tr>
+                    <tr>
+                        <td>فسفولیپاز <span class="ltr-text">A2</span></td>
+                        <td><span class="ltr-text">3.1.1.4</span></td>
+                        <td><span class="ltr-text">P00592</span></td>
+                        <td>فسفولیپیدها</td>
+                        <td>بله</td>
+                        <td><span class="ltr-text">14.7</span> (زیموژن)، <span class="ltr-text">14</span> (فعال‌شده)</td>
+                        <td><span class="ltr-text">146 a.a.</span> (زیموژن)، <span class="ltr-text">123 a.a.</span> (فعال‌شده)</td>
+                        <td><span class="ltr-text">4.4–4.5</span></td>
+                    </tr>
+                    <tr>
+                        <td>کلسترول استراز، همچنین به نام لیپاز استر کربوکسیل (<span class="ltr-text">CEL</span>)، هیدرولاز استر کربوکسیل (<span class="ltr-text">CEH</span>) یا لیپاز تحریک شده با نمک صفراوی (<span class="ltr-text">BSSL</span>)</td>
+                        <td><span class="ltr-text">3.1.1.13, 3.1.1.1</span></td>
+                        <td>توالی کامل اسید آمینه هنوز در خوک ناشناخته است</td>
+                        <td>استرهای کلسترول، استرهای ویتامین، مونوگلیسیریدها، فسفولیپیدها، گالاکتولیپیدها، مقداری فعالیت بر روی تری‌گلیسیریدها</td>
+                        <td>خیر</td>
+                        <td>مقادیر ناسازگار در ادبیات از <span class="ltr-text">65</span> تا <span class="ltr-text">98 kDa</span> متغیر است. در حالی که اشکال پروتئولیتیک شناسایی شده‌اند، جرم دقیق هنوز ناشناخته است.</td>
+                        <td>ترکیب کامل اسید آمینه هنوز در خوک ناشناخته است</td>
+                        <td><span class="ltr-text">4.2–4.8</span></td>
+                    </tr>
+                    <tr>
+                        <td>آلفا-آمیلاز</td>
+                        <td><span class="ltr-text">3.2.1.1</span></td>
+                        <td><span class="ltr-text">P00690.3</span></td>
+                        <td>پلی‌ساکاریدها</td>
+                        <td>خیر</td>
+                        <td><span class="ltr-text">55.3</span></td>
+                        <td><span class="ltr-text">496 a.a.</span> (بالغ)</td>
+                        <td><span class="ltr-text">5.95</span> (آمیلاز <span class="ltr-text">I</span>)، <span class="ltr-text">5.45</span> (آمیلاز <span class="ltr-text">II</span>)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2"><span class="ltr-text">7.2.1</span> پروتئازهای پانکراس</h4>
+            <p class="mb-3 leading-relaxed">
+                پروتئازها آنزیم‌هایی هستند که با هیدرولیز پیوندهای پپتیدی، پروتئین‌ها را به قطعات پپتیدی کوچک‌تر و اسیدهای آمینه هضم می‌کنند. پانکرئاتین حاوی پنج پروتئاز اصلی است: تریپسین، الاستاز، کیموتریپسین، کربوکسی‌پپتیداز <span class="ltr-text">A1</span> و کربوکسی‌پپتیداز <span class="ltr-text">B</span>.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                تریپسین، کیموتریپسین و الاستاز هر دو به عنوان پروتئازهای سرین و اندوپپتیدازها طبقه‌بندی می‌شوند زیرا پیوندهای پپتیدی را در سمت کربوکسیل-ترمینال یک اسید آمینه شکسته و همچنین یک باقیمانده سرین از نظر کاتالیزوری مهم در جایگاه‌های فعال خود دارند. کربوکسی‌پپتیدازها هیدرولیز اسیدهای آمینه را از موقعیت کربوکسیل-ترمینال در پلی‌پپتیدها کاتالیز می‌کنند و بنابراین به عنوان اگزوپپتیدازها طبقه‌بندی می‌شوند. کربوکسی‌پپتیدازها به طور متوالی باقیمانده‌ها را از <span class="ltr-text">C</span>-ترمینال پروتئین‌ها و پپتیدها با اختصاصیت مشخص آزاد می‌کنند.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                تریپسین به طور خاص بر روی سمت کربوکسیل-ترمینال باقیمانده‌های اسید آمینه با بار مثبت لیزین و آرژینین عمل می‌کند. تریپسینوژن توسط پانکراس به عنوان یک پیش‌ساز غیرفعال ترشح می‌شود و به دوازدهه تخلیه می‌شود، جایی که انتروکیناز تریپسینوژن را به تریپسین فعال تبدیل می‌کند. انتروکیناز در دوازدهه توسط سلول‌های مخاط دوازدهه ترشح می‌شود. انتروکیناز یک اوکتاپپتید ترمینال را از تریپسینوژن حذف می‌کند و یک زنجیره پلی‌پپتیدی از تریپسین فعال را تولید می‌کند که توسط شش پل دی‌سولفیدی به هم متصل شده‌اند. تریپسین حاوی یک جایگاه اتصال کلسیم با تمایل بالا است که برای پایداری آنزیم لازم است.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                کیموتریپسین ترجیحاً بر روی سمت کربوکسیل-ترمینال باقیمانده‌های تیروزین، فنیل‌آلانین و تریپتوفان عمل می‌کند. این آنزیم به عنوان یک زیموژن غیرفعال، کیموتریپسینوژن، ترشح می‌شود که تحت پردازش پروتئولیتیک توسط تریپسین قرار می‌گیرد تا آنزیم فعال را تشکیل دهد. کیموتریپسین یک یون کلسیم در هر مولکول متصل می‌کند.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                الاستاز بر روی باقیمانده‌های اسید آمینه کوچک و خنثی، مانند گلیسین و آلانین، عمل می‌کند، اما همچنین آمیدها و استرها را هیدرولیز می‌کند و در این زمینه متمایز است که بر روی الاستین عمل می‌کند. الاستاز به عنوان یک زیموژن تولید می‌شود و شکل فعال آن حاوی چهار پل دی‌سولفیدی است. الاستاز یک یون کلسیم در هر مولکول متصل می‌کند.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                کربوکسی‌پپتیداز <span class="ltr-text">A1</span> یک اگزوپپتیداز است که پیوند پپتیدی مجاور انتهای کربوکسیل-ترمینال یک زنجیره پلی‌پپتیدی را هیدرولیز می‌کند، بنابراین اسید آمینه کربوکسیل-ترمینال را آزاد می‌کند. این آنزیم باقیمانده‌های اسید آمینه آروماتیک و آلیفاتیک بزرگ را می‌شکند و با باقیمانده‌های اسید آمینه آسپارتیک اسید، گلوتامیک اسید، آرژینین، لیزین و پرولین فعالیت کمی یا هیچ فعالیتی ندارد. این آنزیم حاوی یک یون روی در هر مولکول است. یون روی برای فعالیت ضروری است؛ اگر در طول دیالیز حذف شود باید جایگزین شود. بنابراین، کربوکسی‌پپتیداز <span class="ltr-text">A1</span> نیز به عنوان یک متالوپروتئاز طبقه‌بندی می‌شود.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                کربوکسی‌پپتیداز <span class="ltr-text">B</span> هیدرولیز اسیدهای آمینه بازی لیزین، آرژینین و اورنیتین را از انتهای کربوکسیل-ترمینال یک زنجیره پلی‌پپتیدی کاتالیز می‌کند. همچنین ممکن است در تجزیه بیشتر محصولات گوارش تریپتیک نقش داشته باشد. این آنزیم یک یون روی در هر مولکول متصل می‌کند، که بخش عملکردی لازم آنزیم برای فعالیت است، و بنابراین کربوکسی‌پپتیداز <span class="ltr-text">B</span> نیز به عنوان یک متالوپروتئاز طبقه‌بندی می‌شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2"><span class="ltr-text">7.2.2</span> لیپاز و کولیپاز پانکراس</h4>
+            <p class="mb-3 leading-relaxed">
+                لیپاز پانکراس (<span class="ltr-text">PL</span>، همچنین به عنوان تری‌آسیل‌گلیسرول آسیل هیدرولاز شناخته می‌شود) یک گلیکوپروتئین است و به طور مستقیم به عنوان یک آنزیم فعال توسط پانکراس تولید می‌شود. دو ایزوفرم گلیکوزیلاسیون <span class="ltr-text">PL</span>، لیپاز <span class="ltr-text">A</span> و لیپاز <span class="ltr-text">B</span>، در پانکرئاتین وجود دارند. این دو ایزوفرم ترکیب اسید آمینه یکسانی دارند اما در الگوهای گلیکوزیلاسیون خود کمی متفاوت هستند، به طوری که لیپاز <span class="ltr-text">A</span> اسیدی‌تر از لیپاز <span class="ltr-text">B</span> است.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                <span class="ltr-text">PL</span> یک آنزیم محلول در آب است که بر روی سوبستراهای لیپیدی نامحلول، تری‌گلیسیریدها، در سطح مشترک لیپید-آب عمل می‌کند. فعالیت آن به سطح خاص سوبسترا که برای آنزیم قابل دسترس است بستگی دارد و با وضعیت امولسیون شدن لیپیدها افزایش می‌یابد. <span class="ltr-text">PL</span> ترجیحاً پیوندهای استری را در موقعیت‌های <span class="ltr-text">C-1</span> و <span class="ltr-text">C-3</span> تری‌گلیسیریدها هیدرولیز می‌کند و طیف وسیعی از اختصاصیت طول زنجیره اسید چرب را نشان می‌دهد. بنابراین، <span class="ltr-text">PL</span> در برابر طیف گسترده‌ای از تری‌گلیسیریدها که معمولاً در رژیم غذایی وجود دارند، فعال است. همچنین بر روی دی‌گلیسیریدها عمل می‌کند، اما فعالیت آن بر روی مونوگلیسیریدها بسیار ضعیف است. این آنزیم عمدتاً تری‌گلیسیریدها را به مونوگلیسیریدها و اسیدهای چرب آزاد تبدیل می‌کند؛ محصولات لیپولیز قطبی‌تر در روده کوچک جذب می‌شوند. در حضور آمفیفیل‌های مختلفی مانند نمک‌های صفراوی در غلظت‌های میسل، جذب <span class="ltr-text">PL</span> در سطح مشترک لیپید-آب می‌تواند ممانعت شود، بنابراین فعالیت لیپولیتیک کاهش می‌یابد.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                یک کوفاکتور پروتئینی کوچک که توسط پانکراس نیز تولید می‌شود، کولیپاز، به <span class="ltr-text">PL</span> کمک می‌کند تا در حضور آمفیفیل‌های رقابتی به سطوح مشترک متصل شود و بنابراین فعالیت <span class="ltr-text">PL</span> را بازیابی می‌کند. کولیپاز نیز توسط پانکراس به عنوان یک پیش‌ساز، پروکولیپاز، تولید می‌شود. پروکولیپاز توسط تریپسین فعال می‌شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2"><span class="ltr-text">7.2.3</span> فسفولیپاز <span class="ltr-text">A2</span> پانکراس</h4>
+            <p class="mb-3 leading-relaxed">
+                فسفولیپاز <span class="ltr-text">A2</span> (که به عنوان <span class="ltr-text">PLA2</span> ترشحی نوع <span class="ltr-text">IB</span> نیز شناخته می‌شود) یک آنزیم محلول در آب و مقاوم در برابر حرارت است که هیدرولیز گروه‌های <span class="ltr-text">2</span>-آسیل را در <span class="ltr-text">3</span>-سن-فسفوگلیسیریدها وابسته به کلسیم کاتالیز می‌کند. این آنزیم به عنوان یک پیش‌ساز تولید می‌شود که توسط تریپسین فعال می‌شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2"><span class="ltr-text">7.2.4</span> آمیلاز پانکراس</h4>
+            <p class="mb-3 leading-relaxed">
+                آلفا-آمیلاز پانکراس خوک (<span class="ltr-text">1,4-α-D-glucan glucanohydrolase</span>) هیدرولیز پیوندهای <span class="ltr-text">1,4-α-D</span> گلوکوزیدی داخلی را در پلی‌ساکاریدهای حاوی سه یا بیشتر واحد <span class="ltr-text">D</span>-گلوکز با پیوند <span class="ltr-text">1,4-α</span> کاتالیز می‌کند تا مخلوطی از دکسترین‌ها، مالتوز و گلوکز را تولید کند. آمیلاز در دو شکل (<span class="ltr-text">I</span> و <span class="ltr-text">II</span>) وجود دارد که خواص آنزیمی مشابهی دارند اما در نقاط ایزوالکتریک خود متفاوت هستند. هر دو شکل مولکولی آمیلاز گلیکوپروتئین‌هایی هستند که حاوی فوکوز، گالاکتوز، مانوز و مقادیر مختلفی از گلوکوزامین هستند. هر دو آمیلاز از یک زنجیره پلی‌پپتیدی منفرد با چهار پل دی‌سولفیدی تشکیل شده‌اند و حاوی یک یون کلسیم محکم متصل هستند.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4"><span class="ltr-text">8.</span> اندازه‌گیری فعالیت آنزیم</h2>
+            <p class="mb-3 leading-relaxed">
+                اگرچه پانکرئاتین حاوی انواع مختلفی از آنزیم‌ها است، اما معمولاً با اندازه‌گیری فعالیت سه گروه اصلی آنزیم، لیپاز، پروتئاز و آمیلاز، مشخص می‌شود.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2"><span class="ltr-text">8.1</span> فعالیت لیپاز</h3>
+            <p class="mb-3 leading-relaxed">
+                فعالیت لیپاز پانکرئاتین بر روی تری‌گلیسیریدهای دارای اسیدهای چرب با زنجیره بلند عمدتاً به دلیل <span class="ltr-text">PL</span> است که برای عمل بر روی امولسیون‌های تری‌گلیسیرید در حضور نمک‌های صفراوی که با جذب لیپاز در سطح قطرات لیپید رقابت می‌کنند، به حضور کوفاکتور اختصاصی خود، کولیپاز، نیاز دارد. کولیپاز و لیپاز یک کمپلکس فعال با استوکیومتری <span class="ltr-text">1</span> به <span class="ltr-text">1</span> تشکیل می‌دهند. فرآورده‌های تجاری پانکرئاتین معمولاً حاوی کولیپاز هستند؛ با این حال، توصیه می‌شود بررسی شود که فرآیند تولید <span class="ltr-text">API</span> کولیپاز کافی برای فعالیت لیپاز را فراهم می‌کند. این کنترل باید بخشی از یک خصوصیت‌سازی مناسب باشد که در طول اعتباربخشی فرآیند <span class="ltr-text">API</span> انجام شود.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                علاوه بر <span class="ltr-text">PL</span>، پانکرئاتین همچنین حاوی لیپاز استر کربوکسیل پانکراس (<span class="ltr-text">CEL</span>) است که چندین سوبسترای لیپیدی را هیدرولیز می‌کند. فعالیت <span class="ltr-text">CEL</span> بر روی تری‌گلیسیریدها معمولاً در مقایسه با <span class="ltr-text">PL</span> بسیار کم در نظر گرفته می‌شود و سهم آن در فعالیت لیپاز پانکرئاتین ناچیز است، همانطور که با آزمایش لیپاز <span class="ltr-text">USP</span> اندازه‌گیری می‌شود.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                آزمایش لیپاز توصیف شده در مونوگراف پانکرئاتین <span class="ltr-text">USP</span> بر اساس نرخ گوارش روغن زیتون امولسیون شده با صمغ عربی (<span class="ltr-text">acacia</span>) توسط آنزیم است. فعالیت نمونه آزمایش با مقایسه آن با یک فرآورده استاندارد آنزیم با فعالیت شناخته شده محاسبه می‌شود. روغن زیتون حاوی تری‌گلیسیریدهای با اسیدهای چرب با زنجیره بلند است که نماینده تری‌گلیسیریدهای رژیم غذایی هستند. فعالیت لیپاز بر اساس تیتراسیون اسیدهای چرب آزاد شده از روغن زیتون پس از لیپولیز توسط لیپاز موجود در پانکرئاتین اندازه‌گیری می‌شود. این تیتراسیون توسط هیدروکسید سدیم در <span class="ltr-text">pH</span> ثابت <span class="ltr-text">9.0</span> با تیتراسیون <span class="ltr-text">pH</span>- یا پتانسیوستاتیک انجام می‌شود، که در آن اسیدهای چرب با زنجیره بلند کاملاً یونیزه می‌شوند. لازم به ذکر است که این مقدار <span class="ltr-text">pH</span> با شرایط فیزیولوژیکی (میانگین <span class="ltr-text">pH</span> محتویات روده کوچک در طول یک وعده غذایی نزدیک به <span class="ltr-text">6.0</span> است) مطابقت ندارد، اما امکان اندازه‌گیری فعالیت بهینه لیپاز را در شرایط آزمایشگاهی فراهم می‌کند. از آنجایی که محلول آزمایش لیپاز <span class="ltr-text">USP</span> حاوی استاندارد مرجع نمک‌های صفراوی <span class="ltr-text">USP (RS)</span> است، تشخیص فعالیت آنزیم مستلزم حضور هر دو لیپاز و کولیپاز در پانکرئاتین است. یک واحد <span class="ltr-text">USP</span> لیپاز به عنوان مقدار آنزیمی تعریف می‌شود که تحت شرایط تعریف شده با سوبسترای تعریف شده، <span class="ltr-text">1 µmole</span> اسید چرب در دقیقه آزاد می‌کند.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                آزمایش‌های لیپاز دیگری نیز برای نظارت بر فعالیت لیپاز در پانکرئاتین موجود است. هنگام استفاده از آزمایش‌های لیپاز با سوبستراهای غیر طبیعی، مانند تری‌بوتیرین، توصیه می‌شود تأیید شود که نمونه پانکرئاتین آزمایش شده بر روی تری‌گلیسیریدهای با زنجیره بلند نیز فعال است، به ویژه با استفاده از آزمایش لیپاز <span class="ltr-text">USP</span> با امولسیون روغن زیتون-صمغ عربی.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2"><span class="ltr-text">8.2</span> فعالیت پروتئاز</h3>
+            <p class="mb-3 leading-relaxed">
+                فعالیت پروتئولیتیک پانکرئاتین بر روی پلی‌پپتیدها و پروتئین‌ها به دلیل آنزیم‌های ذاتی تریپسین، کیموتریپسین، الاستاز، کربوکسی‌پپتیداز <span class="ltr-text">A1</span> و کربوکسی‌پپتیداز <span class="ltr-text">B</span> است. دو پروتئاز اصلی پانکراس تریپسین و کیموتریپسین هستند و همراه با الاستاز، این اندوپپتیدازها پلی‌پپتیدهای کوچک را از پروتئین‌های بزرگتر تولید می‌کنند. عمل بیشتر اگزوپپتیدازهای کربوکسی‌پپتیداز <span class="ltr-text">A1</span> و <span class="ltr-text">B</span> منجر به تولید اسیدهای آمینه منفرد در طول گوارش می‌شود.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                آزمایش اسپکتروفتومتریک <span class="ltr-text">USP</span> برای فعالیت پروتئاز از پانکرئاتین بر اساس نرخ گوارش کازئین توسط آنزیم تحت شرایط آزمایش است. فعالیت نمونه آزمایش با مقایسه آن با یک فرآورده استاندارد آنزیم با فعالیت شناخته شده محاسبه می‌شود. کازئین از آلفا (اس <span class="ltr-text">1</span>) و آلفا (اس <span class="ltr-text">2</span>)-کازئین‌ها، بتا-کازئین و کاپا-کازئین تشکیل شده است که روی باقیمانده‌های سرین فسفریله شده و فاقد پل‌های دی‌سولفیدی هستند. ساختار کازئین شبیه به ساختار پروتئین‌های کروی دناتوره شده با ساختار سوم کم یا بدون ساختار سوم است. توصیه می‌شود کاربران تامین‌کنندگان سوبسترای کازئین را برای ثبات پراکندگی ارزیابی کنند.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                هیدرولیز کازئین توسط پروتئازهای پانکراس اسیدهای آمینه منفرد و پپتیدهای کوچک را تولید می‌کند و آزادسازی آنها را می‌توان با اندازه‌گیری جذب آنها در <span class="ltr-text">280 nm</span> کمی‌سازی کرد. قبل از این اندازه‌گیری، پروتئین‌های هیدرولیز نشده و پپتیدهای بزرگ باید با یک رسوب انتخابی با اسید تری‌کلرواستیک، و سپس فیلتراسیون، جدا شوند. سپس فیلتر برای آزمایش اسپکتروفتومتریک فعالیت پروتئاز، با استفاده از تیروزین به عنوان کالیبرانت، استفاده می‌شود. یک واحد <span class="ltr-text">USP</span> فعالیت پروتئاز در مقداری از پانکرئاتین موجود است که کازئین را با نرخ اولیه هیدرولیز می‌کند به طوری که مقدار پپتیدهای آزاد شده در دقیقه و رسوب نیافته توسط اسید تری‌کلرواستیک همان جذب را در <span class="ltr-text">280 nm</span> به عنوان <span class="ltr-text">15 nmol</span> تیروزین می‌دهد.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                آزمایش‌های دیگری نیز برای نظارت بر فعالیت پروتئازهای منفرد و کل در پانکرئاتین موجود است و انتصاب واحدها برای هر سوبسترا خاص است. <span class="ltr-text">N</span>-استیل-<span class="ltr-text">L</span>-تیروزین اتیل استر معمولاً برای آزمایش‌های تیتراسیونی و اسپکتروفتومتریک (<span class="ltr-text">λ = 237 nm</span>) فعالیت کیموتریپسین استفاده می‌شود. به طور مشابه، <span class="ltr-text">N</span>-بنزوئیل-<span class="ltr-text">L</span>-آرژینین اتیل استر معمولاً برای آزمایش‌های تیتراسیونی و اسپکتروفتومتریک (<span class="ltr-text">λ = 253 nm</span>) فعالیت تریپسین استفاده می‌شود. در هر دو مورد، آزمایش تیتراسیونی بر اساس هیدرولیز استر توسط پروتئازها و آزادسازی گروه‌های اسیدی است، در حالی که آزمایش اسپکتروفتومتریک بر اساس خواص کروموژنیک این اسیدها است. تولوئن-سولفونیل-<span class="ltr-text">L</span>-آرژینین متیل استر یک سوبسترای کروموژنیک دیگر (<span class="ltr-text">λ = 247 nm</span>) است که برای اندازه‌گیری فعالیت تریپسین استفاده می‌شود. با این حال، این سوبستراها پروتئین نیستند و آزمایش‌ها شامل شکافت یک پیوند استر کربوکسیلیک به جای یک پیوند پپتیدی است.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                آزمایش‌های دیگری با استفاده از پپتیدهای کروموژنیک به عنوان سوبسترا برای بهبود اختصاصیت و حساسیت توسعه یافته‌اند. آزمایش‌های پروتئاز اختصاصی‌تر و حساس‌تری با استفاده از سوبستراهای پپتیدی مصنوعی کوتاه (باقیمانده‌های <span class="ltr-text">3–5</span> اسید آمینه) با یک گروه کروموژنیک (<span class="ltr-text">4</span>-نیتروآنیلین) که توسط یک پیوند آمیدی به انتهای کربوکسیل-ترمینال متصل شده است، توسعه یافته‌اند. گروه کروموژنیک به طور خاص توسط پروتئازها حذف می‌شود و به صورت فتومتریک اندازه‌گیری می‌شود. تغییر در جذب در <span class="ltr-text">405 nm</span> مستقیماً با فعالیت پروتئاز متناسب است. سوبستراهای اختصاصی به صورت تجاری برای تریپسین (کاربوبنزوکسی-والی-گلیسیل-آرژینین-<span class="ltr-text">4</span>-نیتریل-آنیلید استات) و کیموتریپسین (متیل-<span class="ltr-text">O</span>-سوسینوئیل-آرژینیل-پرولیل-تیروزین-<span class="ltr-text">4</span>-نیتریل-آنیلید کلرهیدرات) موجود هستند. کازئین نشانه‌گذاری شده با فلوئورسئین ایزوتیوسیانات (<span class="ltr-text">FITC</span>) نیز به عنوان یک سوبسترای پروتئاز عمومی استفاده می‌شود. آزمایش بر اساس خاموش شدن برچسب فلوئورسئین متصل به کازئین است. هنگامی که <span class="ltr-text">FITC</span>-کازئین توسط پروتئازها به پپتیدهای کوچک‌تر هضم می‌شود، فلورسانس در <span class="ltr-text">530 nm</span> (تحریک در <span class="ltr-text">485 nm</span>) افزایش می‌یابد و می‌توان آن را برای تعیین فعالیت پروتئاز اندازه‌گیری کرد.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2"><span class="ltr-text">8.3</span> فعالیت آمیلاز</h3>
+            <p class="mb-3 leading-relaxed">
+                فعالیت گلیکولیتیک پانکرئاتین به دلیل آمیلازهای نوع آلفا است. چنین آنزیم‌هایی هیدرولیز پیوندهای <span class="ltr-text">α-1,4</span>-گلوکان داخلی را در پلی‌ساکاریدهای حاوی سه یا بیشتر واحد <span class="ltr-text">D</span>-گلوکز با پیوند <span class="ltr-text">α-1,4</span> کاتالیز می‌کنند و مخلوطی از مالتوز و گلوکز را تولید می‌کنند. دو ایزوفرم اصلی (<span class="ltr-text">I</span> و <span class="ltr-text">II</span>) آمیلازهای خوک خواص آنزیمی یکسانی دارند. در دهه‌های اخیر، چندین روش برای آزمایش فعالیت آمیلاز توسعه یافته‌اند؛ بسیاری از اینها بر اساس تشخیص هیدرولیز نشاسته هستند، زیرا این پلیمر سوبسترای طبیعی آمیلاز است. نشاسته از دو نوع مولکول، آمیلوز (معمولاً <span class="ltr-text">20%–30%</span>) و آمیلوپکتین (معمولاً <span class="ltr-text">70%–80%</span>) تشکیل شده است. هر دو پلیمر حاصل از مونتاژ واحدهای گلوکز متصل از طریق پیوندهای <span class="ltr-text">α-1,4</span>-گلوکان هستند؛ علاوه بر این، در آمیلوپکتین، تقریباً <span class="ltr-text">1</span> باقیمانده از هر <span class="ltr-text">20</span> یا بیشتر، همچنین با پیوند <span class="ltr-text">α-(1→6)</span> متصل است و نقاط شاخه را تشکیل می‌دهد.
+            </p>
+            <p class="mb-3 leading-relaxed">
+                آزمایش آمیلاز <span class="ltr-text">USP</span> در مونوگراف پانکرئاتین بر اساس نرخ گوارش نشاسته توسط آنزیم است و فعالیت نمونه آزمایش با مقایسه آن با یک فرآورده استاندارد آنزیم با فعالیت شناخته شده محاسبه می‌شود. نشاسته توسط آمیلاز هیدرولیز می‌شود؛ گروه‌های کاهنده حاصل از هیدرولیز با ید در محلول قلیایی واکنش می‌دهند؛ و ید اضافی با تیوسولفات تیتر می‌شود. یک واحد <span class="ltr-text">USP</span> فعالیت آمیلاز به عنوان مقدار پانکرئاتین تعریف می‌شود که نشاسته را با نرخ اولیه هیدرولیز می‌کند به طوری که <span class="ltr-text">0.16 µEq</span> از پیوند گلیکوزیدی در دقیقه تحت شرایط آزمایش هیدرولیز شود.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4"><span class="ltr-text">9.</span> پیوست <span class="ltr-text">1</span>: کتاب‌شناسی مقرراتی</h2>
+            <ul class="list-disc pr-5 leading-relaxed">
+                <li><span class="ltr-text">Code of Federal Regulations, title 9 part 113 section 46. Detection of cytopathogenic and/or hemadsorbing agents. US Government Printing Office; 2006. p. 640. Available from: <a href="http://www.gpo.gov/fdsys/pkg/CFR-2006-title9-vol1/pdf/CFR-2006-title9-vol1-chapI-subchapE.pdf" class="text-blue-600 hover:underline" target="_blank">http://www.gpo.gov/fdsys/pkg/CFR-2006-title9-vol1/pdf/CFR-2006-title9-vol1-chapI-subchapE.pdf</a></span></li>
+                <li><span class="ltr-text">Code of Federal Regulations, title 9 part 113 section 47. Detection of extraneous viruses by the fluorescent antibody technique. US Government Printing Office; 2006. p. 640–641. Available from: <a href="http://www.gpo.gov/fdsys/pkg/CFR-2006-title9-vol1/pdf/CFR-2006-title9-vol1-chapI-subchapE.pdf" class="text-blue-600 hover:underline" target="_blank">http://www.gpo.gov/fdsys/pkg/CFR-2006-title9-vol1/pdf/CFR-2006-title9-vol1-chapI-subchapE.pdf</a></span></li>
+                <li><span class="ltr-text">Code of Federal Regulations, title 9 part 113 section 53. Requirements for ingredients of animal origin used for production of biologics. US Government Printing Office; 2006. p. 644–645. Available from: <a href="http://www.gpo.gov/fdsys/pkg/CFR-2006-title9-vol1/pdf/CFR-2006-title9-vol1-chapI-subchapE.pdf" class="text-blue-600 hover:underline" target="_blank">http://www.gpo.gov/fdsys/pkg/CFR-2006-title9-vol1/pdf/CFR-2006-title9-vol1-chapI-subchapE.pdf</a></span></li>
+                <li><span class="ltr-text">EMEA. CHMP/BWP/398498/2005. Guideline on virus safety evaluation of biotechnological investigational medicinal products. 24 Jul 2008. p. 1–9. Available from: <a href="http://www.ema.europa.eu/docs/en_GB/document_library/Scientific_guideline/2009/09/WC500003795.pdf" class="text-blue-600 hover:underline" target="_blank">http://www.ema.europa.eu/docs/en_GB/document_library/Scientific_guideline/2009/09/WC500003795.pdf</a></span></li>
+                <li><span class="ltr-text">EMEA. CHMP/EWP/9147/2008-corr*. Guideline on the clinical development of medicinal products for the treatment of cystic fibrosis. 22 Oct 2009. p. 1–27. Available from: <a href="http://www.ema.europa.eu/docs/en_GB/document_library/Scientific_guideline/2009/12/WC500017055.pdf" class="text-blue-600 hover:underline" target="_blank">http://www.ema.europa.eu/docs/en_GB/document_library/Scientific_guideline/2009/12/WC500017055.pdf</a></span></li>
+                <li><span class="ltr-text">FDA. Guidance for industry. Exocrine pancreatic insufficiency drug products—submitting NDAs, April 2006. Available from: <a href="http://www.fda.gov/downloads/Drugs/GuidanceComplianceRegulatoryInformation/Guidances/ucm071651.pdf" class="text-blue-600 hover:underline" target="_blank">http://www.fda.gov/downloads/Drugs/GuidanceComplianceRegulatoryInformation/Guidances/ucm071651.pdf</a></span></li>
+                <li><span class="ltr-text">FDA. Guidance for industry. ICH Q7A: good manufacturing practice guidance for active pharmaceutical ingredients. Aug 2001. p. 1–52. Available from: <a href="http://www.fda.gov/downloads/Drugs/.../Guidances/ucm073497.pdf" class="text-blue-600 hover:underline" target="_blank">http://www.fda.gov/downloads/Drugs/.../Guidances/ucm073497.pdf</a></span></li>
+                <li><span class="ltr-text">FDA. Guidance for industry. ICHQ10 pharmaceutical quality system. Apr 2009. p. 1–19. Available from: <a href="http://www.fda.gov/downloads/Drugs/Guidances/ucm073517.pdf" class="text-blue-600 hover:underline" target="_blank">http://www.fda.gov/downloads/Drugs/Guidances/ucm073517.pdf</a></span></li>
+                <li><span class="ltr-text">ICH. ICH harmonised tripartite guideline. Viral safety evaluation of biotechnology products derived from cell lines of human or animal origin Q5A (R1). 23 Sep 1999. p. 1–27. Available from: <a href="http://www.ich.org/fileadmin/Public_Web_Site/ICH_Products/Guidelines/Quality/Q5A_R1/Step4/Q5A_R1__Guideline.pdf" class="text-blue-600 hover:underline" target="_blank">http://www.ich.org/fileadmin/Public_Web_Site/ICH_Products/Guidelines/Quality/Q5A_R1/Step4/Q5A_R1__Guideline.pdf</a></span></li>
+                <li><span class="ltr-text">Uniprot Consortium. Available from: <a href="www.uniprot.org" class="text-blue-600 hover:underline" target="_blank">www.uniprot.org</a></span></li>
+            </ul>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4"><span class="ltr-text">10.</span> پیوست <span class="ltr-text">2</span>: کتاب‌شناسی ادبیات</h2>
+            <ul class="list-disc pr-5 leading-relaxed">
+                <li><span class="ltr-text">Auld DS. Carboxypeptidase A. In: Barrett AJ, Rawlings ND, Woessner JF, et al., editors. Handbook of proteolytic enzymes. 2nd ed. Amsterdam: Elsevier; 2004. p. 812–821.</span></li>
+                <li><span class="ltr-text">Auld DS. Carboxypeptidase A2. In: Barrett AJ, Rawlings ND, Woessner JF, et al., editors. Handbook of proteolytic enzymes. 2nd ed. Amsterdam: Elsevier; 2004. p. 821–851.</span></li>
+                <li><span class="ltr-text">Avilés FX, Vendrell J. Carboxypeptidase B. In: Barrett AJ, Rawlings ND, Woessner JF, et al., editors. Handbook of proteolytic enzymes. 2nd ed. Amsterdam: Elsevier; 2004. p. 831–833.</span></li>
+                <li><span class="ltr-text">Bieth JG. Pancreatic elastase. In: Barrett AJ, Rawlings ND, Woessner JF, et al., editors. Handbook of proteolytic enzymes. 2nd ed. Amsterdam: Elsevier; 2004. p. 1504–1508.</span></li>
+                <li><span class="ltr-text">Bieth JG. Pancreatic elastase II. In: Barrett AJ, Rawlings ND, Woessner JF, et al., editors. Handbook of proteolytic enzymes. 2nd ed. Amsterdam: Elsevier; 2004. p. 1508–1509.</span></li>
+                <li><span class="ltr-text">Bieth JG. Pancreatic endopeptidase E. In: Barrett AJ, Rawlings ND, Woessner JF, et al., editors. Handbook of proteolytic enzymes. 2nd ed. Amsterdam: Elsevier; 2004. p. 1510–1511.</span></li>
+                <li><span class="ltr-text">Borgström B. On the interactions between pancreatic lipase and colipase and the substrate, and the importance of bile salts. J Lipid Res. 1975;16(6):411–417.</span></li>
+                <li><span class="ltr-text">Gráf L, et al. Chymotrypsin. In: Barrett AJ, Rawlings ND, Woessner JF, editors. Handbook of proteolytic enzymes. 2nd ed. Amsterdam: Elsevier; 2004. p. 1495–1501.</span></li>
+                <li><span class="ltr-text">Lowe ME. The triglyceride lipases of the pancreas. J Lipid Res. 2002;43(2):2007–2016.</span></li>
+                <li><span class="ltr-text">Desnuelle P, Sjöström H, Noren O, editors. In: Molecular and cellular basis of digestion. Amsterdam: Elsevier; 1986. p. 539.</span></li>
+                <li><span class="ltr-text">Peschke GJ. Active components and galenic aspects of enzyme preparations. In: Lankisch PG, editor. Pancreatic enzymes in health and disease. 1st ed. Berlin: Springer-Verlag:1991. p. 55–64.</span></li>
+                <li><span class="ltr-text">Verger R. Pancreatic lipase. In: Lipases. Borgström B, Borockman HL, editors. Amsterdam: Elsevier; 1984. p. 84–150. [review]</span></li>
+                <li><span class="ltr-text">Verger R, de Haas GH, Sarda L, Desnuelle P. Purification from porcine pancreas of two molecular species with lipase activity. Biochim Biophys Acta. 1969;188(2):272–282.</span></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

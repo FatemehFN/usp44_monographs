@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تجزیه و تحلیل الیگوساکارید</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">۲۱۲: تجزیه و تحلیل الیگوساکارید</h1>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+            <p class="mb-4">
+                تجزیه و تحلیل ترکیب الیگوساکارید متصل به آسپاراژین (<span class="ltr-text">Asn-</span>) (که با نام الیگوساکارید <span class="ltr-text">N</span>-متصل یا <span class="ltr-text">N</span>-گلیکان نیز شناخته می‌شود) از پروتئین‌های درمانی نوترکیب انتخاب‌شده برای شناسایی محصول یا مشخصات انتشار این پروتئین‌ها ضروری شده است. برای کسب اطلاعات در مورد شناسایی و ارزیابی گلیکوزیلاسیون پروتئین، به بخش «تجزیه و تحلیل گلیکوپروتئین و گلیکان — ملاحظات عمومی» <a href="1084.html" class="text-blue-600 hover:underline" target="_blank">۱۰۸۴</a> مراجعه کنید. فصل <a href="1084.html" class="text-blue-600 hover:underline" target="_blank">۱۰۸۴</a> استراتژی‌های تحلیلی عمومی را پوشش می‌دهد و همچنین معیارهای انتخاب روش‌های مناسب برای چالش‌های تحلیلی خاص را برجسته می‌کند، بدین ترتیب چارچوبی برای این فصل فراهم می‌آورد. این فصل بر تجزیه و تحلیل الیگوساکاریدهای <span class="ltr-text">N</span>-متصل که از پروتئین‌های درمانی نوترکیب گلیکوزیله شده آزاد می‌شوند، تمرکز دارد. بنابراین، این فصل <span class="ltr-text">۱</span>) یک روش عمومی برای آزادسازی آنزیمی <span class="ltr-text">N</span>-گلیکان‌ها با استفاده از پپتید <span class="ltr-text">N</span>-گلیکوزیداز <span class="ltr-text">F</span> (<span class="ltr-text">PNGase F</span>)، <span class="ltr-text">۲</span>) دو رویکرد مختلف برای نشان‌گذاری فلوروفور الیگوساکاریدهای <span class="ltr-text">N</span>-متصل آزادشده و <span class="ltr-text">۳</span>) پنج روش تحلیلی بر اساس جداسازی کروماتوگرافی و الکتروفورزی، و همچنین معیارهای عملکرد برای جداسازی را ارائه می‌دهد. استراتژی‌های تحلیلی جایگزین در <a href="1084.html" class="text-blue-600 hover:underline" target="_blank">۱۰۸۴</a> مورد بحث قرار گرفته‌اند. اگرچه روش‌های این فصل معتبر هستند، اما باید با محصول خاص فردی تأیید شوند (به بخش «تأیید روش‌های فارماکوپه‌ای» <a href="1226.html" class="text-blue-600 hover:underline" target="_blank">۱۲۲۶</a> مراجعه کنید). علاوه بر این، هنگامی که روش برای یک محصول خاص بهینه‌سازی می‌شود [به عنوان مثال، خارج از محدودیت‌های پارامتری مجاز تعریف شده در «کروماتوگرافی» <a href="621.html" class="text-blue-600 hover:underline" target="_blank">۶۲۱</a>، «مناسب بودن سیستم» (به «اعتبارسنجی روش‌های فارماکوپه‌ای» <a href="1225.html" class="text-blue-600 hover:underline" target="_blank">۱۲۲۵</a> مراجعه کنید)]، اعتبار سنجی لازم است. تجزیه و تحلیل داده‌ها، کمی‌سازی، و مشخصات انتشار دسته محصول، که انتظار می‌رود مختص محصول باشند، در تک‌نگاری‌های محصول فردی یافت خواهند شد؛ بنابراین، این جنبه‌ها در این فصل پوشش داده نمی‌شوند.
+            </p>
+            <p class="mb-4">
+                نشان‌گذاری الیگوساکاریدها با یک فلوروفور قبل از تجزیه و تحلیل یک مزیت مهم در افزایش تشخیص الیگوساکاریدها در طول جداسازی فراهم می‌کند، زیرا الیگوساکاریدها جذب <span class="ltr-text">UV</span> یا نور مرئی ندارند یا جذب کمی دارند و گروه‌های فلوروفور مهمی نیز ندارند. این فصل دو روش مختلف برای نشان‌گذاری فلوروفور الیگوساکاریدها را شرح می‌دهد: مشتق‌سازی الیگوساکاریدها با استفاده از <span class="ltr-text">۲</span>-آمینوبنزامید (<span class="ltr-text">2-AB</span>) برای جداسازی با کروماتوگرافی مایع، و نشان‌گذاری الیگوساکاریدها با <span class="ltr-text">۸</span>-آمیناپیرن-<span class="ltr-text">۱،۳،۶</span>-تری‌سولفونیک اسید (<span class="ltr-text">APTS</span>) برای جداسازی با الکتروفورز مویین (<span class="ltr-text">CE</span>). اگرچه تشخیص الکتروشیمیایی (تشخیص آمپرومتری پالسی یا تشخیص الکتروشیمیایی پالسی) نیز در تجزیه و تحلیل الیگوساکاریدها با استفاده از شستشوی پایه قوی استفاده می‌شود، اما روش تشخیص الکتروشیمیایی حساسیت کمتری دارد و نسبت نویز به سیگنال بالاتری دارد. بنابراین، این روش تشخیص در این فصل مورد بررسی قرار نمی‌گیرد.
+            </p>
+            <p class="mb-4">
+                بسیاری از روش‌های کروماتوگرافی و الکتروفورز مختلف برای تجزیه و تحلیل الیگوساکاریدها توسعه یافته‌اند و روش‌های شرح داده شده در این فصل با موفقیت برای این منظور استفاده شده‌اند. انتخاب روش‌های مورد بحث به منظور انعکاس رایج‌ترین و گسترده‌ترین رویکردهای مورد استفاده برای حمایت از داروهای بیولوژیکی گلیکوزیله نوترکیب فعلی در تجارت است. این روش‌های تحلیلی شامل کروماتوگرافی مایع فاز نرمال یا برهم‌کنش آبدوست (<span class="ltr-text">HILIC</span>)، کروماتوگرافی مایع تبادل آنیونی با کارایی بالا (<span class="ltr-text">HPAEC</span>) و <span class="ltr-text">CE</span> می‌شوند. چندین حالت کروماتوگرافی دیگر که الیگوساکاریدها را بر اساس اندازه، شکل و قطبیت جدا می‌کنند نیز معمولاً برای جداسازی الیگوساکاریدها استفاده می‌شوند، اما این حالت‌های کروماتوگرافی دیگر در این فصل مورد بحث قرار نمی‌گیرند. اصول عمومی کروماتوگرافی در <a href="621.html" class="text-blue-600 hover:underline" target="_blank">۶۲۱</a> پوشش داده شده است، بنابراین <a href="621.html" class="text-blue-600 hover:underline" target="_blank">۶۲۱</a> باید در این زمینه در نظر گرفته شود.
+            </p>
+            <p class="mb-4">
+                استانداردهای مرجع <span class="ltr-text">USP</span> (<span class="ltr-text">RS</span>) برای ارزیابی مناسب بودن سیستم برای این روش‌های تحلیلی توسعه یافته‌اند:
+            </p>
+            <ul class="list-disc list-inside mb-4">
+                <li><span class="ltr-text">USP Oligosaccharide System Suitability Mixture A RS</span> شامل مخلوطی از الیگوساکاریدهای <span class="ltr-text">N</span>-متصل دو شاخه‌ای جزئی سیالیله، جزئی گالاکتوزیله و جزئی فوکوزیله است که از ایمونوگلوبولین <span class="ltr-text">G</span> چندکلونال انسانی (<span class="ltr-text">IgG</span>) توسط <span class="ltr-text">PNGase F</span> آزاد شده‌اند.</li>
+                <li><span class="ltr-text">USP Oligosaccharide System Suitability Mixture B RS</span> شامل مخلوطی از الیگوساکاریدهای <span class="ltr-text">N</span>-متصل با مانوز بالا با مقادیر ناچیزی از زنجیره‌های هیبریدی است که از ریبونوکلئاز <span class="ltr-text">B</span> گاوی (<span class="ltr-text">RNase B</span>) توسط <span class="ltr-text">PNGase F</span> آزاد شده‌اند.</li>
+                <li><span class="ltr-text">USP Oligosaccharide System Suitability Mixture C RS</span> مخلوطی از الیگوساکاریدهای <span class="ltr-text">N</span>-متصل دو، سه و چهار شاخه‌ای با سیالیلاسیون متغیر با یا بدون فوکوز (<span class="ltr-text">Fuc</span>؛ همچنین حاوی ساختارهای نوع <span class="ltr-text">Lex</span>) است؛ این مخلوط از α۱-اسید گلیکوپروتئین انسانی توسط <span class="ltr-text">PNGase F</span> آزاد شده است.</li>
+                <li><span class="ltr-text">USP Oligosaccharide System Suitability Mixture D RS</span> مخلوطی از ساختارهای پیچیده سیالیله دو و سه شاخه‌ای با یک اسید سیالیک اضافی بر روی یکی از ساختارهای سه شاخه‌ای است؛ این مخلوط از فتوئین گاوی توسط <span class="ltr-text">PNGase F</span> آزاد شده است.</li>
+            </ul>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">نمای کلی روش‌های تحلیلی</h2>
+            <p class="mb-4">
+                جدول <span class="ltr-text">۱</span> کاربردها و اصول جداسازی روش‌های تحلیلی موجود در این فصل را نشان می‌دهد. انتخاب <span class="ltr-text">RS</span> مناسب به محتوای گلیکان مورد انتظار محصول در حال تجزیه و تحلیل بستگی دارد.
+            </p>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th>روش‌های تحلیلی</th>
+                        <th>نوع الیگوساکاریدهای <span class="ltr-text">N</span>-متصل برای جداسازی</th>
+                        <th>استانداردهای مرجع <span class="ltr-text">USP</span> قابل کاربرد</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">
+                            روش کروماتوگرافی مایع فاز نرمال/<span class="ltr-text">HILIC</span> <span class="ltr-text">۱</span>:
+                            <ul class="list-disc list-inside text-right" dir="rtl">
+                                <li class="text-right">ستون: <span class="ltr-text">2.0-mm × 15-cm</span>؛ پرکننده <span class="ltr-text">3-µm L68</span></li>
+                                <li class="text-right">پیک‌های الیگوساکارید بیشتر در مقایسه با روش <span class="ltr-text">HILIC</span> <span class="ltr-text">۲</span></li>
+                                <li class="text-right">فاز متحرک طولانی‌تر با گرادیان کم‌عمق در مقایسه با روش <span class="ltr-text">HILIC</span> <span class="ltr-text">۲</span></li>
+                                <li class="text-right">حساسیت افزایش‌یافته برای اندازه نمونه کوچک‌تر</li>
+                            </ul>
+                        </td>
+                        <td>زنجیره‌های دو شاخه‌ای نسبتاً ساده با سطوح کم یا بدون ساختارهای سیالیله، پس از نشان‌گذاری <span class="ltr-text">2-AB</span></td>
+                        <td><span class="ltr-text">USP Oligosaccharide System Suitability Mixture A RS</span></td>
+                    </tr>
+                    <tr>
+                        <td>زنجیره‌های با مانوز بالا، پس از نشان‌گذاری <span class="ltr-text">2-AB</span></td>
+                        <td><span class="ltr-text">USP Oligosaccharide System Suitability Mixture B RS</span></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">
+                            روش کروماتوگرافی مایع فاز نرمال/<span class="ltr-text">HILIC</span> <span class="ltr-text">۲</span>:
+                            <ul class="list-disc list-inside text-right" dir="rtl">
+                                <li class="text-right">ستون: <span class="ltr-text">4.6-mm × 25-cm</span>؛ پرکننده <span class="ltr-text">5-µm L68</span></li>
+                                <li class="text-right">پیک‌های الیگوساکارید کمتر در مقایسه با روش <span class="ltr-text">HILIC</span> <span class="ltr-text">۱</span></li>
+                                <li class="text-right">فاز متحرک کوتاه‌تر با گرادیان کم‌عمق کمتر در مقایسه با روش <span class="ltr-text">HILIC</span> <span class="ltr-text">۱</span></li>
+                            </ul>
+                        </td>
+                        <td>زنجیره‌های دو شاخه‌ای نسبتاً ساده با سطوح کم یا بدون ساختارهای سیالیله، پس از نشان‌گذاری <span class="ltr-text">2-AB</span></td>
+                        <td><span class="ltr-text">USP Oligosaccharide System Suitability Mixture A RS</span></td>
+                    </tr>
+                    <tr>
+                        <td>زنجیره‌های با مانوز بالا، پس از نشان‌گذاری <span class="ltr-text">2-AB</span></td>
+                        <td><span class="ltr-text">USP Oligosaccharide System Suitability Mixture B RS</span></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">
+                            روش <span class="ltr-text">HPAEC</span> <span class="ltr-text">۱</span>
+                            <ul class="list-disc list-inside text-right" dir="rtl">
+                                <li class="text-right">ستون محافظ: <span class="ltr-text">4.0-mm × 5-cm</span>؛ پرکننده <span class="ltr-text">10-µm L46</span></li>
+                                <li class="text-right">ستون: <span class="ltr-text">4.0-mm × 25-cm</span>؛ پرکننده <span class="ltr-text">10-µm L46</span></li>
+                                <li class="text-right">فاز متحرک: <span class="ltr-text">0–75 mM</span> سدیم استات در <span class="ltr-text">0.15 N</span> سدیم هیدروکسید ایزوکراتیک</li>
+                                <li class="text-right">گزینش‌پذیری متفاوت از روش‌های <span class="ltr-text">HILIC 1</span> و <span class="ltr-text">2</span> با توجه به اندازه و ترکیب الیگوساکارید</li>
+                            </ul>
+                        </td>
+                        <td>زنجیره‌های دو شاخه‌ای نسبتاً ساده با سطوح کم یا بدون ساختارهای سیالیله، پس از نشان‌گذاری <span class="ltr-text">2-AB</span></td>
+                        <td><span class="ltr-text">USP Oligosaccharide System Suitability Mixture A RS</span></td>
+                    </tr>
+                    <tr>
+                        <td>زنجیره‌های با مانوز بالا، پس از نشان‌گذاری <span class="ltr-text">2-AB</span></td>
+                        <td><span class="ltr-text">USP Oligosaccharide System Suitability Mixture B RS</span></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">
+                            روش <span class="ltr-text">HPAEC</span> <span class="ltr-text">۲</span>
+                            <ul class="list-disc list-inside text-right" dir="rtl">
+                                <li class="text-right">ستون محافظ: <span class="ltr-text">4.0-mm × 5-cm</span>؛ پرکننده <span class="ltr-text">10-µm L46</span></li>
+                                <li class="text-right">ستون: <span class="ltr-text">4.0-mm × 25-cm</span>؛ پرکننده <span class="ltr-text">10-µm L46</span></li>
+                                <li class="text-right">فاز متحرک: <span class="ltr-text">150–450 mM</span> سدیم استات در <span class="ltr-text">0.15 N</span> سدیم هیدروکسید ایزوکراتیک</li>
+                                <li class="text-right">مناسب برای جداسازی الیگوساکاریدهای <span class="ltr-text">N</span>-متصل باردار</li>
+                            </ul>
+                        </td>
+                        <td>الیگوساکاریدهای <span class="ltr-text">N</span>-متصل دو، سه و چهار شاخه‌ای با سیالیلاسیون متغیر، پس از نشان‌گذاری <span class="ltr-text">2-AB</span></td>
+                        <td><span class="ltr-text">USP Oligosaccharide System Suitability Mixture C RS</span></td>
+                    </tr>
+                    <tr>
+                        <td>ساختارهای پیچیده سیالیله دو و سه شاخه‌ای با یک اسید سیالیک اضافی بر روی یکی از ساختارهای سه شاخه‌ای، پس از نشان‌گذاری <span class="ltr-text">2-AB</span></td>
+                        <td><span class="ltr-text">USP Oligosaccharide System Suitability Mixture D RS</span></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">
+                            الکتروفورز مویین
+                            <ul class="list-disc list-inside text-right" dir="rtl">
+                                <li class="text-right">مناسب برای الیگوساکاریدهای نشان‌گذاری شده با <span class="ltr-text">APTS</span></li>
+                                <li class="text-right">مویین: قطر داخلی <span class="ltr-text">50-µm</span> با طول کل <span class="ltr-text">50 cm</span> و طول جداسازی <span class="ltr-text">40 cm</span></li>
+                            </ul>
+                        </td>
+                        <td>زنجیره‌های دو شاخه‌ای نسبتاً ساده با سطوح کم یا بدون ساختارهای سیالیله، پس از نشان‌گذاری <span class="ltr-text">APTS</span></td>
+                        <td><span class="ltr-text">USP Oligosaccharide System Suitability Mixture A RS</span></td>
+                    </tr>
+                    <tr>
+                        <td>زنجیره‌های با مانوز بالا، پس از نشان‌گذاری <span class="ltr-text">APTS</span></td>
+                        <td><span class="ltr-text">USP Oligosaccharide System Suitability Mixture B RS</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آماده‌سازی نمونه</h2>
+            <p class="mb-4">
+                برای اختصارات و ساختارهای گلیکان‌ها به پیوست (جدول <span class="ltr-text">۱۷</span>) مراجعه کنید. آماده‌سازی نمونه برای تمام روش‌های بعدی است.
+            </p>
+            <p class="mb-4">
+                در حالت ایده‌آل، نمونه‌ها باید عاری از نمک‌ها، مواد کمکی و سایر مواد حامل باشند که ممکن است در تجزیه و تحلیل تداخل ایجاد کنند. این امر می‌تواند با <span class="ltr-text">۱</span>) دیالیز در برابر آب، یک بافر مناسب یا یک بافر فرار با استفاده از یک غشای مناسب، <span class="ltr-text">۲</span>) به دام انداختن نمونه بر روی یک کارتریج استخراج فاز جامد (<span class="ltr-text">SPE</span>) و سپس شستشوی نمک‌ها و مواد کمکی و شستشوی نمونه مورد نیاز، یا <span class="ltr-text">۳</span>) اولترافیلتراسیون با استفاده از یک غشای مناسب انجام شود.
+            </p>
+            <p class="mb-4">
+                [<span class="ltr-text">NOTE</span>—علاوه بر <span class="ltr-text">RS</span>، یک نمونه کنترل با پروفایل گلیکان شناخته‌شده باید در روش کلی گنجانده شود تا عملکرد صحیح تجزیه و تحلیل را تأیید کند. یک کنترل بلانک واکنش که فقط حاوی ماتریکس بافر نمونه گلیکوپروتئین است نیز می‌تواند در روش کلی گنجانده شود.]
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">• آزادسازی آنزیمی <span class="ltr-text">N</span>-گلیکان‌ها</h3>
+            <p class="mb-4">
+                [<span class="ltr-text">NOTE</span>—روش زیر یک روش عمومی است که باید برای محصولات فردی بسته به مقدار گلیکوپروتئین مورد هضم و ساختارهای گلیکان، به ویژه بر اساس نسبت پروتئین به گلیکان در مولکول و دسترسی قندها، بهینه‌سازی شود.]
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش <span class="ltr-text">۱</span> برای جداسازی کروماتوگرافی</h4>
+            <p class="mb-4">
+                <strong>بافر واکنش آنزیم:</strong> <span class="ltr-text">50 mM</span> سدیم فسفات <span class="ltr-text">pH 7.5</span> یا <span class="ltr-text">15 mM</span> تریس(هیدروکسی‌متیل)-آمینومتان، و با اسید هیدروکلریک تا <span class="ltr-text">pH 7.0</span> تنظیم شود.
+            </p>
+            <p class="mb-4">
+                <strong>هضم با <span class="ltr-text">PNGase F</span>:</strong> <span class="ltr-text">0.1–2.25 mg</span> گلیکوپروتئین را به یک ویال منتقل کنید و با بافر واکنش آنزیم به حجم نهایی <span class="ltr-text">30–100 µL</span> تنظیم کنید. <span class="ltr-text">PNGase F</span> را به نمونه گلیکوپروتئین با نسبت <span class="ltr-text">0.5–15 units</span> از <span class="ltr-text">PNGase F</span> به <span class="ltr-text">0.1 mg</span> گلیکوپروتئین اضافه کنید. در دمای <span class="ltr-text">37°</span> به مدت <span class="ltr-text">12–24 h</span> انکوبه کنید. به مدت حدود <span class="ltr-text">5 min</span> در دمای اتاق سرد کنید. به آرامی ورتکس کنید و به طور کوتاه سانتریفیوژ کنید. [<span class="ltr-text">NOTE</span>—یک واحد از <span class="ltr-text">PNGase F</span> به عنوان مقدار آنزیم مورد نیاز برای کاتالیز آزادسازی الیگوساکاریدهای <span class="ltr-text">N</span>-متصل از <span class="ltr-text">1.0 nmol</span> ریبونوکلئاز <span class="ltr-text">B</span> دناتوره شده در دقیقه در <span class="ltr-text">pH 7.5</span> در <span class="ltr-text">37°</span> تعریف می‌شود و برابر با <span class="ltr-text">1 IUB milliunit</span> است. هضم کامل توسط <span class="ltr-text">PNGase F</span> را می‌توان با مشاهده تغییر حرکت پروتئین‌های دگلیکوزیله شده بر روی الکتروفورز ژل پلی‌اکریل‌آمید سدیم دودسیل سولفات (<span class="ltr-text">SDS-PAGE</span>)، و به دنبال آن رنگ‌آمیزی با <span class="ltr-text">Coomassie Blue</span> یا بر روی الکتروفورز ژل مویین <span class="ltr-text">SDS</span> (<span class="ltr-text">SDS-CGE</span>)، همانطور که با کاهش جرم تقریباً <span class="ltr-text">2 kDa</span> به ازای هر زنجیره گلیکان شکافته شده نشان داده می‌شود، ارزیابی کرد.]
+            </p>
+            <p class="mb-4">
+                دو روش برای انجام جداسازی گلیکان‌های آزاد شده از گلیکوپروتئین در زیر شرح داده شده است.
+            </p>
+            <p class="mb-4">
+                <strong>روش <span class="ltr-text">۱</span>، با استفاده از غشای اولترافیلتراسیون با حد قطع وزن مولکولی <span class="ltr-text">30 kDa</span>:</strong><sup><span class="ltr-text">1, 2</span></sup> [<span class="ltr-text">NOTE</span>—غشاهای اولترافیلتراسیون با حد قطع وزن مولکولی پایین‌تر ممکن است برای پروتئین‌های کمتر از <span class="ltr-text">150 kDa</span> استفاده شوند.]
+            </p>
+            <p class="mb-4">
+                مقادیر ناچیز گلیسیرین را با سانتریفیوژ در <span class="ltr-text">11,000 × g</span> و شستشوی غشا با <span class="ltr-text">0.5 mL</span> آب حذف کنید. تراوش‌کرده را دور بریزید. <span class="ltr-text">0.1 mL</span> آب به مخزن نمونه اضافه کنید و سپس نمونه گلیکوپروتئین هضم شده را به مخزن اضافه کنید. ویال واکنش را با <span class="ltr-text">0.1 mL</span> آب بشویید و به مخزن نمونه اضافه کنید. در <span class="ltr-text">11,000 × g</span> سانتریفیوژ کنید و تراوش‌کرده را جمع‌آوری کنید. مخزن نمونه را دو بار با استفاده از <span class="ltr-text">0.1 mL</span> آب برای هر شستشو بشویید و تراوش‌کرده را جمع‌آوری کنید. تراوش‌کرده‌ها (تقریباً <span class="ltr-text">0.5 mL</span>) را ترکیب کرده و نمونه‌ها را با استفاده از اواپراتور سانتریفیوژی بدون حرارت، به خشکی کامل برسانید.
+            </p>
+            <p class="mb-4">
+                <strong>روش <span class="ltr-text">۲</span>، با استفاده از کارتریج <span class="ltr-text">SPE</span> فاز معکوس:</strong><sup><span class="ltr-text">3</span></sup> <span class="ltr-text">2.0 mL</span> متانول را به یک سرنگ اضافه کنید، سرنگ را به کارتریج وصل کنید و از پیستون سرنگ برای عبور متانول به فاضلاب استفاده کنید. <span class="ltr-text">6.0 mL</span> از <span class="ltr-text">5% (v/v)</span> اسید استیک تهیه شده در آب را به یک سرنگ اضافه کنید. سرنگ را به کارتریج وصل کنید و از پیستون سرنگ برای عبور محلول اسید استیک به فاضلاب استفاده کنید. نمونه هضم شده را به آرامی بر روی یک کارتریج مجزا اعمال کنید. <span class="ltr-text">0.5 mL</span> از <span class="ltr-text">5% (v/v)</span> اسید استیک را به یک سرنگ <span class="ltr-text">1-mL</span> اضافه کنید، سرنگ را به کارتریج وصل کنید و از پیستون سرنگ برای عبور اسید استیک به فاضلاب استفاده کنید. <span class="ltr-text">1.5 mL</span> از <span class="ltr-text">5% (v/v)</span> اسید استیک را به یک سرنگ <span class="ltr-text">2-</span> تا <span class="ltr-text">3-mL</span> اضافه کنید. سرنگ را به کارتریج وصل کنید و از پیستون سرنگ برای عبور محلول اسید استیک استفاده کنید، محلول شستشو دهنده را در یک لوله <span class="ltr-text">1.5-mL</span> جمع‌آوری کنید. نمونه‌ها را با استفاده از اواپراتور سانتریفیوژی بدون حرارت، به خشکی کامل برسانید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش <span class="ltr-text">۲</span> برای جداسازی با الکتروفورز مویین</h4>
+            <p class="mb-4">
+                <strong>بافر واکنش آنزیم:</strong> <span class="ltr-text">50 mM</span> سدیم فسفات، <span class="ltr-text">pH 7.5</span>
+            </p>
+            <p class="mb-4">
+                <strong>هضم با <span class="ltr-text">PNGase F</span>:</strong> <span class="ltr-text">2 µL</span> از <span class="ltr-text">PNGase F</span> (<span class="ltr-text">5 units/µL</span>) را به <span class="ltr-text">50 µg</span> نمونه گلیکوپروتئین اضافه کنید و با بافر واکنش آنزیم به حجم نهایی <span class="ltr-text">50 µL</span> تنظیم کنید. در دمای <span class="ltr-text">37°</span> به مدت <span class="ltr-text">18 h</span> انکوبه کنید. الیگوساکاریدهای آزاد شده را با سانتریفیوژ با استفاده از فیلتر سانتریفیوژی با حد قطع وزن مولکولی <span class="ltr-text">10,000</span> جدا کنید.<sup><span class="ltr-text">2</span></sup> در یک اواپراتور خلأ سانتریفیوژی، الیگوساکاریدهای آزاد شده را تا خشکی کامل خشک کنید.
+            </p>
+            <p class="mb-4">
+                [<span class="ltr-text">NOTE</span>—برای انتخاب <span class="ltr-text">USP RS</span> و نشان‌گذاری مناسب، دستورالعمل‌های لیست شده در جدول <span class="ltr-text">۱</span> را دنبال کنید.]
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">• نشان‌گذاری <span class="ltr-text">2-AB</span><sup><span class="ltr-text">4</span></sup> برای جداسازی با کروماتوگرافی مایع</h3>
+            <p class="mb-4">
+                <strong>محلول <span class="ltr-text">A</span>:</strong> اسید استیک گلاسیال و دی‌متیل سولفوکسید (<span class="ltr-text">3:7, v/v</span>) را مخلوط کنید.
+            </p>
+            <p class="mb-4">
+                <strong>محلول <span class="ltr-text">B</span>:</strong> <span class="ltr-text">1.5 mL</span> از محلول <span class="ltr-text">A</span> را به <span class="ltr-text">75 mg</span> از <span class="ltr-text">2-AB</span> اضافه کنید. با ورتکس ملایم به خوبی مخلوط کنید تا <span class="ltr-text">2-AB</span> به طور کامل حل شود.
+            </p>
+            <p class="mb-4">
+                <strong>محلول نشان‌گذاری:</strong> <span class="ltr-text">1 mL</span> از محلول <span class="ltr-text">B</span> را به <span class="ltr-text">63 mg</span> از سدیم سیانوبوروهیدرید اضافه کنید. با ورتکس ملایم به خوبی مخلوط کنید. درب مخلوط را محکم ببندید و در دمای <span class="ltr-text">70°</span> به مدت <span class="ltr-text">1–2 min</span> برای انحلال کامل انکوبه کنید. به مدت <span class="ltr-text">10 min</span> در دمای اتاق سرد کنید. از این محلول نشان‌گذاری ظرف <span class="ltr-text">1 h</span> پس از تهیه استفاده کنید و محلول را از نور محافظت کنید.
+            </p>
+            <p class="mb-4">
+                <strong>محلول استاندارد نشان‌گذاری شده با <span class="ltr-text">2-AB</span>:</strong> <span class="ltr-text">5–15 µL</span> از محلول نشان‌گذاری را به <span class="ltr-text">1</span> ویال از <span class="ltr-text">USP Oligosaccharide System Suitability Mixture A RS</span>، <span class="ltr-text">USP Oligosaccharide System Suitability Mixture B RS</span>، <span class="ltr-text">USP Oligosaccharide System Suitability Mixture C RS</span>، یا <span class="ltr-text">USP Oligosaccharide System Suitability Mixture D RS</span> اضافه کنید و به خوبی مخلوط کنید.
+            </p>
+            <p class="mb-4">
+                <strong>محلول نمونه نشان‌گذاری شده با <span class="ltr-text">2-AB</span>:</strong> <span class="ltr-text">5–15 µL</span> از محلول نشان‌گذاری را به نمونه گلیکان خشک شده پس از مراحل آزادسازی آنزیمی و جداسازی اضافه کنید و به خوبی مخلوط کنید.
+            </p>
+            <p class="mb-4">
+                <strong>روش کار:</strong> بلافاصله محلول استاندارد نشان‌گذاری شده با <span class="ltr-text">2-AB</span> و محلول نمونه نشان‌گذاری شده با <span class="ltr-text">2-AB</span> را در دمای <span class="ltr-text">37°</span> به مدت <span class="ltr-text">16–18 h</span> یا در دمای <span class="ltr-text">65°</span> به مدت <span class="ltr-text">2 h</span> انکوبه کنید. اجازه دهید به مدت <span class="ltr-text">10 min</span> در دمای اتاق سرد شوند. به طور کوتاه سانتریفیوژ کنید.
+            </p>
+            <p class="mb-4">
+                <strong>استاندارد نشان‌گذاری شده با <span class="ltr-text">2-AB</span> خشک شده یا نمونه نشان‌گذاری شده با <span class="ltr-text">2-AB</span> خشک شده:</strong> دو روش برای حذف <span class="ltr-text">2-AB</span> آزاد در زیر شرح داده شده است.
+            </p>
+            <p class="mb-4">
+                <strong>روش <span class="ltr-text">۱</span>، با استفاده از ستون اسپین فیلتراسیون ژلی:</strong> ستون‌های اسپین میکرو سانتریفیوژ <span class="ltr-text">G-10</span><sup><span class="ltr-text">5</span></sup> مناسب را با ضربه زدن آرام به ستون برای اطمینان از ته نشین شدن رزین خشک در پایین آماده کنید. درپوش‌ها را بردارید و ستون را در یک لوله جمع‌آوری <span class="ltr-text">2-mL</span> قرار دهید. <span class="ltr-text">0.5 mL</span> آب به رزین اضافه کنید و اجازه دهید حداقل <span class="ltr-text">15 min</span> متورم شود. زمان تورم طولانی‌تر (تا <span class="ltr-text">24 h</span>) در صورت حفظ در دمای <span class="ltr-text">2°–8°</span> قابل قبول است. ستون را با حداکثر سرعت به مدت <span class="ltr-text">5–10 s</span> سانتریفیوژ کنید. آب را از لوله جمع‌آوری خارج کنید. رزین را با اضافه کردن <span class="ltr-text">0.5 mL</span> آب بشویید و ستون را سانتریفیوژ کنید. مرحله شستشو را یک بار دیگر تکرار کنید. پس از حذف آب از مرحله شستشوی نهایی، با حداکثر سرعت به مدت <span class="ltr-text">10 s</span> سانتریفیوژ کنید تا آب باقیمانده از رزین حذف شود. اگر رزین سفید به نظر برسد، آب باقیمانده به اندازه کافی حذف شده است. ستون را در یک لوله جمع‌آوری جدید و برچسب‌گذاری شده قرار دهید. <span class="ltr-text">100 µL</span> آب به محلول استاندارد نشان‌گذاری شده با <span class="ltr-text">2-AB</span> و محلول نمونه نشان‌گذاری شده با <span class="ltr-text">2-AB</span> اضافه کنید و سپس کل محلول را به ترتیب به مرکز هر ستون <span class="ltr-text">G-10</span> شسته شده اعمال کنید. ستون‌های <span class="ltr-text">G-10</span> را در میکرو سانتریفیوژ قرار دهید و با تقریباً <span class="ltr-text">200 × g</span> به مدت <span class="ltr-text">1 min</span> سانتریفیوژ کنید. جریان عبوری (تقریباً <span class="ltr-text">90–120 µL</span>) را به مرکز ستون <span class="ltr-text">G-10</span> دوم استفاده نشده اما قبلاً شسته شده اعمال کنید و با تقریباً <span class="ltr-text">200 × g</span> به مدت <span class="ltr-text">1 min</span> سانتریفیوژ کنید. جریان عبوری تکراری (تقریباً <span class="ltr-text">60–100 µL</span>) را به یک لوله میکرو سانتریفیوژ <span class="ltr-text">0.5-mL</span> منتقل کنید. الیوت‌ها را با تبخیر سانتریفیوژی بدون حرارت خشک کنید.
+            </p>
+            <p class="mb-4">
+                <strong>روش <span class="ltr-text">۲</span>، با استفاده از کارتریج <span class="ltr-text">SPE</span>:</strong> کارتریج‌های <span class="ltr-text">SPE</span><sup><span class="ltr-text">6</span></sup> مناسب را با شستشو با <span class="ltr-text">1.0 mL</span> آب، و به دنبال آن <span class="ltr-text">5 × 1.0 mL</span> از <span class="ltr-text">30% (v/v)</span> اسید استیک، و سپس <span class="ltr-text">1.0 mL</span> از استونیتریل آماده کنید. محلول استاندارد نشان‌گذاری شده با <span class="ltr-text">2-AB</span> و محلول نمونه نشان‌گذاری شده با <span class="ltr-text">2-AB</span> را به سطح مرکزی دیسک‌های کارتریج اعمال کنید و اجازه دهید محلول به مدت <span class="ltr-text">15–20 min</span> بر روی دیسک انکوبه شود. هر دیسک را با <span class="ltr-text">1 mL</span> استونیتریل بشویید، و به دنبال آن <span class="ltr-text">6 × 1.0 mL</span> از <span class="ltr-text">96% (v/v)</span> استونیتریل، اجازه دهید هر آلیوت قبل از اعمال بعدی تخلیه شود. محلول استاندارد نشان‌گذاری شده با <span class="ltr-text">2-AB</span> و محلول نمونه نشان‌گذاری شده با <span class="ltr-text">2-AB</span> را با <span class="ltr-text">3 × 0.5 mL</span> آب شستشو دهید، اجازه دهید هر آلیوت قبل از اعمال بعدی تخلیه شود. الیوت‌ها را با تبخیر سانتریفیوژی بدون حرارت خشک کنید. [<span class="ltr-text">NOTE</span>—گلیکان‌های آبگریز بسیار کوچک ممکن است در طول این روش از دست بروند. در طول تأیید روش، باید تأیید شود که هیچ گونه الیگوساکارید در طول مرحله حذف <span class="ltr-text">2-AB</span> با مقایسه پروفایل‌های کروماتوگرافی یک بلانک واکنش استخراج نشده، یک نمونه استخراج نشده و یک نمونه استخراج شده از بین نمی‌رود.]
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">• نشان‌گذاری <span class="ltr-text">APTS</span> برای جداسازی با الکتروفورز مویین</h3>
+            <p class="mb-4">
+                <strong>معرف نشان‌گذاری <span class="ltr-text">APTS</span>:</strong> <span class="ltr-text">5 mg</span> از تری‌سدیم <span class="ltr-text">APTS</span> را در <span class="ltr-text">48 µL</span> از <span class="ltr-text">15% (v/v)</span> اسید استیک حل کنید.
+            </p>
+            <p class="mb-4">
+                <strong><span class="ltr-text">1 M</span> سدیم سیانوبوروهیدرید:</strong> <span class="ltr-text">1 M</span> سدیم سیانوبوروهیدرید در تتراهیدروفوران
+            </p>
+            <p class="mb-4">
+                <strong>بافر اجرا:</strong> <span class="ltr-text">1.492 g</span> از تری‌اتانول‌آمین (<span class="ltr-text">TEA</span>) و <span class="ltr-text">10 g</span> از گلیسرول را که به دقت وزن شده‌اند، در <span class="ltr-text">80 mL</span> آب حل کنید. با <span class="ltr-text">1 N</span> اسید هیدروکلریک تا <span class="ltr-text">pH 7.5</span> تنظیم کنید و با آب به حجم نهایی <span class="ltr-text">100 mL</span> رقیق کنید.
+            </p>
+            <p class="mb-4">
+                <strong>بافر نمونه:</strong> <span class="ltr-text">1.0 mL</span> از بافر اجرا را با <span class="ltr-text">9.0 mL</span> آب رقیق کنید.
+            </p>
+            <p class="mb-4">
+                <strong>محلول استاندارد نشان‌گذاری شده با <span class="ltr-text">APTS</span>:</strong> <span class="ltr-text">2 µL</span> از معرف نشان‌گذاری <span class="ltr-text">APTS</span> و <span class="ltr-text">2 µL</span> از <span class="ltr-text">1 M</span> سدیم سیانوبوروهیدرید را به یک ویال از <span class="ltr-text">USP Oligosaccharide System Suitability Mixture A RS</span> یا <span class="ltr-text">USP Oligosaccharide System Suitability Mixture B RS</span> اضافه کنید. در دمای <span class="ltr-text">55°</span> به مدت <span class="ltr-text">90 min</span> انکوبه کنید. <span class="ltr-text">46 µL</span> آب برای مهار واکنش اضافه کنید و مخلوط کنید. <span class="ltr-text">5 µL</span> از <span class="ltr-text">USP RS</span> نشان‌گذاری شده با <span class="ltr-text">APTS</span> را قبل از جداسازی به <span class="ltr-text">1.995 mL</span> از بافر نمونه منتقل کنید. [<span class="ltr-text">NOTE</span>—حجم بافر نمونه ممکن است نیاز به تنظیم داشته باشد تا سیگنال‌های فلورسانس الیگوساکاریدها مشابه سیگنال‌های محلول نمونه نشان‌گذاری شده با <span class="ltr-text">APTS</span> باشند.]
+            </p>
+            <p class="mb-4">
+                <strong>محلول نمونه نشان‌گذاری شده با <span class="ltr-text">APTS</span>:</strong> <span class="ltr-text">2 µL</span> از معرف نشان‌گذاری <span class="ltr-text">APTS</span> و <span class="ltr-text">2 µL</span> از <span class="ltr-text">1 M</span> سدیم سیانوبوروهیدرید را به نمونه گلیکان خشک شده پس از مراحل آزادسازی آنزیمی و جداسازی اضافه کنید. در دمای <span class="ltr-text">55°</span> به مدت <span class="ltr-text">90 min</span> انکوبه کنید. <span class="ltr-text">46 µL</span> آب برای مهار واکنش اضافه کنید و مخلوط کنید. <span class="ltr-text">5 µL</span> از محلول گلیکان نشان‌گذاری شده با <span class="ltr-text">APTS</span> را قبل از جداسازی به <span class="ltr-text">95 µL</span> از بافر نمونه منتقل کنید.
+            </p>
+            <p class="mb-4">
+                [<span class="ltr-text">NOTE</span>—برای انتخاب <span class="ltr-text">USP RS</span> و نشان‌گذاری مناسب، دستورالعمل‌های لیست شده در جدول <span class="ltr-text">۱</span> را دنبال کنید.]
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">جداسازی و شناسایی الیگوساکاریدها</h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">• کروماتوگرافی فاز نرمال/<span class="ltr-text">HILIC</span></h3>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش <span class="ltr-text">۱</span></h4>
+            <p class="mb-4">
+                <strong>محلول <span class="ltr-text">1.4 M</span> اسید فرمیک:</strong> <span class="ltr-text">273 mL</span> آب را با <span class="ltr-text">15 mL</span> از <span class="ltr-text">98%–100%</span> اسید فرمیک مخلوط کنید.
+            </p>
+            <p class="mb-4">
+                <strong>محلول <span class="ltr-text">1.4 M</span> آمونیاک:</strong> <span class="ltr-text">155 mL</span> آب را با <span class="ltr-text">40 mL</span> از <span class="ltr-text">26%</span> محلول آمونیاک مخلوط کنید.
+            </p>
+            <p class="mb-4">
+                <strong>بافر فرمات آمونیوم:</strong> محلول <span class="ltr-text">1.4 M</span> آمونیاک را به محلول <span class="ltr-text">1.4 M</span> اسید فرمیک اضافه کنید تا <span class="ltr-text">pH 4.4</span> بدست آید.
+            </p>
+            <p class="mb-4">
+                <strong>محلول <span class="ltr-text">A</span>:</strong> استونیتریل، بافر فرمات آمونیوم، و آب (<span class="ltr-text">75: 4.3: 20.7</span>)
+            </p>
+            <p class="mb-4">
+                <strong>محلول <span class="ltr-text">B</span>:</strong> استونیتریل، بافر فرمات آمونیوم، و آب (<span class="ltr-text">54: 8.3: 37.7</span>)
+            </p>
+            <p class="mb-4">
+                <strong>فاز متحرک:</strong> به جدول <span class="ltr-text">۲</span> مراجعه کنید.
+            </p>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th><span class="ltr-text">Time (min)</span></th>
+                        <th><span class="ltr-text">Solution A (%)</span></th>
+                        <th><span class="ltr-text">Solution B (%)</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="ltr-text">0.0</span></td><td><span class="ltr-text">79</span></td><td><span class="ltr-text">21</span></td></tr>
+                    <tr><td><span class="ltr-text">80.0</span></td><td><span class="ltr-text">47</span></td><td><span class="ltr-text">53</span></td></tr>
+                    <tr><td><span class="ltr-text">81.0</span></td><td><span class="ltr-text">0</span></td><td><span class="ltr-text">100</span></td></tr>
+                    <tr><td><span class="ltr-text">92.0</span></td><td><span class="ltr-text">0</span></td><td><span class="ltr-text">100</span></td></tr>
+                    <tr><td><span class="ltr-text">93.0</span></td><td><span class="ltr-text">79</span></td><td><span class="ltr-text">21</span></td></tr>
+                    <tr><td><span class="ltr-text">113.0</span></td><td><span class="ltr-text">79</span></td><td><span class="ltr-text">21</span></td></tr>
+                </tbody>
+            </table>
+
+            <p class="mb-4">
+                <strong>محلول استاندارد:</strong> استاندارد نشان‌گذاری شده با <span class="ltr-text">2-AB</span> خشک شده را با <span class="ltr-text">NMT 500 µL</span> آب بازسازی کنید. [<span class="ltr-text">NOTE</span>—حجم آب ممکن است نیاز به تنظیم داشته باشد تا سیگنال‌های فلورسانس از محلول استاندارد مشابه سیگنال‌های محلول نمونه باشند.]
+            </p>
+            <p class="mb-4">
+                <strong>محلول نمونه:</strong> نمونه نشان‌گذاری شده با <span class="ltr-text">2-AB</span> خشک شده را با حجم مناسبی از آب بازسازی کنید. [<span class="ltr-text">NOTE</span>—از نسبت <span class="ltr-text">30 µL</span> آب به ازای هر <span class="ltr-text">100 µg</span> گلیکوپروتئین مورد استفاده در آزمایش آزادسازی آنزیمی <span class="ltr-text">N</span>-گلیکان‌ها به عنوان نقطه شروع استفاده کنید.]
+            </p>
+            <p class="mb-4">
+                <strong>محلول بلانک:</strong> ماتریکس بافر نمونه گلیکوپروتئین که از طریق روش آماده‌سازی نمونه انجام شده است.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم کروماتوگرافی</h4>
+            <p class="mb-4">
+                (به بخش «کروماتوگرافی» <a href="621.html" class="text-blue-600 hover:underline" target="_blank">۶۲۱</a>، «مناسب بودن سیستم» مراجعه کنید.)
+            </p>
+            <ul class="list-disc list-inside mb-4">
+                <li>حالت: <span class="ltr-text">LC</span></li>
+                <li>آشکارساز: فلورسانس (طول موج تحریک <span class="ltr-text">250-nm</span> و طول موج گسیل <span class="ltr-text">428-nm</span>)</li>
+                <li>ستون: <span class="ltr-text">2.0-mm × 15-cm</span>؛ پرکننده <span class="ltr-text">3-µm L68</span></li>
+                <li>دماها
+                    <ul class="list-disc list-inside mr-4" dir="rtl">
+                        <li>ستون: <span class="ltr-text">45°</span></li>
+                        <li>اتوسمپلر: <span class="ltr-text">2°–8°</span></li>
+                    </ul>
+                </li>
+                <li>سرعت جریان: <span class="ltr-text">0.2 mL/min</span></li>
+                <li>حجم تزریق: <span class="ltr-text">2 µL</span></li>
+            </ul>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مناسب بودن سیستم</h4>
+            <ul class="list-disc list-inside mb-4">
+                <li>نمونه‌ها: محلول استاندارد و محلول بلانک</li>
+                <li>الزامات مناسب بودن
+                    <ul class="list-disc list-inside mr-4" dir="rtl">
+                        <li>بلانک: عدم وجود پیک در کروماتوگرام محلول بلانک در پنجره زمان بازداری <span class="ltr-text">5–113 min</span></li>
+                        <li>شباهت کروماتوگرام: کروماتوگرام حاصل از محلول استاندارد با کروماتوگرام مرجع ارائه شده با گواهی <span class="ltr-text">USP Oligosaccharide System Suitability Mixture A RS</span> یا <span class="ltr-text">USP Oligosaccharide System Suitability Mixture B RS</span> مطابقت دارد.</li>
+                        <li>حضور گونه‌های <span class="ltr-text">N</span>-گلیکان: اگر از <span class="ltr-text">USP Oligosaccharide System Suitability Mixture A RS</span> استفاده می‌شود، پیک‌های متناظر با <span class="ltr-text">G0</span>، <span class="ltr-text">G0F</span>، <span class="ltr-text">G1Fa</span>، <span class="ltr-text">G1Fb</span>، <span class="ltr-text">G2F</span>، <span class="ltr-text">A1F</span> و <span class="ltr-text">A2F</span> (به جدول <span class="ltr-text">۳</span>؛ همچنین به پیوست مراجعه کنید) را در کروماتوگرام حاصل از محلول استاندارد با مقایسه کروماتوگرام مرجع ارائه شده با گواهی <span class="ltr-text">USP</span> برای <span class="ltr-text">USP Oligosaccharide System Suitability Mixture A RS</span> شناسایی کنید. اگر از <span class="ltr-text">USP Oligosaccharide System Suitability Mixture B RS</span> استفاده می‌شود، پیک‌های متناظر با الیگومانوز (<span class="ltr-text">MAN</span>) <span class="ltr-text">MAN-5</span>، <span class="ltr-text">MAN-6</span>، <span class="ltr-text">MAN-7</span>، <span class="ltr-text">MAN-8</span> و <span class="ltr-text">MAN-9</span> (به جدول <span class="ltr-text">۴</span>؛ همچنین به پیوست مراجعه کنید) را در کروماتوگرام حاصل از محلول استاندارد با مقایسه کروماتوگرام مرجع ارائه شده با گواهی <span class="ltr-text">USP</span> برای <span class="ltr-text">USP Oligosaccharide System Suitability Mixture B RS</span> شناسایی کنید.</li>
+                        <li>زمان‌های بازداری نسبی: متناظر با زمان‌های بازداری نسبی <span class="ltr-text">N</span>-گلیکان‌های لیست شده در جدول <span class="ltr-text">۳</span> یا جدول <span class="ltr-text">۴</span></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th><span class="ltr-text">N-Glycan</span></th>
+                        <th><span class="ltr-text">Approximate Relative Retention Time</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="ltr-text">G0 (NGA2)</span></td><td><span class="ltr-text">0.47</span></td></tr>
+                    <tr><td><span class="ltr-text">G0F (NGA2F)</span></td><td><span class="ltr-text">0.57</span></td></tr>
+                    <tr><td><span class="ltr-text">G1Fa (NA1F, FA2G1, or NA2G1F)</span></td><td><span class="ltr-text">0.75</span></td></tr>
+                    <tr><td><span class="ltr-text">G1Fb (NA1F, FA2G1, or NA2G1F)</span></td><td><span class="ltr-text">0.78</span></td></tr>
+                    <tr><td><span class="ltr-text">G2F (NA2F)</span></td><td><span class="ltr-text">1.00</span></td></tr>
+                    <tr><td><span class="ltr-text">A1F (G2fS1)</span></td><td><span class="ltr-text">1.39</span></td></tr>
+                    <tr><td><span class="ltr-text">A2F (G2fS2)</span></td><td><span class="ltr-text">1.76</span></td></tr>
+                </tbody>
+                <caption>جدول <span class="ltr-text">۳</span>. محلول استاندارد با استفاده از <span class="ltr-text">USP Oligosaccharide System Suitability Mixture A RS</span></caption>
+            </table>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th><span class="ltr-text">N-Glycan</span></th>
+                        <th><span class="ltr-text">Approximate Relative Retention Time</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="ltr-text">MAN-5</span></td><td><span class="ltr-text">0.74</span></td></tr>
+                    <tr><td><span class="ltr-text">MAN-6</span></td><td><span class="ltr-text">1.00</span></td></tr>
+                    <tr><td><span class="ltr-text">MAN-7</span></td><td><span class="ltr-text">1.29</span></td></tr>
+                    <tr><td><span class="ltr-text">MAN-8</span></td><td><span class="ltr-text">1.60</span></td></tr>
+                    <tr><td><span class="ltr-text">MAN-9</span></td><td><span class="ltr-text">1.85</span></td></tr>
+                </tbody>
+                <caption>جدول <span class="ltr-text">۴</span>. محلول استاندارد با استفاده از <span class="ltr-text">USP Oligosaccharide System Suitability Mixture B RS</span></caption>
+            </table>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
+            <p class="mb-4">
+                سیستم کروماتوگرافی را حداقل به مدت <span class="ltr-text">1 h</span> با شرایط اولیه شرح داده شده در جدول <span class="ltr-text">۲</span> متعادل کنید. محلول بلانک را تزریق کنید تا خط پایه پایدار شود (<span class="ltr-text">1–3</span> تزریق).
+            </p>
+            <p class="mb-4">
+                <strong>نمونه:</strong> محلول نمونه
+            </p>
+            <p class="mb-4">
+                پیک‌ها را در کروماتوگرام حاصل انتگرال بگیرید و مساحت‌های نسبی پیک ساختارهای گلیکان مربوط به محصول را گزارش کنید. خط پایه از اولین پیک تا آخرین پیک ترسیم می‌شود. برای اطلاعات عمومی در مورد انتگرال‌گیری پیک کروماتوگرافی، به <a href="621.html" class="text-blue-600 hover:underline" target="_blank">۶۲۱</a> مراجعه کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش <span class="ltr-text">۲</span></h4>
+            <p class="mb-4">
+                <strong>محلول <span class="ltr-text">A</span>:</strong> <span class="ltr-text">250 mM</span> فرمات آمونیوم، <span class="ltr-text">pH 4.0</span>، به شرح زیر تهیه شود. <span class="ltr-text">500 mL</span> آب را با <span class="ltr-text">9.8 mL</span> از <span class="ltr-text">96%</span> اسید فرمیک مخلوط کنید. با <span class="ltr-text">30%</span> هیدروکسید آمونیوم تا <span class="ltr-text">pH 4.0 ± 0.1</span> تنظیم کنید. با آب به حجم نهایی <span class="ltr-text">1000 mL</span> رقیق کنید. محلول را از یک فیلتر با اندازه منافذ <span class="ltr-text">0.22-µm</span> که از غشای استات سلولز تشکیل شده است، عبور دهید.
+            </p>
+            <p class="mb-4">
+                <strong>محلول <span class="ltr-text">B</span>:</strong> استونیتریل
+            </p>
+            <p class="mb-4">
+                <strong>فاز متحرک:</strong> به جدول <span class="ltr-text">۵</span> مراجعه کنید.
+            </p>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th><span class="ltr-text">Time (min)</span></th>
+                        <th><span class="ltr-text">Solution A (%)</span></th>
+                        <th><span class="ltr-text">Solution B (%)</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="ltr-text">0.0</span></td><td><span class="ltr-text">20</span></td><td><span class="ltr-text">80</span></td></tr>
+                    <tr><td><span class="ltr-text">2.0</span></td><td><span class="ltr-text">30</span></td><td><span class="ltr-text">70</span></td></tr>
+                    <tr><td><span class="ltr-text">67.0</span></td><td><span class="ltr-text">52</span></td><td><span class="ltr-text">48</span></td></tr>
+                    <tr><td><span class="ltr-text">67.1</span></td><td><span class="ltr-text">80</span></td><td><span class="ltr-text">20</span></td></tr>
+                    <tr><td><span class="ltr-text">73.0</span></td><td><span class="ltr-text">80</span></td><td><span class="ltr-text">20</span></td></tr>
+                    <tr><td><span class="ltr-text">73.1</span></td><td><span class="ltr-text">20</span></td><td><span class="ltr-text">80</span></td></tr>
+                    <tr><td><span class="ltr-text">85.0</span></td><td><span class="ltr-text">20</span></td><td><span class="ltr-text">80</span></td></tr>
+                </tbody>
+            </table>
+
+            <p class="mb-4">
+                <strong>محلول استاندارد:</strong> استاندارد نشان‌گذاری شده با <span class="ltr-text">2-AB</span> خشک شده را با <span class="ltr-text">NLT 500 µL</span> آب بازسازی کنید. [<span class="ltr-text">NOTE</span>—حجم آب ممکن است نیاز به تنظیم داشته باشد تا سیگنال‌های فلورسانس از محلول استاندارد مشابه سیگنال‌های محلول نمونه باشند.]
+            </p>
+            <p class="mb-4">
+                <strong>محلول نمونه:</strong> نمونه نشان‌گذاری شده با <span class="ltr-text">2-AB</span> خشک شده را با حجم مناسبی از آب بازسازی کنید. [<span class="ltr-text">NOTE</span>—از نسبت <span class="ltr-text">50 µL</span> آب به ازای هر <span class="ltr-text">100 µg</span> گلیکوپروتئین مورد استفاده در آزمایش آزادسازی آنزیمی <span class="ltr-text">N</span>-گلیکان‌ها به عنوان نقطه شروع استفاده کنید.]
+            </p>
+            <p class="mb-4">
+                <strong>محلول بلانک:</strong> ماتریکس بافر نمونه گلیکوپروتئین که از طریق روش آماده‌سازی نمونه انجام شده است.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم کروماتوگرافی</h4>
+            <p class="mb-4">
+                (به بخش «کروماتوگرافی» <a href="621.html" class="text-blue-600 hover:underline" target="_blank">۶۲۱</a>، «مناسب بودن سیستم» مراجعه کنید.)
+            </p>
+            <ul class="list-disc list-inside mb-4">
+                <li>حالت: <span class="ltr-text">LC</span></li>
+                <li>آشکارساز: فلورسانس؛ طول موج‌های تحریک و گسیل را طبق جدول <span class="ltr-text">۶</span> تنظیم کنید.</li>
+            </ul>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th><span class="ltr-text">Time (min)</span></th>
+                        <th><span class="ltr-text">Excitation (nm)</span></th>
+                        <th><span class="ltr-text">Emission (nm)</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="ltr-text">0.00</span></td><td><span class="ltr-text">330</span></td><td><span class="ltr-text">420</span></td></tr>
+                    <tr><td><span class="ltr-text">1.00</span></td><td><span class="ltr-text">330</span></td><td><span class="ltr-text">420</span></td></tr>
+                    <tr><td><span class="ltr-text">1.01</span></td><td><span class="ltr-text">400</span></td><td><span class="ltr-text">500</span></td></tr>
+                    <tr><td><span class="ltr-text">10.00</span></td><td><span class="ltr-text">400</span></td><td><span class="ltr-text">500</span></td></tr>
+                    <tr><td><span class="ltr-text">10.01</span></td><td><span class="ltr-text">330</span></td><td><span class="ltr-text">420</span></td></tr>
+                    <tr><td><span class="ltr-text">85.00</span></td><td><span class="ltr-text">330</span></td><td><span class="ltr-text">420</span></td></tr>
+                </tbody>
+                <caption>جدول <span class="ltr-text">۶</span></caption>
+            </table>
+
+            <ul class="list-disc list-inside mb-4">
+                <li>ستون: <span class="ltr-text">4.6-mm × 25-cm</span>؛ پرکننده <span class="ltr-text">5-µm L68</span></li>
+                <li>دماها
+                    <ul class="list-disc list-inside mr-4" dir="rtl">
+                        <li>ستون: <span class="ltr-text">35°</span></li>
+                        <li>اتوسمپلر: <span class="ltr-text">2°–8°</span></li>
+                    </ul>
+                </li>
+                <li>سرعت جریان: <span class="ltr-text">0.4 mL/min</span></li>
+                <li>حجم تزریق: <span class="ltr-text">10 µL</span></li>
+            </ul>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مناسب بودن سیستم</h4>
+            <ul class="list-disc list-inside mb-4">
+                <li>نمونه: محلول استاندارد</li>
+                <li>الزامات مناسب بودن
+                    <ul class="list-disc list-inside mr-4" dir="rtl">
+                        <li>شباهت کروماتوگراف: کروماتوگرام حاصل از محلول استاندارد با کروماتوگرام مرجع ارائه شده با گواهی <span class="ltr-text">USP Oligosaccharide System Suitability Mixture A RS</span> یا <span class="ltr-text">USP Oligosaccharide System Suitability Mixture B RS</span> مطابقت دارد.</li>
+                        <li>حضور گونه‌های <span class="ltr-text">N</span>-گلیکان: اگر از <span class="ltr-text">USP Oligosaccharide System Suitability Mixture A RS</span> استفاده می‌شود، پیک‌های متناظر با <span class="ltr-text">G0</span>، <span class="ltr-text">G0F</span>، <span class="ltr-text">G1Fa</span>، <span class="ltr-text">G1Fb</span>، <span class="ltr-text">G2</span>، <span class="ltr-text">G2F</span>، <span class="ltr-text">A1F</span> و <span class="ltr-text">A2F</span> (به جدول <span class="ltr-text">۷</span>؛ همچنین به پیوست مراجعه کنید) را در کروماتوگرام حاصل از محلول استاندارد با مقایسه کروماتوگرام مرجع ارائه شده با گواهی <span class="ltr-text">USP</span> برای <span class="ltr-text">USP Oligosaccharide System Suitability Mixture A RS</span> شناسایی کنید. اگر از <span class="ltr-text">USP Oligosaccharide System Suitability Mixture B RS</span> استفاده می‌شود، پیک‌های متناظر با <span class="ltr-text">MAN-5</span>، <span class="ltr-text">MAN-6</span>، <span class="ltr-text">MAN-7</span>، <span class="ltr-text">MAN-8</span> و <span class="ltr-text">MAN-9</span> (به جدول <span class="ltr-text">۸</span>؛ همچنین به پیوست مراجعه کنید) را در کروماتوگرام حاصل از محلول استاندارد با مقایسه کروماتوگرام مرجع ارائه شده با گواهی <span class="ltr-text">USP</span> برای <span class="ltr-text">USP Oligosaccharide System Suitability Mixture B RS</span> شناسایی کنید.</li>
+                        <li>زمان‌های بازداری نسبی: متناظر با زمان‌های بازداری نسبی <span class="ltr-text">N</span>-گلیکان‌های لیست شده در جدول <span class="ltr-text">۷</span> یا جدول <span class="ltr-text">۸</span></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th><span class="ltr-text">N-Glycan</span></th>
+                        <th><span class="ltr-text">Approximate Relative Retention Time</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="ltr-text">G0 (NGA2)</span></td><td><span class="ltr-text">0.78</span></td></tr>
+                    <tr><td><span class="ltr-text">G0F (NGA2F)</span></td><td><span class="ltr-text">0.83</span></td></tr>
+                    <tr><td><span class="ltr-text">G1Fa (NA1F, FA2G1, or NA2G1F)</span></td><td><span class="ltr-text">0.91</span></td></tr>
+                    <tr><td><span class="ltr-text">G1Fb (NA1F, FA2G1, or NA2G1F)</span></td><td><span class="ltr-text">0.92</span></td></tr>
+                    <tr><td><span class="ltr-text">G2 (NA2)</span></td><td><span class="ltr-text">0.96</span></td></tr>
+                    <tr><td><span class="ltr-text">G2F (NA2F)</span></td><td><span class="ltr-text">1.00</span></td></tr>
+                    <tr><td><span class="ltr-text">A1F (G2fS1)</span></td><td><span class="ltr-text">1.11</span></td></tr>
+                    <tr><td><span class="ltr-text">A2F (G2fS2)</span></td><td><span class="ltr-text">1.20</span></td></tr>
+                </tbody>
+                <caption>جدول <span class="ltr-text">۷</span>. محلول استاندارد با استفاده از <span class="ltr-text">USP Oligosaccharide System Suitability Mixture A RS</span></caption>
+            </table>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th><span class="ltr-text">N-Glycan</span></th>
+                        <th><span class="ltr-text">Approximate Relative Retention Time</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="ltr-text">MAN-5</span></td><td><span class="ltr-text">0.77</span></td></tr>
+                    <tr><td><span class="ltr-text">MAN-6</span></td><td><span class="ltr-text">0.86</span></td></tr>
+                    <tr><td><span class="ltr-text">MAN-7</span></td><td><span class="ltr-text">0.93</span></td></tr>
+                    <tr><td><span class="ltr-text">MAN-8</span></td><td><span class="ltr-text">1.00</span></td></tr>
+                    <tr><td><span class="ltr-text">MAN-9</span></td><td><span class="ltr-text">1.05</span></td></tr>
+                </tbody>
+                <caption>جدول <span class="ltr-text">۸</span>. محلول استاندارد با استفاده از <span class="ltr-text">USP Oligosaccharide System Suitability Mixture B RS</span></caption>
+            </table>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
+            <p class="mb-4">
+                <strong>نمونه:</strong> محلول نمونه
+            </p>
+            <p class="mb-4">
+                پیک‌ها را در کروماتوگرام حاصل انتگرال بگیرید و مساحت‌های نسبی پیک ساختارهای گلیکان مربوط به محصول را گزارش کنید. برای اطلاعات عمومی در مورد انتگرال‌گیری پیک کروماتوگرافی، به <a href="621.html" class="text-blue-600 hover:underline" target="_blank">۶۲۱</a> مراجعه کنید.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">• کروماتوگرافی مایع تبادل آنیونی با کارایی بالا با تشخیص فلورومتری</h3>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش <span class="ltr-text">۱</span></h4>
+            <p class="mb-4">
+                <strong>محلول <span class="ltr-text">A</span>:</strong> آب؛ قبل از استفاده گاززدایی کنید.
+            </p>
+            <p class="mb-4">
+                <strong>محلول <span class="ltr-text">B</span>:</strong> <span class="ltr-text">0.5 M</span> سدیم استات، به شرح زیر تهیه شود. <span class="ltr-text">20.5 g</span> سدیم استات انیدروس را در <span class="ltr-text">450 mL</span> آب حل کنید و به خوبی مخلوط کنید. با آب به حجم نهایی <span class="ltr-text">500 mL</span> رقیق کنید. محلول را از یک غشا با اندازه منافذ حداکثر <span class="ltr-text">0.45-µm</span> فیلتر کنید و قبل از استفاده گاززدایی کنید.
+            </p>
+            <p class="mb-4">
+                <strong>محلول <span class="ltr-text">C</span>:</strong> <span class="ltr-text">0.5 M</span> سدیم استات، به شرح زیر تهیه شود. به <span class="ltr-text">972 mL</span> آب، <span class="ltr-text">26 mL</span> از <span class="ltr-text">50% (w/w)</span> محلول سدیم هیدروکسید اضافه کنید. محلول را از یک غشای فیلتر مقاوم به قلیا با اندازه منافذ حداکثر <span class="ltr-text">0.45-µm</span> عبور دهید و قبل از استفاده گاززدایی کنید.
+            </p>
+            <p class="mb-4">
+                <strong>فاز متحرک:</strong> به جدول <span class="ltr-text">۹</span> مراجعه کنید.
+            </p>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th><span class="ltr-text">Time (min)</span></th>
+                        <th><span class="ltr-text">Solution A (%)</span></th>
+                        <th><span class="ltr-text">Solution B (%)</span></th>
+                        <th><span class="ltr-text">Solution C (%)</span></th>
+                        <th><span class="ltr-text">Elution</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="ltr-text">0.0</span></td><td><span class="ltr-text">70</span></td><td><span class="ltr-text">0</span></td><td><span class="ltr-text">30</span></td><td>شرایط اولیه</td></tr>
+                    <tr><td><span class="ltr-text">15.0</span></td><td><span class="ltr-text">70</span></td><td><span class="ltr-text">0</span></td><td><span class="ltr-text">30</span></td><td><span class="ltr-text">0–75 mM</span> سدیم استات، <span class="ltr-text">0.15 N</span> سدیم هیدروکسید ایزوکراتیک</td></tr>
+                    <tr><td><span class="ltr-text">65.0</span></td><td><span class="ltr-text">55</span></td><td><span class="ltr-text">15</span></td><td><span class="ltr-text">30</span></td><td rowspan="2"><span class="ltr-text">250 mM</span> سدیم استات، شستشوی <span class="ltr-text">0.25 N</span> سدیم هیدروکسید</td></tr>
+                    <tr><td><span class="ltr-text">66.0</span></td><td><span class="ltr-text">0</span></td><td><span class="ltr-text">50</span></td><td><span class="ltr-text">50</span></td></tr>
+                    <tr><td><span class="ltr-text">74.0</span></td><td><span class="ltr-text">0</span></td><td><span class="ltr-text">50</span></td><td><span class="ltr-text">50</span></td><td rowspan="2">تعادل مجدد</td></tr>
+                    <tr><td><span class="ltr-text">75.0</span></td><td><span class="ltr-text">70</span></td><td><span class="ltr-text">0</span></td><td><span class="ltr-text">30</span></td></tr>
+                    <tr><td><span class="ltr-text">90.0</span></td><td><span class="ltr-text">70</span></td><td><span class="ltr-text">0</span></td><td><span class="ltr-text">30</span></td><td></td></tr>
+                </tbody>
+            </table>
+
+            <p class="mb-4">
+                <strong>محلول استاندارد:</strong> استاندارد نشان‌گذاری شده با <span class="ltr-text">2-AB</span> خشک شده را با <span class="ltr-text">NMT 500 µL</span> آب بازسازی کنید. [<span class="ltr-text">NOTE</span>—حجم آب ممکن است نیاز به تنظیم داشته باشد تا سیگنال‌های فلورسانس از محلول استاندارد مشابه سیگنال‌های محلول نمونه باشند.]
+            </p>
+            <p class="mb-4">
+                <strong>محلول نمونه:</strong> نمونه نشان‌گذاری شده با <span class="ltr-text">2-AB</span> خشک شده را با حجم مناسبی از آب بازسازی کنید. [<span class="ltr-text">NOTE</span>—از نسبت <span class="ltr-text">20 µL</span> آب به ازای هر <span class="ltr-text">100 µg</span> گلیکوپروتئین مورد استفاده در آزمایش آزادسازی آنزیمی <span class="ltr-text">N</span>-گلیکان‌ها به عنوان نقطه شروع استفاده کنید.]
+            </p>
+            <p class="mb-4">
+                <strong>محلول بلانک:</strong> ماتریکس بافر نمونه گلیکوپروتئین که از طریق روش آماده‌سازی نمونه انجام شده است.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم کروماتوگرافی</h4>
+            <p class="mb-4">
+                (به بخش «کروماتوگرافی» <a href="621.html" class="text-blue-600 hover:underline" target="_blank">۶۲۱</a>، «مناسب بودن سیستم» مراجعه کنید.)
+            </p>
+            <ul class="list-disc list-inside mb-4">
+                <li>حالت: <span class="ltr-text">LC</span></li>
+                <li>آشکارساز: فلورسانس (طول موج تحریک <span class="ltr-text">330-nm</span> و طول موج گسیل <span class="ltr-text">420-nm</span>)</li>
+                <li>ستون‌ها
+                    <ul class="list-disc list-inside mr-4" dir="rtl">
+                        <li>محافظ: <span class="ltr-text">4.0-mm × 5-cm</span>؛ پرکننده <span class="ltr-text">10-µm L46</span></li>
+                        <li>تحلیلی: <span class="ltr-text">4.0-mm × 25-cm</span>؛ پرکننده <span class="ltr-text">10-µm L46</span></li>
+                    </ul>
+                </li>
+                <li>دماها
+                    <ul class="list-disc list-inside mr-4" dir="rtl">
+                        <li>ستون: <span class="ltr-text">25°</span></li>
+                        <li>اتوسمپلر: <span class="ltr-text">4°</span></li>
+                    </ul>
+                </li>
+                <li>سرعت جریان: <span class="ltr-text">0.8 mL/min</span></li>
+                <li>حجم تزریق: <span class="ltr-text">50 µL</span></li>
+            </ul>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مناسب بودن سیستم</h4>
+            <ul class="list-disc list-inside mb-4">
+                <li>نمونه: محلول استاندارد</li>
+                <li>الزامات مناسب بودن
+                    <ul class="list-disc list-inside mr-4" dir="rtl">
+                        <li>شباهت کروماتوگرام: کروماتوگرام حاصل از محلول استاندارد با کروماتوگرام مرجع ارائه شده با گواهی <span class="ltr-text">USP Oligosaccharide System Suitability Mixture A RS</span> یا <span class="ltr-text">USP Oligosaccharide System Suitability Mixture B RS</span> مطابقت دارد.</li>
+                        <li>حضور گونه‌های <span class="ltr-text">N</span>-گلیکان: اگر از <span class="ltr-text">USP Oligosaccharide System Suitability Mixture A RS</span> استفاده می‌شود، پیک‌های متناظر با <span class="ltr-text">G0F</span>، <span class="ltr-text">G1F</span>، <span class="ltr-text">G0</span>، <span class="ltr-text">G2F</span>، <span class="ltr-text">A1F</span> و <span class="ltr-text">A2F</span> (به جدول <span class="ltr-text">۱۰</span>؛ همچنین به پیوست مراجعه کنید) را در کروماتوگرام حاصل از محلول استاندارد با مقایسه کروماتوگرام مرجع ارائه شده با گواهی <span class="ltr-text">USP</span> برای <span class="ltr-text">USP Oligosaccharide System Suitability Mixture A RS</span> شناسایی کنید. اگر از <span class="ltr-text">USP Oligosaccharide System Suitability Mixture B RS</span> استفاده می‌شود، پیک‌های متناظر با <span class="ltr-text">MAN-5</span>، <span class="ltr-text">MAN-6</span>، <span class="ltr-text">MAN-7</span>، <span class="ltr-text">MAN-8</span> و <span class="ltr-text">MAN-9</span> (به جدول <span class="ltr-text">۱۱</span>؛ همچنین به پیوست مراجعه کنید) را در کروماتوگرام حاصل از محلول استاندارد با مقایسه کروماتوگرام مرجع ارائه شده با گواهی <span class="ltr-text">USP</span> برای <span class="ltr-text">USP Oligosaccharide System Suitability Mixture B RS</span> شناسایی کنید.</li>
+                        <li>زمان‌های بازداری نسبی: متناظر با زمان‌های بازداری نسبی <span class="ltr-text">N</span>-گلیکان‌های لیست شده در جدول <span class="ltr-text">۱۰</span> یا جدول <span class="ltr-text">۱۱</span></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th><span class="ltr-text">N-Glycan</span></th>
+                        <th><span class="ltr-text">Approximate Relative Retention Time</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="ltr-text">G0F (NGA2F)</span></td><td><span class="ltr-text">0.67</span></td></tr>
+                    <tr><td><span class="ltr-text">G1F (NA1F, FA2G1, or NA2G1F)</span></td><td><span class="ltr-text">0.86</span></td></tr>
+                    <tr><td><span class="ltr-text">G0 (NGA2)</span></td><td><span class="ltr-text">0.92</span></td></tr>
+                    <tr><td><span class="ltr-text">G2F (NA2F)</span></td><td><span class="ltr-text">1.00</span></td></tr>
+                    <tr><td><span class="ltr-text">A1F (G2fS1)</span></td><td><span class="ltr-text">1.75</span></td></tr>
+                    <tr><td><span class="ltr-text">A2F (G2fS2)</span></td><td><span class="ltr-text">2.22</span></td></tr>
+                </tbody>
+                <caption>جدول <span class="ltr-text">۱۰</span>. محلول استاندارد با استفاده از <span class="ltr-text">USP Oligosaccharide System Suitability Mixture A RS</span></caption>
+            </table>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th><span class="ltr-text">N-Glycan</span></th>
+                        <th><span class="ltr-text">Approximate Relative Retention Time</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="ltr-text">MAN-5</span></td><td><span class="ltr-text">0.86</span></td></tr>
+                    <tr><td><span class="ltr-text">MAN-6</span></td><td><span class="ltr-text">1.00</span></td></tr>
+                    <tr><td><span class="ltr-text">MAN-7</span></td><td><span class="ltr-text">1.09</span></td></tr>
+                    <tr><td><span class="ltr-text">MAN-8</span></td><td><span class="ltr-text">1.15</span></td></tr>
+                    <tr><td><span class="ltr-text">MAN-9</span></td><td><span class="ltr-text">1.24</span></td></tr>
+                </tbody>
+                <caption>جدول <span class="ltr-text">۱۱</span>. محلول استاندارد با استفاده از <span class="ltr-text">USP Oligosaccharide System Suitability Mixture B RS</span></caption>
+            </table>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
+            <p class="mb-4">
+                سیستم کروماتوگرافی را با شرایط اولیه فاز متحرک شرح داده شده در جدول <span class="ltr-text">۹</span> حداقل به مدت <span class="ltr-text">15 min</span> متعادل کنید. <span class="ltr-text">50 µL</span> آب را برای اولین تزریق تزریق کنید.
+            </p>
+            <p class="mb-4">
+                <strong>نمونه:</strong> محلول نمونه
+            </p>
+            <p class="mb-4">
+                پیک‌ها را در کروماتوگرام حاصل انتگرال بگیرید و مساحت‌های نسبی پیک ساختارهای گلیکان مربوط به محصول را گزارش کنید. برای اطلاعات عمومی در مورد انتگرال‌گیری پیک کروماتوگرافی، به <a href="621.html" class="text-blue-600 hover:underline" target="_blank">۶۲۱</a> مراجعه کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش <span class="ltr-text">۲</span></h4>
+            <p class="mb-4">
+                <strong>محلول <span class="ltr-text">A</span>:</strong> آب؛ قبل از استفاده گاززدایی کنید.
+            </p>
+            <p class="mb-4">
+                <strong>محلول <span class="ltr-text">B</span>:</strong> <span class="ltr-text">0.5 M</span> سدیم استات، به شرح زیر تهیه شود. <span class="ltr-text">41.0 g</span> سدیم استات انیدروس را در <span class="ltr-text">900 mL</span> آب حل کنید. محلول را به یک بالن ژوژه <span class="ltr-text">1-L</span> منتقل کنید و با آب به حجم برسانید. محلول را از یک غشای نایلونی با اندازه منافذ حداکثر <span class="ltr-text">0.45-µm</span> فیلتر کنید و قبل از استفاده گاززدایی کنید.
+            </p>
+            <p class="mb-4">
+                <strong>محلول <span class="ltr-text">C</span>:</strong> <span class="ltr-text">0.5 M</span> سدیم هیدروکسید، به شرح زیر تهیه شود. به <span class="ltr-text">900 mL</span> آب، <span class="ltr-text">26 mL</span> از <span class="ltr-text">50% (w/w)</span> محلول سدیم هیدروکسید اضافه کنید و به خوبی مخلوط کنید. محلول را با آب به حجم نهایی <span class="ltr-text">1000 mL</span> برسانید. محلول را از یک غشای نایلونی مقاوم به قلیا با اندازه منافذ حداکثر <span class="ltr-text">0.45-µm</span> فیلتر کنید و قبل از استفاده گاززدایی کنید.
+            </p>
+            <p class="mb-4">
+                <strong>فاز متحرک:</strong> به جدول <span class="ltr-text">۱۲</span> مراجعه کنید.
+            </p>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th><span class="ltr-text">Time (min)</span></th>
+                        <th><span class="ltr-text">Solution A (%)</span></th>
+                        <th><span class="ltr-text">Solution B (%)</span></th>
+                        <th><span class="ltr-text">Solution C (%)</span></th>
+                        <th><span class="ltr-text">Elution</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="ltr-text">0.0</span></td><td><span class="ltr-text">80</span></td><td><span class="ltr-text">10</span></td><td><span class="ltr-text">10</span></td><td>شرایط اولیه</td></tr>
+                    <tr><td><span class="ltr-text">15.0</span></td><td><span class="ltr-text">80</span></td><td><span class="ltr-text">10</span></td><td><span class="ltr-text">10</span></td><td><span class="ltr-text">50–150 mM</span> سدیم استات، <span class="ltr-text">0.05 N</span> سدیم هیدروکسید ایزوکراتیک</td></tr>
+                    <tr><td><span class="ltr-text">70.0</span></td><td><span class="ltr-text">60</span></td><td><span class="ltr-text">30</span></td><td><span class="ltr-text">10</span></td><td><span class="ltr-text">150–450 mM</span> سدیم استات، <span class="ltr-text">0.05 N</span> سدیم هیدروکسید ایزوکراتیک</td></tr>
+                    <tr><td><span class="ltr-text">94.0</span></td><td><span class="ltr-text">0</span></td><td><span class="ltr-text">90</span></td><td><span class="ltr-text">10</span></td><td rowspan="2">شستشوی سدیم استات، بدون گرادیان</td></tr>
+                    <tr><td><span class="ltr-text">99.0</span></td><td><span class="ltr-text">0</span></td><td><span class="ltr-text">90</span></td><td><span class="ltr-text">10</span></td></tr>
+                    <tr><td><span class="ltr-text">105</span></td><td><span class="ltr-text">0</span></td><td><span class="ltr-text">10</span></td><td><span class="ltr-text">90</span></td><td rowspan="2">شستشوی سدیم هیدروکسید، بدون گرادیان</td></tr>
+                    <tr><td><span class="ltr-text">110</span></td><td><span class="ltr-text">0</span></td><td><span class="ltr-text">10</span></td><td><span class="ltr-text">90</span></td></tr>
+                    <tr><td><span class="ltr-text">111</span></td><td><span class="ltr-text">80</span></td><td><span class="ltr-text">10</span></td><td><span class="ltr-text">10</span></td><td rowspan="2">تعادل مجدد</td></tr>
+                    <tr><td><span class="ltr-text">130</span></td><td><span class="ltr-text">80</span></td><td><span class="ltr-text">10</span></td><td><span class="ltr-text">10</span></td></tr>
+                </tbody>
+            </table>
+
+            <p class="mb-4">
+                <strong>محلول استاندارد:</strong> استاندارد نشان‌گذاری شده با <span class="ltr-text">2-AB</span> خشک شده را با <span class="ltr-text">NMT 500 µL</span> آب بازسازی کنید. [<span class="ltr-text">NOTE</span>—حجم آب ممکن است نیاز به تنظیم داشته باشد تا سیگنال‌های فلورسانس از محلول استاندارد مشابه سیگنال‌های محلول نمونه باشند.]
+            </p>
+            <p class="mb-4">
+                <strong>محلول نمونه:</strong> نمونه نشان‌گذاری شده با <span class="ltr-text">2-AB</span> خشک شده را با حجم مناسبی از آب بازسازی کنید. [<span class="ltr-text">NOTE</span>—از نسبت <span class="ltr-text">20 µL</span> آب به ازای هر <span class="ltr-text">100 µg</span> گلیکوپروتئین مورد استفاده در آزمایش آزادسازی آنزیمی <span class="ltr-text">N</span>-گلیکان‌ها به عنوان نقطه شروع استفاده کنید.]
+            </p>
+            <p class="mb-4">
+                <strong>محلول بلانک:</strong> ماتریکس بافر نمونه که از طریق روش آماده‌سازی نمونه انجام شده است.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم کروماتوگرافی</h4>
+            <p class="mb-4">
+                (به بخش «کروماتوگرافی» <a href="621.html" class="text-blue-600 hover:underline" target="_blank">۶۲۱</a>، «مناسب بودن سیستم» مراجعه کنید.)
+            </p>
+            <ul class="list-disc list-inside mb-4">
+                <li>حالت: <span class="ltr-text">LC</span></li>
+                <li>آشکارساز: فلورسانس (طول موج تحریک <span class="ltr-text">330-nm</span> و طول موج گسیل <span class="ltr-text">420-nm</span>)</li>
+                <li>ستون‌ها
+                    <ul class="list-disc list-inside mr-4" dir="rtl">
+                        <li>محافظ: <span class="ltr-text">4.0-mm × 5-cm</span>؛ پرکننده <span class="ltr-text">10-µm L46</span></li>
+                        <li>تحلیلی: <span class="ltr-text">4.0-mm × 25-cm</span>؛ پرکننده <span class="ltr-text">10-µm L46</span></li>
+                    </ul>
+                </li>
+                <li>دماها
+                    <ul class="list-disc list-inside mr-4" dir="rtl">
+                        <li>ستون: <span class="ltr-text">25°</span></li>
+                        <li>اتوسمپلر: <span class="ltr-text">4°</span></li>
+                    </ul>
+                </li>
+                <li>سرعت جریان: <span class="ltr-text">0.5 mL/min</span></li>
+                <li>حجم تزریق: <span class="ltr-text">25 µL</span></li>
+            </ul>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مناسب بودن سیستم</h4>
+            <ul class="list-disc list-inside mb-4">
+                <li>نمونه‌ها: محلول استاندارد و محلول بلانک</li>
+                <li>الزامات مناسب بودن
+                    <ul class="list-disc list-inside mr-4" dir="rtl">
+                        <li>بلانک: کروماتوگرام با محلول بلانک نباید هیچ جزء مزاحمی در مناطق شستشوی <span class="ltr-text">N</span>-گلیکان داشته باشد.</li>
+                        <li>شباهت کروماتوگرام: کروماتوگرام حاصل از محلول استاندارد با کروماتوگرام مرجع ارائه شده با گواهی <span class="ltr-text">USP Oligosaccharide System Suitability Mixture C RS</span> یا <span class="ltr-text">USP Oligosaccharide System Suitability Mixture D RS</span> مطابقت دارد.</li>
+                        <li>حضور گونه‌های <span class="ltr-text">N</span>-گلیکان: اگر از <span class="ltr-text">USP Oligosaccharide System Suitability Mixture C RS</span> استفاده می‌شود، پیک‌های متناظر با <span class="ltr-text">A1</span> (پیک <span class="ltr-text">۱</span> و پیک <span class="ltr-text">۲</span>)، <span class="ltr-text">A2</span> و <span class="ltr-text">A3</span> (به جدول <span class="ltr-text">۱۳</span>؛ همچنین به پیوست مراجعه کنید) را در کروماتوگرام حاصل از محلول استاندارد با مقایسه کروماتوگرام مرجع ارائه شده با گواهی شناسایی کنید. اگر از <span class="ltr-text">USP Oligosaccharide System Suitability Mixture D RS</span> استفاده می‌شود، پیک‌های متناظر با <span class="ltr-text">A1</span> (پیک <span class="ltr-text">۱</span>)، <span class="ltr-text">A2</span>، <span class="ltr-text">A3</span> و <span class="ltr-text">A3G3S4</span> (به جدول <span class="ltr-text">۱۴</span>؛ همچنین به پیوست مراجعه کنید) را در کروماتوگرام حاصل از محلول استاندارد با مقایسه کروماتوگرام مرجع ارائه شده با گواهی شناسایی کنید.</li>
+                        <li>زمان‌های بازداری نسبی: متناظر با زمان‌های بازداری نسبی <span class="ltr-text">N</span>-گلیکان‌های لیست شده در جدول <span class="ltr-text">۱۳</span> یا جدول <span class="ltr-text">۱۴</span></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th><span class="ltr-text">N-Glycan</span></th>
+                        <th><span class="ltr-text">Approximate Relative Retention Time</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="ltr-text">A1 (G1S1), peak 1</span></td><td><span class="ltr-text">0.31</span></td></tr>
+                    <tr><td><span class="ltr-text">A1 (G1S1), peak 2</span></td><td><span class="ltr-text">0.32</span></td></tr>
+                    <tr><td><span class="ltr-text">A2 (G2S2)</span></td><td><span class="ltr-text">0.73</span></td></tr>
+                    <tr><td><span class="ltr-text">A3 (G3S3)</span></td><td><span class="ltr-text">1.00</span></td></tr>
+                </tbody>
+                <caption>جدول <span class="ltr-text">۱۳</span>. محلول استاندارد با استفاده از <span class="ltr-text">USP Oligosaccharide System Suitability Mixture C RS</span></caption>
+            </table>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th><span class="ltr-text">N-Glycan</span></th>
+                        <th><span class="ltr-text">Approximate Relative Retention Time</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="ltr-text">A1 (G1S1), peak 1</span></td><td><span class="ltr-text">0.23</span></td></tr>
+                    <tr><td><span class="ltr-text">A2 (G2S2)</span></td><td><span class="ltr-text">0.57</span></td></tr>
+                    <tr><td><span class="ltr-text">A3 (G3S3)</span></td><td><span class="ltr-text">0.78</span></td></tr>
+                    <tr><td><span class="ltr-text">A3G3S4 (S4NA3, or A3 + Sa)</span></td><td><span class="ltr-text">1.00</span></td></tr>
+                </tbody>
+                <caption>جدول <span class="ltr-text">۱۴</span>. محلول استاندارد با استفاده از <span class="ltr-text">USP Oligosaccharide System Suitability Mixture D RS</span></caption>
+            </table>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
+            <p class="mb-4">
+                [<span class="ltr-text">NOTE</span>—ستون را با شرایط اولیه فاز متحرک حداقل به مدت <span class="ltr-text">15 min</span> متعادل کنید.]
+            </p>
+            <p class="mb-4">
+                <strong>نمونه:</strong> محلول نمونه
+            </p>
+            <p class="mb-4">
+                <span class="ltr-text">25 µL</span> آب را تزریق کنید و برنامه گرادیان را حداقل یک بار اجرا کنید تا ستون و سیستم متعادل شوند. پیک‌ها را در کروماتوگرام حاصل انتگرال بگیرید و مساحت‌های نسبی پیک ساختارهای گلیکان مربوط به محصول را گزارش کنید. برای اطلاعات عمومی در مورد انتگرال‌گیری پیک کروماتوگرافی، به <a href="621.html" class="text-blue-600 hover:underline" target="_blank">۶۲۱</a> مراجعه کنید.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">• الکتروفورز مویین</h3>
+            <p class="mb-4">
+                <strong>بافر اجرا:</strong> <span class="ltr-text">1.492 g</span> از <span class="ltr-text">TEA</span> و <span class="ltr-text">10 g</span> از گلیسرول را در <span class="ltr-text">80 mL</span> آب حل کنید. با <span class="ltr-text">1 N</span> اسید هیدروکلریک تا <span class="ltr-text">pH 7.5</span> تنظیم کنید و با آب به حجم نهایی <span class="ltr-text">100 mL</span> رقیق کنید.
+            </p>
+            <p class="mb-4">
+                <strong>محلول استاندارد:</strong> محلول استاندارد نشان‌گذاری شده با <span class="ltr-text">APTS</span> که طبق دستورالعمل در آزمایش نشان‌گذاری <span class="ltr-text">APTS</span> برای جداسازی <span class="ltr-text">CE</span> تهیه شده است.
+            </p>
+            <p class="mb-4">
+                <strong>محلول نمونه:</strong> محلول نمونه نشان‌گذاری شده با <span class="ltr-text">APTS</span> که طبق دستورالعمل در آزمایش نشان‌گذاری <span class="ltr-text">APTS</span> برای جداسازی <span class="ltr-text">CE</span> تهیه شده است.
+            </p>
+            <p class="mb-4">
+                <strong>محلول بلانک:</strong> ماتریکس بافر نمونه گلیکوپروتئین که از طریق روش آماده‌سازی نمونه انجام شده است.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط ابزار</h4>
+            <ul class="list-disc list-inside mb-4">
+                <li>حالت: <span class="ltr-text">CE</span></li>
+                <li>آشکارساز: فلورسانس القایی لیزر (طول موج تحریک <span class="ltr-text">488-nm</span> و طول موج گسیل <span class="ltr-text">520-nm</span>)</li>
+                <li>مویین: سیلیس گداخته لخت با قطر داخلی <span class="ltr-text">50-µm</span> با طول کل <span class="ltr-text">50 cm</span> و طول جداسازی <span class="ltr-text">40 cm</span></li>
+                <li>پیش‌تهویه مویین: بین هر اجرا، به مدت <span class="ltr-text">5 min</span> در <span class="ltr-text">40 psi</span> با <span class="ltr-text">0.5 N</span> سدیم هیدروکسید، و به دنبال آن با آب به مدت <span class="ltr-text">1 min</span> در <span class="ltr-text">40 psi</span> شستشو دهید. [<span class="ltr-text">NOTE</span>—یک مویین جدید را یا در صورت نیاز پیش‌تهویه کنید: به مدت <span class="ltr-text">5 min</span> در <span class="ltr-text">20 psi</span> با متانول، و به دنبال آن با آب به مدت <span class="ltr-text">1 min</span> در <span class="ltr-text">50 psi</span>، <span class="ltr-text">1 N</span> اسید هیدروکلریک به مدت <span class="ltr-text">5 min</span> در <span class="ltr-text">20 psi</span>، آب به مدت <span class="ltr-text">1 min</span> در <span class="ltr-text">50 psi</span>، <span class="ltr-text">0.5 N</span> سدیم هیدروکسید به مدت <span class="ltr-text">25 min</span> در <span class="ltr-text">20 psi</span>، و آب به مدت <span class="ltr-text">5 min</span> در <span class="ltr-text">50 psi</span> شستشو دهید.]</li>
+                <li>پیش‌پر کردن مویین: به مدت <span class="ltr-text">5 min</span> در <span class="ltr-text">40 psi</span> با بافر اجرا شستشو دهید.</li>
+                <li>تزریق نمونه: تزریق هیدرودینامیکی (فشار) <span class="ltr-text">10 s</span></li>
+                <li>ولتاژ: <span class="ltr-text">22 kV</span> به مدت <span class="ltr-text">60 min</span></li>
+                <li>دماها
+                    <ul class="list-disc list-inside mr-4" dir="rtl">
+                        <li>کارتریج مویین: <span class="ltr-text">18°</span></li>
+                        <li>نگهداری نمونه: <span class="ltr-text">20°</span></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مناسب بودن سیستم</h4>
+            <ul class="list-disc list-inside mb-4">
+                <li>نمونه: محلول استاندارد</li>
+                <li>الزامات مناسب بودن
+                    <ul class="list-disc list-inside mr-4" dir="rtl">
+                        <li>شباهت الکتروفروگرام: الکتروفروگرام حاصل از محلول استاندارد با الکتروفروگرام مرجع ارائه شده با گواهی <span class="ltr-text">USP Oligosaccharide System Suitability Mixture A RS</span> یا <span class="ltr-text">USP Oligosaccharide System Suitability Mixture B RS</span> مطابقت دارد.</li>
+                        <li>حضور گونه‌های <span class="ltr-text">N</span>-گلیکان: اگر از <span class="ltr-text">USP Oligosaccharide System Suitability Mixture A RS</span> استفاده می‌شود، پیک‌های متناظر با <span class="ltr-text">G2F</span>، <span class="ltr-text">G2</span>، <span class="ltr-text">G1Fa</span>، <span class="ltr-text">G1Fb</span>، <span class="ltr-text">G0F</span>، <span class="ltr-text">MAN-5</span>، <span class="ltr-text">G0</span> و <span class="ltr-text">A1F</span> (به جدول <span class="ltr-text">۱۵</span>؛ همچنین به پیوست مراجعه کنید) را در الکتروفروگرام حاصل از محلول استاندارد با مقایسه الکتروفروگرام مرجع ارائه شده با گواهی <span class="ltr-text">USP</span> برای <span class="ltr-text">USP Oligosaccharide System Suitability Mixture A RS</span> شناسایی کنید. اگر از <span class="ltr-text">USP Oligosaccharide System Suitability Mixture B RS</span> استفاده می‌شود، پیک‌های متناظر با <span class="ltr-text">MAN-5</span>، <span class="ltr-text">MAN-6</span>، <span class="ltr-text">MAN-7</span>، <span class="ltr-text">MAN-8</span> و <span class="ltr-text">MAN-9</span> (به جدول <span class="ltr-text">۱۶</span>؛ همچنین به پیوست مراجعه کنید) را در الکتروفروگرام حاصل از محلول استاندارد با مقایسه الکتروفروگرام مرجع ارائه شده با گواهی <span class="ltr-text">USP</span> برای <span class="ltr-text">USP Oligosaccharide System Suitability Mixture B RS</span> شناسایی کنید.</li>
+                        <li>زمان‌های مهاجرت نسبی: متناظر با زمان‌های مهاجرت نسبی لیست شده در جدول <span class="ltr-text">۱۵</span> یا جدول <span class="ltr-text">۱۶</span></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th><span class="ltr-text">N-Glycan</span></th>
+                        <th><span class="ltr-text">Approximate Relative Migration Time</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="ltr-text">G2F (NA2F)</span></td><td><span class="ltr-text">0.79</span></td></tr>
+                    <tr><td><span class="ltr-text">G2 (NA2)</span></td><td><span class="ltr-text">0.84</span></td></tr>
+                    <tr><td><span class="ltr-text">G1Fb (NA1F, FA2G1, or NA2G1F)</span></td><td><span class="ltr-text">0.87</span></td></tr>
+                    <tr><td><span class="ltr-text">G1Fa (NA1F, FA2G1, or NA2G1F)</span></td><td><span class="ltr-text">0.90</span></td></tr>
+                    <tr><td><span class="ltr-text">G0F (NGA2F)</span></td><td><span class="ltr-text">1.00</span></td></tr>
+                    <tr><td><span class="ltr-text">MAN-5</span></td><td><span class="ltr-text">1.03</span></td></tr>
+                    <tr><td><span class="ltr-text">G0 (NGA2)</span></td><td><span class="ltr-text">1.12</span></td></tr>
+                    <tr><td><span class="ltr-text">A1F (G2fS1)</span></td><td><span class="ltr-text">1.18</span></td></tr>
+                </tbody>
+                <caption>جدول <span class="ltr-text">۱۵</span>. محلول استاندارد با استفاده از <span class="ltr-text">USP Oligosaccharide System Suitability Mixture A RS</span></caption>
+            </table>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th><span class="ltr-text">N-Glycan</span></th>
+                        <th><span class="ltr-text">Approximate Relative Migration Time</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="ltr-text">MAN-9</span></td><td><span class="ltr-text">0.82</span></td></tr>
+                    <tr><td><span class="ltr-text">MAN-8</span></td><td><span class="ltr-text">0.85</span></td></tr>
+                    <tr><td><span class="ltr-text">MAN-7</span></td><td><span class="ltr-text">0.91, 0.92, 0.94</span></td></tr>
+                    <tr><td><span class="ltr-text">MAN-6</span></td><td><span class="ltr-text">1.00</span></td></tr>
+                    <tr><td><span class="ltr-text">MAN-5</span></td><td><span class="ltr-text">1.11</span></td></tr>
+                </tbody>
+                <caption>جدول <span class="ltr-text">۱۶</span>. محلول استاندارد با استفاده از <span class="ltr-text">USP Oligosaccharide System Suitability Mixture B RS</span></caption>
+            </table>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
+            <p class="mb-4">
+                <strong>نمونه:</strong> محلول نمونه
+            </p>
+            <p class="mb-4">
+                پیک‌ها را در الکتروفروگرام حاصل انتگرال بگیرید و مساحت‌های نسبی پیک ساختارهای گلیکان مربوط به محصول را گزارش کنید.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">• استانداردهای مرجع <span class="ltr-text">USP</span> <a href="11.html" class="text-blue-600 hover:underline" target="_blank">۱۱</a></h3>
+            <ul class="list-disc list-inside mb-4">
+                <li><span class="ltr-text">USP Oligosaccharide System Suitability Mixture A RS</span></li>
+                <li><span class="ltr-text">USP Oligosaccharide System Suitability Mixture B RS</span></li>
+                <li><span class="ltr-text">USP Oligosaccharide System Suitability Mixture C RS</span></li>
+                <li><span class="ltr-text">USP Oligosaccharide System Suitability Mixture D RS</span></li>
+            </ul>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">پیوست</h2>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th><span class="ltr-text">Glycan</span></th>
+                        <th>توضیحات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="ltr-text">G0 (NGA2)</span></td><td>الیگوساکارید دو شاخه‌ای آسیالو-آگالاکتو</td></tr>
+                    <tr><td><span class="ltr-text">G0F (NGA2F)</span></td><td>الیگوساکارید دو شاخه‌ای آسیالو-آگالاکتو-فوکوزیله</td></tr>
+                    <tr><td><span class="ltr-text">G1Fa (NA1F, FA2G1, or NA2G1F) with the α(1,6) linkage</span></td><td>الیگوساکارید دو شاخه‌ای آسیالو، مونوگالاکتوزیله، فوکوزیله با گالاکتوزیلاسیون در پیوند <span class="ltr-text">α(1,6)</span></td></tr>
+                    <tr><td><span class="ltr-text">G1Fb (NA1F, FA2G1, or NA2G1F) with the α(1,3) linkage</span></td><td>الیگوساکارید دو شاخه‌ای آسیالو، مونوگالاکتوزیله، فوکوزیله با گالاکتوزیلاسیون در پیوند <span class="ltr-text">α(1,3)</span></td></tr>
+                    <tr><td><span class="ltr-text">G2 (NA2)</span></td><td>الیگوساکارید دو شاخه‌ای آسیالو، گالاکتوزیله</td></tr>
+                    <tr><td><span class="ltr-text">G2F (NA2F)</span></td><td>الیگوساکارید دو شاخه‌ای آسیالو-فوکوزیله</td></tr>
+                    <tr><td><span class="ltr-text">A1F (G2fS1)</span></td><td>الیگوساکارید دو شاخه‌ای مونوسیالو-فوکوزیله</td></tr>
+                    <tr><td><span class="ltr-text">A2F (G2fS2)</span></td><td>الیگوساکارید دو شاخه‌ای دیسیالو-فوکوزیله</td></tr>
+                    <tr><td><span class="ltr-text">MAN-5</span></td><td>الیگومانوز <span class="ltr-text">5</span><br>الیگوساکارید <span class="ltr-text">N</span>-متصل الیگومانوز با <span class="ltr-text">5</span> باقیمانده مانوزیل</td></tr>
+                    <tr><td><span class="ltr-text">MAN-6</span></td><td>الیگومانوز <span class="ltr-text">6</span><br>الیگوساکارید <span class="ltr-text">N</span>-متصل الیگومانوز با <span class="ltr-text">6</span> باقیمانده مانوزیل</td></tr>
+                    <tr><td><span class="ltr-text">MAN-7</span></td><td>الیگومانوز <span class="ltr-text">7</span><br>الیگوساکارید <span class="ltr-text">N</span>-متصل الیگومانوز با <span class="ltr-text">7</span> باقیمانده مانوزیل</td></tr>
+                    <tr><td><span class="ltr-text">MAN-8</span></td><td>الیگومانوز <span class="ltr-text">8</span><br>الیگوساکارید <span class="ltr-text">N</span>-متصل الیگومانوز با <span class="ltr-text">8</span> باقیمانده مانوزیل</td></tr>
+                    <tr><td><span class="ltr-text">MAN-9</span></td><td>الیگومانوز <span class="ltr-text">9</span><br>الیگوساکارید <span class="ltr-text">N</span>-متصل الیگومانوز با <span class="ltr-text">9</span> باقیمانده مانوزیل</td></tr>
+                    <tr><td><span class="ltr-text">A1 (G1S1)</span></td><td>الیگوساکارید دو شاخه‌ای مونو-سیالیله، گالاکتوزیله</td></tr>
+                    <tr><td><span class="ltr-text">A2 (G2S2)</span></td><td>الیگوساکارید دو شاخه‌ای دی-سیالیله، گالاکتوزیله</td></tr>
+                    <tr><td><span class="ltr-text">A3 (G3S3)</span></td><td>الیگوساکارید سه شاخه‌ای تری-سیالیله، گالاکتوزیله</td></tr>
+                    <tr><td><span class="ltr-text">A3G3S4 (S4NA3, or A3 + Sa)</span></td><td>الیگوساکارید سه شاخه‌ای تترا-سیالیله، گالاکتوزیله</td></tr>
+                </tbody>
+                <caption>جدول <span class="ltr-text">۱۷</span>. توضیحات گلیکان</caption>
+            </table>
+        </div>
+
+        <p class="text-xs text-gray-500 mt-8 text-center" dir="ltr">
+            <sup>1</sup> A suitable ultrafiltration membrane is YM-30 microcon centrifugal filter device from Millipore (catalog numbers 42422, 42409, and 42410) or an equivalent.<br>
+            <sup>2</sup> A suitable ultrafiltration membrane is EMD Millipore Ultra-0.5 Centrifugal Filter Unit (catalog number UFC501096) or an equivalent.<br>
+            <sup>3</sup> A suitable SPE cartridge is Glyko GlycoClean R Cartridge from Prozyme (catalog number GKI-4756) or an equivalent.<br>
+            <sup>4</sup> A suitable 2-AB labeling kit is Glyko Signal 2-AB Labeling Kit from Prozyme (catalog number GKK-404), LudgerTage 2-AB labeling kit from QA Bio (catalog number LT-KAB-A2), or an equivalent.<br>
+            <sup>5</sup> A suitable prepacked Sephadex G-10 column is Macro Spin G-10 mini SEC column from Harvard Apparatus (catalog number 743900) or The Nest Group (catalog number SMM S010), or an equivalent.<br>
+            <sup>6</sup> A suitable cartridge to remove free 2-AB is Glyko GlycoClean S Cartridge from Prozyme (catalog number GKI-4726) or an equivalent.
+        </p>
+    </div>
+</body>
+</html>

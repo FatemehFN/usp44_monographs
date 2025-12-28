@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>203. روش کروماتوگرافی لایه نازک با کارایی بالا برای شناسایی مقالات با منشأ گیاهی</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Vazirmatn Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- MathJax CDN -->
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- Internal Styling -->
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">203. روش کروماتوگرافی لایه نازک با کارایی بالا برای شناسایی مقالات با منشأ گیاهی</h1>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+            <p class="mb-4">
+                این فصل روشی را برای استفاده در آزمون شناسایی <span class="ltr-text">USP</span> توصیف می‌کند که از تکنیک کروماتوگرافی لایه نازک با کارایی بالا (<span class="ltr-text">HPTLC</span>) استفاده می‌کند. کنترل دقیق متغیرهای آزمایشی برای تجزیه و تحلیل قابل تکرار ضروری است.
+                [<span class="ltr-text">NOTE</span>—برای اطلاعات بیشتر، به شناسایی مقالات با منشأ گیاهی با روش کروماتوگرافی لایه نازک با کارایی بالا <a href="1064.html" class="text-blue-600 hover:underline" target="_blank">1064</a> مراجعه کنید.]
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تجهیزات</h2>
+            <p class="mb-4">
+                تجهیزات مورد استفاده برای آنالیز <span class="ltr-text">HPTLC</span> معمولاً شامل موارد زیر است:
+            </p>
+            <ul class="list-disc pr-8 mb-4">
+                <li class="mb-2">
+                    صفحات: مگر اینکه در تک‌نگاری فردی به نحو دیگری مشخص شده باشد، از صفحات <span class="ltr-text">20 × 10 cm</span> استفاده کنید که با یک لایه یکنواخت <span class="ltr-text">200-µm</span> از ژل سیلیکا متخلخل (اندازه منافذ <span class="ltr-text">60-Å</span>) با ذرات نامنظم <span class="ltr-text">2–10 µm</span> و اندازه ذرات متوسط <span class="ltr-text">5 µm</span>، یک چسب پلیمری و یک نشانگر فلورسانس (<span class="ltr-text">F254</span>) پوشانده شده‌اند. [<span class="ltr-text">NOTE</span>—صفحات شیشه‌ای به ورق‌های آلومینیومی ترجیح داده می‌شوند.]
+                </li>
+                <li class="mb-2">
+                    دستگاهی مناسب برای اعمال حجم‌های مشخص شده به صورت باندهایی با طول مشخص در موقعیت‌های تعیین شده.
+                </li>
+                <li class="mb-2">
+                    دستگاهی مناسب برای کنترل فعالیت فاز ثابت با پیش‌شرط‌گذاری صفحه به رطوبت نسبی تعیین شده.
+                </li>
+                <li class="mb-2">
+                    یک محفظه کروماتوگرافی مناسب برای حفظ ترکیب فاز بخار قابل تکرار و امکان کنترل فاصله توسعه (به عنوان مثال، یک محفظه دو حفره‌ای).
+                </li>
+                <li class="mb-2">
+                    دستگاهی مناسب برای خشک کردن قابل تکرار صفحه توسعه یافته.
+                </li>
+                <li class="mb-2">
+                    دستگاهی مناسب برای تیمار صفحه با معرف مشتق‌سازی، در صورت لزوم.
+                </li>
+                <li class="mb-2">
+                    دستگاهی مناسب برای گرمایش کنترل شده صفحه به عنوان بخشی از روش مشتق‌سازی، در صورت لزوم.
+                </li>
+                <li class="mb-2">
+                    دستگاهی مناسب برای روشنایی تحت شرایط مشاهده تجویز شده، معمولاً <span class="ltr-text">UV</span> موج کوتاه (اسماً <span class="ltr-text">254 nm</span>)، <span class="ltr-text">UV</span> موج بلند (اسماً <span class="ltr-text">365 or 366 nm</span>) و نور سفید. [<span class="ltr-text">NOTE</span>—منابع نوری مورد استفاده برای مشاهده کروماتوگرام معمولاً انتشار باند پهن تولید می‌کنند؛ بنابراین، حداکثر‌های ذکر شده در بالا فقط اهمیت اسمی دارند.]
+                </li>
+                <li class="mb-2">
+                    سیستم عکاسی برای مستندسازی کروماتوگرام‌ها تحت شرایط مشاهده تجویز شده.
+                </li>
+            </ul>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">روش کار</h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تهیه محلول آزمون</h3>
+            <p class="mb-4">
+                مگر اینکه در تک‌نگاری فردی به نحو دیگری ذکر شده باشد، <span class="ltr-text">100 mg</span> از یک ماده گیاهی پودر شده، <span class="ltr-text">10 mg</span> از یک عصاره خشک، یا مقدار یک فرم دوز حاوی معادل مقادیر فوق‌الذکر از ماده گیاهی به مدت <span class="ltr-text">15 min</span> با <span class="ltr-text">1 mL</span> متانول سونیفیکاسیون می‌شود. پس از فیلتراسیون یا سانتریفیوژ، فیلتراسیون یا مایع رویی به عنوان محلول نمونه استفاده می‌شود. برای روغن‌های اساسی، محلول <span class="ltr-text">50 µL/mL</span> در تولوئن به عنوان محلول نمونه استفاده می‌شود.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تهیه محلول‌های استاندارد</h3>
+            <p class="mb-4">
+                مگر اینکه در تک‌نگاری فردی به نحو دیگری ذکر شده باشد، استانداردهای مرجع ترکیبات مارکر منفرد در متانول با غلظت <span class="ltr-text">1 mg/mL</span> حل می‌شوند. عصاره‌های استاندارد مرجع در متانول با غلظت <span class="ltr-text">10 mg/mL</span> یا، برای روغن‌های اساسی، در تولوئن با <span class="ltr-text">50 µL/mL</span> تکان داده و سونیفیکاسیون می‌شوند.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">اعمال نمونه و چیدمان صفحه</h3>
+            <p class="mb-4">
+                نمونه‌ها به صورت باندهایی باریک با طول <span class="ltr-text">8-mm</span> در فاصله <span class="ltr-text">8 mm</span> از لبه پایینی صفحه اعمال می‌شوند. [<span class="ltr-text">NOTE</span>—برای اطلاعات بیشتر به <a href="1064.html" class="text-blue-600 hover:underline" target="_blank">1064</a> مراجعه کنید.] استانداردهای مناسبت سیستم به مسیر نزدیکترین به لبه جانبی در <span class="ltr-text">NLT 20 mm</span> از لبه جانبی صفحه اعمال می‌شوند. فاصله بین مسیرها، مرکز به مرکز، <span class="ltr-text">NLT 11 mm</span> است. تمام حجم‌های اعمالی در تک‌نگاری‌های فردی مشخص شده‌اند و معمولاً در محدوده <span class="ltr-text">2–10 µL</span> قرار دارند. فاصله توسعه قبل از توسعه با مداد نزدیک به یکی از لبه‌های جانبی صفحه علامت‌گذاری می‌شود؛ به طور جایگزین، از یک دستگاه تشخیص الکترونیکی جبهه حلال استفاده می‌شود.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">پیش‌شرط‌گذاری صفحه</h3>
+            <p class="mb-4">
+                پس از اعمال نمونه و مگر اینکه در تک‌نگاری فردی به نحو دیگری ذکر شده باشد، صفحه در رطوبت نسبی <span class="ltr-text">33%</span> با قرار گرفتن در معرض جو تولید شده توسط بخارات در تعادل با محلول اشباع کلرید منیزیم در یک محفظه مهر و موم شده برای حداقل <span class="ltr-text">10 min</span> شرطی می‌شود. سایر محلول‌های نمک اشباع شده پتاسیم تیوسیانات و کلرید سدیم که اغلب استفاده می‌شوند، رطوبت نسبی تعادلی <span class="ltr-text">47%</span> و <span class="ltr-text">75%</span> را به ترتیب در <span class="ltr-text">25°</span> برقرار می‌کنند.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تهیه محفظه توسعه و توسعه صفحه</h3>
+            <p class="mb-4">
+                در جایی که از محفظه دو حفره‌ای استفاده می‌شود، حفره عقبی با کاغذ فیلتر مجهز می‌شود. محفظه با حجم کافی از حلال توسعه‌دهنده پر می‌شود تا کاغذ فیلتر را به طور کامل مرطوب کند و سطح حلال توسعه‌دهنده دقیقاً <span class="ltr-text">5 mm</span> در هر دو حفره باشد. با بسته بودن درب، محفظه به مدت <span class="ltr-text">20 min</span> برای رسیدن به اشباع مجاز است. صفحه به صورت عمودی در حفره جلویی محفظه با لایه کروماتوگرافی رو به کاغذ فیلتر قرار داده می‌شود. هنگامی که جبهه حلال <span class="ltr-text">6 cm</span> از خط اعمال بالا رفته است، صفحه از محفظه خارج شده و در موقعیت عمودی در جریان هوای سردی که بر یکپارچگی مناطق جدا شده تأثیر نمی‌گذارد، خشک می‌شود. پیکربندی‌های جایگزین محفظه و فواصل توسعه ممکن است در تک‌نگاری فردی مشخص شوند. [<span class="ltr-text">NOTE</span>—اگر نتایج به دست آمده تمام معیارهای مناسبت سیستم را برآورده کنند، می‌توان از سایر محفظه‌های توسعه استفاده کرد.]
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">روش مشتق‌سازی</h3>
+            <p class="mb-4">
+                در جایی که معرف‌های مشتق‌سازی استفاده می‌شوند، حجم‌های مناسبی از معرف‌ها (معمولاً <span class="ltr-text">1–2 mL</span>) به طور یکنواخت روی صفحه اسپری می‌شوند یا صفحه با سرعت مشخص و برای زمان غوطه‌وری مشخص در محلول معرف فرو برده می‌شود. [<span class="ltr-text">NOTE</span>—سرعت غوطه‌وری <span class="ltr-text">50 mm/s</span> و زمان غوطه‌وری <span class="ltr-text">1 s</span> برای اکثر معرف‌های غیرآبی توصیه می‌شود.]
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">مشاهده</h3>
+            <p class="mb-4">
+                کروماتوگرام‌های روی صفحه طبق دستورالعمل‌های تک‌نگاری فردی، معمولاً تحت <span class="ltr-text">UV</span> موج کوتاه، <span class="ltr-text">UV</span> موج بلند، یا نور سفید قبل و بعد از مشتق‌سازی، مشاهده می‌شوند.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">مناسبت سیستم</h3>
+            <p class="mb-4">
+                یک الزام عمومی برای مناسبت سیستم این است که جبهه حلال و باندهای کروماتوگرافی کاملاً موازی با اضلاع افقی صفحه کروماتوگرافی باشند. پارامترهای مناسبت خاص در تک‌نگاری‌ها به تفصیل آمده‌اند. معمولاً، برای ارزیابی مناسبت سیستم کروماتوگرافی برای تفکیک، موقعیت و رنگ باندها، دو یا چند ماده مرجع انتخاب می‌شوند که مقادیر <span class="ltr-text">RF</span> مشابه اما قابل تفکیک در شرایط کروماتوگرافی مورد استفاده دارند؛ به عنوان مثال، اسید کلروژنیک (آبی) و هایپروزید (زرد-نارنجی) معمولاً برای روش‌های فلاونوئیدی استفاده می‌شوند. مناسبت سیستم هر بار که آنالیز انجام می‌شود مورد نیاز است؛ این کار بر روی همان صفحه در کنار اقلام آزمون انجام می‌شود. عدم رعایت الزامات مناسبت سیستم آنالیز را باطل می‌کند. در صورت عدم رعایت، علت آن باید شناسایی و اصلاح شود (برای منابع احتمالی عدم رعایت به <a href="1064.html" class="text-blue-600 hover:underline" target="_blank">1064</a> مراجعه کنید)، و آنالیز تا زمانی که الزامات مناسبت برآورده شوند تکرار شود. استانداردهای مرجع فردی، یا مخلوط‌های آنها، معمولاً برای نظارت بر مناسبت سیستم به کار می‌روند و استفاده از عصاره‌های استاندارد مرجع <span class="ltr-text">USP</span> رایج است. تفکیک، موقعیت و رنگ‌های باندهای کلیدی کروماتوگرام استاندارد مرجع باید با توصیف موجود در تک‌نگاری در یک تحمل مشخص مطابقت داشته باشند.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">ارزیابی و معیارهای پذیرش</h3>
+            <p class="mb-4">
+                کروماتوگرام‌های محلول نمونه و محلول استاندارد با توصیفات در بخش معیارهای پذیرش تک‌نگاری از نظر موقعیت باند، تفکیک، رنگ و شدت نسبی مقایسه می‌شوند.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">مستندسازی</h3>
+            <p class="mb-4">
+                نتایج آزمون باید به روشی قابل حسابرسی برای مطابقت با شیوه‌های ساخت خوب فعلی مستند شوند. ابزارهای مستندسازی مناسب باید به کار گرفته شوند؛ به عنوان مثال، یک دوربین دیجیتال قادر به ثبت تصاویر تحت روشنایی تجویز شده، یا یک دانسیتومتر اسکن‌کننده به همراه نرم‌افزار تصویربرداری مناسب برای بایگانی، بازیابی و تحلیل نتایج.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">پارامترهای استاندارد</h2>
+            <p class="mb-4">
+                مگر اینکه در تک‌نگاری فردی به نحو دیگری ذکر شده باشد، پارامترهای استاندارد زیر، همانطور که در جدول <span class="ltr-text">1</span> مشخص شده‌اند، باید در هر روشی که به این فصل ارجاع می‌دهد، به کار گرفته شوند.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">جدول 1</h3>
+            <table class="card">
+                <thead>
+                    <tr>
+                        <th>پارامتر</th>
+                        <th>استاندارد</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>صفحه کروماتوگرافی، شیشه، <span class="ltr-text">20 × 10 cm</span></td>
+                        <td>لایه سیلیکا <span class="ltr-text">200-µm</span>، اندازه ذرات متوسط <span class="ltr-text">5-µm</span>، با نشانگر فلورسانس <span class="ltr-text">F254</span></td>
+                    </tr>
+                    <tr>
+                        <td>موقعیت اعمال، از لبه پایینی صفحه</td>
+                        <td><span class="ltr-text">8 mm</span></td>
+                    </tr>
+                    <tr>
+                        <td>طول اعمال باند</td>
+                        <td><span class="ltr-text">8 mm</span></td>
+                    </tr>
+                    <tr>
+                        <td>فاصله باند، مرکز به مرکز</td>
+                        <td><span class="ltr-text">NLT 11 mm</span></td>
+                    </tr>
+                    <tr>
+                        <td>رطوبت نسبی</td>
+                        <td><span class="ltr-text">33%</span></td>
+                    </tr>
+                    <tr>
+                        <td>زمان شرطی‌سازی صفحه</td>
+                        <td><span class="ltr-text">10 min</span></td>
+                    </tr>
+                    <tr>
+                        <td>زمان اشباع محفظه</td>
+                        <td><span class="ltr-text">20 min</span></td>
+                    </tr>
+                    <tr>
+                        <td>فاصله توسعه</td>
+                        <td><span class="ltr-text">6 cm</span></td>
+                    </tr>
+                    <tr>
+                        <td>دما</td>
+                        <td><span class="ltr-text">22 ± 5°</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سنجش دکسپانتنول</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr; /* Ensure MathJax formulas are LTR */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6"><span class="ltr-text">115</span> سنجش دکسپانتنول</h1>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+            <p class="mb-4">
+                روش کروماتوگرافی مایع زیر برای تعیین دکسپانتنول به عنوان یک جزء در مکمل‌های غذایی یا اشکال دوز دارویی ارائه شده است.
+            </p>
+            <p>
+                در حین انجام این روش، محلول‌های حاوی و مشتق شده از نمونه آزمایش و استانداردهای مرجع را از اتمسفر و نور محافظت کنید، ترجیحاً با استفاده از ظروف شیشه‌ای کم‌اکتینیک. از استانداردهای مرجع <span class="ltr-text">USP</span> مناسب استفاده کنید.
+            </p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">روش‌های کروماتوگرافی، روش <span class="ltr-text">1</span></h3>
+            <p class="mb-2">
+                این روش می‌تواند برای تعیین دکسپانتنول در موارد زیر استفاده شود:
+            </p>
+            <ul class="list-disc list-inside mb-4 pr-4">
+                <li>محلول خوراکی ویتامین‌های محلول در روغن و آب</li>
+                <li>محلول خوراکی ویتامین‌های محلول در روغن و آب همراه با مواد معدنی</li>
+                <li>محلول خوراکی ویتامین‌های محلول در آب همراه با مواد معدنی</li>
+            </ul>
+            <p class="mb-4">
+                مگر اینکه در تک‌نگاری مشخص شده باشد، محلول استاندارد، محلول مناسبی سیستم، و محلول نمونه به شرح زیر تهیه می‌شوند.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فاز متحرک:</h4>
+            <p class="mb-4">
+                <span class="ltr-text">0.2 M</span> مونوبازیک سدیم فسفات و متانول (<span class="ltr-text">97:3</span>). با <span class="ltr-text">1.7 M</span> اسید فسفریک تا <span class="ltr-text">pH</span> <span class="ltr-text">3.2 ± 0.1</span> تنظیم کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استاندارد:</h4>
+            <p class="mb-4">
+                <span class="ltr-text">80 µg/mL</span> از <span class="ltr-text">USP Dexpanthenol RS</span> در فاز متحرک.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول مناسبی سیستم:</h4>
+            <p class="mb-4">
+                <span class="ltr-text">80 µg/mL</span> از <span class="ltr-text">USP Calcium Pantothenate RS</span> در فاز متحرک. محلول حاصل و محلول استاندارد را (<span class="ltr-text">1:1</span>) مخلوط کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه:</h4>
+            <p class="mb-4">
+                معادل <span class="ltr-text">80 µg/mL</span> دکسپانتنول از محلول خوراکی در فاز متحرک.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">سیستم کروماتوگرافی</h3>
+            <p class="mb-2">
+                (به کروماتوگرافی <a href="621.html" class="text-blue-600 hover:underline" target="_blank"><span class="ltr-text">621</span></a>، مناسبی سیستم مراجعه کنید.)
+            </p>
+            <ul class="list-disc list-inside mb-4 pr-4">
+                <li>حالت: <span class="ltr-text">LC</span></li>
+                <li>آشکارساز: <span class="ltr-text">UV 210 nm</span></li>
+                <li>ستون: <span class="ltr-text">4.0-mm × 10-cm</span>؛ پرکننده <span class="ltr-text">L1</span></li>
+                <li>نرخ جریان: <span class="ltr-text">1 mL/min</span></li>
+                <li>حجم تزریق: <span class="ltr-text">20 µL</span></li>
+            </ul>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">مناسبی سیستم</h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه‌ها:</h4>
+            <p class="mb-4">
+                محلول استاندارد و محلول مناسبی سیستم.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">الزامات مناسبی:</h4>
+            <ul class="list-disc list-inside mb-4 pr-4">
+                <li>رزولوشن: <span class="ltr-text">NLT 1.5</span> بین دکسپانتنول و کلسیم پانتوتنات، محلول مناسبی سیستم.</li>
+                <li>فاکتور دنباله: <span class="ltr-text">NMT 2.0</span> برای پیک دکسپانتنول، محلول استاندارد.</li>
+                <li>انحراف استاندارد نسبی: <span class="ltr-text">NMT 2.0%</span>، محلول استاندارد.</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آنالیز</h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه‌ها:</h4>
+            <p class="mb-4">
+                محلول استاندارد و محلول نمونه.
+            </p>
+            <p class="mb-4">
+                درصد مقدار برچسب‌گذاری شده دکسپانتنول (<span class="ltr-text">C9H19NO4</span>) در بخش نمونه گرفته شده را محاسبه کنید:
+            </p>
+            <div class="formula-display">
+                <p>
+                    <span class="ltr-text">$$Result = \frac{r_U}{r_S} \times \frac{C_S}{C_U} \times 100$$</span>
+                </p>
+            </div>
+            <ul class="list-none mb-4 pr-4">
+                <li><span class="ltr-text">$r_U$</span> = پاسخ پیک دکسپانتنول از محلول نمونه</li>
+                <li><span class="ltr-text">$r_S$</span> = پاسخ پیک دکسپانتنول از محلول استاندارد</li>
+                <li><span class="ltr-text">$C_S$</span> = غلظت <span class="ltr-text">USP Dexpanthenol RS</span> در محلول استاندارد (<span class="ltr-text">mg/mL</span>)</li>
+                <li><span class="ltr-text">$C_U$</span> = غلظت اسمی دکسپانتنول در محلول نمونه (<span class="ltr-text">mg/mL</span>)</li>
+            </ul>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع <span class="ltr-text">USP</span> <a href="11.html" class="text-blue-600 hover:underline" target="_blank"><span class="ltr-text">11</span></a></h3>
+            <ul class="list-disc list-inside mb-4 pr-4">
+                <li><span class="ltr-text">USP Calcium Pantothenate RS</span></li>
+                <li><span class="ltr-text">USP Dexpanthenol RS</span></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

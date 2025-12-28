@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعیین وزن مولکولی هپارین با وزن مولکولی پایین</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-ch.js"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <div class="card">
+            <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">
+                á209ñ تعیین وزن مولکولی هپارین با وزن مولکولی پایین
+            </h1>
+
+            <p class="mb-4">
+                این فصل روش‌هایی را که برای تعیین توزیع وزن مولکولی (MW) و وزن مولکولی میانگین وزنی برای هپارین‌های با وزن مولکولی پایین (LMWH) استفاده می‌شود، ارائه می‌دهد.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+            <p class="mb-4">
+                هپارین‌های با وزن مولکولی پایین با استفاده از هپارین سدیم، USP، از طریق depolymerization جزئی آماده می‌شوند. LMWHها polydisperse هستند، به این معنی که از زنجیره‌های پلی‌ساکارید با محدوده وزن‌های مولکولی تشکیل شده‌اند. توزیع MW یک ویژگی تعریف‌کننده برای هر محصول LMWH است. USP دارای مونوگراف‌های خاصی برای محصولات LMWH است، از جمله محدودیت‌هایی در پارامترهای توزیع وزن مولکولی.
+            </p>
+            <p class="mb-4">
+                بیشتر تکنیک‌های تعیین توزیع MW هپارین‌های LMWH از کروماتوگرافی نفوذ ژل (GPC) استفاده می‌کنند که گاهی اوقات به عنوان کروماتوگرافی حذف اندازه (SEC) شناخته می‌شود. برای به دست آوردن توزیع وزن مولکولی از یک کروماتوگرام، لازم است رابطه بین زمان بازداری و MW شناخته شود. این فصل یک روش GPC را توصیف می‌کند که با استفاده از استاندارد مرجع کالیبراسیون وزن مولکولی هپارین با وزن مولکولی پایین (RS) کالیبره می‌شود.
+            </p>
+            <p class="mb-4">
+                این آماده‌سازی یک استاندارد polydisperse واحد است که توزیع وزن‌های مولکولی آن در قالب یک جدول استاندارد گسترده (به گواهی USP برای USP Low Molecular Weight Heparin Molecular Weight Calibrant RS مراجعه کنید) توصیف شده است که لگاریتم وزن مولکولی (log MW) تعدادی نقطه مرجع و درصد جرمی متناظر از کالیبرانت بالاتر یا پایین‌تر از این نقاط مرجع را لیست می‌کند. جدول استاندارد گسترده همراه با کروماتوگرام کالیبرانت برای برازش یک تابع مناسب، در این مورد یک چندجمله‌ای درجه سوم، به رابطه بین log MW و زمان بازداری استفاده می‌شود و در نتیجه یک منحنی کالیبراسیون برای سیستم کروماتوگرافی ایجاد می‌شود. با این منحنی کالیبراسیون، تحلیلگر وزن مولکولی میانگین وزنی و پارامترهای توزیع را از کروماتوگرام یک نمونه LMWH محاسبه می‌کند.
+            </p>
+            <p class="mb-4">
+                تمام محاسبات شرح داده شده در این فصل ممکن است با استفاده از یک برنامه صفحه گسترده انجام شود، اما این روش به دلیل پر زحمت بودن و احتمال خطای انسانی توصیه نمی‌شود. نرم‌افزارهای اختصاصی قادر به خودکارسازی کالیبراسیون و محاسبات وزن مولکولی را می‌توان از تعدادی تولیدکننده سیستم‌های کروماتوگرافی تهیه کرد.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">روش</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">اندازه‌گیری وزن مولکولی هپارین‌های با وزن مولکولی پایین توسط کروماتوگرافی نفوذ ژل</h4>
+            <p class="mb-4">
+                روش زیر، با هرگونه تغییر لازم، در مواردی که در مونوگراف‌های فردی مشخص شده است، استفاده می‌شود.
+            </p>
+
+            <p class="font-bold mb-2">محلول پایه آمونیوم استات:</p>
+            <p class="mb-4">1 مولار آمونیوم استات در آب</p>
+
+            <p class="font-bold mb-2">محلول سدیم آزید:</p>
+            <p class="mb-4">1% (w/v) سدیم آزید در آب</p>
+
+            <p class="font-bold mb-2">فاز متحرک:</p>
+            <p class="mb-4">
+                100 میلی‌لیتر از محلول پایه آمونیوم استات را به یک فلاسک حجمی 1 لیتری منتقل کنید، 20 میلی‌لیتر از محلول سدیم آزید اضافه کرده و با آب حجم را تا خط نشانه برسانید. قبل از استفاده با یک غشای نایلونی با اندازه منافذ 0.45 میکرومتر فیلتر کنید.
+            </p>
+
+            <p class="font-bold mb-2">محلول کالیبراسیون:</p>
+            <p class="mb-4">
+                2 میلی‌لیتر از فاز متحرک را به یک ویال حاوی USP Low Molecular Weight Heparin Molecular Weight Calibrant RS اضافه کنید. قبل از استفاده با یک غشای نایلونی با اندازه منافذ 0.45 میکرومتر فیلتر کنید.
+            </p>
+
+            <p class="font-bold mb-2">محلول نمونه:</p>
+            <p class="mb-4">
+                5 میلی‌گرم بر میلی‌لیتر از نمونه هپارین با وزن مولکولی پایین در فاز متحرک. با یک غشای نایلونی با اندازه منافذ 0.45 میکرومتر فیلتر کنید.
+            </p>
+
+            <p class="font-bold mb-2">محلول مناسبت سیستم:</p>
+            <p class="mb-4">
+                5 میلی‌گرم بر میلی‌لیتر از USP Dalteparin Sodium RS در فاز متحرک. با یک غشای نایلونی با اندازه منافذ 0.45 میکرومتر فیلتر کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم کروماتوگرافی</h4>
+            <p class="mb-4">(به کروماتوگرافی <a href="854.html" class="text-blue-600 hover:underline" target="_blank">854</a>، مناسبت سیستم مراجعه کنید.)</p>
+            <p class="mb-2">[نکته—دمای آشکارساز ضریب شکست باید در همان دمایی تنظیم شود که دمای ستون است.]</p>
+            <p class="font-bold mb-2">حالت:</p>
+            <p class="mb-4">LC</p>
+
+            <p class="font-bold mb-2">آشکارساز:</p>
+            <p class="mb-4">ضریب شکست</p>
+
+            <p class="font-bold mb-2">ستون‌ها:</p>
+            <p class="mb-4">
+                تحلیلی: 7.8-mm × 30-cm؛ بسته‌بندی 5-µm L59 در سری با 7.8-mm × 30-cm؛ بسته‌بندی 5-µm L591
+            </p>
+            <p class="mb-4">
+                نگهبان: 6-mm × 4-cm؛ بسته‌بندی 7-µm L59
+            </p>
+
+            <p class="font-bold mb-2">دمای ستون:</p>
+            <p class="mb-4"><span class="ltr-text">30</span>°</p>
+
+            <p class="font-bold mb-2">نرخ جریان:</p>
+            <p class="mb-4"><span class="ltr-text">0.5</span> mL/min</p>
+
+            <p class="font-bold mb-2">همسان‌سازی ستون:</p>
+            <p class="mb-4"><span class="ltr-text">0.5</span> mL/min برای حداقل <span class="ltr-text">2</span> ساعت</p>
+
+            <p class="font-bold mb-2">حجم تزریق:</p>
+            <p class="mb-4"><span class="ltr-text">20</span> µL</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مناسبت سیستم</h4>
+            <p class="font-bold mb-2">نمونه:</p>
+            <p class="mb-4">محلول مناسبت سیستم</p>
+
+            <p class="font-bold mb-2">الزامات مناسبت:</p>
+            <p class="font-bold mb-2">رزولوشن:</p>
+            <p class="mb-4">
+                رزولوشن خط پایه بین آخرین پیک USP Low Molecular Weight Heparin Molecular Weight Calibrant RS و پیک نمک، یا پیک‌های تبادل منفی وجود دارد.
+            </p>
+
+            <p class="font-bold mb-2">منحنی کالیبراسیون:</p>
+            <p class="mb-4">
+                ضریب تعیین منحنی کالیبراسیون برازش داده شده به مقادیر جدول استاندارد گسترده باید NLT <span class="ltr-text">0.990</span> باشد، با استفاده از معادله چندجمله‌ای درجه سوم.
+            </p>
+
+            <p class="font-bold mb-2">وزن مولکولی میانگین وزنی (Mw):</p>
+            <p class="mb-4">
+                میانگین Mw محاسبه شده از تزریق‌های تکراری محلول مناسبت سیستم را بگیرید و به نزدیکترین <span class="ltr-text">50</span> Da گرد کنید. سیستم کروماتوگرافی در صورتی مناسب است که Mw مربوط به USP Dalteparin Sodium RS در حدود <span class="ltr-text">150</span> Da از مقدار مشخص شده در گواهی USP برای USP Dalteparin Sodium RS باشد.
+            </p>
+            <p class="text-xs mb-4">
+                1 این روش با استفاده از یک ستون نگهبان TSK SWXL 6-mm × 4-mm؛ 7-µm در سری با دو ستون تحلیلی: TSK G3000 SWXL 7.8-mm × 30-cm؛ 5-µm در سری با TSK G2000 SWXL 7.8-mm × 30-cm؛ 5-µm اعتبارسنجی شد.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
+            <p class="font-bold mb-2">نمونه‌ها:</p>
+            <p class="mb-4">
+                <span class="ltr-text">20</span> µL از محلول کالیبراسیون (تزریق منفرد)، محلول مناسبت سیستم (تزریق‌های تکراری) و محلول نمونه (تزریق‌های تکراری) را تزریق کرده و کروماتوگرام‌ها را برای مدت زمانی ضبط کنید تا از خروج کامل، از جمله پیک‌های نمک و حلال، اطمینان حاصل شود (حدود <span class="ltr-text">50</span> دقیقه).
+            </p>
+            <p class="mb-2">[نکته—کالیبرانت، استاندارد یا نمونه هپارین با وزن مولکولی پایین یک پیک گسترده بین حدود <span class="ltr-text">25</span> و <span class="ltr-text">45</span> دقیقه، و سپس یک پیک نمک باریک که بعداً خارج می‌شود، ایجاد می‌کند، همانطور که در گواهی USP برای USP Low Molecular Weight Heparin Molecular Weight Calibrant RS نشان داده شده است.]</p>
+
+            <p class="font-bold mb-2">محاسبات:</p>
+            <p class="mb-4">
+                کل مساحت زیر پیک هپارین با وزن مولکولی پایین از محلول کالیبراسیون و مساحت تجمعی در هر نقطه زیر پیک را به عنوان درصدی از کل محاسبه کنید. پیک نمک را شامل نشوید. با استفاده از جدول استاندارد گسترده ارائه شده در گواهی USP برای USP Low Molecular Weight Heparin Molecular Weight Calibrant RS، نقاطی را در کروماتوگرام که درصد مساحت تجمعی آنها به درصد جارهای لیست شده در جدول استاندارد گسترده نزدیکتر است، شناسایی کرده و MW موجود در این جدول را به زمان بازداری (RT) متناظر در کروماتوگرام اختصاص دهید. برای مجموعه زمان‌های بازداری و وزن‌های مولکولی شناسایی شده، log(MW) در مقابل RT را به یک تابع چندجمله‌ای درجه سوم با استفاده از نرم‌افزار مناسب کروماتوگرافی نفوذ ژل (GPC) برازش دهید، یا مقادیر a، b، c و d را به گونه‌ای بیابید که log MW = a + (b × RT) + [c × (RT)2] + [d × (RT)3].
+            </p>
+            <p class="mb-4">
+                با استفاده از همان نرم‌افزار GPC، برای هر یک از کروماتوگرام‌های تکراری محلول مناسبت سیستم و محلول نمونه، با تابع کالیبراسیون که به شرح فوق مشتق شده است، Mw را محاسبه کنید:
+            </p>
+            <div class="formula-display">
+                <span>Mw = Σ(RIi × Mi)/ΣRIi</span>
+            </div>
+            <p>
+                <span>RIi</span> = پاسخ آشکارساز در هر نقطه
+            </p>
+            <p>
+                <span>Mi</span> = MW در هر نقطه
+            </p>
+            <p class="mb-4">
+                مقدار میانگین Mw را به نزدیکترین <span class="ltr-text">50</span> Da گرد کنید. با استفاده از همان نرم‌افزار GPC، برای هر یک از کروماتوگرام‌های تکراری محلول نمونه، درصدی از محصول با وزن مولکولی مشخص شده در مونوگراف محصول را تعیین کنید.
+            </p>
+
+            <p class="font-bold mb-2">معیارهای پذیرش:</p>
+            <p class="mb-4">همانطور که در مونوگراف محصول نشان داده شده است</p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">استانداردهای مرجع USP á11ñ</h4>
+            <p class="mb-2">USP Dalteparin Sodium RS</p>
+            <p>USP Low Molecular Weight Heparin Molecular Weight Calibrant RS</p>
+        </div>
+    </div>
+</body>
+</html>

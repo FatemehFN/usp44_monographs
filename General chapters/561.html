@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مواد با منشاء گیاهی - 561</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vazirmatn Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Internal Styling -->
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr; /* Ensure LaTeX formulas are LTR */
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6"><span class="ltr-text">561</span>. مواد با منشاء گیاهی</h1>
+
+        <div class="card mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">نمونه‌برداری</h2>
+            <p class="mb-4">
+                برای کاهش تأثیر سوگیری نمونه‌برداری در نتایج کیفی و کمی، لازم است اطمینان حاصل شود که ترکیب نمونه مورد استفاده، نماینده دسته‌ای از داروها باشد که مورد بررسی قرار می‌گیرند. روش‌های نمونه‌برداری زیر حداقل مواردی هستند که برای مواد گیاهی قابل اجرا در نظر گرفته می‌شوند. برخی از مقالات، یا برخی از آزمون‌ها، ممکن است به رویه‌های دقیق‌تری نیاز داشته باشند که شامل نمونه‌برداری از تعداد بیشتری از ظروف یا نمونه‌های بیشتر در هر ظرف است.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">نمونه کلی</h3>
+            <p class="mb-4">
+                در مواردی که بررسی ظاهری ظروف، علامت‌گذاری‌ها و برچسب‌ها نشان می‌دهد که دسته می‌تواند همگن در نظر گرفته شود، نمونه‌های جداگانه را از تعداد ظروف انتخاب شده تصادفی که در زیر نشان داده شده است، بگیرید. در مواردی که دسته نمی‌تواند همگن در نظر گرفته شود، آن را به زیردسته‌هایی که تا حد امکان همگن هستند تقسیم کنید و سپس از هر یک به عنوان یک دسته همگن نمونه‌برداری کنید. توصیه می‌شود در صورتی که تعداد ظروف در دسته (<span class="ltr-text">N</span>) <span class="ltr-text">11</span> یا بیشتر باشد و هر ظرف در دسته به ترتیب شماره‌گذاری یا حرف‌گذاری شده باشد، نمونه‌هایی از ظروف اول، وسط و آخر را نیز شامل شود.
+            </p>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th>تعداد ظروف در دسته (<span class="ltr-text">N</span>)</th>
+                        <th>تعداد ظروف برای نمونه‌برداری (<span class="ltr-text">n</span>)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">1–10</span></td>
+                        <td>همه</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">11–19</span></td>
+                        <td><span class="ltr-text">11</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">>19</span></td>
+                        <td><span class="ltr-text">n = 10 + (N/10)</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="mb-4 text-sm text-gray-600">
+                (گرد کردن به این صورت محاسبه شده است که «<span class="ltr-text">n</span>» به نزدیک‌ترین عدد صحیح بالاتر گرد می‌شود.)
+            </p>
+            <p class="mb-4">
+                نمونه‌ها از بخش‌های بالا، میانی و پایین هر ظرف گرفته می‌شوند. اگر مواد خام شامل اجزایی باشند که در هر بعد <span class="ltr-text">1 cm</span> یا کمتر هستند، و در مورد تمام مواد پودر شده یا آسیاب شده، نمونه با استفاده از یک ابزار نمونه‌برداری که یک هسته را از بالا به پایین ظرف خارج می‌کند، گرفته شود، <span class="ltr-text">NLT two</span> هسته از زوایای مختلف گرفته شود. برای موادی با اجزایی که در هر بعد <span class="ltr-text">>1 cm</span> هستند، نمونه‌ها با دست برداشته شوند. در مورد عدل‌ها یا بسته‌های بزرگ، نمونه‌ها باید از عمق <span class="ltr-text">10 cm</span> گرفته شوند، زیرا محتوای رطوبت لایه سطحی ممکن است با لایه‌های داخلی متفاوت باشد.
+            </p>
+            <p class="mb-4">
+                نمونه کلی را با ترکیب و مخلوط کردن نمونه‌های جداگانه گرفته شده از هر ظرف باز شده تهیه کنید، با دقت تا درجه تکه‌تکه شدن افزایش نیابد یا محتوای رطوبت به طور قابل توجهی تحت تأثیر قرار نگیرد.
+            </p>
+            <p class="mb-4">
+                برای مقالات در ظروف حاوی <span class="ltr-text"><1 kg</span>، محتویات را مخلوط کرده و مقداری کافی برای آزمایش‌ها را خارج کنید. برای مقالات در ظروف حاوی <span class="ltr-text">1–5 kg</span>، قسمت‌های مساوی را از بخش‌های بالا، میانی و پایین ظرف خارج کنید، به طوری که هر نمونه برای انجام آزمایش‌ها کافی باشد. نمونه‌ها را به طور کامل مخلوط کرده و مقداری کافی برای انجام آزمایش‌ها را خارج کنید. برای ظروف حاوی بیش از <span class="ltr-text">5 kg</span>، سه نمونه، هر یک با وزن <span class="ltr-text">NLT 250 g</span>، از بخش‌های بالا، میانی و پایین ظرف خارج کنید. نمونه‌ها را به طور کامل مخلوط کرده و قسمتی کافی برای انجام آزمایش‌ها را خارج کنید.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">نمونه آزمایشگاهی</h3>
+            <p class="mb-4">
+                نمونه آزمایشگاهی را با تقسیم مکرر نمونه کلی به چهار قسمت مساوی (ربع‌بندی) تهیه کنید.
+            </p>
+            <p class="mb-4 text-sm italic text-gray-600">
+                [توجه—ربع‌بندی شامل قرار دادن نمونه، که به اندازه کافی مخلوط شده است، به صورت یک توده یکنواخت و مربعی شکل و تقسیم آن به صورت مورب به چهار قسمت مساوی است. سپس دو قسمت مقابل برداشته شده و به دقت مخلوط می‌شوند. این فرآیند در صورت لزوم تا رسیدن به مقدار مورد نیاز تکرار می‌شود.]
+            </p>
+            <p class="mb-4">
+                نمونه آزمایشگاهی باید به اندازه‌ای باشد که برای انجام تمام آزمایش‌های لازم کافی باشد.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">نمونه آزمون</h3>
+            <p class="mb-4">
+                مگر اینکه در تک‌نگاری یا روش آزمون فردی زیر دستور دیگری داده شده باشد، نمونه آزمون را به شرح زیر تهیه کنید.
+            </p>
+            <p class="mb-4">
+                اندازه نمونه آزمایشگاهی را با ربع‌بندی کاهش دهید، با دقت به اینکه هر قسمت خارج شده نماینده باقی بماند. در مورد داروهای آسیاب نشده یا پودر نشده، نمونه خارج شده را آسیاب کنید تا از غربال استاندارد مش <span class="ltr-text">No. 20</span> عبور کند و پودر حاصل را به خوبی مخلوط کنید. اگر مواد قابل آسیاب نیستند، آنها را تا حد امکان ریز کنید، با غلتاندن روی کاغذ یا پارچه نمونه‌برداری مخلوط کنید، آن را در لایه نازکی پخش کنید و قسمت مورد نظر برای آنالیز را خارج کنید.
+            </p>
+        </div>
+
+        <div class="card mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">روش‌های آنالیز</h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">ماده آلی خارجی</h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه آزمون</h4>
+            <p class="mb-4">
+                مگر اینکه در تک‌نگاری فردی به طور دیگری مشخص شده باشد، مقادیر زیر از نمونه آزمایشگاهی را وزن کنید، با دقت به اینکه قسمت خارج شده نماینده باشد (در صورت لزوم ربع‌بندی کنید).
+            </p>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ریشه، ریزوم، پوست و گیاهان دارویی</td>
+                        <td><span class="ltr-text">500 g</span></td>
+                    </tr>
+                    <tr>
+                        <td>برگ، گل، دانه و میوه</td>
+                        <td><span class="ltr-text">250 g</span></td>
+                    </tr>
+                    <tr>
+                        <td>مواد گیاهی خرد شده (متوسط وزن قطعات <span class="ltr-text"><0.5 g</span>)</td>
+                        <td><span class="ltr-text">50 g</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="mb-4">
+                نمونه را در لایه نازکی پخش کنید و ماده آلی خارجی را تا حد امکان با دست جدا کنید. آن را وزن کرده و درصد ماده آلی خارجی را در وزن داروی گرفته شده تعیین کنید.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">خاکستر کل</h3>
+            <p class="mb-4">
+                مقداری دقیق از نمونه آزمون، که نماینده <span class="ltr-text">2–4 g</span> از مواد است، را در یک بوته‌چینی توزین شده وزن کرده و به آرامی ابتدا و سپس به تدریج دما را تا <span class="ltr-text">675 ± 25°</span> افزایش دهید تا از کربن پاک شود و وزن خاکستر را تعیین کنید.
+            </p>
+            <p class="mb-4 text-sm italic text-gray-600">
+                [توجه—برای مواد گیاهی، باید از ماده‌ای مطابق با آزمون افت رطوبت در تک‌نگاری‌های فردی استفاده شود.] اگر خاکستر بدون کربن به این روش به دست نیامد، توده ذغالی را با آب گرم استخراج کنید، باقیمانده نامحلول را روی یک کاغذ صافی بدون خاکستر جمع‌آوری کنید، باقیمانده و کاغذ صافی را سوزانده تا خاکستر سفید یا تقریباً سفید شود، سپس فیلتر شده را اضافه کنید، آن را تا خشکی تبخیر کرده و کل را تا دمای <span class="ltr-text">675 ± 25°</span> حرارت دهید. اگر خاکستر بدون کربن به این روش به دست نیامد، بوته‌چینی را خنک کنید، <span class="ltr-text">15 mL</span> الکل اضافه کنید، خاکستر را با یک میله شیشه‌ای خرد کنید، الکل را بسوزانید و دوباره کل را تا دمای <span class="ltr-text">675 ± 25°</span> حرارت دهید. در یک دسیکاتور خنک کنید، خاکستر را وزن کرده و درصد خاکستر کل را از وزن داروی گرفته شده محاسبه کنید.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">خاکستر نامحلول در اسید</h3>
+            <p class="mb-4">
+                خاکستر به دست آمده طبق دستور در خاکستر کل را به مدت <span class="ltr-text">5 min</span> با <span class="ltr-text">25 mL</span> اسید کلریدریک <span class="ltr-text">3 N</span> بجوشانید، مواد نامحلول را در یک بوته‌چینی صافی توزین شده یا کاغذ صافی بدون خاکستر جمع‌آوری کنید، با آب گرم شستشو دهید، بسوزانید و وزن کنید. درصد خاکستر نامحلول در اسید را که از وزن داروی گرفته شده محاسبه شده است، تعیین کنید.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">خاکستر محلول در آب</h3>
+            <p class="mb-4">
+                خاکستر به دست آمده طبق دستور در خاکستر کل را به مدت <span class="ltr-text">5 min</span> با <span class="ltr-text">25 mL</span> آب بجوشانید. مواد نامحلول را در یک بوته‌چینی شیشه‌ای سینتر شده یا روی یک کاغذ صافی بدون خاکستر جمع‌آوری کنید. با آب گرم شستشو دهید و به مدت <span class="ltr-text">15 min</span> در دمای بیش از <span class="ltr-text">450°</span> بسوزانید. وزن این باقیمانده، بر حسب <span class="ltr-text">mg</span>، به دست آمده در خاکستر کل را کسر کنید و درصد خاکستر محلول در آب را با توجه به وزن نمونه تعیین شده در خاکستر کل محاسبه کنید.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">عصاره‌های محلول در الکل</h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش <span class="ltr-text">1</span> (روش استخراج گرم)</h4>
+            <p class="mb-4">
+                حدود <span class="ltr-text">4 g</span> از مواد درشت پودر شده و خشک شده با هوا، با دقت توزین شده، را به یک ارلن مخروطی درب‌شیشه‌ای منتقل کنید. <span class="ltr-text">100 mL</span> الکل اضافه کنید و ارلن را وزن کنید. تکان دهید و اجازه دهید به مدت <span class="ltr-text">1 h</span> بماند. یک کندانسور رفلکس را به ارلن وصل کنید، به آرامی به مدت <span class="ltr-text">1 h</span> بجوشانید، خنک کنید و وزن کنید. با الکل به وزن اولیه تنظیم مجدد کنید. تکان دهید و به سرعت از طریق یک صافی خشک فیلتر کنید. <span class="ltr-text">25 mL</span> از فیلتر شده را به یک ظرف تخت توزین شده منتقل کنید و روی حمام آب تا خشکی تبخیر کنید. در <span class="ltr-text">105°</span> به مدت <span class="ltr-text">6 h</span> خشک کنید، در یک دسیکاتور به مدت <span class="ltr-text">30 min</span> خنک کنید و بدون تأخیر وزن کنید. محتوای ماده قابل استخراج با الکل را، بر حسب <span class="ltr-text">mg/g</span>، در نمونه آزمون محاسبه کنید.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش <span class="ltr-text">2</span> (روش استخراج سرد)</h4>
+            <p class="mb-4">
+                حدود <span class="ltr-text">4 g</span> از مواد درشت پودر شده و خشک شده با هوا، با دقت توزین شده، را به یک ارلن مخروطی درب‌شیشه‌ای منتقل کنید. <span class="ltr-text">100 mL</span> الکل اضافه کنید، یک درپوش در ارلن قرار دهید و به مدت <span class="ltr-text">24 h</span> خیس کنید، در طول <span class="ltr-text">8 h</span> اول مکرراً تکان دهید و سپس اجازه دهید بماند. به سرعت فیلتر کنید، اقدامات احتیاطی را در برابر از دست دادن الکل انجام دهید. <span class="ltr-text">25 mL</span> از فیلتر شده را در یک ظرف تخت و کم‌عمق توزین شده تا خشکی تبخیر کنید و در <span class="ltr-text">105°</span> تا وزن ثابت خشک کنید. محتوای ماده قابل استخراج با الکل را، بر حسب <span class="ltr-text">mg/g</span>، در نمونه آزمون محاسبه کنید.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">عصاره‌های محلول در آب</h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش <span class="ltr-text">1</span> (روش استخراج گرم)</h4>
+            <p class="mb-4">
+                مطابق با روش <span class="ltr-text">1</span> (روش استخراج گرم) در عصاره‌های محلول در الکل، با این تفاوت که به جای الکل از آب استفاده شود.
+            </p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش <span class="ltr-text">2</span> (روش استخراج سرد)</h4>
+            <p class="mb-4">
+                مطابق با روش <span class="ltr-text">2</span> (روش استخراج سرد) در عصاره‌های محلول در الکل، با این تفاوت که به جای الکل از آب استفاده شود.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">فیبر خام</h3>
+            <p class="mb-4">
+                مقدار وزن شده‌ای از نمونه آزمون، که حدود <span class="ltr-text">2 g</span> از مواد را نشان می‌دهد، را با اتر استخراج کنید. <span class="ltr-text">200 mL</span> اسید سولفوریک رقیق جوشان (<span class="ltr-text">1 in 78</span>) را به تفاله استخراج شده با اتر، در یک ارلن <span class="ltr-text">500-mL</span> اضافه کنید و ارلن را به یک کندانسور رفلکس وصل کنید. مخلوط را به مدت <span class="ltr-text">30 min</span>، دقیقاً زمان‌بندی شده، رفلکس کنید، سپس از طریق یک صافی کتان یا کاغذ سخت شده عبور دهید و باقیمانده روی صافی را با آب جوش بشویید تا شستشوی خروجی دیگر اسیدی نباشد. باقیمانده را با <span class="ltr-text">200 mL</span> محلول هیدروکسید سدیم جوشان، تنظیم شده به <span class="ltr-text">1.25%</span> با تیتراسیون و عاری از کربنات سدیم، به داخل ارلن برگردانید. دوباره مخلوط را به مدت <span class="ltr-text">30 min</span>، دقیقاً زمان‌بندی شده، رفلکس کنید، سپس به سرعت از طریق یک صافی توزین شده عبور دهید، باقیمانده را با آب جوش بشویید تا آخرین شستشو خنثی شود و آن را در <span class="ltr-text">110°</span> تا وزن ثابت خشک کنید. باقیمانده خشک شده را سوزانده، تا وزن ثابت حرارت دهید، در یک دسیکاتور خنک کنید و خاکستر را وزن کنید: تفاوت بین وزن به دست آمده با خشک کردن در <span class="ltr-text">110°</span> و وزن خاکستر، وزن فیبر خام را نشان می‌دهد.
+            </p>
+            <p class="mb-4 text-sm italic text-gray-600">
+                [توجه—جوشاندن با اسید و قلیا باید به مدت <span class="ltr-text">30 min</span>، دقیقاً زمان‌بندی شده، از زمانی که مایع (که با اضافه شدن به ارلن سرد، زیر نقطه جوش خنک شده است) دوباره می‌جوشد، ادامه یابد. پس از به جوش آمدن محلول، حرارت باید به اندازه‌ای کم شود که فقط جوشیدن حفظ شود. در طول جوشاندن، ارلن باید گهگاه به آرامی چرخانده شود تا ذراتی که ممکن است به دیواره‌های ارلن چسبیده باشند، شسته شوند. جریان آهسته هوا که در طول عملیات جوشاندن به داخل ارلن وارد می‌شود به جلوگیری از کف کردن بیش از حد کمک می‌کند.]
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">محتوای نشاسته</h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش <span class="ltr-text">1</span></h4>
+            <p class="mb-4">
+                روش زیر یک روش کلی برای تمام قندهای کاهنده است و ممکن است برای تعیین محتوای نشاسته در مقالات گیاهی استفاده شود.
+            </p>
+            <p class="mb-4">
+                <strong class="font-semibold">عصاره مالت:</strong> از مالت جو تمیز و تازه با کارایی مشخص استفاده کنید و درست قبل از استفاده آسیاب کنید. عصاره مالت را درست قبل از استفاده تهیه کنید. برای هر <span class="ltr-text">80 mL</span> عصاره مالت مورد نیاز، <span class="ltr-text">5 g</span> مالت آسیاب شده را با <span class="ltr-text">100 mL</span> آب در دمای اتاق به مدت <span class="ltr-text">2 h</span> هضم کنید. [توجه—اگر از مخلوط‌کن برقی استفاده می‌شود، مخلوط را به مدت <span class="ltr-text">20 min</span> هم بزنید.] فیلتر کنید تا عصاره شفافی به دست آید، در صورت لزوم دوباره فیلتر کنید و تزریق را به خوبی مخلوط کنید.
+            </p>
+            <p class="mb-4">
+                <strong class="font-semibold">محلول آزمون:</strong> حدود <span class="ltr-text">5 g</span> از نمونه آزمون ریز آسیاب شده را با پنج قسمت <span class="ltr-text">10-mL</span> اتر استخراج کنید، با استفاده از فیلتری که کوچکترین گرانول نشاسته را کاملاً حفظ کند. اجازه دهید اتر از باقیمانده تبخیر شود و با <span class="ltr-text">250 mL</span> محلول الکل آبی (<span class="ltr-text">10 in 100</span>) بشویید. باقیمانده را با حدود <span class="ltr-text">100 mL</span> آب از کاغذ به دقت به یک بشر <span class="ltr-text">500-mL</span> بشویید. تا حدود <span class="ltr-text">60°</span> حرارت دهید (در صورت امکان از ژلاتینه شدن نشاسته خودداری کنید) و اجازه دهید به مدت حدود <span class="ltr-text">1 h</span> بماند، مکرراً هم بزنید تا قندها کاملاً حل شوند. به یک بطری دهان‌گشاد منتقل کنید، بشر را با کمی آب گرم بشویید و خنک کنید. حجم مساوی از الکل را اضافه کنید، مخلوط کنید و اجازه دهید به مدت <span class="ltr-text">NLT 1 h</span> بماند.
+            </p>
+            <p class="mb-4">
+                سانتریفیوژ کنید تا رسوب به طور فشرده در کف بطری جمع شود و مایع رویی را جدا کنید. رسوب را با قسمت‌های متوالی <span class="ltr-text">50-mL</span> محلول الکل (<span class="ltr-text">50 in 100</span>) با سانتریفیوژ کردن و جدا کردن از طریق یک صافی مناسب بشویید تا شستشوها فاقد قند باشند. [توجه—برای آزمایش وجود قند، چند قطره از شستشوها را به یک لوله آزمایش منتقل کنید و <span class="ltr-text">3</span> یا <span class="ltr-text">4</span> قطره از یک محلول <span class="ltr-text">20%</span> از <span class="ltr-text">1-naphthol</span> در الکل را که با حل کردن <span class="ltr-text">200 mg</span> از <span class="ltr-text">1-naphthol</span> در <span class="ltr-text">1 mL</span> الکل و <span class="ltr-text">2 mL</span> آب تهیه شده است، اضافه کنید. لوله آزمایش را به خوبی تکان دهید تا مخلوط یکنواخت شود، اجازه دهید <span class="ltr-text">2–4 mL</span> اسید سولفوریک از کنار دیواره‌های لوله آزمایش سرازیر شود و لوله آزمایش را عمودی نگه دارید. اگر قند وجود داشته باشد، سطح مشترک دو مایع از بنفش کم‌رنگ تا بنفش پررنگ رنگی می‌شود و با تکان دادن، کل محلول به رنگ آبی-بنفش در می‌آید.]
+            </p>
+            <p class="mb-4">
+                باقیمانده را از بطری و صافی سخت شده با حدود <span class="ltr-text">50 mL</span> آب به یک بشر منتقل کنید. بشر را در آب جوش غوطه‌ور کنید و به مدت <span class="ltr-text">15 min</span> یا تا زمانی که تمام نشاسته ژلاتینه شود، به طور مداوم هم بزنید. بشر را تا <span class="ltr-text">55°</span> خنک کنید، <span class="ltr-text">20 mL</span> عصاره مالت اضافه کنید و به مدت <span class="ltr-text">1 h</span> در این دما نگه دارید. دوباره به مدت چند دقیقه تا جوش حرارت دهید، تا <span class="ltr-text">55°</span> خنک کنید، <span class="ltr-text">20 mL</span> عصاره مالت اضافه کنید و به مدت <span class="ltr-text">1 h</span> یا تا زمانی که باقیمانده در هنگام تیمار با <span class="ltr-text">iodine TS</span> هیچ رنگ آبی را تحت بررسی میکروسکوپی نشان ندهد، در این دما نگه دارید. خنک کنید، با آب تا <span class="ltr-text">250 mL</span> رقیق کرده و فیلتر کنید.
+            </p>
+            <p class="mb-4">
+                <strong class="font-semibold">روش کلی:</strong> <span class="ltr-text">200 mL</span> از محلول آزمون را به یک ارلن مجهز به کندانسور رفلکس منتقل کنید، <span class="ltr-text">20 mL</span> اسید کلریدریک اضافه کنید و در حمام آب جوش به مدت <span class="ltr-text">2.5 h</span> حرارت دهید. خنک کنید، تقریباً با <span class="ltr-text">sodium hydroxide TS</span> خنثی کنید، خنثی‌سازی کامل را با <span class="ltr-text">sodium carbonate TS</span> انجام دهید، با آب تا <span class="ltr-text">500 mL</span> رقیق کنید، مخلوط کنید و فیلتر کنید. حجم آلیووت گرفته شده بستگی به محتوای نشاسته نمونه تحت آزمایش دارد (به جدول <span class="ltr-text">1</span> مراجعه کنید). آلیووت باید بین <span class="ltr-text">100</span> و <span class="ltr-text">200 mg</span> دکستروز داشته باشد. <span class="ltr-text">50 mL</span> از فیلتر شده را به یک بشر شیشه‌ای مقاوم در برابر قلیا <span class="ltr-text">400-mL</span> منتقل کنید، <span class="ltr-text">50 mL</span> از <span class="ltr-text">alkaline cupric tartrate TS</span> اضافه کنید، بشر را با یک شیشه ساعت بپوشانید و حرارت دهید. شعله مشعل را طوری تنظیم کنید که محتویات ارلن در <span class="ltr-text">4 min</span> شروع به جوشیدن کند و به مدت دقیقاً <span class="ltr-text">2 min</span> به جوشیدن ادامه دهید. محلول داغ را بلافاصله از طریق یک صافی شیشه‌ای سینتر شده عبور دهید. رسوب اکسید کوپروز را به طور کامل با آب در حدود <span class="ltr-text">60°</span>، سپس با <span class="ltr-text">10 mL</span> الکل و در نهایت با <span class="ltr-text">10 mL</span> اتر بشویید.
+            </p>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th colspan="2">جدول <span class="ltr-text">1</span>. تعیین آلیووت بهینه</th>
+                    </tr>
+                    <tr>
+                        <th>محتوای نشاسته مورد انتظار (<span class="ltr-text">%</span>)</th>
+                        <th>آلیووت (<span class="ltr-text">mL</span>)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">60</span></td>
+                        <td><span class="ltr-text">25</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">50</span></td>
+                        <td><span class="ltr-text">35</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">40</span></td>
+                        <td><span class="ltr-text">50</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">30</span></td>
+                        <td><span class="ltr-text">50</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">20</span></td>
+                        <td><span class="ltr-text">50</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="mb-4">
+                برای محلول‌های قندهای کاهنده با خلوص نسبتاً بالا، مطابق با روش <span class="ltr-text">1A</span> عمل کنید تا مقدار مس کاهنده به دست آمده با وزن کردن اکسید کوپروز خشک شده را تعیین کنید. برای محلول‌های قندهای کاهنده حاوی مقادیر زیاد ناخالصی‌های آلی، از جمله سوکروز، مطابق با روش <span class="ltr-text">1B</span> عمل کنید تا مقدار مس کاهنده به دست آمده با تیتراسیون با تیوسولفات سدیم را تعیین کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش <span class="ltr-text">1A</span></h4>
+            <p class="mb-4">
+                رسوب به دست آمده در روش کلی را به مدت <span class="ltr-text">30 min</span> در آون در <span class="ltr-text">110 ± 2°</span> خشک کنید، در یک دسیکاتور تا دمای اتاق خنک کنید و وزن کنید. به جدول <span class="ltr-text">2</span> مراجعه کنید تا مقدار دکستروز، بر حسب <span class="ltr-text">mg</span>، مطابق با وزن اکسید کوپروز یافته شده را پیدا کنید. درصد دکستروز و سپس محتوای نشاسته را با فرمول زیر تعیین کنید:
+            </p>
+            <div class="formula-display">
+                $$\text{Percentage of dextrose} = \frac{\text{wt. of dextrose in mg} \times 0.1 \times 500}{\text{wt. of sample in g} \times \text{aliquot in mL}}$$
+            </div>
+            <div class="formula-display">
+                $$\text{Content of starch} = \text{% dextrose} \times 0.9$$
+            </div>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th colspan="12">جدول <span class="ltr-text">2</span>. محاسبه دکستروز (<span class="ltr-text">mg</span>) [قابل اجرا زمانی که اکسید کوپروز (<span class="ltr-text">Cu2O</span>) مستقیماً وزن می‌شود]</th>
+                    </tr>
+                    <tr>
+                        <th>اکسید کوپروز (<span class="ltr-text">Cu2O</span>)</th>
+                        <th>دکستروز (<span class="ltr-text">D-گلوکز</span>)</th>
+                        <th>اکسید کوپروز (<span class="ltr-text">Cu2O</span>)</th>
+                        <th>دکستروز (<span class="ltr-text">D-گلوکز</span>)</th>
+                        <th>اکسید کوپروز (<span class="ltr-text">Cu2O</span>)</th>
+                        <th>دکستروز (<span class="ltr-text">D-گلوکز</span>)</th>
+                        <th>اکسید کوپروز (<span class="ltr-text">Cu2O</span>)</th>
+                        <th>دکستروز (<span class="ltr-text">D-گلوکز</span>)</th>
+                        <th>اکسید کوپروز (<span class="ltr-text">Cu2O</span>)</th>
+                        <th>دکستروز (<span class="ltr-text">D-گلوکز</span>)</th>
+                        <th>اکسید کوپروز (<span class="ltr-text">Cu2O</span>)</th>
+                        <th>دکستروز (<span class="ltr-text">D-گلوکز</span>)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="ltr-text">10</span></td><td><span class="ltr-text">4.0</span></td><td><span class="ltr-text">90</span></td><td><span class="ltr-text">38.9</span></td><td><span class="ltr-text">170</span></td><td><span class="ltr-text">75.1</span></td><td><span class="ltr-text">250</span></td><td><span class="ltr-text">112.8</span></td><td><span class="ltr-text">330</span></td><td><span class="ltr-text">152.2</span></td><td><span class="ltr-text">410</span></td><td><span class="ltr-text">193.7</span></td></tr>
+                    <tr><td><span class="ltr-text">12</span></td><td><span class="ltr-text">4.9</span></td><td><span class="ltr-text">92</span></td><td><span class="ltr-text">39.8</span></td><td><span class="ltr-text">172</span></td><td><span class="ltr-text">76.0</span></td><td><span class="ltr-text">252</span></td><td><span class="ltr-text">113.7</span></td><td><span class="ltr-text">332</span></td><td><span class="ltr-text">153.2</span></td><td><span class="ltr-text">412</span></td><td><span class="ltr-text">194.7</span></td></tr>
+                    <tr><td><span class="ltr-text">14</span></td><td><span class="ltr-text">5.7</span></td><td><span class="ltr-text">94</span></td><td><span class="ltr-text">40.6</span></td><td><span class="ltr-text">174</span></td><td><span class="ltr-text">76.9</span></td><td><span class="ltr-text">254</span></td><td><span class="ltr-text">114.7</span></td><td><span class="ltr-text">334</span></td><td><span class="ltr-text">154.2</span></td><td><span class="ltr-text">414</span></td><td><span class="ltr-text">195.8</span></td></tr>
+                    <tr><td><span class="ltr-text">16</span></td><td><span class="ltr-text">6.6</span></td><td><span class="ltr-text">96</span></td><td><span class="ltr-text">41.5</span></td><td><span class="ltr-text">176</span></td><td><span class="ltr-text">77.8</span></td><td><span class="ltr-text">256</span></td><td><span class="ltr-text">115.7</span></td><td><span class="ltr-text">336</span></td><td><span class="ltr-text">155.2</span></td><td><span class="ltr-text">416</span></td><td><span class="ltr-text">196.8</span></td></tr>
+                    <tr><td><span class="ltr-text">18</span></td><td><span class="ltr-text">7.5</span></td><td><span class="ltr-text">98</span></td><td><span class="ltr-text">42.4</span></td><td><span class="ltr-text">178</span></td><td><span class="ltr-text">78.8</span></td><td><span class="ltr-text">258</span></td><td><span class="ltr-text">116.6</span></td><td><span class="ltr-text">338</span></td><td><span class="ltr-text">156.3</span></td><td><span class="ltr-text">418</span></td><td><span class="ltr-text">197.9</span></td></tr>
+                    <tr><td colspan="12"></td></tr>
+                    <tr><td><span class="ltr-text">20</span></td><td><span class="ltr-text">8.3</span></td><td><span class="ltr-text">100</span></td><td><span class="ltr-text">43.3</span></td><td><span class="ltr-text">180</span></td><td><span class="ltr-text">79.7</span></td><td><span class="ltr-text">260</span></td><td><span class="ltr-text">117.6</span></td><td><span class="ltr-text">340</span></td><td><span class="ltr-text">157.3</span></td><td><span class="ltr-text">420</span></td><td><span class="ltr-text">199.0</span></td></tr>
+                    <tr><td><span class="ltr-text">22</span></td><td><span class="ltr-text">9.2</span></td><td><span class="ltr-text">102</span></td><td><span class="ltr-text">44.2</span></td><td><span class="ltr-text">182</span></td><td><span class="ltr-text">80.6</span></td><td><span class="ltr-text">262</span></td><td><span class="ltr-text">118.6</span></td><td><span class="ltr-text">342</span></td><td><span class="ltr-text">158.3</span></td><td><span class="ltr-text">422</span></td><td><span class="ltr-text">200.1</span></td></tr>
+                    <tr><td><span class="ltr-text">24</span></td><td><span class="ltr-text">10.0</span></td><td><span class="ltr-text">104</span></td><td><span class="ltr-text">45.1</span></td><td><span class="ltr-text">184</span></td><td><span class="ltr-text">81.5</span></td><td><span class="ltr-text">264</span></td><td><span class="ltr-text">119.5</span></td><td><span class="ltr-text">344</span></td><td><span class="ltr-text">159.3</span></td><td><span class="ltr-text">424</span></td><td><span class="ltr-text">201.1</span></td></tr>
+                    <tr><td><span class="ltr-text">26</span></td><td><span class="ltr-text">10.9</span></td><td><span class="ltr-text">106</span></td><td><span class="ltr-text">46.0</span></td><td><span class="ltr-text">186</span></td><td><span class="ltr-text">82.5</span></td><td><span class="ltr-text">266</span></td><td><span class="ltr-text">120.5</span></td><td><span class="ltr-text">346</span></td><td><span class="ltr-text">160.3</span></td><td><span class="ltr-text">426</span></td><td><span class="ltr-text">202.2</span></td></tr>
+                    <tr><td><span class="ltr-text">28</span></td><td><span class="ltr-text">11.8</span></td><td><span class="ltr-text">108</span></td><td><span class="ltr-text">46.9</span></td><td><span class="ltr-text">188</span></td><td><span class="ltr-text">83.4</span></td><td><span class="ltr-text">268</span></td><td><span class="ltr-text">121.5</span></td><td><span class="ltr-text">348</span></td><td><span class="ltr-text">161.4</span></td><td><span class="ltr-text">428</span></td><td><span class="ltr-text">203.3</span></td></tr>
+                    <tr><td colspan="12"></td></tr>
+                    <tr><td><span class="ltr-text">30</span></td><td><span class="ltr-text">12.6</span></td><td><span class="ltr-text">110</span></td><td><span class="ltr-text">47.8</span></td><td><span class="ltr-text">190</span></td><td><span class="ltr-text">84.3</span></td><td><span class="ltr-text">270</span></td><td><span class="ltr-text">122.5</span></td><td><span class="ltr-text">350</span></td><td><span class="ltr-text">162.4</span></td><td><span class="ltr-text">430</span></td><td><span class="ltr-text">204.4</span></td></tr>
+                    <tr><td><span class="ltr-text">32</span></td><td><span class="ltr-text">13.5</span></td><td><span class="ltr-text">112</span></td><td><span class="ltr-text">48.7</span></td><td><span class="ltr-text">192</span></td><td><span class="ltr-text">85.3</span></td><td><span class="ltr-text">272</span></td><td><span class="ltr-text">123.4</span></td><td><span class="ltr-text">352</span></td><td><span class="ltr-text">163.4</span></td><td><span class="ltr-text">432</span></td><td><span class="ltr-text">205.5</span></td></tr>
+                    <tr><td><span class="ltr-text">34</span></td><td><span class="ltr-text">14.3</span></td><td><span class="ltr-text">114</span></td><td><span class="ltr-text">49.6</span></td><td><span class="ltr-text">194</span></td><td><span class="ltr-text">86.2</span></td><td><span class="ltr-text">274</span></td><td><span class="ltr-text">124.4</span></td><td><span class="ltr-text">354</span></td><td><span class="ltr-text">164.4</span></td><td><span class="ltr-text">434</span></td><td><span class="ltr-text">206.5</span></td></tr>
+                    <tr><td><span class="ltr-text">36</span></td><td><span class="ltr-text">15.2</span></td><td><span class="ltr-text">116</span></td><td><span class="ltr-text">50.5</span></td><td><span class="ltr-text">196</span></td><td><span class="ltr-text">87.1</span></td><td><span class="ltr-text">276</span></td><td><span class="ltr-text">125.4</span></td><td><span class="ltr-text">356</span></td><td><span class="ltr-text">165.4</span></td><td><span class="ltr-text">436</span></td><td><span class="ltr-text">207.6</span></td></tr>
+                    <tr><td><span class="ltr-text">38</span></td><td><span class="ltr-text">16.1</span></td><td><span class="ltr-text">118</span></td><td><span class="ltr-text">51.4</span></td><td><span class="ltr-text">198</span></td><td><span class="ltr-text">88.1</span></td><td><span class="ltr-text">278</span></td><td><span class="ltr-text">126.4</span></td><td><span class="ltr-text">358</span></td><td><span class="ltr-text">166.5</span></td><td><span class="ltr-text">438</span></td><td><span class="ltr-text">208.7</span></td></tr>
+                    <tr><td colspan="12"></td></tr>
+                    <tr><td><span class="ltr-text">40</span></td><td><span class="ltr-text">16.9</span></td><td><span class="ltr-text">120</span></td><td><span class="ltr-text">52.3</span></td><td><span class="ltr-text">200</span></td><td><span class="ltr-text">89.0</span></td><td><span class="ltr-text">280</span></td><td><span class="ltr-text">127.3</span></td><td><span class="ltr-text">360</span></td><td><span class="ltr-text">167.5</span></td><td><span class="ltr-text">440</span></td><td><span class="ltr-text">209.8</span></td></tr>
+                    <tr><td><span class="ltr-text">42</span></td><td><span class="ltr-text">17.8</span></td><td><span class="ltr-text">122</span></td><td><span class="ltr-text">53.2</span></td><td><span class="ltr-text">202</span></td><td><span class="ltr-text">89.9</span></td><td><span class="ltr-text">282</span></td><td><span class="ltr-text">128.3</span></td><td><span class="ltr-text">362</span></td><td><span class="ltr-text">168.5</span></td><td><span class="ltr-text">442</span></td><td><span class="ltr-text">210.9</span></td></tr>
+                    <tr><td><span class="ltr-text">44</span></td><td><span class="ltr-text">18.7</span></td><td><span class="ltr-text">124</span></td><td><span class="ltr-text">54.1</span></td><td><span class="ltr-text">204</span></td><td><span class="ltr-text">90.9</span></td><td><span class="ltr-text">284</span></td><td><span class="ltr-text">129.3</span></td><td><span class="ltr-text">364</span></td><td><span class="ltr-text">169.6</span></td><td><span class="ltr-text">444</span></td><td><span class="ltr-text">212.0</span></td></tr>
+                    <tr><td><span class="ltr-text">46</span></td><td><span class="ltr-text">19.6</span></td><td><span class="ltr-text">126</span></td><td><span class="ltr-text">55.0</span></td><td><span class="ltr-text">206</span></td><td><span class="ltr-text">91.8</span></td><td><span class="ltr-text">286</span></td><td><span class="ltr-text">130.3</span></td><td><span class="ltr-text">366</span></td><td><span class="ltr-text">170.6</span></td><td><span class="ltr-text">446</span></td><td><span class="ltr-text">213.1</span></td></tr>
+                    <tr><td><span class="ltr-text">48</span></td><td><span class="ltr-text">20.4</span></td><td><span class="ltr-text">128</span></td><td><span class="ltr-text">55.9</span></td><td><span class="ltr-text">208</span></td><td><span class="ltr-text">92.8</span></td><td><span class="ltr-text">288</span></td><td><span class="ltr-text">131.3</span></td><td><span class="ltr-text">368</span></td><td><span class="ltr-text">171.6</span></td><td><span class="ltr-text">448</span></td><td><span class="ltr-text">214.1</span></td></tr>
+                    <tr><td colspan="12"></td></tr>
+                    <tr><td><span class="ltr-text">50</span></td><td><span class="ltr-text">21.3</span></td><td><span class="ltr-text">130</span></td><td><span class="ltr-text">56.8</span></td><td><span class="ltr-text">210</span></td><td><span class="ltr-text">93.7</span></td><td><span class="ltr-text">290</span></td><td><span class="ltr-text">132.3</span></td><td><span class="ltr-text">370</span></td><td><span class="ltr-text">172.7</span></td><td><span class="ltr-text">450</span></td><td><span class="ltr-text">215.2</span></td></tr>
+                    <tr><td><span class="ltr-text">52</span></td><td><span class="ltr-text">22.2</span></td><td><span class="ltr-text">132</span></td><td><span class="ltr-text">57.7</span></td><td><span class="ltr-text">212</span></td><td><span class="ltr-text">94.6</span></td><td><span class="ltr-text">292</span></td><td><span class="ltr-text">133.2</span></td><td><span class="ltr-text">372</span></td><td><span class="ltr-text">173.7</span></td><td><span class="ltr-text">452</span></td><td><span class="ltr-text">216.3</span></td></tr>
+                    <tr><td><span class="ltr-text">54</span></td><td><span class="ltr-text">23.0</span></td><td><span class="ltr-text">134</span></td><td><span class="ltr-text">58.6</span></td><td><span class="ltr-text">214</span></td><td><span class="ltr-text">95.6</span></td><td><span class="ltr-text">294</span></td><td><span class="ltr-text">134.2</span></td><td><span class="ltr-text">374</span></td><td><span class="ltr-text">174.7</span></td><td><span class="ltr-text">454</span></td><td><span class="ltr-text">217.4</span></td></tr>
+                    <tr><td><span class="ltr-text">56</span></td><td><span class="ltr-text">23.9</span></td><td><span class="ltr-text">136</span></td><td><span class="ltr-text">59.5</span></td><td><span class="ltr-text">216</span></td><td><span class="ltr-text">96.5</span></td><td><span class="ltr-text">296</span></td><td><span class="ltr-text">135.2</span></td><td><span class="ltr-text">376</span></td><td><span class="ltr-text">175.8</span></td><td><span class="ltr-text">456</span></td><td><span class="ltr-text">218.5</span></td></tr>
+                    <tr><td><span class="ltr-text">58</span></td><td><span class="ltr-text">24.8</span></td><td><span class="ltr-text">138</span></td><td><span class="ltr-text">60.4</span></td><td><span class="ltr-text">218</span></td><td><span class="ltr-text">97.5</span></td><td><span class="ltr-text">298</span></td><td><span class="ltr-text">136.2</span></td><td><span class="ltr-text">378</span></td><td><span class="ltr-text">176.8</span></td><td><span class="ltr-text">458</span></td><td><span class="ltr-text">219.6</span></td></tr>
+                    <tr><td colspan="12"></td></tr>
+                    <tr><td><span class="ltr-text">60</span></td><td><span class="ltr-text">25.6</span></td><td><span class="ltr-text">140</span></td><td><span class="ltr-text">61.3</span></td><td><span class="ltr-text">220</span></td><td><span class="ltr-text">98.4</span></td><td><span class="ltr-text">300</span></td><td><span class="ltr-text">137.2</span></td><td><span class="ltr-text">380</span></td><td><span class="ltr-text">177.9</span></td><td><span class="ltr-text">460</span></td><td><span class="ltr-text">220.7</span></td></tr>
+                    <tr><td><span class="ltr-text">62</span></td><td><span class="ltr-text">26.5</span></td><td><span class="ltr-text">142</span></td><td><span class="ltr-text">62.2</span></td><td><span class="ltr-text">222</span></td><td><span class="ltr-text">99.4</span></td><td><span class="ltr-text">302</span></td><td><span class="ltr-text">138.2</span></td><td><span class="ltr-text">382</span></td><td><span class="ltr-text">178.9</span></td><td><span class="ltr-text">462</span></td><td><span class="ltr-text">221.8</span></td></tr>
+                    <tr><td><span class="ltr-text">64</span></td><td><span class="ltr-text">27.4</span></td><td><span class="ltr-text">144</span></td><td><span class="ltr-text">63.1</span></td><td><span class="ltr-text">224</span></td><td><span class="ltr-text">100.3</span></td><td><span class="ltr-text">304</span></td><td><span class="ltr-text">139.2</span></td><td><span class="ltr-text">384</span></td><td><span class="ltr-text">180.0</span></td><td><span class="ltr-text">464</span></td><td><span class="ltr-text">222.9</span></td></tr>
+                    <tr><td><span class="ltr-text">66</span></td><td><span class="ltr-text">28.3</span></td><td><span class="ltr-text">146</span></td><td><span class="ltr-text">64.0</span></td><td><span class="ltr-text">226</span></td><td><span class="ltr-text">101.3</span></td><td><span class="ltr-text">306</span></td><td><span class="ltr-text">140.2</span></td><td><span class="ltr-text">386</span></td><td><span class="ltr-text">181.0</span></td><td><span class="ltr-text">466</span></td><td><span class="ltr-text">224.0</span></td></tr>
+                    <tr><td><span class="ltr-text">68</span></td><td><span class="ltr-text">29.2</span></td><td><span class="ltr-text">148</span></td><td><span class="ltr-text">65.0</span></td><td><span class="ltr-text">228</span></td><td><span class="ltr-text">102.2</span></td><td><span class="ltr-text">308</span></td><td><span class="ltr-text">141.2</span></td><td><span class="ltr-text">388</span></td><td><span class="ltr-text">182.0</span></td><td><span class="ltr-text">468</span></td><td><span class="ltr-text">225.1</span></td></tr>
+                    <tr><td colspan="12"></td></tr>
+                    <tr><td><span class="ltr-text">70</span></td><td><span class="ltr-text">30.0</span></td><td><span class="ltr-text">150</span></td><td><span class="ltr-text">65.9</span></td><td><span class="ltr-text">230</span></td><td><span class="ltr-text">103.2</span></td><td><span class="ltr-text">310</span></td><td><span class="ltr-text">142.2</span></td><td><span class="ltr-text">390</span></td><td><span class="ltr-text">183.1</span></td><td><span class="ltr-text">470</span></td><td><span class="ltr-text">226.2</span></td></tr>
+                    <tr><td><span class="ltr-text">72</span></td><td><span class="ltr-text">30.9</span></td><td><span class="ltr-text">152</span></td><td><span class="ltr-text">66.8</span></td><td><span class="ltr-text">232</span></td><td><span class="ltr-text">104.1</span></td><td><span class="ltr-text">312</span></td><td><span class="ltr-text">143.2</span></td><td><span class="ltr-text">392</span></td><td><span class="ltr-text">184.1</span></td><td><span class="ltr-text">472</span></td><td><span class="ltr-text">227.4</span></td></tr>
+                    <tr><td><span class="ltr-text">74</span></td><td><span class="ltr-text">31.8</span></td><td><span class="ltr-text">154</span></td><td><span class="ltr-text">67.7</span></td><td><span class="ltr-text">234</span></td><td><span class="ltr-text">105.1</span></td><td><span class="ltr-text">314</span></td><td><span class="ltr-text">144.2</span></td><td><span class="ltr-text">394</span></td><td><span class="ltr-text">185.2</span></td><td><span class="ltr-text">474</span></td><td><span class="ltr-text">228.3</span></td></tr>
+                    <tr><td><span class="ltr-text">76</span></td><td><span class="ltr-text">32.7</span></td><td><span class="ltr-text">156</span></td><td><span class="ltr-text">68.6</span></td><td><span class="ltr-text">236</span></td><td><span class="ltr-text">106.0</span></td><td><span class="ltr-text">316</span></td><td><span class="ltr-text">145.2</span></td><td><span class="ltr-text">396</span></td><td><span class="ltr-text">186.2</span></td><td><span class="ltr-text">476</span></td><td><span class="ltr-text">229.6</span></td></tr>
+                    <tr><td><span class="ltr-text">78</span></td><td><span class="ltr-text">33.6</span></td><td><span class="ltr-text">158</span></td><td><span class="ltr-text">69.5</span></td><td><span class="ltr-text">238</span></td><td><span class="ltr-text">107.0</span></td><td><span class="ltr-text">318</span></td><td><span class="ltr-text">146.2</span></td><td><span class="ltr-text">398</span></td><td><span class="ltr-text">187.3</span></td><td><span class="ltr-text">478</span></td><td><span class="ltr-text">230.7</span></td></tr>
+                    <tr><td colspan="12"></td></tr>
+                    <tr><td><span class="ltr-text">80</span></td><td><span class="ltr-text">34.4</span></td><td><span class="ltr-text">160</span></td><td><span class="ltr-text">70.4</span></td><td><span class="ltr-text">240</span></td><td><span class="ltr-text">108.0</span></td><td><span class="ltr-text">320</span></td><td><span class="ltr-text">147.2</span></td><td><span class="ltr-text">400</span></td><td><span class="ltr-text">188.4</span></td><td><span class="ltr-text">480</span></td><td><span class="ltr-text">231.8</span></td></tr>
+                    <tr><td><span class="ltr-text">82</span></td><td><span class="ltr-text">35.3</span></td><td><span class="ltr-text">162</span></td><td><span class="ltr-text">71.4</span></td><td><span class="ltr-text">242</span></td><td><span class="ltr-text">108.9</span></td><td><span class="ltr-text">322</span></td><td><span class="ltr-text">148.2</span></td><td><span class="ltr-text">402</span></td><td><span class="ltr-text">189.4</span></td><td><span class="ltr-text">482</span></td><td><span class="ltr-text">232.9</span></td></tr>
+                    <tr><td><span class="ltr-text">84</span></td><td><span class="ltr-text">36.2</span></td><td><span class="ltr-text">164</span></td><td><span class="ltr-text">72.3</span></td><td><span class="ltr-text">244</span></td><td><span class="ltr-text">109.9</span></td><td><span class="ltr-text">324</span></td><td><span class="ltr-text">149.2</span></td><td><span class="ltr-text">404</span></td><td><span class="ltr-text">190.5</span></td><td><span class="ltr-text">484</span></td><td><span class="ltr-text">234.1</span></td></tr>
+                    <tr><td><span class="ltr-text">86</span></td><td><span class="ltr-text">37.1</span></td><td><span class="ltr-text">166</span></td><td><span class="ltr-text">73.2</span></td><td><span class="ltr-text">246</span></td><td><span class="ltr-text">110.8</span></td><td><span class="ltr-text">326</span></td><td><span class="ltr-text">150.2</span></td><td><span class="ltr-text">406</span></td><td><span class="ltr-text">191.5</span></td><td><span class="ltr-text">486</span></td><td><span class="ltr-text">235.2</span></td></tr>
+                    <tr><td><span class="ltr-text">88</span></td><td><span class="ltr-text">38.0</span></td><td><span class="ltr-text">168</span></td><td><span class="ltr-text">74.1</span></td><td><span class="ltr-text">248</span></td><td><span class="ltr-text">111.8</span></td><td><span class="ltr-text">328</span></td><td><span class="ltr-text">151.2</span></td><td><span class="ltr-text">408</span></td><td><span class="ltr-text">192.6</span></td><td><span class="ltr-text">488</span></td><td><span class="ltr-text">236.3</span></td></tr>
+                </tbody>
+            </table>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش <span class="ltr-text">1B</span></h4>
+            <p class="mb-4">
+                <strong class="font-semibold">محلول تیوسولفات سدیم:</strong> <span class="ltr-text">3.9 g</span> تیوسولفات سدیم، با دقت توزین شده، را به یک بالن حجمی <span class="ltr-text">100-mL</span> منتقل کنید، در آب حل کرده و تا حجم رقیق کنید و مخلوط کنید.
+            </p>
+            <p class="mb-4">
+                <strong class="font-semibold">محلول یدید پتاسیم:</strong> <span class="ltr-text">42 g</span> یدید پتاسیم را در <span class="ltr-text">100 mL</span> آب حل کنید.
+            </p>
+            <p class="mb-4">
+                <strong class="font-semibold">محلول استات سدیم:</strong> <span class="ltr-text">5.74 g</span> استات سدیم را در <span class="ltr-text">10 mL</span> آب حل کنید.
+            </p>
+            <p class="mb-4">
+                <strong class="font-semibold">محلول مس:</strong> حدود <span class="ltr-text">0.3 g</span> مس الکترولیتی خالص، با دقت توزین شده، را به یک ارلن <span class="ltr-text">250-mL</span> منتقل کنید، <span class="ltr-text">5 mL</span> اسید نیتریک برای حل کردن مس اضافه کنید، حدود <span class="ltr-text">25 mL</span> آب اضافه کنید و بجوشانید تا بخارات قرمز خارج شوند. حدود <span class="ltr-text">5 mL</span> <span class="ltr-text">bromine TS</span> اضافه کنید و بجوشانید تا برم به طور کامل حذف شود. خنک کنید، <span class="ltr-text">10 mL</span> محلول استات سدیم و سپس <span class="ltr-text">10 mL</span> محلول یدید پتاسیم اضافه کنید و با محلول تیوسولفات سدیم تا رنگ زرد روشن تیتراسیون کنید. به اندازه کافی <span class="ltr-text">starch TS</span> اضافه کنید تا رنگ آبی مشخصی ایجاد شود و تیتراسیون را ادامه دهید. با نزدیک شدن به نقطه پایانی، <span class="ltr-text">2 g</span> تیوسیانات پتاسیم اضافه کنید و هم بزنید تا کاملاً حل شود. تیتراسیون را تا سفید شدن کامل رسوب ادامه دهید. یک <span class="ltr-text">mL</span> محلول تیوسولفات سدیم معادل حدود <span class="ltr-text">10 mg</span> مس است. [توجه—تنظیم دقیق غلظت محلول یدید پتاسیم ضروری است. اگر محلول در پایان تیتراسیون کمتر از <span class="ltr-text">320 mg</span> مس داشته باشد، <span class="ltr-text">4.2–5 g</span> یدید پتاسیم اضافه کنید تا محلول کلی <span class="ltr-text">100 mL</span> شود. اگر مقادیر بیشتری از مس وجود داشته باشد، محلول یدید پتاسیم را به آرامی، با هم زدن مداوم، از بورت به مقادیر متناسب بیشتری اضافه کنید.]
+            </p>
+            <p class="mb-4">
+                <strong class="font-semibold">روش کار:</strong> اکسید کوپروز رسوب‌کرده به دست آمده در روش کلی را با آب بشویید، این صافی را با یک شیشه ساعت بپوشانید و اکسید کوپروز را با <span class="ltr-text">5 mL</span> اسید نیتریک که زیر شیشه ساعت با پیپت هدایت می‌شود، حل کنید. فیلتر شده را در یک ارلن <span class="ltr-text">250-mL</span> جمع‌آوری کنید، شیشه ساعت و صافی را با آب بشویید. تمام شستشوها را در ارلن جمع‌آوری کنید. محتویات ارلن را بجوشانید تا بخارات قرمز خارج شوند. حدود <span class="ltr-text">5 mL</span> <span class="ltr-text">bromine TS</span> اضافه کنید و بجوشانید تا برم به طور کامل حذف شود. خنک کنید و مطابق با دستورالعمل محلول مس که از "add <span class="ltr-text">10 mL</span> of <span class="ltr-text">Sodium acetate solution</span>" شروع می‌شود، عمل کنید. از حجم محلول تیوسولفات سدیم مصرفی، وزن مس را، بر حسب <span class="ltr-text">mg</span>، به دست آورید و وزن مس را در <span class="ltr-text">1.1259</span> ضرب کنید تا وزن، بر حسب <span class="ltr-text">mg</span>، اکسید کوپروز به دست آید. از جدول <span class="ltr-text">2</span>، مقدار دکستروز، بر حسب <span class="ltr-text">mg</span>، مطابق با وزن اکسید کوپروز را پیدا کنید. محتوای نشاسته معادل وزن، بر حسب <span class="ltr-text">mg</span>، دکستروز به دست آمده ضربدر <span class="ltr-text">0.9</span> است. یک تعیین بلانک، با استفاده از <span class="ltr-text">50 mL</span> از <span class="ltr-text">alkaline cupric tartrate TS</span> و <span class="ltr-text">50 mL</span> عصاره مالت، انجام دهید. اگر وزن اکسید کوپروز به دست آمده از <span class="ltr-text">0.5 mg</span> بیشتر شد، نتیجه تعیین را بر اساس آن اصلاح کنید. [توجه—<span class="ltr-text">alkaline cupric tartrate TS</span> در طول زمان نگهداری فاسد می‌شود و مقدار اکسید کوپروز به دست آمده در تعیین بلانک افزایش می‌یابد.]
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش <span class="ltr-text">2</span></h4>
+            <p class="mb-4">
+                روش زیر برای دکستروز (گلوکز) خاص است و به دلیل حساسیت شدید آن ممکن است تفاوت‌هایی را که بین مقادیر به دست آمده از یک نمونه مشاهده می‌شود، توضیح دهد. تعیین‌های تکراری بیش از <span class="ltr-text">2%</span> تفاوت ندارند.
+            </p>
+            <p class="mb-4">
+                <strong class="font-semibold">محلول گلوکوآمیلاز:</strong> یک محلول از گلوکوآمیلاز در آب حاوی <span class="ltr-text">30 International Units (IU)/mL</span> تهیه کنید. از گلوکوآمیلاز ترجیحاً از <span class="ltr-text">Rhizopus delemar</span> استفاده کنید. فعالیت کل گلوکوآمیلاز نمونه آزمون مورد استفاده باید <span class="ltr-text">NLT 150 IU</span> باشد.
+            </p>
+            <p class="mb-4">
+                <strong class="font-semibold">محلول بافر استات:</strong> <span class="ltr-text">16.4 g</span> استات سدیم را در <span class="ltr-text">100 mL</span> آب حل کنید، <span class="ltr-text">12.0 mL</span> اسید استیک گلاسیال اضافه کنید و مخلوط کنید. <span class="ltr-text">pH</span> این محلول <span class="ltr-text">4.8</span> است.
+            </p>
+            <p class="mb-4">
+                <strong class="font-semibold">بافر فسفات:</strong> <span class="ltr-text">3.63 g</span> تریس(هیدروکسی‌متیل)آمینو متان و <span class="ltr-text">5.0 g</span> فسفات سدیم مونوبازیک را در <span class="ltr-text">50.0 mL</span> آب حل کنید. در <span class="ltr-text">37°</span>، با اسید فسفریک <span class="ltr-text">pH</span> را به <span class="ltr-text">7.0</span> تنظیم کنید، با آب تا <span class="ltr-text">100.0 mL</span> رقیق کرده و مخلوط کنید. [توجه—<span class="ltr-text">pH</span> محیط بافر به دما حساس است و باید در دمای مورد استفاده در طول انکوباسیون به <span class="ltr-text">pH</span> مطلوب تنظیم شود.]
+            </p>
+            <p class="mb-4">
+                <strong class="font-semibold">محلول آنزیم:</strong> <span class="ltr-text">30 mg</span> گلوکز اکسیداز (<span class="ltr-text">Type II</span> از <span class="ltr-text">Aspergillus niger</span>)، <span class="ltr-text">3 mg</span> پراکسیداز (<span class="ltr-text">Type I</span> از ترب کوهی) و <span class="ltr-text">10 mg</span> فروسیانید پتاسیم را در <span class="ltr-text">100 mL</span> بافر فسفات حل کنید. [توجه—این مخلوط می‌تواند تا <span class="ltr-text">10 days</span> در یخچال نگهداری شود.]
+            </p>
+            <p class="mb-4">
+                <strong class="font-semibold">اسید سولفوریک <span class="ltr-text">18 N</span>:</strong> به آرامی، در حین هم زدن، <span class="ltr-text">54 mL</span> اسید سولفوریک را به <span class="ltr-text">102 mL</span> آب اضافه کنید، اجازه دهید تا <span class="ltr-text">25°</span> خنک شود و مخلوط کنید.
+            </p>
+            <p class="mb-4">
+                <strong class="font-semibold">محلول‌های استاندارد:</strong> مقدار دقیق توزین شده‌ای از <span class="ltr-text">USP Dextrose RS</span> را در آب حل کنید تا محلولی حاوی <span class="ltr-text">1.0 mg/mL</span> از <span class="ltr-text">USP Dextrose RS</span> به دست آید. حجم مشخصی از این محلول را به صورت کمی با آب رقیق کنید تا محلول‌های استاندارد <span class="ltr-text">A</span>، <span class="ltr-text">B</span>، <span class="ltr-text">C</span>، <span class="ltr-text">D</span> و <span class="ltr-text">E</span>، با غلظت‌های مشخص <span class="ltr-text">10</span>، <span class="ltr-text">20</span>، <span class="ltr-text">25</span>، <span class="ltr-text">40</span> و <span class="ltr-text">50 µg/mL</span> از <span class="ltr-text">USP Dextrose RS</span>، به ترتیب، به دست آیند. [توجه—قبل از استفاده <span class="ltr-text">4 h</span> برای موتاروتاسیون کامل در نظر بگیرید.]
+            </p>
+            <p class="mb-4">
+                <strong class="font-semibold">محلول‌های آزمون:</strong> حدود <span class="ltr-text">5 g</span> از نمونه آزمون ریز آسیاب شده را با پنج قسمت <span class="ltr-text">25-mL</span> الکل <span class="ltr-text">80%</span> استخراج کنید و فیلتر کنید. تمام الکل را با خشک کردن در آون هوا در <span class="ltr-text">105°</span> به مدت حدود <span class="ltr-text">8 h</span> از باقیمانده حذف کنید. [توجه—هرگونه اثری از الکل باقی‌مانده در باقیمانده، گلوکوآمیلاز را مهار می‌کند.] خنک کنید و ارلن حاوی نمونه آزمون خشک شده را به یک دسیکاتور منتقل کنید. حدود <span class="ltr-text">1 g</span>، با دقت توزین شده، از نمونه آزمون را به یک ارلن از قبل توزین شده منتقل کنید، <span class="ltr-text">25 mL</span> آب اضافه کنید و در صورت لزوم <span class="ltr-text">pH</span> را با اسید فسفریک به <span class="ltr-text">5.0–7.0</span> تنظیم کنید. سوسپانسیون را به مدت حدود <span class="ltr-text">3 min</span> بجوشانید، ارلن را به اتوکلاو منتقل کرده و در <span class="ltr-text">135°</span> به مدت <span class="ltr-text">2 h</span> حرارت دهید. ارلن را از اتوکلاو خارج کنید، دما را نزدیک <span class="ltr-text">55°</span> نگه دارید و <span class="ltr-text">2.5 mL</span> محلول بافر استات و آب کافی اضافه کنید تا وزن کل محلول به <span class="ltr-text">45 ± 1 g</span> تنظیم شود. ارلن را در حمام آب که در <span class="ltr-text">55 ± 1°</span> نگه داشته شده است، غوطه‌ور کنید و <span class="ltr-text">5 mL</span> محلول گلوکوآمیلاز اضافه کنید. ارلن را به مدت <span class="ltr-text">2 h</span> به طور مداوم چرخانید تا هیدرولیز انجام شود، از کاغذ صافی به یک بالن حجمی <span class="ltr-text">250-mL</span> عبور دهید، به صورت کمی با آب بشویید و تمام شستشوها را در ارلن جمع‌آوری کنید. محتویات ارلن را با آب تا حجم رقیق کرده و مخلوط کنید. <span class="ltr-text">1 mL</span> از یک آلیووت حاوی <span class="ltr-text">20–60 µg</span> از <span class="ltr-text">D-glucose</span> را به هر یک از پنج لوله آزمایش منتقل کنید. [توجه—برای به دست آوردن محدوده غلظت گلوکز در هیدرولیز، در صورت لزوم با آب تا حجم رقیق کنید.] <span class="ltr-text">2 mL</span> محلول آنزیم را به هر یک از پنج لوله آزمایش اضافه کنید و لوله‌های آزمایش را در تاریکی در <span class="ltr-text">37 ± 1°</span> به مدت دقیقاً <span class="ltr-text">30 min</span> قرار دهید تا رنگ توسعه یابد. در پایان <span class="ltr-text">30 min</span>، <span class="ltr-text">2 mL</span> اسید سولفوریک <span class="ltr-text">18 N</span> به هر یک از لوله‌های آزمایش اضافه کنید تا واکنش متوقف شود و مخلوط کنید.
+            </p>
+            <p class="mb-4">
+                <strong class="font-semibold">محلول کنترل:</strong> مقدار دقیق توزین شده‌ای از حدود <span class="ltr-text">0.4 g</span> نشاسته را به یک ارلن از قبل توزین شده منتقل کنید و مطابق با دستورالعمل محلول‌های آزمون که از "add <span class="ltr-text">25 mL</span> of water, and adjust the <span class="ltr-text">pH</span> with phosphoric acid" شروع می‌شود، عمل کنید.
+            </p>
+            <p class="mb-4">
+                <strong class="font-semibold">روش کار:</strong> به طور همزمان جذب‌های محلول‌های استاندارد و محلول‌های آزمون را در طول موج حداکثر جذب در حدود <span class="ltr-text">540 nm</span>، با یک اسپکتروفتومتر مناسب، با استفاده از محلول کنترل به عنوان بلانک برای تنظیم دستگاه، تعیین کنید. مقادیر جذب محلول‌های استاندارد را در مقابل غلظت، بر حسب <span class="ltr-text">µg/mL</span>، دکستروز رسم کنید و خط مستقیمی را که بهترین تناسب را با پنج نقطه رسم شده دارد، رسم کنید. از نمودار، غلظت <span class="ltr-text">C</span>، بر حسب <span class="ltr-text">µg/mL</span>، دکستروز را در هر یک از محلول‌های آزمون تعیین کنید و میانگین غلظت، بر حسب <span class="ltr-text">µg/mL</span>، از محلول تحت آزمایش را محاسبه کنید. درصد محتوای نشاسته در وزن نمونه آزمون گرفته شده با فرمول زیر محاسبه می‌شود:
+            </p>
+            <div class="formula-display">
+                $$(0.9C/10^6) \times V_1 \times (250/V_0)(100/E)(100/W) = 2.25CV_1/V_0EW$$
+            </div>
+            <ul class="list-none mb-4 pr-4">
+                <li><span class="ltr-text">C</span> <span class="mr-2"> = </span> میانگین غلظت دکستروز در محلول‌های آزمون (<span class="ltr-text">µg/mL</span>)</li>
+                <li><span class="ltr-text">V1</span> <span class="mr-2"> = </span> حجم محلول آزمون در صورت انجام رقیق‌سازی اضافی (<span class="ltr-text">mL</span>) (به یادداشت <span class="ltr-text">2</span> در محلول‌های آزمون مراجعه کنید)</li>
+                <li><span class="ltr-text">V0</span> <span class="mr-2"> = </span> حجم آلیووت گرفته شده از بالن حجمی <span class="ltr-text">250-mL</span> (<span class="ltr-text">mL</span>)</li>
+                <li><span class="ltr-text">E</span> <span class="mr-2"> = </span> وزن نمونه آزمون (<span class="ltr-text">g</span>)</li>
+                <li><span class="ltr-text">W</span> <span class="mr-2"> = </span> درصد وزن خشک نمونه آزمون</li>
+            </ul>
+            <p class="mb-4 text-sm italic text-gray-600">
+                [توجه—<span class="ltr-text">V0</span> برابر <span class="ltr-text">1.0</span> است هنگامی که رقیق‌سازی اضافی انجام نمی‌شود.]
+            </p>
+        </div>
+
+        <div class="card mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعیین روغن فرار</h2>
+            <p class="mb-4">
+                یک ارلن ته گرد با گردن کوتاه <span class="ltr-text">1-L</span> را در یک جبه حرارتی که روی یک همزن مغناطیسی قرار گرفته است، آماده کنید. یک میله همزن مغناطیسی تخم‌مرغی شکل را در ارلن قرار دهید و یک کندانسور انگشتی سرد و یک تله مناسب برای روغن فرار از نوع نشان داده شده (به شکل <span class="ltr-text">1</span> مراجعه کنید) را وصل کنید.
+            </p>
+            <figure class="mb-4 text-center">
+                <figcaption class="mt-2 text-sm text-gray-600">شکل <span class="ltr-text">1</span>. تله‌ها برای دستگاه روغن فرار.</figcaption>
+            </figure>
+            <p class="mb-4">
+                مقدار کافی از مواد را به صورت درشت آسیاب کنید تا <span class="ltr-text">1–3 mL</span> روغن فرار به دست آید. دانه‌های کوچک، میوه‌ها، یا برگ‌های خرد شده گیاهان دارویی معمولاً نیازی به آسیاب کردن ندارند. از پودرهای بسیار ریز باید اجتناب شود. اگر این امکان‌پذیر نیست، ممکن است لازم باشد آنها را با خاک اره خالص یا شن خالص مخلوط کنید. مقدار مناسبی از دارو را، با دقت توزین شده، در ارلن قرار دهید و آن را تا نیمه با آب پر کنید. کندانسور و جداکننده مناسب را وصل کنید. محتویات ارلن را بجوشانید، با استفاده از مقدار مناسب حرارت برای حفظ جوشیدن ملایم به مدت <span class="ltr-text">2 h</span>، یا تا زمانی که روغن فرار به طور کامل از مواد جدا شده و دیگر در لوله مدرج جداکننده جمع نشود.
+            </p>
+            <p class="mb-4">
+                اگر مقدار مناسبی از روغن فرار در لوله مدرج جداکننده به دست آمده باشد، می‌توان آن را تا دهم‌های <span class="ltr-text">1 mL</span> خواند و حجم روغن فرار از هر <span class="ltr-text">100 g</span> ماده را می‌توان از وزن داروی گرفته شده محاسبه کرد. درجه‌بندی‌های روی جداکننده "برای روغن‌های سنگین‌تر از آب" به گونه‌ای قرار گرفته‌اند که روغن زیر کندانس مایع آبی که به طور خودکار به داخل ارلن برمی‌گردد، باقی می‌ماند.
+            </p>
+        </div>
+
+        <div class="card mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">محتوای آب</h2>
+            <p class="mb-4">
+                برای مواد آسیاب نشده یا پودر نشده، حدود <span class="ltr-text">10 g</span> از نمونه آزمایشگاهی را با برش، گرانول‌سازی یا خرد کردن تهیه کنید، به طوری که قطعات حدود <span class="ltr-text">3 mm</span> ضخامت داشته باشند. دانه‌ها یا میوه‌های کوچک‌تر از <span class="ltr-text">3 mm</span> باید شکسته شوند. از استفاده از آسیاب‌های با سرعت بالا در تهیه نمونه خودداری کنید و دقت کنید که مقدار قابل توجهی رطوبت در طول آماده‌سازی از دست نرود و قسمت گرفته شده نماینده نمونه آزمایشگاهی باشد. محتوای آب را مطابق با دستورالعمل <a href="921.html" class="text-blue-600 hover:underline" target="_blank">921</a>، روش <span class="ltr-text">III</span> (گرانول‌متری)، روش کار برای مقالات با منشاء گیاهی، تعیین کنید.
+            </p>
+        </div>
+
+        <div class="card mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمون آفلاتوکسین‌ها</h2>
+            <p class="mb-4 text-sm italic text-gray-600">
+                [احتیاط—آفلاتوکسین‌ها بسیار خطرناک هستند و در هنگام کار با مواد آفلاتوکسینی باید نهایت دقت به عمل آید.]
+            </p>
+            <p class="mb-4">
+                در مواردی که تک‌نگاری فردی به رعایت محدودیت‌های آفلاتوکسین‌ها اشاره دارد، محدودیت‌ها برای <span class="ltr-text">aflatoxin B1 (AFB1)</span> <span class="ltr-text">NMT 5 ppb</span> و برای مجموع آفلاتوکسین‌های <span class="ltr-text">B1 (AFB1)</span>، <span class="ltr-text">B2 (AFB2)</span>، <span class="ltr-text">G1 (AFG1)</span> و <span class="ltr-text">G2 (AFG2)</span> <span class="ltr-text">NMT 20 ppb</span> است. میزان آزمایش ممکن است با استفاده از یک رویکرد مبتنی بر ریسک که احتمال آلودگی را در نظر می‌گیرد، تعیین شود. وجود آلودگی غیرمنتظره با آفلاتوکسین‌ها باید در تعیین انطباق در نظر گرفته شود. روش‌های تحلیلی زیر برای تعیین انطباق ارائه شده‌اند. مگر اینکه در تک‌نگاری فردی به طور دیگری مشخص شده باشد، از روش <span class="ltr-text">I</span> استفاده کنید. اگر مناسب بودن سیستم ناموفق بود، از روش <span class="ltr-text">II</span> یا روش <span class="ltr-text">III</span> استفاده کنید.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">روش <span class="ltr-text">I</span></h3>
+            <p class="mb-4">
+                این آزمون <span class="ltr-text">TLC</span> برای تشخیص وجود احتمالی <span class="ltr-text">AFB1</span>، <span class="ltr-text">AFB2</span>، <span class="ltr-text">AFG1</span> و <span class="ltr-text">AFG2</span> در هر ماده با منشاء گیاهی ارائه شده است.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معرف استات روی-کلرید آلومینیوم</h4>
+            <p class="mb-4">
+                <span class="ltr-text">20 g</span> استات روی و <span class="ltr-text">5 g</span> کلرید آلومینیوم را در آب کافی حل کنید تا <span class="ltr-text">100 mL</span> شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول کلرید سدیم</h4>
+            <p class="mb-4">
+                <span class="ltr-text">5 g</span> کلرید سدیم را در <span class="ltr-text">50 mL</span> آب حل کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول آزمون <span class="ltr-text">1</span></h4>
+            <p class="mb-4">
+                حدود <span class="ltr-text">200 g</span> از مواد گیاهی را به صورت پودر ریز آسیاب کنید. حدود <span class="ltr-text">50 g</span> از مواد پودر شده، با دقت توزین شده، را به یک ارلن درب‌شیشه‌ای منتقل کنید. <span class="ltr-text">200 mL</span> از مخلوط متانول و آب (<span class="ltr-text">17:3</span>) اضافه کنید. به مدت <span class="ltr-text">NLT 30 min</span> با وسایل مکانیکی به شدت تکان دهید و فیلتر کنید. [توجه—اگر محلول دارای رنگدانه‌های گیاهی مزاحم است، مطابق با دستورالعمل محلول آزمون <span class="ltr-text">2</span> عمل کنید.] <span class="ltr-text">50 mL</span> اول فیلتر شده را دور بریزید و قسمت <span class="ltr-text">40-mL</span> بعدی را جمع‌آوری کنید. فیلتر شده را به یک قیف جداکننده منتقل کنید. <span class="ltr-text">40 mL</span> محلول کلرید سدیم و <span class="ltr-text">25 mL</span> هگزان حلال اضافه کنید و به مدت <span class="ltr-text">1 min</span> تکان دهید. اجازه دهید لایه‌ها جدا شوند و لایه آبی پایین‌تر را به یک قیف جداکننده دوم منتقل کنید. لایه آبی را در قیف جداکننده دو بار، هر بار با <span class="ltr-text">25 mL</span> متیلن کلراید، با تکان دادن به مدت <span class="ltr-text">1 min</span> استخراج کنید. هر بار اجازه دهید لایه‌ها جدا شوند، لایه آلی پایین‌تر را جدا کنید و لایه‌های آلی ترکیب شده را در یک ارلن مخروطی <span class="ltr-text">125-mL</span> جمع‌آوری کنید. حلال آلی را روی حمام آب تبخیر کنید. عصاره باقی‌مانده را به یک لوله نمونه مناسب منتقل کرده و روی حمام آب تا خشکی تبخیر کنید. باقیمانده را خنک کنید. اگر تداخلاتی در باقیمانده وجود دارد، مطابق با دستورالعمل روش پاکسازی در محلول آزمون <span class="ltr-text">2</span> عمل کنید. در غیر این صورت، باقیمانده به دست آمده را در <span class="ltr-text">0.2 mL</span> از مخلوط کلروفرم و استونیتریل (<span class="ltr-text">9.8: 0.2</span>) حل کنید و در صورت لزوم با وسایل مکانیکی تکان دهید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول آزمون <span class="ltr-text">2</span></h4>
+            <p class="mb-4">
+                <span class="ltr-text">100 mL</span> از فیلتر شده را از ابتدای جریان جمع‌آوری کرده و به یک بشر <span class="ltr-text">250-mL</span> منتقل کنید. <span class="ltr-text">20 mL</span> معرف استات روی-کلرید آلومینیوم و <span class="ltr-text">80 mL</span> آب اضافه کنید. هم بزنید و اجازه دهید <span class="ltr-text">5 min</span> بماند. <span class="ltr-text">5 g</span> از یک کمک فیلتراسیون مناسب، مانند خاک دیاتومه، اضافه کنید، مخلوط کنید و فیلتر کنید. <span class="ltr-text">50 mL</span> اول فیلتر شده را دور بریزید و قسمت <span class="ltr-text">80-mL</span> بعدی را جمع‌آوری کنید. مطابق با دستورالعمل محلول آزمون <span class="ltr-text">1</span>، از "Transfer the filtrate to a separatory funnel" شروع کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش پاکسازی</h4>
+            <p class="mb-4">
+                یک دیسک شیشه‌ای سینتر شده با تخلخل متوسط یا یک پلاک پشم شیشه را در کف یک لوله کروماتوگرافی <span class="ltr-text">10-mm × 300-mm</span> قرار دهید. یک دوغاب از <span class="ltr-text">2 g</span> سیلیکا ژل را با مخلوطی از اتیل اتر و هگزان حلال (<span class="ltr-text">3:1</span>) تهیه کنید، دوغاب را در ستون بریزید و با <span class="ltr-text">5 mL</span> از همان مخلوط حلال بشویید. اجازه دهید جاذب ته نشین شود و به بالای ستون یک لایه <span class="ltr-text">1.5 g</span> سولفات سدیم انیدروس اضافه کنید. باقیمانده به دست آمده را در <span class="ltr-text">3 mL</span> متیلن کلراید حل کنید و آن را به ستون منتقل کنید. ارلن را دو بار با قسمت‌های <span class="ltr-text">1-mL</span> متیلن کلراید بشویید، شستشوها را به ستون منتقل کنید و با سرعت <span class="ltr-text">NMT 1 mL/min</span> الوت کنید. به ترتیب <span class="ltr-text">3 mL</span> هگزان حلال، <span class="ltr-text">3 mL</span> اتیل اتر و <span class="ltr-text">3 mL</span> متیلن کلراید به ستون اضافه کنید؛ با سرعت <span class="ltr-text">NMT 3 mL/min</span> الوت کنید؛ و الوت‌ها را دور بریزید. <span class="ltr-text">6 mL</span> از مخلوط متیلن کلراید و استون (<span class="ltr-text">9:1</span>) را به ستون اضافه کنید و با سرعت <span class="ltr-text">NMT 1 mL/min</span>، ترجیحاً بدون کمک خلاء، الوت کنید. این الوت را در یک ویال کوچک جمع‌آوری کنید، در صورت لزوم یک چیپ جوش اضافه کنید و روی حمام آب تا خشکی تبخیر کنید. باقیمانده را در <span class="ltr-text">0.2 mL</span> از مخلوط کلروفرم و استونیتریل (<span class="ltr-text">9.8: 0.2</span>) حل کنید و در صورت لزوم با وسایل مکانیکی تکان دهید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول آزمون <span class="ltr-text">3</span></h4>
+            <p class="mb-4">
+                اگر هنوز تداخلاتی در باقیمانده وجود دارد، مطابق با دستورالعمل روش پاکسازی با <span class="ltr-text">IAC</span> در محلول آزمون در روش <span class="ltr-text">II</span> عمل کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استاندارد آفلاتوکسین</h4>
+            <p class="mb-4 text-sm italic text-gray-600">
+                [احتیاط—آفلاتوکسین‌ها به شدت سمی هستند. با دقت کار کنید.]
+            </p>
+            <p class="mb-4">
+                یک محلول استاندارد آفلاتوکسین حاوی <span class="ltr-text">AFB1</span>، <span class="ltr-text">AFB2</span>، <span class="ltr-text">AFG1</span> و <span class="ltr-text">AFG2</span> به ترتیب در <span class="ltr-text">2.0</span>، <span class="ltr-text">0.50</span>، <span class="ltr-text">2.0</span> و <span class="ltr-text">0.50 µg/mL</span> در استونیتریل به شرح زیر تهیه کنید. ابتدا محلول‌های استوک جداگانه آفلاتوکسین‌های <span class="ltr-text">AFB1</span>، <span class="ltr-text">AFB2</span>، <span class="ltr-text">AFG1</span> و <span class="ltr-text">AFG2</span> را در استونیتریل، هر یک با غلظت اسمی <span class="ltr-text">10 µg/mL</span>، تهیه کنید. غلظت هر محلول استوک آفلاتوکسین را با اندازه‌گیری جذب (<span class="ltr-text">A</span>) در طول موج حداکثر جذب نزدیک به <span class="ltr-text">360 nm</span> و با استفاده از معادله زیر تعیین کنید:
+            </p>
+            <div class="formula-display">
+                $$\text{Aflatoxin (µg/mL)} = (A \times M_r \times 1000)/\epsilon$$
+            </div>
+            <ul class="list-none mb-4 pr-4">
+                <li><span class="ltr-text">A</span> <span class="mr-2">=</span> جذب</li>
+                <li><span class="ltr-text">Mr</span> <span class="mr-2">=</span> وزن مولکولی</li>
+                <li><span class="ltr-text">ε</span> <span class="mr-2">=</span> جذب مولی</li>
+            </ul>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th colspan="4">جدول <span class="ltr-text">3</span>. وزن‌های مولکولی و ضرایب جذب مولی برای آفلاتوکسین‌ها</th>
+                    </tr>
+                    <tr>
+                        <th>آفلاتوکسین</th>
+                        <th>وزن مولکولی (<span class="ltr-text">Mr</span>)</th>
+                        <th>حلال</th>
+                        <th>جذب مولی (<span class="ltr-text">ε</span>)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="ltr-text">AFB1</span></td><td><span class="ltr-text">312</span></td><td><span class="ltr-text">Acetonitrile</span></td><td><span class="ltr-text">20700</span></td></tr>
+                    <tr><td><span class="ltr-text">AFB2</span></td><td><span class="ltr-text">314</span></td><td><span class="ltr-text">Acetonitrile</span></td><td><span class="ltr-text">22500</span></td></tr>
+                    <tr><td><span class="ltr-text">AFG1</span></td><td><span class="ltr-text">328</span></td><td><span class="ltr-text">Acetonitrile</span></td><td><span class="ltr-text">17600</span></td></tr>
+                    <tr><td><span class="ltr-text">AFG2</span></td><td><span class="ltr-text">330</span></td><td><span class="ltr-text">Acetonitrile</span></td><td><span class="ltr-text">18900</span></td></tr>
+                </tbody>
+            </table>
+            <p class="mb-4">
+                در نهایت، برای به دست آوردن محلول استاندارد آفلاتوکسین، حجم دقیقی از هر محلول استوک آفلاتوکسین را به همان بالن حجمی منتقل کنید و با استونیتریل تا حجم رقیق کنید. غلظت هر آفلاتوکسین را در محلول استاندارد آفلاتوکسین محاسبه کنید:
+            </p>
+            <div class="formula-display">
+                $$C_{AF} = C'_{AF} \times V_{TS}/V_{AF}$$
+            </div>
+            <ul class="list-none mb-4 pr-4">
+                <li><span class="ltr-text">CAF</span> <span class="mr-2">=</span> غلظت آفلاتوکسین مربوطه در محلول استاندارد آفلاتوکسین</li>
+                <li><span class="ltr-text">C′AF</span> <span class="mr-2">=</span> غلظت آفلاتوکسین مربوطه در محلول استوک مربوطه، که در بالا تعیین شده است</li>
+                <li><span class="ltr-text">VTS</span> <span class="mr-2">=</span> حجم بالن حجمی استفاده شده برای تهیه محلول استاندارد آفلاتوکسین نهایی</li>
+                <li><span class="ltr-text">VAF</span> <span class="mr-2">=</span> حجم هر محلول استوک آفلاتوکسین جداگانه منتقل شده به بالن حجمی استفاده شده برای تهیه محلول استاندارد آفلاتوکسین</li>
+            </ul>
+            <p class="mb-4">
+                در یخچال نگهداری کنید. قبل از استفاده تا دمای اتاق هم دما کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول آفلاتوکسین</h4>
+            <p class="mb-4">
+                محلول استاندارد آفلاتوکسین را با استونیتریل رقیق کنید تا محلولی با غلظت <span class="ltr-text">0.4 µg/mL</span> از هر یک از <span class="ltr-text">AFB1</span> و <span class="ltr-text">AFG1</span>، و <span class="ltr-text">0.1 µg/mL</span> از هر یک از <span class="ltr-text">AFB2</span> و <span class="ltr-text">AFG2</span> به دست آید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش کار</h4>
+            <p class="mb-4">
+                به طور جداگانه <span class="ltr-text">2.5</span>، <span class="ltr-text">5</span>، <span class="ltr-text">7.5</span> و <span class="ltr-text">10 µL</span> از محلول آفلاتوکسین و سه کاربرد <span class="ltr-text">10-µL</span> از محلول آزمون <span class="ltr-text">1</span>، محلول آزمون <span class="ltr-text">2</span> یا محلول آزمون <span class="ltr-text">3</span> را به یک صفحه <span class="ltr-text">TLC</span> مناسب (به کروماتوگرافی <a href="621.html" class="text-blue-600 hover:underline" target="_blank">621</a> مراجعه کنید) که با یک لایه <span class="ltr-text">0.25-mm</span> از مخلوط سیلیکا ژل کروماتوگرافی پوشانده شده است، اعمال کنید. <span class="ltr-text">5 µL</span> از محلول آفلاتوکسین را روی یکی از سه کاربرد <span class="ltr-text">10-µL</span> محلول آزمون قرار دهید. اجازه دهید لکه‌ها خشک شوند و کروماتوگرام را در یک محفظه غیر اشباع حاوی سیستم حلالی متشکل از مخلوط کلروفرم، استون و ایزوپروپیل الکل (<span class="ltr-text">85:10:5</span>) توسعه دهید تا جبهه حلال <span class="ltr-text">NLT 15 cm</span> از مبدأ حرکت کند. صفحه را از محفظه توسعه خارج کنید، جبهه حلال را علامت‌گذاری کنید و اجازه دهید صفحه در هوا خشک شود. لکه‌ها را روی صفحه با بررسی زیر نور <span class="ltr-text">UV</span> در <span class="ltr-text">365 nm</span> پیدا کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مناسب بودن سیستم</h4>
+            <p class="mb-4">
+                چهار کاربرد از محلول آفلاتوکسین به صورت چهار لکه فلورسنت آبی به وضوح جدا شده ظاهر می‌شوند. هر لکه به دست آمده از محلول آزمون را که از نظر رنگ و موقعیت با لکه‌های محلول آفلاتوکسین مطابقت دارد، مشاهده کنید. هر لکه به دست آمده از محلول آزمون با محلول آفلاتوکسین که روی آن قرار گرفته است، نباید شدت کمتری نسبت به محلول آفلاتوکسین مربوطه داشته باشد.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
+            <p class="mb-4">
+                هیچ لکه‌ای از هیچ یک از کاربردهای دیگر محلول آزمون با هیچ یک از لکه‌های به دست آمده از کاربردهای محلول آفلاتوکسین مطابقت ندارد. اگر هر لکه آفلاتوکسین در محلول آزمون به دست آمد، موقعیت هر لکه فلورسنت از محلول آزمون را با لکه‌های محلول آفلاتوکسین مقایسه کنید تا نوع آفلاتوکسین موجود را شناسایی کنید. شدت لکه آفلاتوکسین، در صورت وجود در محلول آزمون، در مقایسه با آفلاتوکسین مربوطه در محلول آفلاتوکسین، غلظت تقریبی آفلاتوکسین را در محلول آزمون می‌دهد. در مواردی که تک‌نگاری فردی به رعایت محدودیت‌های آفلاتوکسین‌ها اشاره دارد، محدودیت‌ها برای <span class="ltr-text">AFB1</span> <span class="ltr-text">NMT 5 ppb</span> و برای مجموع <span class="ltr-text">AFB1</span>، <span class="ltr-text">AFB2</span>، <span class="ltr-text">AFG1</span> و <span class="ltr-text">AFG2</span> <span class="ltr-text">NMT 20 ppb</span> است، مگر اینکه به طور دیگری مشخص شده باشد.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">روش <span class="ltr-text">II</span></h3>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول کلرید سدیم</h4>
+            <p class="mb-4">
+                به روش <span class="ltr-text">I</span> مراجعه کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول سالین بافر فسفات</h4>
+            <p class="mb-4">
+                محلول بافر فسفات <span class="ltr-text">10 mM</span> حاوی <span class="ltr-text">0.138 M</span> کلرید سدیم و <span class="ltr-text">0.0027 M</span> کلرید پتاسیم را در آب تهیه کنید و با هیدروکسید سدیم <span class="ltr-text">2 M</span> <span class="ltr-text">pH</span> را به <span class="ltr-text">7.4</span> تنظیم کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ستون ایمونوآفینیتی</h4>
+            <p class="mb-4">
+                قبل از آماده‌سازی، ستون ایمونوآفینیتی (<span class="ltr-text">IAC</span>) را به دمای اتاق برسانید. برای آماده‌سازی، <span class="ltr-text">10 mL</span> از محلول سالین بافر فسفات را روی ستون اعمال کنید و اجازه دهید با نیروی جاذبه با سرعت <span class="ltr-text">2–3 mL/min</span> از ستون عبور کند. <span class="ltr-text">0.5 mL</span> از محلول سالین بافر فسفات را روی ستون نگه دارید تا محلول آزمون اعمال شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول آزمون</h4>
+            <p class="mb-4">
+                <strong class="font-semibold">استخراج نمونه:</strong> حدود <span class="ltr-text">5 g</span> از یک نمونه پودر شده نماینده، با دقت توزین شده، را به یک ارلن درب‌شیشه‌ای منتقل کنید. <span class="ltr-text">20 mL</span> از مخلوط متانول و آب (<span class="ltr-text">17:3</span>) اضافه کنید. به مدت <span class="ltr-text">NLT 30 min</span> با وسایل مکانیکی به شدت تکان دهید و فیلتر کنید. <span class="ltr-text">5 mL</span> اول فیلتر شده را دور بریزید و قسمت <span class="ltr-text">4-mL</span> بعدی را جمع‌آوری کنید. فیلتر شده را به یک قیف جداکننده منتقل کنید. <span class="ltr-text">4 mL</span> محلول کلرید سدیم و <span class="ltr-text">2.5 mL</span> هگزان اضافه کنید و به مدت <span class="ltr-text">1 min</span> تکان دهید. اجازه دهید لایه‌ها جدا شوند و لایه آبی پایین‌تر را به یک قیف جداکننده دوم منتقل کنید. لایه آبی را در قیف جداکننده دو بار، هر بار با <span class="ltr-text">2.5 mL</span> متیلن کلراید، با تکان دادن به مدت <span class="ltr-text">1 min</span> استخراج کنید. هر بار اجازه دهید لایه‌ها جدا شوند، لایه آلی پایین‌تر را جدا کنید و لایه‌های آلی ترکیب شده را در یک ارلن مخروطی <span class="ltr-text">50-mL</span> جمع‌آوری کنید. حلال آلی را روی حمام آب تبخیر کنید. عصاره باقی‌مانده را به یک لوله نمونه مناسب منتقل کرده و روی حمام آب تا خشکی تبخیر کنید. باقیمانده را خنک کنید. اگر تداخلاتی در باقیمانده وجود دارد، مطابق با دستورالعمل روش پاکسازی با <span class="ltr-text">IAC</span> عمل کنید. در غیر این صورت، باقیمانده به دست آمده را در <span class="ltr-text">200 µL</span> استونیتریل حل کنید و در صورت لزوم با وسایل مکانیکی تکان دهید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش پاکسازی با <span class="ltr-text">IAC</span></h4>
+            <p class="mb-4">
+                باقیمانده در <span class="ltr-text">5 mL</span> از مخلوط متانول و آب (<span class="ltr-text">6:4</span>) حل شده و سپس با <span class="ltr-text">5 mL</span> آب رقیق می‌شود. این عصاره روی یک <span class="ltr-text">IAC</span> آماده شده اعمال می‌شود. <span class="ltr-text">IAC</span> دو بار با <span class="ltr-text">10 mL</span> محلول سالین بافر فسفات شسته می‌شود و الوشن به آرامی با <span class="ltr-text">2 mL</span> متانول انجام می‌شود. الوت را با نیتروژن تبخیر کرده و باقیمانده را در <span class="ltr-text">200 µL</span> استونیتریل حل کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول آفلاتوکسین</h4>
+            <p class="mb-4 text-sm italic text-gray-600">
+                [احتیاط—آفلاتوکسین‌ها به شدت سمی هستند. با دقت کار کنید.]
+            </p>
+            <p class="mb-4">
+                محلول استاندارد آفلاتوکسین را با استونیتریل رقیق کنید تا محلولی حاوی <span class="ltr-text">0.04 µg/mL</span> از هر یک از <span class="ltr-text">AFB1</span> و <span class="ltr-text">AFG1</span>، و <span class="ltr-text">0.01 µg/mL</span> از هر یک از <span class="ltr-text">AFB2</span> و <span class="ltr-text">AFG2</span> به دست آید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز</h4>
+            <p class="mb-4">
+                به طور جداگانه <span class="ltr-text">5</span>، <span class="ltr-text">7.5</span> و <span class="ltr-text">10 µL</span> از محلول آفلاتوکسین و سه کاربرد <span class="ltr-text">10-µL</span> از محلول آزمون را به یک صفحه <span class="ltr-text">HPTLC</span> مناسب (به کروماتوگرافی <a href="621.html" class="text-blue-600 hover:underline" target="_blank">621</a> مراجعه کنید) که با یک لایه <span class="ltr-text">200-µm</span> از مخلوط سیلیکا ژل کروماتوگرافی پوشانده شده است، اعمال کنید. <span class="ltr-text">5 µL</span> از محلول آفلاتوکسین را روی یکی از سه کاربرد <span class="ltr-text">10-µL</span> محلول آزمون قرار دهید. اجازه دهید لکه‌ها خشک شوند و کروماتوگرام را در یک محفظه اشباع حاوی سیستم حلالی متشکل از مخلوط کلروفرم، استون و آب (<span class="ltr-text">140: 20: 0.3</span>) توسعه دهید تا جبهه حلال <span class="ltr-text">NLT 72 mm</span> از مبدأ (<span class="ltr-text">80 mm</span> از لبه پایین صفحه) حرکت کند. صفحه را از محفظه توسعه خارج کنید، جبهه حلال را علامت‌گذاری کنید و اجازه دهید صفحه به مدت <span class="ltr-text">5 min</span> در هوا خشک شود. لکه‌ها را روی صفحه با اسکن چگالی فلورسنس (<span class="ltr-text">>400 nm</span>) زیر نور <span class="ltr-text">UV</span> در <span class="ltr-text">366 nm</span> پیدا کنید. موقعیت هر لکه فلورسنت از محلول آزمون را با لکه‌های محلول آفلاتوکسین مقایسه کنید تا نوع آفلاتوکسین موجود را شناسایی کنید. غلظت آفلاتوکسین‌ها در محلول آزمون را می‌توان از منحنی کالیبراسیون به دست آمده از داده‌های اسکن با محلول آفلاتوکسین محاسبه کرد.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مناسب بودن سیستم</h4>
+            <p class="mb-4">
+                چهار کاربرد از محلول آفلاتوکسین به صورت چهار لکه فلورسنت آبی به وضوح جدا شده ظاهر می‌شوند. هر لکه به دست آمده از محلول آزمون را که از نظر رنگ و موقعیت با لکه‌های محلول آفلاتوکسین مطابقت دارد، مشاهده کنید. هر لکه به دست آمده از محلول آزمون با محلول آفلاتوکسین که روی آن قرار گرفته است، نباید شدت کمتری نسبت به محلول آفلاتوکسین مربوطه داشته باشد. میانگین بازیافت <span class="ltr-text">AFB1</span> و <span class="ltr-text">AFG1</span> افزودنی <span class="ltr-text">NLT 70%</span> است.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
+            <p class="mb-4">
+                در مواردی که تک‌نگاری فردی به رعایت محدودیت‌های آفلاتوکسین‌ها اشاره دارد، محدودیت‌ها برای <span class="ltr-text">AFB1</span> <span class="ltr-text">NMT 5 ppb</span> و برای مجموع <span class="ltr-text">AFB1</span>، <span class="ltr-text">AFB2</span>، <span class="ltr-text">AFG1</span> و <span class="ltr-text">AFG2</span> <span class="ltr-text">NMT 20 ppb</span> است، مگر اینکه به طور دیگری مشخص شده باشد.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">روش <span class="ltr-text">III</span></h3>
+            <p class="mb-4">
+                این روش آزمون به عنوان نمونه‌ای برای تشخیص وجود احتمالی <span class="ltr-text">AFB1</span> و آفلاتوکسین‌های کل (<span class="ltr-text">AF</span>: مجموع <span class="ltr-text">AFB1</span>، <span class="ltr-text">AFB2</span>، <span class="ltr-text">AFG1</span> و <span class="ltr-text">AFG2</span>) ارائه شده است. نشان داده شده است که برای جینسینگ پودر شده و زنجبیل مناسب است. مناسب بودن آن برای سایر مقالات با منشاء گیاهی باید اثبات شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول بافر فسفات <span class="ltr-text">0.1 M</span></h4>
+            <p class="mb-4">
+                <span class="ltr-text">8.69 g</span> فسفات دی‌سدیم انیدروس و <span class="ltr-text">4.66 g</span> فسفات مونوسدیم انیدروس یا <span class="ltr-text">5.36 g</span> مونوهیدرات فسفات مونوسدیم را در <span class="ltr-text">800 mL</span> آب حل کنید، <span class="ltr-text">pH</span> را با هیدروکسید سدیم <span class="ltr-text">2 M</span> به <span class="ltr-text">7.4</span> تنظیم کنید، <span class="ltr-text">10 mL</span> پلی‌سوربات <span class="ltr-text">20</span> اضافه کنید و با آب تا <span class="ltr-text">1 L</span> رقیق کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول سالین بافر فسفات</h4>
+            <p class="mb-4">
+                مطابق با دستورالعمل روش <span class="ltr-text">II</span> تهیه کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول‌های استاندارد کاری آفلاتوکسین</h4>
+            <p class="mb-4">
+                شش محلول را با رقیق کردن حجم‌های مناسبی از محلول استاندارد آفلاتوکسین با متانول و آب (<span class="ltr-text">1:1</span>) تهیه کنید. غلظت‌های نهایی آفلاتوکسین در هر محلول استاندارد کاری آفلاتوکسین در جدول <span class="ltr-text">4</span> نشان داده شده است. در یخچال نگهداری کنید و قبل از استفاده تا دمای اتاق هم دما کنید. محلول‌ها را روزانه تهیه کنید.
+            </p>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th colspan="6">جدول <span class="ltr-text">4</span>. تهیه محلول‌های استاندارد کاری آفلاتوکسین</th>
+                    </tr>
+                    <tr>
+                        <th>محلول‌های استاندارد کاری آفلاتوکسین</th>
+                        <th>محلول استاندارد آفلاتوکسین (<span class="ltr-text">µL</span>)</th>
+                        <th colspan="4">غلظت نهایی آفلاتوکسین در محلول استاندارد کاری آفلاتوکسین (<span class="ltr-text">ng/mL</span>)</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th><span class="ltr-text">AFB1</span></th>
+                        <th><span class="ltr-text">AFB2</span></th>
+                        <th><span class="ltr-text">AFG1</span></th>
+                        <th><span class="ltr-text">AFG2</span></th>
+                        <th><span class="ltr-text">ΣAF</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="ltr-text">1</span></td><td><span class="ltr-text">0</span></td><td><span class="ltr-text">0</span></td><td><span class="ltr-text">0</span></td><td><span class="ltr-text">0</span></td><td><span class="ltr-text">0</span></td><td><span class="ltr-text">0</span></td></tr>
+                    <tr><td><span class="ltr-text">2</span></td><td><span class="ltr-text">12.5</span></td><td><span class="ltr-text">0.25</span></td><td><span class="ltr-text">0.0625</span></td><td><span class="ltr-text">0.25</span></td><td><span class="ltr-text">0.0625</span></td><td><span class="ltr-text">0.625</span></td></tr>
+                    <tr><td><span class="ltr-text">3</span></td><td><span class="ltr-text">25</span></td><td><span class="ltr-text">0.5</span></td><td><span class="ltr-text">0.125</span></td><td><span class="ltr-text">0.5</span></td><td><span class="ltr-text">0.125</span></td><td><span class="ltr-text">1.25</span></td></tr>
+                    <tr><td><span class="ltr-text">4</span></td><td><span class="ltr-text">50</span></td><td><span class="ltr-text">1</span></td><td><span class="ltr-text">0.25</span></td><td><span class="ltr-text">1</span></td><td><span class="ltr-text">0.25</span></td><td><span class="ltr-text">2.5</span></td></tr>
+                    <tr><td><span class="ltr-text">5</span></td><td><span class="ltr-text">100</span></td><td><span class="ltr-text">2</span></td><td><span class="ltr-text">0.5</span></td><td><span class="ltr-text">2</span></td><td><span class="ltr-text">0.5</span></td><td><span class="ltr-text">5</span></td></tr>
+                    <tr><td><span class="ltr-text">6</span></td><td><span class="ltr-text">200</span></td><td><span class="ltr-text">4</span></td><td><span class="ltr-text">1</span></td><td><span class="ltr-text">4</span></td><td><span class="ltr-text">1</span></td><td><span class="ltr-text">10</span></td></tr>
+                </tbody>
+            </table>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ستون ایمونوآفینیتی</h4>
+            <p class="mb-4">
+                از یک <span class="ltr-text">IAC</span> استفاده کنید که حاوی آنتی‌بادی‌های مونوکلونال متقابل با <span class="ltr-text">AFB1</span>، <span class="ltr-text">AFB2</span>، <span class="ltr-text">AFG1</span> و <span class="ltr-text">AFG2</span> باشد. ستون‌های ایمونوآفینیتی حداقل ظرفیت <span class="ltr-text">NLT 100 ng</span> آفلاتوکسین کل را دارند و بازیافت <span class="ltr-text">NLT 80%</span> برای <span class="ltr-text">AFB1</span>، <span class="ltr-text">AFB2</span>، <span class="ltr-text">AFG1</span> و <span class="ltr-text">AFG2</span> را در صورت اعمال <span class="ltr-text">5 ng</span> از هر یک از <span class="ltr-text">AFB1</span>، <span class="ltr-text">AFB2</span>، <span class="ltr-text">AFG1</span> و <span class="ltr-text">AFG2</span> در <span class="ltr-text">10 mL</span> متانول <span class="ltr-text">10%</span> در محلول سالین بافر فسفات (<span class="ltr-text">v/v</span>) می‌دهند.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول آزمون</h4>
+            <p class="mb-4">
+                <strong class="font-semibold">استخراج:</strong> <span class="ltr-text">5 g</span> از یک نمونه آزمون نماینده را در یک لوله سانتریفیوژ <span class="ltr-text">50-mL</span> وزن کنید. <span class="ltr-text">1 g</span> کلرید سدیم و <span class="ltr-text">25 mL</span> از مخلوط متانول و <span class="ltr-text">0.5%</span> بی‌کربنات سدیم (<span class="ltr-text">7:3</span>) اضافه کنید. روی یک مخلوط‌کن گردابی مخلوط کنید تا ذرات نمونه و حلال استخراج به خوبی مخلوط شوند. به مدت <span class="ltr-text">10 min</span> در <span class="ltr-text">400 rpm</span> تکان دهید. به مدت <span class="ltr-text">10 min</span> در <span class="ltr-text">7000 rpm</span> (مقدار <span class="ltr-text">g = 5323 mm/s2</span>) یا با سرعتی که منجر به تشکیل گلوله محکم از باقیمانده‌ها شود، سانتریفیوژ کنید. بلافاصله <span class="ltr-text">7 mL</span> را به یک لوله سانتریفیوژ <span class="ltr-text">50-mL</span> پیپت کنید، <span class="ltr-text">28 mL</span> از محلول بافر فسفات <span class="ltr-text">0.1 M</span> اضافه کنید، مخلوط کنید و از کاغذ میکروفیبر شیشه‌ای فیلتر کنید. <span class="ltr-text">25 mL</span> فیلتر شده (معادل <span class="ltr-text">1 g</span> نمونه آزمون) را در یک استوانه مدرج <span class="ltr-text">25-mL</span> جمع‌آوری کنید و بلافاصله کروماتوگرافی <span class="ltr-text">IAC</span> را انجام دهید.
+            </p>
+            <p class="mb-4">
+                <strong class="font-semibold">پاکسازی <span class="ltr-text">IAC</span>:</strong> [توجه—برای پاکسازی <span class="ltr-text">IAC</span>، ستون‌ها باید حداقل <span class="ltr-text">15 min</span> قبل از استفاده در دمای اتاق نگهداری شوند.] درپوش بالایی ستون را بردارید و آن را به مخزن وصل کنید. درپوش انتهایی ستون را بردارید و آن را به چندراهه ستون وصل کنید (اتصال باید محکم باشد). اجازه دهید مایع در ستون عبور کند تا مایع حدود <span class="ltr-text">2–3 mm</span> بالاتر از بستر ستون باشد. <span class="ltr-text">25 mL</span> فیلتر شده را به مخزن وارد کنید. اجازه دهید فیلتر شده با نیروی جاذبه از ستون عبور کند. اجازه دهید ستون خشک شود. برای شروع آسان جریان دوباره، ستون را از چندراهه خارج کنید، حدود <span class="ltr-text">2 mL</span> محلول سالین بافر فسفات را به ستون اضافه کنید، ستون را دوباره به مخزن وصل کنید و ستون را با <span class="ltr-text">3 mL</span> اضافی از محلول سالین بافر فسفات و سپس با <span class="ltr-text">5 mL</span> آب بشویید (<span class="ltr-text">5 mL</span> محلول سالین بافر فسفات را می‌توان مستقیماً به مخزن ستون اضافه کرد اگر از تکنیک‌های دیگری برای خارج کردن حباب هوا در انتهای ستون و شروع آسان جریان استفاده شود). اجازه دهید ستون خشک شود، سپس <span class="ltr-text">3 mL</span> هوا را با یک سرنگ از ستون عبور دهید. با <span class="ltr-text">1 mL</span> متانول الوت کنید و آنالیت‌ها را در یک بالن حجمی <span class="ltr-text">3-mL</span> جمع‌آوری کنید، اجازه دهید الوت آزادانه چکه کند. اجازه دهید ستون خشک شود. به مدت <span class="ltr-text">1 min</span> بماند، سپس با <span class="ltr-text">1 mL</span> متانول اضافی الوت کنید و در همان بالن حجمی جمع‌آوری کنید. اجازه دهید ستون خشک شود و <span class="ltr-text">10 mL</span> هوا را از ستون عبور دهید. الوت را با آب تا حجم رقیق کنید. از این محلول به عنوان محلول آزمون استفاده کنید و بلافاصله آنالیز آفلاتوکسین‌ها را انجام دهید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول مناسب بودن سیستم</h4>
+            <p class="mb-4">
+                یک نمونه spiked را با اضافه کردن <span class="ltr-text">5 mL</span> از محلول استاندارد کاری آفلاتوکسین <span class="ltr-text">5</span> به یک نمونه <span class="ltr-text">5-g</span> و تکرار روش برای محلول آزمون، با استفاده از <span class="ltr-text">20 mL</span> به جای <span class="ltr-text">25 mL</span> از مخلوط متانول و <span class="ltr-text">0.5%</span> بی‌کربنات سدیم (<span class="ltr-text">700:300</span>) تهیه کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم کروماتوگرافی</h4>
+            <p class="mb-2">
+                <strong class="font-semibold">دتکتور:</strong> فلورسنس، طول موج تحریک (<span class="ltr-text">Ex</span>) <span class="ltr-text">362 nm</span> و طول موج انتشار (<span class="ltr-text">Em</span>) <span class="ltr-text">440 nm</span>
+            </p>
+            <p class="mb-2">
+                <strong class="font-semibold">ستون:</strong> <span class="ltr-text">4.6-mm × 15-cm</span>; پرکننده <span class="ltr-text">3-µm</span> <span class="ltr-text">L1</span>
+            </p>
+            <p class="mb-2">
+                <strong class="font-semibold">سرعت جریان:</strong> <span class="ltr-text">0.8 mL/min</span>
+            </p>
+            <p class="mb-2">
+                <strong class="font-semibold">فاز متحرک:</strong> ایزوکراتیک
+            </p>
+            <p class="mb-2 pr-4">
+                <strong class="font-semibold">برای مشتق‌سازی پس از ستون با سلول <span class="ltr-text">PHRED</span>:</strong> آب، متانول و استونیتریل (<span class="ltr-text">60:25:15</span>)
+            </p>
+            <p class="mb-4 pr-4">
+                <strong class="font-semibold">برای مشتق‌سازی پس از ستون با سلول <span class="ltr-text">Kobra</span>:</strong> محلولی تهیه شده با مخلوط کردن <span class="ltr-text">1 L</span> از مخلوط آب، متانول و استونیتریل (<span class="ltr-text">60:25:15</span>)؛ <span class="ltr-text">350 µL</span> اسید نیتریک <span class="ltr-text">4 M</span>؛ و <span class="ltr-text">120 mg</span> برومید پتاسیم
+            </p>
+            <p class="mb-2">
+                <strong class="font-semibold">سیستم‌های مشتق‌سازی پس از ستون (<span class="ltr-text">PCD</span>)</strong>
+            </p>
+            <ul class="list-none mb-4 pr-4">
+                <li><span class="ltr-text">PHRED cell</span>: سلول مشتق‌سازی فتوشیمیایی پس از ستون</li>
+                <li><span class="ltr-text">Kobra cell</span>: سلول الکتروشیمیایی، سلول مشتق‌سازی برومیناسیون پس از ستون</li>
+            </ul>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز</h4>
+            <p class="mb-4">
+                <strong class="font-semibold">مشتق‌سازی پس از ستون برای آفلاتوکسین‌ها:</strong> از یک سلول <span class="ltr-text">UV</span> یا <span class="ltr-text">Kobra</span> استفاده کنید. <span class="ltr-text">50 µL</span> از بلانک معرف (محلول استاندارد کاری آفلاتوکسین <span class="ltr-text">1</span>)، محلول‌های استاندارد کاری آفلاتوکسین <span class="ltr-text">2–6</span> یا محلول آزمون را به ستون <span class="ltr-text">LC</span> تزریق کنید. پیک‌های آفلاتوکسین را در محلول آزمون با مقایسه زمان‌های بازداری با زمان‌های استانداردهای کاری شناسایی کنید. آفلاتوکسین‌ها به ترتیب <span class="ltr-text">AFG2</span>، <span class="ltr-text">AFG1</span>، <span class="ltr-text">AFB2</span> و <span class="ltr-text">AFB1</span> الوت می‌شوند. پس از عبور از سلول <span class="ltr-text">PHRED</span> یا <span class="ltr-text">Kobra</span>، <span class="ltr-text">AFG1</span> و <span class="ltr-text">AFB1</span> مشتق شده و <span class="ltr-text">AFG2a</span> (مشتق <span class="ltr-text">AFG1</span>) و <span class="ltr-text">AFB2a</span> (مشتق <span class="ltr-text">AFB1</span>) را تشکیل می‌دهند. [توجه—ساختارهای شیمیایی مشتقات حاصل از برومیناسیون الکتروشیمیایی و فتولیز یکسان نیستند. ساختارهای محصولات فتولیز <span class="ltr-text">AFB1</span> و <span class="ltr-text">AFG1</span> مشخص نشده‌اند.] زمان‌های بازداری <span class="ltr-text">AFG2</span>، <span class="ltr-text">AFG2a</span>، <span class="ltr-text">AFB2</span> و <span class="ltr-text">AFB2a</span> با استفاده از سلول <span class="ltr-text">PHRED</span> بین حدود <span class="ltr-text">14</span> و <span class="ltr-text">27 min</span> است؛ زمان‌های بازداری با استفاده از سلول <span class="ltr-text">Kobra</span> کوتاه‌تر هستند. پیک‌ها باید به طور کامل تفکیک شوند. منحنی‌های استاندارد برای هر آفلاتوکسین ایجاد کنید. غلظت هر آفلاتوکسین را در محلول آزمون از منحنی کالیبراسیون تعیین کنید.
+            </p>
+            <p class="mb-4">
+                <strong class="font-semibold">منحنی‌های کالیبراسیون آفلاتوکسین‌ها:</strong> منحنی‌های کالیبراسیون برای هر یک از آفلاتوکسین‌ها با استفاده از محلول‌های استاندارد کاری آفلاتوکسین حاوی چهار آفلاتوکسین توصیف شده تهیه می‌شوند. این محلول‌ها محدوده <span class="ltr-text">0.25–4 ng/mL</span> برای <span class="ltr-text">AFB1</span> و <span class="ltr-text">AFG1</span>، و محدوده <span class="ltr-text">0.0625–1 ng/mL</span> برای <span class="ltr-text">AFB2</span> و <span class="ltr-text">AFG2</span> را پوشش می‌دهند. منحنی‌های کالیبراسیون را قبل از آنالیز طبق جدول <span class="ltr-text">4</span> تهیه کنید و نمودار را برای خطی بودن بررسی کنید. اگر پاسخ مساحت قسمت آزمون خارج از (بالاتر از) محدوده کالیبراسیون باشد، محلول آزمون باید با مخلوطی از متانول و آب (<span class="ltr-text">1:1, v/v</span>) رقیق شده و دوباره به ستون <span class="ltr-text">LC</span> تزریق شود.
+            </p>
+            <p class="mb-4">
+                <strong class="font-semibold">تعیین مقدار آفلاتوکسین‌ها:</strong> تعیین مقدار آفلاتوکسین‌ها با اندازه‌گیری مساحت پیک در هر زمان بازداری آفلاتوکسین و مقایسه آنها با منحنی کالیبراسیون مربوطه انجام می‌شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مناسب بودن سیستم</h4>
+            <p class="mb-4">
+                میانگین بازیافت <span class="ltr-text">AFB1 (2 µg/kg)</span> افزودنی و مجموع آفلاتوکسین‌ها (<span class="ltr-text">5 µg/kg</span>) به ترتیب <span class="ltr-text">NLT 68%</span> و <span class="ltr-text">70%</span> است. انحراف معیار نسبی (<span class="ltr-text">RSD</span>) برای <span class="ltr-text">AFB1</span> و برای مجموع آفلاتوکسین‌ها <span class="ltr-text">NMT 10%</span> است.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محاسبات</h4>
+            <p class="mb-4">
+                مساحت پیک (پاسخ، محور <span class="ltr-text">y</span>) هر یک از استانداردهای توکسین را در مقابل غلظت (<span class="ltr-text">ng/mL</span>، محور <span class="ltr-text">x</span>) رسم کنید و شیب (<span class="ltr-text">S</span>) و عرض از مبدأ (<span class="ltr-text">a</span>) را تعیین کنید. سطح توکسین در نمونه را با فرمول زیر محاسبه کنید:
+            </p>
+            <div class="formula-display">
+                $$\text{Toxin (µg/kg)} = \left[ \frac{(R - a)}{S} \times \frac{V}{W} \right] \times F$$
+            </div>
+            <ul class="list-none mb-4 pr-4">
+                <li><span class="ltr-text">R</span> <span class="mr-2">=</span> مساحت پیک محلول آزمون</li>
+                <li><span class="ltr-text">a</span> <span class="mr-2">=</span> عرض از مبدأ منحنی کالیبراسیون</li>
+                <li><span class="ltr-text">S</span> <span class="mr-2">=</span> شیب منحنی کالیبراسیون</li>
+                <li><span class="ltr-text">V</span> <span class="mr-2">=</span> حجم نهایی محلول آزمون تزریق شده (<span class="ltr-text">mL</span>)</li>
+                <li><span class="ltr-text">W</span> <span class="mr-2">=</span> <span class="ltr-text">1 g</span> از نمونه آزمون که از ستون ایمونوآفینیتی عبور کرده است</li>
+                <li><span class="ltr-text">F</span> <span class="mr-2">=</span> فاکتور رقت، <span class="ltr-text">1</span> هنگامی که <span class="ltr-text">V = 3 mL</span></li>
+            </ul>
+            <p class="mb-4">
+                مجموع آفلاتوکسین‌ها حاصل جمع <span class="ltr-text">AFG2</span>، <span class="ltr-text">AFG1</span>، <span class="ltr-text">AFB2</span> و <span class="ltr-text">AFB1</span> است.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
+            <p class="mb-4">
+                در مواردی که تک‌نگاری فردی به رعایت محدودیت‌های آفلاتوکسین‌ها اشاره دارد، محدودیت‌ها برای <span class="ltr-text">AFB1</span> <span class="ltr-text">NMT 5 ppb</span> و برای مجموع <span class="ltr-text">AFB1</span>، <span class="ltr-text">AFB2</span>، <span class="ltr-text">AFG1</span> و <span class="ltr-text">AFG2</span> <span class="ltr-text">NMT 20 ppb</span> است، مگر اینکه به طور دیگری مشخص شده باشد.
+            </p>
+        </div>
+
+        <div class="card mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آنالیز باقیمانده آفت‌کش‌ها</h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تعریف</h3>
+            <p class="mb-4">
+                در این دارونامه، واژه "آفت‌کش" به هر ماده یا مخلوطی از مواد اطلاق می‌شود که برای پیشگیری، نابودی یا کنترل هر آفت، گونه‌های ناخواسته گیاهان، قارچ‌ها، یا حیواناتی که در طول یا به طور دیگری در تولید، فرآوری، ذخیره‌سازی، حمل و نقل یا بازاریابی مقالات خالص آسیب می‌رسانند، در نظر گرفته شده است. این واژه شامل موادی است که برای استفاده به عنوان تنظیم‌کننده‌های رشد، برگ‌ریزان یا خشک‌کننده‌ها، و هر ماده‌ای که قبل یا بعد از برداشت محصول برای محافظت محصول از فساد در طول ذخیره‌سازی و حمل و نقل به کار می‌رود، می‌شود.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">حدود</h3>
+            <p class="mb-4">
+                در ایالات متحده، بسیاری از مواد گیاهی به عنوان مکمل‌های غذایی در نظر گرفته می‌شوند و مشمول مقررات قانونی مربوط به مواد غذایی هستند اما نه داروها در قانون فدرال غذا، دارو و لوازم آرایشی. محدودیت‌های آفت‌کش‌ها در مواد غذایی توسط آژانس حفاظت از محیط زیست (<span class="ltr-text">EPA</span>) همانطور که در کد مقررات فدرال (<span class="ltr-text">40 CFR §180</span>) یا دفترچه فدرال (<span class="ltr-text">FR</span>) نشان داده شده است، تعیین می‌شوند. علاوه بر این، <span class="ltr-text">FDA</span> سطوح عملیاتی را برای باقیمانده‌های آفت‌کش‌های اجتناب‌ناپذیر (<span class="ltr-text">21 CFR §109</span> و <span class="ltr-text">21 CFR §509</span>) تعیین می‌کند. برای مواد شیمیایی آفت‌کش بدون سطح تحمل تعیین شده توسط <span class="ltr-text">EPA</span> یا سطح عملیاتی <span class="ltr-text">FDA</span>، باقیمانده‌ها باید کمتر از حد تشخیص روش مشخص شده باشند. نتایج کمتر از حد تشخیص <span class="ltr-text">EPA</span> مقادیر صفر در نظر گرفته می‌شوند. بنابراین، محدودیت‌های موجود در اینجا در ایالات متحده هنگامی که مقالات با منشاء گیاهی برای اهداف غذایی برچسب‌گذاری شده‌اند، قابل اجرا نیستند. با این حال، این محدودیت‌ها ممکن است در کشورهای دیگر قابل اجرا باشند. مگر اینکه در تک‌نگاری به طور دیگری مشخص شده باشد، مقاله مورد بررسی با محدودیت‌های داده شده در جدول <span class="ltr-text">5</span> مطابقت دارد. محدودیت‌های آفت‌کش‌های مشکوک که در جدول <span class="ltr-text">5</span> ذکر نشده‌اند، باید با مقررات <span class="ltr-text">EPA</span> مطابقت داشته باشند. در مواردی که یک آفت‌کش در جدول <span class="ltr-text">5</span> یا در مقررات <span class="ltr-text">EPA</span> ذکر نشده است، حد را با فرمول زیر محاسبه کنید:
+            </p>
+            <div class="formula-display">
+                $$\text{Limit (mg/kg)} = AM/(100B)$$
+            </div>
+            <p class="mb-4">
+                که در آن <span class="ltr-text">A</span> مصرف روزانه قابل قبول (<span class="ltr-text">ADI</span>)، همانطور که توسط سازمان غذا و کشاورزی سازمان ملل متحد (<span class="ltr-text">FAO</span>) و سازمان بهداشت جهانی (<span class="ltr-text">WHO</span>) منتشر شده است، بر حسب <span class="ltr-text">mg/kg</span> وزن بدن؛ <span class="ltr-text">M</span> وزن بدن، بر حسب کیلوگرم (<span class="ltr-text">60 kg</span>)؛ و <span class="ltr-text">B</span> دوز روزانه مقاله، بر حسب کیلوگرم است.
+            </p>
+            <p class="mb-4">
+                اگر مقاله برای تهیه عصاره‌ها، تنتورها یا سایر اشکال دارویی در نظر گرفته شده است که روش تهیه آنها محتوای آفت‌کش‌ها را در محصول نهایی تغییر می‌دهد، محدودیت‌ها را با فرمول زیر محاسبه کنید:
+            </p>
+            <div class="formula-display">
+                $$\text{Limit (mg/kg)} = AME/(100B)$$
+            </div>
+            <p class="mb-4">
+                که در آن <span class="ltr-text">E</span> فاکتور استخراج آفت‌کش در روش تهیه است، که به صورت تجربی به عنوان نسبت محتوای اولیه آفت‌کش در مواد گیاهی و محتوای نهایی آفت‌کش در تهیه تعیین می‌شود؛ <span class="ltr-text">B</span> دوز روزانه تهیه بر حسب کیلوگرم است؛ و <span class="ltr-text">A</span> و <span class="ltr-text">M</span> همانطور که در بالا تعریف شده‌اند.
+            </p>
+            <p class="mb-4">
+                معافیت کامل یا جزئی از آزمون ممکن است اعطا شود زمانی که تاریخچه کامل (نوع و کمیت آفت‌کش‌های استفاده شده، تاریخ هر درمان در طول کشت و پس از برداشت) درمان دسته مشخص باشد و بتوان آن را به دقت طبق شیوه‌های کشاورزی و جمع‌آوری خوب (<span class="ltr-text">GACP</span>) بررسی کرد.
+            </p>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th colspan="2">جدول <span class="ltr-text">5</span></th>
+                    </tr>
+                    <tr>
+                        <th>ماده</th>
+                        <th>حد (<span class="ltr-text">mg/kg</span>)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="ltr-text">Acephate</span></td><td><span class="ltr-text">0.1</span></td></tr>
+                    <tr><td><span class="ltr-text">Alachlor</span></td><td><span class="ltr-text">0.05</span></td></tr>
+                    <tr><td><span class="ltr-text">Aldrin and dieldrin (sum of)</span></td><td><span class="ltr-text">0.05</span></td></tr>
+                    <tr><td><span class="ltr-text">Azinphos-ethyl</span></td><td><span class="ltr-text">0.1</span></td></tr>
+                    <tr><td><span class="ltr-text">Azinphos-methyl</span></td><td><span class="ltr-text">1</span></td></tr>
+                    <tr><td><span class="ltr-text">Bromide, inorganic (calculated as bromide ion)</span></td><td><span class="ltr-text">125</span></td></tr>
+                    <tr><td><span class="ltr-text">Bromophos-ethyl</span></td><td><span class="ltr-text">0.05</span></td></tr>
+                    <tr><td><span class="ltr-text">Bromophos-methyl</span></td><td><span class="ltr-text">0.05</span></td></tr>
+                    <tr><td><span class="ltr-text">Bromopropylate</span></td><td><span class="ltr-text">3</span></td></tr>
+                    <tr><td><span class="ltr-text">Chlordane (sum of cis-, trans-, and oxychlordane)</span></td><td><span class="ltr-text">0.05</span></td></tr>
+                    <tr><td><span class="ltr-text">Chlorfenvinphos</span></td><td><span class="ltr-text">0.5</span></td></tr>
+                    <tr><td><span class="ltr-text">Chlorpyriphos-ethyl</span></td><td><span class="ltr-text">0.2</span></td></tr>
+                    <tr><td><span class="ltr-text">Chlorpyriphos-methyl</span></td><td><span class="ltr-text">0.1</span></td></tr>
+                    <tr><td><span class="ltr-text">Chlorthal-dimethyl</span></td><td><span class="ltr-text">0.01</span></td></tr>
+                    <tr><td><span class="ltr-text">Cyfluthrin (sum of)</span></td><td><span class="ltr-text">0.1</span></td></tr>
+                    <tr><td><span class="ltr-text">λ-Cyhalothrin</span></td><td><span class="ltr-text">1</span></td></tr>
+                    <tr><td><span class="ltr-text">Cypermethrin and isomers (sum of)</span></td><td><span class="ltr-text">1</span></td></tr>
+                    <tr><td><span class="ltr-text">DDT (sum of o,p′-DDE, p,p′-DDE, o,p′-DDT, p,p′-DDT, o,p′-TDE, and p,p′-TDE)</span></td><td><span class="ltr-text">1</span></td></tr>
+                    <tr><td><span class="ltr-text">Deltamethrin</span></td><td><span class="ltr-text">0.5</span></td></tr>
+                    <tr><td><span class="ltr-text">Diazinon</span></td><td><span class="ltr-text">0.5</span></td></tr>
+                    <tr><td><span class="ltr-text">Dichlofluanid</span></td><td><span class="ltr-text">0.1</span></td></tr>
+                    <tr><td><span class="ltr-text">Dichlorvos</span></td><td><span class="ltr-text">1</span></td></tr>
+                    <tr><td><span class="ltr-text">Dicofol</span></td><td><span class="ltr-text">0.5</span></td></tr>
+                    <tr><td><span class="ltr-text">Dimethoate and omethoate (sum of)</span></td><td><span class="ltr-text">0.1</span></td></tr>
+                    <tr><td><span class="ltr-text">Dithiocarbamates (expressed as CS2)</span></td><td><span class="ltr-text">2</span></td></tr>
+                    <tr><td><span class="ltr-text">Endosulfan (sum of isomers and endosulfan sulphate)</span></td><td><span class="ltr-text">3</span></td></tr>
+                    <tr><td><span class="ltr-text">Endrin</span></td><td><span class="ltr-text">0.05</span></td></tr>
+                    <tr><td><span class="ltr-text">Ethion</span></td><td><span class="ltr-text">2</span></td></tr>
+                    <tr><td><span class="ltr-text">Etrimphos</span></td><td><span class="ltr-text">0.05</span></td></tr>
+                    <tr><td><span class="ltr-text">Fenchlorophos (sum of fenchlorophos and fenchlorophos-oxon)</span></td><td><span class="ltr-text">0.1</span></td></tr>
+                    <tr><td><span class="ltr-text">Fenitrothion</span></td><td><span class="ltr-text">0.5</span></td></tr>
+                    <tr><td><span class="ltr-text">Fenpropathrin</span></td><td><span class="ltr-text">0.03</span></td></tr>
+                    <tr><td><span class="ltr-text">Fensulfothion (sum of fensulfothion, fensulfothion-oxon, fensulfothion-oxon sulfone, and fensulfothion sulfone)</span></td><td><span class="ltr-text">0.05</span></td></tr>
+                    <tr><td><span class="ltr-text">Fenthion (sum of fenthion, fenthion-oxon, fenthion-oxon sulfone, fenthion-oxon sulfoxide, fenthion sulfone, and fenthion-sulfoxide)</span></td><td><span class="ltr-text">0.05</span></td></tr>
+                    <tr><td><span class="ltr-text">Fenvalerate</span></td><td><span class="ltr-text">1.5</span></td></tr>
+                    <tr><td><span class="ltr-text">Flucythrinate</span></td><td><span class="ltr-text">0.05</span></td></tr>
+                    <tr><td><span class="ltr-text">τ-Fluvalinate</span></td><td><span class="ltr-text">0.05</span></td></tr>
+                    <tr><td><span class="ltr-text">Fonophos</span></td><td><span class="ltr-text">0.05</span></td></tr>
+                    <tr><td><span class="ltr-text">Heptachlor (sum of heptachlor, cis-heptachlorepoxide, and trans-heptachlorepoxide)</span></td><td><span class="ltr-text">0.05</span></td></tr>
+                    <tr><td><span class="ltr-text">Hexachlorbenzene</span></td><td><span class="ltr-text">0.1</span></td></tr>
+                    <tr><td><span class="ltr-text">Hexachlorocyclohexane (sum of isomers α-, β-, δ-, and ε-)</span></td><td><span class="ltr-text">0.3</span></td></tr>
+                    <tr><td><span class="ltr-text">Lindan (γ-hexachlorocyclohexane)</span></td><td><span class="ltr-text">0.6</span></td></tr>
+                    <tr><td><span class="ltr-text">Malathion and malaoxon (sum of)</span></td><td><span class="ltr-text">1</span></td></tr>
+                    <tr><td><span class="ltr-text">Mecarbam</span></td><td><span class="ltr-text">0.05</span></td></tr>
+                    <tr><td><span class="ltr-text">Methacriphos</span></td><td><span class="ltr-text">0.05</span></td></tr>
+                    <tr><td><span class="ltr-text">Methamidophos</span></td><td><span class="ltr-text">0.05</span></td></tr>
+                    <tr><td><span class="ltr-text">Methidathion</span></td><td><span class="ltr-text">0.2</span></td></tr>
+                    <tr><td><span class="ltr-text">Methoxychlor</span></td><td><span class="ltr-text">0.05</span></td></tr>
+                    <tr><td><span class="ltr-text">Mirex</span></td><td><span class="ltr-text">0.01</span></td></tr>
+                    <tr><td><span class="ltr-text">Monocrotophos</span></td><td><span class="ltr-text">0.1</span></td></tr>
+                    <tr><td><span class="ltr-text">Parathion-ethyl and paraoxon-ethyl (sum of)</span></td><td><span class="ltr-text">0.5</span></td></tr>
+                    <tr><td><span class="ltr-text">Parathion-methyl and paraoxon-methyl (sum of)</span></td><td><span class="ltr-text">0.2</span></td></tr>
+                    <tr><td><span class="ltr-text">Pendimethalin</span></td><td><span class="ltr-text">0.1</span></td></tr>
+                    <tr><td><span class="ltr-text">Pentachloranisole</span></td><td><span class="ltr-text">0.01</span></td></tr>
+                    <tr><td><span class="ltr-text">Permethrin and isomers (sum of)</span></td><td><span class="ltr-text">1</span></td></tr>
+                    <tr><td><span class="ltr-text">Phosalone</span></td><td><span class="ltr-text">0.1</span></td></tr>
+                    <tr><td><span class="ltr-text">Phosmet</span></td><td><span class="ltr-text">0.05</span></td></tr>
+                    <tr><td><span class="ltr-text">Piperonyl butoxide</span></td><td><span class="ltr-text">3</span></td></tr>
+                    <tr><td><span class="ltr-text">Pirimiphos-ethyl</span></td><td><span class="ltr-text">0.05</span></td></tr>
+                    <tr><td><span class="ltr-text">Pirimiphos-methyl (sum of pirimiphos-methyl and N-desethyl-pirimiphos-methyl)</span></td><td><span class="ltr-text">4</span></td></tr>
+                    <tr><td><span class="ltr-text">Procymidone</span></td><td><span class="ltr-text">0.1</span></td></tr>
+                    <tr><td><span class="ltr-text">Profenophos</span></td><td><span class="ltr-text">0.1</span></td></tr>
+                    <tr><td><span class="ltr-text">Prothiophos</span></td><td><span class="ltr-text">0.05</span></td></tr>
+                    <tr><td><span class="ltr-text">Pyrethrum (sum of cinerin I, cinerin II, jasmolin I, jasmolin II, pyrethrin I, and pyrethrin II)</span></td><td><span class="ltr-text">3</span></td></tr>
+                    <tr><td><span class="ltr-text">Quinalphos</span></td><td><span class="ltr-text">0.05</span></td></tr>
+                    <tr><td><span class="ltr-text">Quintozene (sum of quintozene, pentachloraniline, and methyl pentachlorphenyl sulfide)</span></td><td><span class="ltr-text">1</span></td></tr>
+                    <tr><td><span class="ltr-text">S-421</span></td><td><span class="ltr-text">0.02</span></td></tr>
+                    <tr><td><span class="ltr-text">Tecnazene</span></td><td><span class="ltr-text">0.05</span></td></tr>
+                    <tr><td><span class="ltr-text">Tetradifon</span></td><td><span class="ltr-text">0.3</span></td></tr>
+                    <tr><td><span class="ltr-text">Vinclozolin</span></td><td><span class="ltr-text">0.4</span></td></tr>
+                </tbody>
+            </table>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز کیفی و کمی باقیمانده آفت‌کش‌ها</h4>
+            <p class="mb-4">
+                از روش‌های تحلیلی تأیید شده، به عنوان مثال، مطابق با آخرین نسخه دستورالعمل اتحادیه اروپا در مورد کنترل کیفیت تحلیلی و رویه‌های تأیید برای آنالیز باقیمانده آفت‌کش‌ها [توجه—نسخه فعلی سند شماره <span class="ltr-text">SANTE/11813/2017</span>، <a href="https://ec.europa.eu/food/sites/food/files/plant/docs/pesticides_mrl_guidelines_wrkdoc_2017-11813.pdf" class="text-blue-600 hover:underline" target="_blank">https://ec.europa.eu/food/sites/food/files/plant/docs/pesticides_mrl_guidelines_wrkdoc_2017-11813.pdf</a>] یا اصول تأیید روش <span class="ltr-text">EPA (OPPTS 860.1340)</span> استفاده کنید که معیارهای زیر را برآورده می‌کنند. این روش، به ویژه با توجه به مراحل تصفیه آن، برای ترکیب باقیمانده آفت‌کش و ماده تحت آزمایش مناسب است و مستعد تداخل از co-extractives نیست؛ حد اندازه‌گیری برای هر ترکیب ماتریس آفت‌کش که باید آنالیز شود، <span class="ltr-text">NMT</span> حد تحمل مربوطه است؛ این روش نشان می‌دهد که بین <span class="ltr-text">70%</span> و <span class="ltr-text">120%</span> از هر آفت‌کش با تکرارپذیری <span class="ltr-text">NLT 20% RSD</span> بازیابی می‌شود [توجه—بازیابی‌های کمتر ممکن است در موارد خاصی قابل قبول باشد همانطور که در <span class="ltr-text">SANTE/11813/2017</span> بحث شده است]؛ و غلظت محلول‌های آزمون و مرجع و تنظیم دستگاه به گونه‌ای است که پاسخ خطی از دتکتور تحلیلی به دست آید.
+            </p>
+        </div>
+
+        <div class="card mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">حدود ناخالصی‌های عنصری</h2>
+            <p class="mb-4">
+                سطوح ناخالصی‌های عنصری باید طبق جدول <span class="ltr-text">6</span> محدود شوند مگر اینکه در تک‌نگاری فردی به طور دیگری ذکر شده باشد. تک‌نگاری‌های خاص ممکن است محدودیت‌های متفاوتی برای مقالاتی که معمولاً در مقادیر زیاد استفاده می‌شوند، ارائه دهند.
+            </p>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th colspan="2">جدول <span class="ltr-text">6</span>. حدود ناخالصی‌های عنصری</th>
+                    </tr>
+                    <tr>
+                        <th>عنصر</th>
+                        <th>حد (<span class="ltr-text">µg/g</span>)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>آرسنیک (غیر آلی)a</td><td><span class="ltr-text">2</span></td></tr>
+                    <tr><td>کادمیوم</td><td><span class="ltr-text">0.5</span></td></tr>
+                    <tr><td>سرب</td><td><span class="ltr-text">5</span></td></tr>
+                    <tr><td>جیوه (کل)</td><td><span class="ltr-text">1</span></td></tr>
+                    <tr><td>متیل‌جیوه (به عنوان <span class="ltr-text">Hg</span>)b</td><td><span class="ltr-text">0.2</span></td></tr>
+                </tbody>
+            </table>
+            <p class="mb-2 text-sm text-gray-600">
+                a آرسنیک ممکن است با استفاده از یک روش بدون تفکیک اندازه‌گیری شود با فرض اینکه تمام آرسنیک موجود در مکمل به شکل غیر آلی است. در مواردی که حد با استفاده از یک روش بدون تفکیک تجاوز می‌شود، انطباق با حد برای آرسنیک غیر آلی باید بر اساس یک روش تفکیک‌پذیر اثبات شود.
+            </p>
+            <p class="mb-4 text-sm text-gray-600">
+                b تعیین متیل‌جیوه ضروری نیست زمانی که محتوای جیوه کل کمتر از حد برای متیل‌جیوه است.
+            </p>
+            <p class="mb-4">
+                مقالات طبق روش‌های تعیین شده در ناخالصی‌های عنصری—روش‌ها <a href="233.html" class="text-blue-600 hover:underline" target="_blank">233</a> آزمایش می‌شوند. در مواردی که تفکیک نیاز است، روش‌های داده شده در آلاینده‌های عنصری در مکمل‌های غذایی <a href="2232.html" class="text-blue-600 hover:underline" target="_blank">2232</a> برای آزمایش استفاده می‌شوند.
+            </p>
+        </div>
+
+        <div class="card mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">استانداردهای مرجع <span class="ltr-text">USP</span> <a href="11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h2>
+            <ul class="list-none mb-4 pr-4">
+                <li><span class="ltr-text">USP Dextrose RS</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- MathJax CDN -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>268. تخلخل با جذب-دفع نیتروژن</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container mx-auto p-4 max-w-4xl card">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">268. تخلخل با جذب-دفع نیتروژن</h1>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+        <p class="mb-4">
+            تخلخل اصطلاحی است که معمولاً برای نشان دادن ماهیت متخلخل یک ماده جامد استفاده می‌شود و به طور دقیق‌تر به عنوان نسبت حجم منافذ و حفره‌های قابل دسترس به حجم کل اشغال شده توسط مقدار معینی از جامد تعریف می‌شود. منافذ بسته یا غیرقابل دسترس که از سطح خارجی جدا شده‌اند، از این تعریف حجم منفذ مستثنی هستند. منافذ (یا حفره‌ها) ممکن است شامل روزنه‌ها، کانال‌ها یا حفره‌هایی در یک بدنه جامد یا فضاهایی بین ذرات جامد در یک کمپکت یا آگلومره باشند. منافذ در انواع مختلفی از مواد جامد فراتر از کمپکت‌ها و آگلومره‌ها، مانند پودرها و قرص‌ها، وجود دارند و مشخصه‌یابی آنها معمولاً شامل تعیین حجم کل منافذ یا تخلخل، و همچنین توزیع اندازه منافذ است. منافذ به طور کلی بر اساس اندازه به گروه‌های زیر طبقه‌بندی می‌شوند:
+        </p>
+        <ul class="list-disc pr-8 mb-4">
+            <li>ریزحفره‌ها (Micropores) — کمتر از <span class="ltr-text">2 nm</span></li>
+            <li>میان‌حفره‌ها (Mesopores) — <span class="ltr-text">2</span> تا <span class="ltr-text">50 nm</span></li>
+            <li>کلان‌حفره‌ها (Macropores) — بزرگتر از <span class="ltr-text">50 nm</span></li>
+        </ul>
+        <p class="mb-4">
+            روش در تخلخل با جذب-دفع نیتروژن <span class="ltr-text">268</span> مکمل روش در فصل کلی <a href="267.html" class="text-blue-600 hover:underline" target="_blank">267</a> (تخلخل‌سنجی با نفوذ جیوه) است. تخلخل‌سنجی با جیوه ممکن است، در اصل (در تئوری)، برای قطرهای منافذ از <span class="ltr-text">3 nm</span> تا <span class="ltr-text">400 µm</span> استفاده شود اما بیشتر در محدوده <span class="ltr-text">100 nm</span> تا <span class="ltr-text">200 µm</span> کاربرد دارد. جذب-دفع نیتروژن می‌تواند برای مشخصه‌یابی منافذ کوچکتر از حدود <span class="ltr-text">300 nm</span> استفاده شود اما برای تحلیل میان‌حفره‌ها و محدوده کلان‌حفره‌های پایین از <span class="ltr-text">2</span> تا <span class="ltr-text">100 nm</span> مناسب‌تر است.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">دستگاه</h2>
+        <p class="mb-4">
+            اندازه‌گیری‌ها معمولاً با استفاده از روش حجمی ایستا انجام می‌شود، اگرچه روش‌های جریان دینامیک نیز ممکن است به کار گرفته شوند. کاربران تجهیزات تجاری موجود باید برای توضیحات مربوط به دستگاه خاص خود به ادبیات و دفترچه راهنمای سازنده مراجعه کنند. به عنوان مثال، یک دستگاه حجمی ایستا باید فراهم کند: تخلیه سیستم تا فشار کمتر از <span class="ltr-text">10 Pa</span>، تامین حجم‌های مشخص از نیتروژن و هلیوم با خلوص بالا، اندازه‌گیری دقیق فشار و دما، و وسیله‌ای برای خنک کردن نمونه تا دمای نیتروژن مایع.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">اصل اندازه‌گیری</h2>
+        <p class="mb-4">
+            جذب یک گاز بی‌اثر بر روی سطوح جامد در دماهای پایین یک پدیده شناخته شده است و اساس اندازه‌گیری مساحت سطح جامدات است (به فصل کلی <a href="846.html" class="text-blue-600 hover:underline" target="_blank">846</a>، سطح ویژه، مراجعه کنید). همانطور که گاز به یک سطح جذب می‌شود، می‌تواند در منافذ قابل دسترس متراکم شود. حجم کل منافذ و توزیع اندازه منافذ را می‌توان از ایزوترم جذب گاز، که اندازه‌گیری مقدار جذب شده به عنوان تابعی از فشار جزئی جاذب است، استخراج کرد. ایزوترم‌های جذب به شش دسته کلی تقسیم می‌شوند، بسته به انرژی‌های نسبی جذب و وجود منافذ. شکل <span class="ltr-text">1</span> شش دسته کلی از ایزوترم‌های جذب را نشان می‌دهد.
+        </p>
+
+        <p class="mb-4 text-center">
+            شکل <span class="ltr-text">1</span>. انواع ایزوترم. <span class="ltr-text">[Reproduced with permission and modification from: Sing KSW, Everett DH, Haul RAW, et al. Reporting physisorption for gas/solid systems with special reference to the determination of surface area and porosity (recommendations 1984). Pure Appl Chem. 1985;57(4):603–619, Figure 2.]</span>
+        </p>
+
+        <p class="mb-4">
+            ریزحفره‌ها (اندازه منافذ کمتر از <span class="ltr-text">2 nm</span>) اغلب منجر به ایزوترم‌های نوع <span class="ltr-text">I</span> می‌شوند. میان‌حفره‌ها و کلان‌حفره‌ها معمولاً ایزوترم‌های نوع <span class="ltr-text">IV</span> تولید می‌کنند، اما برای منافذ بزرگتر از حدود <span class="ltr-text">100 nm</span> مشاهده هیسترزیس ممکن است دشوار باشد، در نتیجه یک ایزوترم نوع <span class="ltr-text">II</span> ایجاد می‌شود. اگرچه برخی اطلاعات، مانند تخلخل کل، می‌تواند برای مواد ریزمتخلخل استخراج شود، تعیین توزیع اندازه منافذ در آن محدوده اندازه خارج از محدوده این فصل است.
+        </p>
+        <p class="mb-4">
+            جاذب ترجیحی نیتروژن است و ایزوترم در دمای نیتروژن مایع (<span class="ltr-text">77.4 K</span>) تعیین می‌شود. سایر جاذب‌ها ممکن است برای اهداف خاص استفاده شوند اما در این فصل مورد بحث قرار نمی‌گیرند.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">روش کار</h2>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">آماده‌سازی نمونه</h3>
+        <p class="mb-4">
+            قبل از تحلیل، تحلیلگران باید نمونه را گاززدایی کنند تا گازها و بخارهایی که ممکن است به صورت فیزیکی روی سطح جذب شده باشند، حذف شوند. شرایط گاززدایی باید نشان دهد که جذب-دفع قابل تکرار، وزن ثابت نمونه، و عدم تغییرات فیزیکی یا شیمیایی قابل تشخیص در نمونه را به همراه دارد. گاززدایی بسیاری از مواد اغلب با اعمال خلاء، با پاکسازی نمونه در جریان گاز خشک و غیرفعال، یا با اعمال یک روش چرخه جذب-دفع انجام می‌شود. در صورت لزوم، تحلیلگران می‌توانند دماهای بالا را برای افزایش سرعت خروج آلاینده‌ها از سطح اعمال کنند. تحلیلگران باید در هنگام گاززدایی نمونه‌ها با استفاده از دماهای بالا احتیاط کنند تا از تأثیر بر ماهیت سطح و یکپارچگی نمونه جلوگیری شود. اگر از حرارت استفاده می‌شود، دما و زمان توصیه شده برای گاززدایی باید حداقل میزان لازم برای دستیابی به اندازه‌گیری قابل تکرار ایزوترم جذب-دفع باشد.
+        </p>
+        <p class="mb-4">
+            تحلیلگران باید جرم نمونه را پس از گاززدایی تعیین کنند یا، به طور جایگزین، جرم را پس از اندازه‌گیری جذب-دفع تعیین کنند. مساحت سطح کل نمونه باید بزرگتر از <span class="ltr-text">1 m2</span> و ترجیحاً بزرگتر از <span class="ltr-text">5 m2</span> باشد.
+        </p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">اندازه‌گیری ایزوترم</h3>
+        <p class="mb-4">
+            جزئیات خاص فرآیند اندازه‌گیری به روش مورد استفاده بستگی دارد. تحلیلگران باید دستورالعمل‌های سازنده را برای دستگاه خاص مورد استفاده دنبال کنند. توضیحات زیر به طور کلی قابل اجرا است:
+        </p>
+        <ul class="list-disc pr-8 mb-4">
+            <li>
+                تحلیلگران باید فشار بخار اشباع جاذب، <span class="ltr-text">p0</span>، را تعیین کنند. ترجیحاً <span class="ltr-text">p0</span> باید به صورت تجربی در زمان اندازه‌گیری تعیین شود، اما تحلیلگران می‌توانند از یک مقدار محاسبه شده استفاده کنند.
+            </li>
+            <li>
+                تحلیلگران باید ایزوترم جذب نیتروژن را تعیین کنند و حجم جذب شده، <span class="ltr-text">Va</span>، را در کمترین فشار نسبی مطلوب (<span class="ltr-text">p/p0</span>، نسبت فشار جاذب اندازه‌گیری شده به فشار بخار اشباع آن) اندازه‌گیری کنند.
+            </li>
+            <li>
+                تحلیلگران اندازه‌گیری <span class="ltr-text">Va</span> را در مقادیر فشار نسبی بالاتر تا حداکثر فشار نسبی مطلوب (معمولاً <span class="ltr-text">0.99</span>) تکرار می‌کنند. سپس به طور متوالی فشار نسبی را کاهش می‌دهند تا مقادیر جذب شده در قسمت دفع ایزوترم را تعیین کنند. تحلیلگران باید حداقل <span class="ltr-text">20</span> نقطه را هم در بخش‌های جذب و هم در بخش‌های دفع اندازه‌گیری کنند که محدوده فشار نسبی (<span class="ltr-text">p/p0</span>) تقریباً <span class="ltr-text">0.05–0.99</span> را پوشش دهد. مقادیر <span class="ltr-text">p/p0</span> را می‌توان برای دستیابی به بهترین تفکیک توزیع اندازه منافذ توزیع کرد. اگر فقط بخش دفع برای محاسبه توزیع اندازه منافذ استفاده می‌شود، می‌توان از نقاط کمتری در بخش جذب استفاده کرد.
+            </li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">تحلیل داده‌ها</h2>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">بررسی ایزوترم</h3>
+        <p class="mb-4">
+            ایزوترم به عنوان نموداری از مقدار نیتروژن جذب شده (به عنوان حجم <span class="ltr-text">Va</span> یا مول <span class="ltr-text">na</span>) در مقابل <span class="ltr-text">p/p0</span> به تصویر کشیده می‌شود. داده‌های ایزوترم همچنین می‌توانند به صورت جدولی ارائه شوند. از نمودار، انواع ایزوترم و هیسترزیس را با مقایسه با مثال‌های شکل‌های <span class="ltr-text">1</span> و <span class="ltr-text">2</span> تعیین کنید. ایزوترم نوع <span class="ltr-text">I</span> برای مواد ریزمتخلخل رایج است. ایزوترم نوع <span class="ltr-text">IV</span> معمولاً توسط موادی که حاوی میان‌حفره‌ها یا کلان‌حفره‌های کوچک هستند، نشان داده می‌شود.
+        </p>
+
+        <p class="mb-4 text-center">
+            شکل <span class="ltr-text">2</span>. انواع حلقه هیسترزیس. <span class="ltr-text">[Reproduced with permission and modification from: Sing KSW, Everett DH, Haul RAW, et al. Reporting physisorption for gas/solid systems with special reference to the determination of surface area and porosity (recommendations 1984). Pure Appl Chem. 1985;57(4):603–619, Figure 3.]</span>
+        </p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">ساخت یک t-plot یا αS-plot</h3>
+        <p class="mb-4">
+            ساخت یک <span class="ltr-text">t-plot</span> یا <span class="ltr-text">αS-plot</span> برای مقایسه ایزوترم نمونه آزمایشی با ایزوترم مرجع نیز به نشان دادن حضور ریزحفره‌ها و میان‌حفره‌ها کمک می‌کند. ایزوترم مرجع ممکن است با استفاده از یک عبارت ریاضی محاسبه شود، اما توصیه می‌شود که هنگامی که جاذب دارای خواص شیمیایی مشابه با نمونه آزمایشی است، از یک ایزوترم مرجع تعیین شده به صورت تجربی استفاده شود.
+        </p>
+        <p class="mb-4">
+            روش <span class="ltr-text">t-plot</span> بر اساس منحنی <span class="ltr-text">t</span> است، که نموداری از مقدار نیتروژن جذب شده بر روی جامد غیرمتخلخل به عنوان تابعی از <span class="ltr-text">t</span>، ضخامت آماری لایه جذب شده، است. مقدار <span class="ltr-text">t</span> محاسبه می‌شود:
+        </p>
+        <div class="formula-display">
+            \[t = \delta_a \frac{n_a}{n_{nm}}\]
+        </div>
+        <p class="mb-4">
+            که در آن:
+        </p>
+        <ul class="list-disc pr-8 mb-4">
+            <li><span class="ltr-text">nm</span> = مقدار تک‌لایه (monolayer amount)</li>
+            <li><span class="ltr-text">δa</span> = ضخامت یک لایه مولکولی واحد، معمولاً برای نیتروژن <span class="ltr-text">0.354 nm</span> در نظر گرفته می‌شود.</li>
+        </ul>
+        <p class="mb-4">
+            در روش <span class="ltr-text">αS-plot</span>، مقدار نیتروژن جذب شده توسط جامد غیرمتخلخل مرجع با استفاده از مقدار جذب شده در یک فشار نسبی ثابت (<span class="ltr-text">n′a,x</span>) که اغلب <span class="ltr-text">0.4</span> در نظر گرفته می‌شود، نرمال‌سازی می‌شود. سپس جذب نرمال‌سازی شده <span class="ltr-text">αS</span> (برابر با <span class="ltr-text">na/n′a,x</span>) در مقابل <span class="ltr-text">p/p0</span> رسم می‌شود تا یک منحنی <span class="ltr-text">αS</span> به دست آید.
+        </p>
+        <p class="mb-4">
+            <span class="ltr-text">t-plot</span> یا <span class="ltr-text">αS-plot</span> با رسم مقدار نیتروژن جذب شده توسط نمونه آزمایشی در مقابل <span class="ltr-text">t</span> یا <span class="ltr-text">αS</span> برای ماده مرجع، به جای <span class="ltr-text">p/p0</span>، ساخته می‌شود. تبدیل <span class="ltr-text">p/p0</span> به <span class="ltr-text">t</span> یا <span class="ltr-text">αS</span> با مراجعه به منحنی <span class="ltr-text">t</span> یا منحنی <span class="ltr-text">αS</span> انجام می‌شود. شکل نمودار به ماهیت تخلخل موجود در نمونه آزمایشی بستگی دارد، به شرح زیر:
+        </p>
+        <ol class="list-decimal pr-8 mb-4">
+            <li>
+                اگر <span class="ltr-text">t-plot</span> یا <span class="ltr-text">αS-plot</span> خطی باشد و از مبدأ عبور کند، نمونه آزمایشی غیرمتخلخل یا کلان‌متخلخل است.
+            </li>
+            <li>
+                اگر نمونه آزمایشی حاوی میان‌حفره باشد، نمودار انحراف رو به بالا در فشار نسبی متناظر با شروع تراکم موئینگی در کوچکترین میان‌حفره‌ها را نشان می‌دهد.
+            </li>
+            <li>
+                اگر نمونه آزمایشی حاوی ریزحفره باشد، نمودار انحراف رو به پایین را نشان می‌دهد زیرا لایه‌های چندگانه نمی‌توانند به طور کامل در فضای محدود داخل ریزحفره‌ها توسعه یابند.
+            </li>
+        </ol>
+        <p class="mb-4">
+            برخی مواد حاوی ترکیبی از منافذ هستند که ممکن است منجر به نمودار پیچیده‌ای شود که تفسیر آن دشوار است. در چنین مواردی تحلیلگران باید در هنگام تحلیل ایزوترم احتیاط کنند.
+        </p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">محاسبه توزیع اندازه منفذ</h3>
+        <p class="mb-4">
+            این تحلیل فقط برای محاسبات توزیع اندازه میان‌حفره‌ها معتبر است.
+        </p>
+        <p class="mb-4">
+            محاسبه توزیع اندازه منفذ بر اساس معادله کلوین است:
+        </p>
+        <div class="formula-display">
+            \[\ln(p/p_0) = \frac{-2\sigma_l \nu_l \cos \theta}{r_K RT}\]
+        </div>
+        <p class="mb-4">
+            که در آن:
+        </p>
+        <ul class="list-disc pr-8 mb-4">
+            <li><span class="ltr-text">rK</span> = شعاع هسته منفذ (یا شعاع کلوین) (<span class="ltr-text">nm</span>)</li>
+            <li><span class="ltr-text">σl</span> = کشش سطحی مایع جاذب (نیتروژن) (<span class="ltr-text">N/m</span>)</li>
+            <li><span class="ltr-text">νl</span> = حجم مولی جاذب متراکم (نیتروژن) (<span class="ltr-text">cm3/mol</span>)</li>
+            <li><span class="ltr-text">R</span> = ثابت جهانی گاز، <span class="ltr-text">8.3144 (J · K−1 · mol−1)</span></li>
+            <li><span class="ltr-text">T</span> = دما (<span class="ltr-text">K</span>)</li>
+            <li><span class="ltr-text">θ</span> = زاویه تماس جاذب (<span class="ltr-text">0</span> برای یک سطح مرطوب)</li>
+        </ul>
+        <p class="mb-4">
+            برای نیتروژن، معادله <span class="ltr-text">2</span> به موارد زیر کاهش می‌یابد:
+        </p>
+        <div class="formula-display">
+            \[r_K = \frac{-0.95}{\log(p/p_0)}\]
+        </div>
+        <p class="mb-4">
+            شعاع واقعی منفذ، <span class="ltr-text">rp</span>، از شعاع کلوین با تصحیح برای ضخامت <span class="ltr-text">t</span> جاذب روی دیواره‌های منفذ محاسبه می‌شود. برای منافذ استوانه‌ای، <span class="ltr-text">rp = rk + t</span>، و قطر منفذ، <span class="ltr-text">dp</span>، توسط <span class="ltr-text">dp = 2(rk + t)</span> داده می‌شود. به دلیل هندسه متفاوت منافذ شکاف‌شکل با دیواره‌های موازی، عرض شکاف توسط <span class="ltr-text">rk + 2t</span> داده می‌شود.
+        </p>
+        <p class="mb-4">
+            تحلیلگران می‌توانند توزیع اندازه حجم منفذ را با استفاده از روش <span class="ltr-text">Barrett, Joyner, and Halenda</span> محاسبه کنند. این مدل فرض می‌کند که منافذ سخت و دارای شکل منظم (مثلاً استوانه‌ای یا شکاف‌شکل) هستند، ریزحفره‌ها وجود ندارند، و توزیع اندازه منفذ به طور مداوم فراتر از بزرگترین منافذ قابل اندازه‌گیری با این روش گسترش نمی‌یابد، که به این معنی است که تمام منافذ ارزیابی شده در بالاترین فشار نسبی پر می‌شوند.
+        </p>
+        <p class="mb-4">
+            محاسبات تخلخل و توزیع اندازه منفذ که از معادله کلوین استفاده می‌کنند، باید با استفاده از ایزوترم دفع انجام شوند. معادله کلوین برای سیستم‌های ماکروسکوپی استخراج شده و در مقیاس مولکولی دقیقاً معتبر نیست. بنابراین، معادله کلوین برای توصیف دقیق پدیده‌های تجربی به یک منیسک دست‌نخورده متکی است. برای سیستم‌های مورد بحث در این فصل، این امر فقط برای ایزوترم دفع محقق می‌شود. با این حال، برای دفع، کاربرد معادله کلوین در اندازه‌های منفذ کوچکتر توسط کشش سطحی جاذب محدود می‌شود. این محدودیت با نقطه بسته شدن حلقه هیسترزیس در ایزوترم نشان داده می‌شود. برای نیتروژن، این نقطه در فشار نسبی حدود <span class="ltr-text">0.45</span> رخ می‌دهد که مربوط به شعاع منفذ استوانه‌ای محدود حدود <span class="ltr-text">2 nm</span> است. بنابراین معادله کلوین برای ریزحفره‌ها قابل اعمال نیست.
+        </p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">محاسبه حجم ریزحفره</h3>
+        <p class="mb-4">
+            اگر <span class="ltr-text">t-plot</span> یا <span class="ltr-text">αS-plot</span> نشان‌دهنده وجود ریزحفره‌ها باشد، حجم ریزحفره را می‌توان از نقطه تقاطع قسمت خطی برون‌یابی شده منحنی به دست آورد.
+        </p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">نتایج گزارش شده</h3>
+        <p class="mb-4">
+            نتایج معمولاً گزارش شده ممکن است شامل حجم کل منفذ یا تخلخل، حجم ریزحفره، قطر منفذ میانه یا میانگین، توزیع اندازه منفذ، و مساحت سطح منفذ باشد.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">کالیبراسیون و تأیید عملکرد سیستم</h2>
+        <p class="mb-4">
+            تحلیلگران باید کالیبراسیون اجزای جداگانه را مطابق با توصیه‌های سازنده انجام دهند. کالیبراسیون مبدل‌های فشار و سنسورهای دما با مراجعه به دستگاه‌های اندازه‌گیری استاندارد فشار و دما که کالیبراسیون آنها قابل ردیابی به استانداردهای ملی است، انجام می‌شود. کالیبراسیون حجم منیفولد با اندازه‌گیری‌های مناسب فشار و دما با استفاده از فضاهای حجمی با دمای ثابت یا جامداتی با حجم مشخص و قابل ردیابی انجام می‌شود.
+        </p>
+        <p class="mb-4">
+            یک ماده مرجع گواهی شده یا یک ماده مرجع تعریف شده محلی که قابل ردیابی به یک ماده مرجع گواهی شده است، باید به طور منظم آزمایش شود تا کالیبراسیون و عملکرد دستگاه نظارت شود.
+        </p>
+    </div>
+</body>
+</html>

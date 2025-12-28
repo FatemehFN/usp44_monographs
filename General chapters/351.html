@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>351. تعیین مقدار استروئیدها</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <div class="card">
+            <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">351. تعیین مقدار استروئیدها</h1>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">خلاصه</h2>
+            <p class="mb-4">روش زیر برای تعیین آن دسته از استروئیدهای دارویی که دارای گروه‌های عاملی کاهنده مانند آلفا-کتول‌ها هستند، کاربرد دارد.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آماده‌سازی استاندارد</h3>
+            <p class="mb-4">مقدار مناسبی از استاندارد مرجع USP مشخص شده در مونوگراف انفرادی را که قبلاً طبق شرایط مشخص شده در مونوگراف انفرادی خشک شده و با دقت وزن شده است، در الکل حل کرده و به طور کمی و مرحله‌ای با الکل رقیق کنید تا محلولی با غلظت تقریبی <span class="ltr-text">10 µg per mL</span> به دست آید. <span class="ltr-text">20 mL</span> از این محلول را در یک فلاسک مخروطی <span class="ltr-text">50-mL</span> با درپوش شیشه‌ای بریزید.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آماده‌سازی تعیین مقدار</h3>
+            <p class="mb-4">طبق دستورالعمل مونوگراف انفرادی آماده کنید.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">روش</h3>
+            <p class="mb-4">به هر یک از دو فلاسک حاوی آماده‌سازی تعیین مقدار و آماده‌سازی استاندارد، و به یک فلاسک مشابه حاوی <span class="ltr-text">20.0 mL</span> الکل که به عنوان شاهد استفاده می‌شود، <span class="ltr-text">2.0 mL</span> از محلولی که با حل کردن <span class="ltr-text">50 mg</span> تتراترازول آبی در <span class="ltr-text">10 mL</span> متانول تهیه شده است، اضافه کرده و مخلوط کنید. سپس به هر فلاسک <span class="ltr-text">2.0 mL</span> از مخلوط الکل و تترا متیل آمونیوم هیدروکسید TS (<span class="ltr-text">9:1</span>) اضافه کرده، مخلوط کنید و به مدت <span class="ltr-text">90</span> دقیقه در تاریکی قرار دهید. بلافاصله، جذب محلول‌ها از آماده‌سازی تعیین مقدار و آماده‌سازی استاندارد را در حدود <span class="ltr-text">525 nm</span> با یک اسپکتروفتومتر مناسب، در مقابل شاهد، به طور همزمان تعیین کنید. نتیجه را با استفاده از فرمول داده شده در مونوگراف انفرادی محاسبه کنید، که در آن <span class="ltr-text">C</span> غلظت، در <span class="ltr-text">µg per mL</span>، استاندارد مرجع در آماده‌سازی استاندارد است؛ و <span class="ltr-text">AU</span> و <span class="ltr-text">AS</span> جذب محلول‌های آماده‌سازی تعیین مقدار و آماده‌سازی استاندارد، به ترتیب، هستند.</p>
+
+            <div class="text-center text-sm text-gray-500 mt-8">
+                <p>Printed on: Tue Aug 10 2021, 06:08:18 PM (EST)</p>
+                <p>Official Status: Currently Official on 10-Aug-2021</p>
+                <p>DocId: 1_GUID-BA934ED3-E5F4-4583-8083-97645A366FDB_1_en-US</p>
+                <p>Printed by: Le Tran</p>
+                <p>Official Date: Official Prior to 2013</p>
+                <p>Document Type: GENERAL CHAPTER</p>
+                <p>&copy;2021 USPC</p>
+                <p><a href="https://online.uspnf.com/uspnf/document/1_GUID-BA934ED3-E5F4-4583-8083-97645A366FDB_1_en-US" class="text-blue-600 hover:underline" target="_blank">https://online.uspnf.com/uspnf/document/1_GUID-BA934ED3-E5F4-4583-8083-97645A366FDB_1_en-US</a></p>
+                <p>1/1</p>
+                <p>Official</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

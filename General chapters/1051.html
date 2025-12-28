@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>۱٠۵۱. تمیز کردن ظروف شیشه‌ای</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vazirmatn Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax CDN -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body class="p-4">
+    <div class="container mx-auto p-4 max-w-4xl card">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">۱٠۵۱. تمیز کردن ظروف شیشه‌ای</h1>
+
+        <!-- INTRODUCTION -->
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+        <p class="mb-4">
+            موفقیت در انجام آزمایش‌ها و تست‌های فارماکوپه‌ای به تمیزی دستگاه‌های شیشه‌ای مورد استفاده بستگی دارد. به همین دلیل، در صورت لزوم باید از مواد شوینده تجاری یا معرف‌های معدنی برای تمیز کردن استفاده شود.
+        </p>
+        <p class="mb-4">
+            در تمام موارد، مهم است که تأیید شود روش تمیز کردن برای آزمایش یا تست خاص مورد استفاده مناسب است. این کار را می‌توان به روش‌های مختلفی انجام داد، از جمله استفاده از کنترل‌های تجربی یا تأیید تمیزکاری با استفاده از تست باقیمانده/پسماند برای اطمینان از حذف هرگونه آلاینده احتمالی. پروتکل تمیز کردن باید شامل بیانیه‌ای باشد که نحوه ارزیابی موفقیت روش تمیز کردن را توضیح دهد.
+        </p>
+        <p class="mb-4">
+            نمونه‌هایی از آزمایش‌های خاص که تمیزی ظروف شیشه‌ای برای موفقیت حیاتی است، شامل موارد زیر است اما محدود به آن‌ها نیست: تست‌های پیروژن و کربن آلی کل و سنجش فعالیت هپارین سدیم و ویتامین <span class="ltr-text">B12</span>. برای اندازه‌گیری‌های نوری، دقت ویژه‌ای برای تمیز کردن ظروف لازم است؛ با این حال، باید از استفاده از اسید کرومیک یا محلول‌های بسیار قلیایی خودداری شود.
+        </p>
+        <p class="mb-4">
+            منابع اضافی در مورد تمیز کردن دستگاه‌های شیشه‌ای در پیوست ذکر شده است. <span class="ltr-text">USP</span> این ارجاعات را تأیید نمی‌کند و آن‌ها لیست جامعی را ارائه نمی‌دهند. اطلاعات بیشتر در مورد اثربخشی روش‌های تمیز کردن دستگاه‌های شیشه‌ای ذکر شده در این فصل را می‌توان در اکثر کتاب‌های درسی تحلیلی شیمیایی کمی نیز یافت.
+        </p>
+
+        <!-- CLEANING VALIDATION BEST PRACTICES -->
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">بهترین شیوه‌ها برای اعتبارسنجی تمیزکاری</h2>
+        <p class="mb-4">
+            اعتبارسنجی یک فرآیند تمیزکاری ممکن است شامل ارزیابی کیفی و کمی عملکرد تمیزکاری باشد و پس از آن ارزیابی‌های خاصی از تمیزی مناسب برای کاربرد مورد نظر انجام شود. یک روش تمیزکاری ایجاد شده ممکن است نیاز به اعتبارسنجی مجدد داشته باشد، زمانی که تغییرات قابل توجهی در روش ایجاد می‌شود یا زمانی که کاربرد مورد نظر ظروف شیشه‌ای تغییر می‌کند. طرح کلی زیر این استراتژی را نشان می‌دهد:
+        </p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">روش کلی اعتبارسنجی تمیزکاری برای استفاده عمومی آزمایشگاهی</h3>
+        <ol class="list-decimal list-inside mb-4 pr-6">
+            <li class="mb-2">ارزیابی کیفی فرآیند تمیزکاری
+                <ol class="list-alpha list-inside mb-2 pr-6">
+                    <li class="mb-1">یک بار آلوده در بدترین حالت را مطابق با کاربرد مورد نظر انتخاب کنید یا با اعمال فرمولاسیون دارای نشانگر فلورسنت (به جدول <span class="ltr-text">1</span> مراجعه کنید) یک بار آماده کنید.</li>
+                    <li class="mb-1">ظروف شیشه‌ای را با لامپ <span class="ltr-text">UV</span> یا نور سیاه بررسی کنید تا از پوشش مناسب با نشانگر فلورسنت اطمینان حاصل کنید.</li>
+                    <li class="mb-1">تمیز کردن را با فرآیند مورد اعتبارسنجی انجام دهید.</li>
+                    <li class="mb-1">ظروف شیشه‌ای را با لامپ <span class="ltr-text">UV</span> یا نور سیاه بررسی کنید تا تمیزی را به صورت کیفی ارزیابی کنید.</li>
+                </ol>
+            </li>
+            <li class="mb-2">ارزیابی کمی فرآیند تمیزکاری
+                <ol class="list-alpha list-inside mb-2 pr-6">
+                    <li class="mb-1">آبکشی ظروف شیشه‌ای را با آب خالص انجام دهید.</li>
+                    <li class="mb-1">آب آبکشی را جمع آوری کنید.</li>
+                    <li class="mb-1">طبق <a href="643.html" class="text-blue-600 hover:underline" target="_blank">۶۴۳</a> کربن آلی کل و <a href="645.html" class="text-blue-600 hover:underline" target="_blank">۶۴۵</a> رسانایی آب را آزمایش کنید.</li>
+                </ol>
+            </li>
+            <li class="mb-2">ارزیابی‌های اعتبارسنجی اضافی (شیمیایی) را در صورت لزوم برای کاربرد مورد نظر انجام دهید (به جدول <span class="ltr-text">2</span> مراجعه کنید).</li>
+        </ol>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">ارزیابی کیفی فرآیند تمیزکاری</h3>
+        <p class="mb-4">
+            یک رنگ/نشانگر فلورسنت برای تعیین کیفی اینکه آیا یک فرآیند یا روش تمیزکاری قادر به اعمال محلول تمیزکاری در محل مورد نیاز و حذف کامل محلول است، مفید است. دو نشانگر فلورسنت معمولاً برای این نوع ارزیابی کیفی یک فرآیند تمیزکاری استفاده می‌شوند: ریبوفلاوین و فلورسئین. محلول نشانگر فلورسنت در جدول <span class="ltr-text">1</span> ممکن است با مقدار کمی یا بدون عامل افزایش‌دهنده ویسکوزیته (مانند <span class="ltr-text">hydroxyethyl cellulose [HEC]</span>) تهیه شود، اگر محلول به طور کامل تجهیزات مورد تمیزکاری را پر کند. یک عامل افزایش‌دهنده ویسکوزیته (مانند <span class="ltr-text">5 g/L</span> از <span class="ltr-text">HEC</span>) توصیه می‌شود اگر محلول به داخل یا روی تجهیزات اسپری شود. غلظت نشانگر فلورسنت ممکن است در صورت نیاز به حساسیت بیشتر افزایش یابد. وجود یا عدم وجود نشانگر فلورسنت را می‌توان با استفاده از یک نور سیاه یا لامپ <span class="ltr-text">UV</span> با تحریک (خروجی) حدود <span class="ltr-text">365 nm</span> (محدوده <span class="ltr-text">UVA</span>) ارزیابی کرد.
+        </p>
+
+        <div class="overflow-x-auto mb-4">
+            <table class="min-w-full">
+                <thead>
+                    <tr>
+                        <th>ماده تشکیل‌دهنده</th>
+                        <th><span class="ltr-text">CAS</span></th>
+                        <th>کارکرد</th>
+                        <th>غلظت (<span class="ltr-text">g/L</span>)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ریبوفلاوین یا فلورسئین دی‌سدیم</td>
+                        <td><span class="ltr-text">[83-88-5]</span><br><span class="ltr-text">[518-47-8]</span></td>
+                        <td>نشانگر فلورسنت</td>
+                        <td><span class="ltr-text">0.2</span></td>
+                    </tr>
+                    <tr>
+                        <td>هیدروکسی‌اتیل سلولزا</td>
+                        <td><span class="ltr-text">[9004-62-0]</span></td>
+                        <td>عامل افزایش‌دهنده ویسکوزیته</td>
+                        <td><span class="ltr-text">0–5</span></td>
+                    </tr>
+                    <tr>
+                        <td>آب خالص</td>
+                        <td><span class="ltr-text">[7732-18-5]</span></td>
+                        <td>حلال</td>
+                        <td><span class="ltr-text">Quantum satis</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="text-sm mb-4">
+            <span class="ltr-text">a</span> ناترسول <span class="ltr-text">250 HHR</span> یا معادل آن.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">ارزیابی کمی فرآیند تمیزکاری</h2>
+        <p class="mb-4">
+            برای ارزیابی کمی تمیزکاری، رویکرد توصیه شده این است که فرآیند تمیزکاری را با آبکشی ظروف شیشه‌ای (یا سایر تجهیزات آزمایشگاهی) با آبی با کیفیت مناسب (مانند آب خالص) و جمع‌آوری آب آبکشی دنبال کنید. خواص این آب آبکشی برای ارزیابی اینکه آیا آلاینده‌ها در سطوح کافی برای تأثیر قابل توجه بر خواص آب آبکشی و استفاده تحلیلی مربوط به ظروف شیشه‌ای وجود دارند، بررسی می‌شود. مقدار آب آبکشی مورد استفاده باید متناسب با مقادیر توصیف شده در روش‌های <a href="643.html" class="text-blue-600 hover:underline" target="_blank">۶۴۳</a> و <a href="645.html" class="text-blue-600 hover:underline" target="_blank">۶۴۵</a> باشد، که برای ارزیابی تمیزی ظروف شیشه‌ای آبکشی شده مناسب تشخیص داده شده‌اند. نتایج این آزمایش‌های فصل عمومی باید نشان دهد که خواص آب آبکشی پس از آبکشی ظروف شیشه‌ای به طور قابل توجهی تغییر نمی‌کند یا با سطح تمیزی درخواستی برای ظروف شیشه‌ای مطابقت دارد. تعیین سطح تمیزی ضروری باید مبتنی بر ریسک باشد و کاربرد مورد نظر و آزمایش‌های تحلیلی مربوطه را در نظر بگیرد.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">تحلیل‌های اضافی اعتبارسنجی تمیزکاری</h2>
+        <p class="mb-4">
+            بسته به کاربرد مورد نظر ظروف شیشه‌ای (یا سایر تجهیزات آزمایشگاهی)، ممکن است توصیه شود آزمایش‌های اضافی برای تأیید تمیزی مناسب پس از فرآیند تمیزکاری پیشنهادی انجام شود. به عنوان مثال، ظروف شیشه‌ای که برای نگهداری نمونه‌ها برای تحلیل کروماتوگرافی گازی (<span class="ltr-text">GC</span>) استفاده می‌شوند، باید عاری از مواد فرار باقیمانده‌ای باشند که ممکن است با روش <span class="ltr-text">GC</span> تداخل ایجاد کنند. این را می‌توان با مهر و موم کردن بالای ظروف شیشه‌ای و انجام یک تحلیل <span class="ltr-text">headspace GC</span> تأیید کرد تا اطمینان حاصل شود که هیچ ماده فرار باقیمانده‌ای وجود ندارد که با تحلیل‌های برنامه‌ریزی شده تداخل ایجاد کند. برای آزمایش‌های اعتبارسنجی اضافی که برای کاربردهای مورد نظر توصیه می‌شوند، به جدول <span class="ltr-text">2</span> مراجعه کنید.
+        </p>
+
+        <div class="overflow-x-auto mb-4">
+            <table class="min-w-full">
+                <thead>
+                    <tr>
+                        <th>کاربرد مورد نظر</th>
+                        <th>آزمایش اعتبارسنجی تمیزکاری اضافی توصیه شده</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>استفاده عمومی آزمایشگاهی</td>
+                        <td>ارزیابی پیش‌فرض طبق <span class="ltr-text">1</span> و <span class="ltr-text">2</span> طرح کلی در بهترین شیوه‌های اعتبارسنجی تمیزکاری</td>
+                    </tr>
+                    <tr>
+                        <td>نمونه‌های <span class="ltr-text">GC</span></td>
+                        <td>تحلیل <span class="ltr-text">headspace GC</span> ترکیبات فرار باقیمانده</td>
+                    </tr>
+                    <tr>
+                        <td>نمونه‌های کروماتوگرافی مایع</td>
+                        <td>آبکشی با حلال آلی (مانند فاز متحرک) و ارزیابی برای پیک‌های ناشناخته با زمان‌های بازداری مشابه.</td>
+                    </tr>
+                    <tr>
+                        <td>نمونه‌های ناخالصی‌های عنصری</td>
+                        <td>فلزات کلاس <span class="ltr-text">1</span> را طبق ناخالصی‌های عنصری — روش‌ها <a href="233.html" class="text-blue-600 hover:underline" target="_blank">۲۳۳</a> ارزیابی کنید و سطوح را کمتر از افت وزنی در خشک کردن <a href="731.html" class="text-blue-600 hover:underline" target="_blank">۷۳۱</a> تأیید کنید.</td>
+                    </tr>
+                    <tr>
+                        <td>نمونه‌های تحلیل ذرات</td>
+                        <td>آبکشی با آب بدون ذره و ارزیابی برای ذرات خارجی در محدوده اندازه مورد علاقه.</td>
+                    </tr>
+                    <tr>
+                        <td>تحلیل کشش سطحی/انرژی سطحی</td>
+                        <td>کشش سطحی آب آبکشی را ارزیابی کنید.</td>
+                    </tr>
+                    <tr>
+                        <td>اتصال/فعالیت پروتئین</td>
+                        <td>آب آبکشی را طبق روش‌های تعیین پروتئین <a href="507.html" class="text-blue-600 hover:underline" target="_blank">۵٠۷</a> ارزیابی کنید.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">اعتبارسنجی تمیزکاری خودکار ظروف شیشه‌ای</h2>
+        <p class="mb-4">
+            در آزمایشگاه‌هایی که از ماشین لباسشویی خودکار برای تمیز کردن ظروف شیشه‌ای استفاده می‌کنند، انجام یک روش اعتبارسنجی برای نشان دادن اثربخشی چرخه‌های تمیزکاری با انجام یک روش اعتبارسنجی مناسب مهم است. یک راه برای انجام این کار این است که ابتدا یک مولکول مناسب انتخاب شود که احتمالاً تمیز کردن آن از ظروف شیشه‌ای آلوده دشوار باشد. یک مولکول مناسب بیشتر مربوط به خطرات مرتبط با هر آزمایشگاه است. توصیه می‌شود که آزمایشگاه‌ها مولکولی را انتخاب کنند که بدترین سناریوی مواد را که ظروف شیشه‌ای ممکن است در معرض آن‌ها قرار گیرند (مانند مولکول‌های کم‌محلول در حلال‌های رایج) نشان دهد. در مرحله بعد، ظروف شیشه‌ای از مجموعه‌ای از اشکال و اندازه‌های مختلف (مانند بشر، ارلن مایر، بالن حجمی) با مقادیر مشخصی از این آنالیت (<span class="ltr-text">analyte</span>) آغشته می‌شوند (یعنی آنالیت در یک حلال مناسب حل شده و به طور یکنواخت اعمال می‌شود) و سپس اجازه داده می‌شود تا خشک شوند. سپس ظروف شیشه‌ای آغشته شده در موقعیت‌های انتخاب شده در ماشین لباسشویی ظروف شیشه‌ای توزیع می‌شوند، که سپس با ظروف شیشه‌ای بدون آغشته‌سازی به طور کامل پر می‌شود تا همه مکان‌ها در ماشین لباسشویی پر شوند. سپس چرخه شستشو اجرا می‌شود و تمام اقلام آغشته شده به طور جداگانه با یک حلال مناسب استخراج می‌شوند. در نهایت، آماده‌سازی‌های نمونه به صورت کمی برای تعیین آلاینده‌های باقیمانده در هر قلم، که کاربرد روش کمی بر اساس مورد آزمایش خاک انتخاب شده است، تحلیل می‌شوند.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناکامی‌های اعتبارسنجی تمیزکاری</h2>
+        <p class="mb-4">
+            اگر روش‌های تمیزکاری برای تمیز کردن ظروف شیشه‌ای برای برآورده کردن معیارهای اعتبارسنجی مورد نظر مناسب نباشند، لازم خواهد بود که روش‌های تمیزکاری جایگزین، روش‌های آبکشی اضافی، یا ارزیابی استفاده از تجهیزات یکبار مصرف در نظر گرفته شود.
+        </p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">روش‌های تمیزکاری جایگزین</h3>
+        <p class="mb-4">
+            محلول‌های تمیزکاری معمولی حاوی سورفکتانت‌ها در یک محلول بافر اسیدی یا قلیایی هستند. انتخاب یک پاک‌کننده اسیدی یا قلیایی معمولاً بر اساس این است که آیا ترکیب مورد حذف حلالیت بهتری در <span class="ltr-text">pH</span> پایین یا بالا دارد یا به راحتی در <span class="ltr-text">pH</span> پایین یا بالا تجزیه می‌شود. با این حال، اگر ظروف شیشه‌ای به طور غیرعادی کدر یا کثیف شوند، یا حاوی مواد آلی لخته شده باشند، ممکن است با محلول تمیزکاری اسید کرومیک تمیز شوند. دی‌کرومات باید با دقت بسیار بالا مورد استفاده قرار گیرد زیرا یک ماده خورنده و سرطان‌زا قوی است.
+        </p>
+        <p class="mb-4">
+            هنگامی که از این محلول‌های تمیزکاری تهاجمی‌تر استفاده می‌شود، ممکن است شیء با محلول تمیزکاری آبکشی شود یا پر شود و اجازه داده شود تا بماند. مدت زمانی که اجازه داده می‌شود بماند به میزان آلودگی روی ظروف شیشه‌ای بستگی دارد. ظروف شیشه‌ای نسبتاً تمیز ممکن است فقط به چند دقیقه قرار گرفتن در معرض نیاز داشته باشند؛ با این حال، اگر بقایایی مانند لخته‌های خون وجود داشته باشد، ممکن است لازم باشد ظروف شیشه‌ای یک شب بمانند. به دلیل عمل خورنده شدید محلول اسید کرومیک، توصیه می‌شود که بطری اصلی و ظروف شیشه‌ای تحت درمان را در سینی‌های شیشه‌ای تخت ساخته شده از سرب یا پوشیده شده با سرب یا در سینی‌های پلیمری پلاستیکی سازگار با غلظت اسید کرومیک مورد استفاده قرار دهید. این محلول‌های تمیزکاری تهاجمی‌تر باید به درستی دفع شوند.
+        </p>
+        <p class="mb-4">
+            انواع خاصی از رسوبات ممکن است نیاز به حذف با اسید نیتریک، <span class="ltr-text">aqua regia</span> یا اسید سولفوریک دودی داشته باشند. این‌ها مواد بسیار خورنده هستند و فقط در صورت لزوم باید استفاده شوند. گریس بهتر است با جوشاندن در یک محلول ضعیف کربنات سدیم حذف شود. استون یا هر حلال لیپوفیلیک دیگری ممکن است استفاده شود. قلیایی‌های قوی نباید استفاده شوند. گریس سیلیکون به راحتی با خیساندن شیر توپی یا بشکه برای <span class="ltr-text">2 h</span> در دکاهیدرونافتالین گرم حذف می‌شود.
+        </p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">روش‌های آبکشی جایگزین</h3>
+        <p class="mb-4">
+            به طور کلی، بهترین روش این است که ظروف شیشه‌ای را با آب خالص یا مقطر آبکشی کرده و اجازه دهید با یا بدون دمیدن هوا در آن برای خشک شدن، خشک شود. در برخی کاربردها، مهم است که از هرگونه باقیمانده غیرفرار روی ظروف شیشه‌ای پس از تمیزکاری جلوگیری شود (مانند اندازه‌گیری‌های انرژی سطحی). در این موارد، توصیه می‌شود از روشی برای آبکشی متناوب با آب مقطر و یک حلال آلی فرار مناسب (مانند استون) استفاده شود. بهتر است این روش آبکشی نهایی را درست قبل از استفاده از ظروف شیشه‌ای تمیز انجام دهید. به عنوان مثال، یک روش آبکشی توصیه شده به شرح زیر است: آب، استون، آب، استون، آب، استون. این سه بار آبکشی با هر حلال را فراهم می‌کند و با آخرین آبکشی که حلال آلی فرار است، پایان می‌یابد، که نسبتاً سریع تبخیر می‌شود و ظروف شیشه‌ای را تمیز، خشک و آماده برای استفاده فوری باقی می‌گذارد.
+        </p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">استریل‌سازی تجهیزات آزمایشگاهی و ظروف شیشه‌ای</h3>
+        <p class="mb-4">
+            هنگامی که تجهیزات آزمایشگاهی استریل یا عاری از پیروژن مورد نیاز است، بهترین روش این است که ابتدا ظروف شیشه‌ای را به طور کامل تمیز و آبکشی کرده و سپس استریل کنید. استریل‌سازی با حرارت خشک (مثلاً <span class="ltr-text">>160°</span> برای <span class="ltr-text">2 h</span>) به طور کلی توصیه می‌شود زیرا هم استریل‌سازی و هم حذف پیروژن را فراهم می‌کند. اتوکلاو کردن (مثلاً <span class="ltr-text">>121°</span> برای <span class="ltr-text">30 min</span>) توصیه می‌شود اگر تجهیزات آزمایشگاهی با دمای استریل‌سازی با حرارت خشک ناسازگار باشد. از استریل‌کننده‌های شیمیایی (مانند اسید پراستیک و محلول‌های پراکسید هیدروژن) باید تا حد امکان اجتناب شود، زیرا آن‌ها نیاز به روش‌های آبکشی گسترده‌ای برای جلوگیری از اکسیدکننده‌های باقیمانده دارند که ممکن است منجر به واکنش‌های شیمیایی نامطلوب در استفاده‌های بعدی شوند.
+        </p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">استفاده از تجهیزات آزمایشگاهی یکبار مصرف</h3>
+        <p class="mb-4">
+            توصیه می‌شود که هزینه و تأثیرات زیست محیطی برای تصمیم‌گیری در مورد تمیز کردن و استفاده مجدد از ظروف شیشه‌ای آزمایشگاهی یا استفاده از ظروف پلاستیکی یکبار مصرف آزمایشگاهی ارزیابی شود. تأثیر زیست محیطی تمیز کردن و استفاده مجدد از ظروف شیشه‌ای آزمایشگاهی شامل هزینه تولید مواد شیمیایی تمیزکننده و همچنین هزینه دفع مناسب هرگونه حلال‌ها و مواد شیمیایی خطرناک استفاده شده یا تولید شده در روش تمیزکاری است. تأثیر زیست محیطی ظروف پلاستیکی یکبار مصرف شامل تأثیر زیست محیطی تولید و دفع ظروف پلاستیکی است؛ با این حال، تولید و دفع هرگونه مواد شیمیایی خطرناک مورد نیاز برای فرآیند تمیزکاری را کاهش می‌دهد. در برخی موارد، استفاده از تجهیزات یکبار مصرف ممکن است منجر به تأثیر زیست محیطی کمتری شود.
+        </p>
+
+        <!-- APPENDIX -->
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">پیوست</h2>
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">منابع اطلاعاتی اضافی</h3>
+        <p class="mb-4">
+            اطلاعات و راهنمایی‌های اضافی را می‌توان در مراجع زیر یا در بسیاری از کتاب‌های درسی تحلیلی شیمیایی کمی یافت:
+        </p>
+        <ul class="list-disc list-inside mb-4 pr-6">
+            <li class="mb-2"><span class="ltr-text">Parenteral Drug Association. Technical Report No. 29. Draft—Points to Consider for Cleaning Validation. Bethesda, MD: Parenteral Drug Association; 1998.</span></li>
+            <li class="mb-2"><span class="ltr-text">Anderson NR. Container cleaning and sterilization. In: Olson WP, Groves MJ, editors. Aseptic Pharmaceutical Manufacturing. 1st ed. Buffalo Grove, IL: Interpharm Press; 1987:15–22.</span></li>
+            <li class="mb-2"><span class="ltr-text">Green C. Cleaning validation—application in the laboratory; Montalvo M. The cleaning validation policy and the cleaning validation plan; Verghese G, Kaiser N. Cleaning agents and cleaning chemistry; Verghese G, Lopolito P. Cleaning engineering and equipment design. In: Pluta PL, editor. Cleaning and Cleaning Validation. Volume 1. Bethesda, MD: Parenteral Drug Association; 2009.</span></li>
+            <li class="mb-2"><span class="ltr-text">Gordon AJ, Ford RA. Standard glassware cleaning solutions. In: Gordon AJ, Ford RA, eds. The Chemist’s Companion: A Handbook of Practical Data, Techniques, and References. 1st ed. Hoboken, NJ: Wiley and Sons; 1973.</span></li>
+            <li class="mb-2"><span class="ltr-text">Food and Drug Administration. Validation of Cleaning Processes (7/93). Guide to inspections validation of cleaning processes. Silver Spring, MD: Food and Drug Administration; 2010.</span></li>
+            <li class="mb-2"><span class="ltr-text">Hanlon D, Ramin J. Safety practices with laboratory glassware. Chem Health Saf. 1999; 6(6):17–20.</span></li>
+            <li class="mb-2"><span class="ltr-text">Li X, Ahmad IAH, Tam J, Wang Y, Dao G, Blasko A. Cleaning verification: a five parameter study of a Total Organic Carbon method development and validation for the cleaning assessment of residual detergents in manufacturing equipment. J Pharm Biomed Anal. February 2018;149:33–39.</span></li>
+            <li class="mb-2"><span class="ltr-text">Mclaughlin MC, Zisman AS. The Aqueous Cleaning Handbook: A Guide to Critical-cleaning Procedures, Techniques, and Validation. 4th ed. White Plains, NY: AI Technical Communications, LLC; 2005.</span></li>
+            <li class="mb-2"><span class="ltr-text">Nozal MJ, Bernal JL, Toribio L, Jiménez JJ, Martín MT. Validation of the removal of acetylsalicylic acid: recovery and determination of residues on various surfaces by high performance liquid chromatographic. J Chromatogr A. 2000; 870(1–2):69–75.</span></li>
+            <li class="mb-2"><span class="ltr-text">Plasz A. Cleaning validation using HPLC for analysis. In: Ahuja S, Dong MW, editors. Handbook of Pharmaceutical Analysis by HPLC. Volume 6. 1st ed. New York, USA: Academic Press; 2005:401–412.</span></li>
+            <li class="mb-2"><span class="ltr-text">Sandle T, Satyada R. Determination of the cleaning efficiency for glassware in the pharmaceutical microbiology laboratory. European Journal of Parenteral and Pharmaceutical Sciences. 2016; 21(1):16–22.</span></li>
+            <li class="mb-2"><span class="ltr-text">Walsh A. Cleaning validation for the 21st century: acceptance limits for active pharmaceutical ingredients (APIs): part I. Pharmaceutical Engineering. July/August 2011; 31(4):74–83.</span></li>
+        </ul>
+
+    </div>
+</body>
+</html>

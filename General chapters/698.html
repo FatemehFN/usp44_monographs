@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>698. حجم قابل تحویل</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Vazirmatn Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Internal Styling -->
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl card">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6"><span class="ltr-text">698</span>. حجم قابل تحویل</h1>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">هدف</h2>
+        <p class="mb-4">این آزمایشات برای اطمینان از این طراحی شده‌اند که مایعات خوراکی، هنگام انتقال از ظرف اصلی، حجم فرم دارویی اعلام شده بر روی برچسب را تحویل دهند.</p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">دامنه کاربرد</h2>
+        <p class="mb-4">این آزمایش‌ها برای محصولاتی قابل استفاده هستند که با ریختن از ظرف توزیع می‌شوند. این آزمایش‌ها چه محصولات به صورت آماده‌سازی مایع عرضه شوند و چه آماده‌سازی مایع باشند که از جامدات با افزودن حجم مشخصی از یک رقیق‌کننده خاص تشکیل می‌شوند، کاربرد دارند. هنگامی که ظرف شامل محدودکننده جریان یا کاهنده دهانه (مانند یک رابط برای سرنگ خوراکی) باشد، حجم برای این آزمایش باید طبق توصیه‌های برچسب‌گذاری تخلیه شود. این آزمایش‌ها برای مقاله‌ای که در ظروف تک‌واحدی بسته‌بندی شده است، زمانی که تک‌نگاری شامل آزمایش یکنواختی واحدهای دوز <a href="905.html" class="text-blue-600 hover:underline" target="_blank"><span class="ltr-text">905</span></a> باشد، الزامی نیستند.</p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعیین چگالی</h2>
+        <p class="mb-4">به دلیل تمایل مایعات خوراکی به جذب هوا هنگام تکان دادن یا انتقال، روش دقیق‌تری برای تعیین حجم قابل تحویل این است که ابتدا جرم قابل تحویل را تعیین کرده و سپس با استفاده از چگالی ماده، جرم را به حجم قابل تحویل تبدیل کنیم. برای انجام این کار، تعیین چگالی ماده لازم است. روش زیر یکی از روش‌های تعیین چگالی است:</p>
+        <ol class="list-decimal list-inside pr-6 mb-4">
+            <li>یک بالن حجمی <span class="ltr-text">100-mL</span> حاوی <span class="ltr-text">50.0 mL</span> آب را با ترازو صفر کنید.</li>
+            <li>تقریباً <span class="ltr-text">25 g</span> از محصول خوب تکان داده شده را اضافه کرده و به آرامی محتویات را بچرخانید تا مخلوط شود.</li>
+            <li>بالن را مجدداً وزن کنید.</li>
+            <li>از یک بورت، مقدار دقیقی آب اضافه کنید تا محتویات بالن به حجم برسد، در حالی که به آرامی محتویات بالن را می‌چرخانید. حجم برداشت شده از بورت را ثبت کنید.</li>
+            <li>چگالی نمونه را محاسبه کنید:</li>
+        </ol>
+        <div class="formula-display">
+            $$Result = \frac{W}{V}$$
+        </div>
+        <ul class="list-none mb-4 pr-6">
+            <li><span class="ltr-text">W</span> = وزن ماده برداشته شده (<span class="ltr-text">g</span>)</li>
+            <li><span class="ltr-text">V</span> = <span class="ltr-text">50.0</span> منهای حجم، بر حسب <span class="ltr-text">mL</span>، آب لازم برای تنظیم محتویات بالن به حجم</li>
+        </ul>
+        <p class="mb-6">روش‌های دیگری برای تعیین چگالی ممکن است بسته به فرمولاسیون (مثلاً فرمولاسیون‌های اساساً غیر آبی) به کار گرفته شوند.</p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">آماده سازی نمونه‌ها</h2>
+        <p class="mb-4">برای تعیین حجم قابل تحویل، کمتر از <span class="ltr-text">30</span> ظرف را انتخاب کرده و به شرح زیر برای فرم دارویی تعیین شده عمل کنید.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">محلول‌های خوراکی و سوسپانسیون‌های خوراکی</h3>
+        <p class="mb-4">محتویات <span class="ltr-text">10</span> ظرف را به صورت جداگانه تکان دهید.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">پودرهایی که برچسب آنها حجم مایع خوراکی حاصل از آماده‌سازی پودر با حجم رقیق‌کننده مشخص شده در برچسب را بیان می‌کند</h3>
+        <p class="mb-6">محتویات <span class="ltr-text">10</span> ظرف را با حجم رقیق‌کننده مشخص شده در برچسب، که دقیقاً اندازه‌گیری شده است، آماده کرده و به صورت جداگانه تکان دهید.</p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">روش انجام کار</h2>
+        <p class="mb-4">حجم قابل تحویل را می‌توان با وزن به شرح زیر تعیین کرد:</p>
+        <ol class="list-decimal list-inside pr-6 mb-4">
+            <li>محتویات ظرف را به یک ظرف مناسب و صفر شده روی ترازو تخلیه کنید (اجازه دهید برای ظروف تک‌واحدی بیشتر از <span class="ltr-text">5 s</span> و برای ظروف چندواحدی بیشتر از <span class="ltr-text">10 min</span> تخلیه نشود).</li>
+            <li>جرم محتویات را تعیین کنید.</li>
+            <li>حجم را با استفاده از چگالی محاسبه کنید.</li>
+        </ol>
+        <p class="mb-4">به طور جایگزین، می‌توان از روش حجمی زیر استفاده کرد:</p>
+        <ol class="list-decimal list-inside pr-6 mb-6">
+            <li>در شرایط استفاده یا طبق دستورالعمل‌های برچسب‌گذاری، محتویات هر ظرف را با دقت به داخل سیلندرهای مدرج خشک جداگانه با ظرفیت نامی که از <span class="ltr-text">2.5</span> برابر حجم اندازه‌گیری شده بیشتر نباشد و کالیبره شده "برای حاوی بودن" (به دستگاه‌های حجمی <a href="31.html" class="text-blue-600 hover:underline" target="_blank"><span class="ltr-text">31</span></a> مراجعه کنید) تخلیه کنید. باید دقت شود تا از تشکیل حباب‌های هوا در طول فرآیند جلوگیری شود. در غیاب دستورالعمل‌های برچسب‌گذاری، ظروف را در زاویه تقریباً <span class="ltr-text">30°</span> نسبت به افق نگه دارید و به آرامی محتویات را به داخل سیلندر مدرج تخلیه کنید.</li>
+            <li>اجازه دهید هر ظرف برای مدت زمانی که برای ظروف چندواحدی بیشتر از <span class="ltr-text">10 min</span> و برای ظروف تک‌واحدی بیشتر از <span class="ltr-text">5 s</span> نباشد، تخلیه شود، مگر اینکه در تک‌نگاری طور دیگری مشخص شده باشد.</li>
+            <li>پس از خالی شدن از حباب، حجم هر مخلوط را اندازه‌گیری کنید.</li>
+        </ol>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">معیارهای پذیرش</h2>
+        <p class="mb-4">از معیارهای زیر برای تعیین انطباق با این آزمایش استفاده کنید.</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">برای ظروف چندواحدی</h3>
+        <p class="mb-4">حجم متوسط مایع به دست آمده از <span class="ltr-text">10</span> ظرف کمتر از <span class="ltr-text">100%</span> نباشد، و حجم هیچ ظرفی کمتر از <span class="ltr-text">95%</span> حجم اعلام شده در برچسب نباشد. اگر (الف)، حجم متوسط کمتر از <span class="ltr-text">100%</span> از حجم اعلام شده در برچسب باشد، اما حجم هیچ ظرفی کمتر از <span class="ltr-text">95%</span> مقدار برچسب‌گذاری شده نباشد، یا اگر (ب)، حجم متوسط کمتر از <span class="ltr-text">100%</span> نباشد و حجم بیشتر از <span class="ltr-text">1</span> ظرف کمتر از <span class="ltr-text">95%</span> نباشد، اما کمتر از <span class="ltr-text">90%</span> حجم برچسب‌گذاری شده باشد، آزمایش را بر روی <span class="ltr-text">20</span> ظرف اضافی انجام دهید. حجم متوسط مایع به دست آمده از <span class="ltr-text">30</span> ظرف کمتر از <span class="ltr-text">100%</span> حجم اعلام شده در برچسب نباشد؛ حجم مایع به دست آمده از بیشتر از <span class="ltr-text">1</span> ظرف از <span class="ltr-text">30</span> ظرف کمتر از <span class="ltr-text">95%</span> نباشد، اما کمتر از <span class="ltr-text">90%</span> از حجم اعلام شده در برچسب نباشد.</p>
+        <p class="mb-6">شکل <span class="ltr-text">1</span>. طرح تصمیم‌گیری برای ظروف چندواحدی (<span class="ltr-text">AV</span> = حجم متوسط؛ <span class="ltr-text">LV</span> = حجم برچسب‌گذاری شده).</p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">برای ظروف تک‌واحدی</h3>
+        <p class="mb-4">حجم متوسط مایع به دست آمده از <span class="ltr-text">10</span> ظرف کمتر از <span class="ltr-text">100%</span> نباشد، و حجم هر یک از <span class="ltr-text">10</span> ظرف در محدوده <span class="ltr-text">95%–110%</span> از حجم اعلام شده در برچسب باشد. اگر (الف)، حجم متوسط کمتر از <span class="ltr-text">100%</span> از حجم اعلام شده در برچسب باشد، اما حجم هیچ ظرفی خارج از محدوده <span class="ltr-text">95%–110%</span> نباشد، یا اگر (ب)، حجم متوسط کمتر از <span class="ltr-text">100%</span> نباشد و حجم بیشتر از <span class="ltr-text">1</span> ظرف خارج از محدوده <span class="ltr-text">95%–110%</span> نباشد، اما در محدوده <span class="ltr-text">90%–115%</span> باشد، آزمایش را بر روی <span class="ltr-text">20</span> ظرف اضافی انجام دهید. حجم متوسط مایع به دست آمده از <span class="ltr-text">30</span> ظرف کمتر از <span class="ltr-text">100%</span> حجم اعلام شده در برچسب نباشد؛ حجم به دست آمده از بیشتر از <span class="ltr-text">1</span> ظرف از <span class="ltr-text">30</span> ظرف خارج از محدوده <span class="ltr-text">95%–110%</span> نباشد، اما در محدوده <span class="ltr-text">90%–115%</span> از حجم اعلام شده در برچسب باشد.</p>
+        <p class="mb-6">شکل <span class="ltr-text">2</span>. طرح تصمیم‌گیری برای ظروف تک‌واحدی (<span class="ltr-text">AV</span> = حجم متوسط؛ <span class="ltr-text">LV</span> = حجم برچسب‌گذاری شده).</p>
+
+    </div>
+
+    <!-- MathJax CDN for LaTeX rendering -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

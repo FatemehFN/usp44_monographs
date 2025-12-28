@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مونوگراف سیترات آمونیوم فریک (USP)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .tab-active {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        .tab-inactive {
+            border-color: transparent;
+            color: #6b7280;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+        .interactive-card {
+            background-color: #e0f2fe;
+            border: 1px solid #90cdf4;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">سیترات آمونیوم فریک</h1>
+
+        <div class="flex justify-center mb-6 border-b border-gray-200">
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="openTab(event, 'definition')">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'identification')">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'assay')">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'impurities')">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'specific-tests')">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'additional-requirements')">الزامات اضافی</button>
+        </div>
+
+        <div id="definition" class="tab-content">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+                <p>سیترات آمونیوم فریک حاوی نه کمتر از ۱۶.۵ درصد و نه بیشتر از ۱۸.۵ درصد آهن (Fe) است.</p>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته بندی و نگهداری</h3>
+                <p>در ظروف دربسته و مقاوم در برابر نور، در مکانی خنک نگهداری شود.</p>
+            </div>
+        </div>
+
+        <div id="identification" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">الف</h3>
+                <div class="interactive-card card">
+                    <p>حدود ۰.۵ گرم را بسوزانید: زغال می‌شود و باقی‌مانده اکسید آهن باقی می‌گذارد.</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">ب</h3>
+                <div class="interactive-card card">
+                    <p>به ۱۰ میلی‌لیتر محلول سیترات آمونیوم فریک (۱ در ۱۰۰)، هیدروکسید آمونیوم ۶ مولار را قطره قطره اضافه کنید: محلول تیره می‌شود، اما رسوبی تشکیل نمی‌شود.</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">ج</h3>
+                <div class="interactive-card card">
+                    <p>به ۵ میلی‌لیتر محلول سیترات آمونیوم فریک (۱ در ۱۰۰)، ۰.۳ میلی‌لیتر پتاسیم پرمنگنات TS و ۴ میلی‌لیتر مرکوریک سولفات TS اضافه کرده و مخلوط را به جوش بیاورید: رسوب سفید تشکیل می‌شود.</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">سیترات فریک</h3>
+                <div class="interactive-card card">
+                    <p>به محلول سیترات آمونیوم فریک (۱ در ۱۰۰)، پتاسیم فروسیانید TS اضافه کنید: رسوب آبی تشکیل نمی‌شود.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="assay" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+                <div class="interactive-card card">
+                    <p>حدود ۱ گرم سیترات آمونیوم فریک را که به دقت وزن شده است، در یک فلاسک مخروطی ۲۵۰ میلی‌لیتری بریزید و در ۲۵ میلی‌لیتر آب و ۵ میلی‌لیتر اسید هیدروکلریک حل کنید. ۴ گرم پتاسیم یدید اضافه کنید، درپوش را بگذارید و ۱۵ دقیقه دور از نور قرار دهید. ۱۰۰ میلی‌لیتر آب اضافه کنید و ید آزاد شده را با ۰.۱ نرمال سدیم تیوسولفات VS تیتر کنید، با استفاده از نشاسته TS به عنوان شناساگر. یک تعیین خالی انجام دهید و هرگونه اصلاح لازم را اعمال کنید. هر میلی‌لیتر ۰.۱ نرمال سدیم تیوسولفات معادل ۵.۵۸۵ میلی‌گرم آهن (Fe) است.</p>
+                    <div class="formula-display">
+                        <span>1 mL of 0.1 N sodium thiosulfate &asymp; 5.585 mg of Fe</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="impurities" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">سولفات</h3>
+                <div class="interactive-card card">
+                    <p>۱۰۰ میلی‌گرم را در ۱ میلی‌لیتر اسید هیدروکلریک ۲.۷ مولار حل کرده و با آب به حجم ۳۰ میلی‌لیتر برسانید. ۳ میلی‌لیتر باریم کلرید TS اضافه کنید، با آب به حجم ۵۰ میلی‌لیتر برسانید و مخلوط کنید: هرگونه کدورت تشکیل شده پس از ۱۰ دقیقه نباید بیشتر از کدورت ایجاد شده در یک محلول کنترل که به طور مشابه با ۰.۳۱ میلی‌لیتر اسید سولفوریک ۰.۰۲۰ نرمال (۰.۳%) تیمار شده است، باشد.</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">اکسالات</h3>
+                <div class="interactive-card card">
+                    <p>۱ گرم را در یک جداکننده ۱۲۵ میلی‌لیتری منتقل کنید، در ۱۰ میلی‌لیتر آب حل کنید، ۲ میلی‌لیتر اسید هیدروکلریک اضافه کنید و به طور متوالی با یک بخش ۵۰ میلی‌لیتری و یک بخش ۲۰ میلی‌لیتری اتر استخراج کنید. عصاره‌های اتر ترکیب شده را به یک بشر ۱۵۰ میلی‌لیتری منتقل کنید، ۱۰ میلی‌لیتر آب اضافه کنید و اتر را با تبخیر روی حمام بخار حذف کنید. ۱ قطره اسید استیک گلاسیال و ۱ میلی‌لیتر محلول کلسیم استات (۱ در ۲۰) اضافه کنید: هیچ کدورت در عرض ۵ دقیقه تولید نمی‌شود.</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">جیوه</h3>
+                <div class="interactive-card card">
+                    <p><strong>محلول پایه جیوه و محلول استاندارد جیوه:</strong> مطابق دستورالعمل روش I در جیوه <a href="General chapters/261.html" class="text-blue-600 hover:underline" target="_blank">۲۶۱</a> عمل کنید.</p>
+                    <p><strong>دستگاه تشخیص جیوه، دستگاه هوادهی و محلول استنوس کلرید:</strong> مطابق دستورالعمل روش IIa و روش IIb در جیوه <a href="General chapters/261.html" class="text-blue-600 hover:underline" target="_blank">۲۶۱</a> عمل کنید.</p>
+                    <p><strong>محلول‌های استاندارد:</strong> ۰.۲۵، ۰.۵۰، ۱.۰ و ۳.۵ میلی‌لیتر از محلول استاندارد جیوه را به چهار بطری جداگانه با درپوش شیشه‌ای، مانند بطری‌های اکسیژن مصرفی بیولوژیکی، با ظرفیت حدود ۳۰۰ میلی‌لیتر منتقل کنید. محتویات هر بطری را با آب تا حجم ۱۰۰ میلی‌لیتر رقیق کرده و مخلوط کنید. این محلول‌ها به ترتیب معادل ۲.۵، ۵.۰، ۱۰.۰ و ۳۵.۰ نانوگرم جیوه در میلی‌لیتر هستند.</p>
+                    <p><strong>محلول آزمون:</strong> حدود ۱.۰۰۰ گرم سیترات آمونیوم فریک را که به دقت وزن شده است، در یک بطری سانتریفیوژ ۲۰۰ میلی‌لیتری با درپوش پیچی با پوشش تفلون منتقل کنید و ۵ میلی‌لیتر اسید نیتریک و ۵ میلی‌لیتر اسید هیدروکلریک اضافه کنید. بطری را محکم ببندید، به مدت ۱ ساعت روی حمام بخار هضم کنید و خنک کنید. محلول را به صورت کمی در یک بطری مناسب با درپوش شیشه‌ای منتقل کنید، با آب تا حجم ۱۰۰ میلی‌لیتر رقیق کنید و به مدت ۲ دقیقه هوا را از طریق محلول عبور دهید. یک شاهد واکنشگر را به همین ترتیب آماده کنید.</p>
+                    <p><strong>روش:</strong> ۵ میلی‌لیتر محلول استنوس کلرید را به هر محلول اضافه کنید و بلافاصله حباب‌گیر دستگاه هوادهی را وصل کنید. جذب‌ها را طبق دستورالعمل سازنده دستگاه دریافت کنید. یک تعیین خالی انجام دهید و هرگونه اصلاح لازم را اعمال کنید. جذب محلول‌های استاندارد را در مقابل غلظت‌های جیوه بر حسب میکروگرم در میلی‌لیتر رسم کنید و خط مستقیمی را که بهترین برازش را با نقاط رسم شده دارد، ترسیم کنید. از نمودار به دست آمده، غلظت جیوه را بر حسب میکروگرم در گرم در محلول آزمون تعیین کنید: نباید بیش از ۱۰ میکروگرم در گرم یافت شود.</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">حد سرب</h3>
+                <div class="interactive-card card">
+                    <p><strong>محلول پایه استاندارد:</strong> حدود ۱۵۹.۸ میلی‌گرم نیترات سرب را که به دقت وزن شده است، در ۱۰۰ میلی‌لیتر آب حاوی ۱ میلی‌لیتر اسید نیتریک حل کنید. با آب تا حجم ۱۰۰۰.۰ میلی‌لیتر رقیق کرده و مخلوط کنید.</p>
+                    <p><strong>محلول استاندارد:</strong> [توجه — این محلول را در روز استفاده آماده کنید.] ۱۰.۰ میلی‌لیتر از محلول پایه استاندارد را در یک فلاسک حجمی ۵۰۰ میلی‌لیتری منتقل کنید، با آب تا حجم برسانید و مخلوط کنید. هر میلی‌لیتر معادل ۲ میکروگرم سرب (Pb) را شامل می‌شود.</p>
+                    <p><strong>محلول آزمون:</strong> حدود ۱۵ گرم سیترات آمونیوم فریک را که به دقت وزن شده است، در یک فلاسک حجمی ۱۰۰ میلی‌لیتری (که قبلاً با اسید نیتریک و آب شسته شده است) منتقل کنید، در مخلوطی از ۵۰ میلی‌لیتر آب و ۱ میلی‌لیتر اسید نیتریک حل کنید، با آب تا حجم برسانید و مخلوط کنید.</p>
+                    <p><strong>روش:</strong> با استفاده از یک طیف‌سنج جذب اتمی مناسب (به طیف‌سنجی جذب اتمی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">۸۵۲</a> مراجعه کنید) مجهز به اصلاح‌کننده پس‌زمینه قوس دوتریوم، دستگاه نمایش دیجیتال و یک سر مشعل که قادر به تحمل ۱۵٪ جامدات است، یک تعیین خالی با آب، طبق دستورالعمل سازنده، انجام دهید. به طور جداگانه بخش‌هایی از محلول استاندارد و محلول آزمون را استنشاق کرده و جذب‌ها را ثبت کنید. محتوای سرب را بر حسب میکروگرم در گرم در بخش سیترات آمونیوم فریک گرفته شده با فرمول زیر محاسبه کنید:</p>
+                    <div class="formula-display">
+                        <span>$$ \frac{100(C/W)(AU/AS)}{1} $$</span>
+                    </div>
+                    <p>که در آن C غلظت سرب بر حسب میکروگرم در میلی‌لیتر در محلول استاندارد است؛ W وزن سیترات آمونیوم فریک بر حسب گرم گرفته شده است؛ و AU و AS به ترتیب جذب محلول آزمون و محلول استاندارد هستند: نباید بیش از ۱۰ میکروگرم در گرم یافت شود.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="specific-tests" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+                <p>این بخش در منبع PDF موجود نبود.</p>
+            </div>
+        </div>
+
+        <div id="additional-requirements" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+                <p>این بخش در منبع PDF موجود نبود.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+
+            // Hide all tab content
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.add("hidden");
+            }
+
+            // Remove 'tab-active' and add 'tab-inactive' to all tabs
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("tab-active");
+                tablinks[i].classList.add("tab-inactive");
+            }
+
+            // Show the current tab, and add an 'tab-active' class to the button that opened the tab
+            document.getElementById(tabName).classList.remove("hidden");
+            evt.currentTarget.classList.remove("tab-inactive");
+            evt.currentTarget.classList.add("tab-active");
+        }
+
+        // Set the default tab to be the first one
+        document.querySelector('.tab-button').click();
+    </script>
+</body>
+</html>

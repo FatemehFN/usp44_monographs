@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1216. تعیین تردی قرص</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <div class="card">
+            <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">1216. تعیین تردی قرص</h1>
+
+            <p class="mb-4">
+                این فصل اطلاعات عمومی با متون مربوطه در فارماکوپه اروپا و فارماکوپه ژاپن هماهنگ شده است. بنابراین، متون هماهنگ شده این سه فارماکوپه قابل تعویض هستند و می‌توان از روش‌های فارماکوپه اروپا و/یا فارماکوپه ژاپن برای نشان دادن انطباق به جای روش فصل اطلاعات عمومی فعلی فارماکوپه ایالات متحده استفاده کرد. این فارماکوپه‌ها متعهد شده‌اند که هیچ تغییر یک‌جانبه‌ای در این فصل هماهنگ شده ایجاد نکنند.
+            </p>
+            <p class="mb-4">
+                این فصل دستورالعمل‌هایی را برای تعیین تردی قرص‌های فشرده و بدون پوشش ارائه می‌دهد. رویه تست ارائه شده در این فصل به طور کلی برای اکثر قرص‌های فشرده قابل اعمال است. اندازه‌گیری تردی قرص، سایر اندازه‌گیری‌های استحکام فیزیکی مانند نیروی شکست قرص را تکمیل می‌کند.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تجهیزات</h2>
+            <p class="mb-4">
+                از یک درام*، با قطر داخلی بین <span class="ltr-text">283</span> و <span class="ltr-text">291</span> میلی‌متر و عمق بین <span class="ltr-text">36</span> و <span class="ltr-text">40</span> میلی‌متر، ساخته شده از پلیمر مصنوعی شفاف با سطوح داخلی صیقلی، و تحت حداقل تجمع استاتیک (به شکل برای یک دستگاه معمولی مراجعه کنید) استفاده کنید.
+            </p>
+            <p class="mb-4">
+                یک طرف درام قابل جدا شدن است. قرص‌ها در هر دور درام توسط یک برجستگی منحنی با شعاع داخلی بین <span class="ltr-text">75.5</span> و <span class="ltr-text">85.5</span> میلی‌متر که از وسط درام تا دیواره خارجی امتداد دارد، چرخانده می‌شوند. قطر خارجی حلقه مرکزی بین <span class="ltr-text">24.5</span> و <span class="ltr-text">25.5</span> میلی‌متر است. درام به محور افقی دستگاهی متصل است که با سرعت <span class="ltr-text">25 ±1</span> دور در دقیقه می‌چرخد.
+            </p>
+            <p class="mb-4">
+                بنابراین، در هر دور، قرص‌ها می‌غلتند یا سر می‌خورند و به دیواره درام یا روی یکدیگر می‌افتند.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تجهیزات تعیین تردی قرص</h3>
+            <p class="mb-4">
+                برای قرص‌هایی با وزن واحد برابر یا کمتر از <span class="ltr-text">650</span> میلی‌گرم، نمون‌های از قرص‌های کامل بردارید که تا حد امکان نزدیک به <span class="ltr-text">6.5</span> گرم باشد. برای قرص‌هایی با وزن واحد بیش از <span class="ltr-text">650</span> میلی‌گرم، نمون‌های از <span class="ltr-text">10</span> قرص کامل بردارید. قرص‌ها باید قبل از آزمایش به دقت گردگیری شوند. نمون قرص را به دقت وزن کرده و قرص‌ها را در درام قرار دهید. درام را <span class="ltr-text">100</span> بار بچرخانید و قرص‌ها را خارج کنید. هر گرد و غبار شل را همانطور که قبلاً انجام شد از روی قرص‌ها پاک کرده و به دقت وزن کنید.
+            </p>
+            <p class="text-sm text-gray-500 mb-4">
+                * دستگاهی که این مشخصات را برآورده می‌کند از تأمین‌کنندگان لوازم آزمایشگاهی مانند VanKel Technology Group، 13000 Weston Parkway، Cary، NC 27513، یا از Erweka Instruments، Inc.، 56 Quirk Road، Milford، CT 06460 در دسترس است.
+            </p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">رویه</h2>
+            <p class="mb-4">
+                به طور کلی، تست یک بار انجام می‌شود. اگر قرص‌های شکسته، ترک خورده، یا خرد شده به وضوح در نمونه قرص پس از چرخش وجود داشته باشند، نمونه در تست رد می‌شود. اگر نتایج تفسیر دشوار باشد یا اگر کاهش وزن بیشتر از مقدار هدف باشد، تست باید دو بار تکرار شود و میانگین سه تست تعیین شود. حداکثر میانگین کاهش وزن از سه نمونه بیش از <span class="ltr-text">1.0%</span> برای اکثر محصولات قابل قبول در نظر گرفته می‌شود.
+            </p>
+            <p class="mb-4">
+                اگر اندازه یا شکل قرص باعث چرخش نامنظم شود، پایه درام را طوری تنظیم کنید که پایه زاویه‌ای در حدود <span class="ltr-text">10°</span> با افق تشکیل دهد و قرص‌ها دیگر هنگام در کنار هم قرار گرفتن به هم نچسبند، که مانع از سقوط آزاد آنها می‌شود.
+            </p>
+            <p class="mb-4">
+                قرص‌های جوشان و قرص‌های جویدنی ممکن است مشخصات متفاوتی در رابطه با تردی داشته باشند. در مورد قرص‌های رطوبت‌گیر، محیط کنترل شده مناسب برای آزمایش مورد نیاز است.
+            </p>
+            <p class="mb-4">
+                درام‌های با پروجکشن‌های دوگانه، یا دستگاهی با بیش از یک درام، برای اجرای چندین نمونه در یک زمان، نیز مجاز هستند.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

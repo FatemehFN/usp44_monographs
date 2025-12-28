@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آزمون حساسیت‌زایی</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body class="p-4">
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">آزمون حساسیت‌زایی</h1>
+
+        <section class="mb-8 card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+            <p class="mb-4">این فصل به حساسیت‌زایی و بیش‌حساسیت‌زایی در زمینه تجهیزات پزشکی و ایمپلنت‌ها می‌پردازد و روش‌هایی را برای آزمایش این موارد از نظر پتانسیل ایجاد حساسیت‌زایی توصیف می‌کند.</p>
+            <p class="mb-4">بر اساس سیستم طبقه‌بندی <span class="ltr-text">Gell</span> و <span class="ltr-text">Coombs</span>، چهار نوع واکنش بیش‌حساسیت‌زایی وجود دارد. واکنش‌های نوع <span class="ltr-text">I</span> شامل تثبیت <span class="ltr-text">IgE</span> به ماست‌سل‌ها است که متعاقباً مواد فعال فارماکولوژیکی مانند هیستامین را آزاد می‌کنند. واکنش‌های نوع <span class="ltr-text">II</span> نتیجه اتصال <span class="ltr-text">IgG</span> و/یا <span class="ltr-text">IgM</span> به سلول‌های هدف، و سپس تثبیت کمپلمان و لیز سلولی است. واکنش‌های نوع <span class="ltr-text">III</span> توسط حضور کمپلکس‌های آنتی‌ژن-آنتی‌بادی ایجاد می‌شوند که باعث آسیب فیزیکی مانند آسیب کلیه به دلیل انسداد گلومرولی می‌شوند. واکنش‌های نوع <span class="ltr-text">IV</span> سلولی هستند (شامل عمل سلول‌های <span class="ltr-text">T</span> و تعامل آنها با آنتی‌ژن‌های لنفوسیت انسانی). واکنش‌های نوع <span class="ltr-text">IV</span> همچنین واکنش‌های بیش‌حساسیت تأخیری نامیده می‌شوند. جدول <span class="ltr-text">1</span> زیر انواع واکنش‌ها، واسطه‌های واکنش‌ها و نمونه‌هایی از بیماری‌های نماینده را خلاصه می‌کند.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">جدول <span class="ltr-text">1</span>. چهار نوع واکنش بیش‌حساسیت‌زایی*، واسطه‌ها و نمونه‌های بیماری</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>طبقه واکنش</th>
+                        <th>واسطه‌ها</th>
+                        <th>نمونه‌های بیماری</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>نوع <span class="ltr-text">I</span></td>
+                        <td>مولکول‌های <span class="ltr-text">IgE</span> متصل به ماست‌سل‌ها با آنتی‌ژن واکنش می‌دهند تا مواد فعال فارماکولوژیکی را آزاد کنند.</td>
+                        <td>تب یونجه، آسم برونش، سایر واکنش‌های آتوپیک</td>
+                    </tr>
+                    <tr>
+                        <td>نوع <span class="ltr-text">II</span></td>
+                        <td>مولکول‌های <span class="ltr-text">IgM</span> و/یا <span class="ltr-text">IgM</span> با سلول‌های هدف واکنش می‌دهند، کمپلمان را تثبیت می‌کنند، لیز سلولی رخ می‌دهد.</td>
+                        <td>آلرژی‌های مختلف دارویی، اریتروبلاستوز جنینی، کم‌خونی همولیتیک، ترومبوسیتوپنی</td>
+                    </tr>
+                    <tr>
+                        <td>نوع <span class="ltr-text">III</span></td>
+                        <td>کمپلکس‌های آنتی‌ژن-آنتی‌بادی، کمپلمان</td>
+                        <td>واکنش آرتوس، بیماری سرم، گلومرولونفریت آلرژیک</td>
+                    </tr>
+                    <tr>
+                        <td>نوع <span class="ltr-text">IV</span></td>
+                        <td>لنفوسیت‌های <span class="ltr-text">T</span>، آنتی‌ژن، مونوسیت‌ها، ماکروفاژها</td>
+                        <td>درماتیت تماسی</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="text-sm italic text-gray-600">* بر اساس طرح طبقه‌بندی <span class="ltr-text">Gell</span> و <span class="ltr-text">Coombs</span></p>
+
+            <p class="mb-4">فرآیندی چند مرحله‌ای که در فصل «سازگاری زیستی مواد مورد استفاده در ظروف دارویی، تجهیزات پزشکی و ایمپلنت‌ها» <a href="1031.html" class="text-blue-600 hover:underline" target="_blank">1031</a> تشریح شده است، برای تعیین اینکه کدام یک از آزمایش‌های سم‌شناسی (در صورت وجود) باید روی یک مقاله معین انجام شود، دنبال می‌شود. در برخی موارد، شواهد کافی برای برآوردن الزامات سم‌شناسی ممکن است از مقالات قبلاً به بازار عرضه شده در دسترس باشد (به شکل <span class="ltr-text">1</span> در فصل <a href="1031.html" class="text-blue-600 hover:underline" target="_blank">1031</a> مراجعه کنید). عوامل مهمی که در شکل <span class="ltr-text">1</span> (فصل <a href="1031.html" class="text-blue-600 hover:underline" target="_blank">1031</a>) مورد بررسی قرار گرفته‌اند شامل نوع و میزان تماس با بدن، ترکیب شیمیایی، فرآیند تولید، فرآیند استریل‌سازی، و همانطور که در بالا ذکر شد، شباهت به مقالات قبلاً به بازار عرضه شده است.</p>
+            <p class="mb-4">اگر آزمایش‌های سم‌شناسی بیشتری لازم باشد، طبقه‌بندی تجهیزات پزشکی ارائه شده در جدول <span class="ltr-text">2</span> از فصل اطلاعات عمومی <a href="1031.html" class="text-blue-600 hover:underline" target="_blank">1031</a> اهمیت دارد، زیرا درجه و میزان آزمایش‌های سم‌شناسی مورد نیاز به شدت تحت تأثیر ماهیت و مدت زمان تماس بدنی با مقاله است. طبقه‌بندی حاصل از جدول <span class="ltr-text">2</span> در فصل <a href="1031.html" class="text-blue-600 hover:underline" target="_blank">1031</a>، همراه با مدت زمان قرار گرفتن در معرض مقاله، در جداول <span class="ltr-text">3–5</span> فصل <a href="1031.html" class="text-blue-600 hover:underline" target="_blank">1031</a> برای تعیین اینکه کدام آزمایش‌های سم‌شناسی باید انجام شود، استفاده می‌شود. جدول <span class="ltr-text">2</span> زیر اطلاعاتی را که از جداول <span class="ltr-text">3–5</span> فصل <a href="1031.html" class="text-blue-600 hover:underline" target="_blank">1031</a> استخراج شده است، ارائه می‌دهد و شرایطی را نشان می‌دهد که برای آنها باید آزمایش حساسیت‌زایی در نظر گرفته شود.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">جدول <span class="ltr-text">2</span>. مواردی که آزمایش حساسیت‌زایی باید بر اساس دسته مورد و مدت زمان مواجهه در نظر گرفته شود</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>دسته دستگاه</th>
+                        <th>تماس با بدن</th>
+                        <th>مدت زمان تماس</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>دستگاه‌های سطحی</td>
+                        <td>پوست</td>
+                        <td><span class="ltr-text">A<sup>a</sup>, B<sup>b</sup>, C<sup>c</sup></span></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>غشای مخاطی</td>
+                        <td><span class="ltr-text">A, B, C</span></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>سطوح شکافته شده یا آسیب‌دیده</td>
+                        <td><span class="ltr-text">A, B, C</span></td>
+                    </tr>
+                    <tr>
+                        <td>دستگاه‌های ارتباطی خارجی</td>
+                        <td>مسیر خون، غیرمستقیم</td>
+                        <td><span class="ltr-text">A, B, C</span></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>ارتباط با بافت، استخوان یا عاج</td>
+                        <td><span class="ltr-text">A, B, C</span></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>خون در گردش</td>
+                        <td><span class="ltr-text">A, B, C</span></td>
+                    </tr>
+                    <tr>
+                        <td>دستگاه‌های ایمپلنت</td>
+                        <td>بافت یا استخوان</td>
+                        <td><span class="ltr-text">A, B, C</span></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>خون</td>
+                        <td><span class="ltr-text">A, B, C</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul class="list-disc list-inside text-sm text-gray-700 mb-4">
+                <li><span class="ltr-text">a A:</span> محدود (کمتر از <span class="ltr-text">24</span> ساعت)</li>
+                <li><span class="ltr-text">b B:</span> طولانی (از <span class="ltr-text">24</span> ساعت تا <span class="ltr-text">30</span> روز)</li>
+                <li><span class="ltr-text">c C:</span> دائمی (بیشتر از <span class="ltr-text">30</span> روز)</li>
+            </ul>
+
+            <p class="mb-4">در این فصل نه روش آزمایش بررسی شده است. جدول <span class="ltr-text">3</span> روش‌ها و گونه‌هایی را که با آنها انجام می‌شوند، فهرست می‌کند.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">جدول <span class="ltr-text">3</span>. روش‌های آزمایشی که ممکن است در آزمایش حساسیت‌زایی استفاده شوند و گونه‌های مورد نیاز برای آزمایش</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>آزمایش</th>
+                        <th>گونه‌های مورد استفاده در آزمایش</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">Magnusson & Kligman Maximization</span></td>
+                        <td>خوکچه هندی</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Standard Buehler</span></td>
+                        <td>خوکچه هندی</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Open Epicutaneous</span></td>
+                        <td>خوکچه هندی</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Freund’s Complete Adjuvant</span></td>
+                        <td>خوکچه هندی</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Optimization</span></td>
+                        <td>خوکچه هندی</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Split Adjuvant</span></td>
+                        <td>خوکچه هندی</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Local Lymph Node Assay</span></td>
+                        <td>موش</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Mouse Ear Swelling</span></td>
+                        <td>موش</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Vitamin A Enhancement</span></td>
+                        <td>موش</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="mb-4">با توجه به شیوع آزمایش‌های انجام شده با آزمایش ماکسیمیزاسیون خوکچه هندی <span class="ltr-text">Magnusson & Kligman (GPMT)</span> یا آزمایش‌های <span class="ltr-text">Buehler (BT)</span>، این آزمایش‌ها به تفصیل در این فصل بررسی خواهند شد. خلاصه‌ای کوتاه از آزمایش‌های باقیمانده به عنوان جایگزین‌هایی برای روش‌های پرکاربردتر ارائه شده است.</p>
+            <p class="mb-4">هر آزمایش باید به صورت دوره‌ای در آزمایشگاه انجام‌دهنده با استفاده از کنترل‌های مثبت مانند <span class="ltr-text">hexyl cinnamic aldehyde</span>، <span class="ltr-text">mercaptobenzothiazole</span> یا <span class="ltr-text">benzocaine</span> (کنترل‌های مثبت توصیه شده توسط سازمان همکاری اقتصادی و توسعه [<span class="ltr-text">OECD</span>]) اعتبارسنجی شود.</p>
+        </section>
+
+        <section class="mb-8 card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایش ماکسیمیزاسیون خوکچه هندی <span class="ltr-text">MAGNUSSON & KLIGMAN (GPMT)</span></h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">حیوانات</h3>
+            <p class="mb-4">هم خوکچه‌های هندی آلبینو نر و ماده یا هر دو ممکن است استفاده شوند. تمام حیوانات باید در سلامت کامل باشند و در شروع آزمایش وزنی بین <span class="ltr-text">300 g</span> و <span class="ltr-text">500 g</span> داشته باشند. ماده‌ها نباید باردار باشند و قبلاً نیز زایمان نکرده باشند. قبل از استفاده، ضروری است که حیوانات حداقل برای <span class="ltr-text">5</span> روز با شرایط آزمایشگاه سازگار شوند. تمام حیوانات باید مطابق با دستورالعمل‌های الزامات نظارتی مناسب که برای رفتار انسانی با حیوانات تعیین شده است، نگهداری شوند. حداقل <span class="ltr-text">10</span> حیوان آزمایش و <span class="ltr-text">5</span> حیوان کنترل باید استفاده شوند. برای به دست آوردن قدرت تحلیلی کافی (یعنی برای تشخیص حساسیت‌زاهای ضعیف) ممکن است لازم باشد <span class="ltr-text">20</span> حیوان آزمایش و <span class="ltr-text">10</span> حیوان کنترل استفاده شود. ممکن است حیوانات اضافی برای تعیین دوزهای مناسب برای تجویز لازم باشند (به تعیین غلظت ماده آزمایش مراجعه کنید).</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">نگهداری و تغذیه</h3>
+            <p class="mb-4">اتاق حیوانات باید در دمای <span class="ltr-text">20 ± 3°</span>، با رطوبت نسبی <span class="ltr-text">30%</span> تا <span class="ltr-text">70%</span> و با <span class="ltr-text">12</span> ساعت روشنایی و تاریکی نگهداری شود. حیوانات ممکن است به صورت انفرادی یا گروهی نگهداری شوند. رژیم‌های غذایی استاندارد آزمایشگاهی ممکن است استفاده شوند (آنهایی که برای خوکچه‌های هندی رضایت‌بخش هستند، مقدار کافی اسید اسکوربیک را تضمین می‌کنند). آب آشامیدنی باید به صورت آزاد در دسترس باشد.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آماده‌سازی حیوانات قبل از آزمایش</h3>
+            <p class="mb-4">حیوانات باید با استفاده از یک روش تصادفی‌سازی معتبر، تصادفی شوند. به عنوان مثال، چنین روش‌هایی ممکن است از جداول اعداد تصادفی یا اعداد تصادفی تولید شده توسط کامپیوتر استفاده کنند. موهای نواحی روی حیوانات که برای کاربرد ماده آزمایش در نظر گرفته شده‌اند (ناحیه بین کتف) باید به گونه‌ای برداشته شوند که پوست ساییده نشود. این کار ممکن است از طریق کوتاه کردن، تراشیدن یا با موبرهای شیمیایی انجام شود. موبر شیمیایی نباید به خودی خود باعث تحریک شود. مشاهدات عمومی حیوانات قبل از استفاده در آزمایش باید ثبت شود، از جمله هر گونه نشانه بیماری (از چنین حیواناتی در آزمایش‌ها استفاده نشود) و وزن بدن.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آماده‌سازی ماده آزمایش<sup>1</sup></h3>
+            <p class="mb-4">استفاده از این آزمایش نیازمند آن است که ماده آزمایش بتواند به صورت داخل پوستی تزریق شود. هنگامی که ماده آزمایش برای تجویز مستقیم مناسب نیست، عصاره‌ها باید طبق روش ارائه شده در فصل عمومی «آزمون‌های واکنش‌پذیری بیولوژیکی، در داخل بدن» <a href="88.html" class="text-blue-600 hover:underline" target="_blank">88</a> تهیه شوند.</p>
+            <p class="text-sm italic text-gray-600"><sup>1</sup> برای اطلاعات بیشتر در مورد آماده‌سازی نمونه، به استاندارد <span class="ltr-text">ANSI/AAMI/ISO/CEN 10993–12—1996: Biological Evaluation of Medical Devices—Part 12: Sample Preparation and Reference Materials</span> مراجعه کنید.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تعیین غلظت ماده آزمایش</h3>
+            <p class="mb-4">هدف از این مطالعه مقدماتی، تعیین غلظت‌های آماده‌سازی ماده آزمایش است که باید در فاز اولیه القا و فاز چالش دوم یک مطالعه <span class="ltr-text">GPMT</span> استفاده شود. ممکن است دو یا سه حیوان برای تعیین غلظت استفاده شوند.</p>
+            <p class="mb-4">طیفی از غلظت‌های ماده آزمایش یا عصاره‌های آن باید به صورت داخل پوستی (<span class="ltr-text">0.1 mL</span> در هر محل) با استفاده از حلال مورد استفاده در روش آزمایش تزریق شود. غلظتی که تنها باعث تحریک خفیف تا متوسط می‌شود (بدون تخریب گسترده پوست، بدون شواهدی از سمیت سیستمیک آشکار برای حیوانات) باید در فاز القای تزریق داخل پوستی از روش آزمایش استفاده شود.</p>
+            <p class="mb-4">با استفاده از دو یا چند حیوان، طیفی از غلظت‌های ماده آزمایش یا عصاره‌های آن را از طریق پانسمان‌های انسدادی و چسب‌ها اعمال کنید. پانسمان‌ها/چسب‌ها را پس از <span class="ltr-text">24</span> ساعت بردارید و محل‌ها را از نظر اریتم بررسی کنید. غلظتی را انتخاب کنید که تنها اریتم خفیف ایجاد می‌کند برای فاز القای کاربرد موضعی از روش آزمایش. از بالاترین غلظت ماده آزمایش یا عصاره که باعث اریتم نمی‌شود برای فاز چالش از روش آزمایش استفاده کنید. اگر آستانه تحریک‌پذیری به دست نیامد، بالاترین غلظت ممکن را برای فاز القای کاربرد موضعی و فاز چالش از روش آزمایش انتخاب کنید.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">روش آزمایش</h3>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فاز القای تزریق داخل پوستی</h4>
+            <p class="mb-4">این فاز نیازمند سه جفت تزریق داخل پوستی است که تزریق آزمایش و کنترل هر جفت در طرفین متقابل و بین کتف انجام می‌شود. هر تزریق باید حاوی <span class="ltr-text">0.1 mL</span> باشد، به طوری که جفت‌های تزریق <span class="ltr-text">1</span> و <span class="ltr-text">2</span> نزدیک‌تر به سر و جفت تزریق <span class="ltr-text">3</span> کمی دورتر به سمت دم تجویز شوند. این جفت‌ها به صورت اسمی در مساحتی حدود <span class="ltr-text">8 cm<sup>2</sup></span> قرار دارند. جفت‌های تزریق شامل موارد زیر هستند:</p>
+            <ul class="list-disc list-inside mb-4">
+                <li><h4 class="text-base font-semibold text-gray-700 mt-3 mb-2">جفت تزریق <span class="ltr-text">1</span>:</h4>
+                    <p class="mr-4">مخلوطی <span class="ltr-text">1:1 (v/v)</span> از <span class="ltr-text">Freund’s Complete Adjuvant (FCA)</span>، امولسیون روغن در آب حاوی مایکوباکتریوم، و حلال/واسطه مناسب (به آزمون‌های واکنش‌پذیری بیولوژیکی، در داخل بدن <a href="88.html" class="text-blue-600 hover:underline" target="_blank">88</a> مراجعه کنید). حیوانات کنترل مخلوطی از <span class="ltr-text">FCA</span> و سالین فیزیولوژیکی <span class="ltr-text">(1:1)</span> دریافت می‌کنند.</p></li>
+                <li><h4 class="text-base font-semibold text-gray-700 mt-3 mb-2">جفت تزریق <span class="ltr-text">2</span>:</h4>
+                    <p class="mr-4">آماده‌سازی ماده آزمایش با غلظت مشخص شده در تعیین غلظت ماده آزمایش، با استفاده از حلال/واسطه مناسب. حیوانات کنترل فقط حلال/واسطه را دریافت می‌کنند.</p></li>
+                <li><h4 class="text-base font-semibold text-gray-700 mt-3 mb-2">جفت تزریق <span class="ltr-text">3</span>:</h4>
+                    <p class="mr-4">آماده‌سازی ماده آزمایش با غلظت مشخص شده در تعیین غلظت ماده آزمایش در مخلوطی <span class="ltr-text">1:1 (v/v)</span> با <span class="ltr-text">FCA</span>. حیوانات کنترل تزریقی از مخلوط <span class="ltr-text">1:1 (v/v)</span> از <span class="ltr-text">FCA</span> و حلال/واسطه دریافت می‌کنند.</p></li>
+            </ul>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فاز القای کاربرد موضعی</h4>
+            <p class="mb-4">هفت روز (<span class="ltr-text">±1</span> روز) پس از اتمام فاز القای تزریق داخل پوستی، نمونه آزمایش را با کاربرد موضعی به ناحیه بین کتف هر حیوان تجویز کنید. برای هر دو حیوان آزمایش و کنترل، اگر آماده‌سازی ماده آزمایش باعث تحریک پوست نمی‌شود، تقریباً <span class="ltr-text">24</span> ساعت قبل از شروع فاز القای کاربرد موضعی، <span class="ltr-text">10%</span> سدیم لوریل سولفات در وازلین را برای ایجاد تحریک موضعی اعمال کنید.</p>
+            <p class="mb-4">حیوانات آزمایش باید قطعات <span class="ltr-text">2- × 4-cm</span> کاغذ صافی یا گاز جاذب را که کاملاً با آماده‌سازی ماده آزمایش (تهیه شده در عرض <span class="ltr-text">24</span> ساعت قبل از استفاده) با استفاده از غلظت انتخاب شده در تعیین غلظت ماده آزمایش بارگذاری شده‌اند، روی هر محل تزریق اعمال کنند. کاغذ صافی یا گاز جاذب باید با استفاده از پانسمان‌های انسدادی به حیوانات محکم شود. حیوانات کنترل همین درمان را دریافت می‌کنند، با این تفاوت که به جای ماده آزمایش، از حلال/واسطه مناسب استفاده می‌شود.</p>
+            <p class="mb-4">پانسمان‌ها و چسب‌ها را تقریباً <span class="ltr-text">48</span> ساعت پس از اعمال بردارید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فاز چالش</h4>
+            <p class="mb-4">این فاز باید <span class="ltr-text">14 ± 1</span> روز پس از فاز القای کاربرد موضعی رخ دهد. موها باید از محل‌های کاربرد آزمایش برداشته شوند. چسب‌های کاغذ صافی یا محفظه‌ها با آماده‌سازی ماده آزمایش تازه تهیه شده با غلظت مشخص شده در تعیین غلظت ماده آزمایش خیسانده می‌شوند. این کار برای تمام حیوانات آزمایش و کنترل انجام می‌شود. چسب‌ها یا محفظه‌ها با یک پانسمان انسدادی محکم می‌شوند و پس از <span class="ltr-text">24 ± 2</span> ساعت برداشته می‌شوند.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">مشاهدات</h3>
+            <p class="mb-4">تقریباً <span class="ltr-text">24</span>، <span class="ltr-text">48</span> و <span class="ltr-text">72</span> ساعت پس از برداشتن چسب‌های چالش، محل‌های کاربرد باید از نظر علائم واکنش بررسی شوند. موارد خاصی که واکنش حیوانات آزمایش از حیوانات کنترل بیشتر باشد، از اهمیت ویژه‌ای برخوردارند. تمام علائم واکنش‌پذیری باید ثبت شوند، با توجه ویژه به علائم اریتم و ادم. واکنش ادماتوز واقعی تحت فشار ملایم رنگ‌پریده می‌شود. هرچه دوره رنگ‌پریدگی طولانی‌تر باشد، شدت ادم بیشتر است.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تفسیر</h3>
+            <p class="mb-4">بیش از یک روش برای ارزیابی و درجه‌بندی نتایج حاصل از <span class="ltr-text">GPMT</span> وجود دارد. جداول <span class="ltr-text">4</span>، <span class="ltr-text">5</span> و <span class="ltr-text">6</span> جزئیات سه سیستم درجه‌بندی را فهرست می‌کنند. درجه‌های <span class="ltr-text">1</span> یا بالاتر در حیوانات آزمایش، با درجه‌های کمتر از <span class="ltr-text">1</span> در حیوانات کنترل، نشان‌دهنده حساسیت‌زایی هستند. اگر حیوانات کنترل واکنش‌پذیری درجه <span class="ltr-text">1</span> را نشان دهند و حیوانات آزمایش واکنش‌پذیری بالاتر از بیشترین واکنش‌پذیری مشاهده شده در حیوانات کنترل را نشان دهند، دوباره حساسیت‌زایی به دلیل ماده آزمایش مشکوک است. درصدهای جدول <span class="ltr-text">4</span> در صورت وجود تنها <span class="ltr-text">10</span> حیوان آزمایش باید بازنگری شوند (یعنی دسته‌ها <span class="ltr-text">0</span>، <span class="ltr-text">&lt;10%</span>، <span class="ltr-text">10%–30%</span>، <span class="ltr-text">31%–60%</span>، <span class="ltr-text">61%–80%</span> و <span class="ltr-text">81%–100%</span> خواهند بود). اگر <span class="ltr-text">20</span> حیوان آزمایش وجود داشته باشد، مضرب‌های <span class="ltr-text">5%</span> مناسب هستند.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">جدول <span class="ltr-text">4</span>. طبقه‌بندی بر اساس درصد حیوانات آزمایش واکنش‌دهنده</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>درصد مثبت‌ها در گروه آزمایش</th>
+                        <th>درجه طبقه اختصاص داده شده</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">0</span></td>
+                        <td>— غیرحساسیت‌زا</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">&lt;8</span></td>
+                        <td><span class="ltr-text">1</span> ضعیف</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">8–28</span></td>
+                        <td><span class="ltr-text">2</span> خفیف</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">29–64</span></td>
+                        <td><span class="ltr-text">3</span> متوسط</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">65–80</span></td>
+                        <td><span class="ltr-text">4</span> قوی</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">81–100</span></td>
+                        <td><span class="ltr-text">5</span> شدید</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">جدول <span class="ltr-text">5</span>. طبقه‌بندی بر اساس تشکیل اریتم و ادم</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>اریتم و اِسکار</th>
+                        <th>درجه</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>بدون اریتم</td>
+                        <td><span class="ltr-text">0</span></td>
+                    </tr>
+                    <tr>
+                        <td>اریتم خفیف یا مشکوک</td>
+                        <td><span class="ltr-text">&lt;1</span></td>
+                    </tr>
+                    <tr>
+                        <td>اریتم مشخص</td>
+                        <td><span class="ltr-text">2</span></td>
+                    </tr>
+                    <tr>
+                        <td>اریتم متوسط</td>
+                        <td><span class="ltr-text">3</span></td>
+                    </tr>
+                    <tr>
+                        <td>اریتم شدید تا تشکیل اسکار خفیف</td>
+                        <td><span class="ltr-text">4</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><strong>ادم</strong></td>
+                    </tr>
+                    <tr>
+                        <td>بدون ادم</td>
+                        <td><span class="ltr-text">0</span></td>
+                    </tr>
+                    <tr>
+                        <td>ادم خفیف یا مشکوک</td>
+                        <td><span class="ltr-text">&lt;1</span></td>
+                    </tr>
+                    <tr>
+                        <td>ادم مشخص</td>
+                        <td><span class="ltr-text">2</span></td>
+                    </tr>
+                    <tr>
+                        <td>ادم متوسط</td>
+                        <td><span class="ltr-text">3</span></td>
+                    </tr>
+                    <tr>
+                        <td>ادم شدید</td>
+                        <td><span class="ltr-text">4</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">جدول <span class="ltr-text">6</span>. طبقه‌بندی بر اساس تشکیل اریتم به تنهایی</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>تشکیل اریتم</th>
+                        <th>درجه</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>بدون اریتم</td>
+                        <td><span class="ltr-text">0</span></td>
+                    </tr>
+                    <tr>
+                        <td>اریتم مجزا یا تکه‌ای</td>
+                        <td><span class="ltr-text">1</span></td>
+                    </tr>
+                    <tr>
+                        <td>اریتم متوسط و پیوسته</td>
+                        <td><span class="ltr-text">2</span></td>
+                    </tr>
+                    <tr>
+                        <td>اریتم و تورم شدید</td>
+                        <td><span class="ltr-text">3</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="mb-4">نتایج باید برای تحلیل آماری (به عنوان مثال، جدول توافقی کای‌دو) ارسال شوند تا مشخص شود آیا تفاوت‌ها در امتیازات بین حیوانات تحت درمان و کنترل معنی‌دار هستند. پاسخ گروه آزمایش در مقایسه با گروه کنترل باید به صورت آماری مقایسه شود. (آزمون <span class="ltr-text">Mann-Whitney U</span> می‌تواند برای مقایسه استفاده شود.)</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">چالش مجدد</h3>
+            <p class="mb-4">میزان هر پاسخی در گروه کنترل منفی، تحت شرایط تجربی، پتانسیل تحریک‌زایی آماده‌سازی ماده آزمایش را نشان می‌دهد. در این حالت، حیوانات آزمایش و کنترل باید یک هفته بعد در سمت بدون درمان حیوان، با غلظت کاهش‌یافته آماده‌سازی ماده آزمایش، مجدداً چالش شوند. یک خوکچه هندی حساسیت‌یافته به هر دو چالش تا حدی واکنش نشان خواهد داد. واکنش ضعیف که در یک نقطه زمانی و فقط در یک چالش رخ می‌دهد، باید شک جدی ایجاد کند که آیا آن خوکچه هندی واقعاً حساسیت‌یافته است.<sup>2</sup></p>
+            <p class="text-sm italic text-gray-600"><sup>2</sup> <span class="ltr-text">Basketter D.A. Guinea pig predictive tests for contact hypersensitivity. In Immunotoxicology and Immunopharmacology, 2nd ed.; Dean, J.H, Luster, M.I., Munson, A.E., Kimber, I., Eds; Raven Press, Ltd: New York, 1994; pp 693–702.</span></p>
+        </section>
+
+        <section class="mb-8 card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایش‌های استاندارد <span class="ltr-text">BUEHLER (SBT)</span></h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">حیوانات</h3>
+            <p class="mb-4">به «حیوانات» در آزمایش ماکسیمیزاسیون خوکچه هندی <span class="ltr-text">Magnusson & Kligman (GPMT)</span> مراجعه کنید.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">نگهداری و تغذیه</h3>
+            <p class="mb-4">به «نگهداری و تغذیه» در آزمایش ماکسیمیزاسیون خوکچه هندی <span class="ltr-text">Magnusson & Kligman (GPMT)</span> مراجعه کنید.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آماده‌سازی حیوانات قبل از آزمایش</h3>
+            <p class="mb-4">به «آماده‌سازی حیوانات قبل از آزمایش» تحت آزمایش ماکسیمیزاسیون خوکچه هندی <span class="ltr-text">Magnusson & Kligman (GPMT)</span> مراجعه کنید. موهای یک پهلو خوکچه هندی ممکن است با کوتاه کردن برداشته شود.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آماده‌سازی ماده آزمایش</h3>
+            <p class="mb-4">به «آماده‌سازی ماده آزمایش» در آزمایش ماکسیمیزاسیون خوکچه هندی <span class="ltr-text">Magnusson & Kligman (GPMT)</span> مراجعه کنید.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تعیین غلظت ماده آزمایش</h3>
+            <p class="mb-4">هدف از این مطالعه مقدماتی، تعیین غلظت‌های آماده‌سازی ماده آزمایش است که باید در فاز اولیه القا و فاز چالش دوم یک مطالعه <span class="ltr-text">SBT</span> استفاده شود. ممکن است دو یا سه حیوان برای تعیین غلظت استفاده شوند.</p>
+            <p class="mb-4">طیفی از غلظت‌های ماده آزمایش یا عصاره‌های آن باید با استفاده از چسب‌ها (به عنوان مثال، چهار پد جاذب <span class="ltr-text">4 cm<sup>2</sup></span>) یا محفظه‌ها اعمال شود. چسب‌ها باید با استفاده از نوار چسب (در صورت لزوم) و پانسمان‌های انسدادی در جای خود نگه داشته شوند. چسب‌ها باید پس از تقریباً <span class="ltr-text">6</span> ساعت برداشته شوند و هرگونه باقی‌مانده از ماده شیمیایی آزمایش از محل آزمایش برداشته شود. مشاهدات در آن زمان، و در <span class="ltr-text">24</span> و <span class="ltr-text">48</span> ساعت انجام می‌شود.</p>
+            <p class="mb-4">غلظتی که تنها باعث تحریک خفیف تا متوسط (اریتم خفیف، بدون شواهدی از سمیت آشکار برای حیوانات) می‌شود و می‌تواند به طور مکرر در همان محل اعمال شود، باید در فاز القای روش آزمایش استفاده شود. از بالاترین غلظت ماده آزمایش یا عصاره که باعث اریتم نمی‌شود برای فاز چالش روش آزمایش استفاده کنید.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">روش آزمایش</h3>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فاز القا</h4>
+            <p class="mb-4">مقدار <span class="ltr-text">0.4 mL</span> از آماده‌سازی ماده آزمایش را در یک حلال/واسطه مناسب با دوز مشخص شده در تعیین غلظت ماده آزمایش اعمال کنید. از چسب‌هایی مشابه آنچه در تعیین غلظت ماده آزمایش استفاده شد، استفاده کنید. چسب‌ها باید روی یک پهلو (با موهای کوتاه شده) اعمال شوند و به مدت <span class="ltr-text">6</span> ساعت به صورت انسدادی در جای خود نگه داشته شوند. ممکن است لازم باشد حیوانات مهار شوند تا انسداد تضمین شود. چسب‌ها و هر گونه باقی‌مانده قابل مشاهده باید پس از <span class="ltr-text">6</span> ساعت برداشته شوند. حیوانات کنترل نیز چسب دریافت می‌کنند، اما اینها فقط حاوی حلال/واسطه مناسب هستند. این فرآیند باید سه بار در هفته برای هر دو حیوان آزمایش و کنترل در همان محل به مدت سه هفته متوالی تکرار شود (فواصل هفتگی در آزمایش <span class="ltr-text">Buehler</span> اصلاح شده استفاده می‌شود).</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فاز چالش</h4>
+            <p class="mb-4">این فاز باید <span class="ltr-text">14</span> روز پس از آخرین کاربرد فاز القا انجام شود. <span class="ltr-text">24</span> ساعت قبل از کاربرد چالش، موهای پهلوهای قبلاً آزمایش نشده هر حیوان را کوتاه کنید. مانند فاز القا، چسب‌های حاوی ماده آزمایش (غلظت مشخص شده در تعیین غلظت ماده آزمایش) یا فقط حلال/واسطه را به نواحی آزمایش نشده حیوانات آزمایش و کنترل اعمال کنید. برای به دست آوردن لبه‌های مشخص در محل‌های کاربرد، محفظه‌های تجاری با لبه لب‌دار ترجیح داده می‌شوند. چسب‌ها را با پانسمان‌های انسدادی محکم کنید و آنها را به مدت <span class="ltr-text">6</span> ساعت در جای خود نگه دارید. تمام چسب‌ها را پس از <span class="ltr-text">6</span> ساعت بردارید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مشاهدات</h4>
+            <p class="mb-4">در <span class="ltr-text">22 ± 2</span> ساعت پس از برداشتن چسب‌ها، موهای محل‌های کاربرد باید با کوتاه کردن یا موزدایی برداشته شوند. پس از تقریباً <span class="ltr-text">2</span> ساعت دیگر، محل‌ها را درجه‌بندی کنید (جداول <span class="ltr-text">4</span>، <span class="ltr-text">5</span> یا <span class="ltr-text">6</span> ممکن است استفاده شوند). تمام علائم واکنش‌پذیری باید ثبت شوند، با توجه ویژه به علائم اریتم و ادم. درجه‌بندی را یک بار دیگر پس از <span class="ltr-text">24</span> تا <span class="ltr-text">48</span> ساعت دیگر تکرار کنید. پاسخ گروه آزمایش در مقایسه با گروه کنترل می‌تواند به صورت آماری مقایسه شود. (آزمون <span class="ltr-text">Mann-Whitney U</span> می‌تواند برای مقایسه استفاده شود.)</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تفسیر</h3>
+            <p class="mb-4">نتایج باید برای تحلیل آماری (به عنوان مثال، جدول توافقی کای‌دو) ارسال شوند تا مشخص شود آیا تفاوت‌ها در امتیازات بین حیوانات تحت درمان و کنترل معنی‌دار هستند.</p>
+            <p class="mb-4">به «تفسیر» در آزمایش ماکسیمیزاسیون خوکچه هندی <span class="ltr-text">Magnusson & Kligman (GPMT)</span> مراجعه کنید.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">چالش مجدد</h3>
+            <p class="mb-4">به «چالش مجدد» در آزمایش ماکسیمیزاسیون خوکچه هندی <span class="ltr-text">Magnusson & Kligman (GPMT)</span> مراجعه کنید.</p>
+        </section>
+
+        <section class="mb-8 card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سایر روش‌های آزمایش حساسیت‌زایی</h2>
+            <p class="mb-4">آزمایش ماکسیمیزاسیون خوکچه هندی <span class="ltr-text">Magnusson & Kligman</span> و آزمایش‌های استاندارد <span class="ltr-text">Buehler</span> متداول‌ترین آزمایش‌های حساسیت‌زایی هستند. با این حال، تعدادی روش دیگر نیز وجود دارد که ممکن است در ارزیابی پتانسیل حساسیت‌زایی مفید باشند. برخی ممکن است برای هر دو ماده آزمایش جامد و عصاره‌ها، و برخی فقط برای عصاره‌ها قابل استفاده باشند.</p>
+            <p class="mb-4">در مواردی که استفاده از خوکچه‌های هندی در آزمایش‌های زیر لازم است، حیوانات و نگهداری آنها باید با الزامات مشخص شده برای «حیوانات» در آزمایش ماکسیمیزاسیون خوکچه هندی <span class="ltr-text">Magnusson & Kligman</span> مطابقت داشته باشند. موهای خوکچه هندی باید از محل‌های آزمایش همانطور که برای «آماده‌سازی حیوانات قبل از آزمایش» در آزمایش ماکسیمیزاسیون خوکچه هندی <span class="ltr-text">Magnusson & Kligman</span> نشان داده شده است، برداشته شوند.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایش <span class="ltr-text">Draize</span></h3>
+            <p class="mb-4">این اولین آزمایش پیش‌بینی‌کننده بود که توسط آژانس‌های نظارتی پذیرفته شد و هنوز هم در حال استفاده است. این آزمایش از خوکچه‌های هندی استفاده می‌کند و ماده آزمایش از طریق تزریق‌های داخل پوستی تجویز می‌شود.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آماده‌سازی ماده آزمایش</h4>
+            <p class="mb-4">این آزمایش نیازمند آن است که ماده آزمایش به صورت محلولی باشد که بتوان مستقیماً روی پوست حیوان اعمال شود. بنابراین، عصاره‌هایی از ماده باید تهیه شوند. برای اطلاعات در مورد روش آماده‌سازی، به «آزمون‌های واکنش‌پذیری بیولوژیکی، در داخل بدن» <a href="88.html" class="text-blue-600 hover:underline" target="_blank">88</a> مراجعه کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فاز القا</h4>
+            <p class="mb-4">یک پهلو از هر <span class="ltr-text">20</span> خوکچه هندی تراشیده می‌شود، سپس <span class="ltr-text">0.05 mL</span> از محلول <span class="ltr-text">0.1%</span> ماده آزمایش به پهلو قدامی تزریق می‌شود. روز بعد، و سپس هر دو روز یکبار تا روز <span class="ltr-text">20</span>، <span class="ltr-text">0.1 mL</span> از ماده آزمایش به یک محل جدید در همان پهلو تزریق می‌شود.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فاز چالش</h4>
+            <p class="mb-4">این فاز <span class="ltr-text">2</span> هفته پس از آخرین تزریق فاز القا آغاز می‌شود. پهلو بدون درمان تراشیده می‌شود، سپس <span class="ltr-text">0.05 mL</span> از ماده آزمایش به هر یک از <span class="ltr-text">20</span> خوکچه هندی تزریق می‌شود. <span class="ltr-text">20</span> حیوان که قبلاً درمان نشده بودند به عنوان کنترل عمل می‌کنند و آنها نیز تزریق ماده آزمایش را دریافت می‌کنند.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مشاهدات</h4>
+            <p class="mb-4">محل‌های آزمایش تمام حیوانات کنترل و آزمایش از نظر اریتم <span class="ltr-text">24</span> و <span class="ltr-text">48</span> ساعت پس از تزریق‌های چالش ارزیابی می‌شوند. درجه واکنش در حیوانات آزمایش با واکنش در حیوانات کنترل مقایسه می‌شود. پاسخ بزرگتر و/یا شدیدتر توسط حیوانات آزمایش در مقایسه با حیوانات کنترل نشان‌دهنده حساسیت‌زایی است.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایش اپی‌کوتانئوس باز (<span class="ltr-text">Open Epicutaneous Test</span>)</h3>
+            <p class="mb-4">این آزمایش از خوکچه‌های هندی استفاده می‌کند. هدف آن تعیین دوز مورد نیاز برای القای حساسیت‌زایی با شبیه‌سازی استفاده انسانی از طریق کاربرد موضعی ماده آزمایش است.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آماده‌سازی ماده آزمایش</h4>
+            <p class="mb-4">این آزمایش نیازمند آن است که ماده آزمایش به صورت محلولی باشد که بتوان مستقیماً روی پوست حیوان اعمال شود. بنابراین، عصاره‌هایی از ماده باید تهیه شوند. برای اطلاعات در مورد روش آماده‌سازی، به «آزمون‌های واکنش‌پذیری بیولوژیکی، در داخل بدن» <a href="88.html" class="text-blue-600 hover:underline" target="_blank">88</a> مراجعه کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آزمایش مقدماتی</h4>
+            <p class="mb-4">طیفی از غلظت‌های ماده آزمایش به نواحی <span class="ltr-text">2 cm<sup>2</sup></span> پوست در پهلو قدامی <span class="ltr-text">6</span> تا <span class="ltr-text">8</span> خوکچه هندی (<span class="ltr-text">0.025 mL</span> در هر کاربرد) اعمال می‌شود. محل‌های آزمایش باید <span class="ltr-text">24</span> ساعت پس از تجویز ماده آزمایش از نظر اریتم بررسی شوند. بالاترین غلظتی که باعث تحریک نمی‌شود (حداکثر غلظت غیرمحرک) و کمترین غلظت که باعث اریتم در تقریباً <span class="ltr-text">25%</span> از حیوانات می‌شود (حداقل غلظت محرک) تعیین می‌شوند.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فاز القا</h4>
+            <p class="mb-4">ماده آزمایش (یا واسطه کنترل) به نواحی <span class="ltr-text">8 cm<sup>2</sup></span> از پوست پهلو <span class="ltr-text">6</span> تا <span class="ltr-text">8</span> خوکچه هندی به صورت روزانه برای <span class="ltr-text">3</span> هفته، یا پنج بار در هفته برای <span class="ltr-text">4</span> هفته اعمال می‌شود. مقدار در هر کاربرد <span class="ltr-text">0.01 mL</span> است. مجموعه‌ای از غلظت‌های افزایشی دوباره به کار گرفته می‌شود، از حداقل غلظت محرک با پیشرفت گام به گام. ماده آزمایش باید هر بار به همان محل‌ها اعمال شود، مگر اینکه تحریک ایجاد شود، در این صورت باید از محل جدیدی در همان پهلو استفاده شود. حیوانات کنترل همان سری درمان‌ها را با استفاده از واسطه به جای ماده آزمایش دریافت می‌کنند.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فاز چالش</h4>
+            <p class="mb-4">هر حیوان <span class="ltr-text">24</span> تا <span class="ltr-text">72</span> ساعت پس از آخرین درمان فاز القا، در پهلو بدون درمان با استفاده از <span class="ltr-text">0.025 mL</span> اعمال شده به نواحی <span class="ltr-text">2 cm<sup>2</sup></span> چالش می‌شود. مجموعه‌ای از غلظت‌های افزایشی، از حداقل غلظت محرک تا حداکثر غلظت غیرمحرک، و پنج غلظت پایین‌تر نیز استفاده می‌شود.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مشاهدات</h4>
+            <p class="mb-4">محل‌های آزمایش <span class="ltr-text">24</span>، <span class="ltr-text">48</span> و <span class="ltr-text">72</span> ساعت پس از درمان ارزیابی می‌شوند. حداکثر غلظتی که در گروه کنترل باعث تحریک نمی‌شود، تعیین می‌شود. حیوانات از گروه‌های آزمایش که در غلظت‌های پایین‌تر از حداکثر غلظت غیرمحرک در کنترل‌ها پاسخ‌های التهابی ایجاد می‌کنند، باید حساسیت‌یافته در نظر گرفته شوند.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایش <span class="ltr-text">Freund’s Complete Adjuvant</span></h3>
+            <p class="mb-4">این آزمایش بر اساس استفاده از تزریق‌های داخل پوستی با استفاده از ماده آزمایش در مخلوطی از <span class="ltr-text">Freund’s complete adjuvant</span> و آب مقطر (<span class="ltr-text">50:50</span>) است.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آماده‌سازی ماده آزمایش</h4>
+            <p class="mb-4">از آنجایی که این آزمایش از تزریق‌های داخل پوستی استفاده می‌کند، برای استفاده از این روش باید عصاره‌هایی از ماده آزمایش تهیه شوند. برای اطلاعات در مورد روش استخراج، به «آزمون‌های واکنش‌پذیری بیولوژیکی، در داخل بدن» <a href="88.html" class="text-blue-600 hover:underline" target="_blank">88</a> مراجعه کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آزمایش مقدماتی</h4>
+            <p class="mb-4">حداقل غلظت محرک و حداکثر غلظت غیرمحرک به همان شیوه آزمایش مقدماتی در آزمایش اپی‌کوتانئوس باز تعیین می‌شوند.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فاز القا</h4>
+            <p class="mb-4">ناحیه آزمایش شامل شش ناحیه <span class="ltr-text">2 cm<sup>2</sup></span> در سراسر شانه‌های خوکچه‌های هندی است. دو گروه <span class="ltr-text">10</span> تا <span class="ltr-text">20</span> خوکچه هندی باید استفاده شوند. حیوانات گروه آزمایش با <span class="ltr-text">0.1 mL</span> از محلول <span class="ltr-text">5%</span> عصاره ماده آزمایش در <span class="ltr-text">FCA/water</span> به صورت داخل پوستی تزریق می‌شوند. حیوانات کنترل تزریق‌هایی با <span class="ltr-text">FCA/water</span> بدون ماده آزمایش دریافت می‌کنند. این تزریق‌ها هر <span class="ltr-text">4</span> روز تکرار می‌شوند تا مجموعاً سه تزریق انجام شود.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فاز چالش</h4>
+            <p class="mb-4">این فاز باید <span class="ltr-text">2</span> هفته پس از آخرین تزریق فاز القا آغاز شود. کاربردهای موضعی <span class="ltr-text">0.025 mL</span> از ماده آزمایش در حداقل غلظت محرک و حداکثر غلظت غیرمحرک، به علاوه دو غلظت پایین‌تر، به نواحی <span class="ltr-text">2 cm<sup>2</sup></span> از پهلو تراشیده شده تجویز می‌شوند. محل‌های آزمایش باید بدون پوشش باقی بمانند.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مشاهدات</h4>
+            <p class="mb-4">محل‌های آزمایش از نظر وجود اریتم <span class="ltr-text">24</span>، <span class="ltr-text">48</span> و <span class="ltr-text">72</span> ساعت پس از کاربردهای موضعی بررسی می‌شوند. حداقل غلظت غیرمحرک در حیوانات کنترل باید تعیین شود. آن حیوانات آزمایش که در غلظت‌های پایین‌تر از حداقل غلظت غیرمحرک در حیوانات کنترل اریتم نشان می‌دهند، باید حساسیت‌یافته در نظر گرفته شوند.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایش بهینه‌سازی (<span class="ltr-text">Optimization Test</span>)</h3>
+            <p class="mb-4">این آزمایش شباهت‌هایی به آزمایش قدیمی‌تر <span class="ltr-text">Draize</span> دارد. با این حال، برخلاف آزمایش <span class="ltr-text">Draize</span>، این آزمایش از هر دو درمان داخل پوستی و موضعی استفاده می‌کند و شامل ادجوانت برای برخی تزریق‌های القایی است.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آماده‌سازی ماده آزمایش</h4>
+            <p class="mb-4">مانند سایر روش‌های آزمایشی که شامل تزریق‌های داخل پوستی هستند، ماده آزمایش باید به شکلی باشد که برای تزریق مناسب باشد. برای اطلاعات در مورد روش استخراج، به «آزمون‌های واکنش‌پذیری بیولوژیکی، در داخل بدن» <a href="88.html" class="text-blue-600 hover:underline" target="_blank">88</a> مراجعه کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فاز القا</h4>
+            <p class="mb-4"><span class="ltr-text">20</span> خوکچه هندی آزمایش و <span class="ltr-text">20</span> خوکچه هندی کنترل استفاده می‌شوند. در مجموع <span class="ltr-text">10</span> تزریق داخل پوستی باید به هر حیوان داده شود. حیوانات آزمایش <span class="ltr-text">0.1 mL</span> از مخلوط <span class="ltr-text">0.1%</span> ماده آزمایش و <span class="ltr-text">0.9%</span> سالین (<span class="ltr-text">50:50</span>) را در روز <span class="ltr-text">1</span> دریافت می‌کنند، با یک تزریق به یک پهلو تراشیده شده و دیگری به قسمتی از پوست پشت تراشیده شده. دو و چهار روز بعد، یک تزریق داخل پوستی از ماده آزمایش در سالین به هشت محل جدید پشت داده می‌شود. هر دو روز یکبار در طول هفته‌های <span class="ltr-text">2</span> و <span class="ltr-text">3</span>، ماده آزمایش به صورت داخل پوستی به <span class="ltr-text">10</span> محل روی شانه‌ها در مخلوط <span class="ltr-text">50:50</span> سالین و <span class="ltr-text">FCA</span> تزریق می‌شود. همین ترتیب تزریق‌ها به <span class="ltr-text">20</span> حیوان کنترل داده می‌شود، با این تفاوت که هیچ ماده آزمایشی با تزریق‌های سالین یا سالین/<span class="ltr-text">FCA</span> گنجانده نمی‌شود.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فاز چالش</h4>
+            <p class="mb-4"><span class="ltr-text">35</span> روز پس از اولین تزریق، حیوانات با <span class="ltr-text">0.1 mL</span> از محلول <span class="ltr-text">0.1%</span> ماده آزمایش در سالین (برای حیوانات آزمایش) به صورت موضعی چالش می‌شوند. حیوانات کنترل فقط تزریق سالین دریافت می‌کنند. <span class="ltr-text">45</span> روز پس از اولین تزریق، چالش موضعی دوم انجام می‌شود. غلظت غیرمحرک از ماده آزمایش (<span class="ltr-text">0.05 mL</span>) به صورت موضعی به یک ناحیه <span class="ltr-text">1 cm<sup>2</sup></span> از پوست بدون درمان اعمال می‌شود. این محل باید سپس با یک قطعه <span class="ltr-text">2 cm<sup>2</sup></span> کاغذ صافی پوشانده شود، پس از آن یک پانسمان انسدادی اعمال شود. چسب باید پس از <span class="ltr-text">24</span> ساعت برداشته شود.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مشاهدات</h4>
+            <p class="mb-4"><span class="ltr-text">24</span> ساعت پس از هر تزریق در طول هفته <span class="ltr-text">1</span>، ضخامت چین پوستی روی محل‌های تزریق برای هر حیوان باید با استفاده از کولیس (<span class="ltr-text">mm</span>) اندازه‌گیری شود و دو بزرگترین قطر متقاطع هر واکنش اریتماتوز (<span class="ltr-text">mm</span>) ثبت شود. حجم‌های واکنش با ضرب ضخامت چین در حاصل‌ضرب دو قطر متقاطع (بر حسب <span class="ltr-text">µL</span>) محاسبه می‌شوند. میانگین حجم واکنش (<span class="ltr-text">+1 SD</span>) در طول هفته <span class="ltr-text">1</span> باید برای هر حیوان محاسبه شود.</p>
+            <p class="mb-4">حجم‌های واکنش چالش برای هر حیوان پس از تزریق‌های روز <span class="ltr-text">35</span> محاسبه می‌شوند. اگر یک حیوان حجم واکنش چالش بزرگتر از میانگین حجم واکنش خود <span class="ltr-text">+ 1 SD</span> را نشان دهد، باید حساسیت‌یافته در نظر گرفته شود.</p>
+            <p class="mb-4">پس از چالش آزمایش چسب، محل‌های آزمایش از نظر اریتم و ادم ارزیابی می‌شوند. ارزیابی‌ها باید با استفاده از جدول <span class="ltr-text">5</span> انجام شوند.</p>
+            <p class="mb-4">تعداد حیوانات مثبت باید به صورت آماری با حیوانات کنترل شبه‌مثبت مقایسه شود. این کار باید برای هر دو نتایج تزریق داخل پوستی و نتایج آزمایش چسب انجام شود. آزمون دقیق <span class="ltr-text">Fisher</span> ممکن است استفاده شود.</p>
+            <p class="mb-4">نتایج حاصل از تزریق‌های داخل پوستی و آزمایش چسب، پس از تحلیل آماری جداگانه، ممکن است ترکیب و با استفاده از جدول <span class="ltr-text">7</span> ارزیابی شوند تا یک ماده آزمایش به عنوان حساسیت‌زای قوی، متوسط یا ضعیف؛ یا غیرحساسیت‌زا طبقه‌بندی شود.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">جدول <span class="ltr-text">7</span>. طرح طبقه‌بندی برای مواد آزمایش بر اساس آزمایش بهینه‌سازی</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>داخل پوستی: <span class="ltr-text">%</span> حیوانات مثبت</th>
+                        <th>آزمایش چسب: <span class="ltr-text">%</span> حیوانات مثبت</th>
+                        <th>طبقه‌بندی</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">S*, > 75</span></td>
+                        <td>و/یا <span class="ltr-text">S, > 50</span></td>
+                        <td>حساسیت‌زای قوی</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">S, 50–75</span></td>
+                        <td>و/یا <span class="ltr-text">S, 30–50</span></td>
+                        <td>حساسیت‌زای متوسط</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">S, 30–50</span></td>
+                        <td><span class="ltr-text">N.S.*, 0–30</span></td>
+                        <td>حساسیت‌زای ضعیف</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">N.S., 0–30</span></td>
+                        <td><span class="ltr-text">N.S., 0</span></td>
+                        <td>غیرحساسیت‌زا</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="text-sm italic text-gray-600">* <span class="ltr-text">S = significant; N.S. = not significant</span></p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایش <span class="ltr-text">Split Adjuvant</span></h3>
+            <p class="mb-4">این آزمایش از هر دو <span class="ltr-text">FCA</span> و آسیب پوستی استفاده می‌کند. ماده آزمایش به صورت موضعی اعمال می‌شود.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آماده‌سازی ماده آزمایش</h4>
+            <p class="mb-4">از آنجایی که این آزمایش از کاربردهای موضعی ماده آزمایش استفاده می‌کند، ماده می‌تواند به شکل جامد یا مایع باشد. اگر قرار است عصاره تهیه شود، برای روش‌های استخراج به فصل «آزمون‌های واکنش‌پذیری بیولوژیکی، در داخل بدن» <a href="88.html" class="text-blue-600 hover:underline" target="_blank">88</a> مراجعه کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فاز القا</h4>
+            <p class="mb-4"><span class="ltr-text">10</span> تا <span class="ltr-text">20</span> خوکچه هندی برای هر دو گروه آزمایش و کنترل استفاده می‌شوند. ناحیه‌ای از پوست پشت بلافاصله پشت کتف‌ها باید تا حدی تراشیده شود که پوست براق شود. سپس نواحی تراشیده شده باید با یخ خشک برای <span class="ltr-text">5</span> تا <span class="ltr-text">10</span> ثانیه درمان شوند. یک پانسمان از گاز مش شل با چسب کشسان و یک دهانه <span class="ltr-text">2- × 2-cm</span> باید روی ناحیه درمان شده قرار گیرد، سپس با نوار چسب محکم شود. ماده آزمایش (<span class="ltr-text">0.2 mL</span> از مواد چسبناک، <span class="ltr-text">0.1 mL</span> از مایعات، یا ماده جامد) در داخل دهانه پانسمان روی پوست درمان شده قرار می‌گیرد. دو لایه کاغذ صافی شماره <span class="ltr-text">2</span> باید روی ماده آزمایش قرار گیرد، سپس با نوار چسب انسدادی پشتیبانی شود. سپس کاغذ صافی/ماده با پشتی انسدادی باید با نوار چسب به پانسمان اطراف محکم شود. پس از گذشت <span class="ltr-text">2</span> روز، کاغذ صافی باید از محل‌های آزمایش برداشته شود و ماده آزمایش دوباره روی همان محل اعمال شود. کاغذ صافی و پشتیبانی باید دوباره محکم شوند. پس از <span class="ltr-text">2</span> روز دیگر، کاغذ صافی باید برداشته شود و دو تزریق <span class="ltr-text">0.075 mL</span> از <span class="ltr-text">FCA</span> به لبه‌های محل آزمایش تجویز شود. سپس ماده آزمایش دوباره اعمال می‌شود و کاغذ صافی/پشتیبانی دوباره محکم می‌شود. ماده آزمایش باید یک بار دیگر در روز <span class="ltr-text">7</span> دوباره اعمال شود و کاغذ صافی/پشتیبانی دوباره مهر و موم شود. در روز <span class="ltr-text">9</span>، کاغذ صافی و تمام مواد پانسمان مرتبط باید برداشته شوند.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فاز چالش</h4>
+            <p class="mb-4">در روز <span class="ltr-text">22</span> پس از درمان القا، <span class="ltr-text">0.5 mL</span> از ماده آزمایش (یا ماده جامد) باید به یک ناحیه <span class="ltr-text">2-× 2-cm</span> از میانه پشت تراشیده شده اعمال شود. محل‌های آزمایش باید با کاغذ صافی پوشانده شوند و با نوار چسب پشتیبانی شوند. این باید با یک باند کشسان که با نوار چسب محکم شده است، در جای خود نگه داشته شود. حیوانات کنترل همان درمان فاز چالش را دریافت می‌کنند. آماده‌سازی باید پس از <span class="ltr-text">24</span> ساعت برداشته شود.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مشاهدات</h4>
+            <p class="mb-4"><span class="ltr-text">24</span>، <span class="ltr-text">48</span> و <span class="ltr-text">72</span> ساعت پس از برداشتن آماده‌سازی فاز چالش، محل‌های آزمایش باید از نظر اریتم و ادم ارزیابی شوند. طرح درجه‌بندی جدول <span class="ltr-text">5</span> می‌تواند استفاده شود.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایش تورم گوش موش (<span class="ltr-text">Mouse Ear Swelling Test</span>)</h3>
+            <p class="mb-4">تعدادی مزیت بالقوه در استفاده از موش به جای خوکچه هندی برای روش‌های حساسیت‌زایی وجود دارد. آزمایش‌های کلاسیک خوکچه هندی معمولاً گران هستند و زمان زیادی برای تکمیل نیاز دارند. علاوه بر این، با وابستگی به امتیازدهی نسبتاً ذهنی بر اساس ادم و اریتم، قدرت روش‌شناختی و استحکام ممکن است زیر سوال باشد. این آزمایش از موش استفاده می‌کند و شامل هر دو مواجهه موضعی و تزریق است.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حیوانات</h4>
+            <p class="mb-4">موش‌های ماده <span class="ltr-text">CF-1</span>، <span class="ltr-text">Balb/c</span> یا <span class="ltr-text">Swiss</span> <span class="ltr-text">6</span> تا <span class="ltr-text">8</span> هفته‌ای باید استفاده شوند. آنها ممکن است به صورت گروهی در قفس‌های با بستر مستقیم نگهداری شوند. سازگاری باید حداقل برای <span class="ltr-text">5</span> تا <span class="ltr-text">7</span> روز باشد. غذا (غذای مناسب موش) و آب باید به صورت آزاد در دسترس باشند. هیچ حیوانی با لاله گوش آسیب‌دیده نباید در مطالعه استفاده شود. ضخامت هر دو گوش هر حیوان باید در این زمان اندازه‌گیری و ثبت شود.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آماده‌سازی ماده آزمایش</h4>
+            <p class="mb-4">مانند سایر روش‌های آزمایشی که شامل تزریق‌های داخل پوستی هستند، ماده آزمایش باید به شکلی باشد که برای تزریق مناسب باشد. برای اطلاعات در مورد روش استخراج، به «آزمون‌های واکنش‌پذیری بیولوژیکی، در داخل بدن» <a href="88.html" class="text-blue-600 hover:underline" target="_blank">88</a> مراجعه کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آزمایش مقدماتی</h4>
+            <p class="mb-4">غلظت‌های حداقل تحریک‌کننده و حداکثر غیرتحریک‌کننده ماده آزمایش برای این روش باید تعیین شوند. این کار با استفاده از چهار گروه دو موش و بررسی اثرات حداقل چهار غلظت از ماده آزمایش انجام می‌شود.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فاز القا</h4>
+            <p class="mb-4">شکم حیوانات باید تراشیده شود، سپس با نوار چسب جراحی تا زمانی که ناحیه آزمایش براق شود، نوارکشی شود. یک تزریق واحد <span class="ltr-text">0.05 mL</span> از <span class="ltr-text">FCA</span> به دو محل تزریق تقسیم می‌شود که به صورت داخل پوستی در ناحیه تراشیده/نوارکشی شده، اما در امتداد مرزها تجویز می‌شوند. پس از تزریق‌های ادجوانت، <span class="ltr-text">100 µL</span> از ماده آزمایش (با استفاده از حداقل غلظت تحریک‌کننده) یا واسطه (کنترل‌ها) به مرکز نواحی آزمایش تراشیده شده اعمال می‌شود. پس از خشک شدن نواحی آزمایش، موش‌ها باید به قفس‌های خود بازگردانده شوند. نوارکشی و اعمال ماده آزمایش (اما نه <span class="ltr-text">FCA</span>) هر روز برای <span class="ltr-text">3</span> روز آینده تکرار می‌شود.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فاز چالش</h4>
+            <p class="mb-4">این فاز باید <span class="ltr-text">7</span> روز پس از آخرین کاربرد القای موضعی رخ دهد. ماده آزمایش (بالاترین غلظت غیرتحریک‌کننده) باید به صورت موضعی (<span class="ltr-text">20 µL</span>) به یک گوش اعمال شود، در حالی که گوش مقابل <span class="ltr-text">10 µL</span> از واسطه تنها را دریافت می‌کند. این کار باید برای هر دو حیوان آزمایش و کنترل انجام شود.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مشاهدات</h4>
+            <p class="mb-4">ضخامت هر دو گوش هر حیوان باید پس از <span class="ltr-text">24</span> و <span class="ltr-text">48</span> ساعت پس از چالش ثبت شود. اندازه‌گیری‌ها باید با کولیس (کولیس فنردار ترجیح داده می‌شود) انجام شوند. حیوان حساسیت‌یافته حیوانی است که گوش تحت درمان با ماده آزمایش حداقل <span class="ltr-text">20%</span> ضخیم‌تر از گوش مقابل آن باشد. برای معتبر بودن آزمایش، گوش‌های تحت درمان با ماده آزمایش حیوانات کنترل نباید بیش از <span class="ltr-text">10%</span> ضخیم‌تر از گوش‌های مقابل باشند. اگر گوش‌های حیوان کنترل الزامات را برآورده نکنند، آزمایش باید با استفاده از غلظت‌های پایین‌تر تکرار شود.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایش گره لنفاوی محلی (<span class="ltr-text">Local Lymph Node Test</span>)</h3>
+            <p class="mb-4">این آزمایش بر اساس مشاهده‌ای است که مواجهه موش‌ها با حساسیت‌زاها می‌تواند باعث هایپرپلازی سلول‌های <span class="ltr-text">T</span> در گره‌های لنفاوی گوشی موش‌ها شود. این روش شامل هر دو فاز درون‌تنی (<span class="ltr-text">in vivo</span>) و برون‌تنی (<span class="ltr-text">in vitro</span>) است و نیازمند استفاده از رادیوایزوتوپ‌ها است. یک جنبه غیرمعمول این آزمایش این است که هیچ فاز چالشی لازم نیست.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حیوانات</h4>
+            <p class="mb-4">چهار گروه حداقل چهار موش، نر یا ماده <span class="ltr-text">CBA/ca</span> (فقط یک جنس در یک آزمایش معین) بین <span class="ltr-text">8</span> تا <span class="ltr-text">12</span> هفته سن باید استفاده شوند.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آماده‌سازی ماده آزمایش</h4>
+            <p class="mb-4">اگرچه در تئوری می‌توان یک ماده آزمایش جامد را به سطح پشتی گوش موش اعمال کرد، اما در عمل باید از عصاره چنین ماده‌ای استفاده شود. برای اطلاعات در مورد روش استخراج، به «آزمون‌های واکنش‌پذیری بیولوژیکی، در داخل بدن» <a href="88.html" class="text-blue-600 hover:underline" target="_blank">88</a> مراجعه کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آزمایش مقدماتی</h4>
+            <p class="mb-4">یک غلظت غیرسمی از ماده آزمایش باید استفاده شود. اگر قبلاً مشخص نشده باشد، ممکن است یک آزمایش مقدماتی برای سمیت آشکار برای تعیین دوز مناسب لازم باشد.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فاز القا</h4>
+            <p class="mb-4"><span class="ltr-text">25 µL</span> از غلظت مناسب ماده آزمایش، یا واسطه (کنترل‌ها)، باید به سطح پشتی هر لاله گوش برای <span class="ltr-text">3</span> روز متوالی اعمال شود. پنج روز پس از اولین درمان، حیوانات باید از طریق ورید دمی، با <span class="ltr-text">2.5 mL</span> از سالین بافر فسفات حاوی <span class="ltr-text">20 µCi</span> از <span class="ltr-text">3H-methyl thymidine</span> تزریق شوند. پنج ساعت پس از تزریق ایزوتوپی، حیوانات باید یوتانایز شوند. گره‌های لنفاوی گوشی تخلیه کننده باید از هر حیوان از هر گروه آزمایش و کنترل برداشته شوند. گره‌ها از تمام حیوانات درون یک گروه معین باید ترکیب شوند، به طوری که یک سوسپانسیون تک سلولی می‌تواند از هر گروه از حیوانات تهیه شود. سوسپانسیون سلولی می‌تواند با عبور گره‌ها از طریق یک گاز استیل ضد زنگ <span class="ltr-text">200-mesh</span> با استفاده از پیستون سرنگ تهیه شود. سلول‌ها باید سپس با <span class="ltr-text">190 × g</span> برای <span class="ltr-text">10</span> دقیقه سانتریفیوژ شوند، دوباره در <span class="ltr-text">3 mL</span> از <span class="ltr-text">5% trichloroacetic acid (TCA)</span> معلق شوند و یک شب در <span class="ltr-text">4°</span> نگهداری شوند.</p>
+            <p class="mb-4">رسوب حاصل باید با سانتریفیوژ بازیابی شود، و رسوب گلوله شده باید در <span class="ltr-text">1 mL</span> از <span class="ltr-text">5% TCA</span> دوباره معلق شود. سوسپانسیون باید سپس در ویال‌های سوسپانسیون با <span class="ltr-text">10 mL</span> از مایع سوسپانسیون قرار گیرد و <span class="ltr-text">dpm</span> (دزهای در دقیقه) با یک شمارنده بتا اندازه‌گیری شود.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مشاهدات</h4>
+            <p class="mb-4">نسبت <span class="ltr-text">dpm</span> برای هر گروه آزمایش باید با <span class="ltr-text">dpm</span> برای گروه کنترل مقایسه شود. اگر این نسبت برای هر گروه آزمایش برابر یا بیشتر از <span class="ltr-text">3</span> باشد، غلظت ماده آزمایش استفاده شده با آن گروه ممکن است حساسیت‌زا در نظر گرفته شود.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایش تقویت با ویتامین <span class="ltr-text">A</span> (<span class="ltr-text">Vitamin A Enhancement Test</span>)</h3>
+            <p class="mb-4">این آزمایش شبیه آزمایش تورم گوش موش است که در آن مواد آزمایش به صورت موضعی به شکم اعمال می‌شوند، با یک کاربرد چالش به گوش‌ها، و سپس اندازه‌گیری ضخامت گوش. تفاوت اصلی استفاده از غذای موش مکمل شده با <span class="ltr-text">vitamin A acetate</span> است. هدف از مکمل‌سازی افزایش واکنش‌پذیری سیستم ایمنی است، در نتیجه پتانسیل واکنش حساسیت‌زایی افزایش می‌یابد.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حیوانات</h4>
+            <p class="mb-4">موش‌های نر <span class="ltr-text">Balb/c</span> <span class="ltr-text">3</span> تا <span class="ltr-text">4</span> هفته‌ای باید با رژیم غذایی مکمل شده با <span class="ltr-text">vitamin A acetate</span> نگهداری شوند. رژیم غذایی ممکن است با مخلوط کردن هر <span class="ltr-text">kg</span> خوراک با <span class="ltr-text">0.477 g</span> از <span class="ltr-text">gelatinized vitamin A acetate</span> تهیه شود. مخلوط خوراک باید در عرض <span class="ltr-text">3</span> هفته پس از تهیه استفاده شود. موش‌های در نظر گرفته شده برای استفاده در مطالعات حساسیت‌زایی باید حداقل <span class="ltr-text">4</span> هفته در رژیم غذایی مکمل شده باشند. بنابراین موش‌ها در زمان مطالعه حساسیت‌زایی باید بین <span class="ltr-text">7</span> و <span class="ltr-text">10</span> هفته سن داشته باشند. ضخامت هر دو گوش هر حیوان باید در این زمان اندازه‌گیری و ثبت شود.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آماده‌سازی ماده آزمایش</h4>
+            <p class="mb-4">اگرچه در تئوری می‌توان یک ماده آزمایش جامد را به سطح پشتی گوش موش اعمال کرد، اما در عمل باید از عصاره چنین ماده‌ای استفاده شود. برای اطلاعات در مورد استخراج، به «آزمون‌های واکنش‌پذیری بیولوژیکی، در داخل بدن» <a href="88.html" class="text-blue-600 hover:underline" target="_blank">88</a> مراجعه کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آزمایش مقدماتی</h4>
+            <p class="mb-4">بالاترین دوز غیرتحریک‌کننده و حداقل غلظت‌های تحریک‌کننده باید با استفاده از گروه‌های جداگانه حیوانات تعیین شوند. این کار می‌تواند همانطور که برای «آزمایش مقدماتی» در آزمایش تورم گوش موش توضیح داده شد، انجام شود.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فاز القا</h4>
+            <p class="mb-4">موهای شکم و سینه <span class="ltr-text">10</span> موش در هر گروه باید تراشیده شود. سپس <span class="ltr-text">100 µL</span> از ماده آزمایش (با حداقل غلظت تحریک‌کننده) باید به نواحی آزمایش در روزهای <span class="ltr-text">0</span>، <span class="ltr-text">2</span>، <span class="ltr-text">4</span>، <span class="ltr-text">7</span> و <span class="ltr-text">11</span> اعمال شود. حیوانات کنترل <span class="ltr-text">100 µL</span> از واسطه تنها را در همان برنامه دریافت می‌کنند.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فاز چالش</h4>
+            <p class="mb-4">این فاز باید <span class="ltr-text">4</span> روز پس از آخرین کاربرد فاز القا رخ دهد. <span class="ltr-text">25 µL</span> از ماده آزمایش (با حداکثر غلظت غیرتحریک‌کننده) باید به هر گوش از هر حیوان در گروه‌های آزمایش و کنترل اعمال شود.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مشاهدات</h4>
+            <p class="mb-4">ضخامت هر دو گوش هر حیوان باید پس از <span class="ltr-text">24</span> و <span class="ltr-text">48</span> ساعت پس از چالش ثبت شود. اندازه‌گیری‌ها باید با کولیس (کولیس فنردار ترجیح داده می‌شود) انجام شوند. درصد افزایش در ضخامت گوش باید برای هر گوش با کم کردن اندازه‌گیری قبل از درمان از اندازه‌گیری پس از درمان، تقسیم نتیجه بر اندازه‌گیری قبل از درمان، و سپس ضرب در <span class="ltr-text">100</span> محاسبه شود. پاسخ گروه آزمایش در مقایسه با گروه کنترل باید به صورت آماری مقایسه شود. (آزمون <span class="ltr-text">Mann-Whitney U</span> می‌تواند برای مقایسه استفاده شود.)</p>
+            <p class="mb-4">نتایج حیوانات منفرد نیز باید محاسبه شوند. اگر افزایش در ضخامت گوش برای یک حیوان از گروه آزمایش حداقل <span class="ltr-text">50%</span> بیشتر از بزرگترین افزایش یک حیوان کنترل باشد، نشان‌دهنده حساسیت‌زایی است. به عنوان یک ارزیابی کلی، اگر نتایج مطالعه یک نتیجه معنی‌دار از آزمون آماری با <span class="ltr-text">p < 0.01</span> برای مقایسه‌های گروه کنترل در مقابل آزمایش ارائه دهد، یا اگر حداقل دو حیوان آزمایش افزایش ضخامت گوش بیش از <span class="ltr-text">50%</span> از حداکثر تغییرات ضخامت کنترل را داشته باشند و مقایسه گروهی <span class="ltr-text">p < 0.05</span> را نشان دهد، حساسیت‌زایی برای ماده آزمایش نشان داده شده است.</p>
+        </section>
+    </div>
+</body>
+</html>

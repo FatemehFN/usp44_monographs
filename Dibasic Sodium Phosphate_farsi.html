@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مونوگراف فسفات سدیم دوپایه (USP)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .tab-active {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        .tab-inactive {
+            border-color: transparent;
+            color: #6b7280;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+        .interactive-card {
+            background-color: #e0f2fe;
+            border: 1px solid #90cdf4;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">مونوگراف فسفات سدیم دوپایه</h1>
+
+        <div class="flex justify-center mb-6 border-b border-gray-200">
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab('definition')">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('identification')">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('assay')">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('impurities')">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('specific-tests')">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('additional-requirements')">الزامات اضافی</button>
+        </div>
+
+        <!-- Definition Tab -->
+        <div id="definition" class="tab-content">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+                <p>فسفات سدیم دوپایه با وزن خشک شده یا حاوی یک، دو، هفت، یا دوازده مولکول آب هیدراتاسیون است. حاوی <span class="ltr-text">98.0%</span> تا <span class="ltr-text">100.5%</span> Na₂HPO₄، محاسبه شده بر اساس وزن خشک شده، می‌باشد.</p>
+            </div>
+        </div>
+
+        <!-- Identification Tab -->
+        <div id="identification" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">الف. تست‌های شناسایی - عمومی، سدیم <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a></h4>
+                <div class="interactive-card card">
+                    <p>محلول نمونه: معادل <span class="ltr-text">1</span> قسمت Na₂HPO₄ در <span class="ltr-text">30</span></p>
+                    <p>معیارهای پذیرش: محلول الزامات را برآورده می‌کند.</p>
+                </div>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ب. تست‌های شناسایی - عمومی، فسفات <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a></h4>
+                <div class="interactive-card card">
+                    <p>محلول نمونه: معادل <span class="ltr-text">1</span> قسمت Na₂HPO₄ در <span class="ltr-text">30</span></p>
+                    <p>معیارهای پذیرش: محلول الزامات را برآورده می‌کند.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Assay Tab -->
+        <div id="assay" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش کار</h4>
+                <div class="interactive-card card">
+                    <p>نمونه: معادل <span class="ltr-text">2.5</span> گرم Na₂HPO₄</p>
+                    <p>محلول نمونه: نمونه را در یک بشر <span class="ltr-text">250</span> میلی‌لیتری بریزید. <span class="ltr-text">50</span> میلی‌لیتر آب و <span class="ltr-text">40.0</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">1</span> نرمال اضافه کرده و هم بزنید تا حل شود.</p>
+                    <p>شاهد: <span class="ltr-text">40.0</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">1</span> نرمال را در یک بشر <span class="ltr-text">250</span> میلی‌لیتری بریزید. <span class="ltr-text">50</span> میلی‌لیتر آب اضافه کنید.</p>
+                    <p>تحلیل: شاهد را با سدیم هیدروکسید <span class="ltr-text">1</span> نرمال VS تیتر کرده و حجم سدیم هیدروکسید <span class="ltr-text">1</span> نرمال VS مصرفی را ثبت کنید. اسید اضافی را در محلول نمونه با استفاده از پتانسیومتری با سدیم هیدروکسید <span class="ltr-text">1</span> نرمال VS تا نقطه عطف در حدود pH <span class="ltr-text">4</span> تیتر کرده و خوانش بورت را ثبت کنید. این خوانش بورت را از خوانش شاهد کسر کرده و حجم سدیم هیدروکسید <span class="ltr-text">1</span> نرمال VS حاصل از این تفریق را A نامگذاری کنید. تیتراسیون را با سدیم هیدروکسید <span class="ltr-text">1</span> نرمال VS تا نقطه عطف در حدود pH <span class="ltr-text">8.8</span> ادامه داده، خوانش بورت را ثبت کرده و حجم (B) سدیم هیدروکسید مورد نیاز در تیتراسیون بین دو نقطه عطف (pH <span class="ltr-text">4</span>–<span class="ltr-text">8.8</span>) را محاسبه کنید.</p>
+                    <p>هر میلی‌لیتر از حجم A سدیم هیدروکسید معادل <span class="ltr-text">142.0</span> میلی‌گرم Na₂HPO₄ است، به شرطی که A برابر یا کمتر از B باشد. هر میلی‌لیتر از حجم (2B – A) سدیم هیدروکسید معادل <span class="ltr-text">142.0</span> میلی‌گرم Na₂HPO₄ است، به شرطی که A بیشتر از B باشد.</p>
+                </div>
+                <p>معیارهای پذیرش: <span class="ltr-text">98.0%</span>–<span class="ltr-text">100.5%</span> بر اساس وزن خشک شده</p>
+            </div>
+        </div>
+
+        <!-- Impurities Tab -->
+        <div id="impurities" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مواد نامحلول</h4>
+                <div class="interactive-card card">
+                    <p>محلول نمونه: معادل <span class="ltr-text">5.0</span> گرم Na₂HPO₄ در <span class="ltr-text">100</span> میلی‌لیتر آب داغ</p>
+                    <p>تحلیل: از یک کروزه فیلتر شده تاردار عبور دهید، باقی‌مانده نامحلول را با آب داغ بشویید و در دمای <span class="ltr-text">105°</span> به مدت <span class="ltr-text">2</span> ساعت خشک کنید.</p>
+                    <p>معیارهای پذیرش: نهایتاً <span class="ltr-text">20</span> میلی‌گرم (نهایتاً <span class="ltr-text">0.4%</span>)</p>
+                </div>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کلرید و سولفات، کلرید <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a></h4>
+                <div class="interactive-card card">
+                    <p>نمونه: معادل <span class="ltr-text">0.5</span> گرم Na₂HPO₄</p>
+                    <p>معیارهای پذیرش: نباید کلرید بیشتری نسبت به معادل <span class="ltr-text">0.42</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">0.020</span> نرمال نشان دهد (نهایتاً <span class="ltr-text">0.06%</span>)</p>
+                </div>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کلرید و سولفات، سولفات <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a></h4>
+                <div class="interactive-card card">
+                    <p>نمونه: معادل <span class="ltr-text">0.1</span> گرم Na₂HPO₄</p>
+                    <p>معیارهای پذیرش: نباید سولفات بیشتری نسبت به معادل <span class="ltr-text">0.2</span> میلی‌لیتر اسید سولفوریک <span class="ltr-text">0.020</span> نرمال نشان دهد (نهایتاً <span class="ltr-text">0.2%</span>)</p>
+                </div>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آرسنیک، روش I <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a></h4>
+                <div class="interactive-card card">
+                    <p>آماده‌سازی تست: معادل <span class="ltr-text">187.5</span> میلی‌گرم Na₂HPO₄ در <span class="ltr-text">35</span> میلی‌لیتر آب</p>
+                    <p>معیارهای پذیرش: نهایتاً <span class="ltr-text">16</span> ppm</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Specific Tests Tab -->
+        <div id="specific-tests" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کاهش وزن در اثر خشک شدن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h4>
+                <div class="interactive-card card">
+                    <p>نمونه را در دمای <span class="ltr-text">130°</span> تا رسیدن به وزن ثابت خشک کنید.</p>
+                    <p>معیارهای پذیرش: به جدول <span class="ltr-text">1</span> مراجعه کنید.</p>
+
+                    <table class="mt-4">
+                        <thead>
+                            <tr>
+                                <th>شکل هیدرات</th>
+                                <th>معیارهای پذیرش</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>خشک شده</td>
+                                <td>نهایتاً <span class="ltr-text">5.0%</span></td>
+                            </tr>
+                            <tr>
+                                <td>مونوهیدرات</td>
+                                <td><span class="ltr-text">10.3%</span>–<span class="ltr-text">12.0%</span></td>
+                            </tr>
+                            <tr>
+                                <td>دی‌هیدرات</td>
+                                <td><span class="ltr-text">18.5%</span>–<span class="ltr-text">21.5%</span></td>
+                            </tr>
+                            <tr>
+                                <td>هپتا‌هیدرات</td>
+                                <td><span class="ltr-text">43.0%</span>–<span class="ltr-text">50.0%</span></td>
+                            </tr>
+                            <tr>
+                                <td>دودکا‌هیدرات</td>
+                                <td><span class="ltr-text">55.0%</span>–<span class="ltr-text">64.0%</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Requirements Tab -->
+        <div id="additional-requirements" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">بسته‌بندی و نگهداری</h4>
+                <div class="interactive-card card">
+                    <p>در ظروف دربسته نگهداری شود.</p>
+                </div>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">برچسب‌گذاری</h4>
+                <div class="interactive-card card">
+                    <p>برچسب‌گذاری باید مشخص کند که آیا خشک شده است یا مونوهیدرات، دی‌هیدرات، هپتا‌هیدرات، یا دودکا‌هیدرات است.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.classList.add('hidden'));
+
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => button.classList.remove('tab-active', 'tab-inactive'));
+            tabButtons.forEach(button => button.classList.add('tab-inactive'));
+
+            document.getElementById(tabId).classList.remove('hidden');
+            document.querySelector(`.tab-button[onclick="showTab('${tabId}')"]`).classList.add('tab-active');
+            document.querySelector(`.tab-button[onclick="showTab('${tabId}')"]`).classList.remove('tab-inactive');
+        }
+
+        // Initialize with the first tab active
+        document.addEventListener('DOMContentLoaded', () => {
+            showTab('definition');
+        });
+    </script>
+</body>
+</html>

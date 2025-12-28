@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>۱0۸۴ تجزیه و تحلیل گلیکوپروتئین و گلیکان — ملاحظات عمومی</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vazirmatn Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax CDN for LaTeX rendering -->
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">
+            <span class="ltr-text">1084</span> تجزیه و تحلیل گلیکوپروتئین و گلیکان — ملاحظات عمومی
+        </h1>
+
+        <div class="card mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مرور کلی</h2>
+            <p class="mb-4">
+                تعدادی از داروهای گلیکوپروتئینی در نتیجه پیشرفت‌ها در بیوتکنولوژی توسعه یافته‌اند و بسیاری از داروهای پروتئینی مشتق‌شده طبیعی دارای ساختارهای گلیکانی پیچیده هستند.
+                گلیکوزیلاسیون، یک اصلاح پس از ترجمه در این پروتئین‌ها، می‌تواند نقش مهمی در تعیین عملکرد، فارماکوکینتیک، فارماکودینامیک، پایداری و ایمونوژنیسیته این عوامل ایفا کند.
+                دو نوع اصلی گلیکوزیلاسیون پروتئین عبارتند از <span class="ltr-text">N-glycosylation</span> و <span class="ltr-text">O-glycosylation</span>.
+                برخلاف رونویسی و ترجمه، گلیکوزیلاسیون یک فرآیند مبتنی بر الگو نیست؛ بنابراین، تنوع در الگوی گلیکوزیلاسیون یک پروتئین می‌تواند ناشی از منابع مختلف یا فرآیندهای تولید متفاوت باشد.
+                مشخص است که تفاوت‌ها در این الگو بر فعالیت بیولوژیکی تأثیر می‌گذارند.
+                بنابراین، الگوهای گلیکوزیلاسیون ممکن است مجموعه مهمی از ویژگی‌ها باشند که در شناسایی یک گلیکوپروتئین کاندیدای مورد استفاده درمانی و در تضمین پایداری و کیفیت آن نقش دارند.
+            </p>
+            <p class="mb-4">
+                بخش اول این فصل، مقدمه‌ای کوتاه بر گلیکوبیولوژی ارائه می‌دهد و پیچیدگی ساختارهای گلیکانی را توصیف می‌کند.
+                بخش‌های بعدی، نمودارهای جریان و مجموعه‌ای از استراتژی‌های تحلیلی کلی را ارائه می‌دهند که می‌توانند برای شناسایی گلیکان‌های گلیکوپروتئین با استفاده از موارد زیر به کار روند:
+            </p>
+            <ol class="list-decimal list-inside mr-4 mb-4">
+                <li><span class="ltr-text">1.</span> تجزیه و تحلیل مستقیم گلیکوپروتئین‌ها؛ و</li>
+                <li><span class="ltr-text">2.</span> تجزیه و تحلیل گلیکان‌های آزاد شده غیرمشتق شده یا مشتق شده با روش‌های مختلف جداسازی کروماتوگرافی و الکتروفورتیک و طیف‌سنجی جرمی (<span class="ltr-text">MS</span>).</li>
+            </ol>
+            <p class="mb-4">
+                رویکردهای مختلف برای تجزیه و تحلیل مونوساکاریدها در پایان فصل توضیح داده شده‌اند.
+                برای روش‌های تحلیلی انتخاب شده، این فصل به سایر فصول <span class="ltr-text">USP</span>، به ویژه آن‌هایی که مربوط به مقالات مشتق شده از بیوتکنولوژی هستند، ارجاع متقابل می‌دهد (به فصول الکتروفورز مویرگی <a href="1053.html" class="text-blue-600 hover:underline" target="_blank">1053</a>، مقالات مشتق شده از بیوتکنولوژی — تمرکز ایزوالکتریک <a href="1054.html" class="text-blue-600 hover:underline" target="_blank">1054</a>، مقالات مشتق شده از بیوتکنولوژی — نقشه‌برداری پپتید <a href="1055.html" class="text-blue-600 hover:underline" target="_blank">1055</a>، و مقالات مشتق شده از بیوتکنولوژی — الکتروفورز ژل پلی‌اکریل‌آمید <a href="1056.html" class="text-blue-600 hover:underline" target="_blank">1056</a> مراجعه کنید).
+            </p>
+        </div>
+
+        <div class="card mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">گلیکوزیلاسیون پروتئین</h2>
+            <p class="mb-4">
+                بیشتر پروتئین‌ها در سلول‌های یوکاریوتی قبل از انتقال به لیزوزوم‌ها، اتصال به غشا در سطح سلول، یا ترشح شدن، تحت گلیکوزیلاسیون و سایر اصلاحات پس از ترجمه قرار می‌گیرند.
+                گلیکوزیلاسیون به طور قابل توجهی از سلول به سلول، بافت به بافت، و گونه به گونه متفاوت است، به دلیل بیان متغیر صدها گلیکوزیل‌ترانسفراز و گلیکوزیداز واقع در سراسر دستگاه گلژی و شبکه آندوپلاسمی (<span class="ltr-text">ER</span>).
+                چهار نوع اصلی گلیکوزیلاسیون آنزیمی در پروتئین‌ها یافت می‌شود:
+            </p>
+            <ol class="list-decimal list-inside mr-4 mb-4">
+                <li><span class="ltr-text">1. N-Glycosylation</span>، که شامل انتقال اولیه الیگوساکاریدها به نیتروژن گروه آمید انتهایی آسپاراژین و پردازش و اصلاح بعدی آن‌ها به مجموعه‌ای از زنجیره‌های گلیکانی است؛</li>
+                <li><span class="ltr-text">2. O-Glycosylation</span>، که به طور کلی شامل انتقال اولیه مونوساکاریدها به گروه‌های هیدروکسیل سرین و ترئونین و سپس طویل شدن و شاخه‌شاخه شدن زنجیره ساکاریدی با افزودن مونوساکاریدها است؛</li>
+                <li><span class="ltr-text">3. Glycosylphosphatidylinositol (GPI) anchor</span>، که یک گلیکولیپید متصل به <span class="ltr-text">C-terminus</span> یک پروتئین است؛ و</li>
+                <li><span class="ltr-text">4. C-Glycosylation</span>، که شامل تشکیل یک پیوند کربن–کربن بین کربن <span class="ltr-text">C2</span> حلقه ایندول تریپتوفان و کربن <span class="ltr-text">C1</span> یک باقیمانده <span class="ltr-text">α-mannopyranosyl</span> است.</li>
+            </ol>
+            <p class="mb-4">
+                هر پروتئین ممکن است حاوی گلیکوزیلاسیون‌های متعدد <span class="ltr-text">N-</span>، <span class="ltr-text">O-</span> یا <span class="ltr-text">C-</span> باشد، اما نه بیشتر از یک لنگر <span class="ltr-text">GPI</span>.
+                یک افزودن غیرآنزیمی ساکاریدها، به نام گلیکاسیون، می‌تواند زمانی رخ دهد که پروتئین‌ها از طریق مجموعه‌ای پیچیده از واکنش‌ها با قندهای کاهنده مخلوط شوند.
+                دو نوع گلیکوزیلاسیون پروتئینی که عموماً مورد توجه هستند و در مواد دارویی گلیکوپروتئینی تجزیه و تحلیل می‌شوند، <span class="ltr-text">N-</span> و <span class="ltr-text">O-glycosylation</span> هستند.
+                هر یک از این‌ها در زیر مورد بحث قرار گرفته‌اند.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">N-گلیکوزیلاسیون</h3>
+            <p class="mb-4">
+                بیوسنتز <span class="ltr-text">N-glycans</span> در گلیکوپروتئین‌ها را می‌توان به عنوان یک فرآیند چهار مرحله‌ای توصیف کرد:
+            </p>
+            <ol class="list-decimal list-inside mr-4 mb-4">
+                <li><span class="ltr-text">1.</span> آغاز و طویل شدن زنجیره گلیکانی متصل به لیپید؛</li>
+                <li><span class="ltr-text">2.</span> انتقال الیگوساکارید به پروتئین یا زنجیره پلی‌پپتیدی نوظهور؛</li>
+                <li><span class="ltr-text">3.</span> پردازش زنجیره <span class="ltr-text">N-glycan</span> با حذف باقیمانده‌های خاص گلوکز و مانوز؛ و</li>
+                <li><span class="ltr-text">4.</span> اصلاح زنجیره <span class="ltr-text">N-glycan</span> با افزودن باقیمانده‌ها به انتهای غیرکاهنده زنجیره گلیکانی.</li>
+            </ol>
+            <p class="mb-4">
+                توالی اجماع اسید آمینه برای <span class="ltr-text">N-glycosylation</span> عبارت است از <span class="ltr-text">Asn–Xaa–Thr/Ser</span> (که در آن <span class="ltr-text">Xaa</span> هر اسید آمینه‌ای غیر از پرولین است).
+                در مجموع، تنها حدود دو سوم از تمام توالی‌های بالقوه، که سکوئن نامیده می‌شوند، گلیکوزیله می‌شوند و در حال حاضر هیچ روشی برای پیش‌بینی اینکه کدام سکوئن گلیکوزیله خواهد شد وجود ندارد.
+                نقش <span class="ltr-text">N-glycosylation</span> پروتئین معمولاً انتقال و ترشح پروتئین است.
+                <span class="ltr-text">N-glycans</span> را می‌توان بسته به میزان پردازش (شکل <span class="ltr-text">1</span>) به سه دسته پرمانوز، هیبریدی یا پیچیده طبقه‌بندی کرد.
+                ساختارهای پرمانوز (<span class="ltr-text">Appendix 1</span>) فاقد باقیمانده‌های گالاکتوز یا <span class="ltr-text">N-acetylglucosamine (GlcNAc)</span> در آنتن‌ها، شاخه‌هایی در انتهای دور زنجیره هستند.
+                در ساختارهای هیبریدی، هم باقیمانده‌های <span class="ltr-text">GlcNAc</span> جایگزین شده و هم باقیمانده‌های مانوز انتهایی در آنتن‌ها وجود دارند، در حالی که ساختارهای پیچیده دارای باقیمانده‌های مانوز <span class="ltr-text">α1,6-</span> و <span class="ltr-text">α1,3-</span> هستند که با بخش‌های <span class="ltr-text">GlcNAc</span> جایگزین شده‌اند.
+                گلیکان‌های هیبریدی و پیچیده می‌توانند با دو یا چند شاخه وجود داشته باشند که اغلب آنتن نامیده می‌شوند؛ بنابراین این گلیکان‌ها اغلب به عنوان مثال، بی‌آنتناری، تری‌آنتناری یا تتراآنتناری نامیده می‌شوند.
+                وجود <span class="ltr-text">N-glycans</span> مونوانتناری و پنتاآنتناری نیز شناخته شده است.
+                در گلیکان‌های پیچیده، آنتن‌ها اغلب حامل باقیمانده‌های سیالیک اسید انتهایی (نورامینیک اسید) هستند.
+                نشان داده شده است که سیالیلاسیون تأثیر زیادی بر فارماکوکینتیک و فارماکودینامیک بسیاری از گلیکوپروتئین‌های درمانی دارد.
+            </p>
+            <p class="text-center italic text-gray-600 mb-4">
+                شکل <span class="ltr-text">1</span>. انواع رایج <span class="ltr-text">N-glycans</span>. برای اختصارات، به <span class="ltr-text">Appendix 1</span> مراجعه کنید.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">O-گلیکوزیلاسیون</h3>
+            <p class="mb-4">
+                زنجیره‌های <span class="ltr-text">O-Glycan</span> به صورت متوالی از طریق یک باقیمانده <span class="ltr-text">GalNAc</span> اولیه که به سرین، ترئونین و تیروزین، و همچنین به اسیدهای آمینه کمتر رایج هیدروکسی‌پرولین و هیدروکسی‌لیزین متصل است، ساخته می‌شوند.
+                ساختارهای هسته گلیکانی متعددی شناخته شده‌اند.
+                توالی و پیوند ایزومری مونوساکاریدها تنوع بیشتری نسبت به <span class="ltr-text">N-glycans</span> نشان می‌دهند و حداقل هشت نوع مختلف شناسایی شده‌اند (شکل <span class="ltr-text">2</span>).
+                اگرچه هیچ توالی اجماع اسید آمینه‌ای برای <span class="ltr-text">O-glycosylation</span> تعیین نشده است، اما گلیکوزیلاسیون معمولاً با وجود پرولین یک باقیمانده قبل یا سه باقیمانده بعد از محل گلیکوزیلاسیون و عدم وجود باقیمانده‌های اسید آمینه باردار نزدیک به سرین یا ترئونین، ترجیح داده می‌شود.
+                واحد دی‌ساکاریدی <span class="ltr-text">N-acetyllactosamine, Galβ1,4GlcNAc</span>، رایج‌ترین گسترش زنجیره است.
+                اصلاحات اضافی، از جمله پوشاندن انتهایی <span class="ltr-text">Gal</span> با سیالیک اسید و فوکوزیلاسیون در طول زنجیره، نیز مکرر هستند.
+            </p>
+            <p class="mb-4">
+                <span class="ltr-text">O-Glycosylation</span> می‌تواند به شکل خوشه‌ای، از نوع موسیلاژ، رخ دهد که معمولاً بخشی از ماتریکس خارج سلولی سطح سلول یا گلیکوپروتئین‌های ترشح شده را تشکیل می‌دهد.
+                سایر گلیکوزیلاسیون‌های <span class="ltr-text">O-</span>، مانند <span class="ltr-text">O-GlcNAc</span>، در بسیاری از پروتئین‌های هسته‌سیتوپلاسمی یافت می‌شوند؛ و گلیکوزیلاسیون متصل به <span class="ltr-text">O-Man</span> در برخی گلیکوپروتئین‌های عضلانی و عصبی و در مخمر یافت می‌شود.
+                انواع گلیکوزیلاسیون متصل به <span class="ltr-text">O-Fuc</span> و <span class="ltr-text">O-Glc</span> در بسیاری از پروتئین‌های شبه فاکتور رشد اپیدرمال که با مسیر سیگنالینگ <span class="ltr-text">Notch</span> مرتبط هستند، یافت می‌شوند.
+            </p>
+            <p class="text-center italic text-gray-600 mb-4">
+                شکل <span class="ltr-text">2</span>. ساختارهای هسته رایج <span class="ltr-text">O-glycans</span> (پررنگ و زیرخط‌دار). اختصارات قندها طبق <span class="ltr-text">Appendix 1</span>.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">هتروژنیسیته گلیکان</h3>
+            <p class="mb-4">
+                نه تنها نوع گلیکوزیلاسیون (متصل به <span class="ltr-text">N-</span> یا <span class="ltr-text">O-</span>)، اشغال محل، و محل گلیکوزیلاسیون می‌تواند از یک گلیکوپروتئین به گلیکوپروتئین دیگر متفاوت باشد، بلکه ساختارهای واقعی الیگوساکارید (شاخه‌شاخه شدن و پیوندها) نیز می‌توانند حتی در یک محل یکسان متفاوت باشند.
+                این تنوع ساختاری به این دلیل ایجاد می‌شود که گلیکوزیلاسیون فرآیندی نیست که توسط یک الگو هدایت شود.
+                الگوی گلیکوزیلاسیون در یک محل معین به عوامل زیادی بستگی دارد، از جمله در دسترس بودن گلیکوزیل‌ترانسفرازها و اگزو-گلیکوزیدازهای خاص سلول و وابسته به رشد که در دستگاه گلژی و <span class="ltr-text">ER</span> یافت می‌شوند.
+                هتروژنیسیته منجر به خواص فیزیکی و بیوشیمیایی متفاوت و در نتیجه به تنوع عملکردی نیز می‌شود.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">سیستم‌های بیان سلول میزبان و گلیکوزیلاسیون</h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">باکتری‌ها</h4>
+            <p class="mb-4">
+                اگرچه هر دو نوع <span class="ltr-text">O-</span> و <span class="ltr-text">N-glycosylation</span> در انواع پروکاریوت‌ها رخ می‌دهند، <span class="ltr-text">Escherichia coli</span>، باکتری منتخب برای بسیاری از محصولات درمانی، پروتئین‌های گلیکوزیله تولید نمی‌کند.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مخمر</h4>
+            <p class="mb-4">
+                مخمر هم پروتئین‌های <span class="ltr-text">N-glycosylated</span> و هم <span class="ltr-text">O-glycosylated</span> تولید می‌کند.
+                در مخمر، پرمانوزاسیون با زنجیره <span class="ltr-text">N-glycan</span> که حاوی بیش از <span class="ltr-text">100</span> باقیمانده مانوز است، می‌تواند رخ دهد، اما سیالیلاسیون رخ نمی‌دهد مگر اینکه ارگانیسم از نظر ژنتیکی اصلاح شود.
+                توسعه سویه‌های نوترکیب <span class="ltr-text">Pichia pastoris</span> که حاوی ژن‌های هترولوگ وارد شده برای آنزیم‌های گلیکوزیلاسیون مختلف هستند، امکان انسانی‌سازی مسیرهای <span class="ltr-text">N-glycosylation</span> در این مخمر را فراهم کرده است.
+                <span class="ltr-text">O-Glycosylation</span> در مخمر نیز به طور قابل توجهی با سلول‌های پستانداران متفاوت است.
+                برخلاف سلول‌های پستانداران، <span class="ltr-text">O-glycosylation</span> سرین یا ترئونین از طریق مانوز پیوند خورده و اغلب شامل زنجیره‌های خطی متشکل از حداکثر <span class="ltr-text">six</span> باقیمانده مانوز است.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سلول‌های حشره</h4>
+            <p class="mb-4">
+                زنجیره‌های <span class="ltr-text">N-glycan</span> سلول‌های حشره معمولاً از نوع پرمانوز، تری‌مانوز یا پوسی‌مانوز، و پیچیده کوتاه شده هستند (برای تعاریف به <span class="ltr-text">Appendix 1</span> مراجعه کنید).
+                سلول‌های حشره همچنین گلیکوپروتئین‌هایی تولید می‌کنند که حاوی باقیمانده <span class="ltr-text">Fucα1,3</span> متصل به باقیمانده <span class="ltr-text">GlcNAc</span> پروگزیمال در هسته کیتوبیوز هستند.
+                این باقیمانده فوکوز هسته‌ای یک ایمونوژن و آلرژن قوی است.
+                <span class="ltr-text">O-Glycosylation</span> در سلول‌های حشره به خوبی مورد مطالعه قرار نگرفته است، و اگرچه باقیمانده‌های <span class="ltr-text">O-linked GalNAc–Ser(Thr)</span> یافت شده‌اند، تعداد بسیار کمی فراتر از توالی <span class="ltr-text">Galβ1,3GalNAc–Ser(Thr)</span> پردازش می‌شوند.
+                باقیمانده‌های سیالیک اسید بر روی پروتئین‌های تولید شده در سلول‌های حشره یافت نشده‌اند.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">گیاهان و سلول‌های گیاهی</h4>
+            <p class="mb-4">
+                <span class="ltr-text">N-glycans</span> گیاهی عمدتاً حاوی الیگوساکاریدهایی از نوع الیگومانوز هستند، اما ساختارهای هیبریدی و پیچیده کوتاه شده نیز وجود دارند، با یا بدون <span class="ltr-text">Xylβ1,2</span> متصل به باقیمانده مانوز متصل به <span class="ltr-text">β-</span> از هسته تری‌مانوزیل و <span class="ltr-text">Fucα1,3</span> متصل به باقیمانده <span class="ltr-text">GlcNAc</span> پروگزیمال هسته کیتوبیوز.
+                هم باقیمانده‌های <span class="ltr-text">Fuc</span> و هم <span class="ltr-text">Xyl</span> ایمونوژنیک هستند و نشان داده شده است که بخشی از گلیکو-اپی‌توپ‌های چندین آلرژن گیاهی هستند.
+                <span class="ltr-text">O-Glycosylation</span> در گیاهان به خوبی مورد مطالعه قرار نگرفته است اما مشخص است که عمدتاً شامل افزودن زنجیره‌های آرابینوگالاکتان متصل به باقیمانده‌های هیدروکسی‌پرولین، ترئونین و سرین است که در دیواره سلولی گیاه یا در سطح بیرونی غشای پلاسمایی سلول قرار دارند.
+                این گلیکان‌ها ایمونوژنیک هستند.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سلول‌های حیوانی</h4>
+            <p class="mb-4">
+                اکثریت پروتئین‌های درمانی گلیکوزیله در خطوط سلولی حیوانی پیوسته تولید می‌شوند.
+                سلول‌های تخمدان همستر چینی (<span class="ltr-text">CHO</span>)، کلیه بچه همستر (<span class="ltr-text">BHK</span>)، کلیه جنینی انسان (<span class="ltr-text">HEK</span>) و میلومای موش (<span class="ltr-text">SP2/0</span> یا <span class="ltr-text">NS0</span>) همگی به کار گرفته شده‌اند.
+                این سلول‌های حیوانی عموماً پروتئین‌هایی با گلیکوزیلاسیون شبیه انسان تولید می‌کنند.
+                اگرچه تفاوت‌های متعددی در گلیکوزیلاسیون بین سلول‌های جونده و انسانی وجود دارد، مانند وجود <span class="ltr-text">N-glycolylneuraminic acid</span> که در انسان یافت نمی‌شود، سلول‌های <span class="ltr-text">CHO</span> به یک اسب بارکش در صنعت بیوتکنولوژی تبدیل شده‌اند.
+            </p>
+        </div>
+
+        <div class="card mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تجزیه و تحلیل گلیکان برای داروهای بیولوژیکی گلیکوزیله</h2>
+            <p class="mb-4">
+                گلیکوزیلاسیون پروتئین‌ها ممکن است فعالیت بیولوژیکی را به طور مستقیم یا غیرمستقیم تحت تأثیر قرار دهد، و تنوع در گلیکوزیلاسیون نه تنها ناشی از تنوع سلولی بلکه از فرآیند تولید نیز هست.
+                بنابراین، الگوی گلیکوزیلاسیون ممکن است به عنوان بخشی از مطالعات شناسایی در تضمین ثبات فرآیند مهم باشد و همچنین در تضمین کیفیت ثابت یک محصول دارویی بیولوژیکی پس از دسترسی به بازار اهمیت داشته باشد.
+                مواد مرجع با ویژگی‌های مناسب برای حمایت از آزمایش‌های بیولوژیکی و فیزیکوشیمیایی دسته‌های تولیدی جهت اطمینان از ثبات دسته به دسته مورد نیاز است.
+                تجزیه و تحلیل گلیکوزیلاسیون ممکن است برای موارد زیر مناسب باشد:
+            </p>
+            <ol class="list-decimal list-inside mr-4 mb-4">
+                <li><span class="ltr-text">1.</span> شناسایی ساختار و پایداری محصولات جدید و پایداری آن‌ها در برابر مراحل پردازش و ذخیره‌سازی؛</li>
+                <li><span class="ltr-text">2.</span> آزمایش آزاد سازی دسته و آزمایش کنترل در حین فرآیند؛ و</li>
+                <li><span class="ltr-text">3.</span> ارزیابی قابلیت مقایسه بین محصولات (به عنوان مثال، زمانی که یک یا چند تغییر فرآیند انجام شده است).</li>
+            </ol>
+            <p class="mb-4">
+                درک رابطه بین ساختار گلیکان و عملکرد بیولوژیکی اساس تصمیم‌گیری‌ها در مورد اطلاعات مورد نیاز در هر مرحله توسعه است.
+                برای مواد دارویی بیولوژیکی/بیوتکنولوژیکی، معیارهای شناسایی و مشخصات برای آزاد سازی دسته به طور کلی در دستورالعمل‌های <span class="ltr-text">ICH Q6B, Test Procedures and Acceptance Criteria for Biotechnological/Biological Products;1</span> و <span class="ltr-text">ICH Q5E, Comparability of Biotechnological/Biological Products Subject to Changes in Their Manufacturing Process.2</span> بیان شده‌اند.
+                رویکردها و روش‌های متعددی برای نقشه‌برداری گلیکان به کار گرفته می‌شوند.
+                این تنوع نتیجه تنوع و پیچیدگی ساختارهای گلیکانی و تکنولوژی‌ها و سیستم‌های تشخیص موجود است.
+                به دلیل تنوع و پیچیدگی ساختارهای گلیکانی و در دسترس بودن روزافزون و بهبود سیستم‌ها و فناوری‌های تشخیص مختلف، روش‌های تحلیلی گسترده هستند.
+                روش‌های مختلفی که از رویه‌های گام به گام پشتیبانی می‌کنند، به گلیکوپروتئین‌ها، در دسترس بودن تجهیزات، تخصص دانشمندان و گروه‌های فردی، و اطلاعات مورد نیاز بستگی دارند.
+                دو نوع گلیکوزیلاسیون پروتئینی که بیشترین مطالعه را داشته‌اند و بر فعالیت زیستی تأثیر می‌گذارند، <span class="ltr-text">N-</span> و <span class="ltr-text">O-glycosylation</span> هستند.
+            </p>
+            <p class="mb-4">
+                تجزیه و تحلیل گلیکان می‌تواند در کاربردهای مختلفی استفاده شود؛ مهمترین آن‌ها شناسایی کلی محصول، اعتبارسنجی فرآیند، ارزیابی قابلیت مقایسه، آزمایش پایداری، نظارت بر ثبات فرآیند تولید، و آزمایش آزاد سازی است.
+                انتخاب تکنیک‌های تحلیلی و کاربردهای آن‌ها در توسعه محصول و تولید روتین به عوامل بسیاری بستگی دارد، مانند پیچیدگی گلیکوپروتئین، درک روابط بین گلیکوزیلاسیون و ایمنی و اثربخشی، و طراحی کلی استراتژی برای کنترل فرآیند تولید.
+                به عنوان مثال، حتی زمانی که ارتباط بیولوژیکی گلیکوزیلاسیون مشخص نیست، کنترل گلیکوزیلاسیون می‌تواند به عنوان معیاری برای ثبات تولید در نظر گرفته شود.
+                نمودار جریان شکل <span class="ltr-text">3A</span> در انتخاب کاربردها برای تجزیه و تحلیل گلیکان کمک می‌کند، و شکل <span class="ltr-text">3B</span> مروری بر تکنیک‌های تحلیلی و تجهیزات به کار گرفته شده ارائه می‌دهد.
+            </p>
+            <p class="text-center italic text-gray-600 mb-4">
+                شکل <span class="ltr-text">3A</span>. نمودار جریان کمکی در انتخاب گزینه‌ها برای تجزیه و تحلیل گلیکان.
+            </p>
+            <p class="text-center italic text-gray-600 mb-4">
+                شکل <span class="ltr-text">3B</span>. مروری بر تکنیک‌های تجزیه و تحلیل گلیکان و تجهیزات به کار گرفته شده.
+            </p>
+        </div>
+
+        <div class="card mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">انتخاب تجزیه و تحلیل گلیکان برای شناسایی و مشخصات داروهای بیولوژیکی گلیکوزیله</h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تجزیه و تحلیل گلیکوپروتئین دست‌نخورده</h3>
+            <p class="mb-4">
+                مستقیم‌ترین حالت تجزیه و تحلیل، مطالعه مستقیم مولکول دست‌نخورده است.
+                این حالت اطلاعاتی در مورد پروفایل گلیکوزیلاسیون گلیکوپروتئین ارائه می‌دهد.
+                با این حال، این رویکرد اطلاعات محدودی را ارائه می‌دهد زمانی که مولکول بزرگ است و حاوی چندین محل گلیکوزیلاسیون باشد.
+                یکی از مهمترین عوامل گلیکوزیلاسیون که فعالیت بیولوژیکی را تعریف می‌کند، میزان سیالیلاسیون است که اغلب نیمه‌عمر گلیکوپروتئین‌ها را در گردش خون تعیین می‌کند.
+                این امر الکتروفورز مبتنی بر بار یونی و کروماتوگرافی تبادل یونی را به انتخاب‌های آشکار تکنیک تبدیل می‌کند.
+                تقریباً تمام انواع الکتروفورز ژل برای بررسی گلیکوزیلاسیون پروتئین استفاده شده‌اند، از جمله الکتروفورز ژل پلی‌اکریل‌آمید (<span class="ltr-text">PAGE</span>) (به مقالات مشتق شده از بیوتکنولوژی — الکتروفورز ژل پلی‌اکریل‌آمید <a href="1056.html" class="text-blue-600 hover:underline" target="_blank">1056</a> مراجعه کنید) و تمرکز ایزوالکتریک (<span class="ltr-text">IEF</span>) (به مقالات مشتق شده از بیوتکنولوژی — تمرکز ایزوالکتریک <a href="1054.html" class="text-blue-600 hover:underline" target="_blank">1054</a> مراجعه کنید).
+                به طور مشابه، الکتروفورز مویرگی (<span class="ltr-text">CE</span>) (به الکتروفورز مویرگی <a href="1053.html" class="text-blue-600 hover:underline" target="_blank">1053</a> مراجعه کنید) نیز مناسب تشخیص داده شده است.
+                کروماتوگرافی تبادل آنیونی قوی برای همین منظور استفاده شده است، اما تفکیک‌پذیری آن اغلب کمتر از <span class="ltr-text">IEF</span> و <span class="ltr-text">CE</span> است.
+                طیف‌سنجی جرمی مستقیم (<span class="ltr-text">MS</span>) گزینه دیگری برای تجزیه و تحلیل اصلاحات پس از ترجمه است.
+                همراه با بهبودهای مستمر در تفکیک‌پذیری <span class="ltr-text">MS</span>، گلیکوپروتئین‌های پیچیده‌تر و بیشتری برای شناسایی مستقیم با این روش قابل دسترس می‌شوند.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تجزیه و تحلیل گلیکوپپتیدها</h3>
+            <p class="mb-4">
+                تجزیه و تحلیل گلیکوپپتیدها اطلاعاتی در مورد خواص گلیکوزیلاسیون خاص محل، میزان اشغال، و ساختارهای الیگوساکارید ارائه می‌دهد.
+                گلیکوزیلاسیون خاص محل می‌تواند تحت تأثیر شرایط فرآیند کشت سلولی قرار گیرد.
+                بنابراین، اگر یک محل گلیکوزیلاسیون شناخته شده حیاتی باشد، تولیدکنندگان باید ساختارهای گلیکانی خاص محل را نظارت کنند.
+                رویکرد معمول این است که ابتدا گلیکوپپتیدها را با هضم پروتئاز تولید کرده و آن‌ها را به عنوان مثال با <span class="ltr-text">RP (reversed-phase) HPLC</span> جداسازی کنند (به مقالات مشتق شده از بیوتکنولوژی — نقشه‌برداری پپتید <a href="1055.html" class="text-blue-600 hover:underline" target="_blank">1055</a> مراجعه کنید).
+                سپس گلیکوپپتیدهای جدا شده می‌توانند به طور جداگانه توسط، به عنوان مثال، تجزیه و تحلیل مستقیم با استفاده از <span class="ltr-text">MS</span>، یا گلیکوزیلاسیون‌زدایی و سپس پروفایل‌سازی گلیکان، همانطور که در بخش پروفایل‌سازی الیگوساکاریدهای شکافته شده در زیر توضیح داده شده است، شناسایی شوند.
+                شناسایی مستقیم مخلوط گلیکوپپتیدها و پپتیدهای غیرگلیکوزیله با <span class="ltr-text">MS</span> توسط اثرات پوشاننده (سرکوب یونی) سیگنال‌های پپتید بر روی سیگنال‌های گلیکوپپتید محدود می‌شود.
+                یک رویکرد برای غلبه بر این اثر، جداسازی پپتیدها و گلیکوپپتیدها قبل از تجزیه و تحلیل با <span class="ltr-text">MS</span> است، به عنوان مثال، با کوپلینگ آفلاین (<span class="ltr-text">matrix-assisted laser desorption ionization [MALDI]</span>) یا کوپلینگ آنلاین (<span class="ltr-text">electrospray ionization [ESI]</span>).
+                تجزیه و تحلیل <span class="ltr-text">MS</span> گلیکوپپتیدها نقش مهمی در شناسایی <span class="ltr-text">O-glycans</span> ایفا می‌کند، زیرا این گلیکان‌ها همیشه به صورت کمی آزاد نمی‌شوند و به دلیل اندازه کوچک‌ترشان، برای شناسایی با <span class="ltr-text">MS</span> به عنوان گلیکوپپتیدها مناسب‌تر هستند.
+                استفاده از <span class="ltr-text">CE</span> برای جداسازی با تفکیک‌پذیری بالا نیز ممکن است مناسب باشد، به ویژه برای تجزیه و تحلیل سیالیلاسیون.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">پروفایل‌سازی الیگوساکاریدهای شکافته شده</h3>
+            <p class="mb-4">
+                پروفایل‌سازی گلیکان‌های کلی شکافته شده از گلیکوپروتئین، رایج‌ترین رویکرد برای شناسایی گلیکوپروتئین‌ها است.
+                این روش راهی برای به دست آوردن اطلاعات در مورد جمعیت‌های مختلف گلیکان‌های موجود بر روی پروتئین فراهم می‌کند.
+                میزان سیالیلاسیون نیز می‌تواند در این مرحله مورد توجه قرار گیرد.
+                بسته به روش انتخابی، ممکن است برای تشخیص گلیکان‌ها، مشتق‌سازی/برچسب‌گذاری قبلی مورد نیاز باشد.
+                پروتکل‌های زیادی در دسترس هستند، و بیشتر مراحل در تجزیه و تحلیل به خوبی تثبیت شده‌اند.
+                نقطه ضعف احتمالی چنین انعطاف‌پذیری، عدم اجماع در مورد انتخاب روش‌ها در چه شرایطی است؛ به دلیل تنوع تکنیک‌های تحلیلی، مقایسه نتایج به دست آمده توسط پلتفرم‌های مختلف ممکن است همیشه امکان‌پذیر نباشد.
+                تاکنون، بیشتر کارها بر روی <span class="ltr-text">N-glycosylation</span> انجام شده است، به دلیل عوامل زیر:
+            </p>
+            <ol class="list-decimal list-inside mr-4 mb-4">
+                <li><span class="ltr-text">1. N-glycans</span> معمولاً در بیولوژیک‌ها از <span class="ltr-text">O-glycans</span> از نظر بالینی مرتبط‌تر هستند؛ یا</li>
+                <li><span class="ltr-text">2.</span> آزاد سازی <span class="ltr-text">N-glycans</span>، چه با روش‌های شیمیایی (هیدرازین) و چه با آنزیم‌ها (اندوگلیکوزیدازها و <span class="ltr-text">peptide N-glycosidase [PNGase] F</span>)، ساده‌تر از آزاد سازی <span class="ltr-text">O-glycans</span> است.</li>
+            </ol>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">گلیکوزیلاسیون‌زدایی</h4>
+            <p class="mb-4">
+                رویکرد مورد استفاده برای آزاد سازی گلیکان‌ها به گلیکوپروتئین مورد آزمایش بستگی دارد.
+                عامل شکافنده بر اساس نوع شکافندگی مورد نیاز و سطح اطلاعات مورد نظر انتخاب می‌شود.
+                ممکن است از شکافندگی آنزیمی یا شیمیایی استفاده شود.
+                جدول <span class="ltr-text">1</span> لیستی غیرجامع از عوامل شکافنده آنزیمی و اختصاصیت آن‌ها را ارائه می‌دهد.
+                کارایی هضم عموماً به دسترسی گلیکان‌ها بر روی پروتئین بستگی دارد، و از این رو پروتئین باید دناتوره شود تا حداکثر قرار گرفتن در معرض محل گلیکوزیلاسیون افزایش یابد مگر اینکه تحلیلگران بخواهند بین گلیکان‌های سطحی و پنهان تمایز قائل شوند.
+                عوامل شکافنده شیمیایی نیز می‌توانند استفاده شوند، به عنوان مثال، هیدرازین یا بوروهیدرید قلیایی برای حذف <span class="ltr-text">β-elimination</span> گلیکان‌های متصل به <span class="ltr-text">O-</span>.
+            </p>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th>عامل</th>
+                        <th>اختصاصیت</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2" class="font-bold">آزاد سازی N-گلیکان متصل</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Peptide-N4-(N-acetyl-β-glucosaminyl) asparagine amidase (EC 3.5.1.52)</span></td>
+                        <td>هیدرولیز باقیمانده پپتید-<span class="ltr-text">N4-(N-acetyl-β-glucosaminyl) asparagine</span> که در آن باقیمانده گلوکوزامین ممکن است بیشتر گلیکوزیله شود، برای تولید یک <span class="ltr-text">(substituted) N-acetyl-β-D-glucosaminylamine</span> و یک پپتید حاوی باقیمانده آسپارتات</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Peptide N-glycosidase F (PNGase F)</span></td>
+                        <td>آزاد سازی زنجیره <span class="ltr-text">N-glycan</span> اما عدم آزاد سازی زنجیره <span class="ltr-text">N-glycan</span> حاوی فوکوز هسته‌ای متصل به <span class="ltr-text">(α1,3)-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Peptide N-glycosidase A (PNGase A)</span></td>
+                        <td>آزاد سازی زنجیره <span class="ltr-text">N-glycan</span> حاوی فوکوز هسته‌ای متصل به <span class="ltr-text">(α1,3)-</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Mannosyl-glycoprotein endo-β-N-acetylglucosaminidase (EC 3.2.1.96)</span></td>
+                        <td>اندوهیدرولیز واحد <span class="ltr-text">N,N’-diacetylchitobiosyl</span> در گلیکوپپتیدها/گلیکوپروتئین‌های پرمانوز حاوی ساختار <span class="ltr-text">–[Man(GlcNAc)2]Asn</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Endo-β-N-acetylglucosaminidase F (endo F)</span></td>
+                        <td>آزاد سازی الیگوساکاریدهای پرمانوز، هیبریدی و پیچیده</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Endo-β-N-acetylglucosaminidase H (endo H)</span></td>
+                        <td>آزاد سازی الیگوساکاریدهای پرمانوز و هیبریدی</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="font-bold">آزاد سازی O-گلیکان متصل</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Glycopeptide α-N-acetylgalactosaminidase (EC 3.2.1.97)*</span></td>
+                        <td>هیدرولیز باقیمانده‌های <span class="ltr-text">terminal D-galactosyl-N-acetyl-α-D-galactosaminidic</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="italic">* این آنزیم به دلیل اختصاصیت بالای سوبسترا، کاربرد محدودی دارد.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آزاد سازی شیمیایی یا آنزیمی N-گلیکان‌ها</h4>
+            <p class="mb-4">
+                <span class="ltr-text">PNGase F (Flavobacterium meningosepticum)</span> آنزیم انتخابی برای آزاد سازی <span class="ltr-text">N-glycans</span> برای اکثر گلیکوپروتئین‌ها است به جز برخی گلیکوپروتئین‌های سلول حشره و گیاهی که ممکن است حاوی یک <span class="ltr-text">Fucα1,3</span> متصل به هسته کیتوبیوزیل باشند.
+                زنجیره‌های <span class="ltr-text">N-Glycan</span> با این ساختار را تنها می‌توان با آنزیم بادام، <span class="ltr-text">PNGase A</span>، از گلیکوپپتید شکافت.
+                آزاد سازی شیمیایی با هیدرازین انیدروس (<span class="ltr-text">anhydrous</span>) بسیار کمتر رایج است، عمدتاً به دلیل محدودیت دسترسی به معرف، که یک ماده شیمیایی خطرناک محسوب می‌شود.
+                علاوه بر این، هیدرازینولیز <span class="ltr-text">N-glycans</span> ده‌استیله شده را تولید می‌کند.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آزاد سازی شیمیایی یا آنزیمی O-گلیکان‌ها</h4>
+            <p class="mb-4">
+                در حال حاضر تنها یک آنزیم، <span class="ltr-text">O-glycanase</span> از <span class="ltr-text">Diplococcus pneumoniae</span>، برای آزاد سازی <span class="ltr-text">O-glycans</span> در دسترس است، و این آنزیم به دلیل اختصاصیت بالای سوبسترای خود کاربرد محدودی دارد: فقط <span class="ltr-text">Galβ1,3GalNAcα1-Ser/Thr</span> را شکاف می‌دهد.
+                علاوه بر این، هیچ روش شیمیایی ایده‌آلی در دسترس نیست؛ اما گلیکان متصل به <span class="ltr-text">O-</span> متصل به <span class="ltr-text">Ser-</span> و <span class="ltr-text">Thr-</span> معمولاً می‌تواند با واکنش حذف <span class="ltr-text">β-elimination</span> کاتالیز شده با قلیایی کاهنده (واکنش بوروهیدرید قلیایی) آزاد شود، که در آن گلیکان‌های آزاد شده به محض شکافته شدن برای جلوگیری از تشکیل محصولات تخریب ناشی از پوسته شدن، کاهش می‌یابند.
+                با این حال، این واکنش اختصاصی نیست، و در این واکنش، تقریباً <span class="ltr-text">10%–20%</span> از <span class="ltr-text">N-glycans</span> نیز معمولاً آزاد می‌شوند.
+                گلیکان‌های آزاد شده فاقد گروه کاهنده مورد استفاده برای اتصال برچسب‌های فلورسنت با آمیناسیون کاهنده هستند.
+                خوشبختانه، با پیشرفت‌ها در <span class="ltr-text">MS</span> حساس، شناسایی مستقیم گلیکان‌های کاهش یافته امکان‌پذیر است.
+                <span class="ltr-text">O-glycans</span> کاهنده با کیفیت نسبتاً خوب را می‌توان با حذف <span class="ltr-text">β-elimination</span> کاتالیز شده با قلیایی با استفاده از آمین‌های اولیه مانند اتیل‌آمین و هیدرازین به دست آورد.
+                با این حال، هر دو معرف پتانسیل تولید محصولات تخریب شده ناشی از پوسته شدن را دارند.
+                علاوه بر این، آزاد سازی <span class="ltr-text">O-glycan</span> توسط اتیل‌آمین کمی نیست.
+                هیدرازین، اگرچه ممکن است برای استفاده بهتر از اتیل‌آمین باشد، اما نیاز به کنترل دقیق شرایط واکنش و جابجایی دارد و منبع تجاری در اروپا ندارد.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">جداسازی گلیکان‌های شکافته شده بدون برچسب‌گذاری فلورسنت</h4>
+            <p class="mb-4">
+                <span class="ltr-text">N-Glycans</span> را می‌توان با کروماتوگرافی تبادل آنیونی <span class="ltr-text">HPAEC high-pH</span> با تشخیص آمپرومتری پالسی (<span class="ltr-text">PAD</span>) نیز تفکیک کرد (به کروماتوگرافی <a href="621.html" class="text-blue-600 hover:underline" target="_blank">621</a> مراجعه کنید)، که حساسیت بالایی نشان می‌دهد، می‌تواند برخی ایزومرها را نیز جدا کند، و قابلیت تشخیص مستقیم گلیکان‌های بومی را بدون برچسب یا تگ فراهم می‌کند.
+                با این حال، <span class="ltr-text">LC/MS</span> برای این رویکرد جداسازی چالش‌برانگیز است زیرا این سیستم <span class="ltr-text">HPAEC</span> از فازهای متحرک <span class="ltr-text">high-pH</span> و <span class="ltr-text">high-salt</span> استفاده می‌کند که با یونیزاسیون گلیکان‌ها تداخل دارد.
+                علاوه بر این، کمی‌سازی مطلق گلیکان تنها در صورتی امکان‌پذیر است که فاکتورهای پاسخ <span class="ltr-text">PAD</span> فردی برای ساختارهای گلیکانی مختلف شناخته شده باشند، به عنوان مثال، اگر یک کتابخانه مرجع الیگوساکارید مناسب در دسترس باشد.
+                کروماتوگرافی کربن گرافیتی متخلخل (<span class="ltr-text">PGC</span>) نیز می‌تواند برای جداسازی گلیکان‌ها استفاده شود، و این روش انتخابی متعامد را در مقایسه با سایر ستون‌ها اضافه می‌کند.
+                رویکرد <span class="ltr-text">PGC-electrospray-ionization-MS</span> نیز می‌تواند برای تجزیه و تحلیل مستقیم گلیکان به کار گرفته شود.
+                <span class="ltr-text">MALDI/ESI-MS</span> یک روش قدرتمند برای تجزیه و تحلیل مخلوط‌های گلیکانی چه در شکل بومی و چه مشتق شده است.
+                پرمتیلاسیون گلیکان‌های آزاد شده یک روش رایج برای تجزیه و تحلیل مستقیم با استفاده از <span class="ltr-text">MALDI/ESI-MS</span> به ویژه برای گلیکان‌های سیالیله شده است.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">برچسب‌گذاری گلیکان‌ها برای افزایش حساسیت تشخیص و/یا تغییر خواص فیزیکوشیمیایی آن‌ها</h4>
+            <p class="mb-4">
+                مشتق‌سازی شیمیایی رایج‌ترین روش برای برچسب‌گذاری گلیکان‌ها در انتهای کاهنده آن‌ها با آمیناسیون کاهنده است.
+                یک برچسب فلورسنت را می‌توان به هر مونوساکارید و الیگوساکارید متصل کرد، که تعیین مقادیر مولی را تسهیل می‌کند.
+                جدول <span class="ltr-text">2</span> رایج‌ترین نمونه‌های برچسب‌های فلورسنت و رایج‌ترین کاربردهای آن‌ها را نشان می‌دهد.
+            </p>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th>نام</th>
+                        <th>مخفف</th>
+                        <th>ساختار</th>
+                        <th>تکنیک تحلیلی</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">2-Aminobenzoic acid</span></td>
+                        <td><span class="ltr-text">2-AA</span></td>
+                        <td></td>
+                        <td><span class="ltr-text">HPLC</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">2-Aminobenzamide</span></td>
+                        <td><span class="ltr-text">2-AB</span></td>
+                        <td></td>
+                        <td><span class="ltr-text">HPLC MS</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">2-Aminopyridine</span></td>
+                        <td><span class="ltr-text">2-AP</span></td>
+                        <td></td>
+                        <td><span class="ltr-text">HPLC</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">Trisodium 8-aminopyrene-1,3, 6-trisulfonic salt</span></td>
+                        <td><span class="ltr-text">APTS</span></td>
+                        <td></td>
+                        <td><span class="ltr-text">CE</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">پروفایل‌سازی N-گلیکان</h3>
+            <p class="mb-4">
+                گلیکان‌های آزاد شده را می‌توان با روش‌های کروماتوگرافی، الکتروفورتیک یا <span class="ltr-text">MS</span> و به طور کلی با ترکیبی از این‌ها تجزیه و تحلیل یا پروفایل‌سازی کرد.
+                انتخاب روش را می‌توان بر اساس ماهیت گلیکان‌ها و سطح اطلاعات مورد نیاز گروه‌بندی کرد.
+                تجزیه و تحلیل گلیکان‌ها اطلاعاتی در مورد جمعیت‌های مختلف گلیکان‌های موجود بر روی پروتئین (پرمانوز، هیبریدی، پیچیده) ارائه می‌دهد.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">پروفایل‌سازی گلیکان‌ها با HPLC و/یا با الکتروفورز و MS</h4>
+            <p class="mb-4">
+                پروفایل‌سازی گلیکان‌های برچسب‌گذاری شده با تگ فلورسنت با <span class="ltr-text">HPLC</span> به رایج‌ترین رویکرد تبدیل شده است.
+                یک برچسب را می‌توان به هر مونوساکارید و الیگوساکارید با آمیناسیون کاهنده در انتهای کاهنده آن‌ها متصل کرد، که تعیین مقادیر مولی را تسهیل می‌کند.
+                با برچسب مناسب، گلیکان‌ها را می‌توان با حساسیت بالا با استفاده از <span class="ltr-text">HPLC</span> فاز معکوس، فاز نرمال و تبادل آنیونی (به <a href="621.html" class="text-blue-600 hover:underline" target="_blank">621</a> مراجعه کنید) پروفایل‌سازی کرد.
+                به طور روتین، تحلیلگران از ترکیبی از این روش‌ها برای افزایش تفکیک‌پذیری جداسازی و تمایز بهتر ساختارهای گلیکانی استفاده می‌کنند.
+                دقت شناسایی گلیکان را می‌توان با استفاده از استانداردهای گلیکان و/یا با کوپلینگ سیستم <span class="ltr-text">HPLC</span> با <span class="ltr-text">MS</span> اعتبارسنجی کرد.
+                بنابراین، <span class="ltr-text">HPLC–ESI–MS–MS</span> تبادل آنیونی، فاز نرمال و فاز معکوس ترکیبات قدرتمندی را تشکیل می‌دهند؛ و تجزیه و تحلیل درون خطی، در صورت امکان، ممکن است هم پروفایل‌سازی کمی نسبی و هم اطلاعاتی در مورد ساختار گلیکان در یک اجرا ارائه دهد.
+                شناسایی پیک از طریق زمان نگهداری قابل قبول است اگر هویت آن‌ها قبلاً با روش‌های مکمل اعتبارسنجی شده باشد و همگنی پیک تضمین شود.
+                میزان سیالیلاسیون زنجیره‌های گلیکانی می‌تواند یک عامل حیاتی برای اثربخشی بالینی باشد، زیرا سیالیلاسیون اغلب نیمه‌عمر مولکول را در بدن زنده (<span class="ltr-text">in vivo</span>) تعریف می‌کند.
+                <span class="ltr-text">HPLC</span> تبادل آنیونی ساده‌ترین روش برای تعیین آن است، و ساختارهای گلیکان بر اساس بار را می‌توان سپس با <span class="ltr-text">MS</span> شناسایی کرد.
+                نمک‌زدایی هر جزء قبل از <span class="ltr-text">MS</span> مورد نیاز است اگر رابط یونیزاسیون فقط برای جریان‌های نمونه حاوی نمک کم طراحی شده باشد.
+                سیستم‌های جداسازی با تفکیک‌پذیری بالا مانند <span class="ltr-text">CE</span> برای شناسایی ساختارهای گلیکانی بدون <span class="ltr-text">MS</span> زمانی که از استانداردهای با ویژگی‌های خوب برای مقایسه استفاده می‌شود، به کار رفته‌اند.
+                توسعه یک سیستم <span class="ltr-text">CE–MS</span> آنلاین قدرت تجزیه و تحلیل گلیکان را با استفاده از این رویکرد بیشتر افزایش داده است.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شناسایی ساختاری با توالی‌سنجی میکروآنزیمی و طیف‌سنجی جرمی</h4>
+            <p class="mb-4">
+                به طور سنتی، زمانی که اطلاعات ساختاری دقیق مورد نیاز است، تجزیه و تحلیل معمولاً با استفاده از توالی‌سنجی میکروآنزیمی انجام می‌شود.
+                این روش به شدت به اختصاصیت و کیفیت آنزیم‌های مورد استفاده وابسته است.
+                اخیراً، <span class="ltr-text">MS</span> تاندم به طور منظم‌تر برای تأیید، تعیین و توالی‌یابی ساختارهای گلیکانی شناخته شده و جدید استفاده شده است؛ این روش به ویژه زمانی که گلیکان‌ها از گلیکوپروتئین‌ها و منابع تولیدی شناخته شده آزاد می‌شوند، عملی است.
+            </p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تجزیه و تحلیل مونوساکارید</h3>
+            <p class="mb-4">
+                آزمایشات کمی مونوساکاریدهای مختلف برای اهداف متعددی انجام می‌شوند.
+                در زمینه گلیکوپروتئین، آن‌ها اطلاعاتی در مورد مقادیر نسبی ساکارید در یک گلیکوپروتئین و در مورد میزان سیالیلاسیون یک گلیکوپروتئین ارائه می‌دهند؛ و با اندازه‌گیری ترکیب مونوساکارید، اطلاعاتی در مورد ساختار زنجیره‌های گلیکانی موجود ارائه می‌دهند.
+                ساده‌ترین آزمایش‌های مورد استفاده، تست‌های رنگ‌سنجی هستند تا نشان دهند که محصول گلیکوزیله شده است و مقدار کل ساکارید موجود در محصول را کمی‌سازی کنند.
+                این‌ها اختصاصیت ضعیفی بین انواع مختلف باقیمانده‌های قند دارند.
+                آزمایشات ترکیب مونوساکارید به طور کلی ساده‌تر از پروفایل‌سازی الیگوساکارید انجام می‌شوند، اما اطلاعات کمتری ارائه می‌دهند.
+                رایج‌ترین آزمایش مورد استفاده، کمی‌سازی محتوای سیالیک اسید است، زیرا از دست دادن سیالیلاسیون و قرار گرفتن در معرض باقیمانده‌های <span class="ltr-text">Gal</span> انتهایی ممکن است منجر به پاکسازی سریع‌تر گلیکوپروتئین از گردش خون شود.
+                آزمایش‌ها را می‌توان به دو نوع تقسیم کرد: <span class="ltr-text">(1)</span> آن‌هایی که اطلاعات ترکیبی در مورد نمونه دست‌نخورده بدون تخریب قبلی ارائه می‌دهند؛ و <span class="ltr-text">(2)</span> سایرین، عمدتاً کروماتوگرافی، که قبل از تجزیه و تحلیل نیاز به هیدرولیز زنجیره‌های ساکارید دارند و اطلاعات کمی در مورد چندین گونه مختلف مونوساکارید به طور همزمان تولید می‌کنند.
+                به طور کلی، اولی‌ها رنگ‌سنجی و دومی‌ها کروماتوگرافی هستند.
+                مرحله هیدرولیز منبع قابل توجهی از تغییرپذیری آزمایش است و ممکن است نیاز به بهینه‌سازی دقیق برای نمونه‌های خاص داشته باشد.
+                وجود برخی مونوساکاریدها نشانگر ساختارهای گلیکانی خاص است.
+                به عنوان مثال، مشاهده <span class="ltr-text">GalNAc</span> معمولاً نشانگر وجود زنجیره‌های <span class="ltr-text">O-linked glycan</span> است، و فوکوز نشان‌دهنده وجود انواع خاصی از زنجیره‌ها است.
+                در نتیجه تنوع محدود باقیمانده‌های مونوساکارید موجود در گلیکان‌های گلیکوپروتئین، کمی‌سازی دقیق باقیمانده‌های <span class="ltr-text">Man, Gal, or GlcNAc</span> برای تمایز بین تعداد زیادی از گلیکان‌های متنوع ساختاری مورد نیاز است.
+                مونوساکارید <span class="ltr-text">N-glycolylneuraminic acid (Neu5Gc)</span> در انسان تولید نمی‌شود و به طور کلی به عنوان یک جزء ناخواسته و بالقوه ایمونوژنیک محصولات بیودارویی در نظر گرفته می‌شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آماده‌سازی نمونه</h4>
+            <p class="mb-4">
+                نمونه‌های گلیکوپروتئین برای تجزیه و تحلیل مونوساکارید باید عاری از نمک‌ها، مواد کمکی و سایر مواد حامل باشند (قندهای با وزن مولکولی پایین اغلب به عنوان مواد کمکی برای بیوداروها استفاده می‌شوند).
+                این امر با تعدادی از روش‌ها قابل دستیابی است، از جمله موارد زیر:
+            </p>
+            <ol class="list-decimal list-inside mr-4 mb-4">
+                <li><span class="ltr-text">1.</span> دیالیز در برابر آب یا یک بافر فرار، با استفاده از یک غشای مناسب، و لیوفیلیزاسیون؛</li>
+                <li><span class="ltr-text">2. HPLC</span> بر روی یک ستون نفوذ ژل مناسب که با آب یا یک بافر فرار شسته شده، با نظارت جذب <span class="ltr-text">UV</span> یا ضریب شکست، و به دنبال آن لیوفیلیزاسیون نمونه؛ یا</li>
+                <li><span class="ltr-text">3.</span> به دام انداختن نمونه بر روی یک کارتریج <span class="ltr-text">RP-SPE</span> معمولی مانند سیستم <span class="ltr-text">C18</span> یا <span class="ltr-text">C8 SPE</span>، به دنبال آن شستشوی نمک‌ها و مواد کمکی و شستشوی نمونه مورد نیاز.</li>
+            </ol>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کمی‌سازی</h4>
+            <p class="mb-4">
+                روش رایج برای کمی‌سازی قندهای خنثی در گلیکوپروتئین‌ها به رنگ تولید شده توسط حرارت دادن گلیکان‌ها یا گلیکوپروتئین‌ها در حضور فنل آبی در اسید سولفوریک غلیظ بستگی دارد.
+                در بسیاری از موارد، گرمای مورد نیاز برای این واکنش با افزودن اسید سولفوریک غلیظ به مخلوط گلیکوپروتئین–فنل در آب تولید می‌شود.
+                مخلوط کردن سریع و کارآمد محلول‌ها برای نتایج ثابت حیاتی است.
+                نتایج کمی با تجزیه و تحلیل همزمان استانداردها برای ایجاد یک منحنی استاندارد جذب در برابر مقدار ساکارید و/یا در برابر یک نمونه مرجع از محصول مورد تجزیه و تحلیل به دست می‌آید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">رویه‌های هیدرولیز برای پلی‌ساکاریدها و زنجیره‌های گلیکانی گلیکوپروتئین</h4>
+            <p class="mb-4">
+                روش‌های کروماتوگرافی برای شناسایی و کمی‌سازی اجزای مونوساکارید، قبل از تجزیه و تحلیل نیاز به هیدرولیز نمونه دارند.
+                آماده‌سازی نمونه مناسب مورد نیاز است زیرا مواد کمکی یا ناخالصی‌های مرتبط با فرآیند ممکن است ساکارید باشند، و نمک‌های باقیمانده ممکن است با هیدرولیز یا جداسازی کروماتوگرافی بعدی یا با برچسب‌گذاری فلوروفور تداخل داشته باشند.
+                باقیمانده‌های سیالیک اسید را می‌توان یا با هیدرولیز اسیدی ملایم یا با درمان آنزیمی آزاد کرد، که سایر باقیمانده‌های قند را به ستون فقرات پپتیدی متصل باقی می‌گذارد.
+                کمی‌سازی مقدار ساکارید موجود بر اساس افزودن یک استاندارد داخلی قبل یا بعد از هیدرولیز است.
+                رایج‌ترین استاندارد مورد استفاده برای تجزیه و تحلیل سیالیک اسید با <span class="ltr-text">HPAEC</span>، <span class="ltr-text">3-deoxy-D-glycero-D-galacto-2-nonulosonic acid (KDN)</span> است، و <span class="ltr-text">2-deoxyglucose</span> به طور گسترده برای قندهای خنثی استفاده می‌شود.
+                هر دوی این قندها ناپایدار در برابر اسید هستند و باید پس از مرحله هیدرولیز اضافه شوند.
+                کمی‌سازی دقیق هم به هیدرولیز استوکیومتری و هم به عدم تخریب محصولات مونوساکارید در طول هیدرولیز بستگی دارد.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تعیین کل اسیدهای سیالیک</h4>
+            <p class="mb-4">
+                اسیدهای سیالیک در پلی‌ساکاریدهای باکتریایی و گلیکوپروتئین‌ها عموماً به عنوان مشتقات <span class="ltr-text">N-acetyl</span> و <span class="ltr-text">N-glycolyl</span> نورامینیک اسید (<span class="ltr-text">Neu5Ac</span> و <span class="ltr-text">Neu5Gc</span>) وجود دارند.
+                اسیدهای سیالیک را می‌توان همراه با سایر مونوساکاریدها با روشی تعیین کرد که شامل هیدرولیز اسیدی برای آزاد سازی مونوساکاریدهای تشکیل‌دهنده است، و سپس <span class="ltr-text">HPLC</span> با استفاده از یک مخلوط استاندارد مناسب.
+                به طور جایگزین، محتوای کل سیالیک اسید را می‌توان با روش‌های رنگ‌سنجی بدون نیاز به هیدرولیز تعیین کرد.
+                یک روش، که معمولاً به عنوان روش <span class="ltr-text">Warren</span> شناخته می‌شود، بر اساس واکنش تیوباربیتوریک اسید با محصول اکسیداسیون پریودات نورامینیک اسید آزاد شده در محل از گلیکوپروتئین است.
+                به طور جایگزین، رنگ را می‌توان با واکنش رزورسینول با نورامینیک اسید تولید کرد.
+                برای کمی‌سازی دقیق، یک نمونه استاندارد مرجع در هر اندازه‌گیری گنجانده می‌شود.
+            </p>
+
+            <h5 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آزاد سازی انتخابی اسیدهای سیالیک</h5>
+            <p class="mb-4">
+                هیدرولیز اسیدی ملایم یا هضم آنزیمی را می‌توان برای آزاد سازی انتخابی سیالیک اسید از زنجیره‌های گلیکانی گلیکوپروتئین برای کمی‌سازی با روش‌های کروماتوگرافی و برای کمی‌سازی اشکال ناخواسته مانند <span class="ltr-text">Neu5Gc</span> استفاده کرد.
+                شرایط اسیدی تهاجمی‌تر برای آزاد سازی قندهای خنثی و آمینه قبل از تجزیه و تحلیل کروماتوگرافی مورد نیاز است.
+                پروتکل باید با توجه به بازده و تخریب ساکارید برای هر پروتئین مورد تجزیه و تحلیل بهینه شود.
+            </p>
+
+            <h5 class="text-lg font-semibold text-gray-700 mt-3 mb-2">هضم نورامینیداز برای آزاد سازی اسید سیالیک از گلیکوپروتئین‌های دست‌نخورده</h5>
+            <p class="mb-4">
+                انواع مختلفی از نورامینیدازها جداسازی و مطالعه شده‌اند؛ آنزیم مشتق شده از <span class="ltr-text">Clostridium perfringens</span> رایج‌ترین آنزیم مورد استفاده برای آزاد سازی آنزیمی اسیدهای سیالیک از گلیکوپروتئین‌ها است.
+                آنزیم نوترکیب از تامین‌کنندگان تجاری در دسترس است.
+                آنزیم‌های دیگری با اختصاصیت‌های متفاوت در دسترس هستند و می‌توانند برای تمایز انواع مختلف پیوندها استفاده شوند.
+                شرایط هیدرولیز باید برای هر محصول بهینه شود، زیرا پارامترهای کینتیکی برای پیوندهای مختلف و برای <span class="ltr-text">Neu5Ac</span> و <span class="ltr-text">Neu5Gc</span> ممکن است متفاوت باشند.
+                حذف انتخابی <span class="ltr-text">Neu5Acα2→,3-linked</span> و <span class="ltr-text">Neu5Acα2→,6-</span> از گلیکان‌های شکافته شده وسیله‌ای مناسب برای تعریف پیوندها است.
+                برای تجزیه و تحلیل‌های کمی، مقدار مشخصی از یک استاندارد داخلی مناسب، اغلب <span class="ltr-text">2-deoxyglucose</span>، پس از هیدرولیز و حذف اسید اضافه می‌شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">جداسازی و کمی‌سازی مونوساکاریدهای برچسب‌نخورده</h4>
+            <p class="mb-4">
+                اساساً تنها روش مورد استفاده برای شناسایی و کمی‌سازی همزمان مونوساکارید برچسب‌نخورده در هیدرولیزات‌ها، <span class="ltr-text">HPAEC-PAD</span> است.
+                روش‌های <span class="ltr-text">HPAEC-PAD</span> برای جداسازی الیگوساکاریدها نیز قابل استفاده هستند، و یک رویکرد ابزاری واحد را می‌توان برای هر دو کاربرد استفاده کرد.
+                برای اصول کلی و اجزای کروماتوگرافی، به <a href="621.html" class="text-blue-600 hover:underline" target="_blank">621</a> مراجعه کنید.
+                <span class="ltr-text">HPAEC-PAD</span> تجزیه و تحلیل مونوساکاریدها و تمام کلاس‌های الیگوساکاریدها را بدون مشتق‌سازی تسهیل می‌کند.
+                کربوهیدرات‌ها، به دلیل اینکه ترکیبات چندالکلی هستند، اسیدهای ضعیفی با مقادیر <span class="ltr-text">pKa</span> بین <span class="ltr-text">12–14</span> هستند، و در <span class="ltr-text">pH</span> بالا حتی کربوهیدرات‌های خنثی یونیزه می‌شوند و می‌توانند به عنوان ااکسی‌آنیون‌ها با کروماتوگرافی تبادل یونی جدا شوند.
+                اگرچه جداسازی‌ها را می‌توان بر روی تبادل‌کننده‌های آنیونی پلی‌استایرن–دی‌وینیل‌بنزن متخلخل مقاوم به قلیا انجام داد، کربوهیدرات‌ها تمایل به نمایش پیک‌های پهن به دلیل مشکلات انتقال جرم دارند.
+                در بسته‌بندی‌های ستون تبادل آنیونی پلیمری میکرو مهره‌ای، مهره‌های لاتکس کوچک عامل‌دار شده (با قطر <span class="ltr-text"><0.1-µm</span>) به مهره‌های غیرمتخلخل یکنواخت بزرگتر (با قطر <span class="ltr-text"><10-µm</span>) متصل می‌شوند.
+                آنالیت کربوهیدرات با گروه‌های عاملی در سطح میکرومهره‌های لاتکس واکنش می‌دهد، که انتشار به داخل و خارج منافذ و پهن شدن پیک مرتبط را حذف می‌کند.
+                <span class="ltr-text">PAD</span> روش انتخابی برای تشخیص کربوهیدرات‌ها در <span class="ltr-text">HPAEC</span> است زیرا به محلول‌های با <span class="ltr-text">pH</span> بالا که <span class="ltr-text">HPAEC</span> به طور پیش‌فرض فراهم می‌کند، متکی است.
+                تشخیص آمپرومتری جریان، یا بار، حاصل از اکسیداسیون یا کاهش مولکول‌های آنالیت در سطح یک الکترود کاری را اندازه‌گیری می‌کند.
+                الکترون‌ها از آنالیت الکترواکتیو به الکترود در طول واکنش‌های اکسیداسیون و در جهت مخالف در طول واکنش‌های کاهش منتقل می‌شوند.
+                این فرآیند امکان تشخیص حساس و بسیار انتخابی آنالیت‌هایی را فراهم می‌کند که می‌توانند اکسید یا کاهش یابند، اما گونه‌های تداخل‌کننده که الکترواکتیو نیستند، تشخیص داده نمی‌شوند.
+                کربوهیدرات‌ها به راحتی در الکترودهای طلا و پلاتین در <span class="ltr-text">pH</span> بالا اکسید می‌شوند، و جریان تولید شده متناسب با غلظت کربوهیدرات است.
+                یک سیستم تشخیص آمپرومتری معمولی شامل یک الکترود کاری و یک الکترود مرجع است.
+                الکترودهای طلا برای تجزیه و تحلیل کربوهیدرات رایج‌تر هستند، اما محصولات اکسیداسیون سطح الکترود را مسموم کرده و از اکسیداسیون بیشتر جلوگیری می‌کنند.
+                حفظ یک سطح الکترود پایدار و فعال با پالس‌زنی چرخه‌ای بین پتانسیل‌های مثبت و منفی بالا انجام می‌شود.
+                این سری زمان‌بندی شده از پتانسیل‌های مختلف به عنوان یک شکل موج شناخته می‌شود، و کاربرد مکرر یک شکل موج اساس آمپرومتری پالسی است.
+                شکل موج‌های مختلفی برای کاربردهای مختلف <span class="ltr-text">HPAEC-PAD</span> و برای الکترودهای کاری مختلف استفاده می‌شوند: الکترودهای طلای یکبار مصرف نیاز به استفاده از شکل موج‌های سریع و چهارگانه دارند، اما سایر الکترودهای طلا اجازه می‌دهند طیف وسیع‌تری از شکل موج‌ها بدون آسیب رساندن به سطح الکترود استفاده شوند.
+                الکترودهای یکبار مصرف و شکل موج‌های سریع برای به حداقل رساندن تأثیر فرورفتگی الکترود بر حساسیت و دقت کاربردهای کمی مونوساکارید معرفی شدند.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">برچسب‌گذاری فلوروفور مونوساکاریدها قبل از جداسازی و کمی‌سازی</h4>
+            <p class="mb-4">
+                یک رویکرد جایگزین برای شناسایی و کمی‌سازی مونوساکاریدهای موجود در یک هیدرولیزات، اصلاح مونوساکاریدها با آمیناسیون کاهنده با یک برچسب فلوروفور با قابلیت تشخیص آسان است که امکان تشخیص با حساسیت بالا را فراهم کرده و جداسازی کروماتوگرافی مونوساکاریدها را بهبود می‌بخشد.
+                اساساً می‌توان از تجهیزات استاندارد <span class="ltr-text">HPLC</span> استفاده کرد و از آنجایی که همان رویکردهای برچسب‌گذاری برای الیگوساکاریدهای شکافته شده قابل استفاده هستند، یک رویکرد تحلیلی ثابت را می‌توان به کار برد.
+                برچسب‌گذاری فلوروفور برای شناسایی و کمی‌سازی مونوساکاریدها بسیار کمتر از <span class="ltr-text">HPAEC-PAD</span> مورد استفاده قرار گرفته است.
+                برچسب‌گذاری مشتقات سیالیک اسید معمولاً با <span class="ltr-text">1,2-phenylenediamine</span> (یا <span class="ltr-text">DMB</span>، مشتقات <span class="ltr-text">4,5-methylenedioxy</span>) انجام می‌شود، و محصولات حاصل بر روی ستون <span class="ltr-text">C-18</span> و با استفاده از تشخیص فلورسنت جدا می‌شوند.
+            </p>
+        </div>
+
+        <div class="card mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">نتیجه‌گیری</h2>
+            <p class="mb-4">
+                به دلیل پیچیدگی ساختارهای گلیکانی گلیکوپروتئین و تنوع ذاتی آن‌ها در طول فرآیندهای تولید، تولیدکنندگان عموماً ملزم هستند از طریق مطالعات شناسایی، معیارهایی برای کنترل الگوی گلیکوزیلاسیون یک ماده دارویی بیولوژیکی در صورت وقوع گلیکوزیلاسیون، و همچنین سطح اطلاعات مورد نیاز در هر مرحله تولید و در زمان آزاد سازی دسته را توسعه دهند.
+                سپس رویه‌های تحلیلی را می‌توان به گونه‌ای استخراج کرد که اطلاعات مربوط به برآورده کردن الزامات کیفی را فراهم کند.
+                به طور کلی، ترکیبی از رویکردها و تکنیک‌ها مورد نیاز است، و تجزیه و تحلیل ساختاری گلیکان دقیق‌تر در مراحل اولیه توسعه دارو ضروری است.
+                ملاحظات اعتبارسنجی با پیشرفت توسعه روش و دانش محصول، محوری هستند.
+            </p>
+        </div>
+
+        <div class="card mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">پیوست <span class="ltr-text">1</span></h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">اختصارات</h3>
+            <ul class="list-disc list-inside mr-4 mb-4">
+                <li><span class="ltr-text">Fuc</span> <span class="ltr-text">L-Fucose</span></li>
+                <li><span class="ltr-text">Gal</span> <span class="ltr-text">D-Galactose</span></li>
+                <li><span class="ltr-text">GalNAc</span> <span class="ltr-text">N-Acetyl-D-galactosamine</span></li>
+                <li><span class="ltr-text">Glc</span> <span class="ltr-text">D-Glucose</span></li>
+                <li><span class="ltr-text">GlcNAc</span> <span class="ltr-text">N-Acetyl-D-glucosamine</span></li>
+                <li><span class="ltr-text">Man</span> <span class="ltr-text">D-Mannose</span></li>
+                <li><span class="ltr-text">Neu5Ac</span> <span class="ltr-text">N-Acetylneuraminic acid</span></li>
+                <li><span class="ltr-text">Neu5Gc</span> <span class="ltr-text">N-Glycolylneuraminic acid</span></li>
+                <li><span class="ltr-text">Xyl</span> <span class="ltr-text">D-Xylose</span></li>
+            </ul>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تعاریف اضافی</h3>
+            <p class="mb-2">
+                <strong>پرمانوز</strong> — زنجیره‌های گلیکانی حاوی <span class="ltr-text">two</span> باقیمانده <span class="ltr-text">GlcNAc</span> هسته‌ای و بین <span class="ltr-text">five</span> و <span class="ltr-text">nine Man</span> باقیمانده، و فاقد باقیمانده‌های <span class="ltr-text">Gal, GlcNAc, or Neu5Ac</span> در آنتن‌ها.
+                چنین زنجیره‌هایی معمولاً در گلیکان‌های پستانداران یافت می‌شوند.
+            </p>
+            <p class="mb-2">
+                <strong>پرمانوزاسیون</strong> — <span class="ltr-text">(i)</span> افزودن باقیمانده‌های <span class="ltr-text">Man</span> به زنجیره‌های پرمانوز که زنجیره‌هایی با تعداد زیادی باقیمانده <span class="ltr-text">Man</span> ایجاد می‌کند، و <span class="ltr-text">(ii)</span> زنجیره‌های گلیکانی متصل به <span class="ltr-text">O-Man</span> با چندین باقیمانده <span class="ltr-text">Man</span> که توسط مخمر سنتز می‌شوند.
+            </p>
+            <p class="mb-2">
+                <strong>پوسی‌مانوز</strong> — زنجیره‌های گلیکانی حاوی <span class="ltr-text">two</span> باقیمانده <span class="ltr-text">GlcNAc</span> هسته‌ای بین <span class="ltr-text">two</span> و <span class="ltr-text">four Man</span> باقیمانده.
+                باقیمانده‌های <span class="ltr-text">Fucα1,3</span> و/یا <span class="ltr-text">Fucα1,6</span> متصل به هسته ممکن است وجود داشته باشند.
+            </p>
+            <p class="mb-4">
+                <strong>الیگومانوز</strong> — در اینجا به عنوان یک اصطلاح عمومی برای شامل پرمانوز، پوسی‌مانوز، و زنجیره‌های <span class="ltr-text">N-linked</span> پرمانوزیله شده استفاده می‌شود.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

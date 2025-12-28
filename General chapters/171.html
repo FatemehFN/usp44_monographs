@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سنجش فعالیت ویتامین B12</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Vazirmatn -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax CDN -->
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr; /* Ensure formulas are LTR */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">سنجش فعالیت ویتامین B12</h1>
+
+        <div class="card mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">روش کار</h3>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تهیه نمونه سنجش</h4>
+            <p class="mb-2">
+                مقدار مناسبی از ماده مورد سنجش را، در صورت لزوم قبلاً به پودر نرم تبدیل شده و دقیقاً اندازه‌گیری یا وزن شده،
+                در یک ظرف مناسب قرار دهید. برای هر <span class="ltr-text">g</span> یا <span class="ltr-text">mL</span> از ماده گرفته شده، <span class="ltr-text">25 mL</span> از یک محلول آبی استخراجی
+                که بلافاصله قبل از استفاده تهیه شده و حاوی <span class="ltr-text">1.29 g</span> فسفات دی‌سدیم، <span class="ltr-text">1.1 g</span> سیتریک اسید انیدروس، و <span class="ltr-text">1.0 g</span> متا‌بی‌سولفیت سدیم
+                در هر <span class="ltr-text">100 mL</span> است، به آن اضافه کنید. مخلوط را در دمای <span class="ltr-text">121°</span> به مدت <span class="ltr-text">10 minutes</span> اتوکلاو کنید. اجازه دهید ذرات نامحلول عصاره
+                ته‌نشین شوند و در صورت لزوم، فیلتر یا سانتریفیوژ کنید. مقداری از محلول شفاف را با آب رقیق کنید به گونه‌ای که
+                محلول نهایی آزمون حاوی فعالیت ویتامین <span class="ltr-text">B12</span> تقریباً معادل محلول استاندارد سیانوکوبالامین باشد که به لوله‌های سنجش اضافه می‌شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استاندارد سیانوکوبالامین غلیظ</h4>
+            <p class="mb-2">
+                به مقدار مناسبی از استاندارد مرجع سیانوکوبالامین (کریستالی) <span class="ltr-text">USP</span>، که دقیقاً وزن شده است،
+                الکل <span class="ltr-text">25 percent</span> کافی اضافه کنید تا محلولی با غلظت مشخص <span class="ltr-text">1.0 µg</span> سیانوکوبالامین در هر <span class="ltr-text">mL</span> به دست آید.
+                در یخچال نگهداری کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استاندارد سیانوکوبالامین</h4>
+            <p class="mb-2">
+                حجم مناسبی از محلول استاندارد سیانوکوبالامین غلیظ را با آب رقیق کنید تا به حجمی مشخص برسد؛ به گونه‌ای که
+                پس از دوره انکوباسیون که برای روش کار توضیح داده شده است، اختلاف در عبور نور بین blank تلقیح شده و
+                سطح <span class="ltr-text">5.0-mL</span> از محلول استاندارد سیانوکوبالامین کمتر از آن نباشد که مربوط به اختلاف <span class="ltr-text">1.25 mg</span>
+                در وزن سلول خشک شده باشد. این غلظت معمولاً بین <span class="ltr-text">0.01 ng</span> و <span class="ltr-text">0.04 ng</span> در هر <span class="ltr-text">mL</span> از محلول استاندارد سیانوکوبالامین
+                قرار می‌گیرد. برای هر سنجش یک محلول استاندارد تازه تهیه کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول پایه محیط کشت غلیظ</h4>
+            <p class="mb-2">
+                محیط را طبق فرمول و دستورالعمل‌های زیر تهیه کنید. یک مخلوط دهیدراته حاوی همین مواد ممکن است استفاده شود،
+                مشروط بر اینکه پس از آماده‌سازی طبق دستورالعمل برچسب، محیطی قابل مقایسه با آنچه از فرمول داده شده در اینجا
+                به دست می‌آید، تولید کند.
+            </p>
+            <p class="mb-2">
+                مواد را به ترتیبی که ذکر شده اضافه کنید، سیستین و تریپتوفان را با دقت در اسید هیدروکلریک حل کنید قبل از
+                اضافه کردن هشت محلول بعدی به محلول حاصل. <span class="ltr-text">100 mL</span> آب اضافه کنید، مخلوط کرده و دکستروز، استات سدیم،
+                و اسید اسکوربیک را حل کنید. در صورت لزوم، فیلتر کنید، محلول پلی‌سوربات <span class="ltr-text">80</span> را اضافه کنید، <span class="ltr-text">pH</span> محلول را
+                با سدیم هیدروکسید <span class="ltr-text">1 N</span> بین <span class="ltr-text">5.5</span> و <span class="ltr-text">6.0</span> تنظیم کنید و آب خالص اضافه کنید تا <span class="ltr-text">250 mL</span> شود.
+            </p>
+
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th>ماده</th>
+                        <th>مقدار</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">L-Cystine</span></td>
+                        <td><span class="ltr-text">0.1 g</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">L-Tryptophane</span></td>
+                        <td><span class="ltr-text">0.05 g</span></td>
+                    </tr>
+                    <tr>
+                        <td>هیدروکلریک اسید <span class="ltr-text">1 N</span></td>
+                        <td><span class="ltr-text">10 mL</span></td>
+                    </tr>
+                    <tr>
+                        <td>محلول آدنین–گوانین–اوراسیل</td>
+                        <td><span class="ltr-text">5 mL</span></td>
+                    </tr>
+                    <tr>
+                        <td>محلول زانتین</td>
+                        <td><span class="ltr-text">5 mL</span></td>
+                    </tr>
+                    <tr>
+                        <td>محلول ویتامین <span class="ltr-text">I</span></td>
+                        <td><span class="ltr-text">10 mL</span></td>
+                    </tr>
+                    <tr>
+                        <td>محلول ویتامین <span class="ltr-text">II</span></td>
+                        <td><span class="ltr-text">10 mL</span></td>
+                    </tr>
+                    <tr>
+                        <td>محلول نمک <span class="ltr-text">A</span></td>
+                        <td><span class="ltr-text">5 mL</span></td>
+                    </tr>
+                    <tr>
+                        <td>محلول نمک <span class="ltr-text">B</span></td>
+                        <td><span class="ltr-text">5 mL</span></td>
+                    </tr>
+                    <tr>
+                        <td>محلول آسپاراژین</td>
+                        <td><span class="ltr-text">5 mL</span></td>
+                    </tr>
+                    <tr>
+                        <td>محلول کازئین هیدرولیز شده با اسید</td>
+                        <td><span class="ltr-text">25 mL</span></td>
+                    </tr>
+                    <tr>
+                        <td>دکستروز، انیدروس</td>
+                        <td><span class="ltr-text">10 g</span></td>
+                    </tr>
+                    <tr>
+                        <td>استات سدیم، انیدروس</td>
+                        <td><span class="ltr-text">5 g</span></td>
+                    </tr>
+                    <tr>
+                        <td>اسید اسکوربیک</td>
+                        <td><span class="ltr-text">1 g</span></td>
+                    </tr>
+                    <tr>
+                        <td>محلول پلی‌سوربات <span class="ltr-text">80</span></td>
+                        <td><span class="ltr-text">5 mL</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول کازئین هیدرولیز شده با اسید</h4>
+            <p class="mb-2">
+                طبق دستورالعمل زیر <a href="91.html" class="text-blue-600 hover:underline" target="_blank">91</a> سنجش پانتوتنات کلسیم تهیه شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول آسپاراژین</h4>
+            <p class="mb-2">
+                <span class="ltr-text">2.0 g</span> از <span class="ltr-text">L-asparagine</span> را در آب حل کنید تا <span class="ltr-text">200 mL</span> شود. در یخچال زیر تولوئن نگهداری کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول آدنین–گوانین–اوراسیل</h4>
+            <p class="mb-2">
+                طبق دستورالعمل زیر <a href="91.html" class="text-blue-600 hover:underline" target="_blank">91</a> سنجش پانتوتنات کلسیم تهیه شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول زانتین</h4>
+            <p class="mb-2">
+                <span class="ltr-text">0.20 g</span> زانتین را در <span class="ltr-text">30 mL</span> تا <span class="ltr-text">40 mL</span> آب معلق کنید، تا حدود <span class="ltr-text">70°</span> حرارت دهید،
+                <span class="ltr-text">6.0 mL</span> آمونیوم هیدروکسید <span class="ltr-text">6 N</span> اضافه کنید، و هم بزنید تا جامد حل شود. خنک کنید و آب اضافه کنید تا <span class="ltr-text">200 mL</span> شود.
+                در یخچال زیر تولوئن نگهداری کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمک <span class="ltr-text">A</span></h4>
+            <p class="mb-2">
+                <span class="ltr-text">10 g</span> فسفات مونو‌بازییک پتاسیم و <span class="ltr-text">10 g</span> فسفات دی‌بازییک پتاسیم را در آب حل کنید تا <span class="ltr-text">200 mL</span> شود.
+                <span class="ltr-text">2 drops</span> اسید هیدروکلریک اضافه کنید و زیر تولوئن نگهداری کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمک <span class="ltr-text">B</span></h4>
+            <p class="mb-2">
+                <span class="ltr-text">4.0 g</span> سولفات منیزیم، <span class="ltr-text">0.20 g</span> کلرید سدیم، <span class="ltr-text">0.20 g</span> سولفات فروس و <span class="ltr-text">0.20 g</span> سولفات منگنز را در آب حل کنید تا <span class="ltr-text">200 mL</span> شود.
+                <span class="ltr-text">2 drops</span> اسید هیدروکلریک اضافه کنید و زیر تولوئن نگهداری کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول پلی‌سوربات <span class="ltr-text">80</span></h4>
+            <p class="mb-2">
+                <span class="ltr-text">20 g</span> پلی‌سوربات <span class="ltr-text">80</span> را در الکل حل کنید تا <span class="ltr-text">200 mL</span> شود. در یخچال نگهداری کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول ویتامین <span class="ltr-text">I</span></h4>
+            <p class="mb-2">
+                <span class="ltr-text">10 mg</span> ریبوفلاوین، <span class="ltr-text">10 mg</span> تیامین هیدروکلرید، <span class="ltr-text">100 µg</span> بیوتین و <span class="ltr-text">20 mg</span> نیاسین را در اسید استیک گلاسیال <span class="ltr-text">0.02 N</span> حل کنید تا <span class="ltr-text">400 mL</span> شود.
+                محافظت شده از نور، زیر تولوئن در یخچال نگهداری کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول ویتامین <span class="ltr-text">II</span></h4>
+            <p class="mb-2">
+                <span class="ltr-text">20 mg</span> پارا-آمینو‌بنزوئیک اسید، <span class="ltr-text">10 mg</span> پانتوتنات کلسیم، <span class="ltr-text">40 mg</span> پیریدوکسین هیدروکلرید، <span class="ltr-text">40 mg</span> پیریدوکسال هیدروکلرید،
+                <span class="ltr-text">8 mg</span> پیریدوکسامین دی‌هیدروکلرید و <span class="ltr-text">2 mg</span> فولیک اسید را در الکل رقیق خنثی شده (<span class="ltr-text">1 in 4</span>) حل کنید تا <span class="ltr-text">400 mL</span> شود.
+                محافظت شده از نور، در یخچال نگهداری کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تهیه آب گوجه‌فرنگی</h4>
+            <p class="mb-2">
+                آب گوجه‌فرنگی کنسرو شده تجاری را سانتریفیوژ کنید تا بیشتر پالپ آن خارج شود. حدود <span class="ltr-text">5 g per L</span> از کمک فیلتر تحلیلی را
+                در مایع رویی معلق کرده و با کمک فشار کاهش یافته از طریق لایه‌ای از کمک فیلتر، فیلتر کنید. در صورت لزوم تکرار کنید
+                تا یک فیلتر شفاف و به رنگ کاه به دست آید. در یخچال زیر تولوئن نگهداری کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محیط کشت</h4>
+            <p class="mb-2">
+                [توجه – یک مخلوط دهیدراته حاوی همین مواد ممکن است استفاده شود، مشروط بر اینکه پس از آماده‌سازی طبق دستورالعمل
+                برچسب، محیطی معادل با آنچه از فرمول داده شده در اینجا به دست می‌آید، تولید کند.]
+                <span class="ltr-text">0.75 g</span> عصاره مخمر محلول در آب، <span class="ltr-text">0.75 g</span> پپتون خشک شده، <span class="ltr-text">1.0 g</span> دکستروز انیدروس، و <span class="ltr-text">0.20 g</span> بیفسفات پتاسیم را
+                در <span class="ltr-text">60 mL</span> تا <span class="ltr-text">70 mL</span> آب حل کنید. <span class="ltr-text">10 mL</span> از تهیه آب گوجه‌فرنگی و <span class="ltr-text">1 mL</span> از محلول پلی‌سوربات <span class="ltr-text">80</span> را اضافه کنید.
+                محلول را با سدیم هیدروکسید <span class="ltr-text">1 N</span> تا <span class="ltr-text">pH</span> <span class="ltr-text">6.8</span> تنظیم کرده و آب اضافه کنید تا <span class="ltr-text">100 mL</span> شود.
+                بخش‌های <span class="ltr-text">10-mL</span> از محلول را در لوله‌های آزمایش قرار داده و با پنبه ببندید. لوله‌ها و محتویات را
+                در اتوکلاو در دمای <span class="ltr-text">121°</span> به مدت <span class="ltr-text">15 minutes</span> استریل کنید. هر چه سریع‌تر خنک کنید تا از تشکیل رنگ
+                ناشی از گرم شدن بیش از حد محیط جلوگیری شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محیط سوسپانسیون</h4>
+            <p class="mb-2">
+                حجم مشخصی از محلول پایه محیط کشت غلیظ را با حجم مساوی از آب رقیق کنید. بخش‌های <span class="ltr-text">10-mL</span> از محیط رقیق شده
+                را در لوله‌های آزمایش قرار دهید. استریل کرده و طبق دستورالعمل بالا برای محیط کشت خنک کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کشت استوک <span class="ltr-text">Lactobacillus leichmannii</span></h4>
+            <p class="mb-2">
+                به <span class="ltr-text">100 mL</span> محیط کشت، <span class="ltr-text">1.0 g</span> تا <span class="ltr-text">1.5 g</span> آگار اضافه کنید و مخلوط را با هم زدن در حمام بخار حرارت دهید
+                تا آگار حل شود. تقریباً بخش‌های <span class="ltr-text">10-mL</span> از محلول داغ را در لوله‌های آزمایش قرار دهید، لوله‌ها را به طور مناسب بپوشانید،
+                در <span class="ltr-text">121°</span> به مدت <span class="ltr-text">15 minutes</span> در اتوکلاو (دمای خط خروجی) استریل کنید و اجازه دهید لوله‌ها در حالت عمودی خنک شوند.
+                سه یا بیشتر از لوله‌ها را با انتقال سوزنی از یک کشت خالص <span class="ltr-text">Lactobacillus leichmannii</span>* تلقیح کنید.
+                (قبل از اولین استفاده از یک کشت تازه در این سنجش، در یک دوره <span class="ltr-text">2-week</span>، حداقل <span class="ltr-text">10</span> انتقال متوالی از کشت را انجام دهید.)
+                <span class="ltr-text">16</span> تا <span class="ltr-text">24 hours</span> در هر دمای انتخابی بین <span class="ltr-text">30°</span> و <span class="ltr-text">40°</span> اما ثابت تا <span class="ltr-text">±0.5°</span> انکوبه کنید، و در نهایت در یخچال نگهداری کنید.
+            </p>
+            <p class="mb-2">
+                کشت‌های سوزنی تازه را حداقل سه بار در هفته تهیه کنید، و اگر بیش از <span class="ltr-text">4 days</span> از عمر آنها می‌گذرد، از آنها برای تهیه
+                ماده تلقیح استفاده نکنید. فعالیت میکروارگانیسم را می‌توان با انتقال روزانه یا دو بار در روز کشت سوزنی، تا جایی که
+                کدورت مشخصی در ماده تلقیح مایع <span class="ltr-text">2</span> تا <span class="ltr-text">4 hours</span> پس از تلقیح مشاهده شود، افزایش داد. یک کشت با رشد آهسته
+                به ندرت منحنی پاسخ مناسبی می‌دهد و ممکن است منجر به نتایج نامنظم شود.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماده تلقیح</h4>
+            <p class="mb-2">
+                [توجه – یک سوسپانسیون منجمد از <span class="ltr-text">Lactobacillus leichmannii</span> می‌تواند به عنوان کشت استوک استفاده شود،
+                مشروط بر اینکه ماده تلقیحی قابل مقایسه با یک کشت تازه تولید کند.]
+                سلول‌ها را از کشت استوک <span class="ltr-text">Lactobacillus leichmannii</span> به <span class="ltr-text">2</span> لوله استریل حاوی <span class="ltr-text">10 mL</span> از محیط کشت در هر کدام منتقل کنید.
+                این کشت‌ها را به مدت <span class="ltr-text">16</span> تا <span class="ltr-text">24 hours</span> در هر دمای انتخابی بین <span class="ltr-text">30°</span> و <span class="ltr-text">40°</span> اما ثابت تا <span class="ltr-text">±0.5°</span> انکوبه کنید.
+                تحت شرایط آسپتیک، کشت‌ها را سانتریفیوژ کرده و مایع رویی را دور بریزید. سلول‌ها را از کشت در <span class="ltr-text">5 mL</span> محیط سوسپانسیون استریل
+                معلق کرده و ترکیب کنید. با استفاده از محیط سوسپانسیون استریل، حجم را به گونه‌ای تنظیم کنید که رقت <span class="ltr-text">1 in 20</span> در <span class="ltr-text">saline TS</span>
+                <span class="ltr-text">70%</span> عبور نور ایجاد کند، زمانی که با یک اسپکتروفتومتر مناسب که در طول موج <span class="ltr-text">530 nm</span> تنظیم شده است،
+                مجهز به یک سلول <span class="ltr-text">10-mm</span>، و در مقایسه با <span class="ltr-text">saline TS</span> که روی <span class="ltr-text">100%</span> عبور نور تنظیم شده است، خوانده شود.
+                یک رقت <span class="ltr-text">1 in 400</span> از سوسپانسیون تنظیم شده را با استفاده از محلول پایه محیط کشت غلیظ تهیه کرده و از آن برای
+                ماده تلقیح آزمون استفاده کنید. (این رقت ممکن است در صورت لزوم برای دستیابی به پاسخ آزمون مطلوب تغییر داده شود.)
+            </p>
+            <p class="text-sm italic mb-2">* کشت‌های خالص <span class="ltr-text">Lactobacillus leichmannii</span> را می‌توان به عنوان شماره <span class="ltr-text">7830</span> از <span class="ltr-text">American Type Culture Collection, 10801 University Blvd., Manassas, VA 20110</span> تهیه کرد.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کالیبراسیون اسپکتروفتومتر</h4>
+            <p class="mb-2">
+                طول موج اسپکتروفتومتر را به صورت دوره‌ای، با استفاده از سلول طول موج استاندارد یا دستگاه مناسب دیگر، بررسی کنید.
+                قبل از خواندن هر آزمایشی، اسپکتروفتومتر را برای <span class="ltr-text">0%</span> و <span class="ltr-text">100%</span> عبور نور، با استفاده از آب و با
+                طول موج تنظیم شده در <span class="ltr-text">530 nm</span>، کالیبره کنید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش کار</h4>
+            <p class="mb-2">
+                لوله‌های آزمایش شیشه‌ای سخت، به اندازه تقریباً <span class="ltr-text">20 mm × 150 mm</span>، و سایر لوازم شیشه‌ای لازم را با دقت و با روش‌های مناسب
+                تمیز کنید، و ترجیحاً پس از آن به مدت <span class="ltr-text">2 hours</span> در <span class="ltr-text">250°</span> حرارت دهید، زیرا ارگانیسم آزمایشی به مقادیر بسیار کم
+                فعالیت ویتامین <span class="ltr-text">B12</span> و به آثار بسیاری از عوامل پاک‌کننده بسیار حساس است.
+            </p>
+            <p class="mb-2">
+                به لوله‌های آزمایش، به صورت دوتایی، به ترتیب <span class="ltr-text">1.0 mL, 1.5 mL, 2.0 mL, 3.0 mL, 4.0 mL,</span> و <span class="ltr-text">5.0 mL</span> از
+                محلول استاندارد سیانوکوبالامین اضافه کنید. به هر یک از این لوله‌ها و به چهار لوله خالی مشابه دیگر، <span class="ltr-text">5.0 mL</span>
+                از محلول پایه محیط کشت غلیظ و آب اضافه کنید تا <span class="ltr-text">10 mL</span> شود.
+            </p>
+            <p class="mb-2">
+                به لوله‌های آزمایش مشابه، به صورت دوتایی، به ترتیب <span class="ltr-text">1.0 mL, 1.5 mL, 2.0 mL, 3.0 mL,</span> و <span class="ltr-text">4.0 mL</span> از تهیه نمونه سنجش
+                اضافه کنید. به هر لوله <span class="ltr-text">5.0 mL</span> از محلول پایه محیط کشت غلیظ و آب اضافه کنید تا <span class="ltr-text">10 mL</span> شود.
+                یک مجموعه کامل از لوله‌های استاندارد و سنجش را در یک قفسه لوله و مجموعه دوتایی را در قفسه دوم یا بخشی از قفسه،
+                ترجیحاً به ترتیب تصادفی، قرار دهید.
+            </p>
+            <p class="mb-2">
+                لوله‌ها را به طور مناسب بپوشانید تا از آلودگی باکتریایی جلوگیری شود، و لوله‌ها و محتویات را در اتوکلاو در <span class="ltr-text">121°</span> به مدت
+                <span class="ltr-text">5 minutes</span> استریل کنید، به گونه‌ای که این دما در حداکثر <span class="ltr-text">10 minutes</span> با پیش گرم کردن اتوکلاو، در صورت لزوم،
+                حاصل شود. هر چه سریع‌تر خنک کنید تا از تشکیل رنگ ناشی از گرم شدن بیش از حد محیط جلوگیری شود.
+                اقدامات احتیاطی را برای حفظ یکنواختی شرایط استریل‌سازی و خنک‌سازی در طول سنجش رعایت کنید، زیرا بسته‌بندی بیش از حد
+                لوله‌ها در اتوکلاو یا بارگذاری بیش از حد آن، ممکن است باعث تغییر در نرخ گرمایش شود.
+            </p>
+            <p class="mb-2">
+                <span class="ltr-text">0.5 mL</span> از ماده تلقیح را به صورت آسپتیک به هر لوله آماده شده اضافه کنید، به جز دو لوله از چهار لوله‌ای که
+                حاوی محلول استاندارد سیانوکوبالامین نیستند (blank‌های تلقیح نشده). لوله‌ها را در دمای بین <span class="ltr-text">30°</span> و <span class="ltr-text">40°</span>
+                که تا <span class="ltr-text">±0.5°</span> ثابت نگه داشته شده است، به مدت <span class="ltr-text">16</span> تا <span class="ltr-text">24 hours</span> انکوبه کنید.
+            </p>
+            <p class="mb-2">
+                رشد را با حرارت دادن به دمای کمتر از <span class="ltr-text">80°</span> به مدت <span class="ltr-text">5 minutes</span> متوقف کنید. تا دمای اتاق خنک کنید.
+                پس از تکان دادن محتویات، ظرف را در اسپکتروفتومتری که در طول موج <span class="ltr-text">530 nm</span> تنظیم شده است قرار دهید و
+                عبور نور را زمانی که به حالت پایدار رسید، بخوانید. این حالت پایدار چند ثانیه پس از تکان دادن زمانی که خوانش برای
+                <span class="ltr-text">30 seconds</span> یا بیشتر ثابت می‌ماند، مشاهده می‌شود. برای خواندن هر لوله تقریباً همان بازه زمانی را در نظر بگیرید.
+            </p>
+            <p class="mb-2">
+                با تنظیم عبور نور روی <span class="ltr-text">100%</span> برای blank تلقیح نشده، عبور نور blank تلقیح شده را بخوانید.
+                اگر اختلاف بیشتر از <span class="ltr-text">5%</span> باشد یا شواهدی از آلودگی با یک میکروارگانیسم خارجی وجود داشته باشد، نتایج سنجش را نادیده بگیرید.
+            </p>
+            <p class="mb-2">
+                با تنظیم عبور نور روی <span class="ltr-text">100%</span> برای blank تلقیح نشده، عبور نور هر یک از لوله‌های باقیمانده را بخوانید.
+                اگر شیب منحنی استاندارد نشان‌دهنده مشکلی در حساسیت باشد، نتایج سنجش را نادیده بگیرید.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محاسبه</h4>
+            <p class="mb-2">
+                یک منحنی پاسخ-غلظت استاندارد را با روش زیر تهیه کنید. هر عبور نور فردی نامنظم را بررسی و جایگزین کنید.
+                برای هر سطح از استاندارد، پاسخ را از مجموع مقادیر دوتایی عبور نور (<span class="ltr-text">\(\Sigma\)</span>) به عنوان
+                اختلاف، <span class="ltr-text">y = 2.00 – \(\Sigma\)</span>، محاسبه کنید. این پاسخ را روی محور عمودی
+                کاغذ نمودار در برابر لگاریتم <span class="ltr-text">mL</span> از محلول استاندارد سیانوکوبالامین در هر لوله روی محور افقی
+                رسم کنید، با استفاده از مقیاس حسابی یا لگاریتمی برای محور عمودی، هر کدام که تقریب بهتری به یک خط مستقیم بدهد.
+                خط مستقیم یا منحنی صافی را که بهترین تناسب را با نقاط رسم شده دارد، بکشید.
+            </p>
+            <p class="mb-2">
+                پاسخ، <span class="ltr-text">y</span>، را با جمع کردن دو عبور نور برای هر سطح از تهیه نمونه سنجش، محاسبه کنید.
+                از منحنی استاندارد، لگاریتم حجم تهیه استاندارد را که مربوط به هر یک از مقادیر <span class="ltr-text">y</span> است و در محدوده
+                پایین‌ترین و بالاترین نقاط رسم شده برای استاندارد قرار می‌گیرد، بخوانید. از هر لگاریتم به دست آمده، لگاریتم حجم،
+                بر حسب <span class="ltr-text">mL</span>، از تهیه نمونه سنجش را کم کنید تا اختلاف، <span class="ltr-text">x</span>، برای هر سطح دوز به دست آید.
+                میانگین مقادیر <span class="ltr-text">x</span> را برای هر یک از سه یا بیشتر سطح دوز محاسبه کنید تا <span class="ltr-text">x = M′</span>، توان لگاریتمی-نسبی
+                تهیه نمونه سنجش، به دست آید.
+            </p>
+            <p class="mb-2">
+                مقدار، بر حسب <span class="ltr-text">µg</span>، از استاندارد مرجع سیانوکوبالامین (کریستالی) <span class="ltr-text">USP</span> معادل با سیانوکوبالامین
+                در قسمت ماده گرفته شده برای سنجش را با معادله زیر تعیین کنید:
+            </p>
+            <div class="formula-display">
+                \[
+                \text{antilog M = antilog (M' + log R)}
+                \]
+            </div>
+            <p class="mb-2">
+                <span class="ltr-text">R</span> = تعداد <span class="ltr-text">µg</span> از سیانوکوبالامین که فرض شده است در هر <span class="ltr-text">mg</span> (یا کپسول یا قرص) از ماده گرفته شده برای سنجش وجود داشته است.
+            </p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تکرار</h4>
+            <p class="mb-2">
+                کل تعیین را حداقل یک بار تکرار کنید، با استفاده از تهیه نمونه‌های سنجش جداگانه. اگر اختلاف بین دو لگاریتم
+                توان <span class="ltr-text">M</span> بیشتر از <span class="ltr-text">0.08</span> نباشد، میانگین آنها، <span class="ltr-text">\(\bar{M}\)</span>، توان لگاریتمی سنجش شده ماده آزمون است
+                (به سنجش فعالیت ویتامین <span class="ltr-text">B12</span> در بخش طراحی و تحلیل سنجش‌های بیولوژیکی <a href="111.html" class="text-blue-600 hover:underline" target="_blank">111</a> مراجعه کنید).
+                اگر دو تعیین بیش از <span class="ltr-text">0.08</span> با یکدیگر تفاوت دارند، یک یا چند تعیین اضافی انجام دهید.
+                از میانگین دو یا بیشتر مقدار <span class="ltr-text">M</span> که بیش از <span class="ltr-text">0.15</span> با یکدیگر تفاوت ندارند، میانگین توان آماده‌سازی تحت سنجش را محاسبه کنید.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع <span class="ltr-text">USP</span> <a href="11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h3>
+            <ul class="list-disc list-inside space-y-1">
+                <li><span class="ltr-text">USP Cyanocobalamin (Crystalline) RS</span></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

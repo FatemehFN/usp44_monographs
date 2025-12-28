@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحلیل مونوساکارید</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Vazirmatn -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax CDN -->
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">تحلیل مونوساکارید <span class="ltr-text">210</span></h1>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+        <p class="mb-4">
+            ترکیب گلیکان گلیکوپروتئین‌های درمانی ممکن است بر فعالیت بیولوژیکی، پایداری، فارماکوکینتیک، فارماکودینامیک، اثربخشی و ایمنی‌زایی مولکول تأثیر بگذارد. الگوی گلیکوزیلاسیون، یا جنبه‌های خاصی از آن مانند میزان سیالیلاسیون، ممکن است بخشی از مشخصات خصوصیات محصول و انتشار باشد. یک رویکرد برای اطمینان از سازگاری گلیکوزیلاسیون و انطباق محصول با مشخصات، اندازه‌گیری کمی مونوساکاریدهای خاص موجود در محصول است. مونوساکاریدها با تجزیه محصول آزاد شده و با رویکردهای کروماتوگرافیک کمی‌سازی می‌شوند. رایج‌ترین قندهای تعیین شده، <span class="ltr-text">N-acetylneuraminic acid (Neu5Ac)</span> و نوع دیگر آن <span class="ltr-text">N-glycolylneuraminic acid (Neu5Gc)</span> هستند. این مونوساکاریدها را می‌توان به طور انتخابی از پروتئین یا با هیدرولیز اسید رقیق یا با روش‌های آنزیمی آزاد کرد، در حالی که شرایط هیدرولیز تهاجمی‌تر، مونوساکاریدهای خنثی از جمله مانوز، گالاکتوز و فوکوز، و سپس گلوکوزامین و گالاکتوزامین را آزاد می‌کند. جداسازی و کمی‌سازی مونوساکاریدهای آزاد شده با کروماتوگرافی مایع با عملکرد بالا (<span class="ltr-text">HPLC</span>) می‌تواند با یا بدون برچسب‌گذاری فلوروفور انجام شود.
+        </p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">آماده‌سازی نمونه قبل از آزاد شدن مونوساکارید</h3>
+        <p class="mb-4">
+            نمونه گلیکوپروتئین باید تا حد امکان عاری از نمک‌ها، مواد جانبی و سایر مواد حامل باشد. این معمولاً با روش‌های زیر انجام می‌شود: <span class="ltr-text">1)</span> دیالیز در برابر آب یا بافر فرار با استفاده از یک غشاء مناسب، یا اولترافیلتراسیون از طریق یک غشاء مناسب؛ <span class="ltr-text">2)</span> <span class="ltr-text">HPLC</span> بر روی ستون نفوذ ژل مناسب که با آب یا بافر فرار شسته شده و با جذب <span class="ltr-text">UV</span> یا ضریب شکست نظارت می‌شود؛ <span class="ltr-text">3)</span> به دام انداختن نمونه بر روی کارتریج استخراج فاز جامد (<span class="ltr-text">SPE</span>)، و به دنبال آن شستشوی نمک‌ها و مواد جانبی و جداسازی نمونه مورد نیاز. در مواردی که مشخص است اجزای باقیمانده وجود دارند، عدم تداخل آنها در تحلیل ساکارید باید در طول اعتبارسنجی تأیید شود تا عدم وجود سوگیری یا سطح قابل قبولی از سوگیری ناشی از اجزای ماتریس مشخص شود. ممکن است غلظت نمونه لازم باشد.
+        </p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">اندازه‌گیری کمی سیالیک اسید</h2>
+        <p class="mb-4">
+            سیالیک اسیدها را می‌توان بدون اصلاح، با استفاده از کروماتوگرافی تبادل آنیون با کارایی بالا با تشخیص آمپرومتری پالسی (<span class="ltr-text">HPAEC-PAD</span>) یا با استفاده از برچسب‌گذاری <span class="ltr-text">1,2-diamino-4,5-methylenoxybenzene (DMB)</span> و تحلیل <span class="ltr-text">HPLC</span> فاز معکوس (<span class="ltr-text">RP-HPLC</span>) مجهز به آشکارساز فلورسانس، تحلیل و کمی‌سازی کرد. ترکیب برچسب‌گذاری <span class="ltr-text">DMB</span> و <span class="ltr-text">RP-HPLC</span> با تشخیص فلورسانس به طور قابل توجهی حساس‌تر از تحلیل <span class="ltr-text">HPAEC-PAD</span> است.
+        </p>
+        <div class="card p-3 my-4">
+            <p class="font-bold">یادداشت:</p>
+            <p>در برخی شرایط، وجود مقادیر زیادی پروتئین ممکن است پاسخ <span class="ltr-text">PAD</span> را کاهش دهد. برای تحلیل با <span class="ltr-text">HPAEC-PAD</span>، استفاده از <span class="ltr-text">3-deoxy-D-glycero-D-galacto-2-nonulosonic acid (KDN)</span>، به عنوان یک استاندارد داخلی، می‌تواند گزینه‌ای برای جبران این اثر باشد. به عنوان مثال، یک محلول استاندارد داخلی را آماده کنید: <span class="ltr-text">0.1 mM</span> از <span class="ltr-text">KDN</span> در آب. در مرحله رقت نهایی، <span class="ltr-text">15 µL</span> از محلول استاندارد داخلی را به هر محلول استاندارد یا نمونه اضافه کنید و مقدار آب اضافه شده را <span class="ltr-text">15 µL</span> کاهش دهید تا حجم نهایی محلول بدون تغییر بماند. پیک‌های <span class="ltr-text">Neu5Ac</span>، <span class="ltr-text">Neu5Gc</span> و <span class="ltr-text">KDN</span> را در هر کروماتوگرام ادغام کنید و از نسبت مساحت پیک <span class="ltr-text">Neu5Ac</span> یا <span class="ltr-text">Neu5Gc</span> نسبت به مساحت پیک <span class="ltr-text">KDN</span> برای مناسب بودن سیستم و محاسبه تحلیل نمونه استفاده کنید.</p>
+        </div>
+        <p class="mb-4">
+            سیالیک اسیدها ممکن است <span class="ltr-text">O</span>-استیله باشند، و بسته به نمونه پروتئین و روش تحلیلی انتخاب شده، ممکن است لازم باشد قبل از آزاد شدن سیالیک اسید، فرآیند <span class="ltr-text">de-O-acetylation</span> انجام شود. معمولاً، هیدرولیز اسید رقیق و تحلیل کروماتوگرافی تبادل آنیون منجر به <span class="ltr-text">de-O-acetylation</span> می‌شود. روش‌های آنزیمی آزادسازی می‌توانند گروه‌های <span class="ltr-text">O</span>-استیل را حفظ کنند، و استفاده ترکیبی از برچسب‌گذاری <span class="ltr-text">DMB</span> و تحلیل <span class="ltr-text">RP-HPLC</span> (همانند روش <span class="ltr-text">3</span>) گروه‌های <span class="ltr-text">O</span>-استیل را در طول مراحل تحلیلی حفظ می‌کند.
+        </p>
+        <p class="mb-4">
+            یک فرآیند <span class="ltr-text">de-O-acetylation</span> معمول می‌تواند با افزودن <span class="ltr-text">10%</span> از حجم نمونه از <span class="ltr-text">1 M</span> سدیم هیدروکسید به نمونه، انکوباسیون در دمای اتاق به مدت <span class="ltr-text">30 min</span>، و سپس افزودن <span class="ltr-text">10%</span> از حجم نمونه از <span class="ltr-text">1 M</span> اسید هیدروکلریک برای خنثی کردن واکنش انجام شود (مثلاً، به <span class="ltr-text">20 µL</span> نمونه، <span class="ltr-text">2 µL</span> از <span class="ltr-text">1 M</span> سدیم هیدروکسید اضافه کنید، به مدت <span class="ltr-text">30 min</span> در دمای اتاق انکوبه کنید، و سپس <span class="ltr-text">2 µL</span> از <span class="ltr-text">1 M</span> اسید هیدروکلریک برای خنثی کردن اضافه کنید).
+        </p>
+
+        <h2 class="text-2xl font-semibold text-blue-600 mb-4">روش‌ها</h2>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش 1: آزاد شدن آنزیمی و تحلیل سیالیک اسیدهای بدون برچسب با <span class="ltr-text">HPAEC-PAD</span></h4>
+        <p class="mb-2">
+            بافر نمونه: <span class="ltr-text">20 mM</span> سدیم استات که به شرح زیر آماده شده است. <span class="ltr-text">164 mg</span> سدیم استات انیدروس را در <span class="ltr-text">80 mL</span> آب حل کنید. با اسید استیک گلاسیال <span class="ltr-text">pH</span> را به <span class="ltr-text">5.2</span> تنظیم کرده و با آب به <span class="ltr-text">100 mL</span> رقیق کنید.
+        </p>
+        <p class="mb-2">
+            محلول استاندارد مادر: <span class="ltr-text">50 µmol/L (µM)</span> از <span class="ltr-text">USP N-Acetylneuraminic Acid RS</span> و <span class="ltr-text">2 µM</span> از <span class="ltr-text">USP N-Glycolylneuraminic Acid RS</span> در آب.
+        </p>
+        <p class="mb-4">
+            محلول‌های استاندارد: برای محلول‌های استاندارد کالیبراسیون پنج سطحی معمول، به جدول <span class="ltr-text">1</span> مراجعه کنید.
+        </p>
+
+        <table dir="rtl">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>محلول استاندارد مادر<br>(<span class="ltr-text">µL</span>)</th>
+                    <th>بافر نمونه<br>(<span class="ltr-text">µL</span>)</th>
+                    <th>آب<br>(<span class="ltr-text">µL</span>)</th>
+                    <th>غلظت <span class="ltr-text">Neu5Ac</span><br>(<span class="ltr-text">µM</span>)</th>
+                    <th>غلظت <span class="ltr-text">Neu5Gc</span><br>(<span class="ltr-text">µM</span>)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>خالی (Blank)</td>
+                    <td><span class="ltr-text">0</span></td>
+                    <td><span class="ltr-text">200</span></td>
+                    <td><span class="ltr-text">300</span></td>
+                    <td><span class="ltr-text">0</span></td>
+                    <td><span class="ltr-text">0</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">1</span></td>
+                    <td><span class="ltr-text">10</span></td>
+                    <td><span class="ltr-text">200</span></td>
+                    <td><span class="ltr-text">290</span></td>
+                    <td><span class="ltr-text">1</span></td>
+                    <td><span class="ltr-text">0.04</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">2</span></td>
+                    <td><span class="ltr-text">20</span></td>
+                    <td><span class="ltr-text">200</span></td>
+                    <td><span class="ltr-text">280</span></td>
+                    <td><span class="ltr-text">2</span></td>
+                    <td><span class="ltr-text">0.08</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">3</span></td>
+                    <td><span class="ltr-text">30</span></td>
+                    <td><span class="ltr-text">200</span></td>
+                    <td><span class="ltr-text">270</span></td>
+                    <td><span class="ltr-text">3</span></td>
+                    <td><span class="ltr-text">0.12</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">4</span></td>
+                    <td><span class="ltr-text">40</span></td>
+                    <td><span class="ltr-text">200</span></td>
+                    <td><span class="ltr-text">260</span></td>
+                    <td><span class="ltr-text">4</span></td>
+                    <td><span class="ltr-text">0.16</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">5</span></td>
+                    <td><span class="ltr-text">50</span></td>
+                    <td><span class="ltr-text">200</span></td>
+                    <td><span class="ltr-text">250</span></td>
+                    <td><span class="ltr-text">5</span></td>
+                    <td><span class="ltr-text">0.2</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="card p-3 my-4">
+            <p class="font-bold">یادداشت:</p>
+            <p><span class="ltr-text">1 µM = 1 nmol/mL = 1 × 10−3 nmol/µL = 1 pmol/µL.</span></p>
+        </div>
+        <p class="mb-4">
+            محلول نمونه: به <span class="ltr-text">50 µL</span> از <span class="ltr-text">6–60 µg/mL</span> نمونه پروتئین (معادل تقریباً <span class="ltr-text">1.5 nmol</span> سیالیک اسید) در بافر نمونه، <span class="ltr-text">4 µL</span> از <span class="ltr-text">0.5 milliunit/µL (2 milliunits)</span> نورامینیداز<a href="#footnote1" class="text-blue-600 hover:underline">1</a> در آب اضافه کرده و حجم کلی را با بافر نمونه به <span class="ltr-text">200 µL</span> برسانید. به مدت <span class="ltr-text">5 h</span> در <span class="ltr-text">37°</span> انکوبه کنید.
+            <div class="card p-3 my-4">
+                <p class="font-bold">یادداشت:</p>
+                <p>یا از آماده‌سازی نمونه و محدوده زمانی/دمایی معتبر استفاده کنید.</p>
+            </div>
+            <span class="ltr-text">300 µL</span> آب اضافه کنید و مخلوط کنید.
+        </p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">تحلیل <span class="ltr-text">HPAEC</span></h3>
+        <div class="card p-3 my-4">
+            <p class="font-bold">یادداشت:</p>
+            <p>از سیستم کروماتوگرافی <span class="ltr-text">1</span> یا سیستم کروماتوگرافی <span class="ltr-text">2</span> استفاده کنید.</p>
+        </div>
+        <p class="mb-2">
+            محلول <span class="ltr-text">A</span>: <span class="ltr-text">0.1 M</span> سدیم هیدروکسید که به شرح زیر آماده شده است. <span class="ltr-text">5.28 mL</span> از محلول <span class="ltr-text">50%–52%</span> سدیم هیدروکسید را با آب به <span class="ltr-text">1000 mL</span> رقیق کنید.
+            <div class="card p-3 my-4">
+                <p class="font-bold">یادداشت:</p>
+                <p>محلول باید به خوبی مهر و موم شود تا از جذب دی‌اکسید کربن جلوگیری شود.</p>
+            </div>
+        </p>
+        <p class="mb-4">
+            محلول <span class="ltr-text">B</span>: <span class="ltr-text">1 M</span> سدیم استات در <span class="ltr-text">0.1 M</span> سدیم هیدروکسید که به شرح زیر آماده شده است. <span class="ltr-text">82.0 g</span> سدیم استات انیدروس را در <span class="ltr-text">800 mL</span> آب حل کنید. از فیلتر نایلونی با اندازه منافذ <span class="ltr-text">0.2-µm</span> عبور دهید. <span class="ltr-text">5.28 mL</span> از محلول <span class="ltr-text">50%–52%</span> سدیم هیدروکسید را اضافه کنید و با آب به <span class="ltr-text">1000 mL</span> رقیق کنید.
+        </p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم کروماتوگرافی <span class="ltr-text">1</span></h4>
+        <p class="mb-2">
+            (به کروماتوگرافی <a href="621.html" class="text-blue-600 hover:underline" target="_blank">621</a>، مناسب بودن سیستم مراجعه کنید.)
+        </p>
+        <p class="mb-4">
+            فاز متحرک: به جدول <span class="ltr-text">2</span> مراجعه کنید.
+        </p>
+
+        <table dir="rtl">
+            <thead>
+                <tr>
+                    <th>زمان<br>(<span class="ltr-text">min</span>)</th>
+                    <th>محلول <span class="ltr-text">A</span><br>(<span class="ltr-text">%</span>)</th>
+                    <th>محلول <span class="ltr-text">B</span><br>(<span class="ltr-text">%</span>)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="ltr-text">0</span></td>
+                    <td><span class="ltr-text">98</span></td>
+                    <td><span class="ltr-text">2</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">2</span></td>
+                    <td><span class="ltr-text">98</span></td>
+                    <td><span class="ltr-text">2</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">9.5</span></td>
+                    <td><span class="ltr-text">82</span></td>
+                    <td><span class="ltr-text">18</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">11</span></td>
+                    <td><span class="ltr-text">82</span></td>
+                    <td><span class="ltr-text">18</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">11.5</span></td>
+                    <td><span class="ltr-text">98</span></td>
+                    <td><span class="ltr-text">2</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">17</span></td>
+                    <td><span class="ltr-text">98</span></td>
+                    <td><span class="ltr-text">2</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="mb-2">
+            حالت: <span class="ltr-text">LC</span>
+        </p>
+        <p class="mb-2">
+            آشکارساز: آشکارساز آمپرومتری یکپارچه با الکترود طلا (برای نمونه‌ای از شکل موج، به جدول <span class="ltr-text">4</span> مراجعه کنید).
+        </p>
+        <p class="mb-2">
+            ستون‌ها:
+        </p>
+        <ul class="list-disc pr-8 mb-2">
+            <li>محافظ: <span class="ltr-text">3-mm × 3-cm</span>؛ بسته بندی <span class="ltr-text">L69</span></li>
+            <li>تحلیلی: <span class="ltr-text">3-mm × 15-cm</span>؛ بسته بندی <span class="ltr-text">L69</span></li>
+        </ul>
+        <p class="mb-2">
+            نرخ جریان: <span class="ltr-text">0.5 mL/min</span>
+        </p>
+        <p class="mb-4">
+            حجم تزریق: <span class="ltr-text">50 µL</span>
+        </p>
+        <div class="card p-3 my-4">
+            <p class="font-bold">یادداشت:</p>
+            <p>برای سیستم توصیف شده، زمان‌های بازداری معمول برای <span class="ltr-text">Neu5Ac</span> و <span class="ltr-text">Neu5Gc</span> به ترتیب حدود <span class="ltr-text">8</span> و <span class="ltr-text">12 min</span> است.</p>
+        </div>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم کروماتوگرافی <span class="ltr-text">2</span></h4>
+        <p class="mb-2">
+            (به کروماتوگرافی <a href="621.html" class="text-blue-600 hover:underline" target="_blank">621</a>، مناسب بودن سیستم مراجعه کنید.)
+        </p>
+        <p class="mb-4">
+            فاز متحرک: به جدول <span class="ltr-text">3</span> مراجعه کنید.
+        </p>
+
+        <table dir="rtl">
+            <thead>
+                <tr>
+                    <th>زمان<br>(<span class="ltr-text">min</span>)</th>
+                    <th>محلول <span class="ltr-text">A</span><br>(<span class="ltr-text">%</span>)</th>
+                    <th>محلول <span class="ltr-text">B</span><br>(<span class="ltr-text">%</span>)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="ltr-text">0</span></td>
+                    <td><span class="ltr-text">93</span></td>
+                    <td><span class="ltr-text">7</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">10</span></td>
+                    <td><span class="ltr-text">70</span></td>
+                    <td><span class="ltr-text">30</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">11</span></td>
+                    <td><span class="ltr-text">70</span></td>
+                    <td><span class="ltr-text">30</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">12</span></td>
+                    <td><span class="ltr-text">93</span></td>
+                    <td><span class="ltr-text">7</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">15</span></td>
+                    <td><span class="ltr-text">93</span></td>
+                    <td><span class="ltr-text">7</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="mb-2">
+            حالت: <span class="ltr-text">LC</span>
+        </p>
+        <p class="mb-2">
+            آشکارساز: آشکارساز آمپرومتری یکپارچه با الکترود طلا (برای نمونه‌ای از شکل موج، به جدول <span class="ltr-text">4</span> مراجعه کنید).
+        </p>
+        <p class="mb-2">
+            ستون‌ها:
+        </p>
+        <ul class="list-disc pr-8 mb-2">
+            <li>محافظ: <span class="ltr-text">4-mm × 5-cm</span>؛ بسته بندی <span class="ltr-text">10-µm L46</span><a href="#footnote2" class="text-blue-600 hover:underline">2</a></li>
+            <li>تحلیلی: <span class="ltr-text">4-mm × 25-cm</span>؛ بسته بندی <span class="ltr-text">10-µm L46</span><a href="#footnote2" class="text-blue-600 hover:underline">2</a></li>
+        </ul>
+        <p class="mb-2">
+            نرخ جریان: <span class="ltr-text">0.8 mL/min</span>
+        </p>
+        <p class="mb-4">
+            حجم تزریق: <span class="ltr-text">50 µL</span>
+        </p>
+        <div class="card p-3 my-4">
+            <p class="font-bold">یادداشت:</p>
+            <p>برای سیستم توصیف شده، زمان‌های بازداری معمول برای <span class="ltr-text">Neu5Ac</span> و <span class="ltr-text">Neu5Gc</span> به ترتیب حدود <span class="ltr-text">6</span> و <span class="ltr-text">10 min</span> است.</p>
+        </div>
+
+        <table dir="rtl">
+            <thead>
+                <tr>
+                    <th>زمان<br>(<span class="ltr-text">s</span>)</th>
+                    <th>پتانسیل<br>(<span class="ltr-text">V</span>)</th>
+                    <th>منطقه افزایش<br>(Gain Region)</th>
+                    <th>رمپ<br>(Ramp)</th>
+                    <th>ادغام<br>(Integration)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="ltr-text">0</span></td>
+                    <td><span class="ltr-text">0.1</span></td>
+                    <td>خاموش (Off)</td>
+                    <td>رمپ (Ramp)</td>
+                    <td>خاموش (Off)</td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">0.2</span></td>
+                    <td><span class="ltr-text">0.1</span></td>
+                    <td>روشن (On)</td>
+                    <td>رمپ (Ramp)</td>
+                    <td>روشن (On)</td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">0.4</span></td>
+                    <td><span class="ltr-text">0.1</span></td>
+                    <td>خاموش (Off)</td>
+                    <td>رمپ (Ramp)</td>
+                    <td>خاموش (Off)</td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">0.41</span></td>
+                    <td><span class="ltr-text">−2</span></td>
+                    <td>خاموش (Off)</td>
+                    <td>رمپ (Ramp)</td>
+                    <td>خاموش (Off)</td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">0.42</span></td>
+                    <td><span class="ltr-text">−2</span></td>
+                    <td>خاموش (Off)</td>
+                    <td>رمپ (Ramp)</td>
+                    <td>خاموش (Off)</td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">0.43</span></td>
+                    <td><span class="ltr-text">0.6</span></td>
+                    <td>خاموش (Off)</td>
+                    <td>رمپ (Ramp)</td>
+                    <td>خاموش (Off)</td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">0.44</span></td>
+                    <td><span class="ltr-text">−0.1</span></td>
+                    <td>خاموش (Off)</td>
+                    <td>رمپ (Ramp)</td>
+                    <td>خاموش (Off)</td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">0.5</span></td>
+                    <td><span class="ltr-text">−0.1</span></td>
+                    <td>خاموش (Off)</td>
+                    <td>رمپ (Ramp)</td>
+                    <td>خاموش (Off)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مناسب بودن سیستم</h4>
+        <p class="mb-2">
+            نمونه‌ها: محلول‌های Blank و استاندارد.
+        </p>
+        <p class="mb-2">
+            الزامات مناسب بودن:
+        </p>
+        <ul class="list-disc pr-8 mb-2">
+            <li>کروماتوگرام Blank: عدم وجود پیک در همان زمان بازداری <span class="ltr-text">Neu5Ac</span> یا <span class="ltr-text">Neu5Gc</span>.</li>
+            <li>ضریب تعیین (<span class="ltr-text">R2</span>) محاسبه شده برای منحنی استاندارد: کمتر از <span class="ltr-text">0.98</span> نباشد، محلول‌های استاندارد.</li>
+            <li>انحراف معیار نسبی: بیش از <span class="ltr-text">5%</span> نباشد، محلول استاندارد <span class="ltr-text">3</span>.</li>
+        </ul>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل</h4>
+        <p class="mb-4">
+            نمونه‌ها: محلول‌های استاندارد و محلول نمونه.
+        </p>
+        <p class="mb-4">
+            برای محلول‌های استاندارد، یک منحنی استاندارد پاسخ پیک در برابر غلظت <span class="ltr-text">Neu5Ac</span> و <span class="ltr-text">Neu5Gc</span> را با استفاده از رگرسیون حداقل مربعات ایجاد کنید. از روی منحنی استاندارد، غلظت <span class="ltr-text">Neu5Ac</span> و <span class="ltr-text">Neu5Gc</span> را در محلول نمونه تعیین کنید. غلظت‌های تعیین شده <span class="ltr-text">Neu5Ac</span> و <span class="ltr-text">Neu5Gc</span> را بر غلظت پروتئین در محلول نمونه تقسیم کنید و به عنوان نسبت مولی (<span class="ltr-text">nmol:nmol</span>) گزارش دهید.
+            <div class="card p-3 my-4">
+                <p class="font-bold">یادداشت:</p>
+                <p>غلظت پروتئین را از <span class="ltr-text">mg/mL</span> به <span class="ltr-text">µM</span> تبدیل کنید (<span class="ltr-text">1 µM = 1 nmol/mL</span>).</p>
+            </div>
+        </p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش 2: هیدرولیز اسیدی و تحلیل سیالیک اسیدهای بدون برچسب با <span class="ltr-text">HPAEC-PAD</span></h4>
+        <p class="mb-2">
+            بافر نمونه، تحلیل <span class="ltr-text">HPAEC</span>، مناسب بودن سیستم، و تحلیل: طبق روش <span class="ltr-text">1</span> عمل کنید.
+        </p>
+        <div class="card p-3 my-4">
+            <p class="font-bold">یادداشت:</p>
+            <p>محلول‌های استاندارد و محلول نمونه باید همزمان تهیه شوند و تحت همان روش‌های هیدرولیز و خشک کردن قرار گیرند. استفاده از سانتریفیوژ وکیوم برای خشک کردن در این روش‌ها توضیح داده شده است؛ روش‌های خشک کردن مناسب دیگر نیز ممکن است استفاده شوند.</p>
+        </div>
+        <div class="card p-3 my-4">
+            <p class="font-bold">یادداشت:</p>
+            <p>استانداردهای سیالیک اسید که تحت روش هیدرولیز قرار می‌گیرند، ممکن است به میزان متفاوتی نسبت به سیالیک اسیدهای آزاد شده از یک گلیکوپروتئین در طول این روش تخریب شوند. یک روش معتبر که در آن استاندارد تحت شرایط هیدرولیز قرار نمی‌گیرد، ممکن است استفاده شود.</p>
+        </div>
+        <p class="mb-2">
+            محلول استاندارد مادر: <span class="ltr-text">50 µM</span> از <span class="ltr-text">USP N-Acetylneuraminic Acid RS</span> و <span class="ltr-text">2 µM</span> از <span class="ltr-text">USP N-Glycolylneuraminic Acid RS</span> در آب.
+        </p>
+        <p class="mb-4">
+            محلول‌های استاندارد: مقدار محلول استاندارد مادر را طبق جدول <span class="ltr-text">5</span> به هر میکروتیوب سانتریفیوژ اضافه کنید.
+        </p>
+
+        <table dir="rtl">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>محلول استاندارد مادر<br>(<span class="ltr-text">µL</span>)</th>
+                    <th><span class="ltr-text">Neu5Ac</span><br>(<span class="ltr-text">nmol</span>)</th>
+                    <th><span class="ltr-text">Neu5Gc</span><br>(<span class="ltr-text">nmol</span>)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>خالی (Blank)</td>
+                    <td><span class="ltr-text">0</span></td>
+                    <td><span class="ltr-text">0</span></td>
+                    <td><span class="ltr-text">0</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">1</span></td>
+                    <td><span class="ltr-text">10</span></td>
+                    <td><span class="ltr-text">0.5</span></td>
+                    <td><span class="ltr-text">0.02</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">2</span></td>
+                    <td><span class="ltr-text">20</span></td>
+                    <td><span class="ltr-text">1</span></td>
+                    <td><span class="ltr-text">0.04</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">3</span></td>
+                    <td><span class="ltr-text">30</span></td>
+                    <td><span class="ltr-text">1.5</span></td>
+                    <td><span class="ltr-text">0.06</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">4</span></td>
+                    <td><span class="ltr-text">40</span></td>
+                    <td><span class="ltr-text">2</span></td>
+                    <td><span class="ltr-text">0.08</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">5</span></td>
+                    <td><span class="ltr-text">50</span></td>
+                    <td><span class="ltr-text">2.5</span></td>
+                    <td><span class="ltr-text">0.1</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="mb-4">
+            هر استاندارد را در سانتریفیوژ وکیوم بدون گرما خشک کنید. <span class="ltr-text">100 µL</span> از <span class="ltr-text">2 M</span> اسید استیک را به هر میکروتیوب سانتریفیوژ اضافه کنید و تمام سری استانداردها را تقریباً در <span class="ltr-text">80°</span> به مدت <span class="ltr-text">2 h ± 15 min</span> در یک بلوک گرمایی هیدرولیز کنید.
+            <div class="card p-3 my-4">
+                <p class="font-bold">یادداشت:</p>
+                <p>یا از محدوده زمانی/دمایی معتبر استفاده کنید.</p>
+            </div>
+            اجازه دهید تیوب‌ها به مدت تقریباً <span class="ltr-text">10 min</span> به دمای اتاق خنک شوند و به طور مختصر سانتریفیوژ کنید تا اطمینان حاصل شود که کل نمونه در ته تیوب قرار گرفته است. محلول‌ها را در سانتریفیوژ وکیوم بدون گرما خشک کنید و در <span class="ltr-text">300 µL</span> آب دوباره حل کنید. قبل از تحلیل، <span class="ltr-text">200 µL</span> بافر نمونه اضافه کنید. غلظت‌های نهایی در جدول <span class="ltr-text">6</span> خلاصه شده‌اند.
+        </p>
+
+        <table dir="rtl">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>غلظت <span class="ltr-text">Neu5Ac</span><br>(<span class="ltr-text">µM</span>)</th>
+                    <th>غلظت <span class="ltr-text">Neu5Gc</span><br>(<span class="ltr-text">µM</span>)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>خالی (Blank)</td>
+                    <td><span class="ltr-text">0</span></td>
+                    <td><span class="ltr-text">0</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">1</span></td>
+                    <td><span class="ltr-text">1</span></td>
+                    <td><span class="ltr-text">0.04</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">2</span></td>
+                    <td><span class="ltr-text">2</span></td>
+                    <td><span class="ltr-text">0.08</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">3</span></td>
+                    <td><span class="ltr-text">3</span></td>
+                    <td><span class="ltr-text">0.12</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">4</span></td>
+                    <td><span class="ltr-text">4</span></td>
+                    <td><span class="ltr-text">0.16</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">5</span></td>
+                    <td><span class="ltr-text">5</span></td>
+                    <td><span class="ltr-text">0.2</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="mb-4">
+            محلول نمونه: پروتئین نمک‌زدایی شده، تقریباً <span class="ltr-text">6–60 µg</span> (معادل تقریباً <span class="ltr-text">1.5 nmol</span> سیالیک اسید) را به یک میکروتیوب سانتریفیوژ اضافه کنید. در سانتریفیوژ وکیوم بدون گرما خشک کنید. <span class="ltr-text">100 µL</span> از <span class="ltr-text">2 M</span> اسید استیک را اضافه کنید و در دمای تقریبی <span class="ltr-text">80°</span> به مدت <span class="ltr-text">2 h ± 15 min</span> در یک بلوک گرمایی هیدرولیز کنید.
+            <div class="card p-3 my-4">
+                <p class="font-bold">یادداشت:</p>
+                <p>یا از آماده‌سازی نمونه و محدوده زمانی/دمایی معتبر استفاده کنید.</p>
+            </div>
+            اجازه دهید تیوب به مدت تقریباً <span class="ltr-text">10 min</span> به دمای اتاق خنک شود و به طور مختصر سانتریفیوژ کنید تا اطمینان حاصل شود که کل نمونه در ته تیوب قرار گرفته است. نمونه را در سانتریفیوژ وکیوم بدون گرما خشک کنید و نمونه را در <span class="ltr-text">300 µL</span> آب دوباره حل کنید. قبل از تحلیل، <span class="ltr-text">200 µL</span> بافر نمونه اضافه کنید.
+        </p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش 3: هیدرولیز آنزیمی و تحلیل سیالیک اسیدهای برچسب‌گذاری شده با <span class="ltr-text">DMB</span> توسط <span class="ltr-text">RP-HPLC</span></h4>
+        <p class="mb-2">
+            معرف برچسب‌گذاری: محلول آبی <span class="ltr-text">DMB</span>، اسید استیک، <span class="ltr-text">2-mercaptoethanol</span> و سدیم هیدروسولفیت<a href="#footnote3" class="text-blue-600 hover:underline">3</a>.
+        </p>
+        <p class="mb-2">
+            محلول استاندارد مادر: <span class="ltr-text">200 µM</span> از <span class="ltr-text">USP N-Acetylneuraminic Acid RS</span> و <span class="ltr-text">10 µM</span> از <span class="ltr-text">USP N-Glycolylneuraminic Acid RS</span> در آب.
+        </p>
+        <p class="mb-4">
+            محلول‌های استاندارد: برای رقت‌های معمول به جدول <span class="ltr-text">7</span> مراجعه کنید. سپس هر محلول را طبق دستورالعمل برچسب‌گذاری، برچسب‌گذاری کنید.
+        </p>
+
+        <table dir="rtl">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>محلول استاندارد مادر<br>(<span class="ltr-text">µL</span>)</th>
+                    <th>آب<br>(<span class="ltr-text">µL</span>)</th>
+                    <th>غلظت <span class="ltr-text">Neu5Ac</span><br>قبل از برچسب‌گذاری<br>(<span class="ltr-text">µM</span>)</th>
+                    <th>غلظت <span class="ltr-text">Neu5Gc</span><br>قبل از برچسب‌گذاری<br>(<span class="ltr-text">µM</span>)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>خالی (Blank)</td>
+                    <td><span class="ltr-text">0</span></td>
+                    <td><span class="ltr-text">400</span></td>
+                    <td><span class="ltr-text">0</span></td>
+                    <td><span class="ltr-text">0</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">1</span></td>
+                    <td><span class="ltr-text">4</span></td>
+                    <td><span class="ltr-text">396</span></td>
+                    <td><span class="ltr-text">2</span></td>
+                    <td><span class="ltr-text">0.1</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">2</span></td>
+                    <td><span class="ltr-text">8</span></td>
+                    <td><span class="ltr-text">392</span></td>
+                    <td><span class="ltr-text">4</span></td>
+                    <td><span class="ltr-text">0.2</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">3</span></td>
+                    <td><span class="ltr-text">20</span></td>
+                    <td><span class="ltr-text">380</span></td>
+                    <td><span class="ltr-text">10</span></td>
+                    <td><span class="ltr-text">0.5</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">4</span></td>
+                    <td><span class="ltr-text">40</span></td>
+                    <td><span class="ltr-text">360</span></td>
+                    <td><span class="ltr-text">20</span></td>
+                    <td><span class="ltr-text">1</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">5</span></td>
+                    <td><span class="ltr-text">80</span></td>
+                    <td><span class="ltr-text">320</span></td>
+                    <td><span class="ltr-text">40</span></td>
+                    <td><span class="ltr-text">2</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="mb-4">
+            غلظت‌های محلول‌های استاندارد برچسب‌گذاری شده حاصل در جدول <span class="ltr-text">8</span> فهرست شده‌اند.
+        </p>
+
+        <table dir="rtl">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>غلظت <span class="ltr-text">Neu5Ac</span> بعد از برچسب‌گذاری<br>(<span class="ltr-text">µM</span>)</th>
+                    <th>غلظت <span class="ltr-text">Neu5Gc</span> بعد از برچسب‌گذاری<br>(<span class="ltr-text">µM</span>)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>خالی (Blank)</td>
+                    <td><span class="ltr-text">0</span></td>
+                    <td><span class="ltr-text">0</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">1</span></td>
+                    <td><span class="ltr-text">0.02</span></td>
+                    <td><span class="ltr-text">0.001</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">2</span></td>
+                    <td><span class="ltr-text">0.04</span></td>
+                    <td><span class="ltr-text">0.002</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">3</span></td>
+                    <td><span class="ltr-text">0.1</span></td>
+                    <td><span class="ltr-text">0.005</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">4</span></td>
+                    <td><span class="ltr-text">0.2</span></td>
+                    <td><span class="ltr-text">0.01</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">5</span></td>
+                    <td><span class="ltr-text">0.4</span></td>
+                    <td><span class="ltr-text">0.02</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="mb-4">
+            برچسب‌گذاری: <span class="ltr-text">5 µL</span> از محلول استاندارد یا نمونه‌ای که قرار است برچسب‌گذاری شود را به یک میکروتیوب سانتریفیوژ منتقل کنید، <span class="ltr-text">20 µL</span> معرف برچسب‌گذاری اضافه کنید، تیوب را ببندید، با ورتکس مخلوط کنید، و به مدت <span class="ltr-text">3 h</span> در <span class="ltr-text">50°</span> در تاریکی انکوبه کنید. واکنش را با افزودن <span class="ltr-text">475 µL</span> آب خاتمه دهید، درب را ببندید و به طور کامل ورتکس کنید. این محلول باید در دمای <span class="ltr-text">2°–8°</span> نگهداری شده و ظرف <span class="ltr-text">24 h</span> تحلیل شود.
+            <div class="card p-3 my-4">
+                <p class="font-bold">یادداشت:</p>
+                <p>محلول استاندارد و محلول نمونه باید همزمان برچسب‌گذاری شوند.</p>
+            </div>
+        </p>
+        <p class="mb-4">
+            محلول نمونه: تقریباً <span class="ltr-text">0.5–50 µg</span> پروتئین (معادل تقریباً <span class="ltr-text">5 pmol</span> سیالیک اسید) را به یک میکروتیوب سانتریفیوژ <span class="ltr-text">1.5-mL</span> منتقل کنید. در صورت لزوم، <span class="ltr-text">de-O-acetylation</span> را انجام دهید. <span class="ltr-text">pH</span> را به <span class="ltr-text">6.0 ± 0.3</span> تنظیم کنید.
+            <div class="card p-3 my-4">
+                <p class="font-bold">یادداشت:</p>
+                <p>pH باید بر اساس آنزیم مورد استفاده بهینه شود.</p>
+            </div>
+            <span class="ltr-text">2 µL</span> از <span class="ltr-text">5 units/mL (10 milliunits)</span> نورامینیداز<a href="#footnote1" class="text-blue-600 hover:underline">1</a> را اضافه کنید، به حجم کل <span class="ltr-text">50 µL</span> تنظیم کنید، و به مدت <span class="ltr-text">16–24 h</span> در <span class="ltr-text">37°</span> انکوبه کنید.
+            <div class="card p-3 my-4">
+                <p class="font-bold">یادداشت:</p>
+                <p>یا از آماده‌سازی نمونه و محدوده زمانی/دمایی معتبر استفاده کنید.</p>
+            </div>
+            محلول را طبق دستورالعمل برچسب‌گذاری قبل از تحلیل، برچسب‌گذاری کنید.
+        </p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">تحلیل <span class="ltr-text">RP-HPLC</span></h3>
+        <div class="card p-3 my-4">
+            <p class="font-bold">یادداشت:</p>
+            <p>از سیستم کروماتوگرافی <span class="ltr-text">3</span> یا سیستم کروماتوگرافی <span class="ltr-text">4</span> استفاده کنید.</p>
+        </div>
+        <p class="mb-4">
+            فاز متحرک: استونیتریل، متانول و آب (<span class="ltr-text">9:7:84</span>)
+        </p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم کروماتوگرافی <span class="ltr-text">3</span></h4>
+        <p class="mb-2">
+            (به کروماتوگرافی <a href="621.html" class="text-blue-600 hover:underline" target="_blank">621</a>، مناسب بودن سیستم مراجعه کنید.)
+        </p>
+        <p class="mb-2">
+            حالت: <span class="ltr-text">LC</span>
+        </p>
+        <p class="mb-2">
+            آشکارساز: آشکارساز فلورسانس با طول موج تحریک <span class="ltr-text">373 nm</span> و طول موج انتشار <span class="ltr-text">448 nm</span>
+        </p>
+        <p class="mb-2">
+            ستون: <span class="ltr-text">2.1-mm × 10-cm</span>؛ بسته بندی <span class="ltr-text">1.9- to 2.2-µm L1</span>
+        </p>
+        <p class="mb-2">
+            نرخ جریان: <span class="ltr-text">0.25 mL/min</span>
+        </p>
+        <p class="mb-2">
+            حجم تزریق: <span class="ltr-text">5 µL</span>
+        </p>
+        <p class="mb-2">
+            دماها:
+        </p>
+        <ul class="list-disc pr-8 mb-2">
+            <li>ستون: <span class="ltr-text">30°</span></li>
+            <li>نمونه‌بردار خودکار: <span class="ltr-text">2°–8°</span></li>
+        </ul>
+        <p class="mb-4">
+            زمان اجرا: <span class="ltr-text">10 min</span> (ایزوکراتیک)
+        </p>
+        <div class="card p-3 my-4">
+            <p class="font-bold">یادداشت:</p>
+            <p>برای سیستم توصیف شده، زمان‌های بازداری معمول برای <span class="ltr-text">Neu5Ac</span> و <span class="ltr-text">Neu5Gc</span> به ترتیب حدود <span class="ltr-text">2.5</span> و <span class="ltr-text">2 min</span> است.</p>
+        </div>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم کروماتوگرافی <span class="ltr-text">4</span></h4>
+        <p class="mb-2">
+            (به کروماتوگرافی <a href="621.html" class="text-blue-600 hover:underline" target="_blank">621</a>، مناسب بودن سیستم مراجعه کنید.)
+        </p>
+        <p class="mb-2">
+            حالت: <span class="ltr-text">LC</span>
+        </p>
+        <p class="mb-2">
+            آشکارساز: آشکارساز فلورسانس با طول موج تحریک <span class="ltr-text">373 nm</span> و طول موج انتشار <span class="ltr-text">448 nm</span>
+        </p>
+        <p class="mb-2">
+            ستون: <span class="ltr-text">4.6-mm × 15-cm</span>؛ بسته بندی <span class="ltr-text">3-µm L1</span>
+        </p>
+        <p class="mb-2">
+            نرخ جریان: <span class="ltr-text">0.5 mL/min</span>
+        </p>
+        <p class="mb-2">
+            حجم تزریق: <span class="ltr-text">5 µL</span>
+        </p>
+        <p class="mb-2">
+            دماها:
+        </p>
+        <ul class="list-disc pr-8 mb-2">
+            <li>ستون: <span class="ltr-text">30°</span></li>
+            <li>نمونه‌بردار خودکار: <span class="ltr-text">2°–8°</span></li>
+        </ul>
+        <p class="mb-4">
+            زمان اجرا: <span class="ltr-text">30 min</span> (ایزوکراتیک)
+        </p>
+        <div class="card p-3 my-4">
+            <p class="font-bold">یادداشت:</p>
+            <p>برای سیستم توصیف شده، زمان‌های بازداری معمول برای <span class="ltr-text">Neu5Ac</span> و <span class="ltr-text">Neu5Gc</span> به ترتیب حدود <span class="ltr-text">10</span> و <span class="ltr-text">8 min</span> است.</p>
+        </div>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مناسب بودن سیستم</h4>
+        <p class="mb-2">
+            نمونه‌ها: محلول‌های Blank و استاندارد.
+        </p>
+        <p class="mb-2">
+            الزامات مناسب بودن:
+        </p>
+        <ul class="list-disc pr-8 mb-2">
+            <li>کروماتوگرام Blank: عدم وجود پیک در همان زمان بازداری <span class="ltr-text">Neu5Ac</span> یا <span class="ltr-text">Neu5Gc</span>.</li>
+            <li>ضریب تعیین (<span class="ltr-text">R2</span>) محاسبه شده برای منحنی استاندارد: کمتر از <span class="ltr-text">0.98</span> نباشد، محلول‌های استاندارد.</li>
+            <li>انحراف معیار نسبی: بیش از <span class="ltr-text">5%</span> نباشد، محلول استاندارد <span class="ltr-text">3</span>.</li>
+        </ul>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل</h4>
+        <p class="mb-4">
+            نمونه‌ها: محلول‌های استاندارد و محلول نمونه.
+        </p>
+        <p class="mb-4">
+            برای محلول‌های استاندارد، یک منحنی استاندارد پاسخ پیک در برابر غلظت <span class="ltr-text">Neu5Ac</span> و <span class="ltr-text">Neu5Gc</span> را با استفاده از رگرسیون حداقل مربعات ایجاد کنید. از روی منحنی استاندارد، غلظت <span class="ltr-text">Neu5Ac</span> و <span class="ltr-text">Neu5Gc</span> را در محلول نمونه تعیین کنید. غلظت‌های تعیین شده <span class="ltr-text">Neu5Ac</span> و <span class="ltr-text">Neu5Gc</span> را بر غلظت پروتئین در محلول نمونه تقسیم کنید و به عنوان نسبت مولی (<span class="ltr-text">nmol:nmol</span>) گزارش دهید.
+            <div class="card p-3 my-4">
+                <p class="font-bold">یادداشت:</p>
+                <p>غلظت پروتئین را از <span class="ltr-text">mg/mL</span> به <span class="ltr-text">µM</span> تبدیل کنید (<span class="ltr-text">1 µM = 1 nmol/mL</span>).</p>
+            </div>
+        </p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش 4: هیدرولیز اسیدی و تحلیل سیالیک اسیدهای برچسب‌گذاری شده با <span class="ltr-text">DMB</span> توسط <span class="ltr-text">RP-HPLC</span></h4>
+        <p class="mb-2">
+            معرف برچسب‌گذاری، Blank، برچسب‌گذاری، تحلیل <span class="ltr-text">RP-HPLC</span>، مناسب بودن سیستم، و تحلیل: طبق روش <span class="ltr-text">3</span> عمل کنید.
+        </p>
+        <div class="card p-3 my-4">
+            <p class="font-bold">یادداشت:</p>
+            <p>محلول‌های استاندارد و محلول نمونه باید همزمان تهیه شوند و تحت همان روش‌های هیدرولیز و خشک کردن قرار گیرند. استفاده از سانتریفیوژ وکیوم برای خشک کردن در این روش‌ها توضیح داده شده است؛ روش‌های خشک کردن مناسب دیگر نیز ممکن است استفاده شوند.</p>
+        </div>
+        <div class="card p-3 my-4">
+            <p class="font-bold">یادداشت:</p>
+            <p>استانداردهای سیالیک اسید که تحت روش هیدرولیز قرار می‌گیرند، ممکن است به میزان متفاوتی نسبت به سیالیک اسیدهای آزاد شده از یک گلیکوپروتئین در طول این روش تخریب شوند. یک روش معتبر که در آن استاندارد تحت شرایط هیدرولیز قرار نمی‌گیرد، ممکن است استفاده شود.</p>
+        </div>
+        <p class="mb-2">
+            محلول استاندارد مادر: <span class="ltr-text">50 µM</span> از <span class="ltr-text">USP N-Acetylneuraminic Acid RS</span> و <span class="ltr-text">2.5 µM</span> از <span class="ltr-text">USP N-Glycolylneuraminic Acid RS</span> در آب.
+        </p>
+        <p class="mb-4">
+            محلول‌های استاندارد: مقدار محلول استاندارد مادر را طبق جدول <span class="ltr-text">9</span> به هر میکروتیوب سانتریفیوژ اضافه کنید. در سانتریفیوژ وکیوم بدون حرارت خشک کنید.
+        </p>
+
+        <table dir="rtl">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>محلول استاندارد مادر<br>(<span class="ltr-text">µL</span>)</th>
+                    <th><span class="ltr-text">Neu5Ac</span><br>(<span class="ltr-text">pmol</span>)</th>
+                    <th><span class="ltr-text">Neu5Gc</span><br>(<span class="ltr-text">pmol</span>)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>خالی (Blank)</td>
+                    <td><span class="ltr-text">0</span></td>
+                    <td><span class="ltr-text">0</span></td>
+                    <td><span class="ltr-text">0</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">1</span></td>
+                    <td><span class="ltr-text">1</span></td>
+                    <td><span class="ltr-text">50</span></td>
+                    <td><span class="ltr-text">2.5</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">2</span></td>
+                    <td><span class="ltr-text">2</span></td>
+                    <td><span class="ltr-text">100</span></td>
+                    <td><span class="ltr-text">5</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">3</span></td>
+                    <td><span class="ltr-text">5</span></td>
+                    <td><span class="ltr-text">250</span></td>
+                    <td><span class="ltr-text">12.5</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">4</span></td>
+                    <td><span class="ltr-text">10</span></td>
+                    <td><span class="ltr-text">500</span></td>
+                    <td><span class="ltr-text">25</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">5</span></td>
+                    <td><span class="ltr-text">20</span></td>
+                    <td><span class="ltr-text">1000</span></td>
+                    <td><span class="ltr-text">50</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="mb-4">
+            <span class="ltr-text">25 µL</span> از <span class="ltr-text">2 M</span> اسید استیک را به تیوب اضافه کنید و به طور مختصر سانتریفیوژ کنید تا اطمینان حاصل شود که نمونه به طور کامل در ته تیوب قرار گرفته است. به مدت <span class="ltr-text">2 h ± 15 min</span> در <span class="ltr-text">80°</span> انکوبه کنید.
+            <div class="card p-3 my-4">
+                <p class="font-bold">یادداشت:</p>
+                <p>یا از محدوده زمانی/دمایی معتبر استفاده کنید.</p>
+            </div>
+            اجازه دهید تیوب به مدت تقریباً <span class="ltr-text">10 min</span> به دمای اتاق خنک شود، و سپس ورتکس و سانتریفیوژ کنید. محلول را طبق دستورالعمل برچسب‌گذاری قبل از تحلیل، برچسب‌گذاری کنید. غلظت‌های محلول‌های استاندارد برچسب‌گذاری شده حاصل در جدول <span class="ltr-text">10</span> فهرست شده‌اند.
+        </p>
+
+        <table dir="rtl">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>غلظت <span class="ltr-text">Neu5Ac</span> بعد از برچسب‌گذاری<br>(<span class="ltr-text">µM</span>)</th>
+                    <th>غلظت <span class="ltr-text">Neu5Gc</span> بعد از برچسب‌گذاری<br>(<span class="ltr-text">µM</span>)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>خالی (Blank)</td>
+                    <td><span class="ltr-text">0</span></td>
+                    <td><span class="ltr-text">0</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">1</span></td>
+                    <td><span class="ltr-text">0.02</span></td>
+                    <td><span class="ltr-text">0.001</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">2</span></td>
+                    <td><span class="ltr-text">0.04</span></td>
+                    <td><span class="ltr-text">0.002</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">3</span></td>
+                    <td><span class="ltr-text">0.1</span></td>
+                    <td><span class="ltr-text">0.005</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">4</span></td>
+                    <td><span class="ltr-text">0.2</span></td>
+                    <td><span class="ltr-text">0.01</span></td>
+                </tr>
+                <tr>
+                    <td><span class="ltr-text">5</span></td>
+                    <td><span class="ltr-text">0.4</span></td>
+                    <td><span class="ltr-text">0.02</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="mb-4">
+            محلول نمونه: یک نمونه نمک‌زدایی شده حاوی تقریباً <span class="ltr-text">0.5–50 µg</span> پروتئین (معادل تقریباً <span class="ltr-text">5 pmol</span> سیالیک اسید) را به یک میکروتیوب سانتریفیوژ <span class="ltr-text">0.5-mL</span> منتقل کنید. در سانتریفیوژ وکیوم بدون حرارت خشک کنید. <span class="ltr-text">25 µL</span> از <span class="ltr-text">2 M</span> اسید استیک را به تیوب اضافه کنید و به طور مختصر سانتریفیوژ کنید تا اطمینان حاصل شود که تمام نمونه در ته تیوب قرار گرفته است. به مدت <span class="ltr-text">2 h ± 15 min</span> در <span class="ltr-text">80°</span> انکوبه کنید.
+            <div class="card p-3 my-4">
+                <p class="font-bold">یادداشت:</p>
+                <p>یا از آماده‌سازی نمونه و محدوده زمانی/دمایی معتبر استفاده کنید.</p>
+            </div>
+            اجازه دهید تیوب به مدت تقریباً <span class="ltr-text">10 min</span> به دمای اتاق خنک شود. سپس ورتکس و سانتریفیوژ کنید. محلول را طبق دستورالعمل برچسب‌گذاری قبل از تحلیل، برچسب‌گذاری کنید.
+        </p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع <span class="ltr-text">USP</span> <a href="11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h3>
+        <p class="mb-2"><span class="ltr-text">USP N-Acetylneuraminic Acid RS</span></p>
+        <p class="mb-4"><span class="ltr-text">USP N-Glycolylneuraminic Acid RS</span></p>
+
+        <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-8">پانویس‌ها</h3>
+        <p id="footnote1" class="mb-2 text-sm">
+            <span class="ltr-text">1</span> نورامینیداز: نورامینیداز نوترکیب <span class="ltr-text">Arthrobacter ureafaciens</span> تولید شده در <span class="ltr-text">Escherichia coli (E. coli)</span>، یا آنزیم مشابه، که هر دو سیالیک اسید پیوند یافته <span class="ltr-text">α2-3</span> و <span class="ltr-text">α2-6</span> را آزاد می‌کند. یک واحد به عنوان مقدار آنزیمی تعریف می‌شود که <span class="ltr-text">1 µmol</span> از <span class="ltr-text">2′-O-substituted α-D-N-acetylneuraminic acid/min</span> را در <span class="ltr-text">pH</span> مشخص در <span class="ltr-text">37°</span> هیدرولیز می‌کند.
+        </p>
+        <p id="footnote2" class="mb-2 text-sm">
+            <span class="ltr-text">2</span> سوبسترای <span class="ltr-text">Ethylvinylbenzene/divinylbenzene</span> از <span class="ltr-text">Thermo</span> با نام <span class="ltr-text">Carbopac PA10</span>، یا معادل مناسب آن، موجود است.
+        </p>
+        <p id="footnote3" class="mb-2 text-sm">
+            <span class="ltr-text">3</span> از <span class="ltr-text">Ludger</span> به عنوان کیت برچسب‌گذاری <span class="ltr-text">LudgerTag Sialic Acid DMB</span>، کاتالوگ <span class="ltr-text">#LT-KDMB-A1</span>، یا معادل مناسب آن، موجود است.
+            <div class="card p-3 my-4">
+                <p class="font-bold">یادداشت:</p>
+                <p>به عنوان مثال، معرف <span class="ltr-text">DMB</span> را به ترتیب زیر آماده کنید. <span class="ltr-text">1.5 mL</span> آب را به یک ویال شیشه‌ای اضافه کنید. به این محلول <span class="ltr-text">172 µL</span> اسید استیک گلاسیال اضافه کرده و خوب مخلوط کنید. <span class="ltr-text">112 µL</span> از <span class="ltr-text">2-mercaptoethanol</span> را اضافه کرده و خوب مخلوط کنید. <span class="ltr-text">4.9 mg</span> سدیم هیدروسولفیت را به محلول اضافه کرده و خوب مخلوط کنید. ممکن است محلول سپس کدر به نظر برسد. در نهایت، <span class="ltr-text">3.5 mg</span> از <span class="ltr-text">DMB hydrochloride</span> و <span class="ltr-text">200 µL</span> آب را اضافه کرده و محلول را خوب مخلوط کنید. این محلول به آلوئوت‌های <span class="ltr-text">200-µL</span> تقسیم می‌شود و می‌تواند در تاریکی در <span class="ltr-text">−20°</span> تا <span class="ltr-text">12</span> ماه نگهداری شود.</p>
+            </div>
+        </p>
+    </div>
+</body>
+</html>

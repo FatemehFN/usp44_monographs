@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1091. برچسب‌گذاری اجزای غیرفعال</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Vazirmatn Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- MathJax CDN for LaTeX rendering -->
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">
+            <span class="ltr-text">1091.</span> برچسب‌گذاری اجزای غیرفعال
+        </h1>
+
+        <div class="card mb-6">
+            <p class="mb-4">
+                این فصل اطلاعاتی، دستورالعمل‌هایی را برای برچسب‌گذاری اجزای غیرفعال موجود در اشکال دارویی ارائه می‌دهد.
+            </p>
+            <p class="mb-4">
+                در چند سال گذشته، تعدادی از انجمن‌های تجاری نماینده تولیدکنندگان دارویی، دستورالعمل‌های داوطلبانه برای افشای و برچسب‌گذاری اجزای غیرفعال را اتخاذ کرده‌اند. این امر برای افرادی که به مواد خاصی حساسیت دارند و مایلند حضور یا عدم حضور چنین موادی را در محصولات دارویی شناسایی یا تأیید کنند، مفید است. به دلیل اقدامات این انجمن‌ها، برچسب‌گذاری اجزای غیرفعال درمانی در حال حاضر به عنوان یک روش خوب داروسازی تلقی می‌شود.
+            </p>
+            <p class="mb-4">
+                اگرچه تولیدکنندگان تحت پوشش این انجمن‌ها بیشتر محصولات فروخته شده در این کشور را تولید می‌کنند، اما همه تولیدکنندگان، بسته‌بندی‌کنندگان مجدد یا برچسب‌گذاران در اینجا یا خارج از کشور عضو این انجمن‌ها نیستند. علاوه بر این، تفاوت‌هایی در دستورالعمل‌های انجمن‌ها وجود دارد. دستورالعمل‌های ارائه شده در اینجا برای کمک به ارتقای یکنواختی در برچسب‌گذاری طراحی شده‌اند.
+            </p>
+            <p class="mb-4">
+                مطابق با روش خوب داروسازی، تمام اشکال دارویی [توجه—برای الزامات مربوط به فرآورده‌های تزریقی و موضعی، به اطلاعیه‌های عمومی، <span class="ltr-text">5.20.20</span> مواد افزودنی (کمکی و اجزا) در محصولات رسمی مراجعه کنید] باید برچسب‌گذاری شوند تا هویت تمام مواد افزودنی (اجزای غیرفعال درمانی) موجود در آنها، از جمله رنگ‌ها، را بیان کنند؛ به استثنای اینکه طعم‌دهنده‌ها و عطرها ممکن است با اصطلاح کلی «طعم‌دهنده» یا «عطر» فهرست شوند. این فهرست‌بندی باید به ترتیب حروف الفبا بر اساس نام باشد و از بیانیه شناسایی ماده(مواد) فعال متمایز گردد.
+            </p>
+            <p class="mb-4">
+                نام یک جزء غیرفعال باید از ویرایش فعلی یکی از آثار مرجع زیر (به ترتیب اولویت زیر) گرفته شود: <span class="ltr-text">(1)</span> فارماکوپه ایالات متحده یا فرمولاری ملی؛ <span class="ltr-text">(2)</span> <span class="ltr-text">USAN</span> و فرهنگ لغت نام‌های دارویی <span class="ltr-text">USP</span>؛ <span class="ltr-text">(3)</span> فرهنگ لغت اجزای آرایشی <span class="ltr-text">CTFA</span>؛ <span class="ltr-text">(4)</span> کتاب قوانین مواد شیمیایی غذایی. جزئی که در هیچ یک از آثار مرجع ذکر شده فهرست نشده است، باید با نام رایج یا معمول خود (نامی که عموماً توسط مصرف‌کنندگان یا متخصصان مراقبت‌های بهداشتی شناخته شده است) یا در صورت عدم وجود نام رایج یا معمول، با نام شیمیایی یا فنی دیگر خود شناسایی شود.
+            </p>
+            <p class="mb-4">
+                جزئی که ممکن است در یک محصول وجود داشته باشد، اما همیشه نیست، باید با کلماتی مانند «یا» یا «ممکن است حاوی» مشخص شود.
+            </p>
+            <p class="mb-4">
+                نام جزئی که هویت آن یک راز تجاری است، ممکن است از فهرست حذف شود، اگر فهرست عبارت «و سایر اجزا» را بیان کند. برای اهداف این دستورالعمل، یک جزء تنها در صورتی یک راز تجاری محسوب می‌شود که وجود آن مزیت رقابتی قابل توجهی برای تولیدکننده آن ایجاد کند و هویت آن با استفاده از فناوری تحلیلی مدرن قابل تشخیص نباشد.
+            </p>
+            <p class="mb-4">
+                یک جزء ناچیز ردیابی تصادفی که هیچ اثر عملکردی یا فنی بر محصول ندارد، نیازی به فهرست‌بندی ندارد مگر اینکه ثابت شده باشد که باعث واکنش‌های حساسیتی یا آلرژیک می‌شود.
+            </p>
+            <p class="mb-4">
+                اجزای غیرفعال باید روی برچسب ظرف محصولی که برای فروش بدون نسخه در نظر گرفته شده است، فهرست شوند، به جز در مواردی که ظرف خیلی کوچک باشد، چنین اطلاعاتی ممکن است در سایر برچسب‌گذاری‌ها روی یا داخل بسته بندی موجود باشد.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

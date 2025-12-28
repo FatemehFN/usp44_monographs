@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شناسایی روغن‌های ثابت با کروماتوگرافی لایه نازک</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vazirmatn Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Internal Styling -->
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">شناسایی روغن‌های ثابت با کروماتوگرافی لایه نازک</h1>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+            <p class="mb-4">روش زیر برای آزمون شناسایی <span class="ltr-text">USP</span>، برای شناسایی روغن‌های ثابت با استفاده از کروماتوگرافی لایه نازک با کارایی بالا (<span class="ltr-text">HPTLC</span>) و با استفاده از ژل سیلیکا با پوشش اکتادسیل‌سیلیل مناسب به عنوان ماده پوششی، استفاده می‌شود.</p>
+        </div>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">● روش اول</h3>
+            <ul class="list-disc pr-8 mb-4">
+                <li><span class="font-semibold">فاز متحرک 1:</span> <span class="ltr-text">Ethyl ether</span></li>
+                <li><span class="font-semibold">فاز متحرک 2:</span> <span class="ltr-text">Methylene chloride, glacial acetic acid, and acetone</span> (<span class="ltr-text">20:40:50</span>)</li>
+                <li><span class="font-semibold">محلول مناسبت سیستم 1:</span> تقریباً <span class="ltr-text">20 mg</span> (<span class="ltr-text">1 drop</span>) از <span class="ltr-text">USP Corn Oil RS</span> را در <span class="ltr-text">3 mL</span> متیلن کلراید حل کنید.</li>
+                <li><span class="font-semibold">محلول مناسبت سیستم 2:</span> تقریباً <span class="ltr-text">20 mg</span> (<span class="ltr-text">1 drop</span>) از <span class="ltr-text">USP Olive Oil RS</span> را در <span class="ltr-text">3 mL</span> متیلن کلراید حل کنید.</li>
+                <li><span class="font-semibold">محلول استاندارد:</span> تقریباً <span class="ltr-text">20 mg</span> (<span class="ltr-text">1 drop</span>) از استاندارد مرجع مناسب <span class="ltr-text">USP</span> را در <span class="ltr-text">3 mL</span> متیلن کلراید حل کنید.</li>
+                <li><span class="font-semibold">محلول نمونه:</span> تقریباً <span class="ltr-text">20 mg</span> (<span class="ltr-text">1 drop</span>) از یک نمونه روغن ثابت را در <span class="ltr-text">3 mL</span> متیلن کلراید حل کنید.</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">سیستم کروماتوگرافی</h3>
+            <p class="mb-2">(به کروماتوگرافی <a href="621.html" class="text-blue-600 hover:underline" target="_blank">621</a>، کروماتوگرافی لایه نازک مراجعه کنید.)</p>
+            <ul class="list-disc pr-8 mb-4">
+                <li><span class="font-semibold">حالت:</span> <span class="ltr-text">HPTLC</span></li>
+                <li><span class="font-semibold">صفحه:</span> <span class="ltr-text">20 cm × 10 cm</span>، ژل سیلیکا <span class="ltr-text">60 RP-18</span>، لایه <span class="ltr-text">0.15–0.2 mm</span>، اندازه ذرات <span class="ltr-text">4–8 µm<sup>1</sup></span></li>
+                <li><span class="font-semibold">حجم اعمالی:</span> <span class="ltr-text">1 µL</span>، لکه‌گذاری دستی</li>
+                <li><span class="font-semibold">معرف پاششی:</span> <span class="ltr-text">100 mg/mL</span> اسید فسفومولیبدیک در الکل <span class="ltr-text">96%</span></li>
+            </ul>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">مناسبت سیستم</h3>
+            <ul class="list-disc pr-8 mb-4">
+                <li><span class="font-semibold">نمونه‌ها:</span> محلول مناسبت سیستم 1 و محلول مناسبت سیستم 2</li>
+            </ul>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">الزامات مناسبت</h4>
+            <ul class="list-disc pr-8 mb-4">
+                <li><span class="font-semibold">وضوح:</span> چهار لکه اصلی از روغن ذرت به وضوح شناسایی و از هم جدا شده‌اند، و دو لکه اصلی از روغن زیتون به وضوح شناسایی و از هم جدا شده‌اند.</li>
+            </ul>
+            <p class="mb-4">[نکته—فاکتورهای بازدارندگی (<span class="ltr-text">RF</span>) فقط برای اهداف اطلاعاتی برای کمک به شناسایی لکه‌ها ارائه شده‌اند. مقادیر <span class="ltr-text">RF</span> برای چهار لکه اصلی <span class="ltr-text">USP Corn Oil RS</span> عبارتند از <span class="ltr-text">0.39, 0.45, 0.51,</span> و <span class="ltr-text">0.56</span>، و مقادیر <span class="ltr-text">RF</span> برای دو لکه اصلی <span class="ltr-text">USP Olive Oil RS</span> عبارتند از <span class="ltr-text">0.39</span> و <span class="ltr-text">0.45</span>.]</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تجزیه و تحلیل</h3>
+            <ul class="list-disc pr-8 mb-4">
+                <li><span class="font-semibold">نمونه‌ها:</span> محلول استاندارد و محلول نمونه</li>
+            </ul>
+            <p class="mb-2">نمونه‌ها را در نوارهای جداگانه به نقطه شروع از قبل علامت‌گذاری شده روی یک صفحه <span class="ltr-text">HPTLC</span> اعمال کنید و صفحه را به ترتیب زیر توسعه دهید:</p>
+            <ol class="list-decimal pr-8 mb-4">
+                <li>
+                    اطمینان حاصل کنید که لکه‌ها حداقل <span class="ltr-text">3 mm</span> بالاتر از سطح فاز متحرک هستند. دو بار در مسیری به طول <span class="ltr-text">0.5 cm</span> با استفاده از فاز متحرک 1 توسعه دهید. پس از هر بار اجرا، صفحه را از محفظه خارج کرده و اجازه دهید در هوا خشک شود.
+                </li>
+                <li>
+                    دو بار در مسیری به طول <span class="ltr-text">8 cm</span> با استفاده از فاز متحرک 2 توسعه دهید. پس از هر توسعه و قبل از پاشش با معرف پاششی، اجازه دهید صفحه به مدت <span class="ltr-text">5 min</span> خشک شود.
+                </li>
+            </ol>
+            <p class="mb-2">صفحه را با معرف پاششی اسپری کنید.</p>
+            <p class="mb-4">صفحه را در <span class="ltr-text">120°</span> به مدت تقریباً <span class="ltr-text">1 min</span> گرم کنید و در نور روز بررسی کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
+            <ul class="list-disc pr-8 mb-4">
+                <li>مقادیر <span class="ltr-text">RF</span> لکه‌های اصلی محلول نمونه با مقادیر محلول استاندارد مطابقت دارد.</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">● روش دوم</h3>
+            <ul class="list-disc pr-8 mb-4">
+                <li><span class="font-semibold">فاز متحرک:</span> <span class="ltr-text">Methylene chloride, glacial acetic acid, and acetone</span> (<span class="ltr-text">20:40:50</span>)</li>
+                <li><span class="font-semibold">محلول مناسبت سیستم 1:</span> <span class="ltr-text">25 µL</span> از <span class="ltr-text">USP Corn Oil RS</span> را در <span class="ltr-text">3 mL</span> متیلن کلراید حل کنید.</li>
+                <li><span class="font-semibold">محلول مناسبت سیستم 2:</span> <span class="ltr-text">25 µL</span> از <span class="ltr-text">USP Olive Oil RS</span> را در <span class="ltr-text">3 mL</span> متیلن کلراید حل کنید.</li>
+                <li><span class="font-semibold">محلول استاندارد:</span> <span class="ltr-text">25 µL</span> از استاندارد مرجع مناسب <span class="ltr-text">USP</span> را در <span class="ltr-text">3 mL</span> متیلن کلراید حل کنید.</li>
+                <li><span class="font-semibold">محلول نمونه:</span> <span class="ltr-text">25 µL</span> از یک نمونه روغن ثابت را در <span class="ltr-text">3 mL</span> متیلن کلراید حل کنید.</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">سیستم کروماتوگرافی</h3>
+            <p class="mb-2">(به کروماتوگرافی <a href="621.html" class="text-blue-600 hover:underline" target="_blank">621</a>، کروماتوگرافی لایه نازک مراجعه کنید.)</p>
+            <ul class="list-disc pr-8 mb-4">
+                <li><span class="font-semibold">حالت:</span> <span class="ltr-text">HPTLC</span></li>
+                <li><span class="font-semibold">صفحه:</span> <span class="ltr-text">20 cm × 10 cm</span>، ژل سیلیکا <span class="ltr-text">60 RP-18</span> (یا <span class="ltr-text">RP-18 F254</span>)، لایه <span class="ltr-text">0.15–0.2 mm</span>، اندازه ذرات <span class="ltr-text">4–8 µm</span></li>
+                <li><span class="font-semibold">آماده‌سازی صفحه:</span> صفحه را در رطوبت نسبی حدود <span class="ltr-text">33%</span> آماده کنید.</li>
+                <li><span class="font-semibold">حجم اعمالی:</span> <span class="ltr-text">2 µL</span> به صورت نوارهای <span class="ltr-text">8 mm</span>. از یک دستگاه خودکار مناسب استفاده می‌شود.</li>
+                <li><span class="font-semibold">معرف پاششی:</span> <span class="ltr-text">25 mg/mL</span> اسید فسفومولیبدیک در الکل <span class="ltr-text">96%</span></li>
+            </ul>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">مناسبت سیستم</h3>
+            <ul class="list-disc pr-8 mb-4">
+                <li><span class="font-semibold">نمونه‌ها:</span> محلول مناسبت سیستم 1 و محلول مناسبت سیستم 2</li>
+            </ul>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">الزامات مناسبت</h4>
+            <ul class="list-disc pr-8 mb-4">
+                <li><span class="font-semibold">وضوح:</span> چهار نوار اصلی از روغن ذرت به وضوح شناسایی و از هم جدا شده‌اند، و دو نوار اصلی از روغن زیتون به وضوح شناسایی و از هم جدا شده‌اند.</li>
+            </ul>
+            <p class="mb-4">[نکته—فاکتورهای بازدارندگی (<span class="ltr-text">RF</span>) فقط برای اهداف اطلاعاتی برای کمک به شناسایی نوارها ارائه شده‌اند. مقادیر <span class="ltr-text">RF</span> برای چهار نوار اصلی <span class="ltr-text">USP Corn Oil RS</span> عبارتند از <span class="ltr-text">0.20, 0.26, 0.30,</span> و <span class="ltr-text">0.34</span>، و مقادیر <span class="ltr-text">RF</span> برای دو نوار اصلی <span class="ltr-text">USP Olive Oil RS</span> عبارتند از <span class="ltr-text">0.20</span> و <span class="ltr-text">0.26</span>.]</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تجزیه و تحلیل</h3>
+            <ul class="list-disc pr-8 mb-4">
+                <li><span class="font-semibold">نمونه‌ها:</span> محلول استاندارد و محلول نمونه</li>
+            </ul>
+            <p class="mb-2">صفحه را با متیلن کلراید تا لبه بالایی پیش‌توسعه دهید. صفحه را در <span class="ltr-text">120°</span> به مدت <span class="ltr-text">10 min</span> خشک کنید.</p>
+            <p class="mb-2">نمونه‌ها را در نوارهای جداگانه به نقطه شروع از قبل علامت‌گذاری شده روی یک صفحه <span class="ltr-text">HPTLC</span> اعمال کنید.</p>
+            <p class="mb-2">اطمینان حاصل کنید که نوارها حداقل <span class="ltr-text">3 mm</span> بالاتر از سطح فاز متحرک هستند.</p>
+            <p class="mb-2">در مسیری به طول <span class="ltr-text">7 cm</span> با استفاده از فاز متحرک توسعه دهید. اجازه دهید صفحه در هوا خشک شود.</p>
+            <p class="mb-2">صفحه را با معرف پاششی تیمار کنید.</p>
+            <p class="mb-4">صفحه را در <span class="ltr-text">120°</span> به مدت <span class="ltr-text">3 min</span> گرم کنید و در نور روز بررسی کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
+            <ul class="list-disc pr-8 mb-4">
+                <li>مقادیر <span class="ltr-text">RF</span> نوارهای اصلی محلول نمونه با مقادیر محلول استاندارد مطابقت دارد.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">● استانداردهای مرجع <span class="ltr-text">USP</span> <a href="11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h3>
+            <ul class="list-disc pr-8 mb-4">
+                <li><span class="ltr-text">USP Almond Oil RS</span> (روغن بادام)</li>
+                <li><span class="ltr-text">USP Borage Seed Oil RS</span> (روغن دانه گل گاوزبان)</li>
+                <li><span class="ltr-text">USP Canola Oil RS</span> (روغن کانولا)</li>
+                <li><span class="ltr-text">USP Corn Oil RS</span> (روغن ذرت)</li>
+                <li><span class="ltr-text">USP Cottonseed Oil RS</span> (روغن دانه پنبه)</li>
+                <li><span class="ltr-text">USP Evening Primrose Oil RS</span> (روغن گل مغربی)</li>
+                <li><span class="ltr-text">USP Flax Seed Oil RS</span> (روغن دانه کتان)</li>
+                <li><span class="ltr-text">USP Olive Oil RS</span> (روغن زیتون)</li>
+                <li><span class="ltr-text">USP Palm Oil RS</span> (روغن نخل)</li>
+                <li><span class="ltr-text">USP Peanut Oil RS</span> (روغن بادام زمینی)</li>
+                <li><span class="ltr-text">USP Safflower Oil RS</span> (روغن گلرنگ)</li>
+                <li><span class="ltr-text">USP Sesame Oil RS</span> (روغن کنجد)</li>
+                <li><span class="ltr-text">USP Soybean Oil RS</span> (روغن سویا)</li>
+                <li><span class="ltr-text">USP Sunflower Oil RS</span> (روغن آفتابگردان)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- MathJax CDN Script (at the end of body for better performance) -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

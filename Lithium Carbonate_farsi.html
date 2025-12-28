@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مونوگراف لیتیوم کربنات (USP)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .tab-active {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        .tab-inactive {
+            border-color: transparent;
+            color: #6b7280;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+        .interactive-card {
+            background-color: #e0f2fe;
+            border: 1px solid #90cdf4;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">لیتیوم کربنات</h1>
+
+        <div class="flex justify-center mb-6 border-b border-gray-200">
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab('definition')">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('identification')">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('assay')">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('impurities')">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('specific-tests')">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('additional-requirements')">الزامات اضافی</button>
+        </div>
+
+        <!-- Definition Tab Content -->
+        <div id="definition">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+                <p>لیتیوم کربنات حاوی<span class="ltr-text"> NLT 98.0%</span> و <span class="ltr-text">NMT 102.0%</span> (USP 1-Aug-2020) لیتیوم کربنات (<span class="ltr-text">Li2CO3</span>)، محاسبه شده بر اساس ماده خشک شده، می‌باشد.</p>
+            </div>
+        </div>
+
+        <!-- Identification Tab Content -->
+        <div id="identification" style="display: none;">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شناسه الف</h4>
+                    <p>با افزودن اسید، گاز بی‌رنگ تولید می‌کند که با عبور از کلسیم هیدروکسید TS، بلافاصله رسوب سفید تشکیل می‌دهد.</p>
+                </div>
+
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شناسه ب</h4>
+                    <p>زمان ماند پیک لیتیوم محلول نمونه با زمان ماند پیک لیتیوم محلول استاندارد، همانطور که در بخش سنجش به دست می‌آید، مطابقت دارد. (USP 1-Aug-2020)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Assay Tab Content -->
+        <div id="assay" style="display: none;">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">روش کار</h3>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">رویه‌ها</h4>
+                    <p>ظروف پلیمری، مانند ظروف ساخته شده از پلی‌متیل‌پنتن (PMP)، در تهیه محلول استاندارد و محلول نمونه استفاده می‌شوند. از آب با مقاومت الکتریکی <span class="ltr-text">NLT 18 megohm-cm</span> برای تهیه محلول‌ها استفاده کنید.</p>
+                    <p>فاز متحرک: <span class="ltr-text">35 mM</span> اسید متانسولفونیک در آب.</p>
+                    <p>[نکته — توصیه می‌شود از یک تکنیک مناسب تله‌گذاری کاتیونی برای اطمینان از اینکه فاز متحرک عاری از ناخالصی‌های کاتیونی است، استفاده شود.]</p>
+                    <p>رقیق‌کننده: <span class="ltr-text">0.01 N</span> اسید هیدروکلریک</p>
+                    <p>محلول استاندارد: <span class="ltr-text">100 µg/mL</span> USP Lithium Carbonate RS در رقیق‌کننده</p>
+                    <p>محلول نمونه: <span class="ltr-text">100 µg/mL</span> لیتیوم کربنات در رقیق‌کننده</p>
+                    <p>شرایط کروماتوگرافی</p>
+                    <p>(به کروماتوگرافی <a href="General chapters/621.html" class="text-blue-600 hover:underline" target="_blank">621</a>، تناسب سیستم مراجعه کنید.)</p>
+                    <p>حالت: LC</p>
+                    <p>آشکارساز: رسانایی با سرکوب</p>
+                    <p>ستون‌ها</p>
+                    <p>نگهبان: <span class="ltr-text">5-mm × 5-cm</span>؛ بسته‌بندی <span class="ltr-text">5.5-µm</span> L84</p>
+                    <p>تحلیلی: <span class="ltr-text">5-mm × 25-cm</span>؛ بسته‌بندی <span class="ltr-text">5.5-µm</span> L84</p>
+                    <p>دمای ستون: <span class="ltr-text">50°</span></p>
+                    <p>نرخ جریان: <span class="ltr-text">1 mL/min</span></p>
+                    <p>حجم تزریق: <span class="ltr-text">10 µL</span></p>
+                    <p>زمان اجرا: <span class="ltr-text">NLT</span> 5 برابر زمان ماند لیتیوم</p>
+                    <p>تناسب سیستم</p>
+                    <p>نمونه: محلول استاندارد</p>
+                    <p>شرایط تناسب</p>
+                    <p>ضریب تیلینگ: <span class="ltr-text">NMT 1.2</span></p>
+                    <p>انحراف استاندارد نسبی: <span class="ltr-text">NMT 1.5%</span></p>
+                    <p>تجزیه و تحلیل</p>
+                    <p>نمونه‌ها: محلول استاندارد و محلول نمونه</p>
+                    <p>درصد لیتیوم کربنات (<span class="ltr-text">Li2CO3</span>) را در بخش لیتیوم کربنات گرفته شده محاسبه کنید:</p>
+                    <div class="formula-display">
+                        <mathjax>
+                            $$ \text{Result} = (r_U/r_S) \times (C_S/C_U) \times 100 $$
+                        </mathjax>
+                    </div>
+                    <p><span class="ltr-text">rU</span> = پاسخ پیک لیتیوم از محلول نمونه</p>
+                    <p><span class="ltr-text">rS</span> = پاسخ پیک لیتیوم از محلول استاندارد</p>
+                    <p><span class="ltr-text">CS</span> = غلظت USP Lithium Carbonate RS در محلول استاندارد (<span class="ltr-text">µg/mL</span>)</p>
+                    <p><span class="ltr-text">CU</span> = غلظت لیتیوم کربنات در محلول نمونه (<span class="ltr-text">µg/mL</span>)</p>
+                    <p>(USP 1-Aug-2020)</p>
+                    <p>معیارهای پذیرش: <span class="ltr-text">98.0%–102.0%</span> (USP 1-Aug-2020) بر اساس ماده خشک شده</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Impurities Tab Content -->
+        <div id="impurities" style="display: none;">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">آلومینیوم و آهن</h3>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه</h4>
+                    <p>۵۰۰ میلی‌گرم لیتیوم کربنات را در ۱۰ میلی‌لیتر آب با افزودن قطره‌ای اسید هیدروکلریک، همراه با هم زدن، حل کنید.</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
+                    <p>محلول نمونه را بجوشانید، سپس آن را خنک کنید. به ۵ میلی‌لیتر محلول، آمونیوم هیدروکسید ۶ نرمال را اضافه کنید تا واکنش قلیایی شود.</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
+                    <p>هیچ کدورت یا رسوبی مشاهده نمی‌شود.</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلسیم و سدیم</h3>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول متحرک، رقیق‌کننده، محلول نمونه و سیستم کروماتوگرافی</h4>
+                    <p>همانطور که در بخش سنجش آمده است، عمل کنید.</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول تناسب سیستم</h4>
+                    <p><span class="ltr-text">100 µg/mL</span> USP Lithium Carbonate RS، <span class="ltr-text">0.1 µg/mL</span> یون سدیم، و <span class="ltr-text">0.15 µg/mL</span> یون کلسیم (از محلول‌های استاندارد یون سدیم و کلسیم قابل ردیابی NIST که به صورت تجاری در دسترس هستند) در رقیق‌کننده</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استاندارد</h4>
+                    <p><span class="ltr-text">0.1 µg/mL</span> یون سدیم و <span class="ltr-text">0.15 µg/mL</span> یون کلسیم (از محلول‌های استاندارد یون سدیم و کلسیم قابل ردیابی NIST که به صورت تجاری در دسترس هستند) در رقیق‌کننده</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تناسب سیستم</h4>
+                    <p>نمونه‌ها: محلول تناسب سیستم و محلول استاندارد</p>
+                    <p>[نکته — زمان‌های ماند نسبی لیتیوم، سدیم و کلسیم به ترتیب ۱.۰، ۱.۳ و ۳.۵ هستند.]</p>
+                    <p>شرایط تناسب</p>
+                    <p>رزولوشن: <span class="ltr-text">NLT 4.0</span> بین یون‌های لیتیوم و سدیم، محلول تناسب سیستم</p>
+                    <p>ضریب تیلینگ: <span class="ltr-text">NMT 1.5</span> برای یون‌های سدیم و کلسیم، محلول تناسب سیستم</p>
+                    <p>انحراف استاندارد نسبی: <span class="ltr-text">NMT 5.0%</span> برای یون‌های سدیم و کلسیم، محلول استاندارد</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
+                    <p>نمونه‌ها: محلول استاندارد و محلول نمونه</p>
+                    <p>درصد سدیم یا کلسیم را در بخش لیتیوم کربنات گرفته شده محاسبه کنید:</p>
+                    <div class="formula-display">
+                        <mathjax>
+                            $$ \text{Result} = (r_U/r_S) \times (C_S/C_U) \times 100 $$
+                        </mathjax>
+                    </div>
+                    <p><span class="ltr-text">rU</span> = پاسخ پیک سدیم یا کلسیم از محلول نمونه</p>
+                    <p><span class="ltr-text">rS</span> = پاسخ پیک سدیم یا کلسیم از محلول استاندارد</p>
+                    <p><span class="ltr-text">CS</span> = غلظت سدیم یا کلسیم در محلول استاندارد (<span class="ltr-text">µg/mL</span>)</p>
+                    <p><span class="ltr-text">CU</span> = غلظت لیتیوم کربنات در محلول نمونه (<span class="ltr-text">µg/mL</span>)</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
+                    <p>کلسیم: <span class="ltr-text">NMT 0.15%</span></p>
+                    <p>سدیم: <span class="ltr-text">NMT 0.1%</span> (USP 1-Aug-2020)</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a>، سولفات</h3>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استاندارد</h4>
+                    <p>۱ میلی‌لیتر اسید سولفوریک <span class="ltr-text">0.020 N</span> و ۱ میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">3 N</span> را به یک ظرف مناسب منتقل کنید. با آب تا ۴۰ میلی‌لیتر رقیق کنید.</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه</h4>
+                    <p>۱.۰ گرم لیتیوم کربنات را به یک ظرف مناسب منتقل کنید. ۱۰ میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">3 N</span> را اضافه کنید. با آب تا ۴۰ میلی‌لیتر رقیق کنید.</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
+                    <p>به طور جداگانه به محلول استاندارد و محلول نمونه، ۱ میلی‌لیتر باریم کلرید TS اضافه کنید.</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
+                    <p>کدورت تولید شده در محلول نمونه، پس از ۳ دقیقه، <span class="ltr-text">NMT</span> کدورت تولید شده در محلول استاندارد (<span class="ltr-text">0.1%</span>) است.</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a>، کلرید</h3>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استاندارد</h4>
+                    <p>۰.۵ میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">0.02 N</span> و ۱.۲ میلی‌لیتر اسید نیتریک را به یک ظرف مناسب منتقل کنید. با آب تا ۵۰ میلی‌لیتر رقیق کنید.</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه</h4>
+                    <p>۵۰۰ میلی‌گرم لیتیوم کربنات را به یک ظرف مناسب منتقل کنید. ۱.۲ میلی‌لیتر اسید نیتریک اضافه کنید. با آب تا ۵۰ میلی‌لیتر رقیق کنید.</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
+                    <p>به طور جداگانه به محلول استاندارد و محلول نمونه، ۱ میلی‌لیتر نقره نیترات TS اضافه کنید.</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
+                    <p>کدورت تولید شده در محلول نمونه <span class="ltr-text">NMT</span> کدورت تولید شده در محلول استاندارد (<span class="ltr-text">0.07%</span>) است.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Specific Tests Tab Content -->
+        <div id="specific-tests" style="display: none;">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">کاهش در اثر خشک شدن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h3>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
+                    <p>در دمای <span class="ltr-text">200°</span> به مدت ۴ ساعت خشک کنید.</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
+                    <p><span class="ltr-text">NMT 1.0%</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Requirements Tab Content -->
+        <div id="additional-requirements" style="display: none;">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری</h3>
+                <div class="interactive-card card">
+                    <p>در ظروف کاملاً بسته نگهداری شود.</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h3>
+                <div class="interactive-card card">
+                    <p>USP Lithium Carbonate RS (USP 1-Aug-2020)</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all tab contents
+            document.querySelectorAll('#definition, #identification, #assay, #impurities, #specific-tests, #additional-requirements').forEach(tab => {
+                tab.style.display = 'none';
+            });
+
+            // Remove active class from all tab buttons
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('tab-active');
+                button.classList.add('tab-inactive');
+            });
+
+            // Show the selected tab content
+            document.getElementById(tabId).style.display = 'block';
+
+            // Add active class to the clicked tab button
+            event.target.classList.remove('tab-inactive');
+            event.target.classList.add('tab-active');
+        }
+    </script>
+</body>
+</html>

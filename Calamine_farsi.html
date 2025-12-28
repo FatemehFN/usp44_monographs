@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مونوگراف کالامین (USP)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .tab-active {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        .tab-inactive {
+            border-color: transparent;
+            color: #6b7280;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+        .interactive-card {
+            background-color: #e0f2fe;
+            border: 1px solid #90cdf4;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">کالامین</h1>
+
+        <div class="flex justify-center mb-6 border-b border-gray-200">
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab('definition')">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('identification')">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('assay')">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('impurities')">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('specific-tests')">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('additional-requirements')">الزامات اضافی</button>
+        </div>
+
+        <!-- Definition Tab -->
+        <div id="definition">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+            <div class="card">
+                <p>کالامین، اکسید روی است که با نسبت کمی اکسید فریک مخلوط شده است.</p>
+                <p>کالامین (آماده‌سازی دارویی) [<span class="ltr-text">8011-96-9</span>].</p>
+                <p>کالامین حاوی، پس از اشتعال، حداقل <span class="ltr-text">98.0%</span> و حداکثر <span class="ltr-text">100.5%</span> اکسید روی (<span class="ltr-text">ZnO</span>) است.</p>
+            </div>
+        </div>
+
+        <!-- Identification Tab -->
+        <div id="identification" class="hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+            <div class="card">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. آزمایش‌های شناسایی - عمومی، روی <span class="ltr-text">á191ñ</span></h3>
+                <div class="interactive-card card">
+                    <p><strong>نمونه:</strong> <span class="ltr-text">1</span> گرم</p>
+                    <p><strong>تجزیه و تحلیل:</strong> نمونه را با <span class="ltr-text">10</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">3 N</span> تیمار کرده و فیلتر کنید.</p>
+                    <p><strong>معیارهای پذیرش:</strong> فیلتر شده الزامات را برآورده می‌کند.</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">ب.</h3>
+                <div class="interactive-card card">
+                    <p><strong>نمونه:</strong> <span class="ltr-text">1</span> گرم</p>
+                    <p><strong>تجزیه و تحلیل:</strong> <span class="ltr-text">10</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">3 N</span> به نمونه اضافه کنید، به جوش حرارت دهید و فیلتر کنید.</p>
+                    <p><strong>معیارهای پذیرش:</strong> فیلتر شده پس از افزودن آمونیوم تیوسیانات TS رنگ قرمزی به خود می‌گیرد.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Assay Tab -->
+        <div id="assay" class="hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+            <div class="card">
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش اجرا</h4>
+                <p><strong>محلول نمونه:</strong> <span class="ltr-text">1.5</span> گرم کالامین تازه اشتعال‌یافته را در <span class="ltr-text">50.0</span> میلی‌لیتر اسید سولفوریک <span class="ltr-text">1 N</span> VS حل کنید و با حرارت ملایم تا زمانی که دیگر محلول رخ ندهد، نگه دارید. مخلوط را فیلتر کرده و باقیمانده روی فیلتر را با آب داغ بشویید تا آخرین شستشو به کاغذ لیتموس خنثی شود. به فیلترات و شستشوهای ترکیب شده <span class="ltr-text">2.5</span> گرم آمونیوم کلرید اضافه کنید. خنک کرده و متیل اورنج TS را اضافه کنید.</p>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم تیتراسیون</h4>
+                <p><strong>حالت:</strong> تیتراسیون برگشتی</p>
+                <p><strong>تیترانت:</strong> سدیم هیدروکسید <span class="ltr-text">1 N</span> VS</p>
+                <p><strong>تشخیص نقطه پایانی:</strong> بصری</p>
+                <p><strong>تجزیه و تحلیل:</strong> اسید سولفوریک اضافی در محلول نمونه را با تیترانت تیتراسیون کنید. هر میلی‌لیتر اسید سولفوریک <span class="ltr-text">1 N</span> مصرف شده معادل <span class="ltr-text">40.69</span> میلی‌گرم اکسید روی (<span class="ltr-text">ZnO</span>) است.</p>
+                <p><strong>معیارهای پذیرش:</strong> <span class="ltr-text">98.0%–100.5%</span> بر اساس ماده اشتعال‌یافته</p>
+            </div>
+        </div>
+
+        <!-- Impurities Tab -->
+        <div id="impurities" class="hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+            <div class="card">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">آرسنیک، روش I <span class="ltr-text">á211ñ</span></h3>
+                <div class="interactive-card card">
+                    <p>حداکثر <span class="ltr-text">8</span> ppm</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلسیم</h3>
+                <div class="interactive-card card">
+                    <p><strong>نمونه:</strong> <span class="ltr-text">1</span> گرم</p>
+                    <p><strong>تجزیه و تحلیل:</strong> نمونه را در <span class="ltr-text">25</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">3 N</span> به مدت <span class="ltr-text">30</span> دقیقه حرارت دهید، برای حذف اکسید فریک نامحلول فیلتر کنید، و آمونیوم هیدروکسید <span class="ltr-text">6 N</span> را تا زمانی که رسوب اولیه حل شود به فیلترات اضافه کنید، سپس <span class="ltr-text">5</span> میلی‌لیتر دیگر آمونیوم هیدروکسید <span class="ltr-text">6 N</span> اضافه کنید. به <span class="ltr-text">10</span> میلی‌لیتر از این محلول، <span class="ltr-text">2</span> میلی‌لیتر آمونیوم اکسالات TS اضافه کنید.</p>
+                    <p><strong>معیارهای پذیرش:</strong> حداکثر کدورت خفیفی تولید می‌شود.</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلسیم یا منیزیم</h3>
+                <div class="interactive-card card">
+                    <p><strong>تجزیه و تحلیل:</strong> به یک بخش <span class="ltr-text">10</span> میلی‌لیتری دیگر از محلول تهیه شده در آزمایش کلسیم، <span class="ltr-text">2</span> میلی‌لیتر دی‌بازیک سدیم فسفات TS اضافه کنید.</p>
+                    <p><strong>معیارهای پذیرش:</strong> حداکثر کدورت خفیفی تولید می‌شود.</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">سرب</h3>
+                <div class="interactive-card card">
+                    <p><strong>نمونه:</strong> <span class="ltr-text">1</span> گرم</p>
+                    <p><strong>تجزیه و تحلیل:</strong> <span class="ltr-text">15</span> میلی‌لیتر آب به نمونه اضافه کنید، هم بزنید، سپس <span class="ltr-text">3</span> میلی‌لیتر اسید استیک گلاسیال اضافه کنید و روی حمام بخار تا حل شدن حرارت دهید. فیلتر کرده و <span class="ltr-text">5</span> قطره پتاسیم کرومات TS اضافه کنید.</p>
+                    <p><strong>معیارهای پذیرش:</strong> کدورت تولید نمی‌شود.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Specific Tests Tab -->
+        <div id="specific-tests" class="hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+            <div class="card">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">مواد نامحلول در اسید</h3>
+                <div class="interactive-card card">
+                    <p><strong>نمونه:</strong> <span class="ltr-text">2.0</span> گرم</p>
+                    <p><strong>تجزیه و تحلیل:</strong> نمونه را در <span class="ltr-text">50</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">3 N</span> حل کنید. اگر باقیمانده نامحلول باقی ماند، آن را روی یک فیلتر وزن شده جمع‌آوری کنید، با آب بشویید، و در دمای <span class="ltr-text">105°</span> به مدت <span class="ltr-text">1</span> ساعت خشک کنید. خنک کرده و وزن کنید.</p>
+                    <p><strong>معیارهای پذیرش:</strong> حداکثر <span class="ltr-text">40</span> میلی‌گرم (<span class="ltr-text">2.0%</span>)</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">مواد قلیایی</h3>
+                <div class="interactive-card card">
+                    <p><strong>نمونه:</strong> <span class="ltr-text">1.0</span> گرم</p>
+                    <p><strong>تجزیه و تحلیل:</strong> نمونه را با <span class="ltr-text">20</span> میلی‌لیتر آب روی حمام بخار به مدت <span class="ltr-text">15</span> دقیقه حرارت دهید، فیلتر کنید، و <span class="ltr-text">2</span> قطره فنل فتالئین TS اضافه کنید.</p>
+                    <p><strong>معیارهای پذیرش:</strong> اگر رنگ قرمز تولید شد، حداکثر <span class="ltr-text">0.20</span> میلی‌لیتر اسید سولفوریک <span class="ltr-text">0.10 N</span> برای خنثی کردن آن مورد نیاز است.</p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">ضرر در اشتعال <span class="ltr-text">á733ñ</span></h3>
+                <div class="interactive-card card">
+                    <p><strong>نمونه:</strong> <span class="ltr-text">2</span> گرم</p>
+                    <p><strong>تجزیه و تحلیل:</strong> نمونه را در دمای <span class="ltr-text">500°</span> تا رسیدن به وزن ثابت اشتعال بزنید.</p>
+                    <p><strong>معیارهای پذیرش:</strong> حداکثر <span class="ltr-text">2.0%</span></p>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایشات شمارش میکروبی <span class="ltr-text">á61ñ</span> و آزمایشات میکروارگانیسم‌های مشخص <span class="ltr-text">á62ñ</span></h3>
+                <div class="interactive-card card">
+                    <p>این ماده الزامات آزمایش عدم وجود استافیلوکوکوس اورئوس و سودوموناس آئروژینوزا را برآورده می‌کند.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Requirements Tab -->
+        <div id="additional-requirements" class="hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+            <div class="card">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری</h3>
+                <p>در ظروف کاملاً بسته نگهداری شود.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.add('tab-inactive');
+                button.classList.remove('tab-active');
+            });
+            document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('tab-active');
+            document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.remove('tab-inactive');
+
+            document.querySelectorAll('div[id]').forEach(div => {
+                div.classList.add('hidden');
+            });
+            document.getElementById(tabId).classList.remove('hidden');
+        }
+        // Show the first tab by default
+        document.getElementById('definition').classList.remove('hidden');
+    </script>
+</body>
+</html>

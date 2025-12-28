@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>181. شناسایی - بازهای آلی نیتروژن‌دار</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <div class="card">
+            <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">181. شناسایی — بازهای آلی نیتروژن‌دار</h1>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+            <p class="mb-4">هدف از این تست، شناسایی ترکیبات آمین سه‌ظرفیتی است. این تست طیف‌سنجی دارای درجه محدودی از ویژگی است و بنابراین، انطباق با تمام تست‌های شناسایی اضافی ذکر شده در یک مونوگراف خاص برای اطمینان از هویت نمونه تحت بررسی ضروری است.</p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعیین مقدار</h2>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش کار</h4>
+            <p class="mb-4">محلول استاندارد: در یک جداکننده، 50 mg از استاندارد مرجع USP مربوطه را در 25 mL اسید هیدروکلریک 0.01 N حل کنید.</p>
+            <p class="mb-4">محلول نمونه: بسته به ماهیت نمونه، 50 mg از ماده فله تحت آزمون را در 25 mL اسید هیدروکلریک 0.01 N حل کنید، یا مقدار پودر قرص‌ها یا محتویات کپسول‌ها، معادل 50 mg از ماده، را به مدت 10 دقیقه با 25 mL اسید هیدروکلریک 0.01 N تکان دهید. مایع را به یک جداکننده منتقل کنید، در صورت لزوم فیلتر کرده و باقی‌مانده روی فیلتر و باقی‌مانده را با چندین بخش کوچک آب بشویید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط دستگاهی</h4>
+            <p class="mb-4">(به طیف‌سنجی مادون قرمز میانی <a href="854.html" class="text-blue-600 hover:underline" target="_blank">854</a> مراجعه کنید.)</p>
+            <p class="mb-4">حالت: IR</p>
+            <p class="mb-4">محدوده طول موج: <span class="ltr-text">7–15 µm</span> (<span class="ltr-text">1430 cm−1</span> to <span class="ltr-text">650 cm−1</span>)</p>
+            <p class="mb-4">سل: <span class="ltr-text">1-mm</span></p>
+            <p class="mb-4">بلنک: دی‌اکسید کربن</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل</h4>
+            <p class="mb-4">نمونه‌ها: محلول استاندارد و محلول نمونه</p>
+            <p class="mb-4">هر محلول را به شرح زیر عمل کنید: 2 mL سدیم هیدروکسید 1 N و 4 mL دی‌اکسید کربن اضافه کرده و به مدت 2 دقیقه تکان دهید. در صورت لزوم برای شفاف‌سازی فاز پایینی سانتریفیوژ کنید و آن را از یک فیلتر خشک عبور دهید و فیلتر جمع‌آوری شده را در یک فلاسک کوچک با درپوش شیشه‌ای جمع‌آوری کنید. بدون تأخیر، طیف‌های جذب محلول استاندارد و محلول نمونه فیلتر شده را تعیین کنید.</p>
+            <p class="mb-4">معیارهای پذیرش: طیف محلول نمونه باید تمام باندهای جذب قابل توجه موجود در طیف محلول استاندارد را نشان دهد.</p>
+
+            <div class="mt-8 text-center text-sm text-gray-500">
+                <p>Printed on: Mon Aug 09 2021, 06:46:56 PM (EST)</p>
+                <p>Official Status: Currently Official on 09-Aug-2021</p>
+                <p>DocId: 1_GUID-A87EB337-8482-42D5-A171-128444F8F6A5_1_en-US</p>
+                <p>Printed by: Nguyen Nhan</p>
+                <p>Official Date: Official Prior to 2013</p>
+                <p>Document Type: GENERAL CHAPTER</p>
+                <p>&copy;2021 USPC</p>
+                <p><a href="https://online.uspnf.com/uspnf/document/1_GUID-A87EB337-8482-42D5-A171-128444F8F6A5_1_en-US" class="text-blue-600 hover:underline" target="_blank">https://online.uspnf.com/uspnf/document/1_GUID-A87EB337-8482-42D5-A171-128444F8F6A5_1_en-US</a></p>
+                <p>1/1</p>
+                <p>Official</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

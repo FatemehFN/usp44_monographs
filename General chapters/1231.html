@@ -1,0 +1,1371 @@
+```html
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آب برای مصارف دارویی</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vazirmatn Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax CDN for LaTeX rendering -->
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">آب برای مصارف دارویی</h1>
+
+        <div class="card mb-8">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">فهرست مطالب</h2>
+            <ul class="list-disc pr-8 space-y-1">
+                <li><a href="#section1" class="text-blue-600 hover:underline">1. مقدمه</a></li>
+                <li><a href="#section2" class="text-blue-600 hover:underline">2. ملاحظات آب منبع</a></li>
+                <li><a href="#section3" class="text-blue-600 hover:underline">3. آب‌های مورد استفاده برای اهداف تولید و آزمایش دارویی</a>
+                    <ul class="list-circle pr-8 space-y-1 mt-1">
+                        <li><a href="#section3.1" class="text-blue-600 hover:underline">3.1 آب‌های حجمی و بخار مونوگراف شده</a>
+                            <ul class="list-square pr-8 space-y-1 mt-1">
+                                <li><a href="#section3.1.1" class="text-blue-600 hover:underline">3.1.1 آب خالص</a></li>
+                                <li><a href="#section3.1.2" class="text-blue-600 hover:underline">3.1.2 آب برای تزریق</a></li>
+                                <li><a href="#section3.1.3" class="text-blue-600 hover:underline">3.1.3 آب برای همودیالیز</a></li>
+                                <li><a href="#section3.1.4" class="text-blue-600 hover:underline">3.1.4 بخار خالص</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#section3.2" class="text-blue-600 hover:underline">3.2 آب‌های استریل مونوگراف شده</a>
+                            <ul class="list-square pr-8 space-y-1 mt-1">
+                                <li><a href="#section3.2.1" class="text-blue-600 hover:underline">3.2.1 آب خالص استریل</a></li>
+                                <li><a href="#section3.2.2" class="text-blue-600 hover:underline">3.2.2 آب استریل برای تزریق</a></li>
+                                <li><a href="#section3.2.3" class="text-blue-600 hover:underline">3.2.3 آب باکتریواستاتیک برای تزریق</a></li>
+                                <li><a href="#section3.2.4" class="text-blue-600 hover:underline">3.2.4 آب استریل برای شستشو</a></li>
+                                <li><a href="#section3.2.5" class="text-blue-600 hover:underline">3.2.5 آب استریل برای استنشاق</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#section3.3" class="text-blue-600 hover:underline">3.3 آب‌های غیرمونوگراف شده</a>
+                            <ul class="list-square pr-8 space-y-1 mt-1">
+                                <li><a href="#section3.3.1" class="text-blue-600 hover:underline">3.3.1 آب آشامیدنی</a></li>
+                                <li><a href="#section3.3.2" class="text-blue-600 hover:underline">3.3.2 سایر آب‌های غیرمونوگراف شده</a></li>
+                                <li><a href="#section3.3.3" class="text-blue-600 hover:underline">3.3.3 آب فاقد آمونیاک</a></li>
+                                <li><a href="#section3.3.4" class="text-blue-600 hover:underline">3.3.4 آب فاقد دی‌اکسید کربن</a></li>
+                                <li><a href="#section3.3.5" class="text-blue-600 hover:underline">3.3.5 آب مقطر</a></li>
+                                <li><a href="#section3.3.6" class="text-blue-600 hover:underline">3.3.6 آب تازه تقطیر شده</a></li>
+                                <li><a href="#section3.3.7" class="text-blue-600 hover:underline">3.3.7 آب دیونیزه</a></li>
+                                <li><a href="#section3.3.8" class="text-blue-600 hover:underline">3.3.8 آب مقطر دیونیزه</a></li>
+                                <li><a href="#section3.3.9" class="text-blue-600 hover:underline">3.3.9 آب فیلتر شده</a></li>
+                                <li><a href="#section3.3.10" class="text-blue-600 hover:underline">3.3.10 آب با خلوص بالا</a></li>
+                                <li><a href="#section3.3.11" class="text-blue-600 hover:underline">3.3.11 آب بدون هوا</a></li>
+                                <li><a href="#section3.3.12" class="text-blue-600 hover:underline">3.3.12 آب فاقد اکسیژن</a></li>
+                                <li><a href="#section3.3.13" class="text-blue-600 hover:underline">3.3.13 آب برای آزمایش اندوتوکسین باکتریایی</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#section4" class="text-blue-600 hover:underline">4. اعتبارسنجی و تأیید صلاحیت سیستم‌های تصفیه، نگهداری و توزیع آب</a>
+                    <ul class="list-circle pr-8 space-y-1 mt-1">
+                        <li><a href="#section4.1" class="text-blue-600 hover:underline">4.1 الزام اعتبارسنجی</a></li>
+                        <li><a href="#section4.2" class="text-blue-600 hover:underline">4.2 رویکرد اعتبارسنجی</a>
+                            <ul class="list-square pr-8 space-y-1 mt-1">
+                                <li><a href="#section4.2.1" class="text-blue-600 hover:underline">4.2.1 عناصر اعتبارسنجی</a></li>
+                                <li><a href="#section4.2.2" class="text-blue-600 hover:underline">4.2.2 مشخصات الزامات کاربر و تأیید صلاحیت طراحی</a></li>
+                                <li><a href="#section4.2.3" class="text-blue-600 hover:underline">4.2.3 IQ (تأیید صلاحیت نصب)</a></li>
+                                <li><a href="#section4.2.4" class="text-blue-600 hover:underline">4.2.4 OQ (تأیید صلاحیت عملیاتی)</a></li>
+                                <li><a href="#section4.2.5" class="text-blue-600 hover:underline">4.2.5 PQ (تأیید صلاحیت عملکرد)</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#section4.3" class="text-blue-600 hover:underline">4.3 استفاده عملیاتی</a>
+                            <ul class="list-square pr-8 space-y-1 mt-1">
+                                <li><a href="#section4.3.1" class="text-blue-600 hover:underline">4.3.1 نظارت</a></li>
+                                <li><a href="#section4.3.2" class="text-blue-600 hover:underline">4.3.2 نگهداری اعتبارسنجی</a></li>
+                                <li><a href="#section4.3.3" class="text-blue-600 hover:underline">4.3.3 کنترل تغییر</a></li>
+                                <li><a href="#section4.3.4" class="text-blue-600 hover:underline">4.3.4 بازبینی دوره‌ای</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#section5" class="text-blue-600 hover:underline">5. طراحی و بهره‌برداری از سیستم‌های آب خالص و آب برای تزریق</a>
+                    <ul class="list-circle pr-8 space-y-1 mt-1">
+                        <li><a href="#section5.1" class="text-blue-600 hover:underline">5.1 ملاحظات عملیات واحد</a>
+                            <ul class="list-square pr-8 space-y-1 mt-1">
+                                <li><a href="#section5.1.1" class="text-blue-600 hover:underline">5.1.1 پیش‌فیلتراسیون</a></li>
+                                <li><a href="#section5.1.2" class="text-blue-600 hover:underline">5.1.2 کربن فعال</a></li>
+                                <li><a href="#section5.1.3" class="text-blue-600 hover:underline">5.1.3 افزودنی‌ها</a></li>
+                                <li><a href="#section5.1.4" class="text-blue-600 hover:underline">5.1.4 جاذب‌های آلی</a></li>
+                                <li><a href="#section5.1.5" class="text-blue-600 hover:underline">5.1.5 نرم‌کننده‌ها</a></li>
+                                <li><a href="#section5.1.6" class="text-blue-600 hover:underline">5.1.6 دیونیزاسیون</a></li>
+                                <li><a href="#section5.1.7" class="text-blue-600 hover:underline">5.1.7 اسمز معکوس</a></li>
+                                <li><a href="#section5.1.8" class="text-blue-600 hover:underline">5.1.8 اولترافیلتراسیون</a></li>
+                                <li><a href="#section5.1.9" class="text-blue-600 hover:underline">5.1.9 فیلتراسیون نگهدارنده میکروبی</a></li>
+                                <li><a href="#section5.1.10" class="text-blue-600 hover:underline">5.1.10 نور فرابنفش</a></li>
+                                <li><a href="#section5.1.11" class="text-blue-600 hover:underline">5.1.11 تقطیر</a></li>
+                                <li><a href="#section5.1.12" class="text-blue-600 hover:underline">5.1.12 مخازن ذخیره</a></li>
+                                <li><a href="#section5.1.13" class="text-blue-600 hover:underline">5.1.13 سیستم‌های توزیع</a></li>
+                                <li><a href="#section5.1.14" class="text-blue-600 hover:underline">5.1.14 فناوری‌های نوظهور/جدید</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#section5.2" class="text-blue-600 hover:underline">5.2 نصب، مواد ساخت و انتخاب قطعات</a></li>
+                        <li><a href="#section5.3" class="text-blue-600 hover:underline">5.3 ضدعفونی</a>
+                            <ul class="list-square pr-8 space-y-1 mt-1">
+                                <li><a href="#section5.3.1" class="text-blue-600 hover:underline">5.3.1 ضدعفونی حرارتی</a></li>
+                                <li><a href="#section5.3.2" class="text-blue-600 hover:underline">5.3.2 ضدعفونی شیمیایی</a></li>
+                                <li><a href="#section5.3.3" class="text-blue-600 hover:underline">5.3.3 ضدعفونی با UV</a></li>
+                                <li><a href="#section5.3.4" class="text-blue-600 hover:underline">5.3.4 روش‌های ضدعفونی</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#section5.4" class="text-blue-600 hover:underline">5.4 بهره‌برداری، نگهداری و کنترل</a>
+                            <ul class="list-square pr-8 space-y-1 mt-1">
+                                <li><a href="#section5.4.1" class="text-blue-600 hover:underline">5.4.1 روش‌های عملیاتی</a></li>
+                                <li><a href="#section5.4.2" class="text-blue-600 hover:underline">5.4.2 برنامه نظارت بر فرآیند</a></li>
+                                <li><a href="#section5.4.3" class="text-blue-600 hover:underline">5.4.3 کنترل میکروبی روتین</a></li>
+                                <li><a href="#section5.4.4" class="text-blue-600 hover:underline">5.4.4 نگهداری پیشگیرانه</a></li>
+                                <li><a href="#section5.4.5" class="text-blue-600 hover:underline">5.4.5 کنترل تغییر</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#section6" class="text-blue-600 hover:underline">6. نمونه‌برداری</a>
+                    <ul class="list-circle pr-8 space-y-1 mt-1">
+                        <li><a href="#section6.1" class="text-blue-600 hover:underline">6.1 اهداف و رویه‌ها</a>
+                            <ul class="list-square pr-8 space-y-1 mt-1">
+                                <li><a href="#section6.1.1" class="text-blue-600 hover:underline">6.1.1 نمونه‌برداری کنترل فرآیند (PC)</a></li>
+                                <li><a href="#section6.1.2" class="text-blue-600 hover:underline">6.1.2 نمونه‌برداری کنترل کیفیت (QC)</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#section6.2" class="text-blue-600 hover:underline">6.2 ویژگی‌ها و مکان‌های نمونه‌برداری</a>
+                            <ul class="list-square pr-8 space-y-1 mt-1">
+                                <li><a href="#section6.2.1" class="text-blue-600 hover:underline">6.2.1 ویژگی‌های شیمیایی</a></li>
+                                <li><a href="#section6.2.2" class="text-blue-600 hover:underline">6.2.2 ویژگی‌های میکروبی</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#section6.3" class="text-blue-600 hover:underline">6.3 برنامه‌های نمونه‌برداری اعتبارسنجی</a></li>
+                        <li><a href="#section6.4" class="text-blue-600 hover:underline">6.4 برنامه‌های نمونه‌برداری روتین</a>
+                            <ul class="list-square pr-8 space-y-1 mt-1">
+                                <li><a href="#section6.4.1" class="text-blue-600 hover:underline">6.4.1 نمونه‌برداری از آب منبع</a></li>
+                                <li><a href="#section6.4.2" class="text-blue-600 hover:underline">6.4.2 نمونه‌برداری از سیستم پیش‌تصفیه و تصفیه</a></li>
+                                <li><a href="#section6.4.3" class="text-blue-600 hover:underline">6.4.3 نمونه‌برداری از سیستم توزیع آب خالص</a></li>
+                                <li><a href="#section6.4.4" class="text-blue-600 hover:underline">6.4.4 نمونه‌برداری از سیستم توزیع آب برای تزریق</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#section6.5" class="text-blue-600 hover:underline">6.5 نمونه‌برداری غیرروتین</a></li>
+                    </ul>
+                </li>
+                <li><a href="#section7" class="text-blue-600 hover:underline">7. ارزیابی‌های شیمیایی</a>
+                    <ul class="list-circle pr-8 space-y-1 mt-1">
+                        <li><a href="#section7.1" class="text-blue-600 hover:underline">7.1 آزمایش‌های شیمیایی برای آب‌های حجمی</a></li>
+                        <li><a href="#section7.2" class="text-blue-600 hover:underline">7.2 آزمایش‌های شیمیایی برای آب‌های استریل</a></li>
+                        <li><a href="#section7.3" class="text-blue-600 hover:underline">7.3 زمان‌های نگهداری و ذخیره‌سازی برای آزمایش‌های شیمیایی</a>
+                            <ul class="list-square pr-8 space-y-1 mt-1">
+                                <li><a href="#section7.3.1" class="text-blue-600 hover:underline">7.3.1 ظروف</a></li>
+                                <li><a href="#section7.3.2" class="text-blue-600 hover:underline">7.3.2 زمان و شرایط نگهداری</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#section7.4" class="text-blue-600 hover:underline">7.4 ناخالصی‌های عنصری در آب‌های دارویی</a></li>
+                    </ul>
+                </li>
+                <li><a href="#section8" class="text-blue-600 hover:underline">8. ارزیابی‌های میکروبی</a>
+                    <ul class="list-circle pr-8 space-y-1 mt-1">
+                        <li><a href="#section8.1" class="text-blue-600 hover:underline">8.1 انواع میکروارگانیسم‌ها</a>
+                            <ul class="list-square pr-8 space-y-1 mt-1">
+                                <li><a href="#section8.1.1" class="text-blue-600 hover:underline">8.1.1 آرکی‌ها</a></li>
+                                <li><a href="#section8.1.2" class="text-blue-600 hover:underline">8.1.2 باکتری‌ها</a>
+                                    <ul class="list-none pr-8 space-y-1 mt-1">
+                                        <li><a href="#section8.1.2.1" class="text-blue-600 hover:underline">8.1.2.1 باکتری‌های گرم مثبت</a></li>
+                                        <li><a href="#section8.1.2.2" class="text-blue-600 hover:underline">8.1.2.2 باکتری‌های گرم منفی</a></li>
+                                        <li><a href="#section8.1.2.3" class="text-blue-600 hover:underline">8.1.2.3 مایکوپلاسما</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#section8.1.3" class="text-blue-600 hover:underline">8.1.3 قارچ‌ها</a></li>
+                                <li><a href="#section8.1.4" class="text-blue-600 hover:underline">8.1.4 ویروس‌ها</a></li>
+                                <li><a href="#section8.1.5" class="text-blue-600 hover:underline">8.1.5 تروموفیل‌ها</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#section8.2" class="text-blue-600 hover:underline">8.2 تشکیل بیوفیلم در سیستم‌های آب</a>
+                            <ul class="list-square pr-8 space-y-1 mt-1">
+                                <li><a href="#section8.2.1" class="text-blue-600 hover:underline">8.2.1 باکتری‌های تشکیل‌دهنده بیوفیلم در سیستم‌های آب</a></li>
+                                <li><a href="#section8.2.2" class="text-blue-600 hover:underline">8.2.2 باکتری‌های غیرتشکیل‌دهنده بیوفیلم در سیستم‌های آب</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#section8.3" class="text-blue-600 hover:underline">8.3 منابع میکروارگانیسم‌ها</a>
+                            <ul class="list-square pr-8 space-y-1 mt-1">
+                                <li><a href="#section8.3.1" class="text-blue-600 hover:underline">8.3.1 آلودگی خارجی</a></li>
+                                <li><a href="#section8.3.2" class="text-blue-600 hover:underline">8.3.2 آلودگی داخلی</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#section8.4" class="text-blue-600 hover:underline">8.4 اندوتوکسین</a>
+                            <ul class="list-square pr-8 space-y-1 mt-1">
+                                <li><a href="#section8.4.1" class="text-blue-600 hover:underline">8.4.1 منابع</a></li>
+                                <li><a href="#section8.4.2" class="text-blue-600 hover:underline">8.4.2 حذف و کنترل</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#section8.5" class="text-blue-600 hover:underline">8.5 روش‌های آزمایش</a>
+                            <ul class="list-square pr-8 space-y-1 mt-1">
+                                <li><a href="#section8.5.1" class="text-blue-600 hover:underline">8.5.1 ملاحظات شمارش میکروبی</a></li>
+                                <li><a href="#section8.5.2" class="text-blue-600 hover:underline">8.5.2 رویکرد کشت کلاسیک</a>
+                                    <ul class="list-none pr-8 space-y-1 mt-1">
+                                        <li><a href="#section8.5.2.1" class="text-blue-600 hover:underline">8.5.2.1 محیط‌های رشد</a></li>
+                                        <li><a href="#section8.5.2.2" class="text-blue-600 hover:underline">8.5.2.2 شرایط انکوباسیون</a></li>
+                                        <li><a href="#section8.5.2.3" class="text-blue-600 hover:underline">8.5.2.3 انتخاب شرایط روش</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#section8.5.3" class="text-blue-600 hover:underline">8.5.3 روش‌های کشت کلاسیک پیشنهادی</a></li>
+                                <li><a href="#section8.5.4" class="text-blue-600 hover:underline">8.5.4 شناسایی میکروبی</a></li>
+                                <li><a href="#section8.5.5" class="text-blue-600 hover:underline">8.5.5 روش‌های میکروبیولوژیکی سریع</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#section9" class="text-blue-600 hover:underline">9. سطوح هشدار، اقدام و مشخصات</a>
+                    <ul class="list-circle pr-8 space-y-1 mt-1">
+                        <li><a href="#section9.1" class="text-blue-600 hover:underline">9.1 مقدمه</a></li>
+                        <li><a href="#section9.2" class="text-blue-600 hover:underline">9.2 نمونه‌هایی از اندازه‌گیری پارامترهای حیاتی</a></li>
+                        <li><a href="#section9.3" class="text-blue-600 hover:underline">9.3 هدف از اندازه‌گیری‌ها</a></li>
+                        <li><a href="#section9.4" class="text-blue-600 hover:underline">9.4 تعریف سطوح هشدار، اقدام و مشخصات</a>
+                            <ul class="list-square pr-8 space-y-1 mt-1">
+                                <li><a href="#section9.4.1" class="text-blue-600 hover:underline">9.4.1 سطح هشدار</a></li>
+                                <li><a href="#section9.4.2" class="text-blue-600 hover:underline">9.4.2 سطح اقدام</a></li>
+                                <li><a href="#section9.4.3" class="text-blue-600 hover:underline">9.4.3 موقعیت‌های ویژه سطح هشدار و اقدام</a></li>
+                                <li><a href="#section9.4.4" class="text-blue-600 hover:underline">9.4.4 مشخصات</a></li>
+                                <li><a href="#section9.4.5" class="text-blue-600 hover:underline">9.4.5 کنترل آب منبع</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card p-6 mb-8">
+            <h2 id="section1" class="text-2xl font-semibold text-blue-600 mb-4">1. مقدمه</h2>
+            <p class="mb-4 text-justify">
+                آب به طور گسترده‌ای به عنوان ماده اولیه، ماده غیرفعال، حامل دارویی و حلال در فرآیند تولید، فرمولاسیون و ساخت محصولات دارویی (اشکال دوزاژ)، مواد فعال دارویی (<span class="ltr-text">APIs</span>)، مواد واسطه <span class="ltr-text">API</span>، مقالات کامپندیالی و معرف‌های تحلیلی و همچنین در کاربردهای پاکسازی استفاده می‌شود.
+            </p>
+            <p class="mb-4 text-justify">
+                این یک فصل اطلاعاتی درباره موضوعات آب دارویی است و برخی از نگرانی‌های شیمیایی و میکروبیولوژیکی منحصر به فرد آب و تهیه و کاربردهای آن را شامل می‌شود. این فصل اطلاعاتی را در مورد ویژگی‌های کیفیت آب (که ممکن است در یک مونوگراف آب گنجانده شده یا نشده باشند) و تکنیک‌های فرآیندی که می‌توان برای بهبود کیفیت آب استفاده کرد، ارائه می‌دهد. همچنین به اعتبارسنجی سیستم آب می‌پردازد و شرحی از حداقل استانداردهای کیفیت آب را که باید هنگام انتخاب منبع آب در نظر گرفته شوند، از جمله نمونه‌برداری و کنترل سیستم، ارائه می‌دهد. همچنین بسیار مهم است که سیستم‌های آب در وضعیت کنترل شده عمل و نگهداری شوند تا اطمینان از پایداری عملیاتی و در نتیجه توانایی تأمین آبی مطابق با استانداردهای کیفیت آب تعیین‌شده فراهم شود.
+            </p>
+            <p class="mb-4 text-justify">
+                این فصل اطلاعاتی به قصد آموزش است، و کاربر باید به مقررات یا دستورالعمل‌های موجود که مسائل مربوط به روش‌های تولید خوب (<span class="ltr-text">GMP</span>) در ایالات متحده و بین‌الملل (شورای بین‌المللی هماهنگی الزامات فنی برای داروهای انسانی (<span class="ltr-text">ICH</span>) یا سازمان جهانی بهداشت (<span class="ltr-text">WHO</span>)) را پوشش می‌دهند، و همچنین راهنماهای عملیاتی و مهندسی و/یا سایر راهنماهای نظارتی برای آب (به عنوان مثال، از سازمان غذا و دارو (<span class="ltr-text">FDA</span>)، آژانس حفاظت از محیط زیست (<span class="ltr-text">EPA</span>) یا <span class="ltr-text">WHO</span>) نیز مراجعه کند. این فصل یک سند جامع در مورد آب‌های دارویی نیست و نباید چنین در نظر گرفته شود. این شامل اطلاعات اولیه و نکاتی است که باید برای پردازش، نگهداری، نظارت و استفاده از آب در نظر گرفته شود. اطمینان از موارد زیر مسئولیت کاربر است:
+            </p>
+            <ol class="list-decimal pr-8 space-y-1 mb-4 text-justify">
+                <li>انتخاب نوع و مشخصات آب برای استفاده مورد نظر آن مناسب است.</li>
+                <li>تولید و کیفیت آب مطابق با مقررات و دستورالعمل‌های دولتی مربوطه است.</li>
+                <li>مشخصات فارماکوپه‌ای برای انواع آب‌های مورد استفاده در مقالات مونوگراف شده برآورده می‌شود.</li>
+                <li>آب مورد استفاده در تهیه معرف‌ها برای تجزیه و تحلیل یا انجام آزمایش‌های لازم، الزامات <span class="ltr-text">USP</span> را برآورده می‌کند.</li>
+            </ol>
+            <p class="mb-4 text-justify">
+                کنترل و نظارت بر خلوص شیمیایی و اندوتوکسین آب‌ها برای رعایت الزامات مونوگراف‌های این مجموعه مهم است. ویژگی‌های ذکر شده در مونوگراف‌های <span class="ltr-text">USP</span> باید به عنوان "حداقل" الزامات در نظر گرفته شوند. الزامات سخت‌گیرانه‌تری ممکن است برای برخی کاربردها برای اطمینان از مناسب بودن برای مصارف خاص لازم باشد. راهنمایی‌های اولیه در مورد کاربردهای مناسب آب‌ها را می‌توان در مونوگراف‌ها یافت و در این فصل نیز به تفصیل مورد بحث قرار گرفته است. کنترل کیفیت میکروبیولوژیکی آب نیز برای بسیاری از کاربردهای آن مهم است. این ویژگی عمداً در بیشتر مونوگراف‌های آب مشخص نشده است. کنترل میکروبیولوژیکی در سراسر این فصل مورد بحث قرار گرفته است، اما به ویژه در بخش‌های <a href="#section4" class="text-blue-600 hover:underline">4. اعتبارسنجی و تأیید صلاحیت سیستم‌های تصفیه، نگهداری و توزیع آب</a>، <a href="#section5" class="text-blue-600 hover:underline">5. طراحی و بهره‌برداری از سیستم‌های آب خالص و آب برای تزریق</a>، <a href="#section6" class="text-blue-600 hover:underline">6. نمونه‌برداری</a>، <a href="#section8" class="text-blue-600 hover:underline">8. ارزیابی‌های میکروبی</a>، و <a href="#section9" class="text-blue-600 hover:underline">9. سطوح هشدار، اقدام و مشخصات</a>.
+            </p>
+            <p class="mb-4 text-justify">
+                این فصل حاوی مفاهیم مختلف شیمیایی، میکروبیولوژیکی، فرآیندی و مهندسی است که برای کاربران آب اهمیت دارد. اعتبارسنجی سیستم آب، سطوح کنترل فرآیند و مشخصات نیز در ادامه این فصل ارائه شده است.
+            </p>
+        </div>
+
+        <div class="card p-6 mb-8">
+            <h2 id="section2" class="text-2xl font-semibold text-blue-600 mb-4">2. ملاحظات آب منبع</h2>
+            <p class="mb-4 text-justify">
+                آب منبع، آبی است که وارد تاسیسات می‌شود. منشأ این آب می‌تواند از آب‌های سطحی طبیعی مانند رودخانه‌ها و مخازن، آب‌های چاه عمیق، آب‌های دریا یا ترکیبی از این‌ها باشد که به طور بالقوه شامل مکان‌های متعدد از هر نوع آب منبع است. بنابراین، آب منبع می‌تواند از این مبدأهای مختلف (عمومی یا خصوصی)، از منابع آب در محل شهرداری‌ها یا از طریق تحویل خارجی مانند کامیون تأمین شود. ممکن است آب منبع آشامیدنی و بی‌خطر نباشد. چنین آبی ممکن است به پیش‌تصفیه نیاز داشته باشد تا اطمینان حاصل شود که استانداردهای آب آشامیدنی را برآورده می‌کند. مسئولیت کاربران هر آب منبع است که اطمینان حاصل کنند آب مورد استفاده در تولید مواد دارویی (<span class="ltr-text">API</span>)، و همچنین آب برای تماس غیرمستقیم با محصول دارویی یا برای اهداف آب تغذیه سیستم تصفیه، حداقل استانداردهای آب آشامیدنی (قابل شرب) را برآورده کند، همانطور که توسط الزامات مقررات ملی آب آشامیدنی اولیه (<span class="ltr-text">NPDWR</span>) (<span class="ltr-text">40 CFR 141</span>) صادر شده توسط <span class="ltr-text">EPA</span> ایالات متحده یا مقررات آب آشامیدنی اتحادیه اروپا (<span class="ltr-text">EU</span>) یا ژاپن، یا دستورالعمل‌های آب آشامیدنی <span class="ltr-text">WHO</span> تعریف شده است (به <a href="#section3.3.1" class="text-blue-600 hover:underline">3.3.1 آب آشامیدنی</a> مراجعه کنید). این مقررات محدودیت‌هایی را برای انواع و مقادیر برخی از آلاینده‌های شیمیایی و میکروبیولوژیکی تعیین می‌کنند و اطمینان می‌دهند که آب حاوی مقادیر ایمن از گونه‌های شیمیایی و میکروبی خواهد بود.
+            </p>
+            <p class="mb-4 text-justify">
+                در مواردی که آب از شرکت‌های تأسیسات آب تنظیم‌شده تأمین می‌شود، نظارت کمتر سخت‌گیرانه ممکن است امکان‌پذیر باشد زیرا ویژگی‌ها ممکن است به طور منظم توسط تأمین‌کننده آزمایش و تضمین شوند (به <a href="#section9.4.5" class="text-blue-600 hover:underline">9.4.5 کنترل آب منبع</a> مراجعه کنید). آبی که از یک منبع غیرتنظیم‌شده برداشت می‌شود باید با فرکانس مناسبی که تغییرات محیطی و فصلی محلی و سایر نوسانات کیفیت را در نظر می‌گیرد، نمونه‌برداری و آزمایش شود. آزمایش باید انطباق با یکی از استانداردهای آب آشامیدنی مورد بحث در بالا را تضمین کند.
+            </p>
+            <p class="mb-4 text-justify">
+                استفاده از آبی که با یکی از این آب‌های آشامیدنی تعیین‌شده به عنوان آب منبع مطابقت دارد، به سیستم‌های پیش‌تصفیه آب اجازه می‌دهد تا تنها برای حذف مقادیر کمی از مواد شیمیایی که به طور بالقوه دشوار حذف می‌شوند، به چالش کشیده شوند. کنترل آلاینده‌های شیمیایی نامطلوب در مرحله آب منبع، نیاز به آزمایش خاص برای برخی از آن‌ها (به عنوان مثال، تری‌هالومتان‌ها و ناخالصی‌های عنصری (به <a href="232.html" class="text-blue-600 hover:underline" target="_blank">232</a> ناخالصی‌های عنصری—حدود) پس از تصفیه بیشتر آب، با فرض عدم فرصت برای آلودگی مجدد را از بین می‌برد.
+            </p>
+            <p class="mb-4 text-justify">
+                آب‌های منبع می‌توانند برای مصارف غیرتماسی با محصول مانند سیستم‌های خنک‌کننده غیرتماسی استفاده شوند. چنین آبی معمولاً نیازی به رعایت استانداردهای آب آشامیدنی ندارد. در چنین شرایطی، استانداردهای کیفی برای این آب هنگام استفاده در یک تأسیسات دارویی باید تابع استانداردهای کیفی باشد که توسط کاربر تعیین شده و برای آژانس‌های نظارتی قابل دفاع باشد.
+            </p>
+        </div>
+
+        <div class="card p-6 mb-8">
+            <h2 id="section3" class="text-2xl font-semibold text-blue-600 mb-4">3. آب‌های مورد استفاده برای اهداف تولید و آزمایش دارویی</h2>
+            <p class="mb-4 text-justify">
+                انواع مختلفی از آب برای مصارف دارویی استفاده می‌شود. چندین مورد در مونوگراف‌های <span class="ltr-text">USP</span> توصیف شده‌اند که کاربردها، روش‌های قابل قبول تهیه و ویژگی‌های کیفی را مشخص می‌کنند. این آب‌ها را می‌توان به دو نوع کلی تقسیم کرد: آب‌های حجمی، که معمولاً در محل استفاده تولید می‌شوند؛ و آب‌های استریل، که تولید، بسته‌بندی و استریل می‌شوند تا کیفیت میکروبیولوژیکی خود را در طول عمر بسته‌بندی شده حفظ کنند. چندین نوع تخصصی از آب‌های استریل وجود دارد که در کاربردهای تعیین‌شده، محدودیت‌های بسته‌بندی و سایر ویژگی‌های کیفی متفاوت هستند. آب‌های مونوگراف شده باید ویژگی‌های کیفی مشخص شده در مونوگراف‌های مربوطه را برآورده کنند، و هرگونه نکته‌ای که در آن مونوگراف‌ها ظاهر می‌شود باید در نظر گرفته شود و به آن پرداخته شود.
+            </p>
+            <p class="mb-4 text-justify">
+                به جز آب باکتریواستاتیک برای تزریق، آب‌های حجمی و استریل مونوگراف شده دارای بیانیه‌ای هستند که نشان می‌دهد هیچ ماده افزودنی یا هیچ عامل ضد میکروبی اضافه نشده است. در مورد عوامل ضد میکروبی، هدف اطمینان از این است که محصول آب استریل صرفاً بر اساس تهیه، بسته‌بندی و نگهداری آن استریل شده است. در مورد عبارت کلی‌تر "بدون مواد افزودنی"، این الزام به معنای "بدون مواد افزودنی که به اندازه کافی حذف نشده‌اند" است. دو مثال خاص این هدف را تأیید می‌کنند، اما مثال‌های زیادی وجود دارد. اول، استفاده از نرم‌کننده‌ها معمول است. نرم‌کننده، یون‌های کلسیم و منیزیم (که به عنوان یون‌های سختی نیز شناخته می‌شوند) را با سدیم جایگزین می‌کند، بنابراین از نظر فنی شما به ازای هر یون سخت، دو یون سدیم اضافه می‌کنید. هدف از جابجایی سدیم، محافظت از تجهیزات پایین‌دستی در برابر آب سخت است. یون‌های سدیم در نهایت به اندازه کافی حذف می‌شوند، و این زمانی اثبات می‌شود که نمونه آب در آزمایش <a href="645.html" class="text-blue-600 hover:underline" target="_blank">645</a> رسانایی آب موفق شود. مثال خاص دیگر استفاده از ازن به عنوان یک عامل ضدعفونی‌کننده است که برای کنترل میکروبی به مخزن ذخیره اضافه می‌شود. این می‌تواند یک ماده افزودنی در نظر گرفته شود، مگر اینکه ازن قبل از استفاده از بین برود، که معمولاً چنین است. مثال‌های قابل توجه دیگر شامل افزودن کلر برای از بین بردن باکتری‌ها در سیستم پیش‌تصفیه، استفاده از بی‌سولفیت برای کاهش شیمیایی کلر به کلرید و محافظت از تجهیزات پایین‌دستی، و استفاده از پوشش نیتروژن برای محافظت در برابر آلودگی اتمسفری است.
+            </p>
+            <p class="mb-4 text-justify">
+                انواع دیگری از آب نیز وجود دارند که مونوگراف ندارند. این‌ها آب‌هایی هستند که تنها برای اهداف توصیفی نام‌گذاری شده‌اند. بسیاری از این آب‌ها در روش‌های تحلیلی خاصی استفاده می‌شوند. عناوین توصیفی ممکن است ویژگی‌های کیفی یا روش‌های تهیه خاصی را نشان دهند، اما این آب‌های غیرمونوگراف شده لزوماً به شدت به روش‌های تهیه ذکر شده یا ضمنی یا ویژگی‌های مشخص شده پایبند نیستند. آب‌هایی که با وسایل دیگر تولید می‌شوند یا با سایر ویژگی‌های آزمایش کنترل می‌شوند، یا حتی یک آب مونوگراف شده، ممکن است به طور یکسان اهداف مورد نظر برای این آب‌ها را برآورده کنند. مسئولیت کاربر است که اطمینان حاصل کند چنین آب‌هایی، حتی اگر دقیقاً طبق آنچه گفته شده تولید و کنترل شوند، برای استفاده مورد نظرشان مناسب هستند. هر کجا که کلمه "آب" در این مجموعه بدون صفات توصیفی دیگر یا بندها استفاده می‌شود، منظور این است که آبی با خلوص کمتر از آب خالص <span class="ltr-text">USP</span> استفاده شود (به <a href="#section3.1.1" class="text-blue-600 hover:underline">3.1.1 آب خالص</a> مراجعه کنید). در ادامه، شرح مختصری از انواع مختلف آب‌های معمولاً مرتبط با کاربردهای دارویی و کاربردها یا ویژگی‌های مهم آن‌ها آورده شده است.
+            </p>
+            <p class="mb-4 text-justify">
+                شکل <span class="ltr-text">1</span> ممکن است در درک برخی از انواع مختلف آب‌ها، تهیه و کاربردهای آن‌ها مفید باشد.
+            </p>
+            <p class="mb-4 text-center">
+                <img src="placeholder-figure1.png" alt="Figure 1. Water for pharmaceutical purposes. aComplying with U.S. EPA NPDWR or the drinking water regulations of EU or Japan or WHO." class="mx-auto block" style="max-width: 100%;">
+                شکل <span class="ltr-text">1</span>. آب برای مصارف دارویی. الف) مطابق با مقررات آب آشامیدنی اولیه ملی <span class="ltr-text">EPA</span> ایالات متحده یا مقررات آب آشامیدنی اتحادیه اروپا یا ژاپن یا سازمان جهانی بهداشت.
+            </p>
+
+            <h3 id="section3.1" class="text-xl font-semibold text-blue-600 mb-2">3.1 آب‌های حجمی و بخار مونوگراف شده</h3>
+            <p class="mb-4 text-justify">
+                آب‌های زیر عموماً در حجم‌های زیاد با استفاده از یک سیستم آب با عملیات چند واحدی تولید می‌شوند. این آب‌ها معمولاً در یک سیستم لوله‌کشی برای استفاده در همان محل توزیع می‌شوند.
+            </p>
+
+            <h4 id="section3.1.1" class="text-lg font-semibold text-gray-700 mt-3 mb-2">3.1.1 آب خالص</h4>
+            <p class="mb-4 text-justify">
+                آب خالص (به مونوگراف <span class="ltr-text">USP</span> مراجعه کنید) به عنوان یک ماده جانبی در تولید فرآورده‌های غیرتزریقی و در سایر کاربردهای دارویی، مانند تمیز کردن اجزا و تجهیزات در تماس با محصولات غیرتزریقی استفاده می‌شود. مگر اینکه به طور دیگری مشخص شده باشد، آب خالص نیز به عنوان حداقل کیفیت آب برای تمام آزمایش‌ها و سنجش‌هایی که در آن‌ها "آب" نشان داده شده است، استفاده می‌شود (به اطلاعیه‌های عمومی، <span class="ltr-text">8.230.30</span> آب در یک رویه کامپندیالی مراجعه کنید). این امر صرف‌نظر از فونت و حروف بزرگ و کوچک مورد استفاده در املای آن اعمال می‌شود.
+            </p>
+            <p class="mb-4 text-justify">
+                حداقل کیفیت آب منبع برای تولید آب خالص، آب آشامیدنی است که ویژگی‌های آن توسط <span class="ltr-text">EPA</span> ایالات متحده، <span class="ltr-text">EU</span>، ژاپن یا <span class="ltr-text">WHO</span> تجویز شده است. این آب منبع را می‌توان با عملیات واحدی شامل دیونیزاسیون، تقطیر، تبادل یونی، اسمز معکوس، فیلتراسیون یا سایر روش‌های تصفیه مناسب، خالص کرد. آب خالص باید الزامات خلوص شیمیایی یونی و آلی را برآورده کند و باید از آلودگی میکروبی محافظت شود. سیستم‌های آب خالص باید اعتبارسنجی شوند تا به طور قابل اعتماد و مداوم آبی با کیفیت شیمیایی و میکروبیولوژیکی قابل قبول تولید و توزیع کنند.
+            </p>
+            <p class="mb-4 text-justify">
+                سیستم‌های آب خالص که در شرایط محیطی کار می‌کنند، به ویژه مستعد تشکیل بیوفیلم میکروارگانیسم‌ها هستند که می‌تواند منبع سطوح نامطلوبی از میکروارگانیسم‌های زنده یا اندوتوکسین‌ها در آب باشد. این سیستم‌های آب خالص محیطی نیاز به ضدعفونی مکرر و نظارت میکروبیولوژیکی دارند تا اطمینان حاصل شود که آب به نقاط استفاده رسیده و دارای کیفیت میکروبیولوژیکی مناسب است.
+            </p>
+            <p class="mb-4 text-justify">
+                مونوگراف آب خالص همچنین بسته‌بندی حجمی را برای استفاده تجاری در جاهای دیگر مجاز می‌داند. برخلاف آب خالص استریل، آب خالص بسته‌بندی شده نیازی به استریل بودن ندارد. از آنجا که پتانسیل آلودگی میکروبی و سایر تغییرات کیفی در این آب بسته‌بندی شده غیر استریل وجود دارد، این شکل از آب خالص باید به گونه‌ای تهیه و ذخیره شود که رشد میکروبی را محدود کند و/یا باید به موقع قبل از تکثیر میکروبی که آن را برای استفاده مورد نظر نامناسب می‌کند، استفاده شود. همچنین، بسته به مواد مورد استفاده برای بسته‌بندی، ترکیبات قابل استخراج می‌توانند از بسته‌بندی به داخل آب نشت کنند. اگرچه این ماده ملزم به رعایت همان استانداردهای خلوص شیمیایی آب حجمی است، اما مواد قابل استخراج از بسته‌بندی احتمالاً آب بسته‌بندی شده را از آب حجمی کمتر از نظر شیمیایی خالص می‌کنند. ماهیت این ناخالصی‌ها حتی ممکن است آب را برای برخی کاربردها انتخاب نامناسبی کند. اطمینان از مناسب بودن این ماده بسته‌بندی شده هنگام استفاده در کاربردهای تولیدی، بالینی یا تحلیلی که فرم خالص‌تر آب حجمی نشان داده شده است، مسئولیت کاربر است.
+            </p>
+
+            <h4 id="section3.1.2" class="text-lg font-semibold text-gray-700 mt-3 mb-2">3.1.2 آب برای تزریق</h4>
+            <p class="mb-4 text-justify">
+                آب برای تزریق (به مونوگراف <span class="ltr-text">USP</span> مراجعه کنید) به عنوان یک ماده جانبی در تولید فرآورده‌های تزریقی و سایر فرآورده‌هایی که محتوای اندوتوکسین محصول باید کنترل شود، و در سایر کاربردهای دارویی، مانند تمیز کردن برخی تجهیزات و اجزای در تماس با محصولات تزریقی استفاده می‌شود.
+            </p>
+            <p class="mb-4 text-justify">
+                حداقل کیفیت آب منبع برای تولید آب برای تزریق، آب آشامیدنی است که ویژگی‌های آن توسط <span class="ltr-text">EPA</span> ایالات متحده، <span class="ltr-text">EU</span>، ژاپن یا <span class="ltr-text">WHO</span> تجویز شده است. این آب منبع را می‌توان برای مناسب سازی برای مراحل نهایی تصفیه بعدی، مانند تقطیر (یا هر فرآیند معتبر دیگری که طبق مونوگراف استفاده می‌شود) تصفیه کرد. آب نهایی باید تمام الزامات شیمیایی مشخص شده در مونوگراف و همچنین یک مشخصه اضافی برای اندوتوکسین باکتریایی را برآورده کند.
+            </p>
+            <p class="mb-4 text-justify">
+                از آنجا که اندوتوکسین‌ها توسط میکروارگانیسم‌هایی تولید می‌شوند که مستعد سکونت در سیستم‌های آب هستند، تجهیزات و رویه‌های مورد استفاده توسط سیستم برای تصفیه، ذخیره و توزیع آب برای تزریق باید برای کنترل آلودگی میکروبی طراحی شوند و باید برای حذف اندوتوکسین‌های ورودی از آب منبع طراحی شوند. سیستم‌های آب برای تزریق باید اعتبارسنجی شوند تا به طور قابل اعتماد و مداوم این کیفیت از آب را تولید و توزیع کنند.
+            </p>
+            <p class="mb-4 text-justify">
+                مونوگراف آب برای تزریق همچنین بسته‌بندی حجمی برای استفاده تجاری را مجاز می‌داند. برخلاف آب استریل برای تزریق، آب بسته‌بندی شده برای تزریق نیازی به استریل بودن ندارد. با این حال، برای جلوگیری از تغییرات قابل توجه در محتوای میکروبی و اندوتوکسین آن در طول ذخیره‌سازی، این شکل از آب برای تزریق باید به گونه‌ای تهیه و ذخیره شود که ورود و رشد میکروبی را محدود کند و/یا باید به موقع قبل از تکثیر میکروبی که آن را برای استفاده مورد نظر نامناسب می‌کند، استفاده شود. همچنین، بسته به مواد مورد استفاده برای بسته‌بندی، ترکیبات قابل استخراج می‌توانند از بسته‌بندی به داخل آب نشت کنند. اگرچه این ماده ملزم به رعایت همان استانداردهای خلوص شیمیایی آب حجمی است، اما مواد قابل استخراج از بسته‌بندی احتمالاً آب بسته‌بندی شده را از آب حجمی کمتر از نظر شیمیایی خالص می‌کنند. ماهیت این ناخالصی‌ها حتی ممکن است آب را برای برخی کاربردها انتخاب نامناسبی کند. اطمینان از مناسب بودن این ماده بسته‌بندی شده هنگام استفاده در کاربردهای تولیدی، بالینی یا تحلیلی که فرم خالص‌تر آب حجمی نشان داده شده است، مسئولیت کاربر است.
+            </p>
+
+            <h4 id="section3.1.3" class="text-lg font-semibold text-gray-700 mt-3 mb-2">3.1.3 آب برای همودیالیز</h4>
+            <p class="mb-4 text-justify">
+                آب برای همودیالیز (به مونوگراف <span class="ltr-text">USP</span> مراجعه کنید) برای کاربردهای همودیالیز، عمدتاً رقیق‌سازی محلول‌های کنسانتره همودیالیز استفاده می‌شود. حداقل کیفیت آب منبع برای تولید آب برای همودیالیز، آب آشامیدنی است که ویژگی‌های آن توسط <span class="ltr-text">EPA</span> ایالات متحده، <span class="ltr-text">EU</span>، ژاپن یا <span class="ltr-text">WHO</span> تجویز شده است. آب برای همودیالیز برای کاهش اجزای شیمیایی و میکروبیولوژیکی بیشتر تصفیه شده و در محل تولید و استفاده می‌شود. این آب حاوی هیچ عامل ضد میکروبی افزودنی نیست و برای تزریق در نظر گرفته نشده است. آب برای همودیالیز باید تمام الزامات شیمیایی مشخص شده در مونوگراف و همچنین یک مشخصه اضافی برای اندوتوکسین باکتریایی را برآورده کند. ویژگی محدودیت‌های میکروبی برای این آب در بین مونوگراف‌های آب "حجمی" منحصر به فرد است، اما بر اساس کاربرد خاص این آب، که دارای الزامات محتوای میکروبی مربوط به استفاده ایمن آن است، توجیه می‌شود. ویژگی اندوتوکسین‌های باکتریایی نیز به همین ترتیب در سطحی مرتبط با استفاده ایمن آن تعیین شده است.
+            </p>
+
+            <h4 id="section3.1.4" class="text-lg font-semibold text-gray-700 mt-3 mb-2">3.1.4 بخار خالص</h4>
+            <p class="mb-4 text-justify">
+                بخار خالص (به مونوگراف <span class="ltr-text">USP</span> مراجعه کنید) گاهی اوقات به عنوان "بخار تمیز" نیز نامیده می‌شود. این بخار در مواردی استفاده می‌شود که بخار یا میعانات آن مستقیماً با مقالات رسمی یا سطوح در تماس با مقاله، مانند در طول تهیه، استریلیزاسیون یا تمیز کردن آن‌ها، در تماس باشند و هیچ مرحله پردازش بعدی برای حذف هرگونه باقیمانده ناخالصی استفاده نشود. این کاربردهای بخار خالص شامل، اما محدود به، فرآیندهای استریلیزاسیون با بار متخلخل، محصولات یا محلول‌های تمیزکننده حرارت داده شده با تزریق مستقیم بخار، یا رطوبت‌سازی فرآیندهایی که در آن از تزریق بخار برای کنترل رطوبت داخل مخازن پردازش که مقالات رسمی یا اشکال در حال فرآیند آن‌ها در معرض قرار می‌گیرند، استفاده می‌شود. هدف اصلی استفاده از این کیفیت بخار، اطمینان از این است که مقالات رسمی یا سطوح در تماس با مقاله که در معرض آن قرار می‌گیرند، توسط باقیمانده‌های داخل بخار آلوده نشوند.
+            </p>
+            <p class="mb-4 text-justify">
+                حداقل کیفیت آب منبع برای تولید بخار خالص، آب آشامیدنی است که ویژگی‌های آن توسط <span class="ltr-text">EPA</span> ایالات متحده، <span class="ltr-text">EU</span>، ژاپن یا <span class="ltr-text">WHO</span> تجویز شده است و به طور مناسب تصفیه شده است. سپس آب با حذف مه، تبخیر و تحت فشار توزیع می‌شود. منابع آلاینده‌های نامطلوب در بخار خالص می‌توانند از قطرات آب منبع محبوس شده، مواد افزودنی ضد خوردگی بخار، یا باقیمانده‌های سیستم تولید و توزیع بخار ناشی شوند. آزمایش‌های شیمیایی در مونوگراف بخار خالص باید بیشتر آلاینده‌هایی را که می‌توانند از این منابع ناشی شوند، شناسایی کنند. اگر یک مقاله رسمی در معرض بخار خالص قرار گیرد و برای استفاده تزریقی یا سایر کاربردهایی که محتوای پیروژنی باید کنترل شود، در نظر گرفته شده باشد، بخار خالص باید علاوه بر این، مشخصه <a href="85.html" class="text-blue-600 hover:underline" target="_blank">85</a> آزمایش اندوتوکسین باکتریایی را نیز برآورده کند.
+            </p>
+            <p class="mb-4 text-justify">
+                این ویژگی‌های خلوص در میعانات مقاله اندازه‌گیری می‌شوند، نه در خود مقاله. این البته اهمیت زیادی به تمیزی فرآیند تولید و جمع‌آوری میعانات بخار خالص می‌دهد، زیرا نباید به طور نامطلوبی بر کیفیت مایع میعان‌شده حاصله تأثیر بگذارد.
+            </p>
+            <p class="mb-4 text-justify">
+                سایر ویژگی‌های بخار که در مونوگراف ذکر نشده‌اند، به ویژه وجود حتی مقادیر کمی از گازهای غیرقابل میعان یا وجود حالت فوق‌اشباع یا خشک، ممکن است برای کاربردهایی مانند استریلیزاسیون نیز مهم باشند. آزاد شدن زیاد انرژی (گرمای نهان میعان) هنگامی که آب از حالت گازی به مایع تغییر می‌کند، کلید اثربخشی استریلیزاسیون بخار و به طور کلی، کارایی آن به عنوان یک عامل انتقال حرارت است. اگر این تغییر فاز (میعان) به دلیل اینکه بخار بسیار داغ و در حالت فوق‌اشباع و خشک پایدار است، اجازه وقوع نیابد، در این صورت سودمندی آن می‌تواند به طور جدی به خطر بیفتد. گازهای غیرقابل میعان در بخار تمایل به طبقه‌بندی یا جمع شدن در مناطق خاصی از محفظه استریلیزاسیون بخار یا بار آن دارند. این سطوح به این ترتیب حداقل تا حدی از پدیده میعان بخار عایق می‌شوند و از تجربه انرژی کامل شرایط استریلیزاسیون جلوگیری می‌کنند. بنابراین، کنترل این نوع ویژگی‌های بخار، علاوه بر خلوص شیمیایی آن، ممکن است برای برخی کاربردهای بخار خالص نیز مهم باشد. با این حال، از آنجا که این ویژگی‌های اضافی مخصوص استفاده هستند، در مونوگراف بخار خالص ذکر نشده‌اند.
+            </p>
+            <p class="mb-4 text-justify">
+                توجه داشته باشید که "بخار تأسیساتی" با خلوص کمتر ممکن است در کاربردهای زیر استفاده شود: <span class="ltr-text">1</span>) برای استریلیزاسیون با بخار بارهای غیرمتخلخل غیرتماسی با محصول، <span class="ltr-text">2</span>) برای تمیز کردن عمومی تجهیزات غیرتماسی با محصول، <span class="ltr-text">3</span>) به عنوان یک واسطه تبادل حرارت غیرتماسی با محصول، و <span class="ltr-text">4</span>) در تمام کاربردهای سازگار در تولید مواد شیمیایی دارویی حجمی و <span class="ltr-text">API</span>.
+            </p>
+            <p class="mb-4 text-justify">
+                در نهایت، از آنجا که بخار خالص برای میکروب‌ها کشنده است، نظارت بر کنترل میکروبی در یک سیستم بخار غیرضروری است، همانطور که تجزیه و تحلیل میکروبی میعانات بخار نیز غیرضروری است.
+            </p>
+
+            <h3 id="section3.2" class="text-xl font-semibold text-blue-600 mb-2">3.2 آب‌های استریل مونوگراف شده</h3>
+            <p class="mb-4 text-justify">
+                آب‌های مونوگراف شده زیر، اشکال بسته‌بندی شده آب خالص یا آب برای تزریق هستند که برای حفظ خواص میکروبیولوژیکی خود استریل شده‌اند. این آب‌ها ممکن است کاربردهای مورد نظر خاصی داشته باشند که توسط نامشان مشخص شده است، و همچنین ممکن است محدودیت‌هایی در پیکربندی بسته‌بندی مربوط به آن کاربردها داشته باشند. به طور کلی، این آب‌های استریل ممکن است در انواع کاربردها به جای اشکال حجمی آبی که از آن‌ها مشتق شده‌اند، استفاده شوند. با این حال، تفاوت قابل توجهی بین معیارهای پذیرش برای خلوص شیمیایی این آب‌های حجمی در مقابل آب‌های استریل وجود دارد. مشخصات آب‌های استریل با مشخصات آب‌های حجمی متفاوت است تا انواع گسترده‌ای از انواع بسته‌بندی، خواص، حجم‌ها و کاربردها را در بر گیرد. در نتیجه، مشخصات ناخالصی‌های معدنی و آلی برای آب‌های حجمی و بسته‌بندی شده معادل نیستند. مواد بسته‌بندی و بسته‌بندی‌های الاستومری منابع اصلی این ناخالصی‌ها هستند که تمایل دارند در طول عمر این مقالات بسته‌بندی شده افزایش یابند. بنابراین، هنگام استفاده از اشکال استریل آب در کاربردهای تولیدی، تحلیلی و تمیز کردن به جای آب‌های حجمی که این آب‌ها از آن‌ها مشتق شده‌اند، باید به مناسب بودن خلوص شیمیایی در زمان استفاده توجه کافی شود. اطمینان از مناسب بودن این آب‌های استریل بسته‌بندی شده در این کاربردها، مسئولیت کاربر است. با این وجود، برای کاربردهای مورد بحث در زیر برای هر آب استریل، خلوص و محدودیت‌های بسته‌بندی مربوطه آن‌ها عموماً آن‌ها را طبق تعریف مناسب می‌کند.
+            </p>
+
+            <h4 id="section3.2.1" class="text-lg font-semibold text-gray-700 mt-3 mb-2">3.2.1 آب خالص استریل</h4>
+            <p class="mb-4 text-justify">
+                آب خالص استریل (به مونوگراف <span class="ltr-text">USP</span> مراجعه کنید) آب خالصی است که بسته‌بندی و استریل شده است. از آن می‌توان در تهیه اشکال دوزاژ کامپندیال غیرتزریقی یا در کاربردهای تحلیلی که نیاز به آب خالص دارند، در مواردی که <span class="ltr-text">1</span>) دسترسی به سیستم آب خالص معتبر عملی نیست، <span class="ltr-text">2</span>) تنها مقدار نسبتاً کمی مورد نیاز است، <span class="ltr-text">3</span>) آب خالص استریل توسط مونوگراف یا رویه داروخانه خاصی لازم است، یا <span class="ltr-text">4</span>) آب خالص بسته‌بندی شده به طور مناسب برای کیفیت میکروبیولوژیکی مورد نظر کنترل نشده است، استفاده کرد.
+            </p>
+
+            <h4 id="section3.2.2" class="text-lg font-semibold text-gray-700 mt-3 mb-2">3.2.2 آب استریل برای تزریق</h4>
+            <p class="mb-4 text-justify">
+                آب استریل برای تزریق (به مونوگراف <span class="ltr-text">USP</span> مراجعه کنید) آب برای تزریق بسته‌بندی شده و استریل شده است. از آن برای تهیه ترکیبات نسخه‌ای و به عنوان رقیق‌کننده استریل برای محصولات تزریقی استفاده می‌شود. همچنین ممکن است برای سایر کاربردهایی که آب حجمی برای تزریق یا آب خالص نشان داده شده است، اما دسترسی به سیستم آب معتبر عملی نیست، یا جایی که تنها مقدار نسبتاً کمی مورد نیاز است، استفاده شود. آب استریل برای تزریق در ظروف تک دوز با حجم حداکثر <span class="ltr-text">1 L</span> بسته‌بندی می‌شود.
+            </p>
+
+            <h4 id="section3.2.3" class="text-lg font-semibold text-gray-700 mt-3 mb-2">3.2.3 آب باکتریواستاتیک برای تزریق</h4>
+            <p class="mb-4 text-justify">
+                آب باکتریواستاتیک برای تزریق (به مونوگراف <span class="ltr-text">USP</span> مراجعه کنید) آب برای تزریق است که بسته‌بندی و استریل شده و به آن یک یا چند نگهدارنده ضد میکروبی مناسب اضافه شده است. هدف آن استفاده به عنوان رقیق‌کننده در تهیه محصولات تزریقی، به ویژه برای محصولات چند دوز است که نیاز به برداشت‌های مکرر محتوا دارند. ممکن است در ظروف تک دوز یا چند دوز با حجم حداکثر <span class="ltr-text">30 ml</span> بسته‌بندی شود.
+            </p>
+
+            <h4 id="section3.2.4" class="text-lg font-semibold text-gray-700 mt-3 mb-2">3.2.4 آب استریل برای شستشو</h4>
+            <p class="mb-4 text-justify">
+                آب استریل برای شستشو (به مونوگراف <span class="ltr-text">USP</span> مراجعه کنید) آب برای تزریق است که در ظروف تک دوز بسته‌بندی و استریل شده و ممکن است حجم آن بزرگتر از <span class="ltr-text">1 L</span> باشد و امکان تحویل سریع محتویات آن را فراهم می‌کند. به دلیل کاربرد آن، آب استریل برای شستشو نیازی به رعایت <a href="788.html" class="text-blue-600 hover:underline" target="_blank">788</a> ذرات معلق در تزریقات ندارد. همچنین ممکن است در سایر کاربردهایی که مشخصات ذرات معلق ندارند، جایی که آب حجمی برای تزریق یا آب خالص نشان داده شده است، اما دسترسی به سیستم آب معتبر عملی نیست، یا جایی که مقادیر کمی بزرگتر از آنچه به عنوان آب استریل برای تزریق ارائه می‌شود، مورد نیاز است، استفاده شود.
+            </p>
+
+            <h4 id="section3.2.5" class="text-lg font-semibold text-gray-700 mt-3 mb-2">3.2.5 آب استریل برای استنشاق</h4>
+            <p class="mb-4 text-justify">
+                آب استریل برای استنشاق (به مونوگراف <span class="ltr-text">USP</span> مراجعه کنید) آب برای تزریق است که بسته‌بندی و استریل شده و برای استفاده در دستگاه‌های استنشاقی و در تهیه محلول‌های استنشاقی در نظر گرفته شده است. این مونوگراف هیچ الزامی برای رعایت <a href="788.html" class="text-blue-600 hover:underline" target="_blank">788</a> ندارد؛ دارای مشخصات کمتری سخت‌گیرانه برای اندوتوکسین باکتریایی نسبت به آب استریل برای تزریق است، و بنابراین برای کاربردهای تزریقی مناسب نیست.
+            </p>
+
+            <h3 id="section3.3" class="text-xl font-semibold text-blue-600 mb-2">3.3 آب‌های غیرمونوگراف شده</h3>
+            <p class="mb-4 text-justify">
+                علاوه بر آب‌های حجمی مونوگراف شده که در بالا توضیح داده شد، آب‌های غیرمونوگراف شده نیز می‌توانند در مراحل فرآیند دارویی مانند پاکسازی و مراحل سنتز، و همچنین به عنوان ماده اولیه برای تصفیه بیشتر یا اهداف آزمایش استفاده شوند. مگر اینکه در کامپندیم به طور دیگری مشخص شده باشد، حداقل کیفیت آب، آب خالص است. [نکته—اطلاعات این فصل بحث کاملی از تمام آب‌های غیرمونوگراف شده شناسایی شده در <span class="ltr-text">USP–NF</span> نیست.]
+            </p>
+
+            <h4 id="section3.3.1" class="text-lg font-semibold text-gray-700 mt-3 mb-2">3.3.1 آب آشامیدنی</h4>
+            <p class="mb-4 text-justify">
+                آب آشامیدنی را می‌توان به عنوان آب قابل شرب (به معنای نوشیدنی یا مناسب برای نوشیدن)، آب آشامیدنی اولیه ملی، آب آشامیدنی اولیه یا آب آشامیدنی <span class="ltr-text">EPA</span> نام برد. به جز مواردی که مشخصات آب آشامیدنی منفردی ذکر شده است (مانند <span class="ltr-text">NPDWR EPA</span> ایالات متحده، که در <span class="ltr-text">40 CFR Part 141</span> ذکر شده است)، این آب باید با ویژگی‌های کیفی <span class="ltr-text">NPDWR</span> یا مقررات آب آشامیدنی <span class="ltr-text">EU</span> یا ژاپن، یا دستورالعمل‌های <span class="ltr-text">WHO</span> برای کیفیت آب آشامیدنی مطابقت داشته باشد. آب آشامیدنی ممکن است از منابع مختلفی از جمله تأمین آب عمومی، تأمین آب خصوصی (به عنوان مثال، یک چاه)، یا ترکیبی از این منابع نشأت گیرد (به <a href="#section2" class="text-blue-600 hover:underline">2. ملاحظات آب منبع</a> مراجعه کنید).
+            </p>
+            <p class="mb-4 text-justify">
+                آب آشامیدنی ممکن است در مراحل اولیه تمیز کردن تجهیزات تولید دارویی و اجزای در تماس با محصول استفاده شود. آب آشامیدنی همچنین حداقل کیفیت آبی است که باید برای تهیه مواد رسمی و سایر مواد اولیه دارویی حجمی استفاده شود. در مواردی که با فرآیندها سازگار باشد، سطوح آلاینده مجاز در آب آشامیدنی عموماً برای استفاده در تهیه مواد رسمی و سایر مواد دارویی بی‌خطر تلقی می‌شود. با این حال، در مواردی که فرآوری مواد برای دستیابی به خلوص نهایی مورد نیاز آن‌ها ایجاب می‌کند، ممکن است برای این مراحل تولید، به کیفیت‌های بالاتر آب نیاز باشد، شاید حتی آبی به خلوص آب برای تزریق یا آب خالص. با این حال، چنین آب‌های با خلوص بالاتر، ممکن است تنها به ویژگی‌های انتخابی با خلوص بالاتر از آب آشامیدنی نیاز داشته باشند (به شکل <span class="ltr-text">2a</span> و شکل <span class="ltr-text">2b</span> مراجعه کنید). آب آشامیدنی، آب منبع یا تغذیه تجویز شده برای تولید آب‌های دارویی مونوگراف شده حجمی است. استفاده از مشخصات آب آشامیدنی، مجموعه‌ای منطقی از حداکثر سطوح مجاز آلاینده‌های شیمیایی و میکروبیولوژیکی را ایجاد می‌کند که سیستم تصفیه آب با آن‌ها به چالش کشیده خواهد شد. از آنجا که نوسانات فصلی در ویژگی‌های کیفی تأمین آب آشامیدنی می‌تواند رخ دهد، توجه کافی به کاربردهای آن مهم است. مراحل فرآوری در تولید آب‌های دارویی باید برای تطبیق با این تغییرپذیری طراحی شوند.
+            </p>
+            <p class="mb-4 text-center">
+                <img src="placeholder-figure2a.png" alt="Figure 2a. Selection of water for pharmaceutical purposes: APIs and dosage forms." class="mx-auto block" style="max-width: 100%;">
+                شکل <span class="ltr-text">2a</span>. انتخاب آب برای اهداف دارویی: <span class="ltr-text">API</span>ها و اشکال دوز.
+            </p>
+            <p class="mb-4 text-center">
+                <img src="placeholder-figure2b.png" alt="Figure 2b. Selection of water for pharmaceutical purposes: Analytical reagents." class="mx-auto block" style="max-width: 100%;">
+                شکل <span class="ltr-text">2b</span>. انتخاب آب برای اهداف دارویی: معرف‌های تحلیلی.
+            </p>
+
+            <h4 id="section3.3.2" class="text-lg font-semibold text-gray-700 mt-3 mb-2">3.3.2 سایر آب‌های غیرمونوگراف شده</h4>
+            <p class="mb-4 text-justify">
+                علاوه بر آب آشامیدنی، این مجموعه به آب‌هایی با سایر نامگذاری‌ها نیز می‌پردازد. این‌ها شامل آب‌هایی با سطوح کیفی مختلف برای کاربردهای خاص مانند، اما نه محدود به، اهداف تمیز کردن و آزمایش هستند.
+            </p>
+            <p class="mb-4 text-justify">
+                هم اطلاعیه‌های عمومی و الزامات (به اطلاعیه‌های عمومی، <span class="ltr-text">8.230.30</span> آب در یک رویه کامپندیالی) و معرف‌ها، شاخص‌ها و محلول‌ها به وضوح بیان می‌کنند که در مواردی که اصطلاح "آب" برای استفاده در تجزیه و تحلیل‌ها بدون صلاحیت گرامری یا مشخصات دیگر نشان داده شده است، کیفیت آب باید آب خالص باشد. با این حال، صلاحیت‌های متعددی از این دست وجود دارد. برخی از این صلاحیت‌ها شامل صفاتی است که روش‌های تهیه را توصیف می‌کنند، از مشخص کردن مرحله تصفیه اولیه تا مشخص کردن تصفیه اضافی. صلاحیت‌های دیگر نیاز به "نبود" ویژگی‌های خاصی را دارند که ممکن است در غیر این صورت در فرآیندهای تحلیلی تداخل ایجاد کنند. در بیشتر این موارد، "ویژگی‌های نبود" مورد نیاز به طور خاص آزمایش نمی‌شوند. گاهی اوقات، یک "فرآیند تصفیه" بیشتر مشخص می‌شود که ظاهراً به آب اجازه می‌دهد تا به طور مناسب این "ویژگی نبود" مورد نیاز را برآورده کند.
+            </p>
+            <p class="mb-4 text-justify">
+                با این حال، دستورالعمل‌های تهیه بسیاری از معرف‌ها از آزمایشگاه‌های مبتکر به مونوگراف اولیه معرفی شده برای یک مقاله <span class="ltr-text">USP–NF</span> یا فصل آزمایش عمومی منتقل شده‌اند. کیفیت آب معرف توصیف شده در این آزمایش‌ها ممکن است منعکس‌کننده نامگذاری کیفیت آب آزمایشگاه مبتکر باشد. این نامگذاری‌های خاص آب ممکن است بدون آگاهی مبتکر از الزام برای آب خالص در آزمایش‌های <span class="ltr-text">USP–NF</span> نشأت گرفته باشند. صرف‌نظر از دلیل اصلی ایجاد این آب‌های تحلیلی خاص متعدد، ممکن است ویژگی‌های این آب‌های خاص اکنون با مراحل تهیه اساسی و مشخصات فعلی آب خالص برآورده شوند. با این حال، در برخی موارد، برخی از مراحل پس از فرآوری ذکر شده هنوز برای دستیابی قابل اعتماد به ویژگی‌های مورد نیاز ضروری هستند.
+            </p>
+            <p class="mb-4 text-justify">
+                کاربران ملزم به استفاده از اشکال خاص و شاید به طور کهنه‌تولید شده از آب تحلیلی نیستند، در صورتی که جایگزین‌هایی با کیفیت برابر یا بهتر، در دسترس بودن یا عملکرد تحلیلی وجود داشته باشند. سازگاری و قابلیت اطمینان عملیات برای تولید این آب‌های تحلیلی جایگزین باید تأیید شود تا ویژگی‌های مطلوب تولید شوند. علاوه بر این، هر آب تحلیلی جایگزین باید توسط کاربر به صورت کاربرد به کاربرد ارزیابی شود تا از مناسب بودن آن اطمینان حاصل شود. در ادامه خلاصه‌ای از انواع مختلف آب‌های تحلیلی غیرمونوگراف شده که در <span class="ltr-text">USP–NF</span> ذکر شده‌اند، آورده شده است. این یک فهرست جامع نیست. موارد ذکر شده در زیر در چندین مکان استفاده می‌شوند. چندین آب تحلیلی غیرمونوگراف شده در زیر گنجانده نشده‌اند زیرا تنها در یک یا شاید دو مکان در این مجموعه یافت می‌شوند.
+            </p>
+            <p class="mb-4 text-justify">
+                توجه داشته باشید که نام بسیاری از آب‌های زیر به معنای سطح بسیار پایین ناخالصی شیمیایی است. به عنوان مثال، "آب دیونیزه" به معنای حذف تمام یون‌ها است. با این حال، در بیشتر موارد مورد بحث در زیر، قرار گرفتن آب در معرض هوا منجر به ورود دی‌اکسید کربن (<span class="ltr-text">CO2</span>) می‌شود که منجر به تشکیل بی‌کربنات و یون‌های هیدروژن می‌گردد. بنابراین، حذف یون‌ها را نمی‌توان به طور کامل برای اکثر کاربردهای تحلیلی حفظ کرد.
+            </p>
+
+            <h4 id="section3.3.3" class="text-lg font-semibold text-gray-700 mt-3 mb-2">3.3.3 آب فاقد آمونیاک</h4>
+            <p class="mb-4 text-justify">
+                از دیدگاه عملکردی، آب فاقد آمونیاک باید غلظت آمونیاک ناچیزی داشته باشد تا از تداخل در آزمایش‌های حساس به آمونیاک جلوگیری شود. با توجه به ماهیت کاربردهای این آب، آب خالص می‌تواند جایگزین مناسبی برای این کاربردها باشد.
+            </p>
+
+            <h4 id="section3.3.4" class="text-lg font-semibold text-gray-700 mt-3 mb-2">3.3.4 آب فاقد دی‌اکسید کربن</h4>
+            <p class="mb-4 text-justify">
+                آب فاقد دی‌اکسید کربن در بخش معرف‌ها، شاخص‌ها و محلول‌های <span class="ltr-text">USP–NF</span> به عنوان آب خالصی تعریف شده است که به مدت کمتر از <span class="ltr-text">5</span> دقیقه به شدت جوشانده شده، سپس خنک شده و از جذب دی‌اکسید کربن اتمسفری محافظت شده است. متناوباً، این می‌تواند آب خالصی باشد که مقاومت آن کمتر از <span class="ltr-text">18</span> مگا اهم-<span class="ltr-text">cm</span> در <span class="ltr-text">25°</span> نباشد.
+            </p>
+            <p class="mb-4 text-justify">
+                از آنجا که جذب دی‌اکسید کربن اتمسفری <span class="ltr-text">pH</span> آب‌های با خلوص بالا را کاهش می‌دهد، بیشتر کاربردهای آب فاقد دی‌اکسید کربن یا به عنوان حلال در تعیینات مربوط به <span class="ltr-text">pH</span> یا حساس به <span class="ltr-text">pH</span> یا به عنوان حلال در معرف‌ها یا تعیینات حساس به بی‌کربنات مرتبط است.
+            </p>
+            <p class="mb-4 text-justify">
+                اصطلاح "آب فاقد دی‌اکسید کربن" گاهی اوقات به اشتباه استفاده می‌شود. علاوه بر استفاده از آن برای آزمایش‌های <span class="ltr-text">pH</span> یا اسیدیته/قلیائیت، هدف از استفاده از این آب همیشه مشخص نیست. منظور می‌تواند استفاده از آبی باشد که بدون هوا (فاقد هوای حل شده) یا دیونیزه (فاقد یون‌های خارجی) بوده، یا حتی آب خالص با یک مرحله جوشاندن اضافی. اگرچه جوشاندن برای حذف دی‌اکسید کربن و سایر گازهای حل شده بسیار مؤثر است، اما این گازها به راحتی دوباره جذب می‌شوند مگر اینکه آب محافظت شود. حتی با محافظت، مانند استفاده از ظرف درپوش‌دار، جذب مجدد با گذشت زمان رخ خواهد داد زیرا هوا به راحتی از طریق درزگیرها عبور کرده و از اکثر مواد نفوذ می‌کند. دیونیزاسیون نیز یک فرآیند کارآمد برای حذف دی‌اکسید کربن حل شده است. دی‌اکسید کربن در آب بی‌کربنات یونی تشکیل می‌دهد و سپس توسط رزین‌های تبادل یونی حذف می‌شود. با این حال، همان مشکل جذب مجدد دی‌اکسید کربن پس از قرار گرفتن آب دیونیزه در معرض هوا رخ خواهد داد. همچنین، رویکرد دیونیزاسیون برای ایجاد آب فاقد دی‌اکسید کربن آب را بدون هوا نمی‌کند یا سایر گازهای حل شده مانند اکسیژن (<span class="ltr-text">O2</span>) را حذف نمی‌کند؛ فقط دی‌اکسید کربن و سایر یون‌ها را حذف می‌کند.
+            </p>
+            <p class="mb-4 text-justify">
+                بسته به کاربرد، آب خالص ممکن است الزامات مورد نیاز برای آب فاقد دی‌اکسید کربن را برآورده کند. این می‌تواند شامل آزمایش‌های <span class="ltr-text">pH</span> یا اسیدیته یا قلیائیت نیز باشد. <span class="ltr-text">pH</span> نمونه‌ای از آب دیونیزه خالص، طبق تعریف، <span class="ltr-text">7.0</span> است. هنگامی که همان نمونه در معرض شرایط اتمسفری محیطی معمول قرار می‌گیرد، نمونه آب دی‌اکسید کربن را جذب می‌کند و منجر به محدوده <span class="ltr-text">pH</span> تقریباً <span class="ltr-text">5.4–6.2</span> (<span class="ltr-text">[H+]</span> در محدوده <span class="ltr-text">4.0 × 10⁻⁶ M</span> تا <span class="ltr-text">6.3 × 10⁻⁷ M</span>) می‌شود. اسیدیته اضافی ناشی از جذب دی‌اکسید کربن ممکن است در مقایسه با ماده مورد تجزیه و تحلیل ناچیز باشد.
+            </p>
+
+            <h4 id="section3.3.5" class="text-lg font-semibold text-gray-700 mt-3 mb-2">3.3.5 آب مقطر</h4>
+            <p class="mb-4 text-justify">
+                آب مقطر با تبخیر آب آشامیدنی یا آبی با کیفیت بالاتر و میعان آن به حالت خالص‌تر تولید می‌شود. این آب عمدتاً به عنوان حلال برای تهیه معرف استفاده می‌شود، و همچنین در اجرای سایر جنبه‌های آزمایش‌ها، مانند شستشوی یک آنالیت، انتقال یک ماده آزمایشی به صورت دوغاب، به عنوان استاندارد کالیبراسیون یا بلانک تحلیلی، و برای تمیز کردن دستگاه آزمایش مشخص شده است. آب مقطر همچنین به عنوان آب شروع کننده برای ساخت آب با خلوص بالا ذکر شده است (به <a href="#section3.3.10" class="text-blue-600 hover:underline">3.3.10 آب با خلوص بالا</a> مراجعه کنید). از آنجا که هیچ یک از کاربردهای ذکر شده این آب به ویژگی خلوص خاصی نیاز ندارد که تنها با تقطیر قابل دستیابی باشد، آب مطابق با الزامات آب خالص که با روش‌های دیگر تصفیه یا آب برای تزریق به دست می‌آید، می‌تواند به همان اندازه مناسب باشد که آب مقطر مشخص شده است. مسئولیت کاربر است که مناسب بودن آب خالص یا آب برای تزریق را تأیید کند.
+            </p>
+
+            <h4 id="section3.3.6" class="text-lg font-semibold text-gray-700 mt-3 mb-2">3.3.6 آب تازه تقطیر شده</h4>
+            <p class="mb-4 text-justify">
+                آب تازه تقطیر شده یا "آب تازه تقطیر شده" به همان شیوه آب مقطر تولید می‌شود و باید بلافاصله پس از تولید آن استفاده شود. این امر به معنای نیاز به جلوگیری از آلودگی اندوتوکسین، و همچنین هر گونه آلودگی دیگر از هوا یا ظروف، است که ممکن است با نگهداری طولانی مدت ایجاد شود. آب تازه تقطیر شده برای تهیه محلول‌ها برای تزریقات حیوانی زیرپوستی و برای یک حلال معرف در آزمایش‌هایی که به نظر می‌رسد به خلوص آب بالایی نیاز ندارند که بتوان آن را به "تازه تقطیر شده" نسبت داد، استفاده می‌شود. در کاربرد حیوانی آزمایشی، اصطلاح "تازه تقطیر شده" و استفاده آزمایشی آن به خلوص شیمیایی، اندوتوکسین و میکروبیولوژیکی اشاره دارد که می‌تواند به همان اندازه توسط آب برای تزریق تأمین شود (اگرچه به این ویژگی‌های شیمیایی، اندوتوکسین یا میکروبی یا محافظت خاصی در برابر آلودگی مجدد اشاره نشده است). برای مصارف غیرحیوانی، آبی که الزامات آب خالص را برآورده می‌کند و با روش‌های دیگر تصفیه و/یا دوره‌های نگهداری به دست می‌آید، می‌تواند به همان اندازه مناسب باشد که "آب تازه تقطیر شده" یا آب تازه تقطیر شده مشخص شده است. مسئولیت کاربر است که مناسب بودن آب خالص یا آب برای تزریق را تأیید کند.
+            </p>
+
+            <h4 id="section3.3.7" class="text-lg font-semibold text-gray-700 mt-3 mb-2">3.3.7 آب دیونیزه</h4>
+            <p class="mb-4 text-justify">
+                آب دیونیزه را می‌توان با شروع از آب آشامیدنی یا آب خالص تولید کرد، بسته به مونوگراف یا روش‌های آزمایش تعریف شده در مجموعه‌ها. آب دیونیزه با یک فرآیند تبادل یونی تولید می‌شود که در آن کاتیون‌ها و آنیون‌ها با یون‌های <span class="ltr-text">H+</span> و <span class="ltr-text">OH−</span> با استفاده از رزین‌های تبادل یونی جایگزین می‌شوند. مشابه آب مقطر، آب دیونیزه عمدتاً به عنوان حلال برای تهیه معرف استفاده می‌شود، اما همچنین در اجرای سایر جنبه‌های آزمایش‌ها، مانند انتقال یک آنالیت در یک رویه آزمایش، به عنوان استاندارد کالیبراسیون یا بلانک تحلیلی، و برای تمیز کردن دستگاه آزمایش مشخص شده است. همچنین، هیچ یک از کاربردهای ذکر شده این آب به ویژگی خلوص مورد نیاز خاصی اشاره ندارد که تنها با دیونیزاسیون قابل دستیابی باشد. بنابراین، آبی که الزامات آب خالص را برآورده می‌کند و با روش‌های دیگر تصفیه به دست می‌آید، می‌تواند به همان اندازه مناسب باشد که آب دیونیزه مشخص شده است. مسئولیت کاربر است که مناسب بودن آب خالص را تأیید کند.
+            </p>
+
+            <h4 id="section3.3.8" class="text-lg font-semibold text-gray-700 mt-3 mb-2">3.3.8 آب مقطر دیونیزه</h4>
+            <p class="mb-4 text-justify">
+                آب مقطر دیونیزه با دیونیزه کردن (به <a href="#section3.3.7" class="text-blue-600 hover:underline">3.3.7 آب دیونیزه</a> مراجعه کنید) آب مقطر تولید می‌شود. این آب به عنوان یک معرف در یک آزمایش کروماتوگرافی مایع استفاده می‌شود که به سطح پایین یون‌ها یا ناخالصی‌های آلی نیاز دارد. به دلیل اهمیت این خلوص بالا، آبی که الزامات آب خالص را برآورده می‌کند ممکن است قابل قبول نباشد. آب با خلوص بالا (به <a href="#section3.3.10" class="text-blue-600 hover:underline">3.3.10 آب با خلوص بالا</a> مراجعه کنید) می‌تواند جایگزین مناسبی برای این آب باشد. مسئولیت کاربر است که مناسب بودن آب جایگزین مورد استفاده را تأیید کند.
+            </p>
+
+            <h4 id="section3.3.9" class="text-lg font-semibold text-gray-700 mt-3 mb-2">3.3.9 آب فیلتر شده</h4>
+            <p class="mb-4 text-justify">
+                آب فیلتر شده، آب خالصی است که برای حذف ذراتی که می‌توانند در تجزیه و تحلیل تداخل ایجاد کنند، فیلتر شده است. این آب گاهی اوقات مترادف با آب بدون ذرات و آب اولترافیلتر شده استفاده می‌شود و در برخی مونوگراف‌ها و فصول عمومی و همچنین در معرف‌ها، شاخص‌ها و محلول‌ها ذکر شده است. بسته به مکان مرجع آن در <span class="ltr-text">USP–NF</span>، به طور متفاوتی به عنوان آبی تعریف شده است که از فیلترهایی با درجه‌بندی <span class="ltr-text">1.2</span>، <span class="ltr-text">0.2</span> یا <span class="ltr-text">0.22 µm</span>، یا درجه‌بندی تخلخل نامشخص عبور داده شده است. حتی با وجود اینکه نام آب‌ها و درجه‌بندی فیلترهای مورد استفاده برای تولید این آب‌ها به طور ناسازگار تعریف شده‌اند، استفاده از آب خالص فیلتر شده با <span class="ltr-text">0.2-µm</span> یا <span class="ltr-text">0.22-µm</span> باید برای تمام کاربردهایی که آب بدون ذرات، آب فیلتر شده یا آب اولترافیلتر شده مشخص شده‌اند، به طور جهانی قابل قبول باشد.
+            </p>
+
+            <h4 id="section3.3.10" class="text-lg font-semibold text-gray-700 mt-3 mb-2">3.3.10 آب با خلوص بالا</h4>
+            <p class="mb-4 text-justify">
+                آب با خلوص بالا را می‌توان با دیونیزه کردن آب مقطر قبلی و سپس فیلتر کردن آن از طریق یک غشای دارای درجه‌بندی <span class="ltr-text">0.45-µm</span> تهیه کرد. این آب باید رسانایی درون خطی کمتر از <span class="ltr-text">0.15 µS/cm</span> (کمتر از <span class="ltr-text">6.67</span> مگا اهم-<span class="ltr-text">cm</span>) در <span class="ltr-text">25°</span> داشته باشد. اگر آب با این خلوص حتی به طور مختصر در حین استفاده یا برداشت از سیستم تصفیه خود با اتمسفر در تماس باشد، رسانایی آن بلافاصله تا حدود <span class="ltr-text">1.0 µS/cm</span> در <span class="ltr-text">25°</span> افزایش می‌یابد زیرا دی‌اکسید کربن اتمسفری در آب حل شده و با یون‌های هیدروژن و بی‌کربنات به تعادل می‌رسد. بنابراین، اگر استفاده تحلیلی ایجاب می‌کند که رسانایی آب تا حد امکان پایین بماند یا سطوح بی‌کربنات/دی‌اکسید کربن تا حد امکان پایین باشد، آب باید از قرار گرفتن در معرض اتمسفر محافظت شود. آب با خلوص بالا به عنوان یک معرف، به عنوان حلال برای تهیه معرف، و برای تمیز کردن دستگاه آزمایش در جایی که مشخصات آب کمتر سخت‌گیرانه قابل قبول نباشد، استفاده می‌شود. با این حال، اگر آب خالص در دسترس کاربر فیلتر شده و مشخصات رسانایی آب با خلوص بالا را برآورده می‌کند یا از آن فراتر می‌رود، می‌تواند به جای آب با خلوص بالا استفاده شود.
+            </p>
+
+            <h4 id="section3.3.11" class="text-lg font-semibold text-gray-700 mt-3 mb-2">3.3.11 آب بدون هوا</h4>
+            <p class="mb-4 text-justify">
+                آب بدون هوا یا "آب دی‌گازه شده" آب خالصی است که برای کاهش محتوای هوای حل شده با "وسایل مناسب" مانند جوشاندن، سونیکاسیون، و/یا هم زدن در حین اعمال خلاء جزئی، و سپس استفاده فوری یا محافظت در برابر جذب مجدد هوا، تصفیه شده است.
+            </p>
+
+            <h4 id="section3.3.12" class="text-lg font-semibold text-gray-700 mt-3 mb-2">3.3.12 آب فاقد اکسیژن</h4>
+            <p class="mb-4 text-justify">
+                آب فاقد اکسیژن، آب خالصی است که برای حذف یا کاهش اکسیژن حل شده تصفیه شده است. چنین تصفیه‌ای می‌تواند شامل بی‌هوا کردن با جوشاندن یا گاززدایی با یک گاز بی‌اثر مانند نیتروژن یا هلیوم، و سپس پوشش گاز بی‌اثر برای جلوگیری از جذب مجدد اکسیژن باشد. هر رویه‌ای که برای حذف اکسیژن استفاده می‌شود باید به عنوان تولید قابل اعتماد آبی که برای استفاده مناسب است، تأیید شود.
+            </p>
+
+            <h4 id="section3.3.13" class="text-lg font-semibold text-gray-700 mt-3 mb-2">3.3.13 آب برای آزمایش اندوتوکسین باکتریایی</h4>
+            <p class="mb-4 text-justify">
+                آب برای آزمایش اندوتوکسین باکتریایی (<span class="ltr-text">BET</span>) همچنین به عنوان آب معرف <span class="ltr-text">Limulus Amebocyte Lysate (LAL)</span> شناخته می‌شود. این نوع آب اغلب آب برای تزریق است که ممکن است استریل شده باشد. این آب عاری از سطحی از اندوتوکسین است که منجر به هر گونه واکنش قابل تشخیص یا تداخل با معرف <span class="ltr-text">LAL</span> مورد استفاده در <span class="ltr-text">BET</span> شود (به <a href="85.html" class="text-blue-600 hover:underline" target="_blank">85</a> مراجعه کنید).
+            </p>
+        </div>
+
+        <div class="card p-6 mb-8">
+            <h2 id="section4" class="text-2xl font-semibold text-blue-600 mb-4">4. اعتبارسنجی و تأیید صلاحیت سیستم‌های تصفیه، نگهداری و توزیع آب</h2>
+
+            <h3 id="section4.1" class="text-xl font-semibold text-blue-600 mb-2">4.1 الزام اعتبارسنجی</h3>
+            <p class="mb-4 text-justify">
+                برقراری قابلیت اطمینان سیستم‌های تصفیه، نگهداری و توزیع آب دارویی نیازمند اثبات کنترل فرآیند از طریق یک دوره نظارت و مشاهده مناسب است. آب نهایی معمولاً به طور مداوم تولید و استفاده می‌شود، در حالی که ویژگی‌های محصول و فرآیند ممکن است تنها به صورت دوره‌ای ارزیابی شوند. کیفیت آب نهایی حجمی را نمی‌توان تنها با آزمایش ویژگی‌های مونوگراف تعیین کرد. عملیات واحد در سیستم آب دارویی باید نشان دهد که از طریق نظارت بر پارامترهای فرآیند و کیفیت آب تحت کنترل هستند. ظهور استفاده از رسانایی و کربن آلی کل (<span class="ltr-text">TOC</span>) برای تعریف خلوص شیمیایی به کاربر اجازه می‌دهد تا خلوص شیمیایی آب و تغییرپذیری آن را به عنوان تابعی از نگهداری و بازسازی سیستم تصفیه روتین، به صورت کمی‌تری ارزیابی کند. فرآیندهای تصفیه باید کنترل ویژگی‌های میکروبی در کل سیستم را نیز نشان دهند. برخی از عملیات واحد که برای تصفیه شیمیایی مورد نیاز هستند ممکن است به طور قابل توجهی سطوح میکروبی و اندوتوکسین باکتریایی را افزایش دهند. این‌ها بعداً توسط عملیات واحد پایین‌دستی کنترل می‌شوند. دانش فرآیندهای سیستم تصفیه و اثربخشی اقدامات کنترلی برای اطمینان از قابل قبول بودن آب‌های دارویی برای استفاده مورد نیاز است.
+            </p>
+            <p class="mb-4 text-justify">
+                اثربخشی طراحی، بهره‌برداری، ضدعفونی و کنترل سیستم آب دارویی از طریق نظارت بر ویژگی‌های شیمیایی و میکروبی اثبات می‌شود. یک برنامه اعتبارسنجی سیستم آب معمولی شامل افزایش اولیه فرکانس نظارت بر پارامترهای فرآیند سیستم تصفیه و نمونه‌برداری و آزمایش نقاط اصلی فرآیند برای اثبات توانایی تولید آب قابل قبول و توصیف بهره‌برداری از سیستم است. این امر با یک رویکرد چرخه عمر از نگهداری و نظارت بر اعتبارسنجی دنبال می‌شود.
+            </p>
+
+            <h3 id="section4.2" class="text-xl font-semibold text-blue-600 mb-2">4.2 رویکرد اعتبارسنجی</h3>
+            <p class="mb-4 text-justify">
+                اعتبارسنجی، برنامه‌ای برای مستندسازی با سطح اطمینان بالا است که یک فرآیند خاص قادر به ارائه محصولی مطابق با مجموعه‌ای از ویژگی‌های کیفی تعیین‌شده است. یک برنامه اعتبارسنجی، طراحی، نصب، بهره‌برداری و عملکرد سیستم را تأیید صلاحیت و مستند می‌کند. نمایش گرافیکی یک چرخه عمر اعتبارسنجی سیستم آب معمولی در شکل <span class="ltr-text">3</span> نشان داده شده است.
+            </p>
+            <p class="mb-4 text-justify">
+                پروتکل اعتبارسنجی باید بر اساس مرزهای سیستم آب و کیفیت آب و پارامترهای فرآیند حیاتی مورد نیاز برای حفظ عملکرد ثابت باشد. مرز سیستم ممکن است در نقطه استفاده متوقف شود یا ممکن است شامل فرآیند انتقال آب باشد. اگر فرآیند انتقال از خروجی‌های سیستم توزیع به مکان‌های استفاده آب (معمولاً یا با شلنگ یا اتصالات تجهیزات لوله‌کشی شده) خارج از مرز سیستم آب تعریف شود، در این صورت این فرآیند انتقال هنوز باید اعتبارسنجی شود تا بر کیفیت آب هنگام تحویل برای استفاده تأثیر نامطلوبی نداشته باشد. از آنجا که نظارت میکروبیولوژیکی کنترل کیفیت (<span class="ltr-text">QC</span>) روتین برای همان فرآیند و اجزای انتقال (به عنوان مثال، شلنگ‌ها و مبدل‌های حرارتی) مانند استفاده روتین از آب انجام می‌شود (به <a href="#section6.1.2" class="text-blue-600 hover:underline">6.1.2 نمونه‌برداری کنترل کیفیت (QC)</a> مراجعه کنید)، منطقی است که این فرآیند انتقال آب را در اعتبارسنجی سیستم توزیع بگنجانیم.
+            </p>
+            <p class="mb-4 text-center">
+                <img src="placeholder-figure3.png" alt="Figure 3. Water system validation life cycle." class="mx-auto block" style="max-width: 100%;">
+                شکل <span class="ltr-text">3</span>. چرخه عمر اعتبارسنجی سیستم آب.
+            </p>
+
+            <h4 id="section4.2.1" class="text-lg font-semibold text-gray-700 mt-3 mb-2">4.2.1 عناصر اعتبارسنجی</h4>
+            <p class="mb-4 text-justify">
+                اعتبارسنجی از طریق یک فرآیند ساختاریافته و مستند انجام می‌شود. مراحل این فرآیند شامل تأیید صلاحیت طراحی (<span class="ltr-text">DQ</span>)، تأیید صلاحیت نصب (<span class="ltr-text">IQ</span>)، تأیید صلاحیت عملیاتی (<span class="ltr-text">OQ</span>)، تأیید صلاحیت عملکرد (<span class="ltr-text">PQ</span>) و نگهداری اعتبارسنجی است. این فرآیند در یک پروتکل اعتبارسنجی مستند می‌شود. عناصر ممکن است در پروتکل‌های جداگانه برای هر مرحله یا در تغییراتی از یک فرمت سند ترکیبی <span class="ltr-text">DQ/IQ/OQ/PQ</span> ادغام شوند. پروتکل‌ها اسناد کیفی هستند که به طور رسمی تأیید شده‌اند. آزمایش پذیرش کارخانه (<span class="ltr-text">FAT</span>)، آزمایش پذیرش سایت (<span class="ltr-text">SAT</span>) و آزمایش راه‌اندازی سیستم ممکن است آزمایش‌های تأیید صلاحیت برای <span class="ltr-text">IQ</span> یا <span class="ltr-text">OQ</span> را تکمیل کنند، به شرطی که به درستی مستندسازی و بررسی شوند؛ و اگر بتوان نشان داد که عملکرد سیستم تحت تأثیر حمل و نقل و نصب قرار نگرفته است.
+            </p>
+
+            <h4 id="section4.2.2" class="text-lg font-semibold text-gray-700 mt-3 mb-2">4.2.2 مشخصات الزامات کاربر و تأیید صلاحیت طراحی</h4>
+            <p class="mb-4 text-justify">
+                الزامات کاربر برای سیستم آب باید عناصر طراحی، بهره‌برداری، نگهداری و کیفیت مورد نیاز برای تولید نوع آب مورد نظر از آب منبع موجود، از جمله تغییرپذیری ویژگی‌های مورد انتظار آن را شناسایی کند. عناصر اساسی کیفیت باید در این مرحله در نظر گرفته شوند و هرگونه خطر <span class="ltr-text">GMP</span> تا سطح قابل قبول کاهش یابد.
+            </p>
+            <p class="mb-4 text-justify">
+                بازبینی مشخصات، طراحی سیستم، اجزا، عملکردها و بهره‌برداری باید برای اثبات انطباق سیستم با <span class="ltr-text">GMP</span>ها و تأیید اینکه طراحی الزامات کاربر را برآورده می‌کند، انجام شود. این بازبینی مستند ممکن است به عنوان بخشی از فرآیند طراحی کلی یا به عنوان یک <span class="ltr-text">DQ</span> جداگانه انجام شود.
+            </p>
+
+            <h4 id="section4.2.3" class="text-lg font-semibold text-gray-700 mt-3 mb-2">4.2.3 IQ (تأیید صلاحیت نصب)</h4>
+            <p class="mb-4 text-justify">
+                یک پروتکل <span class="ltr-text">IQ</span> برای یک سیستم آب تأیید می‌کند که سیستم به درستی نصب و مستند شده است. این ممکن است شامل تأیید اجزا، لوله‌کشی، نصب و کیفیت جوش باشد؛ مستندسازی مشخصات تمام اجزای سیستم موجود؛ بازرسی‌ها برای تأیید اینکه نقشه‌ها به طور دقیق پیکربندی نهایی سیستم آب را نشان می‌دهند و در صورت لزوم، آزمایش‌های ویژه برای تأیید اینکه نصب الزامات طراحی را برآورده می‌کند. علاوه بر این، سیستم آب برای آزمایش‌های عملیاتی آماده می‌شود، از جمله کالیبراسیون ابزارها، پیکربندی سطوح هشدار و تنظیم پارامترهای عملیاتی (به عنوان مثال، نرخ جریان، فشار).
+            </p>
+
+            <h4 id="section4.2.4" class="text-lg font-semibold text-gray-700 mt-3 mb-2">4.2.4 OQ (تأیید صلاحیت عملیاتی)</h4>
+            <p class="mb-4 text-justify">
+                فاز <span class="ltr-text">OQ</span> شامل آزمایش‌ها و بازرسی‌هایی برای تأیید اینکه تجهیزات، هشدارهای سیستم و کنترل‌ها به طور قابل اعتماد عمل می‌کنند و سطوح هشدار و اقدام مناسب تعیین شده‌اند (این فاز تأیید صلاحیت ممکن است با جنبه‌هایی از <span class="ltr-text">IQ</span> و <span class="ltr-text">PQ</span> همپوشانی داشته باشد). در طول این فاز اعتبارسنجی، آزمایش‌های خاصی برای آلارم‌ها، تأیید توالی‌های کنترل، بررسی‌های عملکردی تجهیزات، و تأیید دامنه‌های عملیاتی انجام می‌شود. <span class="ltr-text">SOP</span>ها برای تمام جنبه‌های بهره‌برداری از سیستم آب، نگهداری، استفاده از آب، نمونه‌برداری و آزمایش آب و غیره باید در جای خود باشند و آموزش اپراتور تکمیل شود. در پایان <span class="ltr-text">OQ</span>، سیستم آب نشان داده است که اجزا عملیاتی هستند و سیستم آب مناسبی را تولید می‌کند.
+            </p>
+
+            <h4 id="section4.2.5" class="text-lg font-semibold text-gray-700 mt-3 mb-2">4.2.5 PQ (تأیید صلاحیت عملکرد)</h4>
+            <p class="mb-4 text-justify">
+                مرحله <span class="ltr-text">PQ</span> آینده‌نگر دو جنبه از سیستم آب را در نظر می‌گیرد: پارامترهای حیاتی فرآیند و پارامترهای ویژگی حیاتی آب. این‌ها به صورت موازی با نظارت بر کیفیت آب و اثبات ویژگی‌های کیفی قابل قبول، در حالی که کنترل پارامترهای فرآیند را نشان می‌دهند، ارزیابی می‌شوند (به <a href="#section6.3" class="text-blue-600 hover:underline">6.3 برنامه‌های نمونه‌برداری اعتبارسنجی</a> مراجعه کنید). مرحله اولیه <span class="ltr-text">PQ</span> ممکن است منجر به پالایش پارامترهای فرآیند برای تولید کیفیت آب مناسب شود. این مرحله <span class="ltr-text">PQ</span> شامل افزایش فرکانس نظارت برای تقریباً <span class="ltr-text">2–4</span> هفته، یا زمان کافی برای تولید داده‌های کافی برای اثبات اینکه آب با ویژگی‌های کیفی مناسب تولید و توزیع می‌شود، است. یکی از دلایل این مدت زمان این است که بیوفیلم، منبع ارگانیسم‌های پلانکتونی در نمونه‌های آب، زمان می‌برد تا توسعه یابد و تعیین کند که آیا عملیات و فرآیندهای ضدعفونی واحد برای کنترل تکثیر میکروبی کافی هستند یا خیر. کفایت برنامه کنترل شیمیایی معمولاً در زمان کمتری نسبت به زمان لازم برای مشاهده کفایت کنترل میکروبی مشهود است. با این حال، تصفیه شیمیایی می‌تواند توسط کنترل میکروبی ضعیف به خطر بیفتد و برعکس، تا حد کمتری.
+            </p>
+            <p class="mb-4 text-justify">
+                هنگامی که سطح کنترل ویژگی‌های میکروبی و شیمیایی نشان داده شد، فاز بعدی <span class="ltr-text">PQ</span> ادامه فرکانس نظارت برای تقریباً <span class="ltr-text">2–4</span> هفته در سطح کمی کاهش یافته است که همچنان داده‌های کافی را در مورد عملکرد سیستم در حین استفاده از آب دارویی ارائه می‌دهد. آب ممکن است با ریسک برای تولید استفاده شود، و محصولات مرتبط ممکن است تنها پس از تعیین قابل قبول بودن ویژگی‌های کیفیت آب و تکمیل این فاز اعتبارسنجی، منتشر شوند. در پایان فاز دوم، داده‌ها باید به طور رسمی بررسی شوند و سیستم برای استفاده عملیاتی تأیید شود.
+            </p>
+
+            <h3 id="section4.3" class="text-xl font-semibold text-blue-600 mb-2">4.3 استفاده عملیاتی</h3>
+            <p class="mb-4 text-justify">
+                هنگامی که سیستم آب به مرحله استفاده عملیاتی رسید، نظارت بر ویژگی‌های کیفیت آب و پارامترهای فرآیند سیستم با یک فرکانس روتین (<a href="#section6.4" class="text-blue-600 hover:underline">6.4 برنامه‌های نمونه‌برداری روتین</a> را ببینید) انجام می‌شود تا اطمینان حاصل شود که در طول تغییرات طولانی‌مدت ناشی از نوسانات فصلی در کیفیت آب منبع، نگهداری واحد عملیاتی، فرآیندهای ضدعفونی سیستم، و سطوح هشدار و اقدام از قبل تعیین شده، در وضعیت کنترل باقی می‌مانند.
+            </p>
+            <p class="mb-4 text-justify">
+                سیستم آب باید به طور مداوم و با رویکرد چرخه عمر با استفاده از ابزارهای آنلاین یا نمونه‌ها برای آزمایش‌های آزمایشگاهی نظارت و ارزیابی شود. استفاده از ابزارهای آنلاین و فناوری اتوماسیون فرآیند، مانند رسانایی، <span class="ltr-text">TOC</span>، دما، نرخ جریان و فشار می‌تواند کنترل عملیاتی بهبودیافته ویژگی‌ها و پارامترها و برای انتشار فرآیند را تسهیل کند. مشاهده دستی پارامترهای عملیاتی و آزمایش‌های آزمایشگاهی نیز برای نظارت و ارزیابی روند مناسب و قابل قبول است.
+            </p>
+
+            <h4 id="section4.3.1" class="text-lg font-semibold text-gray-700 mt-3 mb-2">4.3.1 نظارت</h4>
+            <p class="mb-4 text-justify">
+                فرکانس نظارت روتین باید بر اساس حیاتی بودن آب نهایی، قابلیت‌های فرآیند، و توانایی حفظ روند کیفیت آب محصول باشد. نظارت ممکن است از برنامه نظارت اعتبارسنجی اولیه زمانی که داده‌های کافی برای پشتیبانی از تغییر وجود دارد، تنظیم شود (به <a href="#section6.4" class="text-blue-600 hover:underline">6.4 برنامه‌های نمونه‌برداری روتین</a> مراجعه کنید).
+            </p>
+
+            <h4 id="section4.3.2" class="text-lg font-semibold text-gray-700 mt-3 mb-2">4.3.2 نگهداری اعتبارسنجی</h4>
+            <p class="mb-4 text-justify">
+                حفظ وضعیت کنترل معتبر نیازمند یک رویکرد چرخه عمر است. پس از اتمام <span class="ltr-text">PQ</span> و انتشار سیستم آب برای استفاده، فعالیت‌ها و برنامه‌های مداوم باید برای حفظ وضعیت کنترل معتبر پس از اعتبارسنجی و راه‌اندازی سیستم وجود داشته باشد (به <a href="#section5.4" class="text-blue-600 hover:underline">5.4 بهره‌برداری، نگهداری و کنترل</a> مراجعه کنید). این شامل عملیات واحد، کالیبراسیون، نگهداری اصلاحی، نگهداری پیشگیرانه، رویه‌ها، دستورالعمل‌ها و نقشه‌ها، استانداردسازی ابزارها، روند پارامترهای فرآیند و ویژگی‌های کیفیت، کنترل تغییر، انحرافات، اقدامات اصلاحی و پیشگیرانه (<span class="ltr-text">CAPA</span>)، آموزش، حفظ سوابق، دفترچه‌ها و غیره است.
+            </p>
+
+            <h4 id="section4.3.3" class="text-lg font-semibold text-gray-700 mt-3 mb-2">4.3.3 کنترل تغییر</h4>
+            <p class="mb-4 text-justify">
+                شناسایی و کنترل تغییرات ایجاد شده در عملیات واحد و سایر اجزای سیستم، پارامترهای عملیاتی، ضدعفونی سیستم و فرآیندها یا رویه‌های آزمایشگاهی باید برقرار شود. همه تغییرات نیازمند پیگیری اعتبارسنجی نیستند، اما حتی تغییرات جزئی، مانند تغییرات الاستومر واشر، می‌توانند بر ویژگی‌های کیفیت تأثیر بگذارند. تأثیر تغییر بر پارامترهای فرآیند و ویژگی‌های کیفیت باید شناسایی، ارزیابی و اصلاح شود. این ممکن است منجر به یک فعالیت اعتبارسنجی انتخابی برای اثبات وضعیت کنترل مداوم سیستم و توانایی حفظ ویژگی‌های کیفیت آب شود.
+            </p>
+            <p class="mb-4 text-justify">
+                برخی از فعالیت‌های کالیبراسیون و نگهداری پیشگیرانه ممکن است کارهای روتین در نظر گرفته شوند اگر بر عملکرد سیستم یا کیفیت آب تأثیری نداشته باشند. جایگزینی اجزا باید با دقت ارزیابی شود. جایگزینی اجزا با استفاده از قطعات دقیقاً مشابه معمولاً بر عملکرد یا کنترل سیستم تأثیری نمی‌گذارد. جایگزینی اجزا با قطعاتی که مشخصات عملکردی مشابهی دارند را می‌توان با ریسک انجام داد، به شرطی که مشخصات حیاتی (به عنوان مثال، مواد ساخت، ابعاد، نرخ جریان، عوامل پاسخ) ارزیابی شده باشند و تفاوت‌ها قابل قبول تعیین شده و در سیستم کنترل تغییر مستند شده باشند.
+            </p>
+
+            <h4 id="section4.3.4" class="text-lg font-semibold text-gray-700 mt-3 mb-2">4.3.4 بازبینی دوره‌ای</h4>
+            <p class="mb-4 text-justify">
+                تأیید صلاحیت سیستم آب، تاریخچه نگهداری، سوابق کالیبراسیون، داده‌های کیفیت و فرآیند، مسائل مربوط به عملیات واحد و هرگونه تغییرپذیری فرآیند، کنترل تغییر و سایر داده‌های نگهداری اعتبارسنجی باید به صورت دوره‌ای ارزیابی شوند تا تأثیر بر وضعیت کنترل تعیین شود.
+            </p>
+            <p class="mb-4 text-justify">
+                این بازبینی ممکن است منجر به تنظیم فرآیندهای عملیاتی یا ضدعفونی، برنامه‌های کالیبراسیون یا نگهداری، یا برنامه‌های نظارت شود. این همچنین ممکن است منجر به آزمایش‌های اضافی یا تکرار برخی کارهای تأیید صلاحیت (بازبینی مجدد) شود.
+            </p>
+        </div>
+
+        <div class="card p-6 mb-8">
+            <h2 id="section5" class="text-2xl font-semibold text-blue-600 mb-4">5. طراحی و بهره‌برداری از سیستم‌های آب خالص و آب برای تزریق</h2>
+            <p class="mb-4 text-justify">
+                طراحی، نصب و بهره‌برداری از سیستم‌ها برای تولید آب خالص و آب برای تزریق شامل اجزای مشابه، تکنیک‌های کنترل و رویه‌های مشابه است. ویژگی‌های کیفی دو آب در انتظار بار زیستی آن‌ها، وجود الزام اندوتوکسین باکتریایی برای آب برای تزریق، و در روش‌های تهیه آن‌ها متفاوت است. شباهت‌ها در ویژگی‌های کیفی، زمینه مشترک قابل توجهی را در طراحی سیستم‌های آب برای برآورده کردن هر دو الزام فراهم می‌کند. تفاوت حیاتی در درجه کنترل سیستم و مراحل تصفیه نهایی مورد نیاز برای اطمینان از حذف باکتری‌ها و اندوتوکسین‌های باکتریایی و کاهش فرصت‌ها برای بازسازی بیوفیلم در آن مراحل تصفیه است که می‌تواند به منابع درجا باکتری و اندوتوکسین در آب نهایی تبدیل شود.
+            </p>
+            <p class="mb-4 text-justify">
+                بسیاری از جنبه‌های طراحی و بهره‌برداری سیستم به کنترل و حذف بیوفیلم مربوط می‌شود. عملیات واحد می‌تواند باعث وخامت ویژگی‌های میکروبی آب و تشکیل بیوفیلم بر روی سطوح عملیات واحد شود، حتی زمانی که به درستی نگهداری می‌شوند (به <a href="#section8.2" class="text-blue-600 hover:underline">8.2 تشکیل بیوفیلم در سیستم‌های آب</a> مراجعه کنید).
+            </p>
+            <p class="mb-4 text-justify">
+                تولید آب دارویی شامل عملیات واحد متوالی (مراحل پردازش) است که به ویژگی‌های کیفی آب خاصی می‌پردازد و از عملکرد مراحل تصفیه بعدی محافظت می‌کند. یک فرآیند ارزیابی معمولی برای انتخاب کیفیت آب مناسب برای یک منظور دارویی خاص در درختان تصمیم‌گیری شکل <span class="ltr-text">2a</span> و شکل <span class="ltr-text">2b</span> نشان داده شده است. این نمودار ممکن است برای کمک به تعریف الزامات برای کاربردهای خاص آب و در انتخاب عملیات واحد استفاده شود. عملیات واحد نهایی مورد استفاده برای تولید آب برای تزریق به تقطیر یا سایر فرآیندهایی که از نظر حذف ناخالصی‌های شیمیایی و همچنین میکروارگانیسم‌ها و اجزای آن‌ها، مانند اندوتوکسین‌های باکتریایی، معادل یا برتر از تقطیر هستند، محدود می‌شود. تقطیر همراه با فناوری‌های پیش‌تصفیه مناسب سابقه طولانی در عملکرد عموماً قابل اعتماد (اگرچه کاملاً بی‌عیب و نقص نیست) دارد و می‌تواند به عنوان یک عملیات واحد برای تولید آب برای تزریق اعتبارسنجی شود. ترکیب‌های دیگر فناوری‌های تصفیه نیز ممکن است در تولید آب برای تزریق مناسب باشند اگر بتوان از طریق اعتبارسنجی نشان داد که در حذف مواد شیمیایی و میکروارگانیسم‌ها به اندازه تقطیر مؤثر و قابل اعتماد هستند. توسعه طرح‌های جدید و مواد ساخت برای سایر فناوری‌ها (مانند اسمز معکوس، الکترودیونیزاسیون و اولترافیلتراسیون) که امکان بهره‌برداری متناوب یا مداوم در شرایط باکتری‌کش داغ را فراهم می‌کنند، نویدبخش استفاده معتبر در تولید آب برای تزریق است.
+            </p>
+
+            <h3 id="section5.1" class="text-xl font-semibold text-blue-600 mb-2">5.1 ملاحظات عملیات واحد</h3>
+            <p class="mb-4 text-justify">
+                برای دستیابی به ویژگی‌های کیفی آب‌های دارویی، عملیات چند واحدی مورد نیاز است. طراحی سیستم تصفیه آب باید جنبه‌های مختلفی از جمله کیفیت آب منبع، ضدعفونی، ویژگی‌های کیفیت آب دارویی، کاربردهای آب و برنامه‌های نگهداری را در نظر بگیرد. هر عملیات واحد ویژگی‌های تصفیه خاصی را مرتبط با پارامترهای شیمیایی و میکروبیولوژیکی ارائه می‌دهد.
+            </p>
+            <p class="mb-4 text-justify">
+                در ادامه شرح مختصری از عملیات واحد انتخاب شده و ملاحظات طراحی، نصب، بهره‌برداری، نگهداری و پارامترهای نظارت مرتبط با آن‌ها ارائه شده است. همه عملیات واحد مورد بحث قرار نگرفته‌اند، و تمام کاستی‌های بالقوه نیز مورد بررسی قرار نگرفته‌اند.
+            </p>
+
+            <h4 id="section5.1.1" class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.1.1 پیش‌فیلتراسیون</h4>
+            <p class="mb-4 text-justify">
+                هدف از پیش‌فیلتراسیون – که به آن فیلتراسیون اولیه، درشت، ذراتی یا عمقی نیز گفته می‌شود – حذف آلاینده‌های جامد از آب ورودی منبع و محافظت از اجزای پایین‌دستی سیستم در برابر ذراتی است که می‌توانند عملکرد تجهیزات را مختل کرده و عمر مفید آن‌ها را کوتاه کنند. این فناوری فیلتراسیون درشت در درجه اول از اثرات الک کردن برای به دام انداختن ذرات و عمق محیط فیلتراسیون با ظرفیت بالای "بار آلودگی" استفاده می‌کند. چنین واحدهای فیلتراسیون در طیف وسیعی از طرح‌ها و برای کاربردهای مختلف موجود هستند. کارایی و ظرفیت حذف به طور قابل توجهی متفاوت است، از فیلترهای بستر گرانول مانند چندرسانه‌ای یا شن برای سیستم‌های آب بزرگتر، تا کارتریج‌های عمقی برای سیستم‌های آب کوچکتر. پیکربندی واحد و سیستم از نظر نوع محیط فیلترکننده و مکان در فرآیند به طور گسترده‌ای متفاوت است. پیش‌فیلترهای گرانول یا کارتریجی اغلب در ابتدای سیستم تصفیه آب قبل از عملیات واحد طراحی شده برای حذف مواد ضدعفونی‌کننده آب منبع قرار می‌گیرند. فیلترهای درشت از نوع کارتریجی نیز ممکن است برای به دام انداختن ذرات ریز آزاد شده از بسترهای گرانول مانند کربن فعال و بسترهای دیونیزاسیون استفاده شوند. با این حال، این مکان‌ها نیاز به ارزیابی میکروبی دوره‌ای را از بین نمی‌برند.
+            </p>
+            <p class="mb-4 text-justify">
+                مسائل طراحی و عملیاتی که ممکن است بر عملکرد فیلترهای عمقی تأثیر بگذارد شامل کانال‌زنی محیط فیلترکننده، گرفتگی ناشی از لجن، رشد میکروبی، و از دست دادن محیط فیلترکننده در طول بک‌واشینگ نامناسب است. روش‌های کنترل شامل نظارت بر فشار و جریان در طول استفاده و بک‌واشینگ، ضدعفونی و جایگزینی محیط فیلترکننده است. یک نگرانی مهم در طراحی، اندازه فیلتر برای جلوگیری از کانال‌زنی یا از دست دادن محیط ناشی از نرخ‌های جریان آب نامناسب و همچنین اندازه مناسب برای به حداقل رساندن بک‌واشینگ بیش از حد مکرر یا غیرمکرر یا جایگزینی فیلتر کارتریجی است.
+            </p>
+
+            <h4 id="section5.1.2" class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.1.2 کربن فعال</h4>
+            <p class="mb-4 text-justify">
+                بسترهای کربن فعال، بسته به نوع و محل قرارگیری، برای جذب مواد آلی با وزن مولکولی پایین، اندوتوکسین‌های باکتریایی و مواد افزودنی اکسیدکننده مانند ترکیبات کلر و کلرامین، و حذف آن‌ها از آب استفاده می‌شوند. آن‌ها برای دستیابی به ویژگی‌های کیفی خاص و محافظت در برابر واکنش با عملیات واحد پایین‌دستی، سطوح فولاد ضد زنگ، رزین‌ها و غشاها استفاده می‌شوند.
+            </p>
+            <p class="mb-4 text-justify">
+                نگرانی‌های اصلی عملیاتی در مورد بسترهای کربن فعال شامل تمایل به حمایت از رشد باکتریایی، پتانسیل کانال‌زنی هیدرولیکی، ظرفیت جذب آلی و زمان تماس ناکافی است. کمبودهای عملیاتی ممکن است منجر به آزاد شدن باکتری‌ها، اندوتوکسین‌ها، مواد شیمیایی آلی و ذرات ریز کربن شود.
+            </p>
+            <p class="mb-4 text-justify">
+                اقدامات کنترلی ممکن است شامل نظارت بر نرخ جریان آب و فشارهای تفاضلی، ضدعفونی با آب گرم یا بخار، بک‌واشینگ، آزمایش ظرفیت جذب، و جایگزینی مکرر بستر کربن باشد. نظارت بر عملیات واحد بستر کربن ممکن است شامل بار میکروبی، کاهش مواد شیمیایی ضدعفونی‌کننده، و <span class="ltr-text">TOC</span> باشد اگر برای کاهش <span class="ltr-text">TOC</span> استفاده شود. استفاده از آب گرم یا بخار برای ضدعفونی بستر کربن در صورت وجود کانال‌زنی به جای نفوذ یکنواخت از طریق بستر، بی‌اثر است. کانال‌زنی را می‌توان از طریق طراحی و نرخ‌های جریان مناسب در طول ضدعفونی کاهش داد.
+            </p>
+            <p class="mb-4 text-justify">
+                توسعه بیوفیلم میکروبی بر روی سطح ذرات کربن گرانول می‌تواند باعث تجمع دانه‌های بستر مجاور شود. این ممکن است منجر به حذف بی‌اثر debris به دام افتاده و بیوفیلم شکننده در طول بک‌واشینگ، و ضدعفونی بی‌اثر شود.
+            </p>
+            <p class="mb-4 text-justify">
+                فناوری‌های جایگزین برای بسترهای کربن فعال می‌توانند برای جلوگیری از چالش‌های میکروبی آن‌ها استفاده شوند. این‌ها شامل مواد افزودنی شیمیایی خنثی‌کننده ضدعفونی‌کننده و نور فرابنفش (<span class="ltr-text">UV</span>) شدید برای حذف کلر، و رزین‌های دیونیزه کننده جذب‌کننده آلی قابل بازسازی برای حذف مواد آلی است.
+            </p>
+
+            <h4 id="section5.1.3" class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.1.3 افزودنی‌ها</h4>
+            <p class="mb-4 text-justify">
+                افزودنی‌های شیمیایی در سیستم‌های آب برای <span class="ltr-text">1</span>) کنترل میکروارگانیسم‌ها با استفاده از عوامل ضدعفونی‌کننده، مانند ترکیبات کلر و ازن؛ <span class="ltr-text">2</span>) افزایش حذف جامدات معلق با استفاده از عوامل فلوکولانت؛ <span class="ltr-text">3</span>) حذف ترکیبات کلر؛ <span class="ltr-text">4</span>) جلوگیری از رسوب بر روی غشاهای اسمز معکوس؛ و <span class="ltr-text">5</span>) تنظیم <span class="ltr-text">pH</span> برای حذف مؤثرتر ترکیبات کربنات و آمونیاک با اسمز معکوس استفاده می‌شوند. این افزودنی‌ها "مواد افزودنی" را تشکیل نمی‌دهند تا زمانی که یا با مراحل پردازش بعدی حذف شوند یا به هر طریق دیگری در آب نهایی وجود نداشته باشند. کنترل افزودنی‌ها برای اطمینان از غلظت مؤثر مداوم و نظارت بعدی برای اطمینان از حذف آن‌ها باید در سیستم طراحی شده و در برنامه نظارت گنجانده شود.
+            </p>
+
+            <h4 id="section5.1.4" class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.1.4 جاذب‌های آلی</h4>
+            <p class="mb-4 text-justify">
+                دستگاه‌های جذب‌کننده آلی از رزین‌های تبادل آنیونی ماکرومتخلخل و ضعیف بازی استفاده می‌کنند که قادر به حذف مواد آلی با بار منفی و اندوتوکسین‌ها از آب هستند. رزین‌های جذب‌کننده آلی را می‌توان با محلول‌های قلیایی نمکی میکروب‌کش مناسب بازسازی کرد. نگرانی‌های عملیاتی با ظرفیت جذب آلی؛ گرفتگی ذرات، شیمیایی و میکروبی سطح رزین واکنش‌پذیر؛ نرخ جریان؛ فرکانس بازسازی؛ و ریزش ذرات ریز از رزین‌های شکننده مرتبط است. اقدامات کنترلی شامل آزمایش <span class="ltr-text">TOC</span> ورودی و خروجی، بک‌واشینگ، نظارت بر عملکرد هیدرولیکی و استفاده از فیلترهای پایین‌دست برای حذف ذرات ریز رزین است.
+            </p>
+
+            <h4 id="section5.1.5" class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.1.5 نرم‌کننده‌ها</h4>
+            <p class="mb-4 text-justify">
+                نرم‌کننده‌های آب ممکن است در بالادست یا پایین‌دست واحدهای حذف مواد ضدعفونی‌کننده قرار گیرند. آن‌ها از رزین‌های تبادل کاتیونی مبتنی بر سدیم برای حذف یون‌های سختی آب، مانند کلسیم و منیزیم، استفاده می‌کنند که می‌توانند تجهیزات پردازش پایین‌دستی مانند غشاهای اسمز معکوس، دستگاه‌های دیونیزاسیون و واحدهای تقطیر را رسوب‌گذاری یا در عملکرد آن‌ها تداخل ایجاد کنند. نرم‌کننده‌های آب همچنین می‌توانند برای حذف سایر کاتیون‌ها با تمایل کمتر، مانند یون آمونیوم، که ممکن است از مواد ضدعفونی‌کننده کلرامین معمولاً در آب آشامیدنی آزاد شوند، استفاده شوند. اگر حذف آمونیوم یکی از اهداف آن باشد، نرم‌کننده باید در پایین‌دست عملیات حذف مواد ضدعفونی‌کننده قرار گیرد. بسترهای رزین نرم‌کننده آب با محلول غلیظ کلرید سدیم (آب نمک) بازسازی می‌شوند.
+            </p>
+            <p class="mb-4 text-justify">
+                نگرانی‌ها شامل تکثیر میکروارگانیسم‌ها، کانال‌زنی، نرخ جریان آب و زمان تماس مناسب، ظرفیت تبادل یونی، گرفتگی رزین آلی و ذرات، نشت مواد آلی از رزین‌های جدید، شکست دانه‌های رزین، تخریب رزین توسط آب بیش از حد کلرینه شده، و آلودگی از محلول آب نمک مورد استفاده برای بازسازی است.
+            </p>
+            <p class="mb-4 text-justify">
+                اقدامات کنترلی شامل گردش مجدد آب در دوره‌های کم مصرف آب؛ ضدعفونی دوره‌ای رزین و سیستم آب نمک؛ استفاده از دستگاه‌های کنترل میکروبی (مانند نور <span class="ltr-text">UV</span> و کلر)؛ قرار دادن واحد در بالادست مرحله حذف ضدعفونی‌کننده (اگر فقط برای نرم کردن استفاده می‌شود)؛ فرکانس بازسازی مناسب؛ نظارت شیمیایی پساب (مانند یون‌های سختی و احتمالاً آمونیوم)؛ و فیلتراسیون پایین‌دست برای حذف ذرات ریز رزین است. اگر از نرم‌کننده برای حذف آمونیوم از آب منبع حاوی کلرامین استفاده شود، در این صورت ظرفیت، زمان تماس، گرفتگی سطح رزین، <span class="ltr-text">pH</span> و فرکانس بازسازی بسیار مهم هستند.
+            </p>
+
+            <h4 id="section5.1.6" class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.1.6 دیونیزاسیون</h4>
+            <p class="mb-4 text-justify">
+                دیونیزاسیون (<span class="ltr-text">DI</span>) و الکترودیونیزاسیون پیوسته (<span class="ltr-text">CEDI</span>) روش‌های مؤثری برای بهبود ویژگی‌های کیفیت شیمیایی آب با حذف کاتیون‌ها و آنیون‌ها هستند. سیستم‌های <span class="ltr-text">DI</span> دارای رزین‌های شارژ شده هستند که نیاز به بازسازی دوره‌ای با اسید و باز دارند. به طور معمول، رزین‌های کاتیونی با اسید کلریدریک یا سولفوریک بازسازی می‌شوند که یون‌های مثبت جذب شده را با یون‌های هیدروژن جایگزین می‌کنند. رزین‌های آنیونی با هیدروکسید سدیم یا هیدروکسید پتاسیم بازسازی می‌شوند که یون‌های منفی جذب شده را با یون‌های هیدروکسید جایگزین می‌کنند. از آنجا که اندوتوکسین آزاد دارای بار منفی است، مقداری از اندوتوکسین توسط رزین آنیونی حذف می‌شود. سیستم را می‌توان به گونه‌ای طراحی کرد که رزین‌های کاتیونی و آنیونی در بسترهای جداگانه یا "دوگانه" باشند، یا می‌توانند با هم ترکیب شوند تا یک بستر "مخلوط" تشکیل دهند.
+            </p>
+            <p class="mb-4 text-justify">
+                سیستم <span class="ltr-text">CEDI</span> از ترکیبی از مواد تبادل یونی مانند رزین‌ها یا مواد پیوند خورده، غشاهای انتخابی نفوذپذیر، و بار الکتریکی استفاده می‌کند که جریان پیوسته (محصول و کنسانتره پسماند) و بازسازی پیوسته را فراهم می‌کند. آب هم به بخش رزین و هم به بخش پسماند (کنسانتره) وارد می‌شود. رزین به عنوان یک رسانا عمل می‌کند و پتانسیل الکتریکی را برای راندن کاتیون‌ها و آنیون‌های جذب شده از طریق رزین و غشاهای مناسب برای غلظت و حذف در جریان آب پسماند فعال می‌کند. همانطور که آب از رزین عبور می‌کند، دیونیزه شده و به آب محصول تبدیل می‌شود. پتانسیل الکتریکی همچنین آب را در بخش رزین (محصول) به یون‌های هیدروژن و هیدروکسید جدا می‌کند. این امر امکان بازسازی پیوسته رزین را بدون نیاز به مواد افزودنی بازسازی‌کننده فراهم می‌کند. با این حال، برخلاف دیونیزاسیون معمولی، واحدهای <span class="ltr-text">CEDI</span> باید با آبی که قبلاً تا حدی تصفیه شده است شروع کنند زیرا معمولاً نمی‌توانند به ویژگی رسانایی آب خالص دست یابند، زمانی که با بار یون سنگین‌تر آب منبع شروع می‌کنند.
+            </p>
+            <p class="mb-4 text-justify">
+                نگرانی‌ها برای همه اشکال واحدهای <span class="ltr-text">DI</span> شامل کنترل میکروبی و اندوتوکسین؛ تأثیر افزودنی‌های شیمیایی بر رزین‌ها و غشاها؛ و از دست دادن، تخریب و گرفتگی رزین است. مسائل مربوط به واحدهای <span class="ltr-text">DI</span> شامل فرکانس و کامل بودن بازسازی؛ کانال‌زنی ناشی از تجمع بیوفیلم ذرات رزین؛ نشت آلی از رزین‌های جدید؛ جداسازی کامل رزین برای بازسازی بستر مخلوط؛ و آلودگی هوای سیال‌سازی بستر (بسترهای مخلوط) است.
+            </p>
+            <p class="mb-4 text-justify">
+                اقدامات کنترلی ممکن است شامل حلقه‌های گردش مجدد پیوسته، کنترل میکروبی پساب با نور <span class="ltr-text">UV</span>، نظارت بر رسانایی، آزمایش رزین، فیلتراسیون میکروپور هوای سیال‌سازی بستر، نظارت میکروبی، بازسازی مکرر برای به حداقل رساندن و کنترل رشد میکروارگانیسم‌ها، اندازه‌گذاری تجهیزات برای جریان آب و زمان تماس مناسب، و استفاده از دماهای بالا باشد. لوله‌کشی توزیع‌کننده داخلی و بازسازی برای واحدهای بستر <span class="ltr-text">DI</span> باید به گونه‌ای پیکربندی شود که اطمینان حاصل شود مواد شیمیایی بازسازی به تمام سطوح داخلی بستر و لوله‌کشی و رزین‌ها تماس پیدا می‌کنند.
+            </p>
+            <p class="mb-4 text-justify">
+                کانیسترهای قابل شارژ می‌توانند منبع آلودگی باشند و باید با دقت نظارت شوند. دانش کامل از استفاده قبلی رزین، حداقل زمان نگهداری بین بازسازی و استفاده، و روش‌های ضدعفونی مناسب، عوامل حیاتی برای اطمینان از عملکرد صحیح هستند.
+            </p>
+
+            <h4 id="section5.1.7" class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.1.7 اسمز معکوس</h4>
+            <p class="mb-4 text-justify">
+                واحدهای اسمز معکوس (<span class="ltr-text">RO</span>) از غشاهای نیمه‌تراوا استفاده می‌کنند. "منافذ" غشاهای <span class="ltr-text">RO</span> فضاهای بین‌قطعه‌ای در میان مولکول‌های پلیمر هستند. آن‌ها به اندازه کافی بزرگ هستند که مولکول‌های آب از آن‌ها عبور کنند، اما عبور یون‌های شیمیایی هیدراته، ترکیبات آلی و میکروارگانیسم‌ها را محدود می‌کنند. غشاهای <span class="ltr-text">RO</span> می‌توانند بهبود کیفیت شیمیایی، میکروبی و اندوتوکسین را به دست آورند. عوامل بسیاری، از جمله <span class="ltr-text">pH</span>، دما، سختی آب منبع، نرخ جریان نفوذی و دفعی، و فشار تفاضلی در سراسر غشا، بر انتخاب‌پذیری و اثربخشی این نفوذ تأثیر می‌گذارند. جریان‌های فرآیند شامل آب تأمین، آب محصول (نفوذی) و آب پسماند (دفعی) هستند. بسته به آب منبع، تغییرات پیش‌تصفیه و پیکربندی سیستم و مواد افزودنی شیمیایی ممکن است برای دستیابی به عملکرد و قابلیت اطمینان مطلوب ضروری باشد. برای اکثر آب‌های منبع، یک مرحله فیلتراسیون <span class="ltr-text">RO</span> معمولاً برای برآورده کردن مشخصات رسانایی آب خالص کافی نیست. عبور دوم این آب نفوذی از طریق یک مرحله <span class="ltr-text">RO</span> دیگر معمولاً خلوص نفوذی لازم را به دست می‌آورد اگر عوامل دیگری مانند <span class="ltr-text">pH</span> و دما به طور مناسب تنظیم شده باشند و آمونیاک از آب منبعی که قبلاً با کلرامین‌ها تصفیه شده است، حذف شود.
+            </p>
+            <p class="mb-4 text-justify">
+                نگرانی‌های مرتبط با طراحی و بهره‌برداری از واحدهای <span class="ltr-text">RO</span> شامل مواد غشایی حساس به عوامل ضدعفونی‌کننده و گرفتگی غشا با ذرات، مواد شیمیایی و میکروبی؛ یکپارچگی غشا و آب‌بندی؛ و عبور گازهای حل شده، مانند دی‌اکسید کربن و آمونیاک است. خرابی یکپارچگی غشا یا آب‌بندی منجر به آلودگی آب محصول خواهد شد. روش‌های کنترل شامل پیش‌تصفیه مناسب جریان آب ورودی؛ انتخاب مواد غشایی مناسب؛ طراحی غشا و تحمل حرارتی؛ ضدعفونی دوره‌ای؛ و نظارت بر فشارهای تفاضلی، رسانایی، سطوح میکروبی و <span class="ltr-text">TOC</span> است.
+            </p>
+            <p class="mb-4 text-justify">
+                توسعه واحدهای <span class="ltr-text">RO</span> که می‌توانند دماهای آب ضدعفونی‌کننده را تحمل کنند و همچنین به طور کارآمد و مداوم در دماهای بالا عمل کنند، به توانایی کنترل میکروبی آن‌ها و جلوگیری از بیوفولینگ کمک زیادی کرده است. واحدهای <span class="ltr-text">RO</span> را می‌توان به تنهایی یا در ترکیب با واحدهای <span class="ltr-text">DI</span> و <span class="ltr-text">CEDI</span>، و همچنین اولترافیلتراسیون، برای بهبود عملکرد و کیفیت استفاده کرد.
+            </p>
+
+            <h4 id="section5.1.8" class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.1.8 اولترافیلتراسیون</h4>
+            <p class="mb-4 text-justify">
+                اولترافیلتراسیون فناوری‌ای است که اغلب در انتهای سیستم تصفیه آب دارویی برای حذف اندوتوکسین‌ها از جریان آب استفاده می‌شود، اگرچه استفاده در بالادست نیز ممکن است. اولترافیلتراسیون می‌تواند از غشاهای نیمه‌تراوا استفاده کند، اما برخلاف <span class="ltr-text">RO</span>، این‌ها معمولاً از غشاهای پلی‌سولفون با "منافذ" بین‌قطعه‌ای استفاده می‌کنند که به طور عمدی بزرگتر شده‌اند. غشاهایی با "حد برش" وزن مولکولی متفاوت می‌توانند برای رد مولکول‌هایی با وزن مولکولی بالاتر از این درجه‌بندی‌ها ایجاد شوند.
+            </p>
+            <p class="mb-4 text-justify">
+                اولترافیلترهای سرامیکی یک فناوری غربالگری مولکولی دیگر هستند. اولترافیلترهای سرامیکی خودنگهدار و فوق‌العاده بادوام هستند؛ آن‌ها را می‌توان بک‌واش کرد، با مواد شیمیایی تمیز کرد و با بخار استریل کرد. با این حال، ممکن است به فشارهای عملیاتی بالاتری نسبت به اولترافیلترهای غشایی نیاز داشته باشند.
+            </p>
+            <p class="mb-4 text-justify">
+                تمام دستگاه‌های اولترافیلتراسیون عمدتاً بر اساس اصل غربالگری مولکولی کار می‌کنند. اولترافیلترهایی با درجه‌بندی حد برش وزن مولکولی در محدوده <span class="ltr-text">10,000–20,000 Da</span> معمولاً در سیستم‌های آب برای حذف اندوتوکسین‌ها استفاده می‌شوند. این فناوری ممکن است به عنوان یک مرحله تصفیه میانی یا نهایی مناسب باشد. مانند <span class="ltr-text">RO</span>، عملکرد موفقیت‌آمیز به پیش‌تصفیه آب توسط عملیات واحد بالادست بستگی دارد.
+            </p>
+            <p class="mb-4 text-justify">
+                مسائل مربوط به اولترافیلترها شامل سازگاری مواد غشایی با حرارت و عوامل ضدعفونی‌کننده، یکپارچگی غشا، گرفتگی توسط ذرات و میکروارگانیسم‌ها، و یکپارچگی آب‌بندی است. اقدامات کنترلی شامل ترکیب غشای فیلتر، ضدعفونی، طراحی جریان (نقطه کور در مقابل مماسی)، جایگزینی کارتریج، دمای آب تغذیه بالا، و نظارت بر <span class="ltr-text">TOC</span> و فشار تفاضلی است.
+            </p>
+
+            <h4 id="section5.1.9" class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.1.9 فیلتراسیون نگهدارنده میکروبی</h4>
+            <p class="mb-4 text-justify">
+                فیلترهای غشایی نگهدارنده میکروبی دارای "اندازه منافذ" مؤثر بزرگتری نسبت به اولترافیلترها هستند و هدف آن‌ها جلوگیری از عبور میکروارگانیسم‌ها و ذرات با اندازه مشابه بدون محدود کردن بیش از حد جریان است. این نوع فیلتراسیون به طور گسترده‌ای در سیستم‌های آب برای فیلتر کردن باکتری‌ها از آب و گازهای فشرده و همچنین برای فیلترهای تهویه بر روی مخازن و دستگاه‌های تقطیر و سایر عملیات واحد استفاده می‌شود.
+            </p>
+            <p class="mb-4 text-justify">
+                در سیستم‌های آب، ویژگی‌های نگهدارنده میکروبی یک فیلتر پدیده‌های متفاوتی نسبت به سایر کاربردهای فیلتراسیون آسپتیک نشان می‌دهد.
+            </p>
+            <p class="mb-4 text-justify">
+                عوامل زیر برای ایجاد پدیده‌های نگهداری میکروارگانیسم‌های سیستم آب با یکدیگر تعامل دارند: تغییرپذیری در محدوده و میانگین اندازه منافذ ایجاد شده توسط فرآیندهای مختلف ساخت غشا؛ تغییرپذیری شیمی سطح و ساختار سه‌بعدی مرتبط با پلیمرهای مختلف مورد استفاده در این ماتریس‌های فیلتر؛ و اندازه و خواص سطحی میکروارگانیسم مورد نظر برای نگهداری توسط فیلترها. در برخی شرایط، ظهور میکروارگانیسم‌های سیستم آب در سمت پایین‌دستی برخی از فیلترهای دارای درجه‌بندی <span class="ltr-text">0.2</span> تا <span class="ltr-text">0.22 µm</span> پس از یک دوره استفاده (چند روز تا چند هفته) به نظر می‌رسد این ایده را تأیید می‌کند که میکروارگانیسم‌های موجود در آب می‌توانند از فیلترهای دارای درجه‌بندی <span class="ltr-text">0.2</span> تا <span class="ltr-text">0.22 µm</span> عبور کنند. مشخص نیست که آیا این ظهور پایین‌دستی ناشی از فراتر رفتن از قابلیت‌های نگهداری فیلترها به دلیل سطوح بالای بار زیستی پیش‌فیلتراسیون میکروارگانیسم‌های موجود در آب و زمان‌های فیلتراسیون طولانی است. این شرایط می‌تواند منجر به پدیده "گذر" ناشی از سلول‌های کوچک یا "چسبندگی" کمتر سلول، یا شاید پدیده "رشد از طریق" شود که در آن سلول‌ها به طور فرضی از طریق منافذ به سمت پایین‌دست تکثیر می‌شوند. مکانیسم نفوذ هر چه باشد، غشاهای دارای درجه‌بندی <span class="ltr-text">0.2</span> تا <span class="ltr-text">0.22 µm</span> ممکن است بهترین انتخاب برای برخی کاربردهای سیستم آب نباشند (به <a href="1211.html" class="text-blue-600 hover:underline" target="_blank">1211</a> تضمین استریلیته مراجعه کنید).
+            </p>
+            <p class="mb-4 text-justify">
+                با این وجود، موفقیت در نگهداری میکروبی در سیستم‌های آب با استفاده از فیلترهای دارای درجه‌بندی <span class="ltr-text">0.2</span> یا <span class="ltr-text">0.1 µm</span> گزارش شده است. توافق عمومی وجود دارد که برای یک تولیدکننده مشخص، فیلترهای دارای درجه‌بندی <span class="ltr-text">0.1 µm</span> آن‌ها سفت‌تر از فیلترهای دارای درجه‌بندی <span class="ltr-text">0.2</span> تا <span class="ltr-text">0.22 µm</span> آن‌ها هستند. با این حال، فیلترهای با درجه‌بندی مشابه از تولیدکنندگان مختلف ممکن است عملکرد معادل در کاربردهای فیلتراسیون آب نداشته باشند به دلیل مواد فیلتر متفاوت، فرآیندهای ساخت متفاوت، و فرآیندهای چالش نگهداری میکروبی غیر استاندارد که در حال حاضر برای تعریف درجه‌بندی فیلتر <span class="ltr-text">0.1 µm</span> استفاده می‌شوند. لازم به ذکر است که فیلترهای با درجه‌بندی <span class="ltr-text">0.1 µm</span> ممکن است منجر به نرخ جریان کمتری در مقایسه با فیلترهای <span class="ltr-text">0.2</span> تا <span class="ltr-text">0.22 µm</span> شوند، بنابراین هر فیلتری که برای یک کاربرد سیستم آب انتخاب شود، کاربر باید تأیید کند که آن‌ها برای کاربرد مورد نظر، دوره استفاده، و فرآیند استفاده، از جمله نرخ جریان، مناسب هستند.
+            </p>
+            <p class="mb-4 text-justify">
+                برای فیلتراسیون‌های گاز نگهدارنده میکروبی، همان پدیده‌های غربالگری و جذب نگهدارنده مانند فیلتراسیون مایع در کار هستند، اما پدیده جذب با تعاملات الکترواستاتیک اضافی بین ذرات و ماتریس فیلتر افزایش می‌یابد. این تعاملات الکترواستاتیک به قدری قوی هستند که نگهداری ذرات برای یک درجه‌بندی فیلتر مشخص در فیلتراسیون گاز به طور قابل توجهی کارآمدتر از فیلتراسیون آب یا محلول محصول است. این تعاملات جذب اضافی باعث می‌شود فیلترهای دارای درجه‌بندی <span class="ltr-text">0.2–0.22 µm</span> به طور قطع برای فیلتراسیون‌های گاز نگهدارنده میکروبی مناسب باشند. هنگامی که فیلترهای نگهدارنده میکروبی در این کاربردها استفاده می‌شوند، سطح غشا معمولاً آب‌گریز (غیر قابل خیس شدن توسط آب) است. یک نگرانی قابل توجه برای فیلتراسیون گاز، انسداد دریچه‌های مخزن توسط بخار آب متراکم است که می‌تواند به مخزن آسیب مکانیکی وارد کند. اقدامات کنترلی شامل ردیابی الکتریکی یا بخار و جهت‌گیری خودتخلیه‌کننده محفظه‌های فیلتر تهویه برای جلوگیری از تجمع میعانات بخار است. با این حال، دمای فیلتر به طور مداوم بالا، خسارت اکسیداتیو بر اجزای پلی‌پروپیلن فیلتر وارد می‌کند، بنابراین استریلیزاسیون واحد قبل از استفاده اولیه، و به صورت دوره‌ای پس از آن، و همچنین بازرسی‌های بصری منظم، آزمایش‌های یکپارچگی و تغییر کارتریج فیلتر، روش‌های کنترل توصیه شده هستند.
+            </p>
+            <p class="mb-4 text-justify">
+                در کاربردهای آب، فیلترهای نگهدارنده میکروبی ممکن است در پایین‌دست عملیات واحدی که تمایل به آزاد کردن میکروارگانیسم‌ها دارند یا در بالادست عملیات واحدی که به میکروارگانیسم‌ها حساس هستند، استفاده شوند. فیلترهای نگهدارنده میکروبی ممکن است برای فیلتر کردن آب تغذیه کننده سیستم توزیع نیز استفاده شوند. لازم به ذکر است که مقامات نظارتی استفاده از فیلترهای نگهدارنده میکروبی در سیستم‌های توزیع یا حتی در نقاط استفاده را در صورتی که به درستی اعتبارسنجی شده و به طور مناسب نگهداری شوند، مجاز می‌دانند. یک فیلتر نقطه استفاده تنها باید برای "پالایش" کیفیت میکروبی یک سیستم که به خوبی نگهداری می‌شود، در نظر گرفته شود و نه به عنوان دستگاه کنترل میکروبی اصلی. اثربخشی اقدامات کنترل میکروبی سیستم تنها با نمونه‌برداری از آب در بالادست فیلترها قابل ارزیابی است. به عنوان یک اقدام حفاظتی اضافی، لامپ‌های <span class="ltr-text">UV</span> درون خطی، با اندازه مناسب برای نرخ جریان (به <a href="#section5.3" class="text-blue-600 hover:underline">5.3 ضدعفونی</a> مراجعه کنید)، ممکن است درست در بالادست فیلترهای نگهدارنده میکروبی برای غیرفعال کردن میکروارگانیسم‌ها قبل از به دام افتادن آن‌ها توسط فیلتر استفاده شوند. این رویکرد دوگانه تمایل دارد پدیده‌های نفوذ میکروبی بالقوه را به شدت به تأخیر بیندازد و می‌تواند عمر مفید فیلتر را به طور قابل توجهی افزایش دهد.
+            </p>
+
+            <h4 id="section5.1.10" class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.1.10 نور فرابنفش</h4>
+            <p class="mb-4 text-justify">
+                استفاده از چراغ‌های <span class="ltr-text">UV</span> کم فشار که طول موج <span class="ltr-text">254 nm</span> را برای کنترل میکروبی منتشر می‌کنند در <a href="#section5.3" class="text-blue-600 hover:underline">5.3 ضدعفونی</a> مورد بحث قرار گرفته است، اما کاربرد نور <span class="ltr-text">UV</span> در تصفیه شیمیایی نیز در حال ظهور است. این طول موج <span class="ltr-text">254 nm</span> برای تخریب ازن نیز مفید است. در طول موج‌های حدود <span class="ltr-text">185 nm</span> (و همچنین در <span class="ltr-text">254 nm</span>)، چراغ‌های <span class="ltr-text">UV</span> متوسط فشار در تخریب مواد ضدعفونی‌کننده حاوی کلر مورد استفاده در آب منبع و همچنین برای مراحل میانی پیش‌تصفیه آب، کاربرد خود را نشان داده‌اند. شدت‌های بالای <span class="ltr-text">185 nm</span> به تنهایی یا <span class="ltr-text">254 nm</span> در ترکیب با سایر عوامل ضدعفونی‌کننده اکسیدکننده، مانند پراکسید هیدروژن، برای کاهش سطوح <span class="ltr-text">TOC</span> در سیستم‌های توزیع گردشی استفاده شده‌اند. مواد آلی معمولاً به دی‌اکسید کربن تبدیل می‌شوند که با بی‌کربنات به تعادل می‌رسد، و اسیدهای کربوکسیلیک که به طور ناقص اکسید شده‌اند، که هر دو را می‌توان به راحتی توسط رزین‌های تبادل یونی پولیش کننده حذف کرد.
+            </p>
+            <p class="mb-4 text-justify">
+                زمینه‌های نگرانی شامل شدت <span class="ltr-text">UV</span> و زمان ماند ناکافی، کاهش تدریجی انتشار <span class="ltr-text">UV</span> با عمر لامپ، تشکیل تدریجی یک فیلم جذب‌کننده <span class="ltr-text">UV</span> در سطح تماس آب، تخریب نوری ناقص در طول فوق‌کلرینه شدن آب منبع پیش‌بینی نشده، آزاد شدن آمونیاک از تخریب نوری کلرامین، خرابی نامعلوم لامپ <span class="ltr-text">UV</span>، و تخریب رسانایی در سیستم‌های توزیع با استفاده از چراغ‌های <span class="ltr-text">UV 185 nm</span> است.
+            </p>
+            <p class="mb-4 text-justify">
+                اقدامات کنترلی شامل بازرسی منظم یا آلارم‌های انتشار برای تشخیص خرابی لامپ یا انسداد فیلم، تمیز کردن منظم و پاک کردن آستین لامپ <span class="ltr-text">UV</span>، آشکارسازهای کلر پایین‌دستی (هنگام استفاده برای کلرزدایی)، دیونیزاسیون‌های پولیش کننده پایین‌دستی (هنگام استفاده برای کاهش <span class="ltr-text">TOC</span>)، و جایگزینی منظم (تقریباً سالانه) لامپ است. لامپ‌های <span class="ltr-text">UV</span> در طول کار حرارت تولید می‌کنند که می‌تواند باعث خرابی لامپ‌ها یا افزایش دمای آب شود. اقدامات احتیاطی باید برای اطمینان از وجود جریان آب برای کنترل افزایش بیش از حد دما انجام شود.
+            </p>
+
+            <h4 id="section5.1.11" class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.1.11 تقطیر</h4>
+            <p class="mb-4 text-justify">
+                واحدهای تقطیر از طریق تبخیر حرارتی، حذف مه و میعان بخار آب، تصفیه شیمیایی و میکروبی را فراهم می‌کنند. انواع مختلفی از طراحی‌ها موجود است، از جمله تک‌اثر، چند‌اثر و فشرده‌سازی بخار. دو پیکربندی آخر معمولاً در سیستم‌های بزرگتر به دلیل ظرفیت تولید و کارایی آن‌ها استفاده می‌شوند. کنترل‌های آب منبع باید برای حذف سختی و ناخالصی‌های سیلیس که ممکن است سطوح انتقال حرارت را آلوده یا خورده کنند، و همچنین حذف ناخالصی‌هایی که می‌توانند همراه با بخار آب تبخیر و متراکم شوند، فراهم شوند. با وجود تصورات عمومی، حتی بهترین فرآیند تقطیر نیز حذف مطلق یون‌های آلاینده، مواد آلی و اندوتوکسین‌ها را تضمین نمی‌کند. اکثر دستگاه‌های تقطیر به عنوان قادر به کاهش حداقل <span class="ltr-text">3–4 log</span> در غلظت این ناخالصی‌ها شناخته می‌شوند. آن‌ها در استریل کردن آب تغذیه بسیار مؤثر هستند.
+            </p>
+            <p class="mb-4 text-justify">
+                زمینه‌های نگرانی شامل حمل مواد آلی فرار مانند تری‌هالومتان‌ها (به <a href="#section2" class="text-blue-600 hover:underline">2. ملاحظات آب منبع</a> مراجعه کنید) و ناخالصی‌های گازی مانند آمونیاک و دی‌اکسید کربن، حذف نادرست مه، پر شدن تبخیرکننده، تخلیه ناکافی، آب راکد در کندانسورها و تبخیرکننده‌ها، طراحی آب‌بندی پمپ و کمپرسور، نشت‌های سوراخ سوزنی تبخیرکننده و کندانسور، و تغییرات رسانایی (کیفیت) در طول راه‌اندازی و بهره‌برداری است.
+            </p>
+            <p class="mb-4 text-justify">
+                روش‌های کنترل ممکن است شامل موارد زیر باشد: مراحل اولیه برای حذف هم دی‌اکسید کربن حل شده و هم سایر ناخالصی‌های فرار یا غیرقابل میعان؛ حذف مه قابل اعتماد برای به حداقل رساندن محبوس شدن قطرات آب تغذیه؛ نشانگر بصری یا خودکار سطح بالای آب برای تشخیص پر شدن دیگ بخار و سرریز شدن؛ استفاده از پمپ‌ها و کمپرسورهای بهداشتی برای به حداقل رساندن آلودگی میکروبی و روان‌کننده آب تغذیه و میعانات؛ زهکشی مناسب در دوره‌های غیرفعال برای به حداقل رساندن رشد میکروبی و تجمع اندوتوکسین مرتبط در آب دیگ بخار؛ کنترل تخلیه برای محدود کردن اثر غلظت ناخالصی در دیگ بخار به سطوح قابل مدیریت؛ سنجش رسانایی آنلاین با انحراف خودکار به سمت فاضلاب برای جلوگیری از ورود آب غیرقابل قبول هنگام راه‌اندازی دستگاه تقطیر یا خرابی دستگاه تقطیر به سیستم توزیع آب نهایی؛ و آزمایش‌های دوره‌ای برای نشت‌های سوراخ سوزنی برای اطمینان روتین از عدم به خطر افتادن میعانات توسط آلاینده‌های آب منبع غیرفرار.
+            </p>
+
+            <h4 id="section5.1.12" class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.1.12 مخازن ذخیره</h4>
+            <p class="mb-4 text-justify">
+                مخازن ذخیره در سیستم‌های توزیع آب برای بهینه‌سازی ظرفیت تجهیزات پردازش گنجانده شده‌اند. ذخیره‌سازی همچنین امکان نگهداری روتین در سیستم تصفیه را در حالی که تأمین مداوم را برای رفع نیازهای تولیدی حفظ می‌کند، فراهم می‌آورد. ملاحظات طراحی و بهره‌برداری برای جلوگیری یا به حداقل رساندن توسعه بیوفیلم، به حداقل رساندن خوردگی، کمک به استفاده از ضدعفونی شیمیایی مخازن، و محافظت از یکپارچگی مکانیکی مورد نیاز است.
+            </p>
+            <p class="mb-4 text-justify">
+                زمینه‌های نگرانی شامل رشد میکروبی یا خوردگی به دلیل ضدعفونی نامنظم یا ناقص و آلودگی میکروبی ناشی از خرابی دیسک پارگی بدون هشدار ناشی از فیلترهای تهویه مسدود شده با میعانات است.
+            </p>
+            <p class="mb-4 text-justify">
+                ملاحظات کنترل ممکن است شامل استفاده از مخازن بسته با داخلی صاف، توانایی پاشش فضای بالای مخزن با استفاده از توپ‌های اسپری در حلقه‌های گردشی، و استفاده از مخازن گرم، پوشش‌دار/عایق‌دار باشد. این امر خوردگی و توسعه بیوفیلم را به حداقل می‌رساند و به ضدعفونی حرارتی یا شیمیایی کمک می‌کند. مخازن ذخیره برای جبران دینامیک سطوح متغیر آب نیاز به تهویه دارند. این را می‌توان با یک محفظه فیلتر با جهت‌گیری مناسب و ردیابی حرارتی مجهز به یک فیلتر غشایی نگهدارنده میکروبی آب‌گریز متصل به یک دریچه اتمسفری انجام داد. متناوباً، می‌توان از یک سیستم پوشش گازی فشرده با فیلتر غشایی خودکار استفاده کرد. در هر دو مورد، دیسک‌های پارگی مجهز به دستگاه هشدار پارگی باید به عنوان یک محافظ اضافی برای یکپارچگی مکانیکی مخزن استفاده شوند.
+            </p>
+
+            <h4 id="section5.1.13" class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.1.13 سیستم‌های توزیع</h4>
+            <p class="mb-4 text-justify">
+                پیکربندی سیستم توزیع باید امکان جریان مداوم آب در لوله‌کشی را از طریق گردش مجدد فراهم کند. از استفاده از سیستم‌های بدون گردش مجدد، بن‌بست یا یک‌طرفه یا بخش‌های سیستم باید تا حد امکان خودداری شود. اگر امکان‌پذیر نباشد، این سیستم‌ها باید به صورت دوره‌ای شستشو داده شوند و با دقت بیشتری نظارت شوند. تجربه نشان داده است که نگهداری سیستم‌های با گردش مجدد مداوم آسان‌تر است. پمپ‌ها باید به گونه‌ای طراحی شوند که شرایط جریان کاملاً آشفته را برای تسهیل توزیع کامل حرارت (برای سیستم‌های ضدعفونی‌شده با آب گرم) و همچنین توزیع کامل مواد ضدعفونی‌کننده شیمیایی فراهم کنند. جریان آشفته همچنین به نظر می‌رسد توسعه بیوفیلم‌ها را به تأخیر می‌اندازد یا تمایل بیوفیلم‌ها را به ریزش باکتری‌ها در آب کاهش می‌دهد. اگر اجزای اضافی، مانند پمپ‌ها یا فیلترها، استفاده می‌شوند، باید به گونه‌ای پیکربندی و استفاده شوند که از آلودگی میکروبی سیستم جلوگیری شود.
+            </p>
+            <p class="mb-4 text-justify">
+                اجزا و خطوط توزیع باید شیب‌دار باشند و مجهز به نقاط تخلیه باشند تا سیستم بتواند به طور کامل تخلیه شود. در سیستم‌های توزیع، شاخه‌های مرده و شرایط جریان کم باید اجتناب شوند، و نقاط اتصال شیردار باید نسبت طول به قطر شش یا کمتر داشته باشند. در سیستم‌هایی که در دماهای خودضدعفونی‌کننده کار می‌کنند، باید اقدامات احتیاطی برای جلوگیری از نقاط سردی که ممکن است توسعه بیوفیلم در آن‌ها رخ دهد، انجام شود. اگر هدف از تخلیه اجزا یا خطوط توزیع به عنوان یک استراتژی کنترل میکروبی باشد، آن‌ها نیز باید به گونه‌ای پیکربندی شوند که با استفاده از گاز فشرده خشک کاملاً خشک شوند زیرا سطوح تخلیه شده اما هنوز مرطوب، همچنان از تکثیر میکروبی حمایت خواهند کرد. آب خروجی از سیستم توزیع نباید بدون عبور ابتدا از تمام یا بخشی از سیستم تصفیه به سیستم بازگردانده شود.
+            </p>
+            <p class="mb-4 text-justify">
+                طراحی توزیع باید شامل قرار دادن شیرهای نمونه‌برداری در مخزن ذخیره و در سایر مکان‌ها، مانند در خط برگشت سیستم آب گردشی باشد. اتصالات مستقیم به فرآیندها یا تجهیزات کمکی باید به گونه‌ای طراحی شوند که از جریان معکوس به سیستم آب کنترل‌شده جلوگیری شود. شلنگ‌ها و مبدل‌های حرارتی که به نقاط استفاده برای تأمین آب متصل هستند، نباید کیفیت آب را از نظر شیمیایی یا میکروبیولوژیکی تخریب کنند. سیستم توزیع باید امکان ضدعفونی برای کنترل میکروارگانیسم‌ها را فراهم کند. سیستم ممکن است به طور مداوم در شرایط ضدعفونی‌کننده کار کند یا به صورت دوره‌ای ضدعفونی شود.
+            </p>
+
+            <h4 id="section5.1.14" class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.1.14 فناوری‌های نوظهور/جدید</h4>
+            <p class="mb-4 text-justify">
+                فناوری‌های جدید تصفیه آب به طور مداوم در حال توسعه هستند. قبل از استفاده از این فناوری‌ها در سیستم‌های آب دارویی، باید برای استفاده قابل قبول در یک محیط <span class="ltr-text">GMP</span> ارزیابی شوند. ملاحظات دیگر باید شامل فرآیند تصفیه، قابلیت اطمینان و استحکام، استفاده از مواد افزودنی، مواد ساخت و توانایی اعتبارسنجی باشد. باید به شناسایی زمینه‌های نگرانی در طول ارزیابی و شناسایی اقدامات کنترلی برای فناوری توجه شود. این باید شامل تأثیر بر ویژگی‌های شیمیایی و میکروبی باشد.
+            </p>
+
+            <h3 id="section5.2" class="text-xl font-semibold text-blue-600 mb-2">5.2 نصب، مواد ساخت و انتخاب قطعات</h3>
+            <p class="mb-4 text-justify">
+                تکنیک‌های نصب مهم هستند زیرا می‌توانند بر یکپارچگی مکانیکی، خورنده و بهداشتی سیستم تأثیر بگذارند. نصب شیر باید زهکشی گرانشی را تقویت کند. تکیه‌گاه‌های لوله باید شیب‌های مناسب برای زهکشی را فراهم کنند و باید به گونه‌ای طراحی شوند که لوله‌کشی را به طور مناسب تحت بدترین شرایط حرارتی و جریان پشتیبانی کنند. روش‌های اتصال اجزای سیستم - از جمله واحدهای عملیاتی، مخازن و لوله‌کشی توزیع - نیازمند توجه دقیق برای جلوگیری از مشکلات عملیاتی و میکروبی احتمالی است.
+            </p>
+            <p class="mb-4 text-justify">
+                جوش‌های فولاد ضد زنگ باید اتصالات قابل اعتمادی را فراهم کنند که داخلی صاف و بدون خوردگی باشند. فولاد ضد زنگ کم کربن، سیم پرکننده سازگار در صورت لزوم، گاز بی‌اثر، دستگاه‌های جوشکاری خودکار و بازرسی و مستندسازی منظم به اطمینان از کیفیت جوش قابل قبول کمک می‌کنند. تمیز کردن و غیرفعال‌سازی بعدی سطوح فلزی پس از نصب برای حذف آلودگی و محصولات خوردگی و برای بازسازی سطح غیرفعال مقاوم در برابر خوردگی مهم است.
+            </p>
+            <p class="mb-4 text-justify">
+                مواد پلاستیکی در برخی موارد می‌توانند ذوب (جوش) شوند و همچنین به سطوح داخلی صاف و یکنواخت نیاز دارند. از چسب‌ها و حلال‌ها باید به دلیل پتانسیل ایجاد خلاء و مواد قابل استخراج آلی اجتناب شود. روش‌های مکانیکی اتصال، مانند اتصالات فلنجی، نیازمند دقت برای جلوگیری از ایجاد آفست‌ها، شکاف‌ها، نفوذها و خلاءها هستند. استفاده از مواد پلاستیکی ممکن است به سطوح <span class="ltr-text">TOC</span> کمک کند.
+            </p>
+            <p class="mb-4 text-justify">
+                اقدامات کنترلی شامل هم‌ترازی خوب، واشرهای با اندازه مناسب، فاصله مناسب، نیروی آب‌بندی یکنواخت و اجتناب از اتصالات رزوه شده است.
+            </p>
+            <p class="mb-4 text-justify">
+                مواد ساخت باید به گونه‌ای انتخاب شوند که با اقدامات کنترلی مانند ضدعفونی، تمیز کردن یا غیرفعال‌سازی سازگار باشند. درجه حرارت یک عامل حیاتی در انتخاب مواد مناسب است زیرا ممکن است لازم باشد سطوح دمای عملیاتی و ضدعفونی بالا را تحمل کنند. اگر مواد شیمیایی یا افزودنی‌ها برای تمیز کردن، غیرفعال‌سازی یا ضدعفونی سیستم استفاده شوند، باید از مواد مقاوم در برابر این مواد شیمیایی یا افزودنی‌ها استفاده شود. مواد باید قادر به تحمل جریان آشفته و سرعت‌های بالا بدون فرسایش فیلم مقاوم در برابر خوردگی (مانند سطح کروم اکسید غیرفعال فولاد ضد زنگ) یا کاهش ضخامت دیواره برای پلاستیک‌ها باشند. پرداخت مواد فلزی مانند فولاد ضد زنگ، چه یک پرداخت کارخانه‌ای تصفیه شده، صیقل داده شده به یک گریت خاص، یا یک تصفیه الکتروپولیش، باید تکمیل‌کننده طراحی سیستم باشد و مقاومت رضایت‌بخشی در برابر خوردگی و فعالیت میکروبی ایجاد کند. پرداخت همچنین باید ماده‌ای باشد که بتوان آن را به صورت شیمیایی ضدعفونی کرد. تجهیزات کمکی و اتصالات که نیاز به آب‌بندها، واشرها، دیافراگم‌ها، محیط فیلتر و غشاها دارند، باید موادی را که امکان نشت مواد قابل استخراج، ریزش و فعالیت میکروبی را فراهم می‌کنند، حذف کنند. مواد عایق در معرض سطوح فولاد ضد زنگ باید عاری از کلریدها باشند تا از پدیده ترک‌خوردگی تنشی-خوردگی که می‌تواند منجر به آلودگی سیستم و تخریب مخازن و اجزای حیاتی سیستم شود، جلوگیری شود.
+            </p>
+            <p class="mb-4 text-justify">
+                مشخصات برای اطمینان از انتخاب صحیح مواد و به عنوان مرجعی برای تأیید صلاحیت و نگهداری سیستم مهم هستند. اطلاعاتی مانند گزارش‌های متالورژیکی تولیدکننده برای فولاد ضد زنگ و گزارش‌های ترکیب، رتبه‌بندی و قابلیت‌های حمل مواد برای مواد غیرفلزی باید برای مناسب بودن بررسی و برای مرجع نگهداری شوند.
+            </p>
+            <p class="mb-4 text-justify">
+                انتخاب جزء (تجهیزات کمکی) باید با اطمینان از اینکه منبع نفوذ آلودگی ایجاد نمی‌کند، انجام شود. مبدل‌های حرارتی باید به گونه‌ای ساخته شوند که از نشت واسطه انتقال حرارت به آب دارویی جلوگیری کنند و برای طراحی‌های مبدل حرارتی که در آن‌ها پیشگیری ممکن است شکست بخورد، باید وسیله‌ای برای تشخیص نشت وجود داشته باشد. پمپ‌ها باید از طراحی بهداشتی با آب‌بندهایی باشند که از آلودگی آب جلوگیری می‌کنند. شیرها باید سطوح داخلی صافی داشته باشند که نشیمنگاه و دستگاه بستن در معرض عمل شستشوی آب قرار گیرند، همانطور که در شیرهای دیافراگمی رخ می‌دهد. از شیرهایی با مناطق جیبی یا دستگاه‌های بستن (مانند توپی، پلاگ، گیت، گلوب) که به داخل و خارج از منطقه جریان حرکت می‌کنند، باید اجتناب شود.
+            </p>
+
+            <h3 id="section5.3" class="text-xl font-semibold text-blue-600 mb-2">5.3 ضدعفونی</h3>
+            <p class="mb-4 text-justify">
+                کنترل میکروبی در سیستم‌های آب عمدتاً از طریق روش‌های ضدعفونی انجام می‌شود. سیستم‌ها را می‌توان با استفاده از روش‌های حرارتی یا (فتو-) شیمیایی ضدعفونی کرد.
+            </p>
+
+            <h4 id="section5.3.1" class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.3.1 ضدعفونی حرارتی</h4>
+            <p class="mb-4 text-justify">
+                رویکردهای حرارتی برای ضدعفونی سیستم شامل آب گرم گردشی دوره‌ای یا مداوم و استفاده از بخار است. دماهای <span class="ltr-text">65°–80°</span> معمولاً برای ضدعفونی حرارتی استفاده می‌شوند. آب با گردش مداوم حداقل <span class="ltr-text">65°</span> در سردترین نقطه در سیستم توزیع نیز به طور مؤثر در سیستم‌های توزیع فولاد ضد زنگ استفاده شده است، زمانی که به یکنواختی و توزیع چنین دماهای خودضدعفونی‌کننده‌ای توجه شود. این تکنیک‌ها محدود به سیستم‌هایی هستند که با دماهای بالاتر مورد نیاز برای دستیابی به ضدعفونی سازگار هستند. استفاده مکرر از ضدعفونی حرارتی در دماهای مناسب باید نیاز به سایر روش‌های ضدعفونی را از بین ببرد.
+            </p>
+            <p class="mb-4 text-justify">
+                استفاده از روش‌های حرارتی در دماهای بالای <span class="ltr-text">80°</span> ممنوع است زیرا به کنترل میکروبی سیستم یا کاهش بیوفیلم اضافه نمی‌کند. برخی روش‌ها (به عنوان مثال، ضدعفونی با بخار، گردش آب گرم در دماهای <span class="ltr-text">≥100°</span>) ممکن است کمتر مؤثر یا حتی مخرب باشند به دلیل نیاز به حذف میعانات یا دستکاری اجزای سیستم، فشار بر مواد ساخت، تغییر شکل فیلترها و تأثیر نامطلوب آن بر ابزار دقیق.
+            </p>
+            <p class="mb-4 text-justify">
+                اگرچه روش‌های حرارتی با مهار مداوم رشد بیوفیلم یا، در کاربردهای متناوب، با کشتن میکروارگانیسم‌ها در بیوفیلم‌های در حال رشد، توسعه بیوفیلم را کنترل می‌کنند، اما در حذف بیوفیلم‌های تثبیت‌شده مؤثر نیستند. بیوفیلم‌های کشته شده اما دست‌نخورده می‌توانند منبع غذایی برای رشد سریع بیوفیلم پس از حذف یا توقف شرایط ضدعفونی‌کننده شوند. در مواردی از ضدعفونی‌های حرارتی infrequent که امکان توسعه بیوفیلم بین درمان‌ها را فراهم می‌کند، ترکیبی از درمان حرارتی روتین و مکمل‌سازی دوره‌ای با ضدعفونی شیمیایی ممکن است مؤثرتر باشد. هر چه ضدعفونی حرارتی مکررتر باشد، احتمال بیشتری وجود دارد که بازسازی بیوفیلم از بین برود.
+            </p>
+
+            <h4 id="section5.3.2" class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.3.2 ضدعفونی شیمیایی</h4>
+            <p class="mb-4 text-justify">
+                روش‌های شیمیایی، در صورت سازگاری، می‌توانند بر روی طیف گسترده‌تری از مواد ساختمانی استفاده شوند. این روش‌ها معمولاً از عوامل اکسیدکننده مانند ازن، پراکسید هیدروژن، اسید پراستیک یا ترکیبی از آن‌ها استفاده می‌کنند. ترکیبات هالوژنه می‌توانند ضدعفونی‌کننده‌های مؤثری باشند اما عوامل اکسیدکننده کمتر تهاجمی هستند و ممکن است شستشوی آن‌ها از سیستم دشوار باشد. عوامل شیمیایی ممکن است به ماتریس کامل بیوفیلم نفوذ نکنند یا به تمام نقاط بیوفیلم (مانند شکاف‌های در اتصالات گسکت‌شده) گسترش نیابند و ممکن است بیوفیلم‌ها را به طور ناقص غیرفعال بگذارند. ترکیباتی مانند ازن، پراکسید هیدروژن و اسید پراستیک، باکتری‌ها و بیوفیلم‌ها را با پراکسیدهای واکنش‌پذیر و با تشکیل رادیکال‌های آزاد بسیار واکنش‌پذیر (به ویژه رادیکال‌های هیدروکسیل) اکسید می‌کنند. نیمه‌عمر کوتاه ازن به ویژه، و محدودیت آن در غلظت‌های قابل دستیابی، ایجاب می‌کند که در طول فرآیند ضدعفونی به طور مداوم اضافه شود. پراکسید هیدروژن و ازن به سرعت به آب و/یا اکسیژن تجزیه می‌شوند، و اسید پراستیک به اکسیژن و اسید استیک تجزیه می‌شود. سهولت تجزیه ازن به اکسیژن با استفاده از چراغ‌های <span class="ltr-text">UV 254 nm</span> در حلقه‌های گردشی، امکان استفاده مؤثر از آن را به صورت ضدعفونی مداوم در مخازن نگهداری و به صورت متناوب (مثلاً روزانه یا هفتگی) در حلقه‌های توزیع فراهم می‌کند. ماهیت بسیار واکنش‌پذیر ازن نیاز به استفاده از مواد و اجزای سیستمی دارد که حتی مقاوم‌تر در برابر اکسیداسیون باشند تا آن‌هایی که معمولاً با سایر عوامل اکسیدکننده استفاده می‌شوند.
+            </p>
+            <p class="mb-4 text-justify">
+                مهم است که توجه داشته باشید که کشتن میکروارگانیسم‌ها در یک بیوفیلم به خوبی توسعه یافته، حتی با استفاده از مواد شیمیایی اکسیدکننده تهاجمی، می‌تواند بسیار دشوار باشد. هرچه بیوفیلم کمتر توسعه یافته و بنابراین نازک‌تر باشد، غیرفعال‌سازی بیوفیلم مؤثرتر است. بنابراین، کنترل میکروبی بهینه با استفاده از مواد شیمیایی اکسیدکننده با فرکانسی به دست می‌آید که اجازه توسعه قابل توجه بیوفیلم را بین درمان‌ها نمی‌دهد.
+            </p>
+            <p class="mb-4 text-justify">
+                اعتبارسنجی ضدعفونی شیمیایی نیازمند اثبات غلظت‌های شیمیایی کافی در سراسر سیستم، قرار گرفتن در معرض تمام سطوح مرطوب از جمله بدنه شیرهای نقطه استفاده، و حذف کامل ماده ضدعفونی‌کننده از سیستم در پایان درمان است. اعتبارسنجی روش برای تشخیص و کمی‌سازی باقیمانده‌های ماده ضدعفونی‌کننده یا محصولات تخریب نامطلوب آن، بخش اساسی برنامه اعتبارسنجی است.
+            </p>
+
+            <h4 id="section5.3.3" class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.3.3 ضدعفونی با UV</h4>
+            <p class="mb-4 text-justify">
+                نور <span class="ltr-text">UV</span> درون خطی با طول موج <span class="ltr-text">254 nm</span> را می‌توان برای "ضدعفونی" مداوم تنها آب در حال گردش در سیستم نیز استفاده کرد، اما این دستگاه‌ها باید به طور مناسب برای جریان آب اندازه‌گیری شوند. چنین دستگاه‌هایی درصد بالایی (اما نه <span class="ltr-text">100%</span>) از میکروارگانیسم‌هایی که از طریق دستگاه جریان می‌یابند را غیرفعال می‌کنند اما نمی‌توانند برای کنترل مستقیم بیوفیلم موجود در بالادست یا پایین‌دست دستگاه استفاده شوند. با این حال، هنگامی که با فناوری‌های ضدعفونی حرارتی یا شیمیایی معمولی ترکیب می‌شوند یا بلافاصله در بالادست یک فیلتر نگهدارنده میکروبی قرار می‌گیرند، نور <span class="ltr-text">UV</span> بسیار مؤثر است و می‌تواند فاصله بین ضدعفونی‌های مجدد سیستم را به طور قابل توجهی طولانی کند.
+            </p>
+
+            <h4 id="section5.3.4" class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.3.4 روش‌های ضدعفونی</h4>
+            <p class="mb-4 text-justify">
+                مراحل ضدعفونی نیازمند اعتبارسنجی برای اثبات توانایی کاهش و حفظ آلودگی میکروبی در سطوح قابل قبول است. اعتبارسنجی روش‌های حرارتی باید شامل یک مطالعه توزیع حرارت برای اثبات اینکه دماهای ضدعفونی در سراسر سیستم، از جمله بدنه شیرهای نقطه استفاده؛ پورت‌های نمونه‌برداری؛ شاخه‌های جانبی ابزار دقیق؛ و اتصالات، کوپلینگ‌ها و آداپتورها، با تکیه بر همرفت آب و هدایت حرارتی از طریق مواد سیستم برای انتقال حرارت به سطوح مرطوب، به دست می‌آید.
+            </p>
+            <p class="mb-4 text-justify">
+                فرکانس روتین ضدعفونی باید توسط نتایج نظارت میکروبی سیستم پشتیبانی شود. نتایج حاصل از تجزیه و تحلیل روند داده‌های میکروبیولوژیکی باید به عنوان مکانیزم هشدار برای نیاز به نگهداری فوق‌العاده استفاده شود. فرکانس روتین ضدعفونی باید به گونه‌ای تعیین شود که سیستم در وضعیت کنترل میکروبیولوژیکی عمل کند و به طور منظم از سطوح هشدار و اقدام فراتر نرود (به <a href="#section9.4" class="text-blue-600 hover:underline">9.4 تعریف سطوح هشدار، اقدام و مشخصات</a> مراجعه کنید).
+            </p>
+
+            <h3 id="section5.4" class="text-xl font-semibold text-blue-600 mb-2">5.4 بهره‌برداری، نگهداری و کنترل</h3>
+            <p class="mb-4 text-justify">
+                برنامه نگهداری پیشگیرانه باید ایجاد شود تا اطمینان حاصل شود که سیستم آب در وضعیت کنترل باقی می‌ماند. این برنامه باید شامل <span class="ltr-text">1</span>) رویه‌های بهره‌برداری از سیستم، <span class="ltr-text">2</span>) برنامه‌های نظارت برای ویژگی‌های کیفیت حیاتی و شرایط عملیاتی از جمله کالیبراسیون ابزارهای حیاتی، <span class="ltr-text">3</span>) برنامه زمان‌بندی برای ضدعفونی دوره‌ای، <span class="ltr-text">4</span>) نگهداری پیشگیرانه اجزا، و <span class="ltr-text">5</span>) کنترل تغییرات در سیستم مکانیکی و شرایط عملیاتی باشد.
+            </p>
+
+            <h4 id="section5.4.1" class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.4.1 روش‌های عملیاتی</h4>
+            <p class="mb-4 text-justify">
+                روش‌های عملیاتی برای سیستم آب و برای انجام نگهداری روتین و اقدامات اصلاحی باید مکتوب شوند، و همچنین باید نقطه زمانی که اقدام لازم است را تعریف کنند. رویه‌ها باید به خوبی مستند شوند، و باید عملکرد هر کار، مسئولیت انجام کار، نحوه انجام کار، و پارامترهای عملیاتی قابل قبول را به تفصیل بیان کنند. اثربخشی این رویه‌ها باید در طول اعتبارسنجی سیستم آب ارزیابی شود.
+            </p>
+
+            <h4 id="section5.4.2" class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.4.2 برنامه نظارت بر فرآیند</h4>
+            <p class="mb-4 text-justify">
+                یک برنامه نظارت بر فرآیند باید ویژگی‌های کیفیت حیاتی و پارامترهای عملیاتی را که مستند و نظارت می‌شوند، تعیین کند. این برنامه ممکن است شامل ترکیبی از حسگرهای درون‌خطی و/یا ابزارهای خودکار (به عنوان مثال، برای دما، <span class="ltr-text">TOC</span>، رسانایی، سختی و کلر)، مستندسازی خودکار یا دستی پارامترهای عملیاتی (به عنوان مثال، نرخ جریان یا افت فشار در یک بستر کربن، فیلتر یا واحد <span class="ltr-text">RO</span>)، و آزمایش‌های آزمایشگاهی (به عنوان مثال، شمارش میکروبی کل) باشد. فرکانس نمونه‌برداری، الزام برای ارزیابی نتایج آزمایش، و لزوم آغاز اقدامات اصلاحی باید گنجانده شود.
+            </p>
+
+            <h4 id="section5.4.3" class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.4.3 کنترل میکروبی روتین</h4>
+            <p class="mb-4 text-justify">
+                ضدعفونی ممکن است جزء لاینفک بهره‌برداری و نگهداری باشد، و بسته به طراحی سیستم و واحدهای عملیاتی انتخاب شده، به صورت روتین برای حفظ سیستم در وضعیت کنترل میکروبی ضروری است. فناوری‌های ضدعفونی در بالا در <a href="#section5.3" class="text-blue-600 hover:underline">5.3 ضدعفونی</a> با جزئیات بیشتری توضیح داده شده‌اند.
+            </p>
+
+            <h4 id="section5.4.4" class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.4.4 نگهداری پیشگیرانه</h4>
+            <p class="mb-4 text-justify">
+                یک برنامه نگهداری پیشگیرانه باید در حال اجرا باشد. این برنامه باید مشخص کند که چه نگهداری پیشگیرانه‌ای باید انجام شود، فرکانس کار نگهداری، و نحوه مستندسازی کار.
+            </p>
+
+            <h4 id="section5.4.5" class="text-lg font-semibold text-gray-700 mt-3 mb-2">5.4.5 کنترل تغییر</h4>
+            <p class="mb-4 text-justify">
+                پیکربندی مکانیکی، شرایط عملیاتی و فعالیت‌های نگهداری سیستم آب باید کنترل شوند. تغییرات پیشنهادی باید برای تأثیر آن‌ها بر کل سیستم ارزیابی شوند. نیاز به تأیید صلاحیت مجدد سیستم پس از انجام تغییرات باید تعیین شود. پس از تصمیم برای اصلاح یک سیستم آب، نقشه‌ها، دستورالعمل‌ها و رویه‌های متأثر باید بازبینی شوند. بخش‌ها یا عملیات سیستم آب که تحت تأثیر اصلاح قرار می‌گیرند باید آزمایش شوند تا وضعیت کنترل مداوم را نشان دهند. میزان و مدت زمان آزمایش باید با تأثیر خطر تغییر بر سیستم مرتبط باشد.
+            </p>
+        </div>
+
+        <div class="card p-6 mb-8">
+            <h2 id="section6" class="text-2xl font-semibold text-blue-600 mb-4">6. نمونه‌برداری</h2>
+            <p class="mb-4 text-justify">
+                آزمایش نمونه‌های آب از یک سیستم آب برای کنترل مداوم سیستم و ارزیابی کیفیت آب مورد استفاده حیاتی است. اگر نمونه به درستی جمع‌آوری نشود، ممکن است نتیجه‌ای غیرمعمول از هدف نمونه ارائه دهد. این می‌تواند منجر به بی‌عملی در مواقع نیاز به اصلاح یا اصلاح غیرضروری در مواقع عدم نیاز شود. همچنین می‌تواند منجر به تفسیرهای نادرست از تأثیر محصول شود. بنابراین، جمع‌آوری صحیح نمونه‌های آب، درک هدف آن‌ها، و ایجاد برنامه‌های نمونه‌برداری سیستم آب مناسب برای کنترل کیفیت آب و کنترل سیستم ضروری است.
+            </p>
+
+            <h3 id="section6.1" class="text-xl font-semibold text-blue-600 mb-2">6.1 اهداف و رویه‌ها</h3>
+            <p class="mb-4 text-justify">
+                برای ارزیابی یک ویژگی خاص آب، معمولاً باید یک نمونه از آب برای آزمایش ویژگی خاص از سیستم آب حذف شود. نمونه باید از مکان‌های خاصی جمع‌آوری شود که برای هدف نظارت، نماینده باشند. این نمونه ممکن است توسط ابزارهای درون‌خطی/آنلاین تجزیه و تحلیل شود یا ممکن است به طور کامل از سیستم به عنوان "نمونه لحظه‌ای" در یک ظرف برای آزمایش خارج از خط حذف شود. آزمایش درون‌خطی/آنلاین از پتانسیل آلودگی خارجی نمونه‌های لحظه‌ای جلوگیری می‌کند که می‌تواند منجر به روندهای داده‌های متغیر مصنوعی و تصمیمات نادرست در مورد عملکرد سیستم، نگهداری و آب مورد استفاده شود، و همچنین آغاز تحقیقات بی‌ثمر در مورد علت‌ها را از بین می‌برد. نمونه‌های لحظه‌ای ممکن است در مواردی مناسب باشند که آب در سیستم برای برخی ویژگی‌ها همگن نباشد.
+            </p>
+            <p class="mb-4 text-justify">
+                داده‌های حاصل از آزمایش آب عموماً برای یکی از دو هدف استفاده می‌شود: برای کنترل فرآیند (<span class="ltr-text">PC</span>) سیستم تصفیه و توزیع آب یا برای رهاسازی یا کنترل کیفیت (<span class="ltr-text">QC</span>) آبی که از سیستم برای برخی کاربردها یا مصارف برداشت می‌شود. در بسیاری از موارد، بسته به مکان نمونه‌برداری و فرآیند نمونه‌برداری، داده‌های حاصل را می‌توان برای هر دو منظور <span class="ltr-text">PC</span> و <span class="ltr-text">QC</span> استفاده کرد.
+            </p>
+
+            <h4 id="section6.1.1" class="text-lg font-semibold text-gray-700 mt-3 mb-2">6.1.1 نمونه‌برداری کنترل فرآیند (PC)</h4>
+            <p class="mb-4 text-justify">
+                از آنجا که نمونه‌برداری کنترل فرآیند (<span class="ltr-text">PC</span>) به منظور منعکس کردن کیفیت آب پشت شیر و در سیستم توزیع، از سیستم تصفیه، یا بین مراحل تصفیه آن است، باید تلاش شود تا از آلودگی آب هنگام برداشت از سیستم جلوگیری شود تا نتایج آزمایش آن به طور دقیق کیفیت آب را در آن مکان در سیستم منعکس کند. این ممکن است نیاز به استفاده از پورت‌های نمونه‌برداری با موقعیت استراتژیک، علاوه بر نقاط استفاده، داشته باشد.
+            </p>
+            <p class="mb-4 text-justify">
+                اگر آزمایش میکروبی برای اهداف <span class="ltr-text">PC</span> لازم باشد، شیر نمونه‌برداری باید دارای طراحی بهداشتی و به درستی نصب شده باشد که از شستشوی شدید قبل از نمونه‌برداری استفاده کند. این شستشو، ساختارهای بیوفیلم شکننده در حال رشد روی سطوح داخل شیر و مسیر آب را قبل از جمع‌آوری نمونه از بین می‌برد. این امر از سوگیری در شمارش میکروبی آب احتمالاً بکر در سیستم پشت آن شیر جلوگیری می‌کند. شستشوی شیر کاملاً باز (با سرعت <span class="ltr-text">>8 ft/s</span> در داخل شیر و رابط) برای حداقل <span class="ltr-text">30</span> ثانیه معمولاً نیروهای برشی کافی را برای حذف مناسب هرگونه ساختار بیوفیلم شکننده فراهم می‌کند. اقدامات کنترلی اضافی برای جلوگیری از آلودگی نمونه می‌تواند شامل ضدعفونی دقیق خروجی قبل و بعد از نمونه‌برداری، استفاده از شلنگ‌ها و واشرهای استریل یا سایر رابط‌ها برای هدایت جریان آب، و سایر اقدامات باشد.
+            </p>
+            <p class="mb-4 text-justify">
+                داده‌های حاصل از نمونه‌برداری <span class="ltr-text">PC</span> نشان می‌دهد که سیستم چقدر خوب کیفیت آب را در آن مکان نمونه‌برداری حفظ می‌کند. این داده‌ها متعاقباً برای سیگنال‌دهی زمانی که ممکن است به مداخله فوق‌العاده‌ای، علاوه بر نگهداری عادی و عملیات ضدعفونی سیستم، برای بازگرداندن سیستم به سطح خلوص مورد انتظار نیاز باشد، استفاده می‌شوند.
+            </p>
+            <p class="mb-4 text-justify">
+                نمونه‌برداری <span class="ltr-text">PC</span> تنها در صورتی می‌تواند برای نشان دادن کیفیت آب تحویل داده شده به نقاط استفاده (برای اهداف <span class="ltr-text">QC</span>) استفاده شود که نشان داده شده باشد که نماینده آن کیفیت نقطه استفاده است. این ممکن است با ویژگی‌های شیمیایی که معمولاً تحت تأثیر مسیر سیال فرآیند تحویل آب قرار نمی‌گیرند، امکان‌پذیر باشد، اما عموماً با ویژگی‌های میکروبی که می‌توانند به شدت تحت تأثیر بیوفیلم‌های محلی در طول آن مسیر سیال قرار گیرند، امکان‌پذیر نیست. اگر از این مسیر سیال برای نمونه‌برداری <span class="ltr-text">PC</span> استفاده نشود، در این صورت داده‌های حاصل معمولاً نمی‌توانند برای اهداف <span class="ltr-text">QC</span> استفاده شوند.
+            </p>
+
+            <h4 id="section6.1.2" class="text-lg font-semibold text-gray-700 mt-3 mb-2">6.1.2 نمونه‌برداری کنترل کیفیت (QC)</h4>
+            <p class="mb-4 text-justify">
+                نمونه‌برداری کنترل کیفیت (<span class="ltr-text">QC</span>) به منظور منعکس کردن کیفیت آبی است که مورد استفاده قرار می‌گیرد. این نمونه‌ها باید در نقطه واقعی استفاده جمع‌آوری شوند؛ یعنی جایی که آب برای استفاده تحویل داده می‌شود، نه جایی که سیستم آب را ترک می‌کند. نمونه‌برداری <span class="ltr-text">QC</span> باید از همان مسیر تحویل و اجزای مورد استفاده برای انتقال آب در طول استفاده واقعی از آب استفاده کند. این شامل همان شیرها، شلنگ‌ها، مبدل‌های حرارتی، کل‌سنج‌ها، اتصالات لوله‌کشی شده سخت و سایر اجزای مورد استفاده در طول استفاده از آب است.
+            </p>
+            <p class="mb-4 text-justify">
+                علاوه بر اجزای انتقال آب، نمونه‌برداری <span class="ltr-text">QC</span> همچنین باید از همان فرآیند انتقال آب مورد استفاده در طول استفاده از آب استفاده کند، از جمله همان رویه شستشوی خروجی و مسیر تحویل قبل از استفاده و همان شیوه ضدعفونی خروجی، اتصالات و شلنگ مورد استفاده در طول استفاده واقعی از آب. فرآیند و اجزای تحویل آب مورد استفاده برای نمونه‌برداری <span class="ltr-text">QC</span> باید با رویه‌های تولید در هر خروجی سیستم یکسان باشد تا نمونه <span class="ltr-text">QC</span> کیفیت آب مورد استفاده را با جمع‌آوری همان سطوح آلاینده شیمیایی و میکروبی که در طول استفاده واقعی از آن مکان خروجی جمع‌آوری می‌کرد، تقلید کند.
+            </p>
+            <p class="mb-4 text-justify">
+                در مواردی که اتصالات دائمی از سیستم آب به تجهیزات وجود دارد، باید در طراحی امکان جمع‌آوری نمونه‌ها از مکان‌های نزدیک‌تر به تجهیزات فراهم شود. به عنوان مثال، نمونه‌ها را می‌توان از پورت‌های نمونه‌برداری خاص یا سایر شیرها در نزدیکی اتصال تجهیزات جمع‌آوری کرد که به نمونه آب جمع‌آوری شده اجازه می‌دهد تا کیفیت آب مورد استفاده را به طور دقیق منعکس کند. در مواردی که مجرای انتقال آب برای حذف تمام تأثیرات آلاینده قبل از انتقال آب از طریق آن مجرا طراحی و/یا به طور قطعی تصفیه شده است، مکان‌های نمونه‌برداری <span class="ltr-text">PC</span> در سیستم توزیع می‌توانند کیفیت آب را که واقعاً برای اهداف <span class="ltr-text">QC</span> در آن اتصالات دائمی استفاده می‌شود، منعکس کنند. با این حال، موفقیت طراحی و تصفیه‌های در نظر گرفته شده برای حذف این تأثیرات آلاینده باید تأیید شود. این معمولاً در طول اعتبارسنجی سیستم آب انجام می‌شود.
+            </p>
+            <p class="mb-4 text-justify">
+                در مواردی که رویه‌های استفاده روتین از آب شامل فعالیت‌های مستعد آلودگی باشد، مانند عدم شستشو قبل از استفاده یا شیوه‌های ضعیف نگهداری/ضدعفونی/جایگزینی شلنگ، این رویه‌های استفاده از آب باید بهبود یابد تا پتانسیل تحویل آب آلوده از سیستم آب و نتایج آزمایش نمونه <span class="ltr-text">QC</span> غیرقابل قبول که همان آلودگی را منعکس می‌کند، کاهش یابد.
+            </p>
+
+            <h3 id="section6.2" class="text-xl font-semibold text-blue-600 mb-2">6.2 ویژگی‌ها و مکان‌های نمونه‌برداری</h3>
+            <p class="mb-4 text-justify">
+                آزمایش‌هایی که بر روی نمونه‌ها انجام می‌شوند، با مکان نمونه‌برداری و هدف نمونه مرتبط هستند. نظارت در فرآیند بر ویژگی‌های غیرمونوگراف ممکن است برای عملیات واحد خاصی نشان داده شود. به عنوان مثال، قبل و بعد از یک نرم‌کننده، ممکن است تعیین سختی آب برای تأیید کارایی نرم‌کننده مهم باشد. قبل و بعد از یک بستر/فیلتر کربن فعال، ممکن است تأیید حذف و/یا کاهش کلر یا <span class="ltr-text">TOC</span> یا آزمایش افزایش شمارش میکروبی مهم باشد. قبل از یک واحد تقطیر، ممکن است کمی‌سازی سطح اندوتوکسین باکتریایی ورودی برای اطمینان از اینکه دستگاه تقطیر بیش از ظرفیت تصفیه <span class="ltr-text">3–4 log</span> معمولی خود به چالش کشیده نمی‌شود، مهم باشد. با این حال، هنگامی که آب در سیستم توزیع قرار می‌گیرد، ویژگی‌های کامپندیالی مهم معمولاً شامل حداقل رسانایی، <span class="ltr-text">TOC</span> و شمارش میکروبی هستند. در سیستم‌های آب برای تزریق و سایر سیستم‌ها یا مکان‌های سیستمی که کنترل اندوتوکسین باکتریایی مهم است، اندوتوکسین نیز سنجش می‌شود. آزمایش‌های دیگر ممکن است بسته به کاربردهای مورد نظر آب ضروری باشند.
+            </p>
+
+            <h4 id="section6.2.1" class="text-lg font-semibold text-gray-700 mt-3 mb-2">6.2.1 ویژگی‌های شیمیایی</h4>
+            <p class="mb-4 text-justify">
+                آلاینده‌های شیمیایی حل شده که با آزمایش رسانایی یا <span class="ltr-text">TOC</span> شناسایی می‌شوند، تمایل دارند به طور یکنواخت در آب در سراسر سیستم آب توزیع شوند. با این حال، استثناهایی وجود دارد که منابع آلودگی شیمیایی محلی می‌توانند رخ دهند، مانند نشت خنک‌کننده از یک مبدل حرارتی در یک زیرحلقه، یا در یک نقطه استفاده، یا در یک شاخه مرده. این آلاینده‌های شیمیایی ممکن است تنها در خروجی‌های مرتبط دیده شوند و نه به صورت سیستمی. با این حال، در غیاب تأثیرات آلودگی محلی، ویژگی‌های شیمیایی نامزدهایی برای آزمایش آنلاین در مکان‌های استراتژیک ثابت در سیستم توزیع هستند، مانند نزدیک به برگشت حلقه گردشی، و عموماً منعکس‌کننده همان کیفیت شیمیایی در تمام مکان‌ها و نقاط استفاده در سیستم توزیع هستند. با این وجود، مناسب بودن مکان‌های آنلاین این ابزارها برای اهداف انتشار <span class="ltr-text">QC</span> باید به عنوان نماینده کیفیت آب نقطه استفاده تأیید شود. این معمولاً در طول اعتبارسنجی سیستم آب انجام می‌شود.
+            </p>
+
+            <h4 id="section6.2.2" class="text-lg font-semibold text-gray-700 mt-3 mb-2">6.2.2 ویژگی‌های میکروبی</h4>
+            <p class="mb-4 text-justify">
+                سناریوی یکنواختی مشابه را نمی‌توان برای ویژگی‌های میکروبی فرض کرد. ارگانیسم‌های پلانکتونی در یک نمونه آب می‌توانستند از بیوفیلم‌ها در سیستم‌های تصفیه یا توزیع نشأت گرفته باشند که سطوح کم و بیش یکنواختی از ارگانیسم‌های پلانکتونی را در آب در گردش آزاد می‌کنند، همانطور که در نمونه‌های تمام خروجی‌ها قابل تشخیص است. با این حال، یک بیوفیلم محلی که در یک مجرای تحویل آب (مانند یک شیر خروجی نقطه استفاده و شلنگ انتقال) در یک سیستم آب عاری از بیوفیلم تشکیل می‌شود، می‌تواند ارگانیسم‌های پلانکتونی را آزاد کند که تنها در آب تحویل داده شده از طریق آن مجرا قابل تشخیص هستند. بنابراین، نمونه‌های انتشار <span class="ltr-text">QC</span> برای ارزیابی کیفیت آبی که توسط سیستم در طول استفاده از آب تحویل داده می‌شود، باید پس از عبور آب از همان مجرای سیال (از جمله همان فعالیت‌های آماده‌سازی مانند ضدعفونی خروجی و پیش‌شستشو) از سیستم توزیع آب به مکان‌های خاصی که آب استفاده می‌شود، جمع‌آوری شوند.
+            </p>
+            <p class="mb-4 text-justify">
+                نمونه‌برداری/آزمایش میکروبی آنلاین آب تنها برای اهداف <span class="ltr-text">PC</span> در سیستم‌های آب دارویی ارزش دارد مگر اینکه آب از نقطه استفاده به همان شیوه استفاده روتین از آب گرفته شود، در این صورت داده‌ها می‌توانند هدف انتشار <span class="ltr-text">QC</span> نیز داشته باشند. شمارش میکروبی شناسایی شده از پورت‌های نمونه‌برداری استراتژیک همچنان دارای ارزش <span class="ltr-text">PC</span> و تحقیقاتی است، اما عموماً نمی‌تواند جایگزین آزمایش انتشار <span class="ltr-text">QC</span> شود، مگر در سناریوهای خاص، همانطور که در <a href="#section6.1.2" class="text-blue-600 hover:underline">6.1.2 نمونه‌برداری کنترل کیفیت (QC)</a> توضیح داده شد.
+            </p>
+
+            <h3 id="section6.3" class="text-xl font-semibold text-blue-600 mb-2">6.3 برنامه‌های نمونه‌برداری اعتبارسنجی</h3>
+            <p class="mb-4 text-justify">
+                برنامه نمونه‌برداری اولیه برای یک سیستم آب دارویی معمولاً برای یک برنامه اعتبارسنجی ایجاد می‌شود (به <a href="#section4" class="text-blue-600 hover:underline">4. اعتبارسنجی و تأیید صلاحیت سیستم‌های تصفیه، نگهداری و توزیع آب</a> مراجعه کنید). این استراتژی برای توصیف توانایی سیستم در تصفیه، توزیع و تحویل آب دارویی است. به طور معمول، نمونه‌برداری اعتبارسنجی اولیه برای مدت کوتاهی (به عنوان مثال، حداقل <span class="ltr-text">2–4</span> هفته) با فرکانس نمونه‌برداری بالا برای تولید حجم قابل توجهی از داده‌ها انجام می‌شود که امکان تشخیص انحرافات کوتاه مدت یا محلی در کیفیت شیمیایی یا میکروبی از تمام خروجی‌ها را فراهم می‌کند. این داده‌ها ارزیابی اولیه‌ای از عملکرد سیستم را برای هدایت تصمیمات در مورد استفاده از آب برای اهداف عملیاتی ارائه می‌دهند.
+            </p>
+            <p class="mb-4 text-justify">
+                برنامه نمونه‌برداری اعتبارسنجی اولیه زمانی که آب دارویی به مرحله بهره‌برداری می‌رسد، معمولاً برای کاهش حجم داده‌های تولید شده در حالی که توانایی شناسایی عملیات/رویدادهای غیرعادی، به ویژه در طول چرخه عمر اولیه سیستم آب، به خطر نمی‌افتد، دوباره ارزیابی می‌شود. در غیاب چنین انحرافات کیفی در طول دوره نمونه‌برداری اولیه، فرکانس نمونه‌برداری را می‌توان برای مدتی (به عنوان مثال، حداقل <span class="ltr-text">2–4</span> هفته اضافی) کاهش داد تا اطمینان حاصل شود که روندهای کیفی نامطلوب بلندمدت‌تر ظاهر نمی‌شوند. در طول این دوره دوم، آب را می‌توان برای استفاده روتین با ریسک در نظر گرفت، تا زمان تکمیل قابل قبول دوره نمونه‌برداری اعتبارسنجی دوم. پس از تکمیل موفقیت‌آمیز، نظارت را می‌توان دوباره به آنچه که برنامه نمونه‌برداری روتین خواهد شد، کاهش داد.
+            </p>
+            <p class="mb-4 text-justify">
+                بازبینی دوره‌ای بهره‌برداری و نظارت بر سیستم آب باید برای ارزیابی تغییرپذیری فصلی آب منبع، اثربخشی ضدعفونی و رویدادهای نگهداری روتین انجام شود. بازبینی دوره‌ای باید در طول چرخه عمر کامل سیستم آب، معمولاً سالانه، برای شواهد روندهای داده‌های بلندمدت‌تر و انحرافات کیفی انجام شود.
+            </p>
+            <p class="mb-4 text-justify">
+                برنامه نمونه‌برداری روتین باید به صورت دوره‌ای بر اساس داده‌های موجود ارزیابی مجدد شود تا فرکانس و مکان‌های نمونه مناسب تعیین شوند. این بازبینی فرصتی برای بهبود ارزیابی داده‌ها و کاهش حجم کار بر اساس آنچه داده‌ها در رابطه با کنترل فرآیند و کیفیت نشان می‌دهند، فراهم می‌کند. برنامه نمونه‌برداری روتین باید دارای توجیهی برای فرکانس و مکان‌های انتخاب شده باشد تا نحوه استفاده از داده‌های حاصل برای توصیف عملکرد کلی سیستم و انتشار آب برای استفاده توجیه شود.
+            </p>
+
+            <h3 id="section6.4" class="text-xl font-semibold text-blue-600 mb-2">6.4 برنامه‌های نمونه‌برداری روتین</h3>
+
+            <h4 id="section6.4.1" class="text-lg font-semibold text-gray-700 mt-3 mb-2">6.4.1 نمونه‌برداری از آب منبع</h4>
+            <p class="mb-4 text-justify">
+                همانطور که در بخش‌های قبلی اشاره شد، آب منبع برای سیستم‌های آب دارویی باید با استانداردهای یکی از آب‌های آشامیدنی ذکر شده در مونوگراف آب مربوطه یا در اطلاعیه‌های عمومی مطابقت داشته باشد. هنگامی که یک شهرداری یا سایر مقامات آب این آب آشامیدنی را تأمین می‌کنند، آن‌ها ملزم به رعایت مقررات محلی آب آشامیدنی برای آب تأمین شده به شبکه لوله‌کشی توزیع آب آشامیدنی یا قابل شرب برای آن منطقه هستند. کیفیت آن آب تا زمانی که به کاربر دارویی می‌رسد، به تعدادی از عوامل از جمله فاصله از منبع ورودی، مدت زمان سفر در لوله‌کشی، و وضعیت لوله‌کشی در آن شبکه توزیع آب قابل شرب بستگی دارد که هر یک از آن‌ها می‌توانند برخی از ویژگی‌های شیمیایی و/یا میکروبی اولیه آن را به طور نامطلوبی تحت تأثیر قرار داده باشند. بر اساس ارزیابی ریسک، ممکن است معقول باشد که انطباق کامل با مقررات را با استفاده از آب جمع‌آوری شده از پورت‌های نمونه‌برداری قبل از سیستم پیش‌تصفیه، یا سایر خروجی‌های معادل آب آشامیدنی در تأسیسات تأیید کرد. اگر آب مطابق باشد، در این صورت اطمینان مداوم از انطباق را می‌توان با استفاده از نتایج آزمایش مقررات آب آشامیدنی ارائه شده توسط مقامات آب یا با آزمایش مجدد دوره‌ای برخی یا تمام ویژگی‌های آب آشامیدنی توسط کاربر یا هر دو کاربر و مقامات آب تأیید کرد. اگر از آب منبع خصوصی استفاده می‌شود، مسئولیت کاربر است که انطباق کامل با مقررات آب آشامیدنی را با استفاده از نمونه‌های آب از چنین پورت‌های نمونه‌برداری به صورت دوره‌ای که توسط تجزیه و تحلیل ریسک تعیین می‌شود، نشان دهد.
+            </p>
+            <p class="mb-4 text-justify">
+                این پورت‌های نمونه‌برداری قبل از پیش‌تصفیه می‌توانند، به صلاحدید کاربر، برای نظارت دوره‌ای بر سایر ویژگی‌های آب منبع که می‌توانند بر عملیات واحد پیش‌تصفیه یا تصفیه خاص تأثیر بگذارند، استفاده شوند. بسته به سازگاری کیفیت آب منبع کاربر و ارزیابی ریسک تأثیر بالقوه آن بر فرآیند تصفیه، ویژگی‌های نظارت شده دوره‌ای می‌توانند شامل شمارش میکروبی، عدم وجود کلیفرم‌ها، سطوح اندوتوکسین باکتریایی، رسانایی، <span class="ltr-text">TOC</span>، <span class="ltr-text">pH</span>، سختی، کلر، سیلیس، کدورت یا شاخص چگالی لجن و سایر موارد باشد. این داده‌ها می‌توانند در تحقیقات و برای تنظیمات عملیاتی پارامترهای عملیات واحد حیاتی و رویه‌های نگهداری، یا برای بازخورد به تأمین‌کننده آب آشامیدنی در صورت مشاهده روندهای غیرعادی مفید باشند.
+            </p>
+
+            <h4 id="section6.4.2" class="text-lg font-semibold text-gray-700 mt-3 mb-2">6.4.2 نمونه‌برداری از سیستم پیش‌تصفیه و تصفیه</h4>
+            <p class="mb-4 text-justify">
+                مکان و فرکانس نمونه‌برداری از پورت‌ها در سیستم‌های پیش‌تصفیه و تصفیه ممکن است بر اساس تجزیه و تحلیل ریسک هدف عملیات واحد انتخاب شود. هدف این نمونه‌برداری عمدتاً برای کنترل فرآیند (<span class="ltr-text">PC</span>) است، به عنوان مثال، برای اطمینان از حفظ عملکرد قابل قبول عملیات واحد، ارزیابی کارایی رویه نگهداری، و بررسی نیاز به اقدام اصلاحی. انحرافات کیفی در بخش‌های اولیه فرآیند تصفیه می‌تواند بر کارایی عملیات واحد تأثیر بگذارد اما معمولاً بر کیفیت آب نهایی یا استفاده قابل قبول تأثیری ندارد.
+            </p>
+
+            <h4 id="section6.4.3" class="text-lg font-semibold text-gray-700 mt-3 mb-2">6.4.3 نمونه‌برداری از سیستم توزیع آب خالص</h4>
+            <p class="mb-4 text-justify">
+                نمونه‌برداری از سیستم توزیع آب خالص به منظور فراهم آوردن اطمینان مستمر از کنترل فرآیند (<span class="ltr-text">PC</span>) و انطباق با الزامات شیمیایی و میکروبیولوژیکی آب نهایی کاربر است. به طور کلی، مکان‌های این نمونه‌برداری و فرکانس آزمایش ویژگی‌های خاص، مسئله‌ای از ثبات کنترل فرآیند و کیفیت، و همچنین تحمل ریسک در صورت بروز انحراف است.
+            </p>
+            <p class="mb-4 text-justify">
+                بسته به طراحی سیستم آب، ویژگی‌های شیمیایی یک سیستم آب تمایل دارند نسبتاً ثابت و یکنواخت‌تر از ویژگی‌های میکروبیولوژیکی توزیع شوند. بنابراین، نمونه‌برداری کمتر مکرر در تنها مکان‌های انتخاب شده می‌تواند برای آزمایش شیمیایی بر اساس آشنایی با طراحی سیستم و وجود داده‌های عملیاتی تاریخی سازگار توجیه شود. با این حال، با برخی از طراحی‌های سیستم تصفیه، کیفیت شیمیایی می‌تواند در مدت زمان کوتاهی به طور چشمگیری تغییر کند (مانند ناشی از خستگی بسترهای دیونیزاسیون)، بنابراین نظارت مکرر یا حتی مداوم درون‌خطی/آنلاین بر ویژگی‌های شیمیایی توصیه می‌شود تا بتوان علت مشکل را قبل از تولید و استفاده از آب ناسازگار شناسایی و اصلاح کرد.
+            </p>
+            <p class="mb-4 text-justify">
+                برای آزمایش میکروبی، تمام نقاط استفاده و پورت‌های نمونه حیاتی در یک سیستم توزیع معمولاً به صورت روتین نمونه‌برداری می‌شوند، از جمله آن‌هایی که به ندرت توسط تولید استفاده می‌شوند. هیچ فرکانس نمونه‌برداری تجویز شده‌ای برای خروجی‌های سیستم آب خالص وجود ندارد، بنابراین فرکانس‌های نمونه‌برداری معمولی خروجی از روزانه تا ماهانه متغیر است، با نمونه‌برداری که حداقل در فواصل هفتگی در جایی از سیستم انجام می‌شود.
+            </p>
+            <p class="mb-4 text-justify">
+                برای تعیین برنامه نمونه‌برداری برای یک سیستم آب خالص، تجزیه و تحلیل ریسک پیشنهاد می‌شود. عوامل در این تجزیه و تحلیل می‌توانند شامل (اما محدود به) سابقه نتایج آزمایش برای کل سیستم آب و همچنین خروجی‌های خاص، حیاتی بودن خروجی‌های خاص برای تولید، مفید بودن پورت‌های نمونه انتخاب شده به عنوان شاخص‌های کنترل مداوم سیستم، و دامنه تأثیر بر محصولات و فعالیت‌ها در صورت وقوع یک نتیجه آزمایش نامطلوب باشند. برای دامنه تأثیر، هرچه نمونه‌برداری کمتر مکرر باشد، محصولات و فرآیندهای بیشتری تحت تأثیر یک نتیجه آزمایش نامطلوب قرار خواهند گرفت.
+            </p>
+
+            <h4 id="section6.4.4" class="text-lg font-semibold text-gray-700 mt-3 mb-2">6.4.4 نمونه‌برداری از سیستم توزیع آب برای تزریق</h4>
+            <p class="mb-4 text-justify">
+                برنامه‌های نمونه‌برداری برای سیستم‌های توزیع آب برای تزریق (و همچنین هر سیستم آبی که در آن سطحی از کنترل اندوتوکسین باکتریایی لازم است) از همان رویکردهای نمونه‌برداری عمومی سیستم‌های آب خالص استفاده می‌کنند. با این حال، انتظارات نظارتی برای برنامه‌های نمونه‌برداری سیستم توزیع آب برای تزریق تجویزی‌تر هستند زیرا کنترل میکروبی باید بسیار سخت‌گیرانه‌تر باشد زیرا به ویژگی اندوتوکسین باکتریایی مربوط می‌شود. به طور کلی، انتظار می‌رود نمونه‌برداری آب برای آزمایش میکروبی و اندوتوکسین باکتریایی روزانه در جایی از سیستم انجام شود، با هر خروجی به صورت دوره‌ای، بر اساس ارزیابی ریسک، برای توصیف کیفیت آب نمونه‌برداری شود.
+            </p>
+
+            <h3 id="section6.5" class="text-xl font-semibold text-blue-600 mb-2">6.5 نمونه‌برداری غیرروتین</h3>
+            <p class="mb-4 text-justify">
+                نمونه‌برداری غیرروتین را می‌توان برای رویدادهای اپیزودیک یا دلایلی که برنامه‌های نمونه‌برداری روتین برای جمع‌آوری اطلاعات لازم کافی نیستند، بر روی سیستم آب نیز انجام داد. مثال‌ها شامل اهداف کنترل تغییر مانند ارزیابی تغییرات احتمالی در نمونه‌برداری، آزمایش، رویه‌های نگهداری یا طراحی سیستم؛ اهداف تحقیق در مورد انحراف داده یا رویداد؛ یا صرفاً برای اهداف اطلاعاتی بلندمدت و ایجاد مبنا برای ارزش تحقیقاتی آینده است. هدف از نمونه‌برداری غیرروتین، رویه‌های نمونه‌برداری مورد استفاده، ویژگی‌های مورد آزمایش، و مکان و تکرار وقوع (در صورت وجود) آن آزمایش را دیکته می‌کند. همچنین لازم به ذکر است که چنین نمونه‌برداری غیرروتین ممکن است از پورت‌های نمونه‌برداری انجام شود که ممکن است به صورت روتین آزمایش نشوند. پورت‌های نمونه‌برداری را می‌توان در یک سیستم آب صرفاً برای نمونه‌برداری تحقیقاتی و غیرروتین قرار داد، و به این ترتیب، نیازی نیست که بخشی از یک برنامه نمونه‌برداری روتین باشند.
+            </p>
+        </div>
+
+        <div class="card p-6 mb-8">
+            <h2 id="section7" class="text-2xl font-semibold text-blue-600 mb-4">7. ارزیابی‌های شیمیایی</h2>
+
+            <h3 id="section7.1" class="text-xl font-semibold text-blue-600 mb-2">7.1 آزمایش‌های شیمیایی برای آب‌های حجمی</h3>
+            <p class="mb-4 text-justify">
+                ویژگی‌های شیمیایی آب خالص و آب برای تزریق که قبل از <span class="ltr-text">USP 23</span> معتبر بودند، با یک سری آزمایش‌های شیمیایی برای ویژگی‌های خاص و غیرخاص با هدف تشخیص گونه‌های شیمیایی نشان‌دهنده تصفیه ناقص یا ناکافی مشخص شده بودند. اگرچه این روش‌ها را می‌توان به سختی برای کنترل کیفیت این آب‌ها کافی در نظر گرفت، اما با این وجود در گذر زمان ثابت شدند. این تا حدی به این دلیل بود که بهره‌برداری از سیستم‌های آب بر اساس اندازه‌گیری‌ها و مشخصات رسانایی آنلاین بود و هنوز هم هست که عموماً تصور می‌شد از عدم موفقیت این آزمایش‌های ویژگی شیمیایی کهنه جلوگیری می‌کند.
+            </p>
+            <p class="mb-4 text-justify">
+                در سال <span class="ltr-text">1996</span>، <span class="ltr-text">USP</span> از این آزمایش‌های ویژگی شیمیایی فاصله گرفت و به فناوری‌های تحلیلی معاصر برای آب‌های حجمی خالص و آب برای تزریق روی آورد. هدف، ارتقاء فناوری‌های تحلیلی بدون سخت‌گیرانه کردن الزامات کیفی بود. دو فناوری تحلیلی معاصر به کار گرفته شده، <span class="ltr-text">TOC</span> و رسانایی بودند. آزمایش <span class="ltr-text">TOC</span> جایگزین آزمایش مواد قابل اکسید شدن شد که عمدتاً آلاینده‌های آلی را هدف قرار می‌داد. یک آزمایش رسانایی چند مرحله‌ای که آلاینده‌های یونی (عمدتاً معدنی) را تشخیص می‌دهد، به استثنای آزمایش فلزات سنگین، جایگزین تمام آزمایش‌های شیمیایی معدنی (یعنی آمونیاک، کلسیم، دی‌اکسید کربن، کلرید، سولفات) شد.
+            </p>
+            <p class="mb-4 text-justify">
+                جایگزینی ویژگی فلزات سنگین غیرضروری تلقی شد زیرا <span class="ltr-text">1</span>) مشخصات آب منبع (یافته شده در <span class="ltr-text">NPDWR EPA</span> ایالات متحده) برای فلزات سنگین منفرد سخت‌گیرانه‌تر از حد تشخیص تقریبی آزمایش فلزات سنگین برای آب برای تزریق و آب خالص <span class="ltr-text">USP XXII</span> (تقریباً <span class="ltr-text">0.1 ppm</span>) بود، <span class="ltr-text">2</span>) مواد ساخت سیستم آب معاصر فلزات سنگین آلاینده را آزاد نمی‌کنند، و <span class="ltr-text">3</span>) نتایج آزمایش برای این ویژگی به طور یکنواخت منفی بوده است؛ از زمان اجرای استانداردهای فعلی آب آشامیدنی فلزات سنگین، هیچ مورد تأیید شده‌ای از یک خرابی آزمایش منفرد (خرابی تنها آزمایش فلزات سنگین با عبور سایر ویژگی‌ها) وجود نداشته است.
+            </p>
+            <p class="mb-4 text-justify">
+                کل مواد جامد و <span class="ltr-text">pH</span> تنها آزمایش‌هایی بودند که تحت پوشش آزمایش رسانایی قرار نگرفتند. آزمایش کل مواد جامد اضافی تلقی شد زیرا آزمایش‌های غیرانتخابی رسانایی و <span class="ltr-text">TOC</span> می‌توانستند بیشتر گونه‌های شیمیایی به جز سیلیس را تشخیص دهند، که ممکن بود در شکل کلوئیدی خود تشخیص داده نشود. سیلیس کلوئیدی در آب خالص و آب برای تزریق به راحتی توسط اکثر مراحل پیش‌تصفیه آب حذف می‌شود، و حتی اگر در آب وجود داشته باشد، به جز در موقعیت‌های شدید و نادر، خطر پزشکی یا عملکردی ندارد. در چنین موقعیت‌های شدید، سایر ویژگی‌های شدید نیز احتمالاً تشخیص داده می‌شوند. با این حال، مسئولیت کاربر است که مناسب بودن برای استفاده را تضمین کند. اگر سیلیس جزء قابل توجهی در آب منبع باشد، و عملیات واحد تصفیه بتواند از کار بیفتد و به طور انتخابی سیلیس را به آب نهایی آزاد کند (در غیاب آلاینده‌های همزمان قابل تشخیص با رسانایی)، در این صورت یا آزمایش خاص سیلیس یا آزمایش از نوع کل مواد جامد باید برای نظارت و کنترل این مشکل نادر استفاده شود.
+            </p>
+            <p class="mb-4 text-justify">
+                ویژگی <span class="ltr-text">pH</span> در نهایت به عنوان اضافی به آزمایش رسانایی (که <span class="ltr-text">pH</span> را به عنوان جنبه‌ای از آزمایش و مشخصات شامل می‌شد) شناخته شد؛ بنابراین، <span class="ltr-text">pH</span> به عنوان یک آزمایش ویژگی جداگانه متوقف شد.
+            </p>
+            <p class="mb-4 text-justify">
+                منطق مورد استفاده <span class="ltr-text">USP</span> برای تعیین مشخصات رسانایی آب خالص و آب برای تزریق، رسانایی ناشی از دو ویژگی سابق کم‌رسانا، کلرید و آمونیاک را در نظر گرفت، و از این رو از عدم موفقیت آن‌ها در صورت انجام آن آزمایش‌های شیمی تر جلوگیری کرد. در اصل، مشخصات رسانایی مرحله <span class="ltr-text">3</span> (به <a href="645.html" class="text-blue-600 hover:underline" target="_blank">645</a> رسانایی آب، آب حجمی، رویه، مرحله <span class="ltr-text">3</span> مراجعه کنید) از مجموع رسانایی‌های غلظت‌های حد یون‌های کلرید (از <span class="ltr-text">pH 5.0</span> تا <span class="ltr-text">6.2</span>) و یون‌های آمونیاک (از <span class="ltr-text">pH 6.3</span> تا <span class="ltr-text">7.0</span>) به علاوه سهم اجتناب‌ناپذیر سایر یون‌های مشارکت‌کننده در رسانایی از آب (<span class="ltr-text">H+</span> و <span class="ltr-text">OH−</span>)، دی‌اکسید کربن اتمسفری حل شده (به صورت <span class="ltr-text">HCO3−</span>)، و مقداری سدیم (<span class="ltr-text">Na+</span>) یا کلر (<span class="ltr-text">Cl−</span>) برای تعادل الکتریکی، بسته به عدم تعادل یونی ناشی از <span class="ltr-text">pH</span>، تعیین شد (به جدول <span class="ltr-text">1</span> مراجعه کنید). مشخصه رسانایی مرحله <span class="ltr-text">2</span> کمترین مقدار در این جدول، <span class="ltr-text">2.1 µS/cm</span> است. مشخصات مرحله <span class="ltr-text">1</span>، که عمدتاً برای اندازه‌گیری‌های آنلاین طراحی شده‌اند، اساساً با جمع‌آوری کمترین مقادیر در ستون‌های یون مشارکت‌کننده منفرد (<span class="ltr-text">H+</span>، <span class="ltr-text">OH−</span>، <span class="ltr-text">HCO3−</span>) و گروهی (<span class="ltr-text">Cl−</span>، <span class="ltr-text">Na+</span>، <span class="ltr-text">NH4+</span>) برای هر یک از یک سری جداول مشابه جدول <span class="ltr-text">1</span>، که برای هر افزایش <span class="ltr-text">5°</span> بین <span class="ltr-text">0°</span> و <span class="ltr-text">100°</span> ایجاد شده‌اند، به دست آمدند. برای مثال، مقادیر ایتالیک شده در جدول <span class="ltr-text">1</span>، جدول داده‌های رسانایی برای <span class="ltr-text">25°</span>، جمع‌آوری شدند تا یک مقدار محافظه‌کارانه <span class="ltr-text">1.3 µS/cm</span> را به دست آورند، که مشخصات مرحله <span class="ltr-text">1</span> برای یک نمونه آب بدون جبران دما، بدون تعادل اتمسفر که در واقع دمای اندازه‌گیری شده <span class="ltr-text">25°–29°</span> داشت، است. هر افزایش <span class="ltr-text">5°</span> در جدول به طور مشابه برای تولید مقادیر فردی ذکر شده در جدول مشخصات مرحله <span class="ltr-text">1</span> (به <a href="645.html" class="text-blue-600 hover:underline" target="_blank">645</a> رسانایی آب، آب حجمی) عمل شد.
+            </p>
+
+            <table class="table-auto border-collapse border border-gray-300 mx-auto my-4 text-sm md:text-base">
+                <caption>جدول <span class="ltr-text">1</span>. رسانایی یونی مشارکت‌کننده مدل کلرید-آمونیاک به عنوان تابعی از <span class="ltr-text">pH</span> (در آب متعادل با اتمسفر در <span class="ltr-text">25°</span>)</caption>
+                <thead>
+                    <tr>
+                        <th rowspan="2" class="border px-4 py-2">pH</th>
+                        <th colspan="7" class="border px-4 py-2">رسانایی (<span class="ltr-text">µS/cm</span>)</th>
+                    </tr>
+                    <tr>
+                        <th class="border px-4 py-2"><span class="ltr-text">H+</span></th>
+                        <th class="border px-4 py-2"><span class="ltr-text">OH−</span></th>
+                        <th class="border px-4 py-2"><span class="ltr-text">HCO3−</span></th>
+                        <th class="border px-4 py-2"><span class="ltr-text">Cl−</span></th>
+                        <th class="border px-4 py-2"><span class="ltr-text">Na+</span></th>
+                        <th class="border px-4 py-2"><span class="ltr-text">NH4+</span></th>
+                        <th class="border px-4 py-2">رسانایی‌های ترکیبی</th>
+                        <th class="border px-4 py-2">حد مرحله <span class="ltr-text">3</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border px-4 py-2 ltr-text">5.0</td>
+                        <td class="border px-4 py-2 ltr-text">3.49</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">0.02</td>
+                        <td class="border px-4 py-2 ltr-text">1.01</td>
+                        <td class="border px-4 py-2 ltr-text">0.19</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">4.71</td>
+                        <td class="border px-4 py-2 ltr-text">4.7</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2 ltr-text">5.1</td>
+                        <td class="border px-4 py-2 ltr-text">2.77</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">0.02</td>
+                        <td class="border px-4 py-2 ltr-text">1.01</td>
+                        <td class="border px-4 py-2 ltr-text">0.29</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">4.09</td>
+                        <td class="border px-4 py-2 ltr-text">4.1</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2 ltr-text">5.2</td>
+                        <td class="border px-4 py-2 ltr-text">2.20</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">0.03</td>
+                        <td class="border px-4 py-2 ltr-text">1.01</td>
+                        <td class="border px-4 py-2 ltr-text">0.38</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">3.62</td>
+                        <td class="border px-4 py-2 ltr-text">3.6</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2 ltr-text">5.3</td>
+                        <td class="border px-4 py-2 ltr-text">1.75</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">0.04</td>
+                        <td class="border px-4 py-2 ltr-text">1.01</td>
+                        <td class="border px-4 py-2 ltr-text">0.46</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">3.26</td>
+                        <td class="border px-4 py-2 ltr-text">3.3</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2 ltr-text">5.4</td>
+                        <td class="border px-4 py-2 ltr-text">1.39</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">0.05</td>
+                        <td class="border px-4 py-2 ltr-text">1.01</td>
+                        <td class="border px-4 py-2 ltr-text">0.52</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">2.97</td>
+                        <td class="border px-4 py-2 ltr-text">3.0</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2 ltr-text">5.5</td>
+                        <td class="border px-4 py-2 ltr-text">1.10</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">0.06</td>
+                        <td class="border px-4 py-2 ltr-text">1.01</td>
+                        <td class="border px-4 py-2 ltr-text">0.58</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">2.75</td>
+                        <td class="border px-4 py-2 ltr-text">2.8</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2 ltr-text">5.6</td>
+                        <td class="border px-4 py-2 ltr-text">0.88</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">0.08</td>
+                        <td class="border px-4 py-2 ltr-text">1.01</td>
+                        <td class="border px-4 py-2 ltr-text">0.63</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">2.60</td>
+                        <td class="border px-4 py-2 ltr-text">2.6</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2 ltr-text">5.7</td>
+                        <td class="border px-4 py-2 ltr-text">0.70</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">0.10</td>
+                        <td class="border px-4 py-2 ltr-text">1.01</td>
+                        <td class="border px-4 py-2 ltr-text">0.68</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">2.49</td>
+                        <td class="border px-4 py-2 ltr-text">2.5</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2 ltr-text">5.8</td>
+                        <td class="border px-4 py-2 ltr-text">0.55</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">0.12</td>
+                        <td class="border px-4 py-2 ltr-text">1.01</td>
+                        <td class="border px-4 py-2 ltr-text">0.73</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">2.41</td>
+                        <td class="border px-4 py-2 ltr-text">2.4</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2 ltr-text">5.9</td>
+                        <td class="border px-4 py-2 ltr-text">0.44</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">0.16</td>
+                        <td class="border px-4 py-2 ltr-text">1.01</td>
+                        <td class="border px-4 py-2 ltr-text">0.78</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">2.39</td>
+                        <td class="border px-4 py-2 ltr-text">2.4</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2 ltr-text">6.0</td>
+                        <td class="border px-4 py-2 ltr-text">0.35</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">0.20</td>
+                        <td class="border px-4 py-2 ltr-text">1.01</td>
+                        <td class="border px-4 py-2 ltr-text">0.84</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">2.40</td>
+                        <td class="border px-4 py-2 ltr-text">2.4</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2 ltr-text">6.1</td>
+                        <td class="border px-4 py-2 ltr-text">0.28</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">0.25</td>
+                        <td class="border px-4 py-2 ltr-text">1.01</td>
+                        <td class="border px-4 py-2 ltr-text">0.90</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">2.44</td>
+                        <td class="border px-4 py-2 ltr-text">2.4</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2 ltr-text">6.2</td>
+                        <td class="border px-4 py-2 ltr-text">0.22</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">0.31</td>
+                        <td class="border px-4 py-2 ltr-text">1.01</td>
+                        <td class="border px-4 py-2 ltr-text">0.99</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">2.53</td>
+                        <td class="border px-4 py-2 ltr-text">2.5</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2 ltr-text">6.3</td>
+                        <td class="border px-4 py-2 ltr-text">0.18</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">0.39</td>
+                        <td class="border px-4 py-2 ltr-text">0.63</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">1.22</td>
+                        <td class="border px-4 py-2 ltr-text">2.42</td>
+                        <td class="border px-4 py-2 ltr-text">2.4</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2 ltr-text">6.4</td>
+                        <td class="border px-4 py-2 ltr-text">0.14</td>
+                        <td class="border px-4 py-2 ltr-text">0.01</td>
+                        <td class="border px-4 py-2 ltr-text">0.49</td>
+                        <td class="border px-4 py-2 ltr-text">0.45</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">1.22</td>
+                        <td class="border px-4 py-2 ltr-text">2.31</td>
+                        <td class="border px-4 py-2 ltr-text">2.3</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2 ltr-text">6.5</td>
+                        <td class="border px-4 py-2 ltr-text">0.11</td>
+                        <td class="border px-4 py-2 ltr-text">0.01</td>
+                        <td class="border px-4 py-2 ltr-text">0.62</td>
+                        <td class="border px-4 py-2 ltr-text">0.22</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">1.22</td>
+                        <td class="border px-4 py-2 ltr-text">2.18</td>
+                        <td class="border px-4 py-2 ltr-text">2.2</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2 ltr-text">6.6</td>
+                        <td class="border px-4 py-2 ltr-text">0.09</td>
+                        <td class="border px-4 py-2 ltr-text">0.01</td>
+                        <td class="border px-4 py-2 ltr-text">0.78</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">0.04</td>
+                        <td class="border px-4 py-2 ltr-text">1.22</td>
+                        <td class="border px-4 py-2 ltr-text">2.14</td>
+                        <td class="border px-4 py-2 ltr-text">2.1</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2 ltr-text">6.7</td>
+                        <td class="border px-4 py-2 ltr-text">0.07</td>
+                        <td class="border px-4 py-2 ltr-text">0.01</td>
+                        <td class="border px-4 py-2 ltr-text">0.99</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">0.27</td>
+                        <td class="border px-4 py-2 ltr-text">1.22</td>
+                        <td class="border px-4 py-2 ltr-text">2.56</td>
+                        <td class="border px-4 py-2 ltr-text">2.6</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2 ltr-text">6.8</td>
+                        <td class="border px-4 py-2 ltr-text">0.06</td>
+                        <td class="border px-4 py-2 ltr-text">0.01</td>
+                        <td class="border px-4 py-2 ltr-text">1.24</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">0.56</td>
+                        <td class="border px-4 py-2 ltr-text">1.22</td>
+                        <td class="border px-4 py-2 ltr-text">3.09</td>
+                        <td class="border px-4 py-2 ltr-text">3.1</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2 ltr-text">6.9</td>
+                        <td class="border px-4 py-2 ltr-text">0.04</td>
+                        <td class="border px-4 py-2 ltr-text">0.02</td>
+                        <td class="border px-4 py-2 ltr-text">1.56</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">0.93</td>
+                        <td class="border px-4 py-2 ltr-text">1.22</td>
+                        <td class="border px-4 py-2 ltr-text">3.77</td>
+                        <td class="border px-4 py-2 ltr-text">3.8</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2 ltr-text">7.0</td>
+                        <td class="border px-4 py-2 ltr-text">0.03</td>
+                        <td class="border px-4 py-2 ltr-text">0.02</td>
+                        <td class="border px-4 py-2 ltr-text">1.97</td>
+                        <td class="border px-4 py-2 ltr-text">0</td>
+                        <td class="border px-4 py-2 ltr-text">1.39</td>
+                        <td class="border px-4 py-2 ltr-text">1.22</td>
+                        <td class="border px-4 py-2 ltr-text">4.63</td>
+                        <td class="border px-4 py-2 ltr-text">4.6</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="mb-4 text-justify">
+                همانطور که در بالا بیان شد، این تغییر نسبتاً رادیکال به استفاده از ویژگی رسانایی و همچنین گنجاندن ویژگی <span class="ltr-text">TOC</span> امکان اندازه‌گیری آنلاین را فراهم کرد. این یک تغییر فلسفی عمده بود و به صنعت اجازه داد تا صرفه‌جویی قابل توجهی را درک کند. آزمایش‌های <span class="ltr-text">TOC</span> و رسانایی را می‌توان به صورت خارج از خط در آزمایشگاه‌ها با استفاده از نمونه‌های جمع‌آوری شده نیز انجام داد، اگرچه جمع‌آوری نمونه تمایل به ایجاد فرصت‌هایی برای آلودگی‌های تصادفی دارد که می‌تواند باعث خوانش‌های بالا و نادرست شود. با این حال، جمع‌آوری داده‌های آنلاین بدون چالش نیست. خوانش‌های پیوسته تمایل به ایجاد حجم زیادی از داده‌ها دارند، در حالی که قبلاً تنها یک نقطه داده در دسترس بود. همانطور که در <a href="#section6" class="text-blue-600 hover:underline">6. نمونه‌برداری</a> بیان شد، داده‌های مداوم در فرآیند برای درک عملکرد یک سیستم آب در طول تمام رویدادهای مختلف استفاده و نگهداری آن در زمان واقعی عالی هستند، اما این مقدار داده برای اهداف <span class="ltr-text">QC</span> بسیار زیاد است. بنابراین، به عنوان مثال، می‌توان از بخش قابل توجیهی از داده‌ها (در زمان مشخص روزانه یا در زمان تولید دسته) یا بالاترین مقدار در یک دوره معین به عنوان بدترین حالت برای کیفیت کلی آب در آن دوره استفاده کرد. میانگین‌گیری داده‌ها به طور کلی به دلیل توانایی آن در پنهان کردن رویدادهای کیفی شدید کوتاه‌مدت، منع می‌شود.
+            </p>
+
+            <h3 id="section7.2" class="text-xl font-semibold text-blue-600 mb-2">7.2 آزمایش‌های شیمیایی برای آب‌های استریل</h3>
+            <p class="mb-4 text-justify">
+                آب‌های بسته‌بندی‌شده/استریل، معضل خاصی را در رابطه با ویژگی‌های رسانایی و <span class="ltr-text">TOC</span> نشان می‌دهند. خود بسته‌بندی منبع اصلی مواد شیمیایی (معدنی و آلی) است که به مرور زمان به آب بسته‌بندی‌شده نشت می‌کنند و به راحتی با آزمایش‌های رسانایی و <span class="ltr-text">TOC</span> قابل تشخیص هستند. کنایه از نشت آلی از بسته‌بندی پلاستیکی این است که قبل از ظهور آزمایش <span class="ltr-text">TOC</span> آب حجمی، زمانی که آزمایش مواد قابل اکسید شدن تنها آزمایش "خلوص آلی" برای هر دو مونوگراف آب حجمی و بسته‌بندی‌شده/استریل در <span class="ltr-text">USP</span> بود، حساسیت این آزمایش به بسیاری از مواد آلی قابل نشت از مواد بسته‌بندی پلاستیکی و الاستومری عمدتاً ناشناخته بود، که اجازه می‌داد سطوح آلی در آب بسته‌بندی‌شده/استریل بسیار بالا (احتمالاً چندین برابر مشخصات <span class="ltr-text">TOC</span> برای آب حجمی) باشد.
+            </p>
+            <p class="mb-4 text-justify">
+                به همین ترتیب، ظروف شیشه‌ای نیز می‌توانند مواد معدنی، مانند سدیم، را نشت دهند که به راحتی با رسانایی قابل تشخیص هستند اما با آزمایش‌های ویژگی شیمی تر قبلی به سختی تشخیص داده می‌شوند. بیشتر این مواد قابل نشت بر اساس تصورات و استانداردهای فعلی در غلظت‌های قابل توجه موجود، بی‌ضرر تلقی می‌شوند. با این وجود، آن‌ها به طور مؤثر کیفیت آب‌های با خلوص بالا را که در این سیستم‌های بسته‌بندی قرار می‌گیرند، تخریب می‌کنند. برخی از مواد بسته‌بندی حاوی مواد قابل نشت بیشتری نسبت به سایرین هستند و ممکن است برای نگهداری آب و حفظ خلوص آن به اندازه کافی مناسب نباشند.
+            </p>
+            <p class="mb-4 text-justify">
+                ویژگی‌های رسانایی و <span class="ltr-text">TOC</span> تمایل دارند اطلاعات بیشتری در مورد مواد قابل نشت بسته‌بندی نسبت به خلوص اولیه آب آشکار کنند. این مواد قابل نشت که در حال حاضر "مجاز" هستند، می‌توانند نسخه‌های استریل بسته‌بندی‌شده آب حجمی که در ابتدا معادل بودند را برای بسیاری از کاربردها که آب‌های حجمی کاملاً مناسب هستند، اساساً نامناسب کنند.
+            </p>
+            <p class="mb-4 text-justify">
+                بنابراین، برای کنترل بهتر مواد قابل نشت یونی بسته‌بندی، <a href="645.html" class="text-blue-600 hover:underline" target="_blank">645</a> به دو بخش تقسیم می‌شود. بخش اول، <a href="645.html" class="text-blue-600 hover:underline" target="_blank">645</a> رسانایی آب، آب حجمی، برای آب خالص، آب برای تزریق، آب برای همودیالیز، و بخار خالص اعمال می‌شود و شامل دستورالعمل‌ها و مشخصات آزمایش رسانایی سه مرحله‌ای است. بخش دوم، <a href="645.html" class="text-blue-600 hover:underline" target="_blank">645</a> رسانایی آب، آب استریل، برای آب خالص استریل، آب استریل برای تزریق، آب استریل برای استنشاق، و آب استریل برای شستشو اعمال می‌شود. بخش آب استریل شامل مشخصات رسانایی مشابه رویکرد آزمایش مرحله <span class="ltr-text">2</span> <a href="645.html" class="text-blue-600 hover:underline" target="_blank">645</a> رسانایی آب، آب حجمی است زیرا به عنوان یک آزمایش آزمایشگاهی در نظر گرفته شده است، و این آب‌های استریل از آب حجمی ساخته شده‌اند که قبلاً با آزمایش رسانایی سه مرحله‌ای مطابقت داشت. در اصل، مواد قابل نشت بسته‌بندی، آنالیت‌های هدف اصلی مشخصات رسانایی در <a href="645.html" class="text-blue-600 hover:underline" target="_blank">645</a> رسانایی آب، آب استریل هستند. تأثیر بر مواد قابل نشت بالقوه از اندازه‌های مختلف ظروف، منطق داشتن دو مشخصات متفاوت است، یکی برای بسته‌های کوچک حاوی حجم‌های اسمی <span class="ltr-text">10 ml</span> یا کمتر و دیگری برای بسته‌های بزرگتر. این مشخصات رسانایی با مشخصات رسانایی فارماکوپه اروپا برای آب استریل برای تزریق هماهنگ شده است. تمام آب‌های مونوگراف شده، به جز آب باکتریواستاتیک برای تزریق، دارای یک مشخصه رسانایی هستند که کاربر را به بخش آب حجمی یا آب استریل ارجاع می‌دهد. برای مونوگراف‌های آب بسته‌بندی شده استریل، این مشخصه رسانایی آب جایگزین آزمایش‌های حد شیمی تر اضافی می‌شود که قبلاً در این مونوگراف‌ها برای آلاینده‌های معدنی مشخص شده بود.
+            </p>
+            <p class="mb-4 text-justify">
+                کنترل خلوص آلی این آب‌های بسته‌بندی شده استریل، به ویژه آن‌هایی که در بسته‌بندی پلاستیکی قرار دارند، چالش‌برانگیزتر است. اگرچه آزمایش <span class="ltr-text">TOC</span> می‌تواند این ناخالصی‌ها را بهتر تشخیص دهد و بنابراین می‌توان از آن برای نظارت و کنترل این ناخالصی‌ها بهتر از آزمایش فعلی مواد قابل اکسید شدن استفاده کرد، اما آزمایش اخیر سابقه‌ای چندین ده ساله از استفاده دارد و انعطاف‌پذیری لازم برای آزمایش انواع بسته‌بندی‌ها و حجم‌هایی را دارد که برای این آب‌های بسته‌بندی شده استریل قابل استفاده هستند. با این وجود، آزمایش <span class="ltr-text">TOC</span> این آب‌های استریل بسته‌بندی شده پلاستیکی که در حال حاضر مجاز هستند، سطوح قابل توجهی از مواد آلی قابل نشت از پلاستیک را نشان می‌دهد که آب را احتمالاً چندین مرتبه کمتر از نظر آلی خالص‌تر از آنچه معمولاً با آب‌های حجمی به دست می‌آید، می‌کند. بنابراین، استفاده از این آب‌های بسته‌بندی شده برای کاربردهای تحلیلی، تولیدی و تمیز کردن تنها باید پس از تأیید مناسب بودن خلوص آب برای کاربرد انجام شود.
+            </p>
+
+            <h3 id="section7.3" class="text-xl font-semibold text-blue-600 mb-2">7.3 زمان‌های نگهداری و ذخیره‌سازی برای آزمایش‌های شیمیایی</h3>
+            <p class="mb-4 text-justify">
+                به دلیل ماهیت همگن ناخالصی‌های شیمیایی در آب، برخلاف چالش‌های ناخالصی‌های میکروبی، الزامات ذخیره‌سازی و تأثیر زمان نگهداری به صورت بسیار عملی تعیین می‌شوند. به طور کلی، خلوص شیمیایی نمونه‌های آب با خلوص بالا تنها با گذشت زمان می‌تواند کاهش یابد، و احتمالاً منجر به یک نتیجه ناموفق برای نمونه‌ای شود که اگر بلافاصله یا آنلاین آزمایش می‌شد، موفق می‌شد. واقعیت کلی این است که هرچه نمونه‌ها بیشتر ذخیره شوند، پتانسیل تأثیر نامطلوب ظروف یا شرایط بیشتر می‌شود.
+            </p>
+            <p class="mb-4 text-justify">
+                برای آزمایش‌های شیمیایی خارج از خط آب‌ها، هیچ الزام کامپندیالی برای زمان و شرایط ذخیره‌سازی وجود ندارد. با این حال، توصیه کلی این است که آزمایش‌ها در اسرع وقت انجام شود تا از نتایج نامطلوب کاذب جلوگیری شود. در صورت امکان، در جای خنک نگهداری و در اسرع وقت اندازه‌گیری کنید. این امر احتمال آلودگی نمونه آب را با گذشت زمان کاهش می‌دهد، و این امر تحقیقات بی‌مورد و غیرضروری در مورد نتایج مثبت کاذب را کاهش می‌دهد.
+            </p>
+
+            <h4 id="section7.3.1" class="text-lg font-semibold text-gray-700 mt-3 mb-2">7.3.1 ظروف</h4>
+            <p class="mb-4 text-justify">
+                هنگام نمونه‌برداری از آب برای تجزیه و تحلیل خارج از خط، انتخاب و تمیزی ظرف نقش مهمی در به دست آوردن داده‌های دقیق دارد. برای نمونه‌هایی که قرار است برای ناخالصی‌های شیمیایی طبق <a href="645.html" class="text-blue-600 hover:underline" target="_blank">645</a> و <a href="643.html" class="text-blue-600 hover:underline" target="_blank">643</a> کربن آلی کل آزمایش شوند، ظرف مناسب باید ظرفی باشد که در طول زمان ذخیره‌سازی/نگهداری، نمونه را آلوده نکند. به عنوان مثال، استفاده و آماده‌سازی ظروف شیشه‌ای می‌تواند برای نگهداری نمونه‌ها برای آزمایش <span class="ltr-text">TOC</span> بسیار قابل قبول باشد، اما برخی از ظروف شیشه‌ای با گذشت زمان (ساعت‌ها و روزها)، یون‌ها را نشت می‌دهند و می‌توانند با ایجاد یک نتیجه مثبت کاذب - اگر زمان نگهداری بیش از حد طولانی باشد - بر آزمایش رسانایی تأثیر نامطلوب بگذارند. به همین ترتیب، برخی از مواد پلیمری وجود دارند که می‌توانند بر ناخالصی شیمیایی <span class="ltr-text">TOC</span> در آب تأثیر نامطلوب بگذارند. با این حال، بسیاری از مواد پلیمری بسیار بی‌اثر هستند.
+            </p>
+            <p class="mb-4 text-justify">
+                در هر صورت، تمیزی ظرف بسیار مهم است زیرا مقادیر ناچیزی از صابون‌ها و اثر انگشت به طور نامطلوب بر خلوص شیمیایی آب تأثیر می‌گذارند. ظروف به درستی تمیز شده قابل قبول هستند زیرا ناخالصی‌های شیمیایی به راحتی با شستشو از بین می‌روند. روش‌های تمیز کردن شیمیایی گسترده مانند شستشو با اسید یا قلیایی هرگز نباید مورد نیاز باشند. اگر مورد نیاز باشند، جایگزینی ظروف را در نظر بگیرید.
+            </p>
+
+            <h4 id="section7.3.2" class="text-lg font-semibold text-gray-700 mt-3 mb-2">7.3.2 زمان و شرایط نگهداری</h4>
+            <p class="mb-4 text-justify">
+                هیچ توصیه خاصی برای نگهداری نمونه‌ها برای تجزیه و تحلیل آب وجود ندارد. اگر تعامل ناچیزی بین ظرف و آب وجود داشته باشد، به طور کلی زمان‌های نگهداری سردتر و کوتاه‌تر بهتر از زمان‌های نگهداری گرمتر و طولانی‌تر هستند. انحلال و واکنش‌پذیری شیمیایی معمولاً با افزایش دما افزایش می‌یابد. علاوه بر این، زمان همیشه یک عنصر است زیرا کیفیت نمونه آب فقط در یک ظرف بدتر می‌شود و با گذشت زمان هرگز بهتر نمی‌شود.
+            </p>
+
+            <h3 id="section7.4" class="text-xl font-semibold text-blue-600 mb-2">7.4 ناخالصی‌های عنصری در آب‌های دارویی</h3>
+            <p class="mb-4 text-justify">
+                ناخالصی‌های عنصری (<span class="ltr-text">EI</span>) محدودترین حد را برای آب برای تزریق مورد استفاده در تولید داروهای تزریقی، به ویژه تزریقات با حجم زیاد (به <a href="1.html" class="text-blue-600 hover:underline" target="_blank">1</a> تزریقات و محصولات دارویی کاشته شده برای تعریف تزریقات با حجم زیاد) به دلیل دوز بالا دارند. محدودترین حد تماس روزانه مجاز (<span class="ltr-text">PDE</span>) <span class="ltr-text">EI</span> مربوط به سرب، جیوه، کادمیوم و آرسنیک است. سایر <span class="ltr-text">EI</span> ذکر شده در <a href="232.html" class="text-blue-600 hover:underline" target="_blank">232</a>، <span class="ltr-text">PDE</span> قابل توجهی بالاتر را مجاز می‌دانند، و بنابراین محدودیت کمتری دارند.
+            </p>
+            <p class="mb-4 text-justify">
+                آبی که با مقررات ملی آب آشامیدنی اولیه <span class="ltr-text">EPA</span> ایالات متحده یا دستورالعمل‌های آب آشامیدنی <span class="ltr-text">WHO</span> مطابقت دارد و با فناوری‌های معمولی مورد استفاده برای تولید آب برای تزریق تصفیه شده است، می‌تواند با <a href="232.html" class="text-blue-600 hover:underline" target="_blank">232</a> برای داروهای تزریقی مطابقت داشته باشد.
+            </p>
+            <p class="mb-4 text-justify">
+                جدول <span class="ltr-text">2</span> نشان می‌دهد که آب منبعی که با <span class="ltr-text">US EPA NPDWR</span> یا دستورالعمل‌های آب آشامیدنی <span class="ltr-text">WHO</span> مطابقت دارد، حداکثر سطوح آلاینده (غلظت) برای سرب، جیوه، کادمیوم و آرسنیک را دارد که کمتر یا مساوی <span class="ltr-text">10</span> برابر (<span class="ltr-text">1-log</span>) بیشتر از حدود <span class="ltr-text">EI</span> برای داروهای تزریقی است، بر اساس دوز روزانه <span class="ltr-text">2000 ml</span>. برای تزریق با حجم کمتر، دوز روزانه مجاز <span class="ltr-text">EI</span> به طور متناسب بالاتر است. فناوری‌های تصفیه مورد نیاز برای تولید آب برای تزریق که ناخالصی‌ها را با ضریب <span class="ltr-text">100</span> تا <span class="ltr-text">1000</span> کاهش می‌دهند، انطباق با <a href="232.html" class="text-blue-600 hover:underline" target="_blank">232</a> را تضمین می‌کنند، مشروط بر اینکه هیچ ناخالصی عنصری در طول فرآیند، بسته‌بندی، تحویل یا ذخیره‌سازی اضافه نشود.
+            </p>
+
+            <table class="table-auto border-collapse border border-gray-300 mx-auto my-4 text-sm md:text-base">
+                <caption>جدول <span class="ltr-text">2</span>. حدود ناخالصی‌های عنصری برای فرآورده‌های دارویی و اجزای آب آن‌ها بر اساس <a href="232.html" class="text-blue-600 hover:underline" target="_blank">232</a></caption>
+                <thead>
+                    <tr>
+                        <th class="border px-4 py-2">عنصر</th>
+                        <th class="border px-4 py-2">PDE تزریقی<br>(<span class="ltr-text">µg/day</span>)</th>
+                        <th class="border px-4 py-2">دوز روزانه تزریقی<br>(<span class="ltr-text">µg/mL</span><span class="ltr-text"><sup>a</sup></span>)</th>
+                        <th class="border px-4 py-2">مقررات ملی آب آشامیدنی اولیه <span class="ltr-text">U.S. EPA</span><br>(<span class="ltr-text">µg/mL</span><span class="ltr-text"><sup>b</sup></span>)</th>
+                        <th class="border px-4 py-2">دستورالعمل‌های آب آشامیدنی <span class="ltr-text">WHO</span><br>(<span class="ltr-text">µg/mL</span><span class="ltr-text"><sup>b</sup></span>)</th>
+                        <th class="border px-4 py-2">نتیجه کاهش <span class="ltr-text">2-Log</span> غلظت <span class="ltr-text">EI</span> برای <span class="ltr-text">WFI</span><br>(<span class="ltr-text">µg/mL</span><span class="ltr-text"><sup>c</sup></span>)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border px-4 py-2">کادمیوم</td>
+                        <td class="border px-4 py-2 ltr-text">2</td>
+                        <td class="border px-4 py-2 ltr-text">0.001</td>
+                        <td class="border px-4 py-2 ltr-text">0.005</td>
+                        <td class="border px-4 py-2 ltr-text">0.003</td>
+                        <td class="border px-4 py-2 ltr-text">0.00005</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2">سرب</td>
+                        <td class="border px-4 py-2 ltr-text">5</td>
+                        <td class="border px-4 py-2 ltr-text">0.0025</td>
+                        <td class="border px-4 py-2 ltr-text">0.015</td>
+                        <td class="border px-4 py-2 ltr-text">0.01</td>
+                        <td class="border px-4 py-2 ltr-text">0.00015</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2">آرسنیک معدنی</td>
+                        <td class="border px-4 py-2 ltr-text">15</td>
+                        <td class="border px-4 py-2 ltr-text">0.0075</td>
+                        <td class="border px-4 py-2 ltr-text">0.01</td>
+                        <td class="border px-4 py-2 ltr-text">0.01</td>
+                        <td class="border px-4 py-2 ltr-text">0.0001</td>
+                    </tr>
+                    <tr>
+                        <td class="border px-4 py-2

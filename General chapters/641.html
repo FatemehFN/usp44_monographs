@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>641. کامل بودن محلول</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <div class="card">
+            <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">641. کامل بودن محلول</h1>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+            <p class="mb-4">مواد زیر را اضافه کنید:</p>
+
+            <p class="mb-4">▲هدف از این روش‌ها، تأیید انحلال کامل یک یا چند ماده در محلول است. این روش‌ها ممکن است برای تأیید حلالیت توصیفی یک ماده طبق جدول حلالیت در اطلاعیه‌های عمومی، 5.30 توصیف و حلالیت، استفاده شوند.</p>
+            <p class="mb-4">برای تأیید حلالیت توصیفی، از حداکثر مقدار حلال مشخص شده برای حلالیت توصیفی در جدول حلالیت (به اطلاعیه‌های عمومی، 5.30 توصیف و حلالیت مراجعه کنید) استفاده کنید. به عنوان مثال، برای "محلول" از 30 قسمت حلال استفاده کنید. در این مقدار حلال، 1 قسمت ماده حل شونده را با دقت 0.5% وزن کنید. مگر اینکه در مونوگراف طور دیگری مشخص شده باشد، کامل بودن محلول باید در دمای 25 درجه سانتیگراد ارزیابی شود.</p>
+            <p class="mb-4">ارزیابی کامل بودن محلول، همانطور که در این فصل شرح داده شده است، یک معیار دقیق از حلالیت ترکیب را ارائه نمی‌دهد. اصطلاحات حلالیت توصیفی فوق نباید با اصطلاحات "حلالیت بالا" و "حلالیت پایین" که در سیستم طبقه‌بندی دارویی بیولوژیکی به مواد دارویی اطلاق می‌شود، اشتباه گرفته شود.1, 2 برای اطلاعات بیشتر در مورد اندازه‌گیری دقیق حلالیت و تعیین حلالیت زیستی، به اندازه‌گیری حلالیت <a href="1236.html" class="text-blue-600 hover:underline" target="_blank">1236</a> مراجعه کنید.</p>
+            <p class="mb-4">مگر اینکه در مونوگراف جداگانه طور دیگری هدایت شده باشد، از روش I استفاده کنید.▲ (USP 1-Aug-2020)</p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">روش‌ها</h2>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش I</h4>
+            <p class="mb-4">به شرح زیر تغییر دهید:</p>
+
+            <p class="mb-4">▲روش I▲ (USP 1-AUG-2020)</p>
+            <p class="mb-4">مقدار ماده مشخص شده در مونوگراف جداگانه را در یک <span class="ltr-text">10-mL</span> <span class="ltr-text">color-comparison tube</span> که به دقت تمیز شده و دارای درپوش شیشه‌ای است، قرار دهید. (USP 1-Aug-2020) با استفاده از حلال مشخص شده در مونوگراف یا روی برچسب محصول، <span class="ltr-text">color-comparison tube</span> را تا علامت <span class="ltr-text">10-mL</span> پر کنید. (USP 1-Aug-2020) به آرامی تکان دهید تا حل شود: محلول نباید کدرتر از حجمی برابر از همان حلال باشد که در یک <span class="ltr-text">matched color-comparison tube</span> قرار گرفته است (USP 1-Aug-2020) و به طور مشابه بررسی می‌شود (به مقایسه بصری <a href="630.html" class="text-blue-600 hover:underline" target="_blank">630</a>، شرایط مشاهده برای مقایسه کدورت مراجعه کنید).▲ (USP 1-Aug-2020)</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش II</h4>
+            <p class="mb-4">مواد زیر را اضافه کنید:</p>
+
+            <p class="mb-4">▲روش II</p>
+            <p class="mb-4">مقدار ماده مشخص شده در مونوگراف جداگانه را در یک فلاسک <span class="ltr-text">10-mL</span> که به دقت تمیز شده است، قرار دهید. 10 میلی‌لیتر از حلال مشخص شده در مونوگراف یا روی برچسب محصول را اضافه کنید. به آرامی تکان دهید تا حل شود. محلول را به یک لوله اندازه‌گیری مناسب منتقل کرده و کدورت محلول آماده شده را طبق روش کدورت‌سنجی و کدورت‌سنجی <a href="855.html" class="text-blue-600 hover:underline" target="_blank">855</a> اندازه‌گیری کنید. معیار پذیرش این است که کدورت آماده‌سازی نمونه نباید بیشتر از سوسپانسیون مرجع II در <a href="855.html" class="text-blue-600 hover:underline" target="_blank">855</a>، جدول 1 باشد (حداکثر 6 واحد کدورت نفلومتری (NTU)).▲ (USP 1-Aug-2020)</p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">منابع</h2>
+            <ol class="list-decimal list-inside mb-4">
+                <li>US Food and Drug Administration. Guidance for industry. Waiver of in vivo bioavailability and bioequivalence studies for immediate-release solid oral dosage forms based on a biopharmaceutics classification system. Rockville, MD: US Food and Drug Administration; December 2017.</li>
+                <li>USP. Reagents and Reference Tables, Solutions, Buffer Solutions, 4. Standard Buffer Solutions, 4.1 Preparation. In: USP–NF. Rockville, MD: USP; 1 May 2018. <a href="https://online.uspnf.com/uspnf/document/GUID-0E4CE941-0762-456C-94B0-9209A58834FC" class="text-blue-600 hover:underline" target="_blank">https://online.uspnf.com/uspnf/document/GUID-0E4CE941-0762-456C-94B0-9209A58834FC</a>.</li>
+            </ol>
+
+            <div class="text-center text-sm text-gray-500 mt-8">
+                <p>1</p>
+                <p>Printed on: Tue Aug 10 2021, 06:22:04 PM (EST)</p>
+                <p>Official Status: Currently Official on 10-Aug-2021</p>
+                <p>DocId: 1_GUID-A2626350-169E-4D3E-8F8D-4CFDBA9A1E47_2_en-US</p>
+                <p>Printed by: Le Tran</p>
+                <p>Official Date: Official as of 01-Nov-2020</p>
+                <p>Document Type: GENERAL CHAPTER</p>
+                <p>&copy;2021 USPC</p>
+                <p><a href="https://online.uspnf.com/uspnf/document/1_GUID-A2626350-169E-4D3E-8F8D-4CFDBA9A1E47_2_en-US" class="text-blue-600 hover:underline" target="_blank">https://online.uspnf.com/uspnf/document/1_GUID-A2626350-169E-4D3E-8F8D-4CFDBA9A1E47_2_en-US</a></p>
+                <p>1/1</p>
+                <p>Official</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

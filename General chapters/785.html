@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>۷۸۵. اسمولالیته و اسمولاریته</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <div class="card">
+            <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">۷۸۵. اسمولالیته و اسمولاریته</h1>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">مقدمه</h2>
+            <p class="mb-4">فشار اسمزی در تمام فرآیندهای بیولوژیکی که شامل نفوذ مواد محلول یا انتقال مایعات از طریق غشاها می‌شود، نقش حیاتی ایفا می‌کند.</p>
+            <p class="mb-4">اسمز زمانی رخ می‌دهد که فشار اسمزی، حلال (و نه ماده محلول) را از نواحی با غلظت ماده محلول کمتر به نواحی با غلظت ماده محلول بیشتر، تا رسیدن به تعادل، هدایت می‌کند. فشار اسمزی یک خاصیت هم‌بند (colligative property) است که به تعداد مول‌های مواد محلول موجود در محلول بستگی دارد، نه به هویت آن‌ها. اندازه‌گیری کمی تعداد مول‌های مواد محلول در محلول برای پیش‌بینی و کنترل آسیب احتمالی به بافت‌های بیولوژیکی ناشی از انتقال مایعات در سراسر غشاهای بافت بیولوژیکی ضروری است.</p>
+            <p class="mb-4">اصطلاحات اسمولالیته، اسمولاریته و تونیسیته اغلب برای توصیف تعداد مواد محلول در محلول استفاده می‌شوند، اما استفاده نادرست از این اصطلاحات به جای یکدیگر صحیح نیست. اندازه‌گیری تعداد مواد محلول در محلول، با استفاده از خواص هم‌بند، امکان تعیین مستقیم اسمولالیته محلول را با واحدهای مول ماده محلول در کیلوگرم حلال فراهم می‌کند. این نتیجه می‌تواند به مقداری برای اسمولاریته با واحدهای مول ماده محلول در لیتر حلال، که معمولاً آب است، تبدیل شود. تونیسیته یک اصطلاح پزشکی است که به اختلاف فشار اسمزی بین طرفین داخلی و خارجی غشای سلولی مربوط می‌شود.</p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">پیش‌زمینه نظری</h2>
+            <p class="mb-4">فشار اسمزی یک محلول به تعداد مواد محلول در محلول بستگی دارد و بنابراین به عنوان یک خاصیت هم‌بند شناخته می‌شود. برای یک محلول ایده‌آل با آب به عنوان حلال، فشار اسمزی، <span class="ltr-text">Π</span>، تابعی از فعالیت آب، <span class="ltr-text">aW</span> است:</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\Pi = -\frac{V_m}{R T} \ln a_W = \gamma_W R T x_W\)</p>
+            </div>
+            <p class="mb-4">در این رابطه <span class="ltr-text">Vm</span> حجم مولی آب در دمای <span class="ltr-text">T</span> است، <span class="ltr-text">Vm = 18.018 cm<sup>3</sup>mol<sup>-1</sup></span> در <span class="ltr-text">273.15 K</span> (1)؛ <span class="ltr-text">R</span> ثابت گازها است، <span class="ltr-text">R = 8.3144598 J mol<sup>-1</sup> K<sup>-1</sup></span> (2)؛ <span class="ltr-text">T</span> دما بر حسب کلوین است؛ <span class="ltr-text">γW</span> ضریب فعالیت آب است؛ و <span class="ltr-text">xW</span> کسر مولی آب است، <span class="ltr-text">xW = (1 − xS)</span>، که در آن <span class="ltr-text">xS</span> کسر مولی ماده محلول است. در غلظت‌های پایین ماده محلول (<span class="ltr-text">\(-ln a_W \approx x_S \approx n_S/n_W\)</span>)، معادله فشار اسمزی فوق را می‌توان به معادله وانت هوف برای فشار اسمزی ساده کرد که بیان می‌کند:</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\Pi = \frac{n_S R T}{V} = \frac{n_S}{V} R T = \frac{n_S m_W}{MW_W} \frac{R T}{V}\)</span></p>
+            </div>
+            <p class="mb-4">که در آن</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\frac{n_S}{m_W/MW_W} = \xi_{m,ideal} \times \nu \approx \nu m\), \(\nu m\)<span class="ltr-text"></span></span></p>
+            </div>
+            <p class="mb-4">که منجر به:</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\Pi = \frac{\nu m R T}{V_m}\)</span></p>
+            </div>
+            <p class="mb-4">می‌شود، که در آن <span class="ltr-text">nS</span> تعداد مول‌های مولکول‌های ماده محلول است؛ <span class="ltr-text">nW</span> تعداد مول‌های مولکول‌های آب است؛ <span class="ltr-text">V</span> حجم آب در دما، <span class="ltr-text">T</span> است؛ <span class="ltr-text">MW</span> جرم مولی آب است، <span class="ltr-text">MW = 18.015268 g mol<sup>-1</sup></span> (3)؛ <span class="ltr-text">ξm,ideal</span> اسمولالیته محلول بر حسب مول بر کیلوگرم آب است؛ <span class="ltr-text">ν</span> ضریب استوکیومتری ماده محلول است؛ و <span class="ltr-text">m</span> غلظت مولال ماده محلول بر حسب مول ماده محلول در کیلوگرم آب است. برای یک ماده محلول ایده‌آل غیرمتقارن، <span class="ltr-text">ν = 1</span> و اسمولالیته، <span class="ltr-text">ξm</span>، برابر با غلظت مولال ماده محلول است. برای یک ماده محلول متقارن، <span class="ltr-text">ν</span> برابر با تعداد مول‌های استوکیومتری است که یک مول ماده محلول به آن‌ها تجزیه می‌شود. برای مواد محلول غیر ایده‌آل، یک ضریب اسمولالیته، <span class="ltr-text">Φm</span>، برای تصحیح تفاوت بین رفتار پیش‌بینی شده محلول‌های ایده‌آل و رفتار مشاهده شده محلول‌های واقعی معرفی می‌شود. ضریب اسمولالیته به صورت زیر تعریف می‌شود:</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\Phi_m = \frac{-\ln a_W}{\nu m} = \frac{\xi_{m,real}}{\xi_{m,ideal}}\)</span></p>
+            </div>
+            <p class="mb-4">بنابراین، اسمولالیته یک محلول واقعی:</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\xi_{m,real} = \nu m \Phi_m\)</span></p>
+            </div>
+            <p class="mb-4">هنگامی که چندین ماده محلول وجود دارد، اسمولالیته را می‌توان با جمع کردن سهم همه مواد محلول منفرد، <span class="ltr-text">i</span>، به صورت زیر تخمین زد:</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\xi_{m,real} = \sum_i \nu_i m_i \Phi_{m,i}\)</span></p>
+            </div>
+            <p class="mb-4">که در آن <span class="ltr-text">mi</span> غلظت مولال <span class="ltr-text">ith</span> ماده محلول است؛ <span class="ltr-text">νi</span> تعداد یون‌هایی است که ماده محلول به آن‌ها تجزیه می‌شود؛ و <span class="ltr-text">Φm,i</span> ضریب اسمولالیته برای <span class="ltr-text">ith</span> ماده محلول در مولالیته، <span class="ltr-text">m</span>، است. این رویکرد افزودنی ساده شده فرض می‌کند که ضریب اسمولالیته برای هر ماده محلول در مخلوط با ضریب اسمولالیته تعیین شده برای ماده محلول منفرد تفاوت ندارد (4).</p>
+            <p class="mb-4">علاوه بر فشار اسمزی، سایر خواص هم‌بند می‌توانند برای اندازه‌گیری اسمولالیته محلول‌ها از جمله کاهش دمای شبنم، افزایش دمای جوش و کاهش نقطه انجماد استفاده شوند. رایج‌ترین روش برای تجزیه و تحلیل اسمولالیته محلول‌ها، کاهش نقطه انجماد است. کاهش نقطه انجماد، <span class="ltr-text">ΔTf</span>، یک محلول آبی نسبت به آب خالص، متناسب با تغییر در فعالیت آب، <span class="ltr-text">aW</span> است:</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\Delta T_f = -\frac{R T^2}{\Delta H_{fus}} \ln a_W\)</span></p>
+            </div>
+            <p class="mb-4">که در آن <span class="ltr-text">ΔHfus</span> آنتالپی ذوب آب است، و <span class="ltr-text">Tf</span> نقطه انجماد محلول بر حسب کلوین است. در غلظت‌های پایین ماده محلول، این را می‌توان برای بیان کاهش نقطه انجماد بر حسب اسمولالیته به صورت زیر ساده کرد:</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\Delta T_f = K_f \xi_m\)</span></p>
+            </div>
+            <p class="mb-4">که در آن</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\Delta T_f = \frac{R T_f^2}{1000 \Delta H_{fus}} \xi_m\)</span></p>
+            </div>
+            <p class="mb-4">مقدار <span class="ltr-text">ΔHfus</span> وابسته به دما است (3) و <span class="ltr-text">Kf</span> نیز همینطور؛ با این حال، <span class="ltr-text">Kf</span> معمولاً به عنوان یک ثابت در نظر گرفته می‌شود و با مقدار آب خالص در نقطه انجماد تنظیم می‌شود. برای آب، مقدار <span class="ltr-text">ΔHfus</span> در <span class="ltr-text">273.15 K</span> برابر با <span class="ltr-text">6006.78 J mol<sup>-1</sup></span> (3) است که مقدار <span class="ltr-text">Kf</span> برابر با <span class="ltr-text">1.86056 K kg mol<sup>-1</sup></span> را می‌دهد.</p>
+            <p class="mb-4">اسمومترهای فشار بخار، رطوبت نسبی هوا بالای نمونه را که در تعادل با نمونه است، اندازه‌گیری می‌کنند. دمای شبنم دمایی است که زیر آن بخار آب در هوا بالای اشباع قرار می‌گیرد و تراکم رخ می‌دهد. تغییر در دمای شبنم هوا، <span class="ltr-text">ΔTD</span>، با معادله کلاوزیوس-کلاپیرون داده می‌شود:</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\Delta T_D = \frac{R T^2}{L_{vap}} \ln \frac{p_{sw}}{p^0_{sw}}\)</span></p>
+            </div>
+            <p class="mb-4">که در آن <span class="ltr-text">psw</span> فشار بخار اشباع محلول است؛ <span class="ltr-text">p<sup>0</sup><sub>sw</sub></span> فشار بخار آب خالص است؛ و <span class="ltr-text">ΔHvap</span> آنتالپی تبخیر آب است. تغییر در دمای شبنم را می‌توان بر حسب اسمولالیته بیان کرد:</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\Delta T_D = K_D \xi_m\)</span></p>
+            </div>
+            <p class="mb-4">که در آن</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\Delta T_D = \frac{R T^2}{1000 \Delta H_{vap}} \xi_m\)</span></p>
+            </div>
+            <p class="mb-4">مقدار <span class="ltr-text">ΔHvap</span> وابسته به دما است (5) و <span class="ltr-text">KD</span> نیز همینطور. در <span class="ltr-text">25° (298.15 K)</span>، آنتالپی تبخیر آب <span class="ltr-text">ΔHvap = 43.990 kJ mol<sup>-1</sup></span> (5) است و این منجر به مقدار <span class="ltr-text">KD = 0.3027 K kg mol<sup>-1</sup></span> می‌شود. در نقطه جوش، <span class="ltr-text">373.15 K</span>، <span class="ltr-text">ΔHvap = 40.657 kJ mol<sup>-1</sup></span> (5) و <span class="ltr-text">KD = 0.5130 K kg mol<sup>-1</sup></span> است و معادل ثابت ابلئوسکوپیک، <span class="ltr-text">Kb</span>، برای آب است که اسمولالیته را به افزایش نقطه جوش مرتبط می‌کند.</p>
+            <p class="mb-4">برای کالیبراسیون ابزارها برای اندازه‌گیری فعالیت آب و اسمولالیته، لازم است محلول‌های با مشخصات دقیق که آماده‌سازی آن‌ها آسان است، وجود داشته باشد. رابطه غیرخطی بین ضریب اسمولالیته، <span class="ltr-text">Φm</span>، و مولالیته ماده محلول برای بسیاری از محلول‌های نمک منفرد مورد مطالعه قرار گرفته و اغلب با معادله پیتزر-دبای-هیوکل (1,4,6) به عنوان یک بسط ویریاسی در terms of مولالیته به صورت زیر نشان داده می‌شود:</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\Phi_m - 1 = \frac{A_\Phi I}{1+b\sqrt{I}} + \beta_0 I + \beta_1 e^{- \alpha \sqrt{I}} + C_\Phi I^2\)</span></p>
+            </div>
+            <p class="mb-4">که در آن</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(A_\Phi = -\frac{e^2}{8 \pi \epsilon_0 \epsilon k_B T} \sqrt{\frac{2 N_A}{1000 \epsilon_r k_B T}}\)</span></p>
+            </div>
+            <p class="mb-4">و</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\beta_0 = b_0 + b_1 e^{-\alpha \sqrt{I}}\)</span></p>
+            </div>
+            <p class="mb-4">و</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(I = \frac{1}{2} \sum_i m_i z_i^2\)</span></p>
+            </div>
+            <p class="mb-4">که <span class="ltr-text">AΦ</span> شیب دبای-هیوکل است؛ <span class="ltr-text">I</span> قدرت یونی است؛ <span class="ltr-text">zi</span> بار <span class="ltr-text">i</span> است؛ <span class="ltr-text">b</span> پارامتر اندازه یون تجربی و برابر با <span class="ltr-text">1.2</span> است؛ و <span class="ltr-text">α</span> پارامتر وابستگی قدرت یونی تجربی و برابر با <span class="ltr-text">2.0</span> است. پارامترهای <span class="ltr-text">β0</span>، <span class="ltr-text">β1</span> و <span class="ltr-text">CΦ</span> ثابت‌هایی هستند که برای ماده محلول خاص مشخص شده‌اند.</p>
+            <p class="mb-4">برای یک الکترولیت ساده 1:1، مانند سدیم کلرید (NaCl)، قدرت یونی، <span class="ltr-text">I</span>، برابر با مولالیته است و رابطه بین مولالیته و ضریب اسمولالیته ساده می‌شود:</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\Phi_m = 1 - A_\Phi \sqrt{I} + \frac{A_\Phi b \sqrt{I}}{1+b\sqrt{I}} + \beta_0 I + \beta_1 e^{- \alpha \sqrt{I}} + C_\Phi I^2\)</span></p>
+            </div>
+            <p class="mb-4">برای سدیم کلرید (NaCl)، مقدار <span class="ltr-text">AΦ</span> به عنوان تابعی از دما و فشار محاسبه شده است (7) و در <span class="ltr-text">273.15 K</span> و فشار استاندارد، <span class="ltr-text">AΦ = 0.37642</span> است. با استفاده از این مقدار برای <span class="ltr-text">AΦ</span> و حفظ <span class="ltr-text">α = 2</span> و <span class="ltr-text">b = 1.2</span>، مقادیر باقیمانده برای سدیم کلرید (NaCl) (<span class="ltr-text">β0</span>، <span class="ltr-text">β1</span> و <span class="ltr-text">CΦ</span>) را می‌توان به نتایج تجربی برای کاهش نقطه انجماد محلول‌های سدیم کلرید (NaCl) از Scatchard و Prentiss (8) و Gibbard و Gossmann (9) فیت کرد. کل مجموعه نتایج تجربی دامنه 2–7300 mOsmol/kg را پوشش می‌دهد. پارامترهای بهترین فیت حاصل از <span class="ltr-text">β0 = 0.040933</span>، <span class="ltr-text">β1 = 0.26955</span>، <span class="ltr-text">CΦ = 0.004506</span> امکان محاسبه دستورالعمل‌هایی برای محلول‌های استاندارد کالیبراسیون سدیم کلرید برای اسمولالیته‌ها در این دامنه تجربی را فراهم می‌کند. دستورالعمل‌های حاصل برای محلول‌های استاندارد در جدول 1 آورده شده است.</p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">انواع ابزارهای اسمولالیته</h2>
+            <p class="mb-4">اسمولالیته یک محلول معمولاً با اندازه‌گیری کاهش نقطه انجماد یا کاهش دمای شبنم تعیین می‌شود. یک ابزار کاهش نقطه انجماد، اسمولالیته محلول را در نقطه انجماد محلول اندازه‌گیری می‌کند، در حالی که یک ابزار کاهش دمای شبنم، اسمولالیته محلول را در دماهای محیطی اندازه‌گیری می‌کند. تغییرات قابل توجه در حلالیت، حلال‌پوشی و یونیزاسیون مواد محلول ممکن است با تغییر دما رخ دهد و منجر به وابستگی دمایی ضرایب فعالیت و اسمزی شود. این عوامل ممکن است منجر به تفاوت‌های قابل توجه در نتایج اسمولالیته به دست آمده توسط اسمومترهای مختلف بر روی همان محلول‌های آزمایشی شوند. مواد محلول فرار در طول اندازه‌گیری با اسمومترهای فشار بخار تبخیر می‌شوند و منجر به مقادیر نادرست می‌شوند. هنگام اندازه‌گیری اسمولالیته در محلول‌های حاوی مواد محلول فرار، باید از تکنیک‌های دیگری استفاده شود.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">اسمومتر کاهش نقطه انجماد</h3>
+            <p class="mb-4">یک اسمومتر کاهش نقطه انجماد معمولاً شامل موارد زیر است: وسیله‌ای برای خنک کردن ظرف مورد استفاده برای اندازه‌گیری، ترموکوپل برای اندازه‌گیری دمای نمونه، و وسیله‌ای برای شروع تبلور. نمونه مایع (معمولاً حدود <span class="ltr-text">0.02–2 mL</span>) معمولاً در یک حمام خنک‌کننده یا چاهک خنک‌کننده قرار داده می‌شود و برای تسهیل خنک‌سازی یکنواخت، مخلوط می‌شود. در اسمومترهای نقطه انجماد با حجم کم (با اندازه‌های نمونه کمتر از <span class="ltr-text">100 µL</span>)، مخلوط کردن مایع برای خنک‌سازی یکنواخت لازم نیست. نمونه به زیر نقطه انجماد مورد انتظار فوق‌سرد می‌شود و سپس یک "وزوز" کوتاه (یک پالس یا شوک مختصر برای شروع تبلور آب) به نمونه اعمال می‌شود. با یخ زدن نمونه، دمای ترموکوپل به سمت نقطه انجماد به صورت مجانبی افزایش می‌یابد تا زمانی که نمونه کاملاً یخ بزند و دما پایدار شود. کاهش نقطه انجماد، تفاوت بین نقطه انجماد آب خالص و نقطه انجماد نمونه است.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">اسمومتر فشار بخار</h3>
+            <p class="mb-4">اسمومترهای فشار بخار از اندازه‌گیری‌های هیگرومتریک (کاهش دمای شبنم) برای تعیین فعالیت آب استفاده می‌کنند. آن‌ها به حجم کمتری از نمونه (معمولاً حدود <span class="ltr-text">5–20 µL</span>) نیاز دارند. تکنیک هیگرومتریک بر اساس اندازه‌گیری دمای اتصال ترموکوپل مرطوب در یک محفظه مهر و موم شده حاوی نمونه است. جریانی برای خنک کردن ترموکوپل، از طریق اثر پلتیر، به زیر دمای شبنم اعمال می‌شود و در نتیجه تراکم آب از هوا بر روی آن اتصال رخ می‌دهد. با تراکم آب بر روی ترموکوپل، دمای ترموکوپل به صورت مجانبی به سمت دمای شبنم افزایش می‌یابد. هنگامی که دمای ترموکوپل به دمای شبنم می‌رسد، تراکم متوقف می‌شود و باعث پایدار شدن دمای ترموکوپل می‌شود. کاهش دمای شبنم، تفاوت بین دمای شبنم برای هوای در تعادل با آب خالص و دمای شبنم برای هوای در تعادل با نمونه است. در برخی ابزارها، محلول مورد آزمایش روی یک دیسک کاغذی کوچک و بدون ماده محلول ریخته می‌شود که سپس در محفظه نمونه حاوی هیگرومتر ترموکوپل قرار داده می‌شود. در ابزارهای دیگر، محلول به عنوان یک قطره در انتهای یک میکروسرنگ که در محفظه حاوی هیگرومتر ترموکوپل قرار داده شده است، آزمایش می‌شود.</p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">احراز صلاحیت ابزارهای اسمولالیته</h2>
+            <p class="mb-4">اسمومترها به عنوان ابزارهای گروه B طبق توضیحات در احراز صلاحیت ابزار تحلیلی á1058ñ طبقه‌بندی می‌شوند. احراز صلاحیت یک ابزار اسمومتر باید دامنه عملیاتی مورد نظر ابزار، دقت مورد نیاز ابزار و دقت مورد نیاز ابزار را پوشش دهد. برای جزئیات بیشتر، به á1058ñ مراجعه کنید. معیارهای پذیرش برای تناسب با هدف بر اساس عدم قطعیت ماده مرجع و مشخصات عملکرد ابزار است. هر اسمومتر که با برآورده کردن معیارهای احراز صلاحیت، مناسب برای هدف مورد نظر نشان داده شود، می‌تواند برای ارائه نتایج اسمولالیته طبق دستورالعمل‌های این فصل استفاده شود.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">احراز صلاحیت نصب (IQ)</h3>
+            <p class="mb-4">الزامات احراز صلاحیت نصب (IQ) شواهدی مبنی بر نصب صحیح سخت‌افزار و نرم‌افزار در مکان مورد نظر ارائه می‌دهند.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">احراز صلاحیت عملیاتی (OQ)</h3>
+            <p class="mb-4">احراز صلاحیت عملیاتی (OQ) برای ابزار اسمولالیته باید دقت و صحت اندازه‌گیری‌های اسمولالیته را مشخص کند. قبل از مشخص کردن عملکرد ابزار اسمولالیته، یک کالیبراسیون کامل ابزار را طبق دستورالعمل دفترچه راهنمای عملکرد ابزار انجام دهید و کالیبراسیون صحیح را با یک بررسی کالیبراسیون تأیید کنید (به رویه بررسی کالیبراسیون مراجعه کنید).</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">بهینه‌سازی پارامترهای انجماد قابل تنظیم</h4>
+            <p class="mb-4">اسمومترهای کاهش نقطه انجماد ممکن است پارامترهای قابل تنظیم توسط کاربر داشته باشند که بر انجماد محلول‌های آزمایشی تأثیر می‌گذارد. این پارامترها ممکن است شامل دامنه هم زدن (در طول مرحله خنک‌سازی)، نقطه "وزوز" (میزان فوق‌سرمایش قبل از شروع انجماد) و دامنه "وزوز" (دامنه استفاده شده برای شروع انجماد) باشد. این پارامترهای آزمایشی ممکن است با پیروی از توصیه‌های سازنده، برای انجماد مطمئن محلول‌های آزمایشی بهینه شوند.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">دقت/تکرارپذیری</h4>
+            <p class="mb-4">دقت سیستم اندازه‌گیری باید به عنوان بخشی از احراز صلاحیت عملیاتی با انجام اندازه‌گیری‌های تکراری بر روی محلول استاندارد اسمولالیته در محدوده میانی که در کالیبراسیون ابزار استفاده شده است، مشخص شود. انحراف معیار نمونه را با استفاده از <span class="ltr-text">(n−1)</span> درجه آزادی، <span class="ltr-text">σ</span>، از شش یا بیشتر اندازه‌گیری محاسبه کنید و تکرارپذیری را به صورت درصدی (<span class="ltr-text">%)</span> نسبت به مقدار میانگین استاندارد اسمولالیته، <span class="ltr-text">X0</span>، بیان کنید:</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\text{Repeatability (\%)} = 100 \frac{\sigma}{X_0}\)</span></p>
+            </div>
+            <p class="mb-4">دقت ابزار، در <span class="ltr-text">mOsmol/kg</span>، در اسمولالیته محلول آزمایشی که در حال تجزیه و تحلیل است، برابر است با:</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\sigma_{mOsmol/kg} = \frac{\text{Repeatability (\%)}}{100} \bar{x}\)</span></p>
+            </div>
+            <p class="mb-4">که در آن <span class="ltr-text">x̄</span> مقدار میانگین برای محلول آزمایشی است. پس از مشخص کردن دقت سیستم اندازه‌گیری، این نتیجه باید با تکرارپذیری ادعایی سازنده مقایسه شود. اگر نتیجه به طور قابل توجهی بیشتر از تکرارپذیری ادعایی باشد (به عنوان مثال، بیش از دو برابر تکرارپذیری ادعایی)، عملکرد اسمومتر باید به طور کامل‌تری مورد بررسی قرار گیرد. معیار پذیرش این است که انحراف معیار نسبی باید <span class="ltr-text">NMT 2%</span> باشد.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">دقت</h4>
+            <p class="mb-4">دقت ابزار کالیبره شده را با اندازه‌گیری حداقل سه تکرار از بالاترین و پایین‌ترین استاندارد اسمولالیته مورد استفاده در طول کالیبراسیون تأیید کنید. خوانش ابزار باید در محدوده <span class="ltr-text">±4 mOsmol/kg</span> مقدار بیان شده برای محلول‌های استاندارد تا <span class="ltr-text">400 mOsmol/kg</span> و در محدوده <span class="ltr-text">±1%</span> مقدار بیان شده برای محلول‌های > <span class="ltr-text">400 mOsmol/kg</span> باشد.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">احراز صلاحیت عملکرد (PQ)</h3>
+            <p class="mb-4">احراز صلاحیت عملکرد (PQ) باید از طریق کالیبراسیون مجدد دوره‌ای ابزار و یک بررسی کالیبراسیون در روز استفاده ارزیابی شود. توصیه می‌شود که نتیجه بررسی کالیبراسیون در روز استفاده در طول زمان برای پیگیری عملکرد ابزار پایش شود.</p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">عملیات و کالیبراسیون اسمومترها</h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">محلول‌های استاندارد</h3>
+            <p class="mb-4">محلول‌ها برای کالیبراسیون ابزار ممکن است خریداری شوند (10) یا طبق مشخصات جدول 1 تهیه شوند. غلظت‌های دیگر که در جدول 1 ذکر نشده‌اند نیز قابل قبول هستند. آن‌ها می‌توانند در دمای <span class="ltr-text">2°–30°</span> نگهداری شوند، اما نباید یخ بزنند. هنگام استفاده از محلول‌های خریداری شده، تاریخ انقضا و دستورالعمل‌های استفاده سازنده را دنبال کنید. محلول‌های خریداری شده معمولاً در ویال‌های تک‌مصرف عرضه می‌شوند و پس از استفاده باید دور ریخته شوند. محلول‌های تهیه شده طبق مشخصات جدول 1 باید در ظروف غیرقابل نفوذ (مانند شیشه) نگهداری شوند تا از تبخیر جلوگیری شود. محلول‌های تازه باید حداقل ماهانه تهیه شوند زیرا اغلب محلول‌های غیر استریل و بدون نگهدارنده هستند.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">جدول 1. محلول‌های استاندارد (STD) برای کالیبراسیون اسمومتر کاهش نقطه انجماد<sup>a, b</sup></h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>mOsmol/kg از STD</th>
+                        <th>g کلرید سدیم/kg آب</th>
+                        <th>mOsmol/kg از STD</th>
+                        <th>g کلرید سدیم/kg آب</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">50</span></td>
+                        <td><span class="ltr-text">1.530</span></td>
+                        <td><span class="ltr-text">1600</span></td>
+                        <td><span class="ltr-text">51.39</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">100</span></td>
+                        <td><span class="ltr-text">3.098</span></td>
+                        <td><span class="ltr-text">1700</span></td>
+                        <td><span class="ltr-text">54.58</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">150</span></td>
+                        <td><span class="ltr-text">4.683</span></td>
+                        <td><span class="ltr-text">1800</span></td>
+                        <td><span class="ltr-text">57.76</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">200</span></td>
+                        <td><span class="ltr-text">6.278</span></td>
+                        <td><span class="ltr-text">1900</span></td>
+                        <td><span class="ltr-text">60.92</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">250</span></td>
+                        <td><span class="ltr-text">7.880</span></td>
+                        <td><span class="ltr-text">2000</span></td>
+                        <td><span class="ltr-text">64.08</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">290</span></td>
+                        <td><span class="ltr-text">9.165</span></td>
+                        <td>—</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">300</span></td>
+                        <td><span class="ltr-text">9.487</span></td>
+                        <td><span class="ltr-text">2100</span></td>
+                        <td><span class="ltr-text">67.23</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">350</span></td>
+                        <td><span class="ltr-text">11.10</span></td>
+                        <td><span class="ltr-text">2200</span></td>
+                        <td><span class="ltr-text">70.36</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">400</span></td>
+                        <td><span class="ltr-text">12.71</span></td>
+                        <td><span class="ltr-text">2300</span></td>
+                        <td><span class="ltr-text">73.48</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">450</span></td>
+                        <td><span class="ltr-text">14.33</span></td>
+                        <td><span class="ltr-text">2400</span></td>
+                        <td><span class="ltr-text">76.59</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">500</span></td>
+                        <td><span class="ltr-text">15.94</span></td>
+                        <td><span class="ltr-text">2500</span></td>
+                        <td><span class="ltr-text">79.69</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">550</span></td>
+                        <td><span class="ltr-text">17.56</span></td>
+                        <td><span class="ltr-text">2600</span></td>
+                        <td><span class="ltr-text">82.78</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">600</span></td>
+                        <td><span class="ltr-text">19.18</span></td>
+                        <td><span class="ltr-text">2700</span></td>
+                        <td><span class="ltr-text">85.85</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">650</span></td>
+                        <td><span class="ltr-text">20.80</span></td>
+                        <td><span class="ltr-text">2800</span></td>
+                        <td><span class="ltr-text">88.91</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">700</span></td>
+                        <td><span class="ltr-text">22.41</span></td>
+                        <td><span class="ltr-text">2900</span></td>
+                        <td><span class="ltr-text">91.95</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">750</span></td>
+                        <td><span class="ltr-text">24.03</span></td>
+                        <td><span class="ltr-text">3000</span></td>
+                        <td><span class="ltr-text">94.98</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">800</span></td>
+                        <td><span class="ltr-text">25.65</span></td>
+                        <td><span class="ltr-text">3100</span></td>
+                        <td><span class="ltr-text">98.00</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">850</span></td>
+                        <td><span class="ltr-text">27.27</span></td>
+                        <td><span class="ltr-text">3200</span></td>
+                        <td><span class="ltr-text">101.00</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">900</span></td>
+                        <td><span class="ltr-text">28.89</span></td>
+                        <td><span class="ltr-text">3300</span></td>
+                        <td><span class="ltr-text">103.99</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">950</span></td>
+                        <td><span class="ltr-text">30.50</span></td>
+                        <td><span class="ltr-text">3400</span></td>
+                        <td><span class="ltr-text">106.96</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">1000</span></td>
+                        <td><span class="ltr-text">32.12</span></td>
+                        <td><span class="ltr-text">3500</span></td>
+                        <td><span class="ltr-text">109.92</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">1100</span></td>
+                        <td><span class="ltr-text">35.35</span></td>
+                        <td><span class="ltr-text">3600</span></td>
+                        <td><span class="ltr-text">112.86</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">1200</span></td>
+                        <td><span class="ltr-text">38.57</span></td>
+                        <td><span class="ltr-text">3700</span></td>
+                        <td><span class="ltr-text">115.79</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">1300</span></td>
+                        <td><span class="ltr-text">41.79</span></td>
+                        <td><span class="ltr-text">3800</span></td>
+                        <td><span class="ltr-text">118.70</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">1400</span></td>
+                        <td><span class="ltr-text">45.00</span></td>
+                        <td><span class="ltr-text">3900</span></td>
+                        <td><span class="ltr-text">121.60</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">1500</span></td>
+                        <td><span class="ltr-text">48.20</span></td>
+                        <td><span class="ltr-text">4000</span></td>
+                        <td><span class="ltr-text">124.48</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="text-sm italic text-gray-600 mb-4"><sup>a</sup> محاسبه شده از داده‌های تجربی Scatchard و Prentiss (8) و Gibbard و Gossmann (9) با پارامترهای بهترین فیت <span class="ltr-text">AΦ = 0.37642</span>؛ <span class="ltr-text">β0 = 0.040933</span>؛ <span class="ltr-text">β1 = 0.26955</span>؛ <span class="ltr-text">CΦ = 0.004506</span>؛ <span class="ltr-text">α = 2</span>، <span class="ltr-text">b = 1.2</span>.<br>
+            <sup>b</sup> مقدار کلرید سدیم (NaCl) مشخص شده به 1 کیلوگرم آب (بر اساس وزن) اضافه می‌شود. کلرید سدیم (NaCl) را که قبلاً در دمای <span class="ltr-text">110°</span> به مدت 2 ساعت خشک شده است، با دقت <span class="ltr-text">±0.03 g</span> وزن کنید و آب را با دقت <span class="ltr-text">±0.2 g</span> وزن کنید تا از دقت اسمولالیته به تعداد کل صحیح <span class="ltr-text">mOsmol/kg</span> اطمینان حاصل شود. اگر به درستی تهیه شود، دقت این محلول‌های استاندارد <span class="ltr-text">±1 mOsmol/kg</span> است. برای محلول‌های خریداری شده، دقت معمولاً <span class="ltr-text">±2 mOsmol/kg</span> برای غلظت‌های تا <span class="ltr-text">400 mOsmol/kg</span> و <span class="ltr-text">±0.5%</span> برای غلظت‌های > <span class="ltr-text">400 mOsmol/kg</span> است. سایر غلظت‌های محلول استاندارد در صورت نیاز قابل تهیه هستند.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">کالیبراسیون</h3>
+            <p class="mb-4">اسمومتر باید طبق دستورالعمل سازنده با استفاده از محلول‌های استاندارد خریداری شده یا تهیه شده (همانطور که در جدول 1 توضیح داده شده است) کالیبره شود.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">رویه برای بررسی کالیبراسیون</h4>
+            <p class="mb-4">بررسی کالیبراسیون باید به همان روشی انجام شود که اندازه‌گیری‌ها انجام خواهند شد. اگر اندازه‌گیری‌های فردی گزارش خواهند شد، بررسی کالیبراسیون باید با یک اندازه‌گیری واحد از یک محلول استاندارد انجام شود. اگر میانگین سه اندازه‌گیری گزارش خواهد شد، بررسی کالیبراسیون باید با میانگین سه اندازه‌گیری از یک محلول استاندارد انجام شود. مگر اینکه محلول متفاوتی به عنوان بخشی از دستورالعمل‌های سازنده مشخص شده باشد، حداقل یک محلول از جدول 1 را انتخاب کنید که در نزدیکی مرکز دامنه مورد انتظار اسمولالیته برای محلول آزمایشی قرار دارد. دو محلول استاندارد که نمونه آزمایشی را در محدوده <span class="ltr-text">300 mOsmol/kg</span> در بر می‌گیرند نیز قابل قبول هستند. خوانش ابزار باید در محدوده <span class="ltr-text">±4 mOsmol/kg</span> از مقدار بیان شده برای محلول‌های <span class="ltr-text">≤400 mOsmol/kg</span> و در محدوده <span class="ltr-text">±1%</span> از مقدار بیان شده برای محلول‌های > <span class="ltr-text">400 mOsmol/kg</span> باشد. اگر ابزار نتواند معیارهای پذیرش برای بررسی کالیبراسیون را برآورده کند، ابزار را طبق دستورالعمل سازنده با استفاده از محلول‌های استاندارد خریداری شده یا تهیه شده (همانطور که در جدول 1 توضیح داده شده است) کالیبره کنید و سپس بررسی کالیبراسیون ابزار را تکرار کنید. پس از یک بررسی موفق کالیبراسیون، ابزار آماده استفاده است.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">محلول‌های آزمایشی</h3>
+            <p class="mb-4">برای جامد تزریقی، با معرف مناسب طبق دستورالعمل برچسب مخلوط کنید. برای محلول‌ها، از نمونه همانطور که هست استفاده کنید. [نکته - یک محلول را می‌توان برای رساندن آن به محدوده اندازه‌گیری اسمومتر، در صورت لزوم، رقیق کرد، اما نتایج باید به عنوان نتایج محلول رقیق شده بیان شوند و نباید در ضریب رقت ضرب شوند تا اسمولالیته محلول اصلی محاسبه شود مگر اینکه در مونوگراف به گونه‌ای دیگر ذکر شده باشد. ضریب اسمزی مولی تابعی از غلظت است و به صورت غیرخطی با رقت تغییر می‌کند.] مگر اینکه در مونوگراف به گونه‌ای دیگر هدایت شده باشد، از روش 1 استفاده کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش 1: اسمومتری نقطه انجماد</h4>
+            <h5 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش</h5>
+            <p class="mb-4">تأیید کنید که ابزار برای مدت زمان مناسبی (حداقل <span class="ltr-text">30 دقیقه</span> مگر اینکه ابزار دارای سنسور داخلی باشد) روشن شده است تا حمام خنک‌کننده بتواند به دمای عملیاتی عادی خود برسد. تأیید کنید که کالیبراسیون ابزار، دامنه اسمولالیته مورد انتظار محلول آزمایشی را در بر می‌گیرد. در غیر این صورت، یک کالیبراسیون جدید ابزار انجام دهید به گونه‌ای که استانداردهای کالیبراسیون پایین و بالا، اسمولالیته مورد انتظار نمونه‌های مورد ارزیابی را در بر بگیرند. حداقل هر روز استفاده، کالیبراسیون ابزار را همانطور که در رویه بررسی کالیبراسیون توضیح داده شده است، تأیید کنید. قبل از هر اندازه‌گیری، سلول اندازه‌گیری را با محلول مورد آزمایش بشویید و قبل از غوطه‌ور کردن آن در محلول آزمایشی، ترموکوپل را تمیز و خشک کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">عیب‌یابی</h4>
+            <p class="mb-4">نمونه‌ها ممکن است گاهی اوقات به دلیل ویسکوزیته بالا، سرد شدن بیش از حد یا کم، یا عدم بهینه‌سازی سرعت هم زدن یا دامنه ابزار، یخ نزنند. اگر محلول‌های آزمایشی گاهی اوقات یخ نزنند، اندازه‌گیری اسمولالیته ممکن است دقیق نباشد. تنظیمات ابزار باید به گونه‌ای بهینه شوند که محلول آزمایشی به طور مطمئن یخ بزند و سپس ابزار باید با تنظیمات بهینه قبل از ارزیابی مجدد محلول‌های آزمایشی کالیبره شود.</p>
+            <p class="mb-4">ذرات نامحلول، قطرات امولسیونی نامحلول و هوای محبوس شده، به طور قابل توجهی بر اسمولالیته وسیله آبی تأثیر نمی‌گذارند؛ با این حال، این‌ها ممکن است بر توانایی نمونه برای یخ زدن تأثیر بگذارند. اگر اندازه‌گیری دقیق اسمولالیته تحت تأثیر وجود فاز نامحلول قرار گیرد، فاز نامحلول باید با سانتریفیوژ حذف شود و اسمولالیته فاز آبی شفاف شده باید ارزیابی و گزارش شود.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش 2: اسمومتری فشار بخار</h4>
+            <h5 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول‌های استاندارد</h5>
+            <p class="mb-4">استانداردهای مرجع اسمولالیته در جدول 1 بر اساس اندازه‌گیری‌های کاهش نقطه انجماد (8,9) هستند و اسمولالیته محلول را در نقطه انجماد نشان می‌دهند. با این حال، تولیدکنندگان اسمومترهای دمای شبنم اغلب ابزارهای خود را برای کالیبراسیون با همان محلول‌های استاندارد مورد استفاده برای ابزارهای کاهش نقطه انجماد طراحی می‌کنند. مگر اینکه توسط سازنده ابزار به گونه‌ای دیگر هدایت شده باشد، مجاز است از همان محلول‌های استاندارد که در بالا برای استفاده با ابزارهای کاهش نقطه انجماد تعریف شد، استفاده شود. هنگام انجام کالیبراسیون ابزار و بررسی کالیبراسیون با این محلول‌های استاندارد، مقدار بیان شده برای محلول استاندارد همانند آنچه برای ابزارهای کاهش نقطه انجماد نشان داده شده است، در نظر گرفته می‌شود.</p>
+
+            <h5 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش</h5>
+            <p class="mb-4">اطمینان حاصل کنید که نمونه و ابزار در آزمایشگاهی با کنترل دمای مناسب قرار دارند و نمونه قبل از انجام اندازه‌گیری با دمای آزمایشگاه متعادل شده است. تأیید کنید که ابزار حداقل <span class="ltr-text">30 دقیقه</span> روشن بوده است تا در حین کار به طور کامل با دمای آزمایشگاه متعادل شود. تأیید کنید که کالیبراسیون ابزار، دامنه اسمولالیته مورد انتظار محلول آزمایشی را در بر می‌گیرد. اگر نه، یک کالیبراسیون جدید ابزار انجام دهید به گونه‌ای که استانداردهای کالیبراسیون پایین و بالا، اسمولالیته مورد انتظار نمونه‌های مورد ارزیابی را در بر بگیرند. حداقل هر روز استفاده، کالیبراسیون ابزار را همانطور که در رویه بررسی کالیبراسیون توضیح داده شده است، تأیید کنید. اگر نمونه برای اندازه‌گیری با پیپت تحویل داده می‌شود، از یک پیپت کالیبره شده برای تحویل حجم مشخص شده مایع به محفظه نمونه استفاده کنید. ثبات زمان‌بندی در طول بارگذاری نمونه برای تکرارپذیری سازگار مهم است. رویه و زمان‌بندی برای بارگذاری نمونه باید معادل با آن‌هایی باشد که برای کالیبراسیون ابزار استفاده شده است.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">عیب‌یابی</h4>
+            <p class="mb-4">مواد تشکیل دهنده فرار (مثلاً اتانول) ممکن است در طول بارگذاری نمونه و اندازه‌گیری به سرعت تبخیر شوند و منجر به نتایج نادرست و متغیر شوند.</p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">گزارش نتایج</h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">واحدها</h3>
+            <p class="mb-4">واحدهای اسمولالیته، اسمول بر کیلوگرم آب (<span class="ltr-text">Osmol/kg</span>) یا میلی‌اسمول بر کیلوگرم آب (<span class="ltr-text">mOsmol/kg</span>) هستند. واحدهای اسمولاریته، اسمول بر لیتر محلول (<span class="ltr-text">Osmol/L</span>) یا میلی‌اسمول بر لیتر محلول (<span class="ltr-text">mOsmol/L</span>) هستند. هنگام استفاده از این واحدها، نیازی به ذکر "آب" یا "محلول" نیست. باید از استفاده از "Osmol" به تنهایی اجتناب شود زیرا مشخص نیست که آیا به تعداد (اسمول ماده محلول) یا اسمولالیته یا اسمولاریته اشاره دارد.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">نتیجه اندازه‌گیری</h3>
+            <p class="mb-4">اگر یک نتیجه اندازه‌گیری واحد گزارش شود، باید با دقت داده شده توسط تکرارپذیری ابزار گزارش شود. ترجیحاً، میانگین سه یا بیشتر اندازه‌گیری بر روی همان محلول باید با دقتی که توسط انحراف معیار اندازه‌گیری‌های میانگین نشان داده می‌شود، گزارش شود. بیشتر اسمومترها نتایج را تا نزدیکترین عدد صحیح گزارش می‌کنند، بنابراین، نتیجه میانگین نیز باید به نزدیکترین عدد صحیح گرد شود و بر حسب <span class="ltr-text">mOsmol/kg</span> گزارش شود.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تبدیل به اسمولاریته</h3>
+            <p class="mb-4">کاهش نقطه انجماد و اندازه‌گیری‌های فشار بخار مستقیماً منجر به ارزیابی اسمولالیته می‌شود. با این حال، ممکن است مطلوب باشد که نتایج بر حسب واحدهای اسمولاریته گزارش شوند. اسمولالیته اندازه‌گیری شده <span class="ltr-text">ξm</span> را می‌توان با استفاده از:</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\xi_C = \xi_m \rho - C\)</span></p>
+            </div>
+            <p class="mb-4">که در آن <span class="ltr-text">ρ</span> چگالی محلول و <span class="ltr-text">C</span> غلظت کل ماده محلول است، هر دو بر حسب گرم بر میلی‌لیتر بیان می‌شوند.</p>
+            <p class="mb-4">مثال تبدیل به اسمولاریته:</p>
+            <p class="mb-4">یک محلول 3% (w/v) بی‌کربنات سدیم حاوی <span class="ltr-text">0.030 g/mL</span> بی‌کربنات سدیم انیدروس است. چگالی این محلول در دمای <span class="ltr-text">20°</span> برابر با <span class="ltr-text">1.0192 g/mL</span> و اسمولالیته اندازه‌گیری شده آن <span class="ltr-text">ξm</span> برابر با <span class="ltr-text">615 mOsmol/kg</span> بود.</p>
+            <p class="mb-4">[نکته — <span class="ltr-text">1 g/mL = 1 kg/L</span>.]</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\frac{\text{kg solution}}{\text{L solution}} - \frac{\text{g solution}}{\text{L solution}} = \frac{1.0192 \text{ kg solution}}{\text{L solution}} - 0.030 \frac{\text{kg solution}}{\text{L solution}} = 0.9892 \frac{\text{kg water}}{\text{L solution}}\)</span></p>
+            </div>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\text{Osmolarity } \xi_C = 615 \frac{\text{mOsmol}}{\text{kg H}_2\text{O}} \times 0.9892 \frac{\text{kg H}_2\text{O}}{\text{L solution}} = 608 \frac{\text{mOsmol}}{\text{L solution}}\)</span></p>
+            </div>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تونیسیته</h3>
+            <p class="mb-4">تونیسیته یک اصطلاح پزشکی است که به اختلاف فشار اسمزی بین طرفین داخلی و خارجی غشای سلولی مربوط می‌شود. در بسیاری از موارد، تونیسیته و اسمولالیته یکسان نیستند زیرا برخی مواد محلول قادرند به سرعت از غشای سلولی عبور کنند. گلبول‌های قرمز خون، اریتروسیت‌ها، معمولاً به عنوان استاندارد برای تعریف محلول ایزوتونیک در نظر گرفته می‌شوند. اگر گلبول‌های قرمز خون در یک محلول غوطه‌ور شوند و سلول‌ها متورم و سفت شوند یا بترکند، محلول هیپوتونیک است. اگر گلبول‌های قرمز خون کوچک و خشک شوند، محلول هایپرتونیک است. یک محلول ایزوتونیک باعث هیچ تغییری در اندازه گلبول‌های قرمز خون نمی‌شود و دیواره سلولی شل باقی می‌ماند. اندازه‌گیری‌های اسمولالیته یا اسمولاریته به تنهایی برای توصیف تونیسیته یک مایع کافی نیستند. هنگام بحث در مورد اسمولالیته نسبی محلول‌ها، بهتر است از اصطلاحات هیپواسموتیک، هایپراسموتیک و ایزواسموتیک استفاده شود. استاندارد برای محلول ایزواسموتیک، محلول <span class="ltr-text">0.9%</span> سدیم کلرید (NaCl) است که اسمولالیته آن <span class="ltr-text">285 mOsmol/kg</span> و اسمولاریته آن <span class="ltr-text">284 mOsmol/L</span> است.</p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">اسمولاریته</h2>
+            <p class="mb-4">اسمولاریته یک محلول یک کمیت نظری است که بر حسب اسمول/لیتر (<span class="ltr-text">Osmol/L</span>) از یک محلول بیان می‌شود و به طور گسترده در عمل بالینی استفاده می‌شود زیرا اسمول‌ها را به عنوان تابعی از حجم بیان می‌کند. اسمولاریته را نمی‌توان اندازه‌گیری کرد بلکه به صورت نظری از مقدار اندازه‌گیری شده تجربی اسمولالیته محاسبه می‌شود.</p>
+            <p class="mb-4">گاهی اوقات، اسمولاریته (<span class="ltr-text">ξc</span>) به صورت نظری از غلظت‌های مولی محاسبه می‌شود:</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\xi_c = \sum \nu_i c_i\)</span></p>
+            </div>
+            <p class="mb-4">که در آن:</p>
+            <p class="mb-4"><span class="ltr-text">νi</span> = تعداد ذراتی که توسط تجزیه یک مولکول از <span class="ltr-text">ith</span> ماده محلول تشکیل می‌شود</p>
+            <p class="mb-4"><span class="ltr-text">ci</span> = غلظت مولی <span class="ltr-text">ith</span> ماده محلول در محلول</p>
+            <p class="mb-4">به عنوان مثال، اسمولاریته محلولی که با حل کردن 1 گرم وانکومایسین در 100 میلی‌لیتر محلول <span class="ltr-text">0.9%</span> سدیم کلرید تهیه شده است، به صورت زیر محاسبه می‌شود:</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\left[ \frac{3 \times 10 \text{ g/L}}{1449.25 \text{ (molecular weight of vancomycin)}} + \frac{2 \times 9 \text{ g/L}}{58.44 \text{ (molecular weight of sodium chloride)}} \right] \times 1000 = 329 \text{ mOsmol/L}\)</span></p>
+            </div>
+            <p class="mb-4">نتایج نشان می‌دهد که محلول کمی هایپرتونیک است زیرا اسمولالیته خون بین <span class="ltr-text">285</span> و <span class="ltr-text">310 mOsmol/kg</span> قرار دارد. با این حال، محلول هیپواسموتیک یافت می‌شود و اسمولالیته اندازه‌گیری شده تجربی آن <span class="ltr-text">255 mOsmol/kg</span> است.<sup>1</sup> این مثال نشان می‌دهد که مقادیر اسمولاریته که به صورت نظری از غلظت محلول محاسبه می‌شوند باید با احتیاط تفسیر شوند و ممکن است خواص اسمزی محلول‌های انفوزیون را نشان ندهند.</p>
+            <p class="mb-4">اختلاف بین نتایج نظری (اسمولاریته) و تجربی (اسمولالیته) تا حدی به این دلیل است که فشار اسمزی یک محلول واقعی کمتر از محلول ایده‌آل است به دلیل برهم‌کنش بین مولکول‌های ماده محلول یا بین مولکول‌های ماده محلول و حلال در یک محلول. چنین برهم‌کنش‌هایی فشار اعمال شده توسط مولکول‌های ماده محلول بر روی یک غشای نیمه‌تراوا را کاهش می‌دهند و مقادیر تجربی اسمولالیته را در مقایسه با مقادیر نظری کاهش می‌دهند. این تفاوت به ضریب اسمزی مولی (<span class="ltr-text">Φm,i</span>) مربوط می‌شود. این مثال همچنین اهمیت تعیین تجربی اسمولالیته محلول را به جای محاسبه نظری مقدار نشان می‌دهد.</p>
+            <p class="mb-4">برای تبدیل به اسمولالیته، لازم است کیلوگرم آب در لیتر محلول را به عنوان ضریب تبدیل بدانید. چگالی محلول باید اندازه‌گیری شود و مقدار ماده محلول (انیدروس) در واحد حجم باید بر اساس تهیه محلول مشخص باشد. در صورت کار با یک محلول ناشناخته، مقدار اندازه‌گیری از دست دادن در اثر خشک شدن نیز می‌تواند استفاده شود (با فرض اینکه آب تنها جزء فرار در محلول است).</p>
+            <p class="mb-4">مثال 1: یک محلول 3% (w/v) بی‌کربنات سدیم حاوی <span class="ltr-text">0.030 g/mL</span> بی‌کربنات سدیم انیدروس است. چگالی این محلول در دمای <span class="ltr-text">20°</span> برابر با <span class="ltr-text">1.0192 g/mL</span> و اسمولالیته اندازه‌گیری شده آن <span class="ltr-text">615 mOsmol/kg</span> بود.</p>
+            <p class="mb-4">[نکته — <span class="ltr-text">1 g/mL = 1 kg/L</span>.]</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\frac{\text{kg solution}}{\text{L solution}} - \frac{\text{g solution}}{\text{L solution}} = 1.0192 \frac{\text{kg solution}}{\text{L solution}} - 0.030 \frac{\text{kg solution}}{\text{L solution}} = 0.9892 \frac{\text{kg water}}{\text{L solution}}\)</span></p>
+            </div>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\text{Osmolarity } \xi_C = 615 \frac{\text{mOsmol}}{\text{kg H}_2\text{O}} \times 0.9892 \frac{\text{kg H}_2\text{O}}{\text{L solution}} = 608 \frac{\text{mOsmol}}{\text{L solution}}\)</span></p>
+            </div>
+            <p class="mb-4">مثال 2: یک محلول آبی سدیم لوریل سولفات (SLS) به عنوان ماده اولیه، دارای محتوای <span class="ltr-text">30%</span> (بر اساس وزنی حجمی) و چگالی <span class="ltr-text">1.08 g/mL</span> در <span class="ltr-text">20°</span> است. همچنین حاوی <span class="ltr-text">0.5%</span> سدیم سولفات (<span class="ltr-text">Na<sub>2</sub>SO<sub>4</sub></span>) است. اسمولاریته پیش‌بینی شده را محاسبه کرده و آن را به اسمولالیته مورد انتظار تبدیل کنید، اگر ارزیابی شود (یک ماده محلول ایده‌آل، <span class="ltr-text">Φm = 1.0</span> را فرض کنید). وزن مولکولی SLS برابر با <span class="ltr-text">288.37 g/mol</span> است. وزن مولکولی سدیم سولفات (<span class="ltr-text">Na<sub>2</sub>SO<sub>4</sub></span>) برابر با <span class="ltr-text">142.04 g/mol</span> است. چگالی ماده در <span class="ltr-text">20°</span> برابر با <span class="ltr-text">1.08/0.997 = 1.083 g/mL</span> است.</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\frac{\text{kg solution}}{\text{L solution}} - \frac{\text{g solution}}{\text{L solution}} = 1.083 \frac{\text{kg solution}}{\text{L solution}} - 0.305 \frac{\text{kg solution}}{\text{L solution}} = 0.778 \frac{\text{kg water}}{\text{L solution}}\)</span></p>
+            </div>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\text{Osmolality } \xi_m = 615 \frac{\text{mOsmol}}{\text{kg H}_2\text{O}}\)</span></p>
+            </div>
+            <p class="mb-4">سهم اسمولاریته عبارت خواهد بود از:</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\frac{300 \text{ g}}{\text{1 L}} \times \frac{1 \text{ mol}}{288.37 \text{ g}} \times 2 \text{ particles/molecule} = 2.0806 \text{ mOsmol/L} = 2080.6 \text{ mOsmol/L}\)</span></p>
+            </div>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\frac{5 \text{ g}}{\text{1 L}} \times \frac{1 \text{ mol}}{142.04 \text{ g}} \times 3 \text{ particles/molecule} = 0.1056 \text{ mOsmol/L} = 105.6 \text{ mOsmol/L}\)</span></p>
+            </div>
+            <p class="mb-4">کل اسمولاریته = <span class="ltr-text">2080.6 + 105.6 = 2186.2 mOsmol/L</span></p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">اندازه‌گیری اسمولالیته</h2>
+            <p class="mb-4">اسمولالیته یک محلول معمولاً با اندازه‌گیری کاهش نقطه انجماد محلول تعیین می‌شود.</p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">دستگاه</h3>
+            <p class="mb-4">دستگاه، یک اسمومتر برای اندازه‌گیری کاهش نقطه انجماد، شامل موارد زیر است: وسیله‌ای برای خنک کردن ظرف مورد استفاده برای اندازه‌گیری؛ دستگاه اندازه‌گیری دما با دستگاه اندازه‌گیری جریان یا پتانسیل مناسب که می‌تواند بر حسب تغییر دما یا اسمولالیته درجه‌بندی شود؛ و وسیله‌ای برای مخلوط کردن نمونه.</p>
+            <p class="mb-4">اسمومترهایی که فشار بخار محلول‌ها را اندازه‌گیری می‌کنند، کمتر مورد استفاده قرار می‌گیرند. آن‌ها به حجم کمتری از نمونه (معمولاً حدود <span class="ltr-text">5 µL</span>) نیاز دارند، اما دقت و صحت تعیین اسمولالیته حاصل با استفاده از اسمومترهایی که بر اساس نقاط انجماد مشاهده شده محلول‌ها کار می‌کنند، قابل مقایسه است.</p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">محلول‌های استاندارد</h3>
+            <p class="mb-4">محلول‌های استاندارد را در صورت لزوم طبق جدول 1 تهیه کنید.<sup>2</sup></p>
+            <p class="mb-4">محلول‌های استاندارد تهیه شده را می‌توان در سیستم‌های ظرف-بسته‌بندی غیرقابل نفوذ نگهداری کرد. آن‌ها باید هر هفته تازه تهیه شوند زیرا محلول‌های غیر استریل و بدون نگهدارنده هستند. در صورت استفاده از محلول‌های خریداری شده، تاریخ انقضای سازنده را دنبال کنید.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">جدول 1. محلول‌های استاندارد برای کالیبراسیون اسمومتر<sup>a</sup></h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>محلول‌های استاندارد (وزن بر حسب گرم کلرید سدیم در هر کیلوگرم آب)</th>
+                        <th>اسمولالیته (mOsmol/kg) (ξm)</th>
+                        <th>ضریب اسمزی مولی (Φm, NaCl)</th>
+                        <th>کاهش نقطه انجماد (°) (ΔTf)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">3.087</span></td>
+                        <td><span class="ltr-text">100</span></td>
+                        <td><span class="ltr-text">0.9463</span></td>
+                        <td><span class="ltr-text">0.186</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">6.260</span></td>
+                        <td><span class="ltr-text">200</span></td>
+                        <td><span class="ltr-text">0.9337</span></td>
+                        <td><span class="ltr-text">0.372</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">9.463</span></td>
+                        <td><span class="ltr-text">300</span></td>
+                        <td><span class="ltr-text">0.9264</span></td>
+                        <td><span class="ltr-text">0.558</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">12.684</span></td>
+                        <td><span class="ltr-text">400</span></td>
+                        <td><span class="ltr-text">0.9215</span></td>
+                        <td><span class="ltr-text">0.744</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">15.916</span></td>
+                        <td><span class="ltr-text">500</span></td>
+                        <td><span class="ltr-text">0.9180</span></td>
+                        <td><span class="ltr-text">0.930</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">19.147</span></td>
+                        <td><span class="ltr-text">600</span></td>
+                        <td><span class="ltr-text">0.9157</span></td>
+                        <td><span class="ltr-text">1.116</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">22.380</span></td>
+                        <td><span class="ltr-text">700</span></td>
+                        <td><span class="ltr-text">0.9140</span></td>
+                        <td><span class="ltr-text">1.302</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="text-sm italic text-gray-600 mb-4"><sup>a</sup> اقتباس شده از دارونامه اروپا، ویرایش چهارم، 2002، ص. 50</p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">محلول آزمایشی</h3>
+            <p class="mb-4">برای جامد تزریقی، با معرف مناسب طبق دستورالعمل برچسب مخلوط کنید. برای محلول‌ها، از نمونه همانطور که هست استفاده کنید.</p>
+            <p class="mb-4">[نکته — یک محلول را می‌توان برای رساندن آن به محدوده اندازه‌گیری اسمومتر، در صورت لزوم، رقیق کرد، اما نتایج باید به عنوان نتایج محلول رقیق شده بیان شوند و نباید در ضریب رقت ضرب شوند تا اسمولالیته محلول اصلی محاسبه شود، مگر اینکه در مونوگراف به گونه‌ای دیگر ذکر شده باشد. ضریب اسمزی مولی تابعی از غلظت است. بنابراین، با رقت تغییر می‌کند.]</p>
+            <h5 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش</h5>
+            <p class="mb-4">ابتدا، ابزار را طبق دستورالعمل سازنده کالیبره کنید. کالیبراسیون ابزار را با حداقل یک محلول از جدول 1 تأیید کنید به گونه‌ای که اسمولالیته محلول استاندارد در محدوده <span class="ltr-text">50 mOsmol/kg</span> از مقدار مورد انتظار محلول آزمایشی یا مرکز دامنه اسمولالیته مورد انتظار محلول آزمایشی قرار گیرد. خوانش ابزار باید در محدوده <span class="ltr-text">±4 mOsmol per kg</span> از محلول استاندارد باشد.</p>
+            <p class="mb-4">حجم مناسبی از هر محلول استاندارد را طبق دستورالعمل سازنده وارد سلول اندازه‌گیری کنید و سیستم خنک‌کننده را راه‌اندازی کنید. معمولاً، دستگاه هم زدن برای کار در دمایی زیر پایین‌ترین دمای مورد انتظار از کاهش نقطه انجماد برنامه‌ریزی شده است. دستگاه زمانی که تعادل برقرار شد، نشان می‌دهد. در صورت لزوم، اسمومتر را با استفاده از دستگاه تنظیم مناسب کالیبره کنید به گونه‌ای که خوانش با مقدار اسمولالیته یا کاهش نقطه انجماد محلول استاندارد نشان داده شده در جدول 1 مطابقت داشته باشد.</p>
+            <p class="mb-4">[نکته — اگر خوانش ابزار، کاهش نقطه انجماد را نشان می‌دهد، اسمولالیته را می‌توان با استفاده از فرمول مناسب در زیر اسمولالیته مشتق کرد.]</p>
+            <p class="mb-4">روش را با هر محلول آزمایشی تکرار کنید. اسمولالیته محلول آزمایشی را مستقیماً بخوانید، یا آن را از کاهش نقطه انجماد اندازه‌گیری شده محاسبه کنید.</p>
+            <p class="mb-4">با فرض اینکه مقدار ضریب اسمزی تقریباً یکسان است چه غلظت بر حسب مولالیته یا مولاریته بیان شود، اسمولالیته تجربی یک محلول را می‌توان به همان روشی که غلظت محلول از مولالیته به مولاریته تبدیل می‌شود، به اسمولاریته تبدیل کرد. مگر اینکه یک محلول بسیار غلیظ باشد، اسمولاریته محلول (<span class="ltr-text">ξc</span>) را می‌توان به صورت زیر محاسبه کرد:</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\xi_c = \frac{1000 \xi_m}{1000/\rho + \sum w_i \nu_i}\)</span></p>
+            </div>
+            <p class="mb-4">که در آن:</p>
+            <p class="mb-4"><span class="ltr-text">ξm</span> = اسمولالیته اندازه‌گیری شده تجربی</p>
+            <p class="mb-4"><span class="ltr-text">ρ</span> = چگالی محلول</p>
+            <p class="mb-4"><span class="ltr-text">wi</span> = وزن (g)</p>
+            <p class="mb-4"><span class="ltr-text">νi</span> = حجم ویژه جزئی ماده محلول <span class="ltr-text">ith</span> (mL/g)</p>
+            <p class="mb-4">حجم ویژه جزئی یک ماده محلول، تغییر حجم محلول هنگام حل شدن 1 گرم اضافی ماده محلول در محلول است. این حجم را می‌توان با اندازه‌گیری چگالی محلول قبل و بعد از افزودن ماده محلول تعیین کرد. حجم‌های ویژه جزئی نمک‌ها معمولاً بسیار کوچک، حدود <span class="ltr-text">0.1 mL/g</span> هستند. با این حال، مواد محلول دیگر معمولاً بالاتر هستند. به عنوان مثال، حجم‌های ویژه جزئی اسیدهای آمینه در محدوده <span class="ltr-text">0.6–0.9 mL/g</span> هستند. از معادله فوق که اسمولاریته را با اسمولالیته مرتبط می‌کند، می‌توان نشان داد که:</p>
+            <div class="formula-display">
+                <p><span class="ltr-text">\(\xi_c = \xi_m (\rho - c)\)</span></p>
+            </div>
+            <p class="mb-4">که در آن:</p>
+            <p class="mb-4"><span class="ltr-text">ξm</span> = اسمولالیته اندازه‌گیری شده تجربی</p>
+            <p class="mb-4"><span class="ltr-text">ρ</span> = چگالی محلول (g/mL)</p>
+            <p class="mb-4"><span class="ltr-text">c</span> = غلظت کل ماده محلول (g/mL)</p>
+            <p class="mb-4">بنابراین، به طور جایگزین، اسمولاریته را می‌توان از اسمولالیته اندازه‌گیری شده تجربی با اندازه‌گیری چگالی محلول با یک روش مناسب و کل وزن ماده محلول، پس از تصحیح برای محتوای آب، که در هر میلی‌لیتر محلول حل شده است، محاسبه کرد.</p>
+
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">منابع</h2>
+            <ol class="list-decimal list-inside space-y-2">
+                <li>Pitzer KS, Pelper JC, Busey RH. Thermodynamic properties of aqueous sodium chloride solutions. J Phys Chem Ref Data. 1984;13(1).</li>
+                <li>Mohr PJ, Newell DB, Taylor BN. CODATA recommended values of the fundamental physical constants: 2014. Rev Mod Phys. 2016;88.</li>
+                <li>Feistel R, Wagner W. A new equation of state for H2O Ice Ih. J Phys Chem Ref Data. 2006;35(2).</li>
+                <li>Prickett RC, Elliott JAW, McGann LE. Application of the multisolute osmotic virial equation to solutions containing electrolytes. J Phys Chem B. 2011;115:14531–14543.</li>
+                <li>Marsh KN, ed. Recommended reference materials for the realization of physicochemical properties. Pure Appl Chem. 1980;52:2393–2404.</li>
+                <li>Partanen JI. Mean activity coefficients and osmotic coefficients in dilute aqueous sodium or potassium chloride solutions at temperatures from (0 to 70)°C. J Chem Eng Data. 2016;61(1):286–306.</li>
+                <li>Archer DG, Wang P. The dielectric constant of water and Debye-Hückel limiting law slopes. J Phys Chem Ref Data. 1990;19:371.</li>
+                <li>Scatchard G, Prentiss SS. The freezing points of aqueous solutions. IV. Potassium, sodium and lithium chlorides and bromides. J Am Chem Soc. 1933;55:4355.</li>
+                <li>Gibbard HF, Gossmann AF. Freezing points of electrolyte mixtures. I. Mixtures of sodium chloride and magnesium chloride in water. J Solution Chem. 1974;3(5):385–393.</li>
+                <li>Commercially available solutions for osmometer calibration, with osmolalities equal to or different from those listed in Table 1 and standardized by methods traceable to the National Institute of Standards and Technology (NIST) (www.nist.gov) or any other national or international standards setting organizations may be used. [NOTE—A possible supplier for those solutions is Advanced Instruments Calibration Standards available from www.aicompanies.com or www.vwr.com.]</li>
+            </ol>
+
+        </div>
+    </div>
+</body>
+</html>

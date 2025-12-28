@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>۸۵۵. نفلومتری و توربیدیمتری</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vazirmatn Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax Configuration -->
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$','$'], ['\\(','\\)']],
+                processEscapes: true
+            },
+            "HTML-CSS": {
+                linebreaks: { automatic: true },
+                styles: { ".MathJax_Display": { "text-align": "center" } }
+            },
+            SVG: {
+                linebreaks: { automatic: true }
+            }
+        });
+    </script>
+    <!-- MathJax CDN Script -->
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">۸۵۵. نفلومتری و توربیدیمتری</h1>
+
+        <div class="card mb-6">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">فهرست مطالب</h2>
+            <ul class="list-disc pr-6">
+                <li><a href="#introduction" class="text-blue-600 hover:underline">۱. مقدمه</a></li>
+                <li><a href="#terms-definitions" class="text-blue-600 hover:underline">۲. اصطلاحات و تعاریف</a></li>
+                <li><a href="#applications" class="text-blue-600 hover:underline">۳. کاربردها</a></li>
+                <li><a href="#instrumentation" class="text-blue-600 hover:underline">۴. ابزار دقیق</a></li>
+                <li><a href="#formazin-standards" class="text-blue-600 hover:underline">۵. استانداردهای کدورت فورمازین</a>
+                    <ul class="list-circle pr-6 mt-1">
+                        <li><a href="#preparation-formazin" class="text-blue-600 hover:underline">۵.۱ آماده‌سازی استانداردهای فورمازین</a></li>
+                    </ul>
+                </li>
+                <li><a href="#qualification-instruments" class="text-blue-600 hover:underline">۶. احراز صلاحیت توربیدیمترها و نفلومترها</a>
+                    <ul class="list-circle pr-6 mt-1">
+                        <li><a href="#calibration" class="text-blue-600 hover:underline">۶.۱ کالیبراسیون</a></li>
+                        <li><a href="#stray-light" class="text-blue-600 hover:underline">۶.۲ نور پراکنده</a></li>
+                        <li><a href="#range-capability" class="text-blue-600 hover:underline">۶.۳ محدوده قابلیت اندازه‌گیری</a></li>
+                        <li><a href="#resolution" class="text-blue-600 hover:underline">۶.۴ رزولوشن</a></li>
+                        <li><a href="#accuracy-qual" class="text-blue-600 hover:underline">۶.۵ دقت</a></li>
+                        <li><a href="#performance-qual" class="text-blue-600 hover:underline">۶.۶ احراز صلاحیت عملکرد</a></li>
+                    </ul>
+                </li>
+                <li><a href="#procedures" class="text-blue-600 hover:underline">۷. روش‌ها</a>
+                    <ul class="list-circle pr-6 mt-1">
+                        <li><a href="#turbidimetric-procedures" class="text-blue-600 hover:underline">۷.۱ روش‌های توربیدیمتری</a></li>
+                        <li><a href="#nephelometric-procedures" class="text-blue-600 hover:underline">۷.۲ روش‌های نفلومتری</a></li>
+                    </ul>
+                </li>
+                <li><a href="#validation-verification" class="text-blue-600 hover:underline">۸. اعتبار سنجی و تأیید</a>
+                    <ul class="list-circle pr-6 mt-1">
+                        <li><a href="#validation" class="text-blue-600 hover:underline">۸.۱ اعتبار سنجی</a></li>
+                        <li><a href="#verification" class="text-blue-600 hover:underline">۸.۲ تأیید</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h2 id="introduction" class="text-2xl font-semibold text-blue-600 mb-4">۱. مقدمه</h2>
+        <p class="mb-4">
+            نفلومتری و توربیدیمتری تکنیک‌های تحلیلی هستند که بر اساس اصول پدیده‌های پراکندگی نور بنا شده‌اند.
+            پراکندگی نور پدیده فیزیکی است که در آن پرتو نور در نتیجه برهم‌کنش با ذرات ماده به اندازه کافی کوچک، جهت انتشار خود را تغییر می‌دهد (که به عنوان انحراف شناخته می‌شود).
+            از نظریه الکترومغناطیسی ماکسول مشخص شده است که پیش‌شرط وقوع پراکندگی این است که ضرایب شکست ذرات معلق باید با مایع معلق‌کننده متفاوت باشد.
+            هر چه این تفاوت بیشتر باشد، شدت پراکندگی بیشتر می‌شود. دو نوع پراکندگی نور وجود دارد:
+            <span class="ltr-text">1)</span> پراکندگی الاستیک، که در آن طول موج نور پراکنده و نور فرودی یکسان است؛ و
+            <span class="ltr-text">2)</span> پراکندگی نور غیرالاستیک، که در آن طول موج نور پراکنده و نور فرودی متفاوت است.
+            فقط نوع اول پراکندگی نور (الاستیک) برای نفلومتری و توربیدیمتری مرتبط است.
+        </p>
+        <p class="mb-4">
+            در توربیدیمتری، شدت نور عبوری اندازه‌گیری می‌شود و کاهش شدت نور فرودی در نتیجه پراکندگی در جهت نور فرودی (یعنی <span class="ltr-text">0°</span>) اندازه‌گیری و با شدت نور فرودی (اندازه‌گیری Blank) مقایسه می‌شود.
+            خاصیت اندازه‌گیری شده، اندازه‌گیری غیرمستقیم اثر پراکندگی ذرات معلق است و به آن کدورت (<span class="ltr-text">turbidance</span>) گفته می‌شود.
+            هر گونه جذب نور توسط نمونه معلق منجر به کاهش اضافی شدت نور می‌شود (به <a href="857.html" class="text-blue-600 hover:underline" target="_blank">۸۵۷</a> اسپکتروسکوپی فرابنفش-مرئی و <a href="1857.html" class="text-blue-600 hover:underline" target="_blank">۱۸۵۷</a> اسپکتروسکوپی فرابنفش-مرئی—تئوری و عمل مراجعه کنید).
+            از این رو، اطمینان از اینکه ماده مورد اندازه‌گیری در طول موج اندازه‌گیری، نور را جذب نمی‌کند، مهم است.
+            در واقع، معادلات حاکم بر جذب و توربیدیمتری یکسان هستند (البته با مقادیر متفاوت برای ثابت‌های تضعیف).
+            در تکنیک‌های نفلومتری، شدت نور پراکنده در زاویه <span class="ltr-text">90°</span> از جهت انتشار نور فرودی اندازه‌گیری می‌شود.
+            بنابراین، اندازه‌گیری نفلومتری یک اندازه‌گیری مستقیم از اثر پراکندگی ماده معلق است.
+        </p>
+
+        <h2 id="terms-definitions" class="text-2xl font-semibold text-blue-600 mb-4">۲. اصطلاحات و تعاریف</h2>
+        <p class="mb-4">
+            اصطلاحات رایج در توصیف تکنیک‌های توربیدیمتری و نفلومتری عبارتند از:
+        </p>
+        <ul class="list-disc pr-6 mb-4">
+            <li>
+                <strong>کدورت (<span class="ltr-text">Turbidance</span>)</strong> (نماد، <span class="ltr-text">S</span>): معیاری برای کاهش شدت پرتو نور فرودی عبوری در نتیجه اثر پراکندگی نور ذرات معلق.
+                میزان ماده معلق ممکن است با مشاهده نور عبوری (توربیدیمتری) یا نور پراکنده (نفلومتری) اندازه‌گیری شود.
+                <div class="formula-display">
+                    \[\log I_0/I_t = kbc = T\]
+                </div>
+                <ul class="list-disc pr-6 mt-2">
+                    <li><span class="ltr-text">I<sub>0</sub></span> = شدت نور فرودی</li>
+                    <li><span class="ltr-text">I<sub>t</sub></span> = شدت نور عبوری</li>
+                    <li><span class="ltr-text">k</span> = ضریب کدورت مولار</li>
+                    <li><span class="ltr-text">b</span> = طول مسیر سلول</li>
+                    <li><span class="ltr-text">c</span> = غلظت</li>
+                    <li><span class="ltr-text">T</span> = کدورت</li>
+                </ul>
+            </li>
+            <li class="mt-4">
+                <strong>کدورت (<span class="ltr-text">Turbidity</span>)</strong> (نماد، <span class="ltr-text">τ</span>): در اندازه‌گیری‌های توربیدیمتری، کدورت معیاری برای کاهش شدت پرتو فرودی بر واحد طول یک سوسپانسیون مشخص است.
+                سازمان بین‌المللی استانداردسازی، کدورت را “کاهش شفافیت مایع ناشی از وجود ماده حل نشده” تعریف می‌کند.
+            </li>
+            <li class="mt-4">
+                <strong>واحدهای اندازه‌گیری کدورت (<span class="ltr-text">Turbidity Measurement Units</span>)</strong>: واحدهای کدورت با یک توصیف‌گر مشخص می‌شوند که روش اندازه‌گیری را نشان می‌دهد.
+            </li>
+            <li class="mt-4">
+                <strong>واحدهای کدورت نفلومتری (<span class="ltr-text">Nephelometric Turbidity Units</span>)</strong> (<span class="ltr-text">NTUs</span>): هنگامی که کدورت با استفاده از یک نفلومتر اندازه‌گیری می‌شود که نور پراکنده را در زاویه <span class="ltr-text">90°</span> از جهت انتشار نور فرودی اندازه‌گیری می‌کند، واحدهای کدورت، واحدهای کدورت نفلومتری (<span class="ltr-text">NTUs</span>) نامیده می‌شوند.
+                مقدار <span class="ltr-text">NTU</span> بر اساس کدورت تولید شده توسط استاندارد اولیه فورمازین (یک سوسپانسیون که با مخلوط کردن محلول‌های سولفات هیدرازین و هگزامتیلن‌تترامین در آب ساخته می‌شود) تعریف می‌شود.
+                سوسپانسیون‌های مهره پلیمری ایمن‌تر اکنون به صورت تجاری در دسترس هستند و به عنوان جایگزینی قابل قبول شناخته می‌شوند. با این حال، تمام این استانداردها به فورمازین قابل ردیابی هستند.
+                محلول استاندارد اولیه فورمازین یک کدورت <span class="ltr-text">4000 NTUs</span> به خود اختصاص داده است.
+                سایر واحدهای شناخته شده برای کدورت شامل واحد کدورت فورمازین (<span class="ltr-text">FTU</span>) و واحد نفلومتری فورمازین (<span class="ltr-text">FNU</span>) هستند.
+                این واحدها برای محدوده <span class="ltr-text">0–40 NTUs</span> معادل <span class="ltr-text">NTU</span> هستند.
+            </li>
+        </ul>
+
+        <h2 id="applications" class="text-2xl font-semibold text-blue-600 mb-4">۳. کاربردها</h2>
+        <p class="mb-4">
+            تکنیک‌های توربیدیمتری و نفلومتری کاربردهایی دارند که شامل
+            <span class="ltr-text">1)</span> تعیین غلظت محلول‌ها و/یا سوسپانسیون‌ها (تعیین چندین کاتیون و آنیون با رسوب‌دهی و معلق‌سازی رسوب حاصل در پارامترهای واکنش به خوبی کنترل شده)؛
+            <span class="ltr-text">2)</span> اندازه‌گیری درجه کدورت محلول‌ها یا سوسپانسیون‌های کدر؛
+            <span class="ltr-text">3)</span> تعیین وزن مولکولی متوسط وزنی و ابعاد سیستم‌های چندپراکنده در محدوده وزن مولکولی از <span class="ltr-text">1000</span> تا چند صد میلیون؛
+            <span class="ltr-text">4)</span> اندازه‌گیری سینتیک واکنش ایمونواسی‌ها یا سینتیک ایمونوپرسیپیتاسیون‌ها (نفلومتری سرعتی)؛
+            <span class="ltr-text">5)</span> پایش رشد سلول و باکتری؛ و
+            <span class="ltr-text">6)</span> تعیین توزیع اندازه ذرات مواد معلق، شمارش ذرات و غیره.
+        </p>
+        <p class="mb-4">
+            نفلومتری سرعتی به طور گسترده‌ای برای سنجش اجزای واکسن و/یا کمی‌سازی اجزا در سرم خون استفاده می‌شود.
+            همچنین برای احراز صلاحیت پروتئین سلول میزبان در بیوداروها (<span class="ltr-text">biopharmaceuticals</span>) نوترکیب به کار می‌رود.
+            هنگام استفاده از این تکنیک، اندازه‌گیری تغییر در پاسخ پراکندگی نور توسط کمپلکس‌های آنتی‌ژن-آنتی‌سرم یا آنتی‌ژن-آنتی‌بادی خالص‌شده برای محاسبه مقدار آنتی‌ژن (<span class="ltr-text">Ag</span>) یا آنتی‌بادی (<span class="ltr-text">Ab</span>) مسئول واکنش رسوب ایمونولوژیک <span class="ltr-text">Ab-Ag</span> یا واکنش آگلوتیناسیون استفاده می‌شود.
+            اغلب آنتی‌ژن‌های مورد نظر به طور کووالانسی به میکروسفرهای پلیمری متصل می‌شوند یا به آنها جذب می‌شوند تا کارایی پراکندگی را افزایش دهند؛ تکنیک حاصل به عنوان "ایمونواسی تقویت شده با ذرات" شناخته می‌شود.
+            اگرچه این تکنیک به عنوان نفلومتری توصیف می‌شود، معمولاً هم نور پراکنده و هم نور عبوری با استفاده از ابزارهای نسبت‌سنجی اندازه‌گیری می‌شوند.
+        </p>
+        <p class="mb-4">
+            اندازه‌گیری‌های نفلومتری در محدوده‌های کدورت پایین (غلظت نسبتاً پایین محیط پراکنده) قابل اعتمادتر هستند.
+            در این محدوده، یک رابطه خطی بین غلظت نمونه و شدت سیگنال آشکارساز که به صورت <span class="ltr-text">NTU</span> بیان می‌شود، مشاهده می‌شود.
+            با افزایش غلظت، بروز پراکندگی چندگانه نیز افزایش می‌یابد که پاسخ را از خطی بودن منحرف می‌کند.
+            حداکثر مقدار <span class="ltr-text">NTU</span> که از یک رابطه خطی قابل اعتماد پشتیبانی می‌کند، در محدوده <span class="ltr-text">1750–2000 NTUs</span> است.
+            توربیدیمتری برای محدوده‌های کدورت بالاتر (غلظت‌های محیط پراکنده) ترجیح داده می‌شود.
+            برای دستیابی به نتایج ثابت، تمام متغیرهای اندازه‌گیری باید به دقت کنترل شوند.
+            در جایی که چنین کنترلی امکان‌پذیر باشد، سوسپانسیون‌های بسیار رقیق نیز ممکن است اندازه‌گیری شوند.
+        </p>
+
+        <h2 id="instrumentation" class="text-2xl font-semibold text-blue-600 mb-4">۴. ابزار دقیق</h2>
+        <p class="mb-4">
+            ابزارهای مورد استفاده برای اندازه‌گیری‌های توربیدیمتری و نفلومتری به ترتیب توربیدیمتر و نفلومتر نامیده می‌شوند.
+            به طور کلی، این ابزارها شامل یک لامپ بخار جیوه با فیلترهایی برای خطوط سبز یا آبی قوی، یک شاتر، مجموعه‌ای از فیلترهای خنثی با قابلیت عبور شناخته شده، و یک فتومولتیپلایر حساس هستند که می‌توان آن را ثابت در <span class="ltr-text">0°</span> یا در زاویه <span class="ltr-text">90°</span> از جهت انتشار نور فرودی نصب کرد، یا بر روی یک بازوی متحرک که می‌تواند حول سلول محلول بچرخد و در هر زاویه‌ای از <span class="ltr-text">-135°</span> تا <span class="ltr-text">0°</span> تا <span class="ltr-text">+135°</span> با یک شماره‌گیر خارج از محفظه ضد نور تنظیم شود.
+            سلول‌های محلول اشکال مختلفی دارند، مانند مربع برای اندازه‌گیری پراکندگی <span class="ltr-text">90°</span>؛ نیم‌هشت‌ضلعی برای پراکندگی <span class="ltr-text">45°، 90°، و 135°</span>؛ و استوانه‌ای برای پراکندگی در تمام زوایا (به شکل <span class="ltr-text">1</span> مراجعه کنید).
+        </p>
+        <p class="mb-4 text-center italic text-gray-600">
+            شکل <span class="ltr-text">1</span>. ابزار نفلومتری (توربیدیمتری) نمونه. توجه داشته باشید که آشکارساز <span class="ltr-text">2</span> ممکن است روی یک بازوی متحرک نصب شود.
+        </p>
+        <p class="mb-4">
+            کدورت را می‌توان با یک فتومتر فیلتر فتوالکتریک استاندارد یا اسپکتروفتومتر نیز اندازه‌گیری کرد، ترجیحاً با روشنایی در بخش آبی طیف.
+            اندازه‌گیری‌های نفلومتری به ابزاری با یک فوتوسل نیاز دارند که به گونه‌ای قرار گرفته باشد که نور پراکنده را دریافت کند، نه نور عبوری را.
+            از آنجایی که این همان هندسه‌ای است که در فلورومترها استفاده می‌شود، می‌توان با انتخاب صحیح فیلترها از آن‌ها به عنوان نفلومتر استفاده کرد.
+            یک توربیدیمتر نسبت‌سنج، فناوری نفلومتری <span class="ltr-text">90°</span> و توربیدیمتری را ترکیب می‌کند.
+            این دستگاه حاوی فوتوسل‌هایی است که نور پراکنده را در زاویه <span class="ltr-text">90°</span> از نمونه دریافت و اندازه‌گیری می‌کنند، همچنین نور پراکنده رو به جلو را در جلوی نمونه دریافت و اندازه‌گیری می‌کنند.
+            همچنین نوری را که مستقیماً از نمونه عبور می‌کند، اندازه‌گیری می‌کند.
+            خطی بودن با محاسبه نسبت اندازه‌گیری نور پراکنده در زاویه <span class="ltr-text">90°</span> به مجموع اندازه‌گیری نور پراکنده رو به جلو و اندازه‌گیری نور عبوری به دست می‌آید.
+            مزیت استفاده از سیستم توربیدیمتری نسبت‌سنج این است که اندازه‌گیری نور پراکنده (<span class="ltr-text">stray light</span>) ناچیز می‌شود.
+            علاوه بر این، تعیین کدورت سوسپانسیون‌های رنگی منحصراً با استفاده از ابزارهای توربیدیمتری یا نفلومتری با حالت نسبت‌سنج انجام می‌شود، زیرا این روش برای تضعیف نور در نتیجه رنگ سوسپانسیون جبران می‌کند.
+            به طور معمول، منبع نور در این ابزارها یک لامپ تنگستن با بیشترین شدت نور در حدود <span class="ltr-text">550 nm</span> است که در دمای رشته <span class="ltr-text">2700 K</span> کار می‌کند.
+            سایر منابع نوری مناسب نیز در دسترس هستند.
+            به طور معمول، آشکارسازها <span class="ltr-text">سیلیکون دیود</span> و فتومولتیپلایر هستند.
+            یک جایگزین برای حذف اثر رنگ شامل استفاده از یک دیود ساطع‌کننده نور مادون قرمز به عنوان منبع نور است که حداکثر انتشار را در حدود <span class="ltr-text">860 nm</span> و پهنای باند طیفی <span class="ltr-text">60 nm</span> ایجاد می‌کند.
+            هنگامی که از منابع نور لیزری نیز استفاده می‌شود، به ویژه در ابزارهای نفلومتری، این تکنیک معمولاً به عنوان "نفلومتری لیزری" شناخته می‌شود.
+            مزیت استفاده از نفلومترهای لیزری، بهبود قابل توجه نسبت سیگنال به نویز در سطوح تشخیص بسیار پایین است.
+            معمولاً منبع نور یک دیود لیزر با طول موج کاری <span class="ltr-text">660 nm</span> است.
+            چگالی توان بالای پرتو لیزر باعث شدت پراکندگی بالاتری از ذرات کوچکتر می‌شود.
+            همراه با یک تله نور که نور پراکنده نشده را جذب می‌کند، سیستم نور پراکنده را به میزان قابل توجهی کاهش می‌دهد.
+            هنگامی که استفاده از یک نفلومتر یا توربیدیمتر برای یک روش در یک مونوگراف نشان داده شده است، ممکن است به جای آن از ابزارهایی که در حالت نسبت‌سنج کار می‌کنند، استفاده شود.
+        </p>
+
+        <h2 id="formazin-standards" class="text-2xl font-semibold text-blue-600 mb-4">۵. استانداردهای کدورت فورمازین</h2>
+        <p class="mb-4">
+            فورمازین تنها استاندارد اولیه کدورت شناخته شده است.
+            تمام استانداردهای دیگر ثانویه هستند و باید به فورمازین ردیابی شوند.
+            استاندارد اولیه در <span class="ltr-text">IUPAC Compendium of Chemical Terminology</span>، ویرایش <span class="ltr-text">2</span> (کتاب طلایی) به عنوان استانداردی تعریف می‌شود که توسط کاربر از مواد قابل ردیابی با استفاده از روش‌ها و شرایط به خوبی تعریف شده، تهیه می‌شود.
+        </p>
+        <p class="mb-4">
+            سوسپانسیون فورمازین دارای ویژگی‌های زیادی است که مناسب بودن آن را به عنوان یک استاندارد اولیه تضمین می‌کند.
+            می‌توان آن را به طور ثابت و دقیق از مواد اولیه با گرید معرف تهیه کرد.
+            این سوسپانسیون شامل پلیمرهای تصادفی با طول‌های مختلف و پیکربندی‌های تصادفی است که منجر به تشکیل بخش‌هایی با اشکال و اندازه‌های متغیر از کمتر از <span class="ltr-text">0.1 μm</span> تا بیش از <span class="ltr-text">10 μm</span> می‌شود.
+            اگرچه نشان داده شده است که توزیع طول زنجیره پلیمر از یک آماده‌سازی به آماده‌سازی دیگر متفاوت است، اما کدورت کلی حاصل بسیار قابل تکرار بوده است.
+        </p>
+
+        <h3 id="preparation-formazin" class="text-xl font-semibold text-blue-600 mb-2">۵.۱ آماده‌سازی استانداردهای فورمازین</h3>
+        <p class="mb-4">
+            [<span class="font-bold">توجه</span>—تمام روش‌های شرح داده شده در زیر باید در <span class="ltr-text">20 ± 2°</span> انجام شوند (به <a href="31.html" class="text-blue-600 hover:underline" target="_blank">۳۱</a> ابزار حجمی مراجعه کنید).]
+        </p>
+        <ul class="list-disc pr-6 mb-4">
+            <li>
+                <strong>محلول سولفات هیدرازین:</strong> <span class="ltr-text">1.000 g</span> سولفات هیدرازین با گرید <span class="ltr-text">ACS</span> (<span class="ltr-text">N<sub>2</sub>H<sub>4</sub> · H<sub>2</sub>SO<sub>4</sub></span>) را در آب عاری از ذرات در یک بالن حجمی <span class="ltr-text">100-mL</span> کلاس <span class="ltr-text">A</span> حل کرده و با آب عاری از ذرات به حجم برسانید.
+                اجازه دهید این محلول برای <span class="ltr-text">4–6 h</span> بماند.
+            </li>
+            <li class="mt-4">
+                <strong>استاندارد اولیه فورمازین:</strong> <span class="ltr-text">2.50 g</span> هگزامتیلن‌تترامین با گرید تحلیلی (<span class="ltr-text">[(CH<sub>2</sub>)<sub>6</sub>N<sub>4</sub>]</span>) را در <span class="ltr-text">25.0 mL</span> آب عاری از ذرات در یک بالن <span class="ltr-text">100-mL</span> حل کنید.
+                <span class="ltr-text">25.0 mL</span> محلول سولفات هیدرازین را با استفاده از یک پیپت حجمی <span class="ltr-text">25-mL</span> کلاس <span class="ltr-text">A</span> "برای تحویل" اضافه کرده و کاملاً مخلوط کنید.
+                اجازه دهید محلول برای <span class="ltr-text">48 h</span> در <span class="ltr-text">25 ± 1°</span> قبل از استفاده بماند.
+                سوسپانسیون حاصل برای <span class="ltr-text">2 months</span> پایدار است.
+            </li>
+            <li class="mt-4">
+                <strong>سوسپانسیون استاندارد ذخیره فورمازین <span class="ltr-text">1</span>:</strong> با استفاده از یک پیپت حجمی <span class="ltr-text">15-mL</span> کلاس <span class="ltr-text">A</span> "برای تحویل"، <span class="ltr-text">15 mL</span> از استاندارد اولیه فورمازین را به یک بالن حجمی <span class="ltr-text">1-L</span> منتقل کرده و با آب عاری از ذرات به حجم رسانده و مخلوط کنید.
+                سوسپانسیون حاصل دارای کدورت <span class="ltr-text">60 NTU</span> است.
+            </li>
+            <li class="mt-4">
+                <strong>سوسپانسیون استاندارد ذخیره فورمازین <span class="ltr-text">2</span>:</strong> با استفاده از یک پیپت حجمی <span class="ltr-text">50-mL</span> کلاس <span class="ltr-text">A</span> "برای تحویل"، <span class="ltr-text">50 mL</span> از استاندارد اولیه فورمازین را به یک بالن حجمی <span class="ltr-text">200-mL</span> منتقل کرده و با آب عاری از ذرات به حجم رسانده و مخلوط کنید.
+                سوسپانسیون حاصل دارای کدورت <span class="ltr-text">1000 NTUs</span> است.
+            </li>
+            <li class="mt-4">
+                <strong>سوسپانسیون‌های مرجع فورمازین:</strong> با مخلوط کردن بخش‌هایی از سوسپانسیون استاندارد ذخیره فورمازین مربوطه و آب عاری از ذرات در یک بالن حجمی <span class="ltr-text">100-mL</span> مطابق با جدول <span class="ltr-text">1</span> تهیه کنید.
+            </li>
+        </ul>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">جدول <span class="ltr-text">1</span>. آماده‌سازی سوسپانسیون‌های مرجع فورمازین</h4>
+        <table class="table-auto border-collapse mb-6">
+            <thead>
+                <tr>
+                    <th>سوسپانسیون‌های مرجع فورمازین</th>
+                    <th>سوسپانسیون استاندارد ذخیره فورمازین <span class="ltr-text">1</span> حجم (<span class="ltr-text">mL</span>)</th>
+                    <th>سوسپانسیون استاندارد ذخیره فورمازین <span class="ltr-text">2</span> حجم (<span class="ltr-text">mL</span>)</th>
+                    <th>آب عاری از ذرات حجم (<span class="ltr-text">mL</span>)</th>
+                    <th>مقدار کدورت (<span class="ltr-text">NTU</span>)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>سوسپانسیون مرجع <span class="ltr-text">I</span></td>
+                    <td><span class="ltr-text">5.0</span></td>
+                    <td><span class="ltr-text">—</span></td>
+                    <td><span class="ltr-text">95.0</span></td>
+                    <td><span class="ltr-text">3</span></td>
+                </tr>
+                <tr>
+                    <td>سوسپانسیون مرجع <span class="ltr-text">II</span></td>
+                    <td><span class="ltr-text">10.0</span></td>
+                    <td><span class="ltr-text">—</span></td>
+                    <td><span class="ltr-text">90.0</span></td>
+                    <td><span class="ltr-text">6</span></td>
+                </tr>
+                <tr>
+                    <td>سوسپانسیون مرجع <span class="ltr-text">III</span></td>
+                    <td><span class="ltr-text">30.0</span></td>
+                    <td><span class="ltr-text">—</span></td>
+                    <td><span class="ltr-text">70.0</span></td>
+                    <td><span class="ltr-text">18</span></td>
+                </tr>
+                <tr>
+                    <td>سوسپانسیون مرجع <span class="ltr-text">IV</span></td>
+                    <td><span class="ltr-text">50.0</span></td>
+                    <td><span class="ltr-text">—</span></td>
+                    <td><span class="ltr-text">50.0</span></td>
+                    <td><span class="ltr-text">30</span></td>
+                </tr>
+                <tr>
+                    <td>سوسپانسیون استاندارد ذخیره <span class="ltr-text">1</span></td>
+                    <td><span class="ltr-text">100</span></td>
+                    <td><span class="ltr-text">—</span></td>
+                    <td><span class="ltr-text">0</span></td>
+                    <td><span class="ltr-text">60</span></td>
+                </tr>
+                <tr>
+                    <td>سوسپانسیون مرجع <span class="ltr-text">VI</span></td>
+                    <td><span class="ltr-text">—</span></td>
+                    <td><span class="ltr-text">10.0</span></td>
+                    <td><span class="ltr-text">90.0</span></td>
+                    <td><span class="ltr-text">100</span></td>
+                </tr>
+                <tr>
+                    <td>سوسپانسیون مرجع <span class="ltr-text">VII</span></td>
+                    <td><span class="ltr-text">—</span></td>
+                    <td><span class="ltr-text">20.0</span></td>
+                    <td><span class="ltr-text">80.0</span></td>
+                    <td><span class="ltr-text">200</span></td>
+                </tr>
+                <tr>
+                    <td>سوسپانسیون مرجع <span class="ltr-text">VIII</span></td>
+                    <td><span class="ltr-text">—</span></td>
+                    <td><span class="ltr-text">40.0</span></td>
+                    <td><span class="ltr-text">60.0</span></td>
+                    <td><span class="ltr-text">400</span></td>
+                </tr>
+                <tr>
+                    <td>سوسپانسیون مرجع <span class="ltr-text">IX</span></td>
+                    <td><span class="ltr-text">—</span></td>
+                    <td><span class="ltr-text">70.0</span></td>
+                    <td><span class="ltr-text">30.0</span></td>
+                    <td><span class="ltr-text">700</span></td>
+                </tr>
+                <tr>
+                    <td>سوسپانسیون استاندارد ذخیره <span class="ltr-text">2</span></td>
+                    <td><span class="ltr-text">—</span></td>
+                    <td><span class="ltr-text">100</span></td>
+                    <td><span class="ltr-text">0</span></td>
+                    <td><span class="ltr-text">1000</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 id="qualification-instruments" class="text-2xl font-semibold text-blue-600 mb-4">۶. احراز صلاحیت توربیدیمترها و نفلومترها</h2>
+        <p class="mb-4">
+            مناسب بودن یک ابزار خاص برای یک روش معین با ارزیابی مرحله به مرحله چرخه عمر برای کاربرد مورد نظر از انتخاب تا بازنشستگی ابزار تضمین می‌شود.
+            احراز صلاحیت شامل سه جزء است: <span class="ltr-text">1)</span> احراز صلاحیت نصب (<span class="ltr-text">IQ</span>)، <span class="ltr-text">2)</span> احراز صلاحیت عملیاتی (<span class="ltr-text">OQ</span>)، و <span class="ltr-text">3)</span> احراز صلاحیت عملکرد (<span class="ltr-text">PQ</span>) (به <a href="1058.html" class="text-blue-600 hover:underline" target="_blank">۱۰۵۸</a> احراز صلاحیت ابزار تحلیلی مراجعه کنید).
+            هدف این بخش ارائه روش‌های آزمون و معیارهای پذیرش برای اطمینان از مناسب بودن ابزار برای کاربرد مورد نظر (<span class="ltr-text">OQ</span>) و اینکه در طول زمان طولانی به درستی کار خواهد کرد (<span class="ltr-text">PQ</span>) است.
+            همانند هر دستگاه اسپکترومتریک، یک اسپکترومتر توربیدیمتری و نفلومتری باید برای دقت و صحت طول موج (محور <span class="ltr-text">x</span>، اگر ثابت نباشد) و فتومتریک (محور <span class="ltr-text">y</span>، یا محور سیگنال) احراز صلاحیت شود و الزامات نور پراکنده را برآورده کند.
+            <span class="ltr-text">OQ</span> در سراسر محدوده‌های عملیاتی مورد نیاز در آزمایشگاه برای هر دو مقیاس جذب و طول موج انجام می‌شود.
+        </p>
+        <p class="mb-4">
+            معیارهای پذیرش برای پارامترهای حیاتی ابزار که "مناسب بودن برای هدف" را برقرار می‌کنند، در طول <span class="ltr-text">IQ</span> و <span class="ltr-text">OQ</span> تأیید می‌شوند.
+            مشخصات برای ابزارها و کاربردهای خاص ممکن است بسته به روش تحلیلی مورد استفاده و دقت مطلوب نتیجه نهایی متفاوت باشد.
+            فروشندگان ابزار اغلب نمونه‌ها و پارامترهای آزمون را به عنوان بخشی از بسته <span class="ltr-text">IQ/OQ</span> در دسترس دارند.
+            در هر کجا که در روش‌های ذکر شده در ادامه امکان‌پذیر باشد، استانداردهای مرجع اولیه یا مواد مرجع گواهی‌شده (<span class="ltr-text">CRMs</span>) باید استفاده شوند.
+            فورمازین تنها استاندارد مرجع اولیه مورد استفاده در توربیدیمتری و نفلومتری است.
+            تمام استانداردهای دیگر، از جمله <span class="ltr-text">CRMs</span>، باید با فورمازین همبستگی داشته باشند.
+            <span class="ltr-text">CRMs</span> باید از یک منبع معتبر شناخته شده تهیه شوند و شامل مقادیر قابل ردیابی با تأیید مستقل و عدم قطعیت محاسبه شده مرتبط باشند.
+            <span class="ltr-text">CRMs</span> باید تمیز و عاری از گرد و غبار نگهداری شوند.
+            تأیید مجدد باید به صورت دوره‌ای برای حفظ اعتبار گواهینامه انجام شود.
+        </p>
+
+        <h3 id="calibration" class="text-xl font-semibold text-blue-600 mb-2">۶.۱ کالیبراسیون</h3>
+        <p class="mb-4">
+            تمام ابزارهای توربیدیمتری و نفلومتری در برابر استانداردهای کدورت شناخته شده کالیبره می‌شوند.
+            ابزار باید قبل از اولین استفاده و حداقل هر <span class="ltr-text">3 months</span> یا طبق دستور فروشنده، با استفاده از استانداردهای کدورت فورمازین کالیبره شود.
+            کالیبراسیون با استفاده از حداقل <span class="ltr-text">four</span> استاندارد کدورت فورمازین انجام می‌شود که کدورت آن‌ها به طور متناسب محدوده مورد نظر را پوشش می‌دهد.
+            بسیاری از تولیدکنندگان ابزار، استانداردهای تأیید کالیبراسیون را ارائه می‌دهند.
+            آنها معمولاً شامل سلول‌های نمونه مهر و موم شده پر شده با سوسپانسیون لاتکس یا ذرات اکسید فلز در ژل پلیمر هستند.
+            این استانداردها فقط برای بررسی کالیبراسیون در فواصل زمانی بین کالیبراسیون‌های توصیه شده توسط ابزار باید استفاده شوند.
+        </p>
+
+        <h3 id="stray-light" class="text-xl font-semibold text-blue-600 mb-2">۶.۲ نور پراکنده</h3>
+        <p class="mb-4">
+            نور پراکنده (انرژی تابشی پراکنده) یک منبع خطای بسیار مهم است، به ویژه برای اندازه‌گیری‌ها در محدوده قرائت‌های کدورت پایین‌تر.
+            این نور به عنوان نور خارجی تعریف می‌شود که بدون پراکنده شدن از نمونه به آشکارساز می‌رسد.
+            چندین منبع نور پراکنده وجود دارد از جمله نقص‌های ذاتی سطح سلول، بازتاب‌ها از داخل سلول که محاسبه نشده‌اند، قطعات سیستم نوری، منابع نور، و تا حد کمتری، نوسانات الکترونیکی.
+            اگرچه ویژگی‌های طراحی زیادی وجود دارد که فروشندگان ابزار برای به حداقل رساندن نور پراکنده از آنها استفاده می‌کنند، اما کاهش کامل نور پراکنده قابل دستیابی نیست.
+            بر خلاف اندازه‌گیری‌های اسپکتروفتومتریک، نور پراکنده را نمی‌توان در توربیدیمتری جبران کرد.
+            نور پراکنده باید اندازه‌گیری شود و مقادیر باید در محدوده مشخصات تعیین شده توسط فروشنده ابزار خاص یا <span class="ltr-text">&lt;0.15 NTUs</span> برای اندازه‌گیری در محدوده <span class="ltr-text">0–10 NTUs</span> و <span class="ltr-text">0.5 NTUs</span> برای اندازه‌گیری‌ها در محدوده <span class="ltr-text">10–1100 NTUs</span> باشد، هر کدام که کوچکتر است.
+        </p>
+
+        <h3 id="range-capability" class="text-xl font-semibold text-blue-600 mb-2">۶.۳ محدوده قابلیت اندازه‌گیری</h3>
+        <p class="mb-4">
+            ابزار باید قادر به اندازه‌گیری کدورت در محدوده <span class="ltr-text">0.01–1100 NTUs</span> یا از <span class="ltr-text">50%–200%</span> کدورت هدف باشد.
+            برای نشان دادن خطی بودن برای محدوده اندازه‌گیری مورد نظر، حداقل <span class="ltr-text">four</span> سوسپانسیون مرجع مناسب را از جدول <span class="ltr-text">1</span> انتخاب کنید.
+        </p>
+
+        <h3 id="resolution" class="text-xl font-semibold text-blue-600 mb-2">۶.۴ رزولوشن</h3>
+        <p class="mb-4">
+            رزولوشن ابزار باید <span class="ltr-text">0.01 NTU</span> یا کمتر برای محدوده اندازه‌گیری <span class="ltr-text">0–9.99 NTUs</span> باشد؛
+            <span class="ltr-text">0.1 NTU</span> یا کمتر برای محدوده اندازه‌گیری <span class="ltr-text">10–99.9 NTUs</span>؛
+            و <span class="ltr-text">1 NTU</span> برای اندازه‌گیری‌های بالای <span class="ltr-text">100 NTUs</span> باشد.
+        </p>
+
+        <h3 id="accuracy-qual" class="text-xl font-semibold text-blue-600 mb-2">۶.۵ دقت</h3>
+        <p class="mb-4">
+            دقت قرائت ابزار باید <span class="ltr-text">±10%</span> از قرائت <span class="ltr-text">+ 0.01 NTU</span> برای محدوده اندازه‌گیری از <span class="ltr-text">0–19.9 NTUs</span>، و <span class="ltr-text">±7.5%</span> از قرائت برای محدوده اندازه‌گیری از <span class="ltr-text">20–1100 NTUs</span> باشد.
+        </p>
+
+        <h3 id="performance-qual" class="text-xl font-semibold text-blue-600 mb-2">۶.۶ احراز صلاحیت عملکرد</h3>
+        <p class="mb-4">
+            احراز صلاحیت عملکرد ابزار به صورت دوره‌ای یا در صورت نیاز بین کالیبراسیون‌ها انجام می‌شود.
+            استانداردهای اولیه کدورت (فورمازین) یا استانداردهای ثانویه تأیید کالیبراسیون (سوسپانسیون‌های لاتکس یا ذرات اکسید فلز در ژل‌های پلیمری موجود در سلول‌های نمونه مهر و موم شده) که توسط تولیدکنندگان ابزار ارائه می‌شوند، ممکن است استفاده شوند.
+        </p>
+
+        <h2 id="procedures" class="text-2xl font-semibold text-blue-600 mb-4">۷. روش‌ها</h2>
+
+        <h3 id="turbidimetric-procedures" class="text-xl font-semibold text-blue-600 mb-2">۷.۱ روش‌های توربیدیمتری</h3>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آماده‌سازی سلول نمونه</h4>
+        <p class="mb-4">
+            سلول‌های نمونه برای اندازه‌گیری نمونه باید تمیز باشند.
+            توصیه‌های تولیدکننده سلول نمونه یا ابزار را برای تمیز کردن مناسب سلول‌های نمونه دنبال کنید.
+            برای اندازه‌گیری‌های کدورت پایین، استفاده از یک سلول نمونه با شاخص واحد یا یک سلول جریانی (<span class="ltr-text">flow cell</span>) یک عمل خوب است که به اطمینان از دقت و تکرارپذیری کافی اندازه‌گیری‌ها کمک می‌کند.
+            با استفاده از آب عاری از ذرات، جهت‌گیری سلول نمونه را در نگهدارنده سلول نمونه که کمترین قرائت را می‌دهد، پیدا کنید.
+            برای مقادیر بالاتر کدورت، ممکن است از سلول‌های نمونه مختلفی استفاده شود.
+            با این حال، سلول‌های نمونه باید همسان باشند (تفاوت در قرائت‌ها برای یک استاندارد که در غلظت اسمی نمونه از دو سلول نمونه مختلف تهیه شده است، باید در محدوده <span class="ltr-text">±0.005 NTU</span> یا کمتر از نیاز دقت اندازه‌گیری باشد، هر کدام که کمتر است).
+        </p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آماده‌سازی نمونه</h4>
+        <p class="mb-4">
+            نمونه‌ها را طبق دستورالعمل مونوگراف مربوطه آماده کنید.
+            نمونه‌ها را با چرخاندن یا به آرامی چندین بار برگرداندن بالن حجمی، کاملاً مخلوط کنید.
+            از تکان دادن یا هم زدن خودداری کنید، زیرا ممکن است حباب ایجاد کند.
+            گاززدایی نمونه‌ها به بهبود اندازه‌گیری‌ها کمک می‌کند.
+            برای گاززدایی، نمونه‌ها می‌توانند برای چندین دقیقه بمانند یا خلاء اعمال شود، یا می‌توان آن‌ها را به آرامی با استفاده از حمام التراسونیک سونیکه کرد.
+            پس از گاززدایی، اجازه دهید نمونه‌ها برای چندین دقیقه بمانند و سپس دوباره با دقت دو تا سه بار برگرداندن مخلوط کنید.
+            نمونه را به سلول نمونه منتقل کرده و قرائت‌ها را انجام دهید.
+        </p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">استفاده از سلول‌های جریانی</h4>
+        <p class="mb-4">
+            سلول‌های جریانی عمدتاً برای اندازه‌گیری‌های کدورت پایین برای نمونه‌های با ذرات کوچک استفاده می‌شوند.
+            هنگامی که از چنین سلول‌هایی استفاده می‌شود، نمونه با دقت ریختن آن به سمت لبه داخلی مخزن ورودی، وارد می‌شود.
+        </p>
+        <p class="mb-4">
+            در عمل، توصیه می‌شود اطمینان حاصل شود که ته نشین شدن ذرات مورد اندازه‌گیری ناچیز است.
+            این معمولاً با گنجاندن یک کلوئید محافظ در محیط مایع معلق‌کننده انجام می‌شود.
+            مهم است که نتایج با مقایسه قرائت‌ها با نتایج معرف غلظت‌های شناخته شده ماده معلق، که تحت شرایط دقیقاً یکسان تولید شده‌اند، تفسیر شوند.
+        </p>
+
+        <h3 id="nephelometric-procedures" class="text-xl font-semibold text-blue-600 mb-2">۷.۲ روش‌های نفلومتری</h3>
+        <p class="mb-4">
+            روش‌های نفلومتری مشابه روش‌های توربیدیمتری برای هر دو اندازه‌گیری مستقیم و اندازه‌گیری‌ها در حالت نسبت‌سنجی همانطور که در بالا توضیح داده شد، انجام می‌شوند.
+        </p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش‌های نفلومتری سرعتی</h4>
+        <p class="mb-4">
+            روش کلی برای پایش پیشرفت واکنش شامل سه مرحله به خوبی تعریف شده است:
+            <span class="ltr-text">1)</span> ثبت قرائت خط پایه کدورت محیط (<span class="ltr-text">blank</span>)؛
+            <span class="ltr-text">2)</span> ثبت کدورت پس از اضافه شدن معرف اول (آنتی‌ژن)، که منجر به افزایش کدورت تا رسیدن به یک فلات می‌شود؛ و
+            <span class="ltr-text">3)</span> اضافه کردن معرف دوم (آنتی‌بادی)، که منجر به افزایش دیگری در کدورت و یک فلات دوم و سپس افزایش نهایی کدورت می‌شود که تا رسیدن به فلات سوم ادامه می‌یابد.
+            منطقه اندازه‌گیری از زمان اضافه شدن آنتی‌بادی تا فلات سوم، بسته به هدف سنجش و غلظت‌های اجزای مربوطه، انتخاب می‌شود.
+            نفلومتری سینتیک و نفلومتری نقطه پایانی دو روش عمومی هستند که برای کمی‌سازی کمپلکس‌های ایمنی تشکیل شده در روش‌های ایمونواسی استفاده می‌شوند (که به عنوان ایمونونفلومتری نیز شناخته می‌شود، زیرا کدورت اندازه‌گیری شده ناشی از کمپلکس‌های ایمنی تشکیل شده است).
+            برای هر روش، چندین پارامتر وجود دارد که باید در هر کاربرد فردی بهینه شوند.
+            پارامترهای اصلی عبارتند از:
+            <span class="ltr-text">1)</span> با یا بدون تقویت ذرات؛
+            <span class="ltr-text">2)</span> انواع ذرات، اندازه‌ها و طول موج بهینه مربوطه، در صورت لزوم؛
+            <span class="ltr-text">3)</span> پایش سینتیک واکنش یا نقطه پایانی؛
+            <span class="ltr-text">4)</span> آنتی‌بادی/آنتی‌ژن مورد نظر و بارگذاری بهینه آنتی‌ژن مربوطه؛
+            <span class="ltr-text">5)</span> بافرها و سایر گونه‌های یونی و <span class="ltr-text">pH</span> بهینه مربوطه؛
+            <span class="ltr-text">6)</span> نوع و غلظت پلیمرهای مورد استفاده برای تغییر حلالیت پروتئین‌ها؛ و
+            <span class="ltr-text">7)</span> دما و سایر عوامل محیطی.
+            به طور کلی این پارامترها در طول توسعه روش بهینه می‌شوند و مقادیر در مونوگراف(های) خاص و/یا فصل(های) مربوطه ارائه می‌شوند.
+        </p>
+        <p class="mb-4">
+            <strong>نفلومتری سینتیک:</strong> نفلومتری سینتیک در مقایسه با نفلومتری نقطه پایانی عمدتاً به دلیل قابلیت گرفتن قرائت Blank نمونه علاوه بر قرائت Blank معرف، مزیت دارد.
+            این روش سرعت تشکیل ایمونوکمپلکس را بر اساس افزایش شدت پاسخ نور پراکنده با طول موج انتخابی ارزیابی می‌کند.
+            سینتیک واکنش ممکن است به طور مداوم پایش شود یا تعداد معینی از نقاط داده گرفته شود، بسته به زمان پاسخ ابزار مورد استفاده و نوع کاربرد.
+            گاهی ممکن است فقط دو نقطه داده را شامل شود؛ با این حال، باید احتیاط کافی انجام شود زیرا انتخاب نقاط می‌تواند بر دقت کلی در مواردی که تفاوت در سینتیک واکنش بین نمونه‌ها و استانداردهای کالیبراسیون وجود دارد، تأثیر بگذارد.
+            باید توجه دقیقی به انتخاب مناسب استراتژی کنترل ویژگی شود.
+        </p>
+        <p class="mb-4">
+            <strong>نفلومتری نقطه پایانی:</strong> در این روش، یک اندازه‌گیری اولیه قبل از افزودن معرف انجام می‌شود که نشان‌دهنده قرائت Blank است.
+            اندازه‌گیری دوم پس از تشکیل ایمونوکمپلکس تقریباً پس از <span class="ltr-text">60 min</span> انجام می‌شود.
+            تفاوت بین این دو اندازه‌گیری متناسب با محتوای جزئی است که سنجش می‌شود.
+        </p>
+
+        <h2 id="validation-verification" class="text-2xl font-semibold text-blue-600 mb-4">۸. اعتبار سنجی و تأیید</h2>
+
+        <h3 id="validation" class="text-xl font-semibold text-blue-600 mb-2">۸.۱ اعتبار سنجی</h3>
+        <p class="mb-4">
+            اعتبار سنجی زمانی لازم است که یک روش نفلومتری/توربیدیمتری برای استفاده به عنوان جایگزینی برای روش رسمی برای آزمایش یک مقاله رسمی در نظر گرفته شده باشد.
+            هدف از اعتبار سنجی روش نفلومتری/توربیدیمتری، نشان دادن مناسب بودن اندازه‌گیری برای هدف مورد نظر آن است، از جمله تعیین کمی جزء اصلی در یک ماده دارویی یا یک محصول دارویی (سنجش‌های رده <span class="ltr-text">I</span>)، تعیین کمی ناخالصی‌ها یا آزمون‌های حدی (رده <span class="ltr-text">II</span>)، و آزمون‌های شناسایی (رده <span class="ltr-text">IV</span>).
+            بسته به رده آزمون (به جدول <span class="ltr-text">2</span> در <a href="1225.html" class="text-blue-600 hover:underline" target="_blank">۱۲۲۵</a> اعتبار سنجی روش‌های رسمی مراجعه کنید)، فرآیند اعتبار سنجی روش تحلیلی برای نفلومتری/توربیدیمتری نیاز به آزمایش دقت، صحت، ویژگی، حد تشخیص (<span class="ltr-text">DL</span>)، حد کمی‌سازی (<span class="ltr-text">QL</span>)، خطی بودن، محدوده، و استحکام دارد.
+            این ویژگی‌های عملکرد تحلیلی برای روش‌های استانداردسازی شده خارجی و روش‌هایی که از افزودن استاندارد استفاده می‌کنند، اعمال می‌شود.
+        </p>
+        <p class="mb-4">
+            <a href="1225.html" class="text-blue-600 hover:underline" target="_blank">۱۲۲۵</a> اعتبار سنجی روش‌های رسمی، تعاریف و راهنمایی‌های کلی در مورد اعتبار سنجی روش‌های تحلیلی را بدون نشان دادن معیارهای اعتبار سنجی خاص برای هر ویژگی ارائه می‌دهد.
+            هدف بخش‌های زیر ارائه معیارهای اعتبار سنجی خاص به کاربر است که حداقل انتظارات برای این فناوری را نشان می‌دهد.
+            برای هر کاربرد خاص، ممکن است معیارهای سختگیرانه‌تری برای نشان دادن مناسب بودن برای کاربرد مورد نظر لازم باشد.
+        </p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">دقت</h4>
+        <p class="mb-4">
+            برای روش‌های رده <span class="ltr-text">I، II، و III</span>، دقت را می‌توان با انجام مطالعات بازیابی با ماتریس مناسب که با غلظت‌های شناخته شده آنالیت اسپایک شده، تعیین کرد.
+            تحلیلگران همچنین می‌توانند نتایج سنجش به دست آمده با استفاده از روش نفلومتری/توربیدیمتری تحت اعتبار سنجی را با نتایج حاصل از یک روش تحلیلی established مقایسه کنند.
+        </p>
+        <p class="mb-4">
+            <strong>معیارهای اعتبار سنجی:</strong> بازیابی میانگین <span class="ltr-text">98.0%–102.0%</span> برای مواد دارویی، بازیابی میانگین <span class="ltr-text">95.0%–105.0%</span> برای سنجش محصول دارویی، و بازیابی میانگین <span class="ltr-text">80.0%–120.0%</span> برای آنالیز ناخالصی.
+            این معیارها در سراسر محدوده مشخص شده رعایت می‌شوند.
+        </p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">صحت</h4>
+        <p class="mb-4">
+            <strong>تکرارپذیری:</strong> تکرارپذیری روش تحلیلی با اندازه‌گیری غلظت‌های <span class="ltr-text">six</span> محلول نمونه که به طور مستقل در <span class="ltr-text">100%</span> غلظت آزمون سنجش آماده شده‌اند، ارزیابی می‌شود.
+            به عنوان جایگزین، می‌توان آن را با اندازه‌گیری غلظت‌های <span class="ltr-text">three</span> تکرار از <span class="ltr-text">three</span> محلول نمونه جداگانه در غلظت‌های مختلف ارزیابی کرد.
+            سه غلظت باید به اندازه کافی نزدیک باشند تا تکرارپذیری در سراسر محدوده غلظت ثابت باشد.
+            اگر این کار انجام شود، تکرارپذیری در سه غلظت برای مقایسه با معیارهای پذیرش جمع‌آوری می‌شود.
+        </p>
+        <p class="mb-4">
+            <strong>معیارهای اعتبار سنجی:</strong> انحراف استاندارد نسبی <span class="ltr-text">NMT 1.0%</span> برای ماده دارویی، <span class="ltr-text">NMT 2.0%</span> برای سنجش محصول دارویی، و <span class="ltr-text">NMT 20.0%</span> برای آنالیز ناخالصی است.
+        </p>
+        <p class="mb-4">
+            <strong>صحت میانی:</strong> اثر رویدادهای تصادفی بر صحت تحلیلی روش باید مشخص شود.
+            متغیرهای معمول شامل انجام آنالیز در روزهای مختلف، استفاده از ابزارهای مختلف، و/یا انجام روش توسط دو یا چند تحلیلگر است.
+            حداقل، هر ترکیبی از حداقل <span class="ltr-text">two</span> از این عوامل که در مجموع <span class="ltr-text">six</span> آزمایش را شامل می‌شود، تخمینی از صحت میانی ارائه می‌دهد.
+        </p>
+        <p class="mb-4">
+            <strong>معیارهای اعتبار سنجی:</strong> انحراف استاندارد نسبی <span class="ltr-text">NMT 1.5%</span> برای ماده دارویی، <span class="ltr-text">NMT 3.0%</span> برای سنجش محصول دارویی، و <span class="ltr-text">NMT 25.0%</span> برای آنالیز ناخالصی است.
+        </p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ویژگی</h4>
+        <p class="mb-4">
+            در اندازه‌گیری‌های نفلومتری/توربیدیمتری، ویژگی با عدم تداخل از سایر اجزای موجود در ماتریس (سایر اجزای ماتریس یک محلول واقعی تولید می‌کنند) نشان داده می‌شود.
+        </p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد تشخیص</h4>
+        <p class="mb-4">
+            <span class="ltr-text">DL</span> را می‌توان با محاسبه غلظت محلولی که نسبت سیگنال به نویز <span class="ltr-text">≥3.3</span> را می‌دهد، تخمین زد.
+            <span class="ltr-text">DL</span> تخمین زده شده باید با تجزیه و تحلیل نمونه‌ها در غلظت محاسبه شده تأیید شود.
+        </p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد کمی‌سازی</h4>
+        <p class="mb-4">
+            <span class="ltr-text">QL</span> را می‌توان با محاسبه غلظت محلولی که نسبت سیگنال به نویز <span class="ltr-text">≥10.0</span> را می‌دهد، تخمین زد.
+            <span class="ltr-text">QL</span> تخمین زده شده باید با تجزیه و تحلیل نمونه‌ها در غلظت محاسبه شده تأیید شود.
+            اندازه‌گیری یک محلول آزمایشی که از یک ماتریس نمونه معرف اسپایک شده در غلظت <span class="ltr-text">QL</span> مورد نیاز تهیه شده است، باید برای تأیید حساسیت کافی و دقت مناسب انجام شود.
+            نسبت سیگنال به نویز مشاهده شده در <span class="ltr-text">QL</span> مورد نیاز باید <span class="ltr-text">>10</span> باشد.
+        </p>
+        <p class="mb-4">
+            <strong>معیارهای اعتبار سنجی:</strong> برای اینکه حد کمی‌سازی تخمین زده شده معتبر تلقی شود، غلظت اندازه‌گیری شده باید در سطحی <span class="ltr-text">≤50%</span> از مشخصات دقیق و صحیح باشد.
+        </p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">خطی بودن</h4>
+        <p class="mb-4">
+            رابطه خطی بین غلظت آنالیت و پاسخ کدورت اندازه‌گیری شده باید با تهیه حداقل <span class="ltr-text">four</span> محلول استاندارد در غلظت‌هایی که غلظت مورد انتظار محلول آزمایشی را پوشش می‌دهند، نشان داده شود.
+            منحنی استاندارد سپس با استفاده از روش‌های آماری مناسب مانند رگرسیون حداقل مربعات ارزیابی می‌شود.
+            انحراف از خطی بودن ناشی از عوامل ابزاری یا نمونه، یا هر دو، می‌تواند با کاهش یا افزایش غلظت آنالیت، به ترتیب کاهش یا افزایش قرائت‌های کدورت تا محدوده خطی بودن ابزار نفلومتر/توربیدیمتر، به سطوح قابل قبول کاهش یابد.
+        </p>
+        <p class="mb-4">
+            <strong>معیارهای اعتبار سنجی:</strong> ضریب همبستگی (<span class="ltr-text">R</span>) باید برای سنجش‌های رده <span class="ltr-text">I</span>، <span class="ltr-text">NLT 0.995</span> و برای آزمون‌های کمی رده <span class="ltr-text">II</span>، <span class="ltr-text">NLT 0.99</span> باشد.
+        </p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محدوده</h4>
+        <p class="mb-4">
+            محدوده عملیاتی یک ابزار تحلیلی (و روش تحلیلی به طور کلی) فاصله بین غلظت‌های بالا و پایین (مقادیر) آنالیت در نمونه (شامل این غلظت‌ها) است که برای آن نشان داده شده است که تابع پاسخ ابزاری دارای سطح مناسبی از صحت، دقت، و خطی بودن است.
+        </p>
+        <p class="mb-4">
+            <strong>معیارهای اعتبار سنجی:</strong> برای آزمون‌های رده <span class="ltr-text">I</span>، محدوده اعتبار سنجی برای معیارهای پذیرش متمرکز بر <span class="ltr-text">100.0%</span>، <span class="ltr-text">80.0%–120.0%</span> است.
+            برای معیارهای پذیرش غیرمتمرکز، محدوده اعتبار سنجی <span class="ltr-text">10.0%</span> زیر حد پایین تا <span class="ltr-text">10.0%</span> بالای حد بالا است.
+            برای آزمون‌های رده <span class="ltr-text">II</span>، محدوده اعتبار سنجی <span class="ltr-text">50.0%–120.0%</span> از معیارهای پذیرش را پوشش می‌دهد.
+        </p>
+
+        <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">استحکام</h4>
+        <p class="mb-4">
+            قابلیت اطمینان یک اندازه‌گیری تحلیلی با تغییرات عمدی در پارامترهای تجربی نشان داده می‌شود.
+            برای نفلومتری/توربیدیمتری این می‌تواند شامل، به عنوان مثال، اندازه‌گیری پایداری آنالیت تحت شرایط نگهداری مشخص، تغییر <span class="ltr-text">pH</span>، و افزودن گونه‌های تداخلی احتمالی باشد.
+            استحکام به طور همزمان با استفاده از یک طرح مناسب برای روش تجربی تعیین می‌شود.
+        </p>
+
+        <h3 id="verification" class="text-xl font-semibold text-blue-600 mb-2">۸.۲ تأیید</h3>
+        <p class="mb-4">
+            مقررات جاری اقدامات تولید خوب ایالات متحده (<span class="ltr-text">[21 CFR 211.194(a)(2)]</span>) نشان می‌دهد که کاربران روش‌های تحلیلی شرح داده شده در فارماکوپه ایالات متحده و فرمولاری ملی ملزم به اعتبار سنجی این روش‌ها در صورت ارائه در یک مونوگراف نیستند.
+            در عوض، آنها فقط باید مناسب بودن آنها را تحت شرایط واقعی استفاده تأیید کنند.
+        </p>
+        <p class="mb-4">
+            هدف از تأیید روش نفلومتری/توربیدیمتری، نشان دادن مناسب بودن یک روش آزمون تحت شرایط واقعی استفاده است.
+            ویژگی‌های عملکردی که مناسب بودن یک روش نفلومتری/توربیدیمتری را تأیید می‌کنند، مشابه ویژگی‌های مورد نیاز برای هر روش تحلیلی است.
+            بحثی درباره اصول کلی قابل اجرا در <a href="1226.html" class="text-blue-600 hover:underline" target="_blank">۱۲۲۶</a> تأیید روش‌های رسمی یافت می‌شود.
+            تأیید معمولاً با استفاده از یک ماده مرجع و یک ماتریس به خوبی تعریف شده انجام می‌شود.
+            تأیید روش‌های نفلومتری/توربیدیمتری رسمی شامل، حداقل، اجرای پارامترهای اعتبار سنجی برای ویژگی، دقت، صحت، و <span class="ltr-text">QL</span>، در صورت لزوم، همانطور که در <span class="ltr-text">8.1</span> اعتبار سنجی نشان داده شده است، می‌باشد.
+        </p>
+
+    </div>
+</body>
+</html>
