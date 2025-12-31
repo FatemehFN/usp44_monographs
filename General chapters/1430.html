@@ -13,14 +13,18 @@
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
-            background-color: #f8fafc;
-            color: #333;
+            background-color: #e0f2fe;
+            color: #1f2937;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #1e40af;
         }
         .card {
-            background-color: #fff;
+            background-color: #ffffff;
             border-radius: 0.5rem;
             padding: 1.5rem;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #dbeafe;
         }
         .ltr-text {
             direction: ltr;
@@ -36,15 +40,25 @@
             border-collapse: collapse;
             margin-top: 1rem;
             margin-bottom: 1rem;
+            background-color: #ffffff;
+            border: 1px solid #bfdbfe;
         }
         table th, table td {
-            border: 1px solid #e2e8f0;
+            border: 1px solid #bfdbfe;
             padding: 0.75rem;
             text-align: center;
         }
         table th {
-            background-color: #f1f5f9;
+            background-color: #dbeafe;
             font-weight: bold;
+            color: #1e40af;
+        }
+        table td {
+            background-color: #ffffff;
+            color: #1f2937;
+        }
+        table tr:hover {
+            background-color: #f0f9ff;
         }
         .formula-display {
             display: flex;
@@ -52,6 +66,20 @@
             margin-top: 1rem;
             margin-bottom: 1rem;
             direction: ltr;
+        }
+        a {
+            color: #1e40af;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -153,7 +181,7 @@
                 پراکندگی اشعه ایکس با زاویه کوچک (<span class="ltr-text">SAXS</span>) و پراکندگی نوترون با زاویه کوچک (<span class="ltr-text">SANS</span>) نیز تکنیک‌های استاتیک هستند به این معنا که از سیگنال‌های میانگین زمانی استفاده می‌کنند. اینها با <span class="ltr-text">LALS</span> (و <span class="ltr-text">MALS</span>) متفاوت هستند زیرا بر اساس پراکندگی اشعه ایکس (<span class="ltr-text">SAXS</span>) یا نوترون‌ها (<span class="ltr-text">SANS</span>) به جای نور مرئی هستند. مانند <span class="ltr-text">SLS</span>، این تکنیک‌ها نیز اندازه، شکل و برهم‌کنش‌ها را اندازه‌گیری می‌کنند اما در مقیاس‌های طولی بسیار کوتاه‌تر، معمولاً در محدوده تقریبی <span class="ltr-text">1 nm</span> تا چند صد <span class="ltr-text">nanometers</span>. آنالوگ‌های با زاویه بسیار/فوق کوچک (<span class="ltr-text">VSAXS/VSANS, USAXS/USANS</span>) و با زاویه باز (<span class="ltr-text">WAXS/WANS</span>) این مقیاس‌های طولی را به رژیم‌های <span class="ltr-text">micrometer</span> و زیر <span class="ltr-text">nanometer</span> گسترش می‌دهند. این کاربردها در <a href="1430.5.html" class="text-blue-600 hover:underline" target="_blank">á1430.5ñ</a> Analytical Methodologies Based on Scattering Phenomena—Small-Angle X-Ray Scattering and Small-Angle Neutron Scattering مورد بحث قرار می‌گیرند.
             </p>
             <p class="mb-4">
-                پراکندگی نور دینامیک (<span class="ltr-text">DLS</span>)، که در <a href="430.html" class="text-blue-600 hover:underline" target="_blank">á430ñ</a><span class="ltr-text">1</span> Particle Size Analysis by Dynamic Light Scattering و <a href="1430.3.html" class="text-blue-600 hover:underline" target="_blank">á1430.3ñ</a> Analytical Methodologies Based on Scattering Phenomena—Dynamic Light Scattering مورد بررسی قرار گرفته است، با <span class="ltr-text">SLS</span> تفاوت دارد در این که <span class="ltr-text">DLS</span> نوسان شدت نور پراکنده شده را در فواصل زمانی بسیار کوتاه (مانند تقریباً <span class="ltr-text">200, 400 ns</span>) اندازه‌گیری می‌کند.
+                پراکندگی نور دینامیک (<span class="ltr-text">DLS</span>)، که در 430<span class="ltr-text">1</span> Particle Size Analysis by Dynamic Light Scattering و <a href="1430.3.html" class="text-blue-600 hover:underline" target="_blank">á1430.3ñ</a> Analytical Methodologies Based on Scattering Phenomena—Dynamic Light Scattering مورد بررسی قرار گرفته است، با <span class="ltr-text">SLS</span> تفاوت دارد در این که <span class="ltr-text">DLS</span> نوسان شدت نور پراکنده شده را در فواصل زمانی بسیار کوتاه (مانند تقریباً <span class="ltr-text">200, 400 ns</span>) اندازه‌گیری می‌کند.
             </p>
             <p class="mb-4">
                 پراکندگی نور الکتروفورتیک (تعیین پتانسیل زتا)، که با جزئیات بیشتر در <a href="432.html" class="text-blue-600 hover:underline" target="_blank">á432ñ</a><span class="ltr-text">1</span> Determination of Zeta Potential by Electrophoretic Light Scattering و <a href="1430.4.html" class="text-blue-600 hover:underline" target="_blank">á1430.4ñ</a> Analytical Methodologies Based on Scattering Phenomena—Electrophoretic Light Scattering (Determination of Zeta Potential) مورد بررسی قرار گرفته است، جابجایی دوپلر فرکانس نور پراکنده شده را در نتیجه حرکات ذرات ناشی از اثر تجمعی الکتروفورز و الکترواسمز اندازه‌گیری می‌کند.

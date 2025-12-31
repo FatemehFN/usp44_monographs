@@ -12,17 +12,18 @@
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
-            background-color: #f8fafc;
-            color: #333;
+            background-color: #e0f2fe;
+            color: #1f2937;
         }
-        .container {
-            max-width: 768px; /* Tailwind's max-w-4xl is 30rem which is about 480px, increasing for better readability */
+        h1, h2, h3, h4, h5, h6 {
+            color: #1e40af;
         }
         .card {
-            background-color: #fff;
+            background-color: #ffffff;
             border-radius: 0.5rem;
             padding: 1.5rem;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #dbeafe;
         }
         .ltr-text {
             direction: ltr;
@@ -38,15 +39,25 @@
             border-collapse: collapse;
             margin-top: 1rem;
             margin-bottom: 1rem;
+            background-color: #ffffff;
+            border: 1px solid #bfdbfe;
         }
         table th, table td {
-            border: 1px solid #e2e8f0;
+            border: 1px solid #bfdbfe;
             padding: 0.75rem;
             text-align: center;
         }
         table th {
-            background-color: #f1f5f9;
+            background-color: #dbeafe;
             font-weight: bold;
+            color: #1e40af;
+        }
+        table td {
+            background-color: #ffffff;
+            color: #1f2937;
+        }
+        table tr:hover {
+            background-color: #f0f9ff;
         }
         .formula-display {
             display: flex;
@@ -54,6 +65,20 @@
             margin-top: 1rem;
             margin-bottom: 1rem;
             direction: ltr;
+        }
+        a {
+            color: #1e40af;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -115,7 +140,7 @@
             <p class="mb-4">نمونه‌ها: محلول استاندارد ۱ و/یا محلول استاندارد ۲، و محلول نمونه</p>
             <p class="mb-4">مگر اینکه در مونوگراف غیر از این ذکر شده باشد، غلظت سیترات یا فسفات را در قسمت گرفته شده از محلول نمونه محاسبه کنید:</p>
             <div class="formula-display">
-                <p class="math-text">Result = (r<span class="ltr-text">U</span>/r<span class="ltr-text">S</span>) &times; C<span class="ltr-text">S</span></p>
+                <p>$$ \text{Result} = \frac{r_U}{r_S} \times C_S $$</p>
             </div>
             <p class="mb-4">r<span class="ltr-text">U</span> = پاسخ پیک سیترات یا فسفات از محلول نمونه</p>
             <p class="mb-4">r<span class="ltr-text">S</span> = پاسخ پیک سیترات یا فسفات از محلول استاندارد ۱ یا محلول استاندارد ۲</p>

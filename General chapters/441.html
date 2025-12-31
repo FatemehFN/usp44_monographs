@@ -12,14 +12,18 @@
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
-            background-color: #f8fafc;
-            color: #333;
+            background-color: #e0f2fe;
+            color: #1f2937;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #1e40af;
         }
         .card {
-            background-color: #fff;
+            background-color: #ffffff;
             border-radius: 0.5rem;
             padding: 1.5rem;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #dbeafe;
         }
         .ltr-text {
             direction: ltr;
@@ -35,15 +39,25 @@
             border-collapse: collapse;
             margin-top: 1rem;
             margin-bottom: 1rem;
+            background-color: #ffffff;
+            border: 1px solid #bfdbfe;
         }
         table th, table td {
-            border: 1px solid #e2e8f0;
+            border: 1px solid #bfdbfe;
             padding: 0.75rem;
             text-align: center;
         }
         table th {
-            background-color: #f1f5f9;
+            background-color: #dbeafe;
             font-weight: bold;
+            color: #1e40af;
+        }
+        table td {
+            background-color: #ffffff;
+            color: #1f2937;
+        }
+        table tr:hover {
+            background-color: #f0f9ff;
         }
         .formula-display {
             display: flex;
@@ -51,6 +65,20 @@
             margin-top: 1rem;
             margin-bottom: 1rem;
             direction: ltr;
+        }
+        a {
+            color: #1e40af;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -204,7 +232,7 @@
             <p class="mb-4">مناطق پیک نیاسین یا نیاسینامید را اندازه‌گیری کنید.</p>
             <p class="mb-4">درصد مقدار برچسب‌گذاری شده نیاسین (C6H5NO2) یا نیاسینامید (C6H6N2O) را در بخشی از نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <p class="math-formula">Result = (rU/rS) × (CS/CU) × 100</p>
+                <p>$$ \text{Result} = \frac{r_U}{r_S} \times \frac{C_S}{C_U} \times 100 $$</p>
             </div>
             <p class="mb-2">rU = پاسخ پیک نیاسین یا نیاسینامید از محلول نمونه</p>
             <p class="mb-2">rS = پاسخ پیک نیاسین یا نیاسینامید از محلول استاندارد</p>
@@ -258,7 +286,7 @@
             <p class="mb-2">نمونه‌ها: محلول استاندارد و محلول نمونه</p>
             <p class="mb-4">درصد مقدار برچسب‌گذاری شده نیاسین (C6H5NO2) یا نیاسینامید (C6H6N2O) را در بخشی از نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <p class="math-formula">Result = (rU/rS) × (CS/CU) × 100</p>
+                <p>$$ \text{Result} = \frac{r_U}{r_S} \times \frac{C_S}{C_U} \times 100 $$</p>
             </div>
             <p class="mb-2">rU = پاسخ پیک نیاسین یا نیاسینامید از محلول نمونه</p>
             <p class="mb-2">rS = پاسخ پیک نیاسین یا نیاسینامید از محلول استاندارد</p>
@@ -310,9 +338,9 @@
             <p class="mb-2">نمونه‌ها: محلول استاندارد و محلول نمونه</p>
             <p class="mb-4">درصد مقدار برچسب‌گذاری شده نیاسین (C6H5NO2) یا نیاسینامید (C6H6N2O) را در بخشی از نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <p class="math-formula">Result = (rU/rS) × (CS/CU) × 100</p>
+                <p>$$ \text{Result} = \frac{r_U}{r_S} \times \frac{C_S}{C_U} \times 100 $$</p>
             </div>
-            <p class="mb-2">rU = پاسخ پیک نیاسین یا نیاسینامید از محلول نمونه</p>
+            <p class="mb-2">rU = پاسخ پیک نیاسین یا نیاسینامید از محلول نمونه</p></p>
             <p class="mb-2">rS = پاسخ پیک نیاسین یا نیاسینامید از محلول استاندارد</p>
             <p class="mb-2">CS = غلظت USP Niacin RS یا USP Niacinamide RS در محلول استاندارد (میلی‌گرم بر میلی‌لیتر)</p>
             <p class="mb-4">CU = غلظت اسمی نیاسین یا نیاسینامید در محلول نمونه (میلی‌گرم بر میلی‌لیتر)</p>
@@ -371,7 +399,7 @@
             <p class="mb-2">نمونه‌ها: محلول استاندارد A و محلول نمونه A یا محلول استاندارد B و محلول نمونه B</p>
             <p class="mb-4">درصد نیاسین (C6H5NO2) را در بخشی از نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <p class="math-formula">Result = (rU/rS) × (CS/CU) × 100</p>
+                <p>$$ \text{Result} = \frac{r_U}{r_S} \times \frac{C_S}{C_U} \times 100 $$</p>
             </div>
             <p class="mb-2">rU = پاسخ پیک نیاسین از محلول نمونه A یا محلول نمونه B</p>
             <p class="mb-2">rS = پاسخ پیک نیاسین از محلول استاندارد A یا محلول استاندارد B</p>
@@ -424,7 +452,7 @@
             <p class="mb-2">نمونه‌ها: محلول استاندارد و محلول نمونه</p>
             <p class="mb-4">درصد نیاسینامید (C6H6N2O) را در بخشی از نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <p class="math-formula">Result = (rU/rS) × (CS/CU) × 100</p>
+                <p>$$ \text{Result} = \frac{r_U}{r_S} \times \frac{C_S}{C_U} \times 100 $$</p>
             </div>
             <p class="mb-2">rU = پاسخ پیک نیاسینامید از محلول نمونه</p>
             <p class="mb-2">rS = پاسخ پیک نیاسینامید از محلول استاندارد</p>
@@ -474,9 +502,9 @@
             <p class="mb-2">نمونه‌ها: محلول استاندارد و محلول نمونه</p>
             <p class="mb-4">درصد مقدار برچسب‌گذاری شده نیاسین (C6H5NO2) را در بخشی از نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <p class="math-formula">Result = (rU/rS) × (CS/CU) × 100</p>
+                <p>$$ \text{Result} = \frac{r_U}{r_S} \times \frac{C_S}{C_U} \times 100 $$</p>
             </div>
-            <p class="mb-2">rU = پاسخ پیک نیاسین از محلول نمونه</p>
+            <p class="mb-2">rU = پاسخ پیک نیاسین از محلول نمونه</p></p>
             <p class="mb-2">rS = پاسخ پیک نیاسین از محلول استاندارد</p>
             <p class="mb-2">CS = غلظت USP Niacin RS در محلول استاندارد (میلی‌گرم بر میلی‌لیتر)</p>
             <p class="mb-4">CU = غلظت اسمی نیاسین در محلول نمونه (میلی‌گرم بر میلی‌لیتر)</p>

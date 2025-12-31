@@ -12,14 +12,18 @@
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
-            background-color: #f8fafc;
-            color: #333;
+            background-color: #e0f2fe;
+            color: #1f2937;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #1e40af;
         }
         .card {
-            background-color: #fff;
+            background-color: #ffffff;
             border-radius: 0.5rem;
             padding: 1.5rem;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #dbeafe;
         }
         .ltr-text {
             direction: ltr;
@@ -35,15 +39,25 @@
             border-collapse: collapse;
             margin-top: 1rem;
             margin-bottom: 1rem;
+            background-color: #ffffff;
+            border: 1px solid #bfdbfe;
         }
         table th, table td {
-            border: 1px solid #e2e8f0;
+            border: 1px solid #bfdbfe;
             padding: 0.75rem;
             text-align: center;
         }
         table th {
-            background-color: #f1f5f9;
+            background-color: #dbeafe;
             font-weight: bold;
+            color: #1e40af;
+        }
+        table td {
+            background-color: #ffffff;
+            color: #1f2937;
+        }
+        table tr:hover {
+            background-color: #f0f9ff;
         }
         .formula-display {
             display: flex;
@@ -51,6 +65,20 @@
             margin-top: 1rem;
             margin-bottom: 1rem;
             direction: ltr;
+        }
+        a {
+            color: #1e40af;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -91,7 +119,7 @@
             <p class="mb-4">نمونه‌ها: محلول استاندارد و محلول نمونه</p>
             <p class="mb-4">درصد مقدار برچسب‌گذاری شده کلکالسیفرول (<span class="ltr-text">C27H44O</span>) یا ارگوکالسیفرول (<span class="ltr-text">C28H44O</span>) را در بخش نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <p class="text-lg">Result = (rU/rS) × (CS/CU) × F × 100</p>
+                <p>$$ \text{Result} = \frac{r_U}{r_S} \times \frac{C_S}{C_U} \times F \times 100 $$</p>
             </div>
             <p class="mb-4"><span class="ltr-text">r U</span> = پاسخ پیک کلکالسیفرول یا ارگوکالسیفرول از محلول نمونه</p>
             <p class="mb-4"><span class="ltr-text">r S</span> = پاسخ پیک کلکالسیفرول یا ارگوکالسیفرول از محلول استاندارد</p>
@@ -126,7 +154,7 @@
             <p class="mb-4">نمونه‌ها: محلول استاندارد و محلول نمونه</p>
             <p class="mb-4">درصد مقدار برچسب‌گذاری شده کلکالسیفرول (<span class="ltr-text">C27H44O</span>) یا ارگوکالسیفرول (<span class="ltr-text">C28H44O</span>) را در بخش نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <p class="text-lg">Result = (rU/rS) × (CS/CU) × 100</p>
+                <p>$$ \text{Result} = \frac{r_U}{r_S} \times \frac{C_S}{C_U} \times 100 $$</p>
             </div>
             <p class="mb-4"><span class="ltr-text">rU</span> = پاسخ پیک کلکالسیفرول یا ارگوکالسیفرول از محلول نمونه</p>
             <p class="mb-4"><span class="ltr-text">rS</span> = پاسخ پیک کلکالسیفرول یا ارگوکالسیفرول از محلول استاندارد</p>
@@ -164,7 +192,7 @@
             <p class="mb-4">نمونه‌ها: محلول استاندارد و محلول نمونه</p>
             <p class="mb-4">درصد مقدار برچسب‌گذاری شده کلکالسیفرول (<span class="ltr-text">C27H44O</span>) یا ارگوکالسیفرول (<span class="ltr-text">C28H44O</span>) را در بخش نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <p class="text-lg">Result = (rU/rS) × (CS/CU) × F × 100</p>
+                <p>$$ \text{Result} = \frac{r_U}{r_S} \times \frac{C_S}{C_U} \times F \times 100 $$</p>
             </div>
             <p class="mb-4"><span class="ltr-text">rU</span> = پاسخ پیک کلکالسیفرول یا ارگوکالسیفرول از محلول نمونه</p>
             <p class="mb-4"><span class="ltr-text">rS</span> = پاسخ پیک کلکالسیفرول یا ارگوکالسیفرول از محلول استاندارد</p>
@@ -195,7 +223,7 @@
             <p class="mb-4">نمونه‌ها: محلول استاندارد و محلول نمونه</p>
             <p class="mb-4">درصد مقدار برچسب‌گذاری شده کلکالسیفرول (<span class="ltr-text">C27H44O</span>) یا ارگوکالسیفرول (<span class="ltr-text">C28H44O</span>) را در بخش نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <p class="text-lg">Result = (rU/rS) × (CS/CU) × F × 100</p>
+                <p>$$ \text{Result} = \frac{r_U}{r_S} \times \frac{C_S}{C_U} \times F \times 100 $$</p>
             </div>
             <p class="mb-4"><span class="ltr-text">rU</span> = پاسخ پیک کلکالسیفرول یا ارگوکالسیفرول از محلول نمونه</p>
             <p class="mb-4"><span class="ltr-text">rS</span> = پاسخ پیک کلکالسیفرول یا ارگوکالسیفرول از محلول استاندارد</p>
@@ -231,7 +259,7 @@
             <p class="mb-4">نمونه‌ها: محلول استاندارد و محلول نمونه</p>
             <p class="mb-4">درصد مقدار برچسب‌گذاری شده کلکالسیفرول (<span class="ltr-text">C27H44O</span>) یا ارگوکالسیفرول (<span class="ltr-text">C28H44O</span>) را در بخش نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <p class="text-lg">Result = (rU/rS) × (CS/CU) × 100</p>
+                <p>$$ \text{Result} = \frac{r_U}{r_S} \times \frac{C_S}{C_U} \times 100 $$</p>
             </div>
             <p class="mb-4"><span class="ltr-text">rU</span> = پاسخ پیک کلکالسیفرول یا ارگوکالسیفرول از محلول نمونه</p>
             <p class="mb-4"><span class="ltr-text">rS</span> = پاسخ پیک کلکالسیفرول یا ارگوکالسیفرول از محلول استاندارد</p>
@@ -290,7 +318,7 @@
             <p class="mb-4">محتوای ویتامین D</p>
             <p class="mb-4">درصد مقدار برچسب‌گذاری شده ویتامین D به صورت کلکالسیفرول (<span class="ltr-text">C27H44O</span>) یا به صورت ارگوکالسیفرول (<span class="ltr-text">C28H44O</span>) را در بخش نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <p class="text-lg">Result = {[(FC × rC) + (Fpre × rpre)]/CU} × 100</p>
+                <p>$$ \text{Result} = \left\{\frac{[F_C \times r_C + F_{pre} \times r_{pre}]}{C_U}\right\} \times 100 $$</p>
             </div>
             <p class="mb-4"><span class="ltr-text">FC</span> = ضریب پاسخ برای کلکالسیفرول یا ارگوکالسیفرول</p>
             <p class="mb-4"><span class="ltr-text">rC</span> = مساحت پیک کلکالسیفرول یا ارگوکالسیفرول از محلول نمونه</p>
@@ -357,7 +385,7 @@
             <p class="mb-4">محتوای ویتامین D</p>
             <p class="mb-4">درصد مقدار برچسب‌گذاری شده ویتامین D به صورت ارگوکالسیفرول (<span class="ltr-text">C28H44O</span>) یا به صورت کلکالسیفرول (<span class="ltr-text">C27H44O</span>) را در بخش نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <p class="text-lg">Result = {[(FD × rC) + (Fpre × r′pre)]/CU} × 100</p>
+                <p>$$ \text{Result} = \left\{\frac{[F_D \times r_C + F_{pre} \times r'_{pre}]}{C_U}\right\} \times 100 $$</p>
             </div>
             <p class="mb-4"><span class="ltr-text">FD</span> = ضریب پاسخ برای کلکالسیفرول یا ارگوکالسیفرول</p>
             <p class="mb-4"><span class="ltr-text">rC</span> = مساحت پیک کلکالسیفرول یا ارگوکالسیفرول از محلول نمونه</p>
@@ -407,7 +435,7 @@
             <p class="mb-4">نمونه‌ها: محلول استاندارد، محلول نمونه 1، و محلول نمونه 2 (پس از پاکسازی)</p>
             <p class="mb-4">محتوای ویتامین D را، بر حسب میکروگرم بر گرم، در بخش نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <p class="text-lg">Result = (RU/RS) × (CS/CU)</p>
+                <p>$$ \text{Result} = \frac{R_U}{R_S} \times \frac{C_S}{C_U} $$</p>
             </div>
             <p class="mb-4"><span class="ltr-text">RS</span> = پاسخ پیک کلکالسیفرول نسبت به استاندارد داخلی در محلول استاندارد</p>
             <p class="mb-4"><span class="ltr-text">CS</span> = غلظت USP Cholecalciferol RS در محلول استاندارد (µg/mL)</p>

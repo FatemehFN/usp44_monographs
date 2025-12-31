@@ -11,14 +11,18 @@
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
-            background-color: #f8fafc;
-            color: #333;
+            background-color: #e0f2fe;
+            color: #1f2937;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #1e40af;
         }
         .card {
-            background-color: #fff;
+            background-color: #ffffff;
             border-radius: 0.5rem;
             padding: 1.5rem;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #dbeafe;
         }
         .ltr-text {
             direction: ltr;
@@ -34,15 +38,25 @@
             border-collapse: collapse;
             margin-top: 1rem;
             margin-bottom: 1rem;
+            background-color: #ffffff;
+            border: 1px solid #bfdbfe;
         }
         table th, table td {
-            border: 1px solid #e2e8f0;
+            border: 1px solid #bfdbfe;
             padding: 0.75rem;
             text-align: center;
         }
         table th {
-            background-color: #f1f5f9;
+            background-color: #dbeafe;
             font-weight: bold;
+            color: #1e40af;
+        }
+        table td {
+            background-color: #ffffff;
+            color: #1f2937;
+        }
+        table tr:hover {
+            background-color: #f0f9ff;
         }
         .formula-display {
             display: flex;
@@ -50,6 +64,20 @@
             margin-top: 1rem;
             margin-bottom: 1rem;
             direction: ltr;
+        }
+        a {
+            color: #1e40af;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -243,14 +271,14 @@
             <p class="mb-4"><strong>روش 3:</strong> افزایش وزن را در میلی‌گرم/روز/حفره از روز 0 تا روز 2 با استفاده از 10 واحد آزمایشی محاسبه کنید (به محاسبات مراجعه کنید). MVTR هر حفره بلیستر با تقسیم افزایش وزن بر 2 (برای 2 روز) و تعداد حفره‌های بلیستر در هر واحد آزمایشی محاسبه می‌شود.</p>
             <p class="mb-4"><strong>معادله رگرسیون:</strong></p>
             <div class="formula-display">
-                <p>W = I + MT</p>
+                <p>$$ W = I + MT $$</p>
             </div>
             <p class="mb-4"><strong>محاسبات:</strong></p>
             <div class="formula-display">
-                <p>M = <span class="ltr-text">∑</span><sub>i=1</sub><sup>N</sup>(W<sub>i</sub> − W)(T<sub>i</sub> − T) / <span class="ltr-text">∑</span><sub>i=1</sub><sup>N</sup>(T<sub>i</sub> − T)<sup>2</sup></p>
+                <p>$$ M = \frac{\sum_{i=1}^{N}(W_i - \bar{W})(T_i - \bar{T})}{\sum_{i=1}^{N}(T_i - \bar{T})^2} $$</p>
             </div>
             <div class="formula-display">
-                <p>I = W - MT</p>
+                <p>$$ I = \bar{W} - M\bar{T} $$</p>
             </div>
             <p><strong>W</strong> = وزن اندازه‌گیری شده (میلی‌گرم)</p>
             <p><strong>I</strong> = عرض از مبدا خط رگرسیون (نقطه‌ای که خط رگرسیون محور عمودی را قطع می‌کند)</p>
@@ -290,7 +318,7 @@
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مقدار آب برای ظروف آزمایشی</h4>
             <p class="mb-4">برای بلیسترها، تقریباً 10-100 میلی‌گرم آب در هر حفره بلیستر (حدود 1-10 قطره)، بسته به MVTR مورد انتظار، برای انواع بلیستر در دمای 40 درجه سانتی‌گراد/25% RH کافی است. به عنوان مثال، آماده‌سازی یک بسته MVTR با مانع کم، مثلاً یک بلیستر پر از آب PVC را در نظر بگیرید. MVTR مورد انتظار حدود 1.5 میلی‌گرم آب/(روز × حفره) در دمای 40 درجه سانتی‌گراد و اختلاف فشار بخار 75% RH است. مقدار اولیه آب مورد نیاز برای ایجاد 100% RH در دمای 40 درجه سانتی‌گراد در این بلیستر (حجم تقریبی 0.5 سی‌سی) 0.025 میلی‌گرم، بر اساس رطوبت مطلق است. برای یک مطالعه معمول MVTR یک بلیستر با مانع کم، 7 روز برای تعادل و سپس یک دوره مطالعه 28 روزه برای به دست آوردن 3-5 تعیین وزن در نظر گرفته می‌شود. این مجموع زمان قرار گرفتن در معرض، یا زمان نفوذ، 35 روز است. بر اساس معادله روش مبتنی بر آب، حداقل 52.5 میلی‌گرم آب مورد نیاز است.</p>
             <div class="formula-display">
-                <p>Water-based method equation: 1.5 mg water/(day × cavity) × 35 days + 0.025 mg = 52.5 mg water/cavity</p>
+                <p>$$ \text{Water-based method equation:} \\ 1.5 \, \text{mg water/(day} \times \text{cavity)} \times 35 \, \text{days} + 0.025 \, \text{mg} = 52.5 \, \text{mg water/cavity} $$</p>
             </div>
             <p class="mb-4">مقدار آب توصیه شده برای این سیستم بلیستر حدود 100 میلی‌گرم در هر حفره است. معادله روش مبتنی بر آب می‌تواند برای تعیین حداقل مقدار آب برای تمام انواع بلیستر استفاده شود و سپس این مقدار باید در ضریبی بین 2 و 3 ضرب شود تا مازاد ایجاد شود.</p>
 
@@ -329,7 +357,7 @@
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محاسبات</h4>
             <p class="mb-4"><strong>روش‌های 5 و 6:</strong> نرخ انتقال بخار رطوبت را بر حسب میلی‌گرم/روز/لیتر محاسبه کنید:</p>
             <div class="formula-display">
-                <p>(1000/14V) [ (T<sub>F</sub> − T<sub>I</sub>) − (C<sub>F</sub> − C<sub>I</sub>) ]</p>
+                <p>$$ \text{MVTR} = \frac{1000}{14V} \left[ (T_F - T_I) - (C_F - C_I) \right] $$</p>
             </div>
             <p><strong>V</strong> = حجم ظرف (میلی‌لیتر)</p>
             <p><strong>T<sub>F</sub></strong> = وزن نهایی هر ظرف آزمایشی (میلی‌گرم)</p>
@@ -338,7 +366,7 @@
             <p><strong>C<sub>I</sub></strong> = میانگین وزن اولیه دو کنترل (میلی‌گرم)</p>
             <p><strong>روش 7:</strong> میانگین نرخ انتقال بخار رطوبت را، در میلی‌گرم/روز، برای هر ظرف دوز واحد یا بلیستر در هر بسته، با دو رقم معنی‌دار محاسبه کنید:</p>
             <div class="formula-display">
-                <p>[1/(N × X)] [ (W<sub>F</sub> − W<sub>I</sub>) − (C<sub>F</sub> − C<sub>I</sub>) ]</p>
+                <p>$$ \text{MVTR} = \frac{1}{N \times X} \left[ (W_F - W_I) - (C_F - C_I) \right] $$</p>
             </div>
             <p><strong>N</strong> = تعداد روزهای سپری شده در دوره آزمون (شروع پس از دوره اولیه تعادل 24 ساعته)</p>
             <p><strong>X</strong> = تعداد واحدهای جداگانه مهر و موم شده در هر بسته</p>
@@ -360,7 +388,7 @@
             <p class="mb-4"><strong>روش 8:</strong> 12 بطری با اندازه و نوع یکسان انتخاب کنید و سطوح آب‌بندی را با یک پارچه بدون پرز تمیز کنید. هر بطری را با یک آب‌بند، لایه درپوش (در صورت لزوم) و درپوش نصب کنید. هر سیستم ظرف-درپوش را شماره‌گذاری کرده و وزن تاره را ثبت کنید.</p>
             <p class="mb-4">درپوش‌ها را بردارید و با استفاده از یک پیپت، 10 بطری را تا ظرفیت پر شدن با آب، پر کنید. دو ظرف را با دانه‌های شیشه‌ای، تا وزنی برابر با ظروف آزمایشی پر شده، پر کنید. اگر از درپوش‌های پیچی استفاده می‌کنید، گشتاوری را اعمال کنید که در محدوده مشخص شده در جدول 2 باشد و ظروف آب‌بندی شده را در دمای 25 ± 2 درجه سانتی‌گراد و 40 ± 2% RH نگهداری کنید. پس از 336 ± 1 ساعت (14 روز)، وزن ظروف فردی را ثبت کرده و نرخ از دست دادن وزن آب را، بر حسب درصد در سال، برای هر بطری محاسبه کنید:</p>
             <div class="formula-display">
-                <p>$$ \frac{1}{W_{1i} - W_T} \times \frac{W_{1i} - W_{14i}}{14} \times 365 \times 100 $$</p>
+                <p>$$ \text{Water loss rate (\\%/year)} = \frac{1}{W_{1i} - W_T} \times \frac{W_{1i} - W_{14i}}{14} \times 365 \times 100 $$</p>
             </div>
             <p><strong>W<sub>1i</sub></strong> = وزن اولیه هر بطری منفرد (i) (میلی‌گرم)</p>
             <p><strong>W<sub>T</sub></strong> = وزن تاره (میلی‌گرم)</p>

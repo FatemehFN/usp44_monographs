@@ -10,14 +10,18 @@
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
-            background-color: #f8fafc;
-            color: #333;
+            background-color: #e0f2fe;
+            color: #1f2937;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #1e40af;
         }
         .card {
-            background-color: #fff;
+            background-color: #ffffff;
             border-radius: 0.5rem;
             padding: 1.5rem;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #dbeafe;
         }
         .ltr-text {
             direction: ltr;
@@ -33,15 +37,25 @@
             border-collapse: collapse;
             margin-top: 1rem;
             margin-bottom: 1rem;
+            background-color: #ffffff;
+            border: 1px solid #bfdbfe;
         }
         table th, table td {
-            border: 1px solid #e2e8f0;
+            border: 1px solid #bfdbfe;
             padding: 0.75rem;
             text-align: center;
         }
         table th {
-            background-color: #f1f5f9;
+            background-color: #dbeafe;
             font-weight: bold;
+            color: #1e40af;
+        }
+        table td {
+            background-color: #ffffff;
+            color: #1f2937;
+        }
+        table tr:hover {
+            background-color: #f0f9ff;
         }
         .formula-display {
             display: flex;
@@ -49,6 +63,20 @@
             margin-top: 1rem;
             margin-bottom: 1rem;
             direction: ltr;
+        }
+        a {
+            color: #1e40af;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -129,17 +157,17 @@ MREKYSKCSS
             <p class="mb-4">نمونه‌ها: محلول نمونه 1، محلول نمونه 2، محلول کنترل A 1، محلول کنترل A 2، محلول کنترل B 1، و محلول کنترل B 2.</p>
             <p class="mb-4">هر محلول نمونه و کنترل را به مدت 5 دقیقه در دمای 60 درجه سانتی‌گراد تحت شرایط غیرکاهنده انکوبه کرده و روی ژل بارگذاری کنید. 20 میکرولیتر از هر محلول نمونه و کنترل را تحت شرایط کاهنده به مدت 5 دقیقه در دمای 60 درجه سانتی‌گراد انکوبه کرده و روی ژل بارگذاری کنید. پس از رنگ آمیزی نقره و اسکن کل ژل، شدت تمام باندهای پروتئین قابل تشخیص را با استفاده از دنزیتومتری تعیین کنید و درصد هر باند پروتئین قابل تشخیص را، در محلول نمونه، دو بار با مقایسه شدت پیک هر باند آلاینده با مقدار میانگین محلول‌های کنترل A و B، به ترتیب، با فرمول‌های زیر محاسبه کنید:</p>
             <div class="formula-display">
-                <p>Result = (A<sub>100</sub>) × 1/(A<sub>1</sub>)</p>
+                <p>$$ \text{Result} = \frac{A_{100}}{A_1} $$</p>
             </div>
             <div class="formula-display">
-                <p>Result = (A<sub>100</sub>) × 3/(A<sub>3</sub>)</p>
+                <p>$$ \text{Result} = \frac{3A_{100}}{A_3} $$</p>
             </div>
             <p class="mb-4"><span class="ltr-text">A<sub>100</sub></span> = شدت یک باند آلاینده از محلول نمونه</p>
             <p class="mb-4"><span class="ltr-text">A<sub>1</sub></span> = میانگین شدت تمام باندهای قابل تشخیص محلول کنترل A</p>
             <p class="mb-4"><span class="ltr-text">A<sub>3</sub></span> = میانگین شدت تمام باندهای قابل تشخیص محلول کنترل B</p>
             <p class="mb-4">تجزیه و تحلیل محلول‌های کنترل IL-4 باید یک باند قابل تشخیص با وزن مولکولی تقریبی <span class="ltr-text">15 kDa</span> را نشان دهد. اگر مقادیر محاسبه شده با استفاده از محلول کنترل A با مقادیر نشان داده شده در مقایسه با محلول کنترل B متفاوت باشد، مقداری که مربوط به بیشترین مقدار ناخالصی است، در نظر گرفته می‌شود. اگر شدت یکی از باندهای آلاینده کمتر از مقدار محلول کنترل A (مربوط به <span class="ltr-text">1%</span>) باشد، مقدار این آلودگی <span class="ltr-text">1%</span> تعیین می‌شود. سپس خلوص محلول نمونه محاسبه می‌شود:</p>
             <div class="formula-display">
-                <p>Result = 100 – Σ C<sub>n</sub></p>
+                <p>$$ \text{Result} = 100 - \sum C_n $$</p>
             </div>
             <p class="mb-4"><span class="ltr-text">C</span> = درصد هر آلودگی که به صورت اعداد صحیح گرد شده بیان می‌شود.</p>
             <p class="mb-4"><span class="ltr-text">n</span> = تعداد آلاینده‌های محلول نمونه IL-4.</p>
@@ -386,7 +414,7 @@ MREKYSKCSS
             <p class="mb-4">برای محلول نمونه و محلول استاندارد، درصد شدت فلورسانس را در مقابل غلظت محلول مربوطه رسم کنید. با استفاده از روش حداقل مربعات تحلیل رگرسیون، ED50 را بر حسب ng/mL محلول نمونه و محلول استاندارد محاسبه کنید. ضریب تعیین برای رگرسیون منحنی باید ≥ <span class="ltr-text">0.98</span> باشد.</p>
             <p class="mb-4">پتانس را بر حسب واحدهای USP Interleukin 4/mg محاسبه کنید:</p>
             <div class="formula-display">
-                <p>Result = A × ES/EU</p>
+                <p>$$ \text{Result} = A \times \frac{ES}{EU} $$</p>
             </div>
             <p class="mb-4"><span class="ltr-text">A</span> = فعالیت USP rHuman Interleukin 4 RS (واحدهای USP/mg).</p>
             <p class="mb-4"><span class="ltr-text">ES</span> = ED50 تعیین شده محلول استاندارد (ng/mL).</p>

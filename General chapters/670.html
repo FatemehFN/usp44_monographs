@@ -12,14 +12,18 @@
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
-            background-color: #f8fafc;
-            color: #333;
+            background-color: #e0f2fe;
+            color: #1f2937;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #1e40af;
         }
         .card {
-            background-color: #fff;
+            background-color: #ffffff;
             border-radius: 0.5rem;
             padding: 1.5rem;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #dbeafe;
         }
         .ltr-text {
             direction: ltr;
@@ -35,15 +39,25 @@
             border-collapse: collapse;
             margin-top: 1rem;
             margin-bottom: 1rem;
+            background-color: #ffffff;
+            border: 1px solid #bfdbfe;
         }
         table th, table td {
-            border: 1px solid #e2e8f0;
+            border: 1px solid #bfdbfe;
             padding: 0.75rem;
             text-align: center;
         }
         table th {
-            background-color: #f1f5f9;
+            background-color: #dbeafe;
             font-weight: bold;
+            color: #1e40af;
+        }
+        table td {
+            background-color: #ffffff;
+            color: #1f2937;
+        }
+        table tr:hover {
+            background-color: #f0f9ff;
         }
         .formula-display {
             display: flex;
@@ -51,6 +65,20 @@
             margin-top: 1rem;
             margin-bottom: 1rem;
             direction: ltr;
+        }
+        a {
+            color: #1e40af;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -301,7 +329,7 @@
             <p class="mb-3">منحنی کالیبراسیون: 1.0، 2.0، 3.0، 5.0، 10.0، و 15.0 <span class="ltr-text">mL</span> محلول سدیم فلوراید را به صورت جداگانه در بشر‌های پلاستیکی 250 <span class="ltr-text">mL</span> منتقل کنید. 50 <span class="ltr-text">mL</span> آب، 5 <span class="ltr-text">mL</span> اسید هیدروکلریک 1 <span class="ltr-text">N</span>، 10 <span class="ltr-text">mL</span> سیترات سدیم 1 <span class="ltr-text">M</span>، و 10 <span class="ltr-text">mL</span> EDTA دی سدیم 0.2 <span class="ltr-text">M</span> به هر بشر اضافه کرده و مخلوط کنید. هر محلول را به فلاسک‌های حجمی 100 <span class="ltr-text">mL</span> جداگانه منتقل کنید، با آب به حجم برسانید و مخلوط کنید. 50 <span class="ltr-text">mL</span> از هر محلول را در بشرهای پلاستیکی 125 <span class="ltr-text">mL</span> جداگانه منتقل کنید و پتانسیل هر محلول را با یک دستگاه الکترود انتخابی یونی مناسب (مانند Orion Model No. 94–09، با غشای حالت جامد) اندازه‌گیری کنید، با استفاده از یک الکترود مرجع مناسب (مانند Orion Model No. 90–01، با اتصال تکی). منحنی کالیبراسیون را روی کاغذ نیمه لگاریتمی دو چرخه (مانند K & E No. 465130) یا با استفاده از یک ماشین حساب گرافیکی یا برنامه صفحه‌گسترده مناسب، با <span class="ltr-text">µg</span> F در هر 100 <span class="ltr-text">mL</span> محلول در مقیاس لگاریتمی رسم کنید.</p>
             <p class="mb-3">تجزیه و تحلیل: 1.00 گرم نمونه را در یک بشر شیشه‌ای 150 <span class="ltr-text">mL</span> منتقل کنید، 10 <span class="ltr-text">mL</span> آب اضافه کنید و در حین هم زدن مداوم، به آرامی 20 <span class="ltr-text">mL</span> اسید هیدروکلریک 1 <span class="ltr-text">N</span> را برای حل کردن نمونه اضافه کنید. به سرعت به مدت 1 دقیقه بجوشانید، سپس در یک بشر پلاستیکی 250 <span class="ltr-text">mL</span> منتقل کنید و به سرعت در آب یخ خنک کنید. 15 <span class="ltr-text">mL</span> سیترات سدیم 1 <span class="ltr-text">M</span> و 10 <span class="ltr-text">mL</span> EDTA دی سدیم 0.2 <span class="ltr-text">M</span> اضافه کرده و مخلوط کنید. pH را با اسید هیدروکلریک 1 <span class="ltr-text">N</span> یا سدیم هیدروکسید 1 <span class="ltr-text">N</span>، در صورت لزوم، به 5.5 ± 0.1 تنظیم کنید. در یک فلاسک حجمی 100 <span class="ltr-text">mL</span> منتقل کنید، با آب به حجم برسانید و مخلوط کنید. 50 <span class="ltr-text">mL</span> از این محلول را در یک بشر پلاستیکی 125 <span class="ltr-text">mL</span> منتقل کنید و پتانسیل محلول را با دستگاه شرح داده شده در منحنی کالیبراسیون اندازه‌گیری کنید. محتوای فلوراید، بر حسب <span class="ltr-text">µg</span>، نمونه را از منحنی کالیبراسیون تعیین کنید. درصد فلوراید در نمونه گرفته شده را تعیین کنید:</p>
             <div class="formula-display">
-                <p>Result = (C/WS) × F × 100</p>
+                <p>$$ \text{Result} = \frac{C}{W_S} \times F \times 100 $$</p>
             </div>
             <p class="mb-3">C = محتوای فلوراید (<span class="ltr-text">µg</span>)</p>
             <p class="mb-3">WS = وزن نمونه (گرم)</p>

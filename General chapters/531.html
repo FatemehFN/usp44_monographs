@@ -11,14 +11,18 @@
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
-            background-color: #f8fafc;
-            color: #333;
+            background-color: #e0f2fe;
+            color: #1f2937;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #1e40af;
         }
         .card {
-            background-color: #fff;
+            background-color: #ffffff;
             border-radius: 0.5rem;
             padding: 1.5rem;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #dbeafe;
         }
         .ltr-text {
             direction: ltr;
@@ -34,15 +38,25 @@
             border-collapse: collapse;
             margin-top: 1rem;
             margin-bottom: 1rem;
+            background-color: #ffffff;
+            border: 1px solid #bfdbfe;
         }
         table th, table td {
-            border: 1px solid #e2e8f0;
+            border: 1px solid #bfdbfe;
             padding: 0.75rem;
             text-align: center;
         }
         table th {
-            background-color: #f1f5f9;
+            background-color: #dbeafe;
             font-weight: bold;
+            color: #1e40af;
+        }
+        table td {
+            background-color: #ffffff;
+            color: #1f2937;
+        }
+        table tr:hover {
+            background-color: #f0f9ff;
         }
         .formula-display {
             display: flex;
@@ -50,6 +64,20 @@
             margin-top: 1rem;
             margin-bottom: 1rem;
             direction: ltr;
+        }
+        a {
+            color: #1e40af;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -81,7 +109,9 @@
             <p class="mb-4">به هر یک از سه یا چند لوله (یا ظروف مناسب دیگر) با ظرفیت حدود 40 میلی‌لیتر، 5 میلی‌لیتر محلول استاندارد پیپت کنید. به هر یک از دو لوله، به سرعت (ظرف 1 تا 2 ثانیه)، با هم زدن، 3.0 میلی‌لیتر معرف اکسیدکننده اضافه کنید، و ظرف 30 ثانیه 20.0 میلی‌لیتر ایزوبوتیل الکل اضافه کنید، سپس به مدت 90 ثانیه با تکان دادن دستی لوله‌های دربسته، یا با دمیدن جریان هوا در مخلوط، به شدت مخلوط کنید. یک بلانک در لوله باقی‌مانده استاندارد با جایگزینی معرف اکسیدکننده با حجم مساوی هیدروکسید سدیم 3.5 نرمال آماده کنید و به همان روش ادامه دهید. در هر یک از سه یا چند لوله مشابه، 5 میلی‌لیتر محلول نمونه پیپت کنید. این لوله‌ها را به همان روشی که برای لوله‌های حاوی محلول استاندارد هدایت شده است، پردازش کنید. به هر یک از شش لوله، 2 میلی‌لیتر الکل انیدروس پیپت کنید، چند ثانیه بچرخانید، اجازه دهید فازها جدا شوند، و حدود 10 میلی‌لیتر محلول ایزوبوتیل الکل شفاف رویی را در سلول‌های استاندارد شده بریزید یا بکشید؛ سپس فلورسانس را در یک فلورومتر مناسب، که دارای فیلتر ورودی با دامنه انتقال باریک با حداکثر حدود 365 نانومتر و فیلتر خروجی با دامنه انتقال باریک با حداکثر حدود 435 نانومتر است، اندازه‌گیری کنید.</p>
             <p class="mb-4">مقدار تیامین هیدروکلراید (C<sub>12</sub>H<sub>17</sub>ClN<sub>4</sub>OS · HCl) را در هر 5 میلی‌لیتر محلول نمونه به صورت میکروگرم محاسبه کنید:</p>
             <div class="formula-display">
-                <span>Result = (A − b)/(S − d)</span>
+                <div class="formula-display">
+                <p>$$ 	ext{Result} = rac{A - b}{S - d} $$</p>
+            </div>
             </div>
             <p>A = میانگین قرائت فلورومتر بخش‌های محلول نمونه پردازش شده با معرف اکسیدکننده</p>
             <p>b = قرائت بلانک محلول نمونه</p>
@@ -128,7 +158,9 @@
             <p class="mb-4"><strong>نمونه‌ها:</strong> محلول استاندارد و محلول نمونه مناسب</p>
             <p class="mb-4">برای محصولات حاوی هیدروکلراید تیامین، درصد مقدار برچسب‌گذاری شده هیدروکلراید تیامین (C<sub>12</sub>H<sub>17</sub>ClN<sub>4</sub>OS · HCl) را در بخش نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <span>Result = (rU/rS) × (CS/CU) × 100</span>
+                <div class="formula-display">
+                <p>$$ 	ext{Result} = rac{r_U}{r_S} 	imes rac{C_S}{C_U} 	imes 100 $$</p>
+            </div>
             </div>
             <p>rU = پاسخ پیک تیامین از محلول نمونه مناسب</p>
             <p>rS = پاسخ پیک تیامین از محلول استاندارد</p>
@@ -136,7 +168,9 @@
             <p>CU = غلظت اسمی هیدروکلراید تیامین در محلول نمونه مناسب (mg/mL)</p>
             <p class="mb-4">برای محصولات حاوی مونونیترات تیامین، درصد مقدار برچسب‌گذاری شده مونونیترات تیامین (C<sub>12</sub>H<sub>17</sub>N<sub>5</sub>O<sub>4</sub>S) را در بخش نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <span>Result = (rU/rS) × (CS/CU) × (Mr1/Mr2) × 100</span>
+                <div class="formula-display">
+                <p>$$ 	ext{Result} = rac{r_U}{r_S} 	imes rac{C_S}{C_U} 	imes rac{M_{r1}}{M_{r2}} 	imes 100 $$</p>
+            </div>
             </div>
             <p>rU = پاسخ پیک تیامین از محلول نمونه مناسب</p>
             <p>rS = پاسخ پیک تیامین از محلول استاندارد</p>
@@ -183,7 +217,9 @@
             <p class="mb-4"><strong>نمونه‌ها:</strong> محلول استاندارد و محلول نمونه مناسب</p>
             <p class="mb-4">برای محصولات حاوی هیدروکلراید تیامین، درصد مقدار برچسب‌گذاری شده هیدروکلراید تیامین (C<sub>12</sub>H<sub>17</sub>ClN<sub>4</sub>OS · HCl) را در بخش نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <span>Result = (rU/rS) × (CS/CU) × 100</span>
+                <div class="formula-display">
+                <p>$$ 	ext{Result} = rac{r_U}{r_S} 	imes rac{C_S}{C_U} 	imes 100 $$</p>
+            </div>
             </div>
             <p>rU = پاسخ پیک تیامین از محلول نمونه مناسب</p>
             <p>rS = پاسخ پیک تیامین از محلول استاندارد</p>
@@ -191,7 +227,9 @@
             <p>CU = غلظت اسمی هیدروکلراید تیامین در محلول نمونه مناسب (mg/mL)</p>
             <p class="mb-4">برای محصولات حاوی مونونیترات تیامین، درصد مقدار برچسب‌گذاری شده مونونیترات تیامین (C<sub>12</sub>H<sub>17</sub>N<sub>5</sub>O<sub>4</sub>S) را در بخش نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <span>Result = (rU/rS) × (CS/CU) × (Mr1/Mr2) × 100</span>
+                <div class="formula-display">
+                <p>$$ 	ext{Result} = rac{r_U}{r_S} 	imes rac{C_S}{C_U} 	imes rac{M_{r1}}{M_{r2}} 	imes 100 $$</p>
+            </div>
             </div>
             <p>rU = پاسخ پیک تیامین از محلول نمونه مناسب</p>
             <p>rS = پاسخ پیک تیامین از محلول استاندارد</p>
@@ -244,7 +282,9 @@
             <p class="mb-4"><strong>نمونه‌ها:</strong> محلول استاندارد مناسب و محلول نمونه مناسب</p>
             <p class="mb-4">برای محصولات حاوی هیدروکلراید تیامین، درصد مقدار برچسب‌گذاری شده هیدروکلراید تیامین (C<sub>12</sub>H<sub>17</sub>ClN<sub>4</sub>OS · HCl) را در بخش نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <span>Result = (rU/rS) × (CS/CU) × 100</span>
+                <div class="formula-display">
+                <p>$$ 	ext{Result} = rac{r_U}{r_S} 	imes rac{C_S}{C_U} 	imes 100 $$</p>
+            </div>
             </div>
             <p>rU = پاسخ پیک تیامین از محلول نمونه مناسب</p>
             <p>rS = پاسخ پیک تیامین از محلول استاندارد مناسب</p>
@@ -252,7 +292,9 @@
             <p>CU = غلظت اسمی تیامین در محلول نمونه مناسب (mg/mL)</p>
             <p class="mb-4">برای محصولات حاوی مونونیترات تیامین، درصد مقدار برچسب‌گذاری شده مونونیترات تیامین (C<sub>12</sub>H<sub>17</sub>N<sub>5</sub>O<sub>4</sub>S) را در بخش نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <span>Result = (rU/rS) × (CS/CU) × (Mr1/Mr2) × 100</span>
+                <div class="formula-display">
+                <p>$$ 	ext{Result} = rac{r_U}{r_S} 	imes rac{C_S}{C_U} 	imes rac{M_{r1}}{M_{r2}} 	imes 100 $$</p>
+            </div>
             </div>
             <p>rU = پاسخ پیک تیامین از محلول نمونه مناسب</p>
             <p>rS = پاسخ پیک تیامین از محلول استاندارد مناسب</p>
@@ -296,7 +338,9 @@
             <p class="mb-4"><strong>نمونه‌ها:</strong> محلول استاندارد و محلول نمونه</p>
             <p class="mb-4">درصد هیدروکلراید تیامین (C<sub>12</sub>H<sub>17</sub>ClN<sub>4</sub>OS · HCl) را در بخش نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <span>Result = (RU/RS) × (CS/CU) × 100</span>
+                <div class="formula-display">
+                <p>$$ 	ext{Result} = rac{R_U}{R_S} 	imes rac{C_S}{C_U} 	imes 100 $$</p>
+            </div>
             </div>
             <p>RU = نسبت پاسخ پیک تیامین به متیل بنزوات از محلول نمونه</p>
             <p>RS = نسبت پاسخ پیک تیامین به متیل بنزوات از محلول استاندارد</p>
@@ -304,7 +348,9 @@
             <p>CU = غلظت هیدروکلراید تیامین در محلول نمونه (mg/mL)</p>
             <p class="mb-4">اگر ماده فعال دارویی یا مکمل غذایی مونونیترات تیامین باشد، درصد مونونیترات تیامین (C<sub>12</sub>H<sub>17</sub>N<sub>5</sub>O<sub>4</sub>S) را در بخش نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <span>Result = (RU/RS) × (CS/CU) × (Mr1/Mr2) × 100</span>
+                <div class="formula-display">
+                <p>$$ 	ext{Result} = rac{R_U}{R_S} 	imes rac{C_S}{C_U} 	imes rac{M_{r1}}{M_{r2}} 	imes 100 $$</p>
+            </div>
             </div>
             <p>RU = نسبت پاسخ پیک تیامین به متیل بنزوات از محلول نمونه</p>
             <p>RS = نسبت پاسخ پیک تیامین به متیل بنزوات از محلول استاندارد</p>
@@ -349,7 +395,9 @@
             <p class="mb-4"><strong>نمونه‌ها:</strong> محلول استاندارد و محلول نمونه</p>
             <p class="mb-4">درصد مقدار برچسب‌گذاری شده هیدروکلراید تیامین (C<sub>12</sub>H<sub>17</sub>ClN<sub>4</sub>OS · HCl) را در بخش نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <span>Result = (RU/RS) × (CS/CU) × 100</span>
+                <div class="formula-display">
+                <p>$$ 	ext{Result} = rac{R_U}{R_S} 	imes rac{C_S}{C_U} 	imes 100 $$</p>
+            </div>
             </div>
             <p>RU = نسبت پاسخ پیک تیامین به متیل پارابن از محلول نمونه</p>
             <p>RS = نسبت پاسخ پیک تیامین به متیل پارابن از محلول استاندارد</p>
@@ -357,7 +405,9 @@
             <p>CU = غلظت اسمی هیدروکلراید تیامین در محلول نمونه (mg/mL)</p>
             <p class="mb-4">اگر محصولات حاوی مونونیترات تیامین هستند، درصد مقدار برچسب‌گذاری شده مونونیترات تیامین (C<sub>12</sub>H<sub>17</sub>N<sub>5</sub>O<sub>4</sub>S) را در بخش نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <span>Result = (RU/RS) × (CS/CU) × (Mr1/Mr2) × 100</span>
+                <div class="formula-display">
+                <p>$$ 	ext{Result} = rac{R_U}{R_S} 	imes rac{C_S}{C_U} 	imes rac{M_{r1}}{M_{r2}} 	imes 100 $$</p>
+            </div>
             </div>
             <p>RU = نسبت پاسخ پیک تیامین به متیل پارابن از محلول نمونه</p>
             <p>RS = نسبت پاسخ پیک تیامین به متیل پارابن از محلول استاندارد</p>
@@ -397,7 +447,9 @@
             <p class="mb-4"><strong>نمونه‌ها:</strong> محلول استاندارد و محلول نمونه</p>
             <p class="mb-4">درصد مقدار برچسب‌گذاری شده هیدروکلراید تیامین (C<sub>12</sub>H<sub>17</sub>ClN<sub>4</sub>OS · HCl) را در بخش نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <span>Result = (rU/rS) × (CS × D × V/L) × 100</span>
+                <div class="formula-display">
+                <p>$$ 	ext{Result} = rac{r_U}{r_S} 	imes rac{C_S 	imes D 	imes V}{L} 	imes 100 $$</p>
+            </div>
             </div>
             <p>rU = پاسخ پیک تیامین از محلول نمونه</p>
             <p>rS = پاسخ پیک تیامین از محلول استاندارد</p>
@@ -502,7 +554,9 @@
             <p class="mb-4"><strong>نمونه‌ها:</strong> محلول استاندارد و محلول نمونه مناسب</p>
             <p class="mb-4">برای محصولات حاوی هیدروکلراید تیامین، درصد مقدار برچسب‌گذاری شده هیدروکلراید تیامین (C<sub>12</sub>H<sub>17</sub>ClN<sub>4</sub>OS · HCl) را در بخش نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <span>Result = (rU/rS) × (CS/CU) × 100</span>
+                <div class="formula-display">
+                <p>$$ 	ext{Result} = rac{r_U}{r_S} 	imes rac{C_S}{C_U} 	imes 100 $$</p>
+            </div>
             </div>
             <p>rU = پاسخ پیک تیامین از محلول نمونه مناسب</p>
             <p>rS = پاسخ پیک تیامین از محلول استاندارد</p>
@@ -510,7 +564,9 @@
             <p>CU = غلظت اسمی تیامین در محلول نمونه مناسب (mg/mL)</p>
             <p class="mb-4">برای محصولات حاوی مونونیترات تیامین، درصد مقدار برچسب‌گذاری شده مونونیترات تیامین (C<sub>12</sub>H<sub>17</sub>N<sub>5</sub>O<sub>4</sub>S) را در بخش نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                <span>Result = (rU/rS) × (CS/CU) × (Mr1/Mr2) × 100</span>
+                <div class="formula-display">
+                <p>$$ 	ext{Result} = rac{r_U}{r_S} 	imes rac{C_S}{C_U} 	imes rac{M_{r1}}{M_{r2}} 	imes 100 $$</p>
+            </div>
             </div>
             <p>rU = پاسخ پیک تیامین از محلول نمونه مناسب</p>
             <p>rS = پاسخ پیک تیامین از محلول استاندارد</p>

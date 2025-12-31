@@ -12,14 +12,18 @@
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
-            background-color: #f8fafc;
-            color: #333;
+            background-color: #e0f2fe;
+            color: #1f2937;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #1e40af;
         }
         .card {
-            background-color: #fff;
+            background-color: #ffffff;
             border-radius: 0.5rem;
             padding: 1.5rem;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #dbeafe;
         }
         .ltr-text {
             direction: ltr;
@@ -35,15 +39,25 @@
             border-collapse: collapse;
             margin-top: 1rem;
             margin-bottom: 1rem;
+            background-color: #ffffff;
+            border: 1px solid #bfdbfe;
         }
         table th, table td {
-            border: 1px solid #e2e8f0;
+            border: 1px solid #bfdbfe;
             padding: 0.75rem;
             text-align: center;
         }
         table th {
-            background-color: #f1f5f9;
+            background-color: #dbeafe;
             font-weight: bold;
+            color: #1e40af;
+        }
+        table td {
+            background-color: #ffffff;
+            color: #1f2937;
+        }
+        table tr:hover {
+            background-color: #f0f9ff;
         }
         .formula-display {
             display: flex;
@@ -51,6 +65,20 @@
             margin-top: 1rem;
             margin-bottom: 1rem;
             direction: ltr;
+        }
+        a {
+            color: #1e40af;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -128,7 +156,7 @@
             <p class="mb-4">نمونه‌ها: محلول استاندارد و محلول نمونه</p>
             <p class="mb-4">درصد مقدار برچسب‌گذاری شده بنزیل الکل (<span class="ltr-text">C7H8O</span>) در بخش نمونه گرفته شده را محاسبه کنید:</p>
             <div class="formula-display">
-                <p>Result = (RU/RS) × (CS/CU) × 100</p>
+                <p>$$ \text{Result} = \frac{R_U}{R_S} \times \frac{C_S}{C_U} \times 100 $$</p>
             </div>
             <p class="mb-4">RU = نسبت پاسخ پیک بنزیل الکل به فنل از محلول نمونه</p>
             <p class="mb-4">RS = نسبت پاسخ پیک بنزیل الکل به فنل از محلول استاندارد</p>
@@ -171,7 +199,7 @@
             <p class="mb-4">نمونه‌ها: محلول استاندارد و محلول نمونه</p>
             <p class="mb-4">درصد مقدار برچسب‌گذاری شده کلروبوتانول (<span class="ltr-text">C4H7Cl3O</span>) بر اساس حالت انیدروس، در بخش نمونه گرفته شده را محاسبه کنید:</p>
             <div class="formula-display">
-                <p>Result = (RU/RS) × (CS/CU) × 100</p>
+                <p>$$ \text{Result} = \frac{R_U}{R_S} \times \frac{C_S}{C_U} \times 100 $$</p>
             </div>
             <p class="mb-4">RU = نسبت پاسخ پیک کلروبوتانول به 2,2,2-تری‌کلرواتانول از محلول نمونه</p>
             <p class="mb-4">RS = نسبت پاسخ پیک کلروبوتانول به 2,2,2-تری‌کلرواتانول از محلول استاندارد</p>
@@ -238,7 +266,7 @@
             <p class="mb-4">نمونه‌ها: محلول استاندارد و محلول نمونه</p>
             <p class="mb-4">درصد مقدار برچسب‌گذاری شده فنل (<span class="ltr-text">C6H6O</span>) در بخش نمونه گرفته شده را محاسبه کنید:</p>
             <div class="formula-display">
-                <p>Result = (RU/RS) × (CS/CU) × 100</p>
+                <p>$$ \text{Result} = \frac{R_U}{R_S} \times \frac{C_S}{C_U} \times 100 $$</p>
             </div>
             <p class="mb-4">RU = نسبت پاسخ پیک فنل به بنزیل الکل از محلول نمونه</p>
             <p class="mb-4">RS = نسبت پاسخ پیک فنل به بنزیل الکل از محلول استاندارد</p>
@@ -278,7 +306,7 @@
             <p class="mb-4">نمونه‌ها: محلول استاندارد و محلول نمونه</p>
             <p class="mb-4">درصد مقدار برچسب‌گذاری شده متیل پارابن (<span class="ltr-text">C8H8O3</span>) در بخش نمونه گرفته شده را محاسبه کنید:</p>
             <div class="formula-display">
-                <p>Result = (RU/RS) × (CS/CU) × 100</p>
+                <p>$$ \text{Result} = \frac{R_U}{R_S} \times \frac{C_S}{C_U} \times 100 $$</p>
             </div>
             <p class="mb-4">RU = نسبت پاسخ پیک متیل پارابن به اتیل پارابن از محلول نمونه</p>
             <p class="mb-4">RS = نسبت پاسخ پیک متیل پارابن به اتیل پارابن از محلول استاندارد</p>
@@ -286,7 +314,7 @@
             <p class="mb-4">CU = غلظت اسمی متیل پارابن در محلول نمونه</p>
             <p class="mb-4">درصد مقدار برچسب‌گذاری شده پروپیل پارابن (<span class="ltr-text">C10H12O3</span>) در بخش نمونه گرفته شده را محاسبه کنید:</p>
             <div class="formula-display">
-                <p>Result = (RU/RS) × (CS/CU) × 100</p>
+                <p>$$ \text{Result} = \frac{R_U}{R_S} \times \frac{C_S}{C_U} \times 100 $$</p>
             </div>
             <p class="mb-4">RU = نسبت پاسخ پیک پروپیل پارابن به اتیل پارابن از محلول نمونه</p>
             <p class="mb-4">RS = نسبت پاسخ پیک پروپیل پارابن به اتیل پارابن از محلول استاندارد</p>
@@ -317,7 +345,7 @@
             <p class="mb-4">نمونه‌ها: محلول استاندارد و محلول نمونه</p>
             <p class="mb-4">درصد مقدار برچسب‌گذاری شده تیمروسال (<span class="ltr-text">C9H9HgNaO2S</span>) در بخش نمونه گرفته شده را محاسبه کنید:</p>
             <div class="formula-display">
-                <p>Result = (rU/rS) × (CS/CU) × 100</p>
+                <p>$$ \text{Result} = \frac{r_U}{r_S} \times \frac{C_S}{C_U} \times 100 $$</p>
             </div>
             <p class="mb-4">rU = پاسخ پیک تیمروسال از محلول نمونه</p>
             <p class="mb-4">rS = پاسخ پیک تیمروسال از محلول استاندارد</p>
@@ -335,7 +363,7 @@
             <p class="mb-4">بخشی از محلول نمونه را در سلول قطب‌سنجی بریزید و با عبور دادن نیتروژن از محلول به مدت <span class="ltr-text">15 min</span> آن را هواگیری کنید. الکترود جیوه قطره‌ای یک قطب‌سنج مناسب (رجوع کنید به قطب‌سنجی <a href="854.html" class="text-blue-600 hover:underline" target="_blank">801</a>) را وارد کرده و قطب‌نگاره را از <span class="ltr-text">−0.6</span> تا <span class="ltr-text">−1.5</span> ولت نسبت به الکترود کالمل اشباع ثبت کنید.</p>
             <p class="mb-4">مقدار نیترات فنیل‌مرکوری (<span class="ltr-text">C6H5HgNO3</span>) بر حسب µg/mL در بخش نمونه گرفته شده را محاسبه کنید:</p>
             <div class="formula-display">
-                <p>Result = 2.5C[(id)U/(id)S]</p>
+                <p>$$ \text{Result} = 2.5C\left[\frac{(id)_U}{(id)_S}\right] $$</p>
             </div>
             <p class="mb-4">C = غلظت نیترات فنیل‌مرکوری در محلول استاندارد (µg/mL)</p>
             <p class="mb-4">(id)U = جریان نفوذ محلول نمونه، به عنوان تفاوت بین جریان باقی‌مانده و جریان حدی</p>

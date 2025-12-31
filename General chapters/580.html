@@ -10,14 +10,18 @@
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
-            background-color: #f8fafc;
-            color: #333;
+            background-color: #e0f2fe;
+            color: #1f2937;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #1e40af;
         }
         .card {
-            background-color: #fff;
+            background-color: #ffffff;
             border-radius: 0.5rem;
             padding: 1.5rem;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #dbeafe;
         }
         .ltr-text {
             direction: ltr;
@@ -33,15 +37,25 @@
             border-collapse: collapse;
             margin-top: 1rem;
             margin-bottom: 1rem;
+            background-color: #ffffff;
+            border: 1px solid #bfdbfe;
         }
         table th, table td {
-            border: 1px solid #e2e8f0;
+            border: 1px solid #bfdbfe;
             padding: 0.75rem;
             text-align: center;
         }
         table th {
-            background-color: #f1f5f9;
+            background-color: #dbeafe;
             font-weight: bold;
+            color: #1e40af;
+        }
+        table td {
+            background-color: #ffffff;
+            color: #1f2937;
+        }
+        table tr:hover {
+            background-color: #f0f9ff;
         }
         .formula-display {
             display: flex;
@@ -49,6 +63,20 @@
             margin-top: 1rem;
             margin-bottom: 1rem;
             direction: ltr;
+        }
+        a {
+            color: #1e40af;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -83,7 +111,7 @@
             <p class="mb-4">قسمتی از محلول نمونه را به یک لوله سانتریفیوژ منتقل کرده و سانتریفیوژ کنید تا یک مایع رویی شفاف به دست آید. حجمی از محلول نمونه، معادل <span class="ltr-text">2 mg</span> اسید اسکوربیک، را به یک فلاسک ارلن‌مایر <span class="ltr-text">50-mL</span> منتقل کرده و <span class="ltr-text">5 mL</span> از محلول TS اسید متا‌فسفریک-استیک اضافه کنید. با تیترانت تا رسیدن به رنگ صورتی مایل به قرمز که حداقل <span class="ltr-text">5 s</span> باقی بماند، تیتر کنید. حجم تیترانت مصرف شده توسط شاهد را اصلاح کنید.</p>
             <p class="mb-4">درصد اسید اسکوربیک (<span class="ltr-text">C6H8O6</span>) در قسمت نمونه گرفته شده را محاسبه کنید:</p>
             <div class="formula-display">
-                <p class="math-tex">Result = \{[(V_S - V_B) \times F]/W\} \times 100</p>
+                <p>$$ \text{Result} = \left\{[(V_S - V_B) \times F]/W\right\} \times 100 $$</p>
             </div>
             <p class="mb-4"><span class="ltr-text">V<sub>S</sub></span> = حجم تیترانت مصرف شده توسط محلول نمونه (mL)</p>
             <p class="mb-4"><span class="ltr-text">V<sub>B</sub></span> = حجم تیترانت مصرف شده توسط شاهد</p>
@@ -124,7 +152,7 @@
             <p class="mb-4"><strong>نمونه‌ها:</strong> محلول استاندارد و محلول نمونه</p>
             <p class="mb-4">درصد ویتامین C، به صورت اسید اسکوربیک (<span class="ltr-text">C6H8O6</span>)، در قسمت نمونه گرفته شده را محاسبه کنید:</p>
             <div class="formula-display">
-                <p class="math-tex">Result = (r_U/r_S) \times (C_S/C_U) \times 100</p>
+                <p>$$ \text{Result} = \frac{r_U}{r_S} \times \frac{C_S}{C_U} \times 100 $$</p>
             </div>
             <p class="mb-4"><span class="ltr-text">r<sub>U</sub></span> = مساحت پیک اسید اسکوربیک از محلول نمونه</p>
             <p class="mb-4"><span class="ltr-text">r<sub>S</sub></span> = مساحت پیک اسید اسکوربیک از محلول استاندارد</p>
@@ -208,7 +236,7 @@
             <p class="mb-4"><strong>نمونه‌ها:</strong> محلول استاندارد و محلول نمونه</p>
             <p class="mb-4">درصد ویتامین C، به صورت اسید اسکوربیک (<span class="ltr-text">C6H8O6</span>)، در قسمت نمونه گرفته شده را محاسبه کنید:</p>
             <div class="formula-display">
-                <p class="math-tex">Result = (r_U/r_S) \times (C_S/C_U) \times 100</p>
+                <p>$$ \text{Result} = \frac{r_U}{r_S} \times \frac{C_S}{C_U} \times 100 $$</p>
             </div>
             <p class="mb-4"><span class="ltr-text">r<sub>U</sub></span> = مساحت پیک اسید اسکوربیک از محلول نمونه</p>
             <p class="mb-4"><span class="ltr-text">r<sub>S</sub></span> = مساحت پیک اسید اسکوربیک از محلول استاندارد</p>

@@ -11,14 +11,18 @@
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
-            background-color: #f8fafc;
-            color: #333;
+            background-color: #e0f2fe;
+            color: #1f2937;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #1e40af;
         }
         .card {
-            background-color: #fff;
+            background-color: #ffffff;
             border-radius: 0.5rem;
             padding: 1.5rem;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #dbeafe;
         }
         .ltr-text {
             direction: ltr;
@@ -34,15 +38,25 @@
             border-collapse: collapse;
             margin-top: 1rem;
             margin-bottom: 1rem;
+            background-color: #ffffff;
+            border: 1px solid #bfdbfe;
         }
         table th, table td {
-            border: 1px solid #e2e8f0;
+            border: 1px solid #bfdbfe;
             padding: 0.75rem;
             text-align: center;
         }
         table th {
-            background-color: #f1f5f9;
+            background-color: #dbeafe;
             font-weight: bold;
+            color: #1e40af;
+        }
+        table td {
+            background-color: #ffffff;
+            color: #1f2937;
+        }
+        table tr:hover {
+            background-color: #f0f9ff;
         }
         .formula-display {
             display: flex;
@@ -50,6 +64,20 @@
             margin-top: 1rem;
             margin-bottom: 1rem;
             direction: ltr;
+        }
+        a {
+            color: #1e40af;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -100,7 +128,7 @@
             <p class="mb-4">مواردی وجود دارد که مقدار مورد نیاز یک دوز بر حسب کاتیون (مثلاً Li+), آنیون (مثلاً F–), یا مولکول (مثلاً تئوفیلین در آمینوفیلین) مشخص می‌شود. در این موارد، ماده مخدر وزن شده یک نمک یا کمپلکس است که بخشی از آن نشان‌دهنده بخش فعال از نظر فارماکولوژیکی است. بنابراین، مقدار دقیق چنین موادی که وزن می‌شوند باید بر اساس مقدار مورد نیاز از بخش فارماکولوژیکی محاسبه شود.</p>
             <p class="mb-4">فرمول زیر را می‌توان برای محاسبه وزن تئوری یک ماده در یک آماده‌سازی ترکیبی استفاده کرد:</p>
             <div class="formula-display">
-                <p>W = \frac{AB}{CD}</p>
+                <p>$$ W = \frac{AB}{CD} $$</p>
             </div>
             <p class="mb-4">W = وزن واقعی وزن شده</p>
             <p class="mb-4">A = وزن تجویز شده یا تعیین شده توسط داروساز از بخش فعال یا عملکردی دارو یا ماده افزودنی</p>
@@ -121,13 +149,13 @@
             <p class="mb-4">D = <span class="ltr-text">۱.۰</span></p>
             <p class="mb-4">برای حل معادله:</p>
             <div class="formula-display">
-                <p>W = (<span class="ltr-text">1.5 g</span> × <span class="ltr-text">759 g/mol</span>)/(<span class="ltr-text">759 g/mol</span> × <span class="ltr-text">1</span>) = <span class="ltr-text">1.5 g</span> of مورفین سولفات پنتامونوهیدرات</p>
+                <p>$$ W = \frac{1.5 \text{ g} \times 759 \text{ g/mol}}{759 \text{ g/mol} \times 1} = 1.5 \text{ g} $$</p>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۲. بخش فعال دارو و اصلاح برای رطوبت</h4>
             <p class="mb-4">مقدار آمینوفیلین را به دقت وزن کنید تا ۲۵۰ میلی‌گرم تئوفیلین انیدروس به دست آید. [نکته - در این مثال، آمینوفیلین دی‌هیدرات پودری وزن شده حاوی ۰.۴% وزنی/وزنی رطوبت جذب شده است که در CoA دریافتی توسط داروخانه ذکر شده است.]</p>
             <div class="formula-display">
-                <p>W = AB/CD</p>
+                <p>$$ W = \frac{AB}{CD} $$</p>
             </div>
             <p class="mb-4">W = وزن آمینوفیلین دی‌هیدرات (mg)</p>
             <p class="mb-4">A = وزن تئوفیلین انیدروس، <span class="ltr-text">۲۵۰ mg</span></p>
@@ -137,7 +165,7 @@
             <p class="mb-4">[نکته - یک مول آمینوفیلین حاوی ۲ مول تئوفیلین است. تئوفیلین MW معادل ۱۸۰ دارد.]</p>
             <p class="mb-4">برای حل معادله:</p>
             <div class="formula-display">
-                <p>W = (<span class="ltr-text">250 mg</span> × <span class="ltr-text">456 g/mol</span>)/(<span class="ltr-text">360 g/mol</span> × <span class="ltr-text">0.996</span>) = <span class="ltr-text">318 mg</span> of آمینوفیلین دی‌هیدرات</p>
+                <p>$$ W = \frac{250 \text{ mg} \times 456 \text{ g/mol}}{360 \text{ g/mol} \times 0.996} = 318 \text{ mg} $$</p>
             </div>
 
             <h3 class="text-xl font-semibold text-blue-600 mb-2">۲.۲ هیدرات‌ها، نمک‌ها و استرها</h3>
@@ -154,14 +182,14 @@
             <p class="mb-4">D = <span class="ltr-text">۱.۰</span></p>
             <p class="mb-4">برای حل معادله:</p>
             <div class="formula-display">
-                <p>W = (<span class="ltr-text">2 g</span> × <span class="ltr-text">288.81 g/mol</span>)/(<span class="ltr-text">270.80 g/mol</span> × <span class="ltr-text">1</span>) = <span class="ltr-text">2.133 g</span> of لیدوکائین هیدروکلراید مونوهیدرات</p>
+                <p>$$ W = \frac{2 \text{ g} \times 288.81 \text{ g/mol}}{270.80 \text{ g/mol} \times 1} = 2.133 \text{ g} $$</p>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۲. نمک‌ها</h4>
             <p class="mb-4">نسخه‌ای برای ۱۰ میلی‌لیتر ژل موضعی فنتانیل با غلظت ۵۰ میکروگرم فنتانیل/۰.۱ میلی‌لیتر که از سیترات فنتانیل تهیه شده است، لازم است. مقدار سیترات فنتانیل مورد نیاز برای آماده‌سازی را می‌توان به شرح زیر محاسبه کرد:</p>
             <p class="mb-4">مقدار فنتانیل مورد نیاز برای آماده‌سازی:</p>
             <div class="formula-display">
-                <p>(<span class="ltr-text">50 mcg</span> fentanyl/<span class="ltr-text">0.1 mL</span>) × <span class="ltr-text">10 mL</span> = <span class="ltr-text">5000 mcg</span> of فنتانیل</p>
+                <p>$$ \left(\frac{50 \text{ mcg fentanyl}}{0.1 \text{ mL}}\right) \times 10 \text{ mL} = 5000 \text{ mcg} $$</p>
             </div>
             <p class="mb-4">W = وزن سیترات فنتانیل در نسخه (mcg)</p>
             <p class="mb-4">A = وزن فنتانیل در نسخه، <span class="ltr-text">5000 mcg</span></p>
@@ -170,7 +198,7 @@
             <p class="mb-4">D = <span class="ltr-text">1.0</span></p>
             <p class="mb-4">برای حل معادله:</p>
             <div class="formula-display">
-                <p>W = (<span class="ltr-text">5000 mcg</span> × <span class="ltr-text">528.59 g/mol</span>)/(<span class="ltr-text">336.47 g/mol</span> × <span class="ltr-text">1</span>) = <span class="ltr-text">7855 mcg</span> of سیترات فنتانیل</p>
+                <p>$$ W = \frac{5000 \text{ mcg} \times 528.59 \text{ g/mol}}{336.47 \text{ g/mol} \times 1} = 7855 \text{ mcg} $$</p>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۳. استرها</h4>
@@ -181,7 +209,7 @@
             <p class="mb-4">C = MW سفورکسیم، <span class="ltr-text">424.39 mg/mmol</span></p>
             <p class="mb-4">D = <span class="ltr-text">1.0</span></p>
             <div class="formula-display">
-                <p>W = (<span class="ltr-text">250 mg</span> × <span class="ltr-text">510.47 g/mol</span>)/(<span class="ltr-text">424.39 g/mol</span> × <span class="ltr-text">1</span>) = <span class="ltr-text">300 mg</span> of سفورکسیم آکستیل</p>
+                <p>$$ W = \frac{250 \text{ mg} \times 510.47 \text{ g/mol}}{424.39 \text{ g/mol} \times 1} = 300 \text{ mg} $$</p>
             </div>
         </div>
 
@@ -194,19 +222,19 @@
             <p class="mb-4">پزشک، آزیتریومایسین را برای سوسپانسیون خوراکی با دوز ۱۵ میلی‌گرم بر کیلوگرم در روز، تقسیم شده هر ۱۲ ساعت، برای کودکی که ۳۶ پوند وزن دارد، تجویز کرده است. حجم سوسپانسیون خوراکی را به میلی‌لیتر که باید برای هر دوز از سوسپانسیون ۲۰۰ میلی‌گرم/۵ میلی‌لیتر تجویز شود، به شرح زیر محاسبه کنید:</p>
             <p class="mb-4">۱. وزن کودک را به کیلوگرم محاسبه کنید:</p>
             <div class="formula-display">
-                <p><span class="ltr-text">36 lb</span> × <span class="ltr-text">kg/2.2 lb</span> = <span class="ltr-text">16.4 kg</span></p>
+                <p>$$ 36 \text{ lb} \times \frac{1 \text{ kg}}{2.2 \text{ lb}} = 16.4 \text{ kg} $$</p>
             </div>
             <p class="mb-4">۲. وزن به کیلوگرم را در نرخ دوز ضرب کنید:</p>
             <div class="formula-display">
-                <p><span class="ltr-text">16.4 kg</span> × <span class="ltr-text">15 mg/kg/day</span> = <span class="ltr-text">246 mg/day</span></p>
+                <p>$$ 16.4 \text{ kg} \times 15 \text{ mg/kg/day} = 246 \text{ mg/day} $$</p>
             </div>
             <p class="mb-4">۳. کل دوز روزانه را بر تعداد دوزها در روز تقسیم کنید:</p>
             <div class="formula-display">
-                <p><span class="ltr-text">246 mg</span> / <span class="ltr-text">2 doses</span> = <span class="ltr-text">123 mg/dose</span></p>
+                <p>$$ \frac{246 \text{ mg}}{2 \text{ doses}} = 123 \text{ mg/dose} $$</p>
             </div>
             <p class="mb-4">۴. حجم هر دوز را با استفاده از نسبت و تناسب محاسبه کنید:</p>
             <div class="formula-display">
-                <p>(<span class="ltr-text">123 mg/dose</span>)/(<span class="ltr-text">200 mg/5 mL</span>) = <span class="ltr-text">3.1 mL/dose</span></p>
+                <p>$$ \frac{123 \text{ mg/dose}}{200 \text{ mg/5 mL}} = 3.1 \text{ mL/dose} $$</p>
             </div>
             <p class="mb-4">برخی محاسبات ممکن است با استفاده از تحلیل ابعادی واحد (DUA) نیز انجام شوند. DUA باید از سمت چپ با عاملی حاوی واحدهای پاسخ در صورت شروع شود. تمام واحدهای غیر از واحدهای موجود در پاسخ باید لغو شوند. در صورت استفاده از DUA، معادله قبلی به شرح زیر خواهد بود:</p>
 
@@ -217,15 +245,15 @@
             <p class="mb-4">پزشک، ریتوکسی‌ماب را با دوز ۳۷۵ میلی‌گرم بر متر مربع در هفته برای ۶ هفته برای بیماری که قد آن ۶ فوت و ۲ اینچ و وزن آن ۱۸۳ پوند است، تجویز کرده است. حجم، به میلی‌لیتر، از تزریق ریتوکسی‌ماب ۱۰ میلی‌گرم بر میلی‌لیتر که برای تهیه هر دوز انفوزیون IV لازم است را به شرح زیر محاسبه کنید:</p>
             <p class="mb-4">۱. BSA بیمار را محاسبه کنید:</p>
             <div class="formula-display">
-                <p>BSA = \sqrt{\frac{(\text{قد (cm)}) \times (\text{وزن (kg)})}{3600}} = \sqrt{\frac{(188 \text{ cm}) \times (83 \text{ kg})}{3600}} = 2.08 \text{ m}^2</p>
+                <p>$$ \text{BSA} = \sqrt{\frac{(188 \text{ cm}) \times (83 \text{ kg})}{3600}} = 2.08 \text{ m}^2 $$</p>
             </div>
             <p class="mb-4">۲. BSA را در نرخ دوز ضرب کنید:</p>
             <div class="formula-display">
-                <p><span class="ltr-text">2.08 m</span>² × <span class="ltr-text">375 mg/m</span>² = <span class="ltr-text">780 mg/dose</span></p>
+                <p>$$ 2.08 \text{ m}^2 \times 375 \text{ mg/m}^2 = 780 \text{ mg/dose} $$</p>
             </div>
             <p class="mb-4">۳. حجم هر دوز را با استفاده از نسبت و تناسب محاسبه کنید:</p>
             <div class="formula-display">
-                <p>(<span class="ltr-text">780 mg/dose</span>)/(<span class="ltr-text">10 mg/mL</span>) = <span class="ltr-text">78 mL/dose</span></p>
+                <p>$$ \frac{780 \text{ mg/dose}}{10 \text{ mg/mL}} = 78 \text{ mL/dose} $$</p>
             </div>
             <p class="mb-4">محاسبه قبلی نیز می‌تواند با استفاده از DUA انجام شود:</p>
 
@@ -233,22 +261,22 @@
             <p class="mb-4">BSA برای گربه‌ها و سگ‌ها ممکن است با استفاده از فرمول‌های زیر محاسبه شود. برای سایر حیوانات، به یک مرجع مناسب پزشکی دامپزشکی مراجعه کنید.</p>
             <p class="mb-4">مساحت سطح بدن برای گربه‌ها:</p>
             <div class="formula-display">
-                <p>BSA (m²) = {<span class="ltr-text">10</span> × [وزن بدن (g)]<span class="ltr-text">0.667</span>}/<span class="ltr-text">10,000</span></p>
+                <p>$$ \text{BSA (m}^2\text{)} = \frac{10 \times [\text{body weight (g)}]^{0.667}}{10,000} $$</p>
             </div>
             <p class="mb-4">مساحت سطح بدن برای سگ‌ها:</p>
             <div class="formula-display">
-                <p>BSA (m²) = {<span class="ltr-text">10.1</span> × [وزن بدن (g)]<span class="ltr-text">0.667</span>}/<span class="ltr-text">10,000</span></p>
+                <p>$$ \text{BSA (m}^2\text{)} = \frac{10.1 \times [\text{body weight (g)}]^{0.667}}{10,000} $$</p>
             </div>
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۳.۳.۱ محاسبه دوزاژ بر اساس سطح بدن (حیوانات)</h4>
             <p class="mb-4">مثال - دوزاژ بر اساس BSA (حیوانات)</p>
             <p class="mb-4">دامپزشک، درمان خوراکی سیکلوفسفامید را با دوز ۵۰ میلی‌گرم بر متر مربع برای گربه‌ای به وزن ۵.۸ کیلوگرم تجویز کرده است. دوز سیکلوفسفامید را به شرح زیر محاسبه کنید:</p>
             <p class="mb-4">۱. BSA گربه را محاسبه کنید:</p>
             <div class="formula-display">
-                <p>BSA (m²) = [<span class="ltr-text">10</span> × (<span class="ltr-text">5800 g</span>)<span class="ltr-text">0.667</span>]/<span class="ltr-text">10,000</span> = <span class="ltr-text">0.324 m</span>²</p>
+                <p>$$ \text{BSA (m}^2\text{)} = \frac{10 \times (5800 \text{ g})^{0.667}}{10,000} = 0.324 \text{ m}^2 $$</p>
             </div>
             <p class="mb-4">۲. BSA را در نرخ دوز ضرب کنید:</p>
             <div class="formula-display">
-                <p><span class="ltr-text">0.324 m</span>² × <span class="ltr-text">50 mg/m</span>² = <span class="ltr-text">16.2 mg</span></p>
+                <p>$$ 0.324 \text{ m}^2 \times 50 \text{ mg/m}^2 = 16.2 \text{ mg} $$</p>
             </div>
         </div>
 
@@ -281,12 +309,12 @@
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">۶. چگالی و وزن مخصوص</h2>
             <p class="mb-4">چگالی به عنوان جرم یک ماده در هوا در دمای مشخص (معمولاً ۲۵ درجه سانتی‌گراد) به ازای واحد حجم آن ماده در همان دما تعریف می‌شود. چگالی را می‌توان با معادله زیر محاسبه کرد:</p>
             <div class="formula-display">
-                <p>Density = (mass of substance/volume of substance) at a particular temperature and pressure</p>
+                <p>$$ \text{Density} = \frac{\text{mass of substance}}{\text{volume of substance}} \text{ at a particular temperature and pressure} $$</p>
             </div>
             <p class="mb-4">وزن مخصوص (SG) نسبت بدون واحد چگالی یک ماده به چگالی آب در ۴ درجه سانتی‌گراد است، یا [(گرم ماده/میلی‌لیتر)/۱.۰۰ گرم/میلی‌لیتر]. به طور جایگزین، SG را می‌توان در دمای مشخص در برخی واحدهای رایج چگالی از چگالی ماده به چگالی آب محاسبه کرد.</p>
             <p class="mb-4">SG را می‌توان با معادله زیر محاسبه کرد:</p>
             <div class="formula-display">
-                <p>SG = (weight of the substance)/(weight of an equal volume of water)</p>
+                <p>$$ \text{SG} = \frac{\text{weight of the substance}}{\text{weight of an equal volume of water}} $$</p>
             </div>
             <h3 class="text-xl font-semibold text-blue-600 mb-2">۶.۱ محاسبه چگالی و وزن مخصوص</h3>
             <p class="mb-4">مثال‌ها - چگالی و وزن مخصوص</p>
@@ -294,20 +322,20 @@
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۱. محاسبه چگالی</h4>
             <p class="mb-4"><span class="ltr-text">2.3 g</span> پودر زغال فعال حجمی حجمی معادل <span class="ltr-text">5.2 mL</span> در دمای ۲۰ درجه سانتی‌گراد و ۱ اتمسفر را اشغال می‌کند. چگالی پودر زغال فعال را می‌توان به شرح زیر محاسبه کرد:</p>
             <div class="formula-display">
-                <p>Density = <span class="ltr-text">2.3 g</span>/<span class="ltr-text">5.2 mL</span> = <span class="ltr-text">0.44 g/mL</span></p>
+                <p>$$ \text{Density} = \frac{2.3 \text{ g}}{5.2 \text{ mL}} = 0.44 \text{ g/mL} $$</p>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۲. محاسبه SG</h4>
             <p class="mb-4"><span class="ltr-text">125 g</span> گلیسیرین حجمی معادل <span class="ltr-text">99 mL</span> در دمای ۲۵ درجه سانتی‌گراد را اشغال می‌کند. [نکته - چگالی آب در ۲۵ درجه سانتی‌گراد <span class="ltr-text">0.997 g/mL</span> است.] SG گلیسیرین را می‌توان به شرح زیر محاسبه کرد:</p>
             <div class="formula-display">
-                <p>SG = (<span class="ltr-text">125 g/99 mL</span>)/(<span class="ltr-text">0.997 g/mL</span>) = <span class="ltr-text">1.266</span></p>
+                <p>$$ \text{SG} = \frac{125 \text{ g}/99 \text{ mL}}{0.997 \text{ g/mL}} = 1.266 $$</p>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۳. محاسبه اسید غلیظ</h4>
             <p class="mb-4">اسید هیدروکلریک تقریباً محلول ۳۷% وزنی/وزنی اسید هیدروکلریک در آب است. مقدار، به گرم، اسید هیدروکلریک موجود در ۷۵ میلی‌لیتر اسید هیدروکلریک را به شرح زیر محاسبه کنید. [نکته - SG اسید هیدروکلریک <span class="ltr-text">1.18</span> است.]</p>
             <div class="formula-display">
-                <p><span class="ltr-text">37% w/w</span> × <span class="ltr-text">1.18</span> = <span class="ltr-text">43.7% w/v</span></p>
-                <p>(<span class="ltr-text">43.7 g/100 mL</span>) × <span class="ltr-text">75 mL</span> = <span class="ltr-text">32.8 g</span> of اسید هیدروکلریک</p>
+                <p>$$ 37\% \text{ w/w} \times 1.18 = 43.7\% \text{ w/v} $$</p>
+                <p>$$ \frac{43.7 \text{ g}}{100 \text{ mL}} \times 75 \text{ mL} = 32.8 \text{ g} $$</p>
             </div>
         </div>
 
@@ -322,45 +350,45 @@
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۱. محاسبه وزن mEq کلسیم.</h4>
             <p class="mb-4">[نکته - کلسیم MW معادل ۴۰.۰۸ و ظرفیت کلسیم ۲+ است.]</p>
             <div class="formula-display">
-                <p>Eq weight = <span class="ltr-text">40.08 g/2</span> = <span class="ltr-text">20.04 g</span></p>
-                <p>mEq weight = <span class="ltr-text">20.04 g/1000</span> = <span class="ltr-text">0.02004 g</span> = <span class="ltr-text">20.04 mg</span></p>
+                <p>$$ \text{Eq weight} = \frac{40.08 \text{ g}}{2} = 20.04 \text{ g} $$</p>
+                <p>$$ \text{mEq weight} = \frac{20.04 \text{ g}}{1000} = 0.02004 \text{ g} = 20.04 \text{ mg} $$</p>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۲. محاسبه مقدار، به mEq، پتاسیم در یک قرص ۲۵۰ میلی‌گرمی پنی‌سیلین V پتاسیم.</h4>
             <p class="mb-4">[نکته - پنی‌سیلین V پتاسیم MW معادل ۳۸۸.۴۸ گرم است، یک اتم پتاسیم در مولکول وجود دارد و ظرفیت پتاسیم ۱+ است.]</p>
             <div class="formula-display">
-                <p>Eq weight = <span class="ltr-text">388.48 g/1</span> = <span class="ltr-text">388.48 g</span></p>
-                <p>mEq weight = <span class="ltr-text">388.48 g/1000</span> = <span class="ltr-text">0.38848 g</span> = <span class="ltr-text">388.48 mg</span></p>
-                <p>(<span class="ltr-text">250 mg/tablet</span>)/(<span class="ltr-text">388.48 mg/mEq</span>) = <span class="ltr-text">0.644 mEq</span> of پتاسیم/قرص</p>
+                <p>$$ \text{Eq weight} = \frac{388.48 \text{ g}}{1} = 388.48 \text{ g} $$</p>
+                <p>$$ \text{mEq weight} = \frac{388.48 \text{ g}}{1000} = 0.38848 \text{ g} = 388.48 \text{ mg} $$</p>
+                <p>$$ \frac{250 \text{ mg/tablet}}{388.48 \text{ mg/mEq}} = 0.644 \text{ mEq} $$</p>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۳. محاسبه mEq منیزیم و سولفات در یک دوز ۲ میلی‌لیتری از تزریق سولفات منیزیم ۵۰%.</h4>
             <p class="mb-4">[نکته - سولفات منیزیم (MgSO4 · 7H2O) MW معادل ۲۴۶.۴۷ دارد و یون با بالاترین ظرفیت منیزیم ۲+ و سولفات ۲- است.]</p>
             <div class="formula-display">
-                <p>(<span class="ltr-text">50 g/100 mL</span>) × (<span class="ltr-text">2 mL/dose</span>) = <span class="ltr-text">1 g/dose</span></p>
-                <p>Eq weight = <span class="ltr-text">246.47 g/2</span> = <span class="ltr-text">123.24 g/Eq</span></p>
-                <p>(<span class="ltr-text">1g/dose</span>)/(<span class="ltr-text">123.24 g/Eq</span>) = <span class="ltr-text">0.008114 Eq</span> = <span class="ltr-text">8.114 mEq</span> of both منیزیم and سولفات per dose</p>
+                <p>$$ \frac{50 \text{ g}}{100 \text{ mL}} \times 2 \text{ mL/dose} = 1 \text{ g/dose} $$</p>
+                <p>$$ \text{Eq weight} = \frac{246.47 \text{ g}}{2} = 123.24 \text{ g/Eq} $$</p>
+                <p>$$ \frac{1 \text{ g/dose}}{123.24 \text{ g/Eq}} = 0.008114 \text{ Eq} = 8.114 \text{ mEq} $$</p>
             </div>
             <p class="mb-4">این مسئله را می‌توان با استفاده از DUA نیز حل کرد:</p>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۴. یک ویال تزریق کلرید سدیم حاوی ۳ میلی‌معادل/میلی‌لیتر کلرید سدیم است. غلظت، به صورت % وزنی/حجمی، تزریق را محاسبه کنید.</h4>
             <p class="mb-4">[نکته - کلرید سدیم MW معادل ۵۸.۴۴ است.]</p>
             <div class="formula-display">
-                <p>(<span class="ltr-text">0.1753 g/mL</span>) × <span class="ltr-text">100 mL</span> = <span class="ltr-text">17.53 g</span> in <span class="ltr-text">100 mL</span> = <span class="ltr-text">17.53% w/v</span></p>
+                <p>$$ \frac{0.1753 \text{ g/mL} \times 100 \text{ mL}}{100 \text{ mL}} = 17.53\% \text{ w/v} $$</p>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۵. وزن پتاسیم را به میلی‌مول محاسبه کنید.</h4>
             <p class="mb-4">[نکته - پتاسیم MW معادل ۳۹.۱ است.]</p>
             <p class="mb-4">وزن ۱ مول برابر با ۳۹.۱ گرم و وزن در میلی‌مول برابر است با:</p>
             <div class="formula-display">
-                <p><span class="ltr-text">39.1 g/1000</span> = <span class="ltr-text">0.0391 g</span> or <span class="ltr-text">39.1 mg</span></p>
+                <p>$$ \frac{39.1 \text{ g}}{1000} = 0.0391 \text{ g} = 39.1 \text{ mg} $$</p>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۶. میلی‌مول‌های پنی‌سیلین V پتاسیم را در یک قرص ۲۵۰ میلی‌گرمی پنی‌سیلین V پتاسیم محاسبه کنید.</h4>
             <p class="mb-4">[نکته - پنی‌سیلین V پتاسیم MW معادل ۳۸۸.۴۸ است.]</p>
             <p class="mb-4">وزن ۱ مول برابر با ۳۸۸.۴۸ گرم و وزن ۱ میلی‌مول برابر است با:</p>
             <div class="formula-display">
-                <p><span class="ltr-text">388.48 g/1000</span> = <span class="ltr-text">0.38848 g</span> or <span class="ltr-text">388.48 mg</span></p>
+                <p>$$ \frac{388.48 \text{ g}}{1000} = 0.38848 \text{ g} = 388.48 \text{ mg} $$</p>
             </div>
         </div>
 
@@ -501,11 +529,26 @@
                 </tbody>
             </table>
             <p class="mb-4">غلظت درصدی هر یک از چهار جزء را با استفاده از معادله درصد وزنی فوق به شرح زیر محاسبه کنید:</p>
-            <p class="mb-4">الف. کل وزن پماد = <span class="ltr-text">7.5 g</span> + <span class="ltr-text">7.5 g</span> + <span class="ltr-text">15 g</span> + <span class="ltr-text">30 g</span> = <span class="ltr-text">60.0 g</span></p>
-            <p class="mb-4">ب. درصد وزنی اکسید روی = (<span class="ltr-text">7.5 g</span> اکسید روی / <span class="ltr-text">60 g</span> پماد) × ۱۰۰% = <span class="ltr-text">12.5%</span></p>
-            <p class="mb-4">ج. درصد وزنی کالامین = (<span class="ltr-text">7.5 g</span> کالامین / <span class="ltr-text">60 g</span> پماد) × ۱۰۰% = <span class="ltr-text">12.5%</span></p>
-            <p class="mb-4">د. درصد وزنی نشاسته = (<span class="ltr-text">15 g</span> نشاسته / <span class="ltr-text">60 g</span> پماد) × ۱۰۰% = <span class="ltr-text">25%</span></p>
-            <p class="mb-4">هـ. درصد وزنی وازلین سفید = (<span class="ltr-text">30 g</span> وازلین سفید / <span class="ltr-text">60 g</span> پماد) × ۱۰۰% = <span class="ltr-text">50%</span></p>
+            <p class="mb-4">الف. کل وزن پماد = </p>
+            <div class="formula-display">
+                <p>$$ 7.5 \text{ g} + 7.5 \text{ g} + 15 \text{ g} + 30 \text{ g} = 60.0 \text{ g} $$</p>
+            </div>
+            <p class="mb-4">ب. درصد وزنی اکسید روی</p>
+            <div class="formula-display">
+                <p>$$ \frac{7.5 \text{ g}}{60 \text{ g}} \times 100\% = 12.5\% $$</p>
+            </div>
+            <p class="mb-4">ج. درصد وزنی کالامین</p>
+            <div class="formula-display">
+                <p>$$ \frac{7.5 \text{ g}}{60 \text{ g}} \times 100\% = 12.5\% $$</p>
+            </div>
+            <p class="mb-4">د. درصد وزنی نشاسته</p>
+            <div class="formula-display">
+                <p>$$ \frac{15 \text{ g}}{60 \text{ g}} \times 100\% = 25\% $$</p>
+            </div>
+            <p class="mb-4">هـ. درصد وزنی وازلین سفید</p>
+            <div class="formula-display">
+                <p>$$ \frac{30 \text{ g}}{60 \text{ g}} \times 100\% = 50\% $$</p>
+            </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۲. درصد حجمی</h4>
             <p class="mb-4">دستور نسخه به شرح زیر است:</p>
@@ -514,12 +557,12 @@
             <p class="mb-4">مقادیر مواد تشکیل دهنده در این نسخه را با استفاده از معادله درصد حجمی به شرح زیر محاسبه کنید:</p>
             <p class="mb-4">الف. مقدار روغن اکالیپتوس.</p>
             <div class="formula-display">
-                <p><span class="ltr-text">3% v/v</span> = (حجم روغن در میلی‌لیتر / <span class="ltr-text">30.0 mL</span>) × ۱۰۰%</p>
-                <p>حجم روغن = <span class="ltr-text">0.9 mL</span> of روغن اکالیپتوس</p>
+                <p>$$ 3\% \text{ v/v} = \frac{\text{volume of oil in mL}}{30.0 \text{ mL}} \times 100\% $$</p>
+                <p>$$ \text{Volume of oil} = 0.9 \text{ mL} $$</p>
             </div>
             <p class="mb-4">ب. مقدار روغن معدنی.</p>
             <div class="formula-display">
-                <p><span class="ltr-text">30 mL</span> - <span class="ltr-text">0.9 mL</span> = <span class="ltr-text">29.1 mL</span> of روغن معدنی</p>
+                <p>$$ 30 \text{ mL} - 0.9 \text{ mL} = 29.1 \text{ mL} $$</p>
             </div>
 
             <h3 class="text-xl font-semibold text-blue-600 mb-2">۸.۳ تبدیل بیان غلظت</h3>
@@ -531,42 +574,41 @@
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۱. تبدیل ۱۰% وزنی/حجمی کلرید کلسیم (CaCl₂ · ۲H₂O) به مولالیته (m).</h4>
             <p class="mb-4">[نکته - کلرید کلسیم MW معادل ۱۴۷.۰۱ گرم است؛ محلول ۱۰% وزنی/حجمی چگالی ۱.۰۸۷ گرم بر میلی‌لیتر دارد.]</p>
             <div class="formula-display">
-                <p><span class="ltr-text">10% w/v</span> = <span class="ltr-text">10 g</span> of کلرید کلسیم / <span class="ltr-text">100 mL</span> of محلول</p>
-                <p>با استفاده از چگالی محلول:</p>
-                <p><span class="ltr-text">100 mL</span> of محلول × <span class="ltr-text">1.087 g/mL</span> = <span class="ltr-text">108.7 g</span> of محلول</p>
-                <p><span class="ltr-text">108.7 g</span> of محلول - <span class="ltr-text">10 g</span> of کلرید کلسیم = <span class="ltr-text">98.7 g</span> of آب = <span class="ltr-text">0.0987 kg</span> of آب</p>
-                <p><span class="ltr-text">10 g</span> of کلرید کلسیم / (<span class="ltr-text">147.01 g</span> of کلرید کلسیم / مول کلرید کلسیم) = <span class="ltr-text">0.068 mol</span> of کلرید کلسیم</p>
-                <p><span class="ltr-text">0.068 mol</span> of کلرید کلسیم / <span class="ltr-text">0.0987 kg</span> of آب = <span class="ltr-text">0.689 m</span></p>
+                <p>$$ 10\% \text{ w/v} = \frac{10 \text{ g}}{100 \text{ mL}} $$</p>
+                <p>$$ 100 \text{ mL} \times 1.087 \text{ g/mL} = 108.7 \text{ g} $$</p>
+                <p>$$ 108.7 \text{ g} - 10 \text{ g} = 98.7 \text{ g water} = 0.0987 \text{ kg} $$</p>
+                <p>$$ \frac{10 \text{ g}}{147.01 \text{ g/mol}} = 0.068 \text{ mol} $$</p>
+                <p>$$ \frac{0.068 \text{ mol}}{0.0987 \text{ kg}} = 0.689 \text{ m} $$</p>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۲. تبدیل ۵۰% وزنی/حجمی سولفات منیزیم (MgSO₄ · ۷H₂O) به مولاریته (M).</h4>
             <p class="mb-4">[نکته - سولفات منیزیم MW معادل ۲۴۶.۴۷ گرم است.]</p>
             <div class="formula-display">
-                <p>(<span class="ltr-text">50 g</span> / <span class="ltr-text">100 mL</span>) × (<span class="ltr-text">1 mol</span> / <span class="ltr-text">246.47 g</span>) × (<span class="ltr-text">1000 mL</span> / <span class="ltr-text">1 L</span>) = <span class="ltr-text">2.029 M</span></p>
+                <p>$$ \left(\frac{50 \text{ g}}{100 \text{ mL}}\right) \times \left(\frac{1 \text{ mol}}{246.47 \text{ g}}\right) \times \left(\frac{1000 \text{ mL}}{1 \text{ L}}\right) = 2.029 \text{ M} $$</p>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۳. تبدیل ۱۰% وزنی/حجمی کلرید کلسیم (CaCl₂ · ۲H₂O) به نرمالیته (N).</h4>
             <div class="formula-display">
-                <p>(<span class="ltr-text">10 g</span> / <span class="ltr-text">100 mL</span>) × (<span class="ltr-text">2 Eq/mol</span>) × (<span class="ltr-text">1 mol</span> / <span class="ltr-text">147.01 g</span>) × (<span class="ltr-text">1000 mL</span> / <span class="ltr-text">1 L</span>) = <span class="ltr-text">1.36 N</span></p>
+                <p>$$ \left(\frac{10 \text{ g}}{100 \text{ mL}}\right) \times \left(\frac{2 \text{ Eq/mol}}{1}\right) \times \left(\frac{1 \text{ mol}}{147.01 \text{ g}}\right) \times \left(\frac{1000 \text{ mL}}{1 \text{ L}}\right) = 1.36 \text{ N} $$</p>
             </div>
             <p class="text-sm italic">*۲ Eq/mol از ظرفیت ۲+ کلسیم مشتق شده است</p>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۴. تبدیل ۱۰% وزنی/حجمی کلرید کلسیم (CaCl₂ · ۲H₂O) به میلی‌معادل/میلی‌لیتر.</h4>
             <div class="formula-display">
-                <p>(<span class="ltr-text">10 g</span> / <span class="ltr-text">100 mL</span>) × (<span class="ltr-text">2000 mEq</span> / <span class="ltr-text">1 mol</span>) × (<span class="ltr-text">1 mol</span> / <span class="ltr-text">147.01 g</span>) = <span class="ltr-text">136 mEq/L</span></p>
-                <p><span class="ltr-text">136 mEq/L</span> × (<span class="ltr-text">1 L</span> / <span class="ltr-text">1000 mL</span>) = <span class="ltr-text">0.136 mEq/mL</span></p>
+                <p>$$ \left(\frac{10 \text{ g}}{100 \text{ mL}}\right) \times \left(\frac{2000 \text{ mEq}}{1 \text{ mol}}\right) \times \left(\frac{1 \text{ mol}}{147.01 \text{ g}}\right) = 136 \text{ mEq/L} $$</p>
+                <p>$$ 136 \text{ mEq/L} \times \left(\frac{1 \text{ L}}{1000 \text{ mL}}\right) = 0.136 \text{ mEq/mL} $$</p>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۵. تبدیل ۰.۱% وزنی/حجمی کلرید کلسیم (CaCl₂ · ۲H₂O) به ppm.</h4>
             <div class="formula-display">
-                <p>(<span class="ltr-text">0.1 g/100 mL</span>) × (<span class="ltr-text">1</span> × <span class="ltr-text">10</span>⁶ ppm) = <span class="ltr-text">1000 ppm</span></p>
+                <p>$$ \left(\frac{0.1 \text{ g}}{100 \text{ mL}}\right) \times (1 \times 10^6 \text{ ppm}) = 1000 \text{ ppm} $$</p>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۶. تبدیل ۳۳% وزنی/حجمی کلرید پتاسیم (KCl) به نسبت قدرت ۱:R.</h4>
             <div class="formula-display">
-                <p>(<span class="ltr-text">1/R</span>) = (<span class="ltr-text">33 g/100 mL</span>)</p>
-                <p>R = <span class="ltr-text">3.03</span></p>
-                <p><span class="ltr-text">1:R</span> = <span class="ltr-text">1:3</span></p>
+                <p>$$ \frac{1}{R} = \frac{33 \text{ g}}{100 \text{ mL}} $$</p>
+                <p>$$ R = 3.03 $$</p>
+                <p>$$ 1:R = 1:3 $$</p>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۸.۳.۲ تبدیل محلول مایع در مایع</h4>
@@ -665,10 +707,10 @@
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۱. رقیق‌سازی نیمه‌جامد</h4>
             <p class="mb-4">کمیت (Q2)، به گرم، از حلال که باید به ۶۰ گرم پماد ۱۰% وزنی/وزنی اضافه شود تا پماد ۵% وزنی/وزنی تهیه شود را محاسبه کنید.</p>
             <div class="formula-display">
-                <p>(<span class="ltr-text">Q1</span>) = <span class="ltr-text">60 g</span>, (<span class="ltr-text">C1</span>) = <span class="ltr-text">10% w/w</span>, and (<span class="ltr-text">C2</span>) = <span class="ltr-text">5% w/w</span></p>
-                <p><span class="ltr-text">60 g</span> × <span class="ltr-text">10% w/w</span> = (<span class="ltr-text">Q2</span>) × <span class="ltr-text">5% w/w</span></p>
-                <p>(<span class="ltr-text">Q2</span>) = <span class="ltr-text">120 g</span></p>
-                <p><span class="ltr-text">120 g</span> - <span class="ltr-text">60 g</span> = <span class="ltr-text">60 g</span> of حلال برای اضافه شدن</p>
+                <p>$$ Q_1 \times C_1 = Q_2 \times C_2 $$</p>
+                <p>$$ 60 \text{ g} \times 10\% \text{ w/w} = Q_2 \times 5\% \text{ w/w} $$</p>
+                <p>$$ Q_2 = 120 \text{ g} $$</p>
+                <p>$$ 120 \text{ g} - 60 \text{ g} = 60 \text{ g solvent to add} $$</p>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۲. رقیق‌سازی جامد</h4>
@@ -676,26 +718,28 @@
             <p class="mb-4">میلی‌گرم را به گرم تبدیل کنید: ۱ میلی‌گرم دارو = ۰.۰۰۱ گرم دارو</p>
             <p class="mb-4">۱۰ گرم مخلوط باید حاوی ۰.۰۰۱ گرم دارو باشد.</p>
             <div class="formula-display">
-                <p>(<span class="ltr-text">Q1</span>) = <span class="ltr-text">10 g</span>, (<span class="ltr-text">C1</span>) = (<span class="ltr-text">1 in 100</span>), and (<span class="ltr-text">C2</span>) = (<span class="ltr-text">0.001 in 10</span>)</p>
-                <p><span class="ltr-text">10 g</span> × (<span class="ltr-text">1/100</span>) = (<span class="ltr-text">Q2</span>) × (<span class="ltr-text">0.001/10</span>)</p>
-                <p>(<span class="ltr-text">Q2</span>) = <span class="ltr-text">1000 g</span></p>
+                <p>$$ Q_1 = 10 \text{ g}, \quad C_1 = \frac{1}{100}, \quad C_2 = \frac{0.001}{10} $$</p>
+                <p>$$ 10 \text{ g} \times \frac{1}{100} = Q_2 \times \frac{0.001}{10} $$</p>
+                <p>$$ Q_2 = 1000 \text{ g} $$</p>
             </div>
             <p class="mb-4">از آنجایی که مخلوط نهایی ۱۰۰۰ گرم حاوی ۱۰ گرم از ساییدگی است، ۹۹۰ گرم (یا ۱۰۰۰ گرم - ۱۰ گرم) حلال برای تهیه مخلوط با غلظت ۰.۰۰۱ گرم دارو در هر ۱۰ گرم مورد نیاز است.</p>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۳. رقیق‌سازی مایع</h4>
             <p class="mb-4">غلظت درصدی (C2) محلول حاصل از رقیق کردن ۴۰۰ میلی‌لیتر محلول ۵.۰% وزنی/حجمی به ۸۰۰ میلی‌لیتر را محاسبه کنید.</p>
             <div class="formula-display">
-                <p>(<span class="ltr-text">Q1</span>) = <span class="ltr-text">400 mL</span>, (<span class="ltr-text">C1</span>) = <span class="ltr-text">5.0% w/v</span>, and (<span class="ltr-text">Q2</span>) = <span class="ltr-text">800 mL</span></p>
-                <p><span class="ltr-text">400 mL</span> × <span class="ltr-text">5% w/v</span> = <span class="ltr-text">800 mL</span> × (<span class="ltr-text">C2</span>)</p>
-                <p>(<span class="ltr-text">C2</span>) = <span class="ltr-text">2.5% w/v</span></p>
+                <p>$$ Q_1 = 400 \text{ mL}, \quad C_1 = 5.0\% \text{ w/v}, \quad Q_2 = 800 \text{ mL} $$</p>
+                <p>$$ 400 \text{ mL} \times 5\% \text{ w/v} = 800 \text{ mL} \times C_2 $$</p>
+                <p>$$ C_2 = 2.5\% \text{ w/v} $$</p>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۴. تغلیظ مایع</h4>
             <p class="mb-4">مقدار اضافی، به گرم، کدئین فسفات که باید به ۱۸۰ میلی‌لیتر شربت استامینوفن با کدئین ۱۲ میلی‌گرم در ۵ میلی‌لیتر اضافه شود تا غلظت نهایی ۳۰ میلی‌گرم در ۵ میلی‌لیتر کدئین فسفات حاصل شود را محاسبه کنید.</p>
             <p class="mb-4">مقدار برای اضافه کردن = کل مقدار مورد نیاز - مقدار موجود</p>
-            <p class="mb-4">کل مقدار مورد نیاز: (<span class="ltr-text">30 mg/5 mL</span>) × <span class="ltr-text">180 mL</span> = <span class="ltr-text">1080 mg</span> of کدئین فسفات</p>
-            <p class="mb-4">مقدار موجود = (<span class="ltr-text">12 mg</span> کدئین / <span class="ltr-text">5 mL</span>) × <span class="ltr-text">180 mL</span> = <span class="ltr-text">432 mg</span> کدئین فسفات</p>
-            <p class="mb-4">مقدار برای اضافه کردن: <span class="ltr-text">1080 mg</span> - <span class="ltr-text">432 mg</span> = <span class="ltr-text">648 mg</span> of کدئین فسفات</p>
+            <div class="formula-display">
+                <p>\text{Total amount needed: } $$ \left(\frac{30 \text{ mg}}{5 \text{ mL}}\right) \times 180 \text{ mL} = 1080 \text{ mg} $$</p>
+                <p>\text{Amount present: } $$ \left(\frac{12 \text{ mg}}{5 \text{ mL}}\right) \times 180 \text{ mL} = 432 \text{ mg} $$</p>
+                <p>\text{Amount to add: } $$ 1080 \text{ mg} - 432 \text{ mg} = 648 \text{ mg} $$</p>
+            </div>
         </div>
 
         <div class="card mt-6">
@@ -742,7 +786,7 @@
             <p class="mb-4">الف. در این دستور نسخه، الکل ۱۵% به این معنی است که آماده‌سازی حاوی ۱۵% حجمی/حجمی الکل (C₂H₅OH) است.</p>
             <p class="mb-4">ب. مقدار الکل (C₂H₅OH) مورد نیاز برای ۶۰ میلی‌لیتر آماده‌سازی را محاسبه کنید:</p>
             <div class="formula-display">
-                <p>x = <span class="ltr-text">9 mL</span> of الکل</p>
+                <p>$$ x = \frac{15\% \times 60 \text{ mL}}{100\%} = 9 \text{ mL} $$</p>
             </div>
             <p class="mb-4">ج. از آنجایی که محتوای الکل یا اتانول برای برچسب‌گذاری دارو مورد نیاز است، محتوای این آماده‌سازی به عنوان الکل ۱۵% یا اتانول ۱۴.۳% برچسب‌گذاری می‌شود، که در آن ۱۴.۳% از (۱۵ میلی‌لیتر × ۰.۹۵۴۵) به دست می‌آید که در آن ۰.۹۵۴۵ میانگین کسر حجمی اتانول در الکل USP است.</p>
             <p class="mb-4">د. % v/v محتوای الکل را برای برچسب‌گذاری تعیین کنید. از آنجایی که برچسب‌گذاری الکل به صورت % v/v الکل (C₂H₅OH) است، محتوای الکل این آماده‌سازی به عنوان الکل ۱۵% برچسب‌گذاری می‌شود.</p>
@@ -780,7 +824,10 @@
                 </tbody>
             </table>
             <p class="mb-4">الف. در این فرمولاسیون، الکل ۱۵ میلی‌لیتر به این معنی است که آماده‌سازی حاوی ۱۵ میلی‌لیتر الکل USP است.</p>
-            <p class="mb-4">ب. در ۱۰۰ میلی‌لیتر آماده‌سازی، % v/v اتانول را محاسبه کنید: (<span class="ltr-text">15 mL</span> × ۰.۹۵۴۵) = <span class="ltr-text">14.3 mL</span> اتانول، که در آن ۰.۹۵۴۵ میانگین کسر حجمی اتانول در الکل USP است.</p>
+            <p class="mb-4">ب. در ۱۰۰ میلی‌لیتر آماده‌سازی، % v/v اتانول را محاسبه کنید:</p>
+            <div class="formula-display">
+                <p>$$ 15 \text{ mL} \times 0.9545 = 14.3 \text{ mL ethanol} $$</p>
+            </div>
             <p class="mb-4">ج. از آنجایی که محتوای الکل یا اتانول برای برچسب‌گذاری دارو مورد نیاز است، محتوای این آماده‌سازی به عنوان الکل ۱۵% یا اتانول ۱۴.۳% برچسب‌گذاری می‌شود.</p>
 
             <h2 class="text-2xl font-semibold text-blue-600 mb-4 mt-6">۱۰. روش‌های آلِگِیشن متناوب و جبری برای ترکیب نقاط قوت مختلف همان ماده دارویی موثره</h2>
@@ -800,11 +847,11 @@
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۱. مقدار پماد حاوی غلظت داروی ۱۲% و مقدار پماد حاوی غلظت داروی ۱۶% را که باید برای تهیه ۱ کیلوگرم آماده‌سازی حاوی غلظت داروی ۱۲.۵% استفاده شود، تعیین کنید.</h4>
             <div class="formula-display">
-                <p>در مجموع ۴ قسمت از آماده‌سازی ۱۲.۵%، ۳.۵ قسمت پماد ۱۲% و ۰.۵ قسمت پماد ۱۶% مورد نیاز است.</p>
-                <p>۴ قسمت معادل ۱ کیلوگرم یا ۱۰۰۰ گرم است.</p>
-                <p>۱ قسمت معادل ۲۵۰ گرم است.</p>
-                <p>۳.۵ قسمت معادل ۳.۵ × ۲۵۰ گرم یا ۸۷۵ گرم پماد ۱۲% است.</p>
-                <p>۰.۵ قسمت معادل ۰.۵ × ۲۵۰ گرم یا ۱۲۵ گرم پماد ۱۶% است.</p>
+                <p>\text{Total parts: 4} \quad \text{(need 3.5 parts of 12% + 0.5 parts of 16%)} </p>
+                <p>$$ 4 \text{ parts} = 1000 \text{ g} $$</p>
+                <p>$$ 1 \text{ part} = 250 \text{ g} $$</p>
+                <p>$$ 3.5 \text{ parts} \times 250 \text{ g} = 875 \text{ g of 12\% ointment} $$</p>
+                <p>$$ 0.5 \text{ parts} \times 250 \text{ g} = 125 \text{ g of 16\% ointment} $$</p>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۲. حجم، به میلی‌لیتر، دکستروز ۲۰% در آب و دکستروز ۵۰% در آب مورد نیاز برای تهیه ۷۵۰ میلی‌لیتر دکستروز ۳۵% در آب را تعیین کنید.</h4>
@@ -866,7 +913,7 @@
             </ol>
             <p class="mb-4">محاسبات عمومی را می‌توان نشان داد:</p>
             <div class="formula-display">
-                <p>A/B = C/D</p>
+                <p>$$ \frac{A}{B} = \frac{C}{D} $$</p>
                 <p>A = مقدار داروی مورد نظر</p>
                 <p>B = مقدار داروی اندازه‌گیری شده</p>
                 <p>C = مقدار دارو در جزء</p>
@@ -1017,12 +1064,13 @@
             <h3 class="text-xl font-semibold text-blue-600 mb-2">۱۵.۱ محاسبات pH</h3>
             <p class="mb-4">به ضمیمه ۱ برای تعاریف لگاریتمی و کاربردهای آن مراجعه کنید.</p>
             <div class="formula-display">
-                <p>pH = −log [H₃O⁺], and pKa = −log ([H₃O⁺][A⁻])/[HA]</p>
+                <p>$$ \text{pH} = -\log[\text{H}_3\text{O}^+] $$</p>
+                <p>$$ \text{pKa} = -\log\frac{[\text{H}_3\text{O}^+][\text{A}^-]}{[\text{HA}]} $$</p>
             </div>
             <p class="mb-4">که در آن [H₃O⁺] غلظت یون هیدرونیوم در محلول آبی، [A⁻] شکل یونی اسید مربوطه، و Ka ثابت یونیزاسیون یک اسید تک پروتونه یا یک پروتون خاص از یک اسید چند پروتونه در محلول آبی است. [H⁺] = آنتی‌لگاریتم (−pH) یا ۱۰⁻pH؛ و Ka = آنتی‌لگاریتم (−pKa) یا ۱۰⁻pKa.</p>
             <p class="mb-4">pH محلول آبی حاوی یک اسید ضعیف را می‌توان با استفاده از معادله هندرسون-هاسلباخ محاسبه کرد:</p>
             <div class="formula-display">
-                <p>pH = pKa + log [(base form)/(acid form)]</p>
+                <p>$$ \text{pH} = \text{pKa} + \log\frac{[\text{base form}]}{[\text{acid form}]} $$</p>
             </div>
             <p class="mb-4">نماد معادله بافر (↔) تعادل بین اشکال مزدوج باز و اسید یا جفت‌های همان مولکول را نشان می‌دهد. این به دلیل تغییرات کوچک در نسبت غلظت‌های اشکال مزدوج، که باعث تغییر لگاریتمی کوچکتری در pH می‌شود، معادله بافر نامیده می‌شود. شکل نمک می‌تواند بسته به ساختار، اسید یا باز باشد؛ بنابراین، شکل مزدوج آن به ترتیب باز یا اسید است.</p>
             <p class="mb-4">مثال ۱:</p>
@@ -1058,7 +1106,7 @@
             <p class="mb-4">مثال - ظرفیت بافر</p>
             <p class="mb-4">افزودن ۰.۰۱ گرم معادل هیدروکسید سدیم به ۰.۲۵ لیتر محلول بافر، تغییر pH ۰.۵۰ را ایجاد کرده است. ظرفیت بافر محلول بافر به شرح زیر محاسبه می‌شود:</p>
             <div class="formula-display">
-                <p>(<span class="ltr-text">0.01 Eq/0.25 L</span>) / <span class="ltr-text">0.50</span> تغییر pH = <span class="ltr-text">0.08</span>(Eq/L)/(تغییر pH)</p>
+                <p>$$ \text{Buffer Capacity} = \frac{0.01 \text{ Eq}/0.25 \text{ L}}{0.50 \text{ pH change}} = 0.08 \text{ Eq/L per pH unit} $$</p>
             </div>
         </div>
 
@@ -1066,8 +1114,8 @@
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">۱۶. دماها</h2>
             <p class="mb-4">رابطه بین مقیاس دمای سلسیوس یا سانتی‌گراد (°C) و فارنهایت (°F) با معادلات زیر بیان می‌شود:</p>
             <div class="formula-display">
-                <p>°C = (°F − <span class="ltr-text">32</span>) × (<span class="ltr-text">5/9</span>)</p>
-                <p>°F = (°C × <span class="ltr-text">1.8</span>) + <span class="ltr-text">32</span></p>
+                <p>$$ \degree\text{C} = (\degree\text{F} - 32) \times \frac{5}{9} $$</p>
+                <p>$$ \degree\text{F} = (\degree\text{C} \times 1.8) + 32 $$</p>
             </div>
             <h3 class="text-xl font-semibold text-blue-600 mb-2">۱۶.۱ دماهای USP</h3>
             <p class="mb-4">طبق اطلاعیه‌های عمومی <span class="ltr-text">۸.۱۸۰</span> دماها، دماها بر حسب درجه سلسیوس (سانتی‌گراد) بیان می‌شوند و تمام اندازه‌گیری‌های دیگر در دمای ۲۵ درجه سانتی‌گراد انجام می‌شوند مگر اینکه خلاف آن ذکر شده باشد. برای اهداف آموزشی، °F در مثال‌ها نشان داده شده است.</p>
@@ -1076,16 +1124,16 @@
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۱. تبدیل ۷۷°F به درجه سلسیوس.</h4>
             <div class="formula-display">
-                <p>°C = (<span class="ltr-text">77°F</span> − <span class="ltr-text">32</span>) × (<span class="ltr-text">5/9</span>) = <span class="ltr-text">25°C</span></p>
+                <p>$$ \degree\text{C} = (77\degree\text{F} - 32) \times \frac{5}{9} = 25\degree\text{C} $$</p>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۲. تبدیل ۳۰°C به درجه فارنهایت.</h4>
             <div class="formula-display">
-                <p>°F = (<span class="ltr-text">30°C</span> × <span class="ltr-text">1.8</span>) + <span class="ltr-text">32</span> = <span class="ltr-text">86°F</span></p>
+                <p>$$ \degree\text{F} = (30\degree\text{C} \times 1.8) + 32 = 86\degree\text{F} $$</p>
             </div>
             <p class="mb-4">رابطه بین مقیاس‌های کلوین یا مطلق (K) و سلسیوس (°C) با معادله زیر بیان می‌شود:</p>
             <div class="formula-display">
-                <p>K = °C + <span class="ltr-text">273.15</span></p>
+                <p>$$ \text{K} = \degree\text{C} + 273.15 $$</p>
             </div>
         </div>
 
@@ -1106,14 +1154,14 @@
             </div>
             <p class="mb-4">۲. حداکثر بار اندوتوکسین بالقوه در ساعت را برای این آماده‌سازی محاسبه کنید. [نکته - مونوگراف‌های USP محدودیت‌های بالایی از ۱۴.۲۹ واحد اندوتوکسین USP (EU)/میلی‌گرم مورفین سولفات در تزریق‌های مورد استفاده برای مسیر داخل نخاعی، و ۰.۵ EU/میلی‌لیتر برای تزریق‌های حاوی ۰.۵%–۰.۹% سدیم کلرید را مشخص می‌کنند.]</p>
             <div class="formula-display">
-                <p><span class="ltr-text">7.2 mg</span> of تزریق سولفات مورفین × <span class="ltr-text">14.29 EU/mg</span> of مورفین سولفات = <span class="ltr-text">102.89 EU</span> از سولفات مورفین</p>
-                <p><span class="ltr-text">47.28 mL</span> تزریق کلرید سدیم × <span class="ltr-text">0.5 EU/mL</span> = <span class="ltr-text">23.64 EU</span> از کلرید سدیم ۰.۹%</p>
-                <p>بار اندوتوکسین = <span class="ltr-text">102.89 EU</span> + <span class="ltr-text">23.64 EU</span> = <span class="ltr-text">126.53 EU</span></p>
-                <p><span class="ltr-text">126.53 EU</span> / <span class="ltr-text">24 hour</span> = <span class="ltr-text">5.27 EU/hour</span></p>
+                <p>$$ 7.2 \text{ mg} \times 14.29 \text{ EU/mg} = 102.89 \text{ EU from morphine sulfate} $$</p>
+                <p>$$ 47.28 \text{ mL} \times 0.5 \text{ EU/mL} = 23.64 \text{ EU from sodium chloride} $$</p>
+                <p>$$ \text{Endotoxin burden} = 102.89 + 23.64 = 126.53 \text{ EU} $$</p>
+                <p>$$ \frac{126.53 \text{ EU}}{24 \text{ hour}} = 5.27 \text{ EU/hour} $$</p>
             </div>
             <p class="mb-4">۳. بررسی کنید که آیا بار اندوتوکسین در مرحله ۲ از حد مجاز USP برای این بیمار فراتر می‌رود یا خیر. [نکته - حداکثر بار اندوتوکسین با تجویز داخل نخاعی ۰.۲ EU/kg/hour است (به <span class="ltr-text">۸۵</span> مراجعه کنید).]</p>
             <div class="formula-display">
-                <p>حداکثر بار اندوتوکسین = (<span class="ltr-text">0.2 EU/kg/hour</span>) × <span class="ltr-text">71.8 kg</span> بیمار = <span class="ltr-text">14.36 EU/hour</span></p>
+                <p>$$ \text{Maximum Endotoxin Burden} = (0.2 \text{ EU/kg/hour}) \times 71.8 \text{ kg} = 14.36 \text{ EU/hour} $$</p>
             </div>
             <p class="mb-4">بار اندوتوکسین ۵.۲۷ EU/hour از حد مجاز ۱۴.۳۶ EU/hour فراتر نمی‌رود.</p>
         </div>
@@ -1169,13 +1217,13 @@
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۳. با استفاده از معادله رگرسیون خطی قبلی، C سوسپانسیون دارو را در دمای ۲۵ درجه سانتی‌گراد در t = ۱۲ روز محاسبه کنید:</h4>
             <div class="formula-display">
-                <p>C = <span class="ltr-text">49.84</span> - (<span class="ltr-text">0.292</span> × <span class="ltr-text">12</span>) = <span class="ltr-text">46.34 mg/mL</span></p>
+                <p>$$ C = 49.84 - (0.292 \times 12) = 46.34 \text{ mg/mL} $$</p>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۴. t را زمانی که C = ۴۵ میلی‌گرم/میلی‌لیتر است، محاسبه کنید:</h4>
             <div class="formula-display">
-                <p><span class="ltr-text">45</span> = <span class="ltr-text">49.84</span> - ۰.۲<span class="ltr-text">92</span>t</p>
-                <p>t = (<span class="ltr-text">45</span> - <span class="ltr-text">49.84</span>) / −۰.۲<span class="ltr-text">92</span> = <span class="ltr-text">16.6 days</span></p>
+                <p>$$ 45 = 49.84 - 0.292t $$</p>
+                <p>$$ t = \frac{45 - 49.84}{-0.292} = 16.6 \text{ days} $$</p>
             </div>
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۱۸.۲.۲ مقادیر مرتبه صفر محاسبه شده از یک معادله نرخ</h4>
             <p class="mb-4">موارد زیر مثال‌هایی از تاریخ‌های انقضا محاسبه شده از یک معادله نرخ است که از نتایج سنجش غلظت و داده‌های زمان اصلی مشتق شده است.</p>
@@ -1184,14 +1232,14 @@
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۱. تاریخ انقضای t<span class="ltr-text">80</span> یک کرم دارویی در دمای ۲۵ درجه سانتی‌گراد را با استفاده از معادله C = <span class="ltr-text">0.05</span> - ۰.۰۰۰<span class="ltr-text">3</span>t، که در آن واحد C % وزنی/وزنی و واحد t ماه است، محاسبه کنید. در t<span class="ltr-text">80</span>، C = ۰.۸C₀.</p>
             <div class="formula-display">
-                <p><span class="ltr-text">0.8</span> × <span class="ltr-text">0.05</span> = <span class="ltr-text">0.05</span> - ۰.۰۰۰<span class="ltr-text">3</span>(t<span class="ltr-text">80</span>)</p>
-                <p>t<span class="ltr-text">80</span> = <span class="ltr-text">33.3 months</span></p>
+                <p>$$ 0.8 \times 0.05 = 0.05 - 0.0003(t_{80}) $$</p>
+                <p>$$ t_{80} = 33.3 \text{ months} $$</p>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۲. تاریخ انقضای t<span class="ltr-text">80</span> کرم دارویی در مثال ۱ را محاسبه کنید، اما برای C₀ برابر با ۰.۱:</p>
             <div class="formula-display">
-                <p><span class="ltr-text">0.8</span> × <span class="ltr-text">0.1</span> = <span class="ltr-text">0.1</span> - ۰.۰۰۰<span class="ltr-text">3</span>(t<span class="ltr-text">80</span>)</p>
-                <p>t<span class="ltr-text">80</span> = <span class="ltr-text">66.7 months</span></p>
+                <p>$$ 0.8 \times 0.1 = 0.1 - 0.0003(t_{80}) $$</p>
+                <p>$$ t_{80} = 66.7 \text{ months} $$</p>
             </div>
             <h3 class="text-xl font-semibold text-blue-600 mb-2">۱۸.۳ محاسبات نرخ مرتبه اول</h3>
             <p class="mb-4">معادله نرخ ایزوترمال مرتبه اول برای یک فرمولاسیون خاص در فرم نمایی C = C₀e⁻ᵏᵗ است، و در فرم خطی ln(C) = ln(C₀)−kt است، که در آن C غلظت API در هر زمان، C₀ غلظت در مبدأ یا زمان صفر، k ثابت نرخ واکنش، و t هر زمان پس از مبدأ یا صفر است. نرخ ثابت متغیر، dC/dt، و ثابت نرخ، k، برای فرآیندهای مرتبه اول یکسان نیستند. واحدهای نرخ غلظت/زمان، به عنوان مثال، میلی‌گرم/میلی‌لیتر/ساعت، اما واحد ثابت نرخ زمان معکوس، زمان⁻¹، به عنوان مثال، ساعت⁻¹ است.</p>
@@ -1232,9 +1280,9 @@
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۲. از معادله رگرسیون خطی، زمان رسیدن به ۹۵% غلظت اولیه را محاسبه کنید، t<span class="ltr-text">95</span>، زمانی که C = ۰.۹۵C₀، که تاریخ انقضای از پیش تعیین شده است:</h4>
             <div class="formula-display">
-                <p>ln(C₀) = <span class="ltr-text">2.522</span>؛ بنابراین، C₀ = e<span class="ltr-text">2.522</span> = <span class="ltr-text">12.45 mg/mL</span></p>
-                <p>ln(<span class="ltr-text">0.95</span> × <span class="ltr-text">12.45</span>) = <span class="ltr-text">2.522</span> − ۰.۰۰<span class="ltr-text">65</span>(t<span class="ltr-text">95</span>)</p>
-                <p>t<span class="ltr-text">95</span> = (<span class="ltr-text">2.470</span> - <span class="ltr-text">2.522</span>) / −۰.۰۰<span class="ltr-text">65</span> = <span class="ltr-text">8 hours</span></p>
+                <p>$$ \ln(C_0) = 2.522 \text{; therefore, } C_0 = e^{2.522} = 12.45 \text{ mg/mL} $$</p>
+                <p>$$ \ln(0.95 \times 12.45) = 2.522 - 0.0065(t_{95}) $$</p>
+                <p>$$ t_{95} = \frac{2.470 - 2.522}{-0.0065} = 8 \text{ hours} $$</p>
             </div>
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۱۸.۳.۲ مقادیر مرتبه اول محاسبه شده از یک معادله خطی</h4>
             <p class="mb-4">موارد زیر مثال‌هایی از تاریخ انقضا، غلظت، و زمان محاسبه شده برای همان محلول دارو در دمای ۲۲ درجه سانتی‌گراد از معادله نرخ، ln(C) = <span class="ltr-text">4.382</span> − ۰.۰<span class="ltr-text">76</span>t، که در آن واحدهای C میکروگرم/میلی‌لیتر و واحد t روز است، که از نتایج سنجش غلظت و داده‌های زمان اصلی مشتق شده است.</p>
@@ -1243,21 +1291,21 @@
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۱. تاریخ انقضای t<span class="ltr-text">90</span> را محاسبه کنید:</h4>
             <div class="formula-display">
-                <p>ln(C₀) = <span class="ltr-text">4.382</span>؛ بنابراین، C₀ = e<span class="ltr-text">4.382</span> = <span class="ltr-text">80</span></p>
-                <p>ln(<span class="ltr-text">0.9</span> × <span class="ltr-text">80</span>) = <span class="ltr-text">4.382</span> - ۰.۰<span class="ltr-text">76</span>(t<span class="ltr-text">90</span>)</p>
-                <p>t<span class="ltr-text">90</span> = (<span class="ltr-text">4.277</span> - <span class="ltr-text">4.382</span>) / −۰.۰<span class="ltr-text">76</span> = <span class="ltr-text">1.4 days</span></p>
+                <p>$$ \ln(C_0) = 4.382 \text{; therefore, } C_0 = e^{4.382} = 80 $$</p>
+                <p>$$ \ln(0.9 \times 80) = 4.382 - 0.076(t_{90}) $$</p>
+                <p>$$ t_{90} = \frac{4.277 - 4.382}{-0.076} = 1.4 \text{ days} $$</p>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۲. زمان رسیدن به C = ۷<span class="ltr-text">5</span> میکروگرم/میلی‌لیتر را محاسبه کنید:</h4>
             <div class="formula-display">
-                <p>ln(<span class="ltr-text">75</span>) = <span class="ltr-text">4.382</span> - ۰.۰<span class="ltr-text">76</span>t</p>
-                <p>t = (<span class="ltr-text">4.317</span> - <span class="ltr-text">4.382</span>) / −۰.۰<span class="ltr-text">76</span> = <span class="ltr-text">0.86 day</span></p>
+                <p>$$ \ln(75) = 4.382 - 0.076t $$</p>
+                <p>$$ t = \frac{4.317 - 4.382}{-0.076} = 0.86 \text{ day} $$</p>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۳. بررسی کنید که آیا C = ۷۰ میکروگرم/میلی‌لیتر قبل یا بعد از t<span class="ltr-text">90</span> رخ می‌دهد:</h4>
             <div class="formula-display">
-                <p>ln(<span class="ltr-text">70</span>) = <span class="ltr-text">4.382</span> - ۰.۰<span class="ltr-text">76</span>t</p>
-                <p>t = (<span class="ltr-text">4.248</span> - <span class="ltr-text">4.382</span>) / −۰.۰<span class="ltr-text">76</span> = <span class="ltr-text">1.8 days</span></p>
+                <p>$$ \ln(70) = 4.382 - 0.076t $$</p>
+                <p>$$ t = \frac{4.248 - 4.382}{-0.076} = 1.8 \text{ days} $$</p>
             </div>
             <p class="mb-4">C = ۷۰ میکروگرم/میلی‌لیتر در ۱.۸ روز، پس از t<span class="ltr-text">90</span> که برابر با ۱.۴ روز است، رخ می‌دهد.</p>
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۱۸.۳.۳ تاریخ انقضای مرتبه اول محاسبه شده از دو مقدار غلظت و زمان</h4>
@@ -1267,23 +1315,23 @@
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۱. در دمای ۲۵ درجه سانتی‌گراد، غلظت یک آنتی‌بیوتیک در محلول پس از ۳ ساعت ۸۹ میلی‌گرم/میلی‌لیتر و پس از ۸ ساعت ۷۴ میلی‌گرم/میلی‌لیتر بود. غلظت اولیه در زمان صفر را محاسبه کنید:</p>
             <div class="formula-display">
-                <p>k = ln(<span class="ltr-text">89/74</span>) / (<span class="ltr-text">8</span> - <span class="ltr-text">3</span>) = ۰.۰<span class="ltr-text">37</span> hour⁻¹</p>
-                <p>ln(<span class="ltr-text">89</span>) = ln(C₀) − (<span class="ltr-text">0.037 hour⁻¹</span> × <span class="ltr-text">3 hour</span>)</p>
-                <p>ln(C₀) = <span class="ltr-text">4.489</span> + ۰.۱<span class="ltr-text">11</span> = <span class="ltr-text">4.6</span></p>
-                <p>C₀ = e<span class="ltr-text">4.6</span> = <span class="ltr-text">99.5 mg/mL</span></p>
+                <p>$$ k = \frac{\ln(89/74)}{(8 - 3)} = 0.037 \text{ hour}^{-1} $$</p>
+                <p>$$ \ln(89) = \ln(C_0) - (0.037 \text{ hour}^{-1} \times 3 \text{ hour}) $$</p>
+                <p>$$ \ln(C_0) = 4.489 + 0.111 = 4.6 $$</p>
+                <p>$$ C_0 = e^{4.6} = 99.5 \text{ mg/mL} $$</p>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۲. تاریخ انقضای t<span class="ltr-text">90</span> را با استفاده از داده‌های مثال ۱ محاسبه کنید. در t<span class="ltr-text">90</span>، C = ۰.۹C₀.</p>
             <div class="formula-display">
-                <p>ln(<span class="ltr-text">0.9</span> × <span class="ltr-text">99.5</span>) = ln(<span class="ltr-text">99.5</span>) − ۰.۰<span class="ltr-text">37</span>(t<span class="ltr-text">90</span>)</p>
-                <p>t<span class="ltr-text">90</span> = (<span class="ltr-text">4.495</span> - <span class="ltr-text">4.600</span>) / −۰.۰<span class="ltr-text">37 hour⁻¹</span> = <span class="ltr-text">2.8 hours</span></p>
+                <p>$$ \ln(0.9 \times 99.5) = \ln(99.5) - 0.037(t_{90}) $$</p>
+                <p>$$ t_{90} = \frac{4.495 - 4.600}{-0.037 \text{ hour}^{-1}} = 2.8 \text{ hours} $$</p>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۳. غلظت را در ۶ ساعت با استفاده از داده‌های مثال ۱ محاسبه کنید:</h4>
             <div class="formula-display">
-                <p>ln(C) = ln(<span class="ltr-text">99.5</span>) − (<span class="ltr-text">0.037</span> × <span class="ltr-text">6</span>)</p>
-                <p>ln(C) = <span class="ltr-text">4.378</span></p>
-                <p>C = e<span class="ltr-text">4.378</span> = <span class="ltr-text">79.7 mg/mL</span></p>
+                <p>$$ \ln(C) = \ln(99.5) - (0.037 \times 6) $$</p>
+                <p>$$ \ln(C) = 4.378 $$</p>
+                <p>$$ C = e^{4.378} = 79.7 \text{ mg/mL} $$</p>
             </div>
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۱۸.۳.۴ زمان‌های مرتبه اول، t<span class="ltr-text">n</span>، برای ۰.n کسر یا n% باقی‌مانده غلظت اولیه</h4>
             <p class="mb-4">دو مقدار رایج t<span class="ltr-text">n</span> مرتبه اول دارویی، t<span class="ltr-text">50</span> هستند که یک پارامتر اصلی در فارماکوکینتیک بالینی است، و t<span class="ltr-text">90</span> که متداول‌ترین طول عمر قفسه پایداری یا تاریخ انقضا است. مقادیر هر t<span class="ltr-text">n</span>، که در آن ۰ < n < ۱۰۰، از معادله خطی مرتبه اول، ln(C) = ln(C₀) − kt مشتق شده‌اند. معادلات t<span class="ltr-text">50</span> و t<span class="ltr-text">90</span> به ویژه در مثال‌های زیر مشتق شده‌اند. مقدار k به خودی خود برای یک ماده شیمیایی خاص دارو در یک فرمولاسیون خاص در یک دمای خاص ثابت است؛ بنابراین، مقادیر t<span class="ltr-text">n</span> مشتق شده از چنین مقادیری از k نیز ثابت هستند.</p>
@@ -1292,23 +1340,23 @@
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۱. در t<span class="ltr-text">n</span>، C = ۰.n × C₀.</p>
             <div class="formula-display">
-                <p>ln(<span class="ltr-text">0.n</span> × C₀) = ln(C₀) − ktn</p>
-                <p>tn = [ln(<span class="ltr-text">0.n</span> × C₀) − ln(C₀)]/−k = ln[(<span class="ltr-text">0.n</span> × C₀)/C₀]/−k = ln(<span class="ltr-text">0.n</span>)/−k</p>
-                <p>tn = ln(<span class="ltr-text">0.n</span>)/−k</p>
+                <p>$$ \ln(0.n \times C_0) = \ln(C_0) - kt_n $$</p>
+                <p>$$ t_n = \frac{\ln(0.n \times C_0) - \ln(C_0)}{-k} = \frac{\ln\left(\frac{0.n \times C_0}{C_0}\right)}{-k} = \frac{\ln(0.n)}{-k} $$</p>
+                <p>$$ t_n = \frac{\ln(0.n)}{-k} $$</p>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۲. در t<span class="ltr-text">50</span>، C = ۰.۵(C₀).</p>
             <div class="formula-display">
-                <p>ln(<span class="ltr-text">0.5</span> × C₀) = ln(C₀) − kt<span class="ltr-text">50</span></p>
-                <p>t<span class="ltr-text">50</span> = [ln(<span class="ltr-text">0.5</span> × C₀) − ln(C₀)]/−k = ln[(<span class="ltr-text">0.5</span> × C₀)/C₀]/−k = ln(<span class="ltr-text">0.5</span>)/−k = −۰.۶<span class="ltr-text">93</span>/−k = ۰.۶<span class="ltr-text">93</span>/k</p>
-                <p>t<span class="ltr-text">50</span> = ۰.۶<span class="ltr-text">93</span>/k</p>
+                <p>$$ \ln(0.5 \times C_0) = \ln(C_0) - kt_{50} $$</p>
+                <p>$$ t_{50} = \frac{\ln(0.5 \times C_0) - \ln(C_0)}{-k} = \frac{\ln\left(\frac{0.5 \times C_0}{C_0}\right)}{-k} = \frac{\ln(0.5)}{-k} = \frac{-0.693}{-k} = \frac{0.693}{k} $$</p>
+                <p>$$ t_{50} = \frac{0.693}{k} $$</p>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">۳. در t<span class="ltr-text">90</span>، C = ۰.۹(C₀).</p>
             <div class="formula-display">
-                <p>ln(<span class="ltr-text">0.9</span> × C₀) = ln(C₀) − kt<span class="ltr-text">90</span></p>
-                <p>t<span class="ltr-text">90</span> = [ln(<span class="ltr-text">0.9</span> × C₀) − ln(C₀)]/−k = ln[(<span class="ltr-text">0.9</span> × C₀)/C₀]/−k = ln(<span class="ltr-text">0.9</span>)/−k = −۰.۱۰<span class="ltr-text">5</span>/−k = ۰.۱۰<span class="ltr-text">5</span>/k</p>
-                <p>t<span class="ltr-text">90</span> = ۰.۱۰<span class="ltr-text">5</span>/k</p>
+                <p>$$ \ln(0.9 \times C_0) = \ln(C_0) - kt_{90} $$</p>
+                <p>$$ t_{90} = \frac{\ln(0.9 \times C_0) - \ln(C_0)}{-k} = \frac{\ln\left(\frac{0.9 \times C_0}{C_0}\right)}{-k} = \frac{\ln(0.9)}{-k} = \frac{-0.105}{-k} = \frac{0.105}{k} $$</p>
+                <p>$$ t_{90} = \frac{0.105}{k} $$</p>
             </div>
             <h3 class="text-xl font-semibold text-blue-600 mb-2">۱۸.۴ پیش‌بینی پایداری بر اساس نظریه آرنیوس</h3>
             <p class="mb-4">اساس نظریه آرنیوس این است که نرخ‌های واکنش و ثابت‌های نرخ به صورت نمایی در جهت تغییر دمای حسابی تغییر می‌کنند. کاربرد دارویی نظریه آرنیوس بر اساس داده‌های سنجش علمی دقیق و از نظر آماری معتبر به دست آمده در سه یا بیشتر دما که ≥۱۰ درجه گرمتر از دمای نگهداری داروی مورد نظر و هر کدام باشد، استوار است. معادله آرنیوس را می‌توان در یک فرم نمایی، k = Ae⁻⁽ᴱᵃ⁾/ᴿᵀ⁾، فرم خطی، ln(k) = ln(A) − (Ea/RT)، و فرم انتگرال‌گیری شده، ln(k₂/k₁) = Ea(T₂ − T₁)/[R(T₂ × T₁)] بیان کرد، که در آن k، k₁، و k₂ ثابت‌های نرخ ایزوترمال هستند، A یک عامل ترمودینامیکی است، Ea انرژی فعال‌سازی برای واکنش تخریب است، R ثابت گاز (۱.۹۸۷ × ۱۰⁻³ کیلوکال مول⁻¹K⁻¹ یا ۸.۳۱۴ × ۱۰⁻³ ژول K⁻¹ مول⁻¹) و T، T₁، و T₂ دماهای مطلق یا کلوین هستند.</p>

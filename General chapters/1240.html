@@ -15,19 +15,23 @@
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
-            background-color: #f8fafc;
-            color: #333;
+            background-color: #e0f2fe;
+            color: #1f2937;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #1e40af;
         }
         .card {
-            background-color: #fff;
+            background-color: #ffffff;
             border-radius: 0.5rem;
             padding: 1.5rem;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #dbeafe;
         }
         .ltr-text {
             direction: ltr;
             text-align: left;
-            display: inline-block; /* Ensure it doesn't break RTL flow for surrounding Farsi text */
+            display: inline-block;
         }
         table {
             width: 100%;
@@ -38,15 +42,25 @@
             border-collapse: collapse;
             margin-top: 1rem;
             margin-bottom: 1rem;
+            background-color: #ffffff;
+            border: 1px solid #bfdbfe;
         }
         table th, table td {
-            border: 1px solid #e2e8f0;
+            border: 1px solid #bfdbfe;
             padding: 0.75rem;
             text-align: center;
         }
         table th {
-            background-color: #f1f5f9;
+            background-color: #dbeafe;
             font-weight: bold;
+            color: #1e40af;
+        }
+        table td {
+            background-color: #ffffff;
+            color: #1f2937;
+        }
+        table tr:hover {
+            background-color: #f0f9ff;
         }
         .formula-display {
             display: flex;
@@ -54,6 +68,20 @@
             margin-top: 1rem;
             margin-bottom: 1rem;
             direction: ltr;
+        }
+        a {
+            color: #1e40af;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -184,9 +212,9 @@
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">الزامات اتحادیه اروپا</h4>
             <p class="mb-4">الزامات برای جمع‌آوری خون و پلاسما، برای انتخاب اهداکنندگان و برای آزمایش اهدایات در اروپا در سال <span class="ltr-text">2003</span> منتشر شد. دستورالعمل‌های <span class="ltr-text">2002/98/EC</span> و <span class="ltr-text">2003/63/EC</span> حاوی معیارهای انتخاب اهداکننده و الزامات آزمایش برای خون و پلاسما مستقل از کاربرد آن هستند. الزامات این دستورالعمل‌ها استانداردهایی برای پلاسما برای تولید بیشتر هستند اما می‌توانند توسط یک کشور عضو برای تنظیم اجزای خون گسترش یابند. یک نمای کلی در گزارش‌های کمیته اروپایی (توافق جزئی) در مورد انتقال خون (<span class="ltr-text">CD-P-TS</span>) ارائه شده است. این گزارش نشان می‌دهد که علاوه بر آزمایش‌های استاندارد سرولوژیکی که برای آزمایش پلاسما برای تفکیک اجباری هستند (خلاصه شده در جدول <span class="ltr-text">2</span>)، آزمایش آنتی‌ژن <span class="ltr-text">HIV</span>، آنتی‌بادی‌های آنتی-<span class="ltr-text">HBc</span>، آنتی‌ژن <span class="ltr-text">HCV</span>، آنتی-<span class="ltr-text">HTLV-I</span> و آنتی-<span class="ltr-text">HTLV-II</span> در برخی کشورهای عضو مورد نیاز است، و آزمایش برای آنتی‌بادی‌ها علیه سیتومگالوویروس در موارد خاصی انجام می‌شود. با این حال، این قوانین اضافی تنها در صورتی قابل اجرا هستند که اجزای خون برای انتقال خون (اریتروسیت‌ها، پلاکت‌ها یا پلاسما) تولید شوند.</p>
-            <p class="mb-4">رژیم آزمایشی مورد نیاز برای اهدایاتی که برای تولید مشتقات پلاسما استفاده می‌شوند در مونوگراف <span class="ltr-text">Ph. Eur.</span> پلاسما انسانی برای تفکیک (<a href="0853.html" class="text-blue-600 hover:underline" target="_blank">0853</a>) خلاصه شده است. فقط آزمایش‌ها یا کیت‌های آزمایش دارای مجوز را می‌توان برای غربالگری اهداکننده استفاده کرد. آزمایش‌های دارای مجوز دارای علامت <span class="ltr-text">CE</span> هستند که تأیید می‌کند کیفیت آزمایش معیارهای از پیش تعریف شده را برآورده می‌کند (به عنوان مثال، یک آزمایش غربالگری <span class="ltr-text">HBV</span> باید <span class="ltr-text">HBsAg</span> را در غلظت <span class="ltr-text">0.5 ng/mL</span> یا کمتر تشخیص دهد). مهمترین ویژگی‌های کیفی، یعنی اختصاصیت و حساسیت، در آزمایش‌های بالینی با استفاده از نمونه‌های اهداکننده (حداقل <span class="ltr-text">5000</span> نمونه) و نمونه‌های بالینی (حداقل <span class="ltr-text">200</span> نمونه) آزمایش می‌شوند. حساسیت آزمایش‌ها باید با نمونه‌های مثبت (حداقل <span class="ltr-text">400</span> نمونه) و با پنل‌های سروکانورژن (حداقل <span class="ltr-text">20</span> پنل) اثبات شود.</p>
+            <p class="mb-4">رژیم آزمایشی مورد نیاز برای اهدایاتی که برای تولید مشتقات پلاسما استفاده می‌شوند در مونوگراف <span class="ltr-text">Ph. Eur.</span> پلاسما انسانی برای تفکیک (0853) خلاصه شده است. فقط آزمایش‌ها یا کیت‌های آزمایش دارای مجوز را می‌توان برای غربالگری اهداکننده استفاده کرد. آزمایش‌های دارای مجوز دارای علامت <span class="ltr-text">CE</span> هستند که تأیید می‌کند کیفیت آزمایش معیارهای از پیش تعریف شده را برآورده می‌کند (به عنوان مثال، یک آزمایش غربالگری <span class="ltr-text">HBV</span> باید <span class="ltr-text">HBsAg</span> را در غلظت <span class="ltr-text">0.5 ng/mL</span> یا کمتر تشخیص دهد). مهمترین ویژگی‌های کیفی، یعنی اختصاصیت و حساسیت، در آزمایش‌های بالینی با استفاده از نمونه‌های اهداکننده (حداقل <span class="ltr-text">5000</span> نمونه) و نمونه‌های بالینی (حداقل <span class="ltr-text">200</span> نمونه) آزمایش می‌شوند. حساسیت آزمایش‌ها باید با نمونه‌های مثبت (حداقل <span class="ltr-text">400</span> نمونه) و با پنل‌های سروکانورژن (حداقل <span class="ltr-text">20</span> پنل) اثبات شود.</p>
             <p class="mb-4">آزمایش‌های <span class="ltr-text">HBsAg</span> و آزمایش‌های آنتی‌بادی علیه <span class="ltr-text">HIV Types 1</span> و <span class="ltr-text">2</span> نیز برای آزمایش مخازن تفکیک استفاده می‌شوند. تولیدکننده پلاسما باید نشان دهد که آزمایش برای این استفاده واجد شرایط است و الزامات مقرر در دستورالعمل‌های مناسب آژانس دارویی اروپا را برآورده می‌کند.</p>
-            <p class="mb-4">رژیم آزمایشی فعلی به طور منظم در میان کشورهای عضو اتحادیه اروپا مورد بحث قرار می‌گیرد و در صورت لزوم به دلیل وضعیت اپیدمیولوژیک ممکن است تغییر کند. اگر تغییراتی در الزامات ایجاد شود، مونوگراف <span class="ltr-text">Ph. Eur.</span> پلاسما انسانی برای تفکیک (<a href="0853.html" class="text-blue-600 hover:underline" target="_blank">0853</a>) و مونوگراف‌های خاص محصول بر این اساس پذیرفته خواهند شد (به عنوان مثال، تغییری در مونوگراف پلاسما انسانی (تجمیع شده و تیمار شده برای غیرفعال‌سازی ویروس) (<a href="1646.html" class="text-blue-600 hover:underline" target="_blank">1646</a>) پیشنهاد شده است؛ این تغییر نیاز به آزمایش <span class="ltr-text">HEV</span> با <span class="ltr-text">NAT</span> دارد).</p>
+            <p class="mb-4">رژیم آزمایشی فعلی به طور منظم در میان کشورهای عضو اتحادیه اروپا مورد بحث قرار می‌گیرد و در صورت لزوم به دلیل وضعیت اپیدمیولوژیک ممکن است تغییر کند. اگر تغییراتی در الزامات ایجاد شود، مونوگراف <span class="ltr-text">Ph. Eur.</span> پلاسما انسانی برای تفکیک (0853) و مونوگراف‌های خاص محصول بر این اساس پذیرفته خواهند شد (به عنوان مثال، تغییری در مونوگراف پلاسما انسانی (تجمیع شده و تیمار شده برای غیرفعال‌سازی ویروس) (1646) پیشنهاد شده است؛ این تغییر نیاز به آزمایش <span class="ltr-text">HEV</span> با <span class="ltr-text">NAT</span> دارد).</p>
 
             <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایش‌های <span class="ltr-text">NAT</span></h3>
             <p class="mb-4">همانطور که قبلاً توضیح داده شد، فقط آزمایش‌های سرولوژیکی دارای مجوز که از فناوری تشخیص آنتی‌بادی یا آنتی‌ژن استفاده می‌کنند برای غربالگری پلاسما در قالب اهدای تکی مورد نیاز هستند. با این حال، آزمایش <span class="ltr-text">NAT</span> عموماً می‌تواند شواهد عفونت ویروسی را در مراحل اولیه تشخیص دهد، و <span class="ltr-text">FDA</span> آزمایش‌های <span class="ltr-text">NAT</span> را برای <span class="ltr-text">HIV-1</span> و <span class="ltr-text">HCV</span> در سال <span class="ltr-text">2001</span> برای اهداکنندگان پلاسمای منبع و در سال <span class="ltr-text">2002</span> برای جمع‌آوری خون کامل مجوز داد. بنابراین، آزمایش‌های <span class="ltr-text">NAT</span> برای غربالگری اهدای پلاسما، عموماً در قالب مینی‌پول، با استفاده از اندازه‌های مخزنی که به حساسیت تحلیلی آزمایش <span class="ltr-text">NAT</span> و در برخی موارد (<span class="ltr-text">HCV</span> و <span class="ltr-text">B19V</span>)، به مخزن تفکیک بستگی دارد، استفاده می‌شوند. به طور کلی، اهدای پلاسما در قالب مینی‌پول غربالگری می‌شود که در آن اندازه مخزن به حساسیت تحلیلی آزمایش <span class="ltr-text">NAT</span> بستگی دارد. اندازه مینی‌پول مورد استفاده برای اهدای پلاسمای منبع عموماً بسیار بزرگتر از آن است که برای آزمایش اهدای خون استفاده می‌شود (تا <span class="ltr-text">512</span> در مقایسه با <span class="ltr-text">96</span> برای اهدای خون). زمان برگشت مورد نیاز برای آزمایش مجدد یک مخزن واکنش‌دهنده به منظور شناسایی اهدای واکنش‌دهنده برای پلاسما کمتر حیاتی است در مقایسه با خون برای انتقال خون، زیرا برخی اجزای خون مانند پلاکت‌ها عمر مفید کوتاهی دارند.</p>
@@ -198,7 +226,7 @@
             <p class="mb-4">در سال <span class="ltr-text">2009</span> <span class="ltr-text">FDA</span> یک راهنمایی نهایی برای آزمایش <span class="ltr-text">NAT B19V</span> پس از گزارش یک مطالعه نظارتی پس از بازاریابی از یک حادثه انتقال <span class="ltr-text">B19V</span> مرتبط با پلاسمای تجمیع شده تیمار شده با حلال و دترجنت (<span class="ltr-text">S/D</span>-تیمار شده) صادر کرد. این راهنمایی استفاده از <span class="ltr-text">B19V NAT</span> را به عنوان یک آزمایش حین فرآیند برای پلاسما برای تولید بیشتر توصیه می‌کند تا اطمینان حاصل شود که سطح <span class="ltr-text">B19V DNA</span> در مخازن تفکیک از <span class="ltr-text">10<sup>4</sup> IU/mL</span> تجاوز نمی‌کند. سند راهنمایی توصیه می‌کند که پرایمرها و پروب‌های انتخاب شده برای آزمایش <span class="ltr-text">NAT B19V</span> باید تمام ژنوتیپ‌های شناخته شده ویروس را تشخیص دهند. پنل بین‌المللی ژنوتیپ <span class="ltr-text">B19 WHO</span> حاوی سه ژنوتیپ برای اهداف اعتبارسنجی موجود است. در حال حاضر، آزمایش <span class="ltr-text">HAV NAT</span> حین فرآیند به طور گسترده توسط فاکشناتورهایی که پلاسمای منبع را به عنوان پلاسمای اولیه استفاده می‌کنند، اجرا می‌شود، اما <span class="ltr-text">FDA</span> یک سند راهنمایی مرتبط صادر نکرده است. از آنجایی که آزمایش <span class="ltr-text">NAT B19V</span> حین فرآیند برای محدود کردن بار ویروسی در مخزن پلاسما استفاده می‌شود، این آزمایش‌ها باید قادر به تعیین کمی <span class="ltr-text">B19V DNA</span> باشند (برخلاف آزمایش‌های <span class="ltr-text">NAT</span> برای <span class="ltr-text">HBV</span>، <span class="ltr-text">HCV</span>، <span class="ltr-text">HIV</span> و <span class="ltr-text">HAV</span> که آزمایش‌های <span class="ltr-text">NAT</span> کیفی هستند).</p>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">الزامات اروپایی</h4>
-            <p class="mb-4">آزمایش‌های <span class="ltr-text">NAT</span> مورد استفاده برای غربالگری اهداکننده مشمول مجوز هستند و در صورت برآورده کردن مشخصات آزمایش از پیش تعریف شده، علامت <span class="ltr-text">CE</span> را دریافت می‌کنند. آزمایش‌های <span class="ltr-text">NAT</span> برای نمونه‌های مخزن پلاسما باید طبق آزمایش عمومی <span class="ltr-text">Ph. Eur.</span> تکنیک‌های تقویت اسید نوکلئیک (<a href="20621.html" class="text-blue-600 hover:underline" target="_blank">20621</a>) اعتبار سنجی شوند. در حال حاضر، پلاسما برای تولید (مخازن پلاسما برای تفکیک) باید برای <span class="ltr-text">HCV RNA</span> توسط یک آزمایش <span class="ltr-text">NAT</span> آزمایش شود، اما هیچ الزامی برای آزمایش <span class="ltr-text">NAT</span> برای <span class="ltr-text">HBV DNA</span> و <span class="ltr-text">HIV RNA</span> وجود ندارد، اگرچه اکثر تولیدکنندگان پلاسما به طور داوطلبانه برای هر سه ویروس آزمایش انجام می‌دهند. این دستورالعمل ایجاب می‌کند که یک آزمایش باید قادر به تشخیص تمام ژنوتیپ‌های <span class="ltr-text">HCV</span> باشد. با این حال، با توجه به دشواری به دست آوردن ژنوتیپ‌های نادر <span class="ltr-text">HCV</span>، کافی است که حداقل شایع‌ترین ژنوتیپ‌ها (در اروپا، ژنوتیپ‌های <span class="ltr-text">1</span> و <span class="ltr-text">3</span>) در سطح مناسبی تشخیص داده شوند. پلاسما باید منفی باشد هنگامی که با آزمایشی غربالگری می‌شود که می‌تواند نمونه‌ای حاوی <span class="ltr-text">100 IU/mL</span> از <span class="ltr-text">HCV RNA</span> را تشخیص دهد (کالیبره شده با استاندارد بین‌المللی <span class="ltr-text">HCV WHO</span>).</p>
+            <p class="mb-4">آزمایش‌های <span class="ltr-text">NAT</span> مورد استفاده برای غربالگری اهداکننده مشمول مجوز هستند و در صورت برآورده کردن مشخصات آزمایش از پیش تعریف شده، علامت <span class="ltr-text">CE</span> را دریافت می‌کنند. آزمایش‌های <span class="ltr-text">NAT</span> برای نمونه‌های مخزن پلاسما باید طبق آزمایش عمومی <span class="ltr-text">Ph. Eur.</span> تکنیک‌های تقویت اسید نوکلئیک (20621) اعتبار سنجی شوند. در حال حاضر، پلاسما برای تولید (مخازن پلاسما برای تفکیک) باید برای <span class="ltr-text">HCV RNA</span> توسط یک آزمایش <span class="ltr-text">NAT</span> آزمایش شود، اما هیچ الزامی برای آزمایش <span class="ltr-text">NAT</span> برای <span class="ltr-text">HBV DNA</span> و <span class="ltr-text">HIV RNA</span> وجود ندارد، اگرچه اکثر تولیدکنندگان پلاسما به طور داوطلبانه برای هر سه ویروس آزمایش انجام می‌دهند. این دستورالعمل ایجاب می‌کند که یک آزمایش باید قادر به تشخیص تمام ژنوتیپ‌های <span class="ltr-text">HCV</span> باشد. با این حال، با توجه به دشواری به دست آوردن ژنوتیپ‌های نادر <span class="ltr-text">HCV</span>، کافی است که حداقل شایع‌ترین ژنوتیپ‌ها (در اروپا، ژنوتیپ‌های <span class="ltr-text">1</span> و <span class="ltr-text">3</span>) در سطح مناسبی تشخیص داده شوند. پلاسما باید منفی باشد هنگامی که با آزمایشی غربالگری می‌شود که می‌تواند نمونه‌ای حاوی <span class="ltr-text">100 IU/mL</span> از <span class="ltr-text">HCV RNA</span> را تشخیص دهد (کالیبره شده با استاندارد بین‌المللی <span class="ltr-text">HCV WHO</span>).</p>
             <p class="mb-4">آزمایش برای <span class="ltr-text">B19V DNA</span> عموماً مورد نیاز نیست اما باید برای محصولاتی که در صورت وجود این ویروس خطر بالاتری برای بیماران دارند (به عنوان مثال، محصولات ایمونوگلوبولین آنتی-<span class="ltr-text">D</span> و پلاسمایی که تجمیع شده و توسط تیمار <span class="ltr-text">S/D</span> غیرفعال شده است) انجام شود. علاوه بر این، محصول اخیر نیز باید آزمایش شود و برای <span class="ltr-text">HAV RNA</span> غیرواکنش‌دهنده باشد، و در آینده نیز باید برای <span class="ltr-text">HEV RNA</span> غیرواکنش‌دهنده باشد. برخلاف آزمایش برای <span class="ltr-text">HCV</span> و <span class="ltr-text">HAV</span> که مخزن تفکیک باید برای این ویروس‌ها غیرواکنش‌دهنده باشد، برای آزمایش <span class="ltr-text">B19V</span> بار ویروسی در مخزن تفکیک و پلاسمای تجمیع شده تیمار شده با <span class="ltr-text">S/D</span> نباید از <span class="ltr-text">10 IU/µL B19V DNA</span> تجاوز کند. الزامات در مونوگراف‌های خاص محصول <span class="ltr-text">Ph. Eur.</span> به تفصیل آمده است. به منظور جلوگیری از یک مخزن واکنش‌دهنده، که باید دور انداخته شود، آزمایش <span class="ltr-text">NAT</span> همچنین بر روی اهدایات تکی یا ترجیحاً بر روی مینی‌پول‌های شامل <span class="ltr-text">16–512</span> اهدا انجام می‌شود. اگرچه الزامات آزمایش <span class="ltr-text">NAT B19V</span> و <span class="ltr-text">HAV</span> فقط برای پلاسمای مورد استفاده برای تولید پلاسمای تجمیع شده تیمار شده با <span class="ltr-text">S/D</span> و محصولات ایمونوگلوبولین آنتی-<span class="ltr-text">D</span> قابل اجرا است، اکثر تولیدکنندگان پلاسما به طور داوطلبانه پلاسمای مورد نظر برای تولید تمام محصولات مشتق از پلاسما را آزمایش می‌کنند تا بار ویروسی را در مخازن تفکیک کاهش دهند.</p>
             <p class="mb-4">الزامات فعلی <span class="ltr-text">FDA</span> و اتحادیه اروپا برای آزمایش پلاسما برای تولید بیشتر در جدول <span class="ltr-text">2</span> و جدول <span class="ltr-text">3</span> خلاصه شده‌اند.</p>
 
@@ -344,7 +372,7 @@
                     </tr>
                 </tbody>
             </table>
-            <p class="text-sm text-gray-600"><span class="ltr-text">a</span> مونوگراف جدید به زودی اجرا خواهد شد. به پیش‌نویس مونوگراف <span class="ltr-text">Ph. Eur.</span> پلاسما انسانی (تجمیع شده و تیمار شده برای غیرفعال‌سازی ویروس (<a href="1640.html" class="text-blue-600 hover:underline" target="_blank">1640</a>)) مراجعه کنید. <span class="ltr-text">http://pharmeuropa.edqm.eu/TextsForComment/NetisUtils/srvrutil_getdoc.aspx/2L3OqDZGmCLmnDZGsHIveT6q0//1646E.pdf</span>. تاریخ دسترسی: <span class="ltr-text">20</span> فوریه <span class="ltr-text">2013</span>.</p>
+            <p class="text-sm text-gray-600"><span class="ltr-text">a</span> مونوگراف جدید به زودی اجرا خواهد شد. به پیش‌نویس مونوگراف <span class="ltr-text">Ph. Eur.</span> پلاسما انسانی (تجمیع شده و تیمار شده برای غیرفعال‌سازی ویروس (1640)) مراجعه کنید. <span class="ltr-text">http://pharmeuropa.edqm.eu/TextsForComment/NetisUtils/srvrutil_getdoc.aspx/2L3OqDZGmCLmnDZGsHIveT6q0//1646E.pdf</span>. تاریخ دسترسی: <span class="ltr-text">20</span> فوریه <span class="ltr-text">2013</span>.</p>
         </section>
 
         <section class="mb-8 card">

@@ -12,14 +12,18 @@
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
-            background-color: #f8fafc;
-            color: #333;
+            background-color: #e0f2fe;
+            color: #1f2937;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #1e40af;
         }
         .card {
-            background-color: #fff;
+            background-color: #ffffff;
             border-radius: 0.5rem;
             padding: 1.5rem;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #dbeafe;
         }
         .ltr-text {
             direction: ltr;
@@ -35,15 +39,25 @@
             border-collapse: collapse;
             margin-top: 1rem;
             margin-bottom: 1rem;
+            background-color: #ffffff;
+            border: 1px solid #bfdbfe;
         }
         table th, table td {
-            border: 1px solid #e2e8f0;
+            border: 1px solid #bfdbfe;
             padding: 0.75rem;
             text-align: center;
         }
         table th {
-            background-color: #f1f5f9;
+            background-color: #dbeafe;
             font-weight: bold;
+            color: #1e40af;
+        }
+        table td {
+            background-color: #ffffff;
+            color: #1f2937;
+        }
+        table tr:hover {
+            background-color: #f0f9ff;
         }
         .formula-display {
             display: flex;
@@ -51,6 +65,20 @@
             margin-top: 1rem;
             margin-bottom: 1rem;
             direction: ltr;
+        }
+        a {
+            color: #1e40af;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -90,7 +118,7 @@
             <p class="mb-4">به طور جایگزین، استخراج شیرابه (leachate extraction) ممکن است با توجیه پس از مطالعات علمی معتبر انتشار فلزات، که ممکن است شامل مطالعات حیوانی، تعیین گونه، یا سایر روش‌های مطالعه انتشار فلز خاص در محصول دارویی باشد، مناسب باشد.</p>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">عوامل (Reagents)</h4>
-            <p class="mb-4">تمام عوامل مورد استفاده برای آماده‌سازی محلول‌های نمونه و استاندارد باید عاری از ناخالصی‌های عنصری، مطابق با طیف‌سنجی پلاسمایی <a href="730.html" class="text-blue-600 hover:underline" target="_blank">۷۳۰</a> باشند.</p>
+            <p class="mb-4">تمام عوامل مورد استفاده برای آماده‌سازی محلول‌های نمونه و استاندارد باید عاری از ناخالصی‌های عنصری، مطابق با طیف‌سنجی پلاسمایی   باشند.</p>
 
             <h3 class="text-xl font-semibold text-blue-600 mb-2">روش ۱: ICP–OES</h3>
             <p class="mb-4"><strong>محلول استانداردسازی ۱:</strong> ۱.۵J از عنصر(های) هدف در یک ماتریس مطابق</p>
@@ -99,7 +127,7 @@
             <p class="mb-4"><strong>محلول نمونه (Sample solution):</strong> محلول نمونه را با یک حلال مناسب رقیق کنید تا غلظت نهایی عناصر هدف در NMT <span class="ltr-text">1.5J</span> به دست آید.</p>
             <p class="mb-4"><strong>نمونه شاهد (Blank):</strong> ماتریس مطابق</p>
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم طیف‌سنجی عنصری</h4>
-            <p class="mb-4">(به طیف‌سنجی پلاسمایی <a href="730.html" class="text-blue-600 hover:underline" target="_blank">۷۳۰</a> مراجعه کنید.)</p>
+            <p class="mb-4">(به طیف‌سنجی پلاسمایی مراجعه کنید.)</p>
             <p class="mb-4"><strong>حالت (Mode):</strong> ICP</p>
             <p class="mb-4"><strong>آشکارساز (Detector):</strong> سیستم تشخیص نوری</p>
             <p class="mb-4"><strong>شستشو (Rinse):</strong> حلال مورد استفاده</p>
@@ -120,7 +148,7 @@
             <p class="mb-4"><strong>محلول نمونه (Sample solution):</strong> محلول نمونه را با یک حلال مناسب رقیق کنید تا غلظت نهایی عناصر هدف در NMT <span class="ltr-text">1.5J</span> به دست آید.</p>
             <p class="mb-4"><strong>نمونه شاهد (Blank):</strong> ماتریس مطابق</p>
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم طیف‌سنجی عنصری</h4>
-            <p class="mb-4">(به طیف‌سنجی پلاسمایی <a href="730.html" class="text-blue-600 hover:underline" target="_blank">۷۳۰</a> مراجعه کنید.)</p>
+            <p class="mb-4">(به طیف‌سنجی پلاسمایی مراجعه کنید.)</p>
             <p class="mb-4"><strong>حالت (Mode):</strong> ICP. [توجه—استفاده از دستگاهی با محفظه اسپری خنک شده توصیه می‌شود. (یک سل برخورد یا سل واکنش نیز ممکن است مفید باشد.)]</p>
             <p class="mb-4"><strong>آشکارساز (Detector):</strong> طیف‌سنج جرمی</p>
             <p class="mb-4"><strong>شستشو (Rinse):</strong> حلال مورد استفاده</p>
