@@ -204,7 +204,7 @@
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محاسبه</h4>
                     <p>فرمول:</p>
                     <div class="formula-display">
-                        $$ \text{Sulfate Limit} = \frac{V_{H2SO4} \times N_{H2SO4} \times 96.06 \times 100}{W_{sample}} \text{ (in ppm)} $$
+                        $$ \text{Sulfate Limit} = \frac{V_{H<sub>2</sub>SO<sub>4</sub>} \times N_{H<sub>2</sub>SO<sub>4</sub>} \times 96.06 \times 100}{W_{sample}} \text{ (in ppm)} $$
                     </div>
                     <p>مقدار سولفات در نمونه باید کمتر از <span class="ltr-text">0.2%</span> یا <span class="ltr-text">2000</span> ppm باشد.</p>
                     <div>
@@ -514,7 +514,7 @@
             const W_sample = parseFloat(document.getElementById('W_sulfate').value);
             const N_H2SO4 = 0.020; // Normality of 0.020 N sulfuric acid
 
-            if (!isNaN(V_H2SO4) && !isNaN(W_sample) && W_sample > 0) {
+            if (!isNaN(V_H<sub>2</sub>SO<sub>4</sub>) && !isNaN(W_sample) && W_sample > 0) {
                 const sulfate_ppm = (V_H2SO4 * N_H2SO4 * 96.06 * 1000) / W_sample;
                 const resultElement = document.getElementById('result_sulfate');
                 const statusElement = document.getElementById('status_sulfate');

@@ -107,7 +107,7 @@
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
                 <p class="mb-4">سولفات روی حاوی یک یا هفت مولکول آب هیدراتاسیون است.</p>
-                <p class="mb-4">مونوهیدرات حاوی حداقل 89.0% و حداکثر 90.4% سولفات روی (ZnSO4) است که معادل حداقل 99.0% و حداکثر 100.5% سولفات روی مونوهیدرات (ZnSO4 · H2O) می‌باشد، و هپتاهیدرات حاوی حداقل 55.6% و حداکثر 61.0% سولفات روی (ZnSO4) است که معادل حداقل 99.0% و حداکثر 108.7% سولفات روی هپتاهیدرات (ZnSO4 · 7H2O) می‌باشد.</p>
+                <p class="mb-4">مونوهیدرات حاوی حداقل 89.0% و حداکثر 90.4% سولفات روی (ZnSO4) است که معادل حداقل 99.0% و حداکثر 100.5% سولفات روی مونوهیدرات (ZnSO4 · H<sub>2</sub>O) می‌باشد، و هپتاهیدرات حاوی حداقل 55.6% و حداکثر 61.0% سولفات روی (ZnSO4) است که معادل حداقل 99.0% و حداکثر 108.7% سولفات روی هپتاهیدرات (ZnSO4 · 7H<sub>2</sub>O) می‌باشد.</p>
             </div>
         </div>
 
@@ -133,8 +133,8 @@
 
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
                 <ul class="list-disc pl-6">
-                    <li><b>مونوهیدرات:</b> 89.0%–90.4% سولفات روی (ZnSO4)، معادل 99.0%–100.5% سولفات روی مونوهیدرات (ZnSO4 · H2O)</li>
-                    <li><b>هپتاهیدرات:</b> 55.6%–61.0% سولفات روی (ZnSO4)، معادل 99.0%–108.7% سولفات روی هپتاهیدرات (ZnSO4 · 7H2O)</li>
+                    <li><b>مونوهیدرات:</b> 89.0%–90.4% سولفات روی (ZnSO4)، معادل 99.0%–100.5% سولفات روی مونوهیدرات (ZnSO4 · H<sub>2</sub>O)</li>
+                    <li><b>هپتاهیدرات:</b> 55.6%–61.0% سولفات روی (ZnSO4)، معادل 99.0%–108.7% سولفات روی هپتاهیدرات (ZnSO4 · 7H<sub>2</sub>O)</li>
                 </ul>
 
                 <div class="card interactive-card">
@@ -323,7 +323,7 @@
 
             if (percentageZnSO4 >= 89.0 && percentageZnSO4 <= 90.4) {
                 monographType = 'monohydrate';
-                resultText += `نتیجه (ZnSO4 · H2O): <span class="ltr-text">${percentageZnSO4_monohydrate.toFixed(2)}%</span><br>`;
+                resultText += `نتیجه (ZnSO4 · H<sub>2</sub>O): <span class="ltr-text">${percentageZnSO4_monohydrate.toFixed(2)}%</span><br>`;
                 if (percentageZnSO4_monohydrate >= 99.0 && percentageZnSO4_monohydrate <= 100.5) {
                     status = 'Pass';
                 } else {
@@ -331,7 +331,7 @@
                 }
             } else if (percentageZnSO4 >= 55.6 && percentageZnSO4 <= 61.0) {
                 monographType = 'heptahydrate';
-                resultText += `نتیجه (ZnSO4 · 7H2O): <span class="ltr-text">${percentageZnSO4_heptahydrate.toFixed(2)}%</span><br>`;
+                resultText += `نتیجه (ZnSO4 · 7H<sub>2</sub>O): <span class="ltr-text">${percentageZnSO4_heptahydrate.toFixed(2)}%</span><br>`;
                  if (percentageZnSO4_heptahydrate >= 99.0 && percentageZnSO4_heptahydrate <= 108.7) {
                     status = 'Pass';
                 } else {
