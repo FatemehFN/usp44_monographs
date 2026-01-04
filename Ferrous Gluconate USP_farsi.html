@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف فروس گلوکونات (USP)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -83,18 +86,10 @@
             cursor: pointer;
             border: none;
         }
-        .additional-spec-input {
-            shadow: appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline;
-        }
-        .status-dropdown {
-            shadow: appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48;
-        }
-        .input-field-wrapper {
-            margin-bottom: 1rem;
-        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+
     <div class="container mx-auto p-4 max-w-4xl">
 
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">فروس گلوکونات</h1>
@@ -130,7 +125,7 @@
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. کروماتوگرافی لایه نازک (TLC)</h3>
                 <p class="mb-4"><strong>محلول استاندارد:</strong> <span class="ltr-text">10</span> mg/mL از USP پتاسیم گلوکونات RS</p>
                 <p class="mb-4"><strong>محلول نمونه:</strong> <span class="ltr-text">10</span> mg/mL از فروس گلوکونات، در صورت نیاز با گرم کردن در حمام آب در <span class="ltr-text">60°</span> برای حل شدن</p>
-                <p class="mb-4"><strong>سیستم کروماتوگرافی</strong> (به کروماتوگرافی <span class="ltr-text">621</span>ñ، کروماتوگرافی لایه نازک مراجعه کنید)</p>
+                <p class="mb-4"><strong>سیستم کروماتوگرافی</strong> (به کروماتوگرافی <a href="General chapters/621.html" class="text-blue-600 hover:underline" target="_blank">621</a>، کروماتوگرافی لایه نازک مراجعه کنید)</p>
                 <ul>
                     <li><strong>مد:</strong> TLC</li>
                     <li><strong>جاذب:</strong> لایه <span class="ltr-text">0.25</span>-mm از سیلیکا ژل کروماتوگرافیک</li>
@@ -161,7 +156,7 @@
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش کار</h4>
                 <p class="mb-4"><strong>نمونه:</strong> <span class="ltr-text">1.5</span> گرم فروس گلوکونات</p>
                 <p class="mb-4"><strong>شاهد:</strong> همانطور که در آنالیز بدون نمونه آمده است، عمل کنید.</p>
-                <p class="mb-4"><strong>سیستم تیتراسیون</strong> (به تیتراسیون <span class="ltr-text">541</span>ñ مراجعه کنید)</p>
+                <p class="mb-4"><strong>سیستم تیتراسیون</strong> (به تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید)</p>
                 <ul>
                     <li><strong>مد:</strong> تیتراسیون مستقیم</li>
                     <li><strong>تیترانت:</strong> <span class="ltr-text">0.1</span> نرمال سریم سولفات VS</li>
@@ -228,7 +223,7 @@
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت کلرید</h4>
                     <div>
                         <label for="chloride-status" class="block text-sm font-bold mb-1">وضعیت:</label>
-                        <select id="chloride-status" name="chloride-status" class="status-dropdown">
+                        <select id="chloride-status" name="chloride-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                             <option value=""></option>
                             <option value="Pass">قبول</option>
                             <option value="Fail">رد</option>
@@ -236,7 +231,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="chloride-additional" class="block text-sm font-bold mb-1">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="chloride-additional" name="chloride-additional" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="chloride-additional" name="chloride-additional" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
 
@@ -248,7 +243,7 @@
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت سولفات</h4>
                     <div>
                         <label for="sulfate-status" class="block text-sm font-bold mb-1">وضعیت:</label>
-                        <select id="sulfate-status" name="sulfate-status" class="status-dropdown">
+                        <select id="sulfate-status" name="sulfate-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                             <option value=""></option>
                             <option value="Pass">قبول</option>
                             <option value="Fail">رد</option>
@@ -256,7 +251,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="sulfate-additional" class="block text-sm font-bold mb-1">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="sulfate-additional" name="sulfate-additional" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="sulfate-additional" name="sulfate-additional" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
 
@@ -266,7 +261,7 @@
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت جیوه</h4>
                     <div>
                         <label for="mercury-status" class="block text-sm font-bold mb-1">وضعیت:</label>
-                        <select id="mercury-status" name="mercury-status" class="status-dropdown">
+                        <select id="mercury-status" name="mercury-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                             <option value=""></option>
                             <option value="Pass">قبول</option>
                             <option value="Fail">رد</option>
@@ -274,7 +269,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="mercury-additional" class="block text-sm font-bold mb-1">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="mercury-additional" name="mercury-additional" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="mercury-additional" name="mercury-additional" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
 
@@ -285,7 +280,7 @@
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت آرسنیک</h4>
                     <div>
                         <label for="arsenic-status" class="block text-sm font-bold mb-1">وضعیت:</label>
-                        <select id="arsenic-status" name="arsenic-status" class="status-dropdown">
+                        <select id="arsenic-status" name="arsenic-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                             <option value=""></option>
                             <option value="Pass">قبول</option>
                             <option value="Fail">رد</option>
@@ -293,7 +288,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="arsenic-additional" class="block text-sm font-bold mb-1">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="arsenic-additional" name="arsenic-additional" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="arsenic-additional" name="arsenic-additional" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
 
@@ -304,7 +299,7 @@
                 <p><strong>محلول استاندارد:</strong> <span class="ltr-text">5.0</span> میلی‌لیتر از محلول استاندارد سرب نیترات TS را در یک فلاسک حجمی <span class="ltr-text">100</span> میلی‌لیتری بریزید و با آب به حجم برسانید. <span class="ltr-text">2.0</span> میلی‌لیتر از محلول حاصل را در یک فلاسک حجمی <span class="ltr-text">50</span> میلی‌لیتری بریزید، <span class="ltr-text">10</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">9</span> نرمال و <span class="ltr-text">10</span> میلی‌لیتر آب اضافه کنید. <span class="ltr-text">20</span> میلی‌لیتر محلول اسید اسکوربیک-سدیم یدید و <span class="ltr-text">5.0</span> میلی‌لیتر محلول تری‌اوکتیل‌فسفین اکسید اضافه کنید، <span class="ltr-text">30</span> ثانیه تکان دهید و اجازه دهید جدا شود. آب اضافه کنید تا لایه حلال آلی به گردن فلاسک برسد، دوباره تکان دهید، و اجازه دهید جدا شود. لایه آلی محلول استاندارد است و حاوی <span class="ltr-text">2</span> µg/mL سرب است.</p>
                 <p><strong>محلول نمونه:</strong> به یک فلاسک حجمی <span class="ltr-text">50</span> میلی‌لیتری، <span class="ltr-text">1.0</span> گرم فروس گلوکونات، <span class="ltr-text">10</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">9</span> نرمال، <span class="ltr-text">10</span> میلی‌لیتر آب، <span class="ltr-text">20</span> میلی‌لیتر محلول اسید اسکوربیک-سدیم یدید، و <span class="ltr-text">5.0</span> میلی‌لیتر محلول تری‌اوکتیل‌فسفین اکسید اضافه کنید. <span class="ltr-text">30</span> ثانیه تکان دهید و اجازه دهید جدا شود. آب اضافه کنید تا لایه حلال آلی به گردن فلاسک برسد، دوباره تکان دهید، و اجازه دهید جدا شود. لایه آلی محلول نمونه است.</p>
                 <p><strong>شاهد:</strong> به یک فلاسک حجمی <span class="ltr-text">50</span> میلی‌لیتری، <span class="ltr-text">10</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">9</span> نرمال، <span class="ltr-text">10</span> میلی‌لیتر آب، <span class="ltr-text">20</span> میلی‌لیتر محلول اسید اسکوربیک-سدیم یدید، و <span class="ltr-text">5.0</span> میلی‌لیتر محلول تری‌اوکتیل‌فسفین اکسید اضافه کنید. <span class="ltr-text">30</span> ثانیه تکان دهید و اجازه دهید جدا شود. آب اضافه کنید تا لایه حلال آلی به گردن فلاسک برسد، دوباره تکان دهید، و اجازه دهید جدا شود. لایه آلی شاهد است و حاوی <span class="ltr-text">0</span> µg/mL سرب است.</p>
-                <p><strong>شرایط دستگاهی</strong> (به اسپکتروسکوپی جذب اتمی <span class="ltr-text">852</span>ñ مراجعه کنید)</p>
+                <p><strong>شرایط دستگاهی</strong> (به اسپکتروسکوپی جذب اتمی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید)</p>
                 <ul>
                     <li><strong>مد:</strong> اسپکتروفتومتری جذب اتمی</li>
                     <li><strong>طول موج تحلیلی:</strong> <span class="ltr-text">283.3</span> nm</li>
@@ -326,7 +321,7 @@
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت سرب</h4>
                     <div>
                         <label for="lead-status" class="block text-sm font-bold mb-1">وضعیت:</label>
-                        <select id="lead-status" name="lead-status" class="status-dropdown">
+                        <select id="lead-status" name="lead-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                             <option value=""></option>
                             <option value="Pass">قبول</option>
                             <option value="Fail">رد</option>
@@ -334,14 +329,14 @@
                     </div>
                     <div class="mt-4">
                         <label for="lead-additional" class="block text-sm font-bold mb-1">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="lead-additional" name="lead-additional" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="lead-additional" name="lead-additional" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">محدودیت آهن فریک</h3>
                 <p><strong>نمونه:</strong> <span class="ltr-text">5</span> گرم فروس گلوکونات</p>
                 <p><strong>شاهد:</strong> طبق روش هدایت شده در آنالیز بدون نمونه عمل کنید.</p>
-                <p><strong>سیستم تیتراسیون</strong> (به تیتراسیون <span class="ltr-text">541</span>ñ مراجعه کنید)</p>
+                <p><strong>سیستم تیتراسیون</strong> (به تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید)</p>
                 <ul>
                     <li><strong>مد:</strong> تیتراسیون مستقیم</li>
                     <li><strong>تیترانت:</strong> <span class="ltr-text">0.1</span> نرمال سدیم تیوسولفات VS</li>
@@ -399,7 +394,7 @@
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت اسید اگزالیک</h4>
                     <div>
                         <label for="oxalic-acid-status" class="block text-sm font-bold mb-1">وضعیت:</label>
-                        <select id="oxalic-acid-status" name="oxalic-acid-status" class="status-dropdown">
+                        <select id="oxalic-acid-status" name="oxalic-acid-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                             <option value=""></option>
                             <option value="Pass">قبول</option>
                             <option value="Fail">رد</option>
@@ -407,7 +402,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="oxalic-acid-additional" class="block text-sm font-bold mb-1">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="oxalic-acid-additional" name="oxalic-acid-additional" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="oxalic-acid-additional" name="oxalic-acid-additional" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
 
@@ -419,7 +414,7 @@
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت قندهای احیا کننده</h4>
                     <div>
                         <label for="reducing-sugars-status" class="block text-sm font-bold mb-1">وضعیت:</label>
-                        <select id="reducing-sugars-status" name="reducing-sugars-status" class="status-dropdown">
+                        <select id="reducing-sugars-status" name="reducing-sugars-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                             <option value=""></option>
                             <option value="Pass">قبول</option>
                             <option value="Fail">رد</option>
@@ -427,7 +422,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="reducing-sugars-additional" class="block text-sm font-bold mb-1">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="reducing-sugars-additional" name="reducing-sugars-additional" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="reducing-sugars-additional" name="reducing-sugars-additional" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
             </div>
@@ -828,5 +823,6 @@
         }
 
     </script>
+
 </body>
 </html>

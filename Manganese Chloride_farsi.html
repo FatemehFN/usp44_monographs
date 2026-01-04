@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف کلرید منیزیم (USP)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="text/javascript" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
     <style>
         body {
@@ -83,15 +86,10 @@
             cursor: pointer;
             border: none;
         }
-        .additional-spec-input {
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-        }
-        .status-dropdown {
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+
     <div class="container mx-auto p-4 max-w-4xl">
 
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">مونوگراف کلرید منیزیم</h1>
@@ -116,9 +114,9 @@
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
                 <h3 class="text-xl font-semibold text-gray-700 mb-2">آزمایشات شناسایی – عمومی</h3>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• کلرید á191ñ</h4>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• کلرید <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a></h4>
                 <p>با نیترات نقره TS رسوب سفید و پنیرکی کلرید نقره تولید می‌کند که در اسید نیتریک نامحلول است. پس از شستشو با آب، این رسوب در مقدار کمی بیش از حد آمونیم هیدروکسید 6 نرمحلول است.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• منیزیم á191ñ</h4>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• منیزیم <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a></h4>
                 <p>الزامات را برآورده می‌کند.</p>
             </div>
         </div>
@@ -177,32 +175,32 @@
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
 
-                <h3 class="text-xl font-semibold text-gray-700 mb-2">کلرید و سولفات، سولفات á221ñ</h3>
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">کلرید و سولفات، سولفات <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a></h3>
                 <p>نمونه: <span class="ltr-text">2.0 g</span></p>
                 <p>معیارهای پذیرش: نباید سولفات بیشتری نسبت به معادل <span class="ltr-text">0.10 mL</span> اسید سولفوریک <span class="ltr-text">0.020 N</span> (<span class="ltr-text">0.005%</span>) نشان دهد.</p>
                 <div class="card interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mb-4">تست کلرید و سولفات، سولفات</h4>
                     <p>وضعیت:</p>
-                    <select id="sulfateStatus" name="sulfateStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48 my-2">
+                    <select id="sulfateStatus" name="sulfateStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-2"></textarea>
+                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 mt-4">آهن á241ñ</h3>
+                <h3 class="text-xl font-semibold text-gray-700 mb-2 mt-4">آهن <a href="General chapters/241.html" class="text-blue-600 hover:underline" target="_blank">241</a></h3>
                 <p>محلول نمونه: <span class="ltr-text">2.0 g</span> در <span class="ltr-text">40 mL</span> آب</p>
                 <p>معیارهای پذیرش: حداکثر <span class="ltr-text">5 ppm</span></p>
                 <div class="card interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mb-4">تست آهن</h4>
                     <p>وضعیت:</p>
-                    <select id="ironStatus" name="ironStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48 my-2">
+                    <select id="ironStatus" name="ironStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-2"></textarea>
+                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-gray-700 mb-2 mt-4">روی</h3>
@@ -212,12 +210,12 @@
                 <div class="card interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mb-4">تست روی</h4>
                     <p>وضعیت:</p>
-                    <select id="zincStatus" name="zincStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48 my-2">
+                    <select id="zincStatus" name="zincStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-2"></textarea>
+                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
         </div>
@@ -253,7 +251,7 @@
                         <span id="insolubleResultPercent" class="font-bold ml-4"></span>
                         <span id="insolubleStatus" class="font-bold"></span>
                     </div>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4"></textarea>
+                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
 
@@ -288,25 +286,25 @@
                         <span id="ammoniumSulfideResultPercent" class="font-bold"></span>
                         <span id="ammoniumSulfideStatus" class="font-bold ml-4"></span>
                     </div>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4"></textarea>
+                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
 
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 mt-4">pH á791ñ</h3>
+                <h3 class="text-xl font-semibold text-gray-700 mb-2 mt-4">pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a></h3>
                 <p>محلول نمونه: <span class="ltr-text">10 g</span> در <span class="ltr-text">200 mL</span> آب آزاد از دی‌اکسید کربن و آمونیاک</p>
                 <p>معیارهای پذیرش: <span class="ltr-text">3.5–6.0</span></p>
                 <div class="card interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mb-4">تست pH</h4>
                     <p>وضعیت:</p>
-                    <select id="pHStatus" name="pHStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48 my-2">
+                    <select id="pHStatus" name="pHStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-2"></textarea>
+                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 mt-4">کاهش وزن در اثر خشک شدن á731ñ</h3>
+                <h3 class="text-xl font-semibold text-gray-700 mb-2 mt-4">کاهش وزن در اثر خشک شدن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h3>
                 <p>یک نمونه را به مدت <span class="ltr-text">2</span> ساعت در <span class="ltr-text">50°</span> خشک کنید، سپس دما را به مدت <span class="ltr-text">24</span> ساعت به <span class="ltr-text">150°</span> افزایش دهید: <span class="ltr-text">36.0%–38.5%</span> از وزن خود را از دست می‌دهد.</p>
                 <div class="card interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mb-4">تست کاهش وزن در اثر خشک شدن</h4>
@@ -334,7 +332,7 @@
                         <span id="lodResultPercent" class="font-bold"></span>
                         <span id="lodStatus" class="font-bold ml-4"></span>
                     </div>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4"></textarea>
+                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
         </div>
@@ -478,5 +476,6 @@
             showTab('definition');
         });
     </script>
+
 </body>
 </html>

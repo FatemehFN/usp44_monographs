@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف اسید فولیک (USP)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -81,17 +86,10 @@
             cursor: pointer;
             border: none;
         }
-        .additional-spec-input {
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-            border: 1px solid #d1d5db; /* Light gray border */
-        }
-        .status-dropdown {
-             box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-            border: 1px solid #d1d5db; /* Light gray border */
-        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+
     <div class="container mx-auto p-4 max-w-4xl">
 
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">اسید فولیک (USP)</h1>
@@ -137,7 +135,7 @@
                 <p class="mb-4">محلول استوک نمونه: <span class="ltr-text">100 mg</span> اسید فولیک را به یک فلاسک حجمی <span class="ltr-text">100-mL</span> منتقل کرده و در <span class="ltr-text">40 mL</span> فاز متحرک و <span class="ltr-text">1 mL</span> از <span class="ltr-text">10%</span> آمونیوم هیدروکسید حل کنید. با فاز متحرک به حجم برسانید.</p>
                 <p class="mb-4">محلول نمونه: <span class="ltr-text">4.0 mL</span> از محلول استوک نمونه و <span class="ltr-text">4.0 mL</span> از محلول استاندارد داخلی را به یک فلاسک حجمی <span class="ltr-text">50-mL</span> منتقل کرده و با فاز متحرک به حجم برسانید.</p>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم کروماتوگرافی</h4>
-                <p class="mb-4">(به کروماتوگرافی <span class="ltr-text">á621ñ</span>، مناسب بودن سیستم مراجعه کنید.)</p>
+                <p class="mb-4">(به کروماتوگرافی <span class="ltr-text"><a href="General chapters/621.html" class="text-blue-600 hover:underline" target="_blank">621</a></span>، مناسب بودن سیستم مراجعه کنید.)</p>
                 <p class="mb-4">حالت: LC</p>
                 <p class="mb-4">آشکارساز: UV <span class="ltr-text">280 nm</span></p>
                 <p class="mb-4">ستون: <span class="ltr-text">4.0-mm × 25-cm</span>؛ بسته‌بندی <span class="ltr-text">L1</span></p>
@@ -197,7 +195,7 @@
         <div id="impurities" class="tab-content hidden">
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• باقیمانده در اثر احتراق <span class="ltr-text">á281ñ</span>: <span class="ltr-text">NMT 0.3%</span></h4>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• باقیمانده در اثر احتراق <span class="ltr-text"><a href="General chapters/281.html" class="text-blue-600 hover:underline" target="_blank">281</a></span>: <span class="ltr-text">NMT 0.3%</span></h4>
                 <div class="card interactive-card">
                     <h3 class="text-xl font-semibold text-blue-600 mb-2">حد باقیمانده در اثر احتراق</h3>
                     <div class="formula-display">
@@ -269,7 +267,7 @@
         <div id="specific-tests" class="tab-content hidden">
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• تعیین آب، روش I <span class="ltr-text">á921ñ</span></h4>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• تعیین آب، روش I <span class="ltr-text"><a href="General chapters/921.html" class="text-blue-600 hover:underline" target="_blank">921</a></span></h4>
                 <p class="mb-4">تجزیه و تحلیل: طبق روش ذکر شده در فصل عمل کنید، به جز اینکه حلال متانول را قبل و در حین افزودن نمونه آزمایش و در طول تیتراسیون هم بزنید.</p>
                 <p class="mb-4">معیارهای پذیرش: <span class="ltr-text">NMT 8.5%</span></p>
 
@@ -297,7 +295,7 @@
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• بسته‌بندی و نگهداری</h4>
                 <p class="mb-4">در ظروف دربسته، مقاوم در برابر نور نگهداری شود.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• استانداردهای مرجع USP <span class="ltr-text">á11ñ</span></h4>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• استانداردهای مرجع USP <span class="ltr-text"><a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></span></h4>
                 <p class="mb-4">USP Folic Acid RS</p>
             </div>
         </div>
@@ -404,5 +402,6 @@
         }
 
     </script>
+
 </body>
 </html>

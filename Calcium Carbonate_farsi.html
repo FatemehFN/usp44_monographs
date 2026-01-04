@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف کلسیم کربنات (USP)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="text/javascript" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
     <style>
         body {
@@ -83,24 +86,10 @@
             cursor: pointer;
             border: none;
         }
-        .additional-spec-input {
-            shadow: appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline;
-        }
-        .status-dropdown {
-            shadow: appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48;
-            width: 12rem; /* 192px */
-            background-color: #fff;
-            border-color: #d1d5db;
-        }
-        .calculation-input {
-             ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2;
-             width: 16rem; /* 256px */
-             background-color: #fff;
-             border-color: #d1d5db;
-        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+
 
     <div class="container mx-auto p-4 max-w-4xl">
 
@@ -125,14 +114,14 @@
         <div id="identification" class="tab-content card hidden">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
             <h3 class="text-xl font-semibold text-blue-600 mb-2">تست‌های شناسایی - عمومی</h3>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شناسایی کلسیم <span class="ltr-text">(191)</span></h4>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شناسایی کلسیم <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a></h4>
             <p>اضافه کردن اسید استیک به آن باعث ایجاد کف (حضور کربنات) می‌شود، و محلول حاصل، پس از جوشاندن، مطابق با الزامات تست‌ها است.</p>
         </div>
 
         <!-- Assay Tab -->
         <div id="assay" class="tab-content card hidden">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تیتراسیون <span class="ltr-text">(541)</span></h4>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a></h4>
 
             <div class="card interactive-card">
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">نمونه:</h3>
@@ -140,7 +129,7 @@
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">شاهد:</h3>
                 <p>100 میلی‌لیتر آب و 15 میلی‌لیتر سدیم هیدروکسید 1 نرمال</p>
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">سیستم تیتراسیون</h3>
-                <p>(به تیتراسیون <span class="ltr-text">(541)</span> مراجعه کنید)</p>
+                <p>(به تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید)</p>
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">حالت:</h3>
                 <p>تیتراسیون مستقیم</p>
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">تیترانت:</h3>
@@ -225,23 +214,23 @@
                 <p>حداکثر <span class="ltr-text">0.2%</span>؛ وزن باقیمانده نباید از <span class="ltr-text">10</span> میلی‌گرم تجاوز کند.</p>
             </div>
 
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">آرسنیک، روش I <span class="ltr-text">(211)</span></h3>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آرسنیک، روش I <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a></h3>
             <div class="card interactive-card">
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه:</h4>
                 <p>1.0 گرم را به آرامی در 15 میلی‌لیتر اسید هیدروکلریک حل کرده و با آب به حجم 55 میلی‌لیتر برسانید.</p>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل:</h4>
-                <p>از افزودن 20 میلی‌لیتر اسید سولفوریک 7 نرمال مشخص شده در رویه روش I آرسنیک <span class="ltr-text">(211)</span> صرف نظر کنید.</p>
+                <p>از افزودن 20 میلی‌لیتر اسید سولفوریک 7 نرمال مشخص شده در رویه روش I آرسنیک <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a> صرف نظر کنید.</p>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
                 <p>حداکثر <span class="ltr-text">3</span> ppm</p>
                 <div class="mt-4">
                     <label for="arsenicStatus" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                    <select id="arsenicStatus" name="arsenicStatus" class="status-dropdown">
+                    <select id="arsenicStatus" name="arsenicStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
                 </div>
-                <textarea id="arsenicAdditionalSpecs" name="arsenicAdditionalSpecs" rows="3" placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4"></textarea>
+                <textarea id="arsenicAdditionalSpecs" name="arsenicAdditionalSpecs" rows="3" placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
             <h3 class="text-xl font-semibold text-blue-600 mb-2">باریم</h3>
@@ -249,23 +238,23 @@
                 <p>یک سیم پلاتینی که در فیلتر بدست آمده از تست مواد نامحلول در اسید غوطه‌ور شده و در شعله غیر نورانی نگه داشته شده است، رنگ سبز ایجاد نمی‌کند.</p>
                 <div class="mt-4">
                     <label for="bariumStatus" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                    <select id="bariumStatus" name="bariumStatus" class="status-dropdown">
+                    <select id="bariumStatus" name="bariumStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
                 </div>
-                <textarea id="bariumAdditionalSpecs" name="bariumAdditionalSpecs" rows="3" placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4"></textarea>
+                <textarea id="bariumAdditionalSpecs" name="bariumAdditionalSpecs" rows="3" placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">آهن <span class="ltr-text">(241)</span></h3>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آهن <a href="General chapters/241.html" class="text-blue-600 hover:underline" target="_blank">241</a></h3>
             <div class="card interactive-card">
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه:</h4>
                 <p><span class="ltr-text">40</span> میلی‌گرم در <span class="ltr-text">5</span> میلی‌لیتر اسید هیدروکلریک 2 نرمال. با کمک آب به یک بشر منتقل کرده و با آب به حجم <span class="ltr-text">10</span> میلی‌لیتر برسانید.</p>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استاندارد:</h4>
-                <p><span class="ltr-text">4.0</span> میلی‌لیتر از محلول استاندارد آهن، آماده شده طبق دستورالعمل آهن <span class="ltr-text">(241)</span> را به یک بشر منتقل کرده و با آب به حجم <span class="ltr-text">10</span> میلی‌لیتر برسانید.</p>
+                <p><span class="ltr-text">4.0</span> میلی‌لیتر از محلول استاندارد آهن، آماده شده طبق دستورالعمل آهن <a href="General chapters/241.html" class="text-blue-600 hover:underline" target="_blank">241</a> را به یک بشر منتقل کرده و با آب به حجم <span class="ltr-text">10</span> میلی‌لیتر برسانید.</p>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط دستگاهی</h4>
-                <p>(به طیف‌سنجی فرابنفش-مرئی <span class="ltr-text">(857)</span> مراجعه کنید)</p>
+                <p>(به طیف‌سنجی فرابنفش-مرئی <a href="General chapters/857.html" class="text-blue-600 hover:underline" target="_blank">857</a> مراجعه کنید)</p>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">طول موج تحلیلی:</h4>
                 <p><span class="ltr-text">530</span> نانومتر</p>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شاهد:</h4>
@@ -276,16 +265,16 @@
                 <p>حداکثر <span class="ltr-text">0.1%</span>؛ جذب محلول حاصل از محلول نمونه از محلول استاندارد تجاوز نکند.</p>
                 <div class="mt-4">
                     <label for="ironStatus" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                    <select id="ironStatus" name="ironStatus" class="status-dropdown">
+                    <select id="ironStatus" name="ironStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
                 </div>
-                <textarea id="ironAdditionalSpecs" name="ironAdditionalSpecs" rows="3" placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4"></textarea>
+                <textarea id="ironAdditionalSpecs" name="ironAdditionalSpecs" rows="3" placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">سرب <span class="ltr-text">(251)</span></h3>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">سرب <a href="General chapters/251.html" class="text-blue-600 hover:underline" target="_blank">251</a></h3>
             <div class="card interactive-card">
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه:</h4>
                 <p><span class="ltr-text">1.0</span> گرم در <span class="ltr-text">5</span> میلی‌لیتر آب</p>
@@ -295,13 +284,13 @@
                 <p>حداکثر <span class="ltr-text">3</span> ppm</p>
                 <div class="mt-4">
                     <label for="leadStatus" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                    <select id="leadStatus" name="leadStatus" class="status-dropdown">
+                    <select id="leadStatus" name="leadStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
                 </div>
-                <textarea id="leadAdditionalSpecs" name="leadAdditionalSpecs" rows="3" placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4"></textarea>
+                <textarea id="leadAdditionalSpecs" name="leadAdditionalSpecs" rows="3" placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
             <h3 class="text-xl font-semibold text-blue-600 mb-2">حد فلوراید</h3>
@@ -316,7 +305,7 @@
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استاندارد:</h4>
                 <p><span class="ltr-text">20.0</span> میلی‌لیتر از محلول استاندارد مادر را با <span class="ltr-text">50.0</span> میلی‌لیتر محلول A مخلوط کرده و با آب به حجم <span class="ltr-text">100.0</span> میلی‌لیتر برسانید. [توجه - هر میلی‌لیتر از این محلول حاوی <span class="ltr-text">100</span> میکروگرم یون فلوراید است.]</p>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم الکترود:</h4>
-                <p>از یک الکترود حساس به یون فلوراید و یک الکترود مرجع نقره/کلرید نقره که به یک pH متر با قابلیت اندازه‌گیری پتانسیل با حداقل تکرارپذیری <span class="ltr-text">±0.2</span> میلی‌ولت متصل است، استفاده کنید (به pH <span class="ltr-text">(791)</span> مراجعه کنید).</p>
+                <p>از یک الکترود حساس به یون فلوراید و یک الکترود مرجع نقره/کلرید نقره که به یک pH متر با قابلیت اندازه‌گیری پتانسیل با حداقل تکرارپذیری <span class="ltr-text">±0.2</span> میلی‌ولت متصل است، استفاده کنید (به pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a> مراجعه کنید).</p>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">خط پاسخ استاندارد:</h4>
                 <p><span class="ltr-text">50.0</span> میلی‌لیتر از محلول A و <span class="ltr-text">4.0</span> میلی‌لیتر اسید هیدروکلریک را به یک بشر منتقل کرده و با آب به حجم <span class="ltr-text">100</span> میلی‌لیتر برسانید. یک همزن مغناطیسی پوشیده از پلاستیک اضافه کرده، الکترودها را در محلول قرار داده، به مدت 15 دقیقه هم بزنید و پتانسیل را بر حسب میلی‌ولت بخوانید. هم زدن را ادامه داده و در فواصل 5 دقیقه، <span class="ltr-text">100</span>، <span class="ltr-text">100</span>، <span class="ltr-text">300</span> و <span class="ltr-text">500</span> میکرولیتر از محلول استاندارد اضافه کنید و پتانسیل را 5 دقیقه پس از هر افزودن بخوانید. لگاریتم غلظت‌های تجمعی یون فلوراید (<span class="ltr-text">0.1</span>، <span class="ltr-text">0.2</span>، <span class="ltr-text">0.5</span> و <span class="ltr-text">1.0</span> میکروگرم/میلی‌لیتر) را در مقابل پتانسیل بر حسب میلی‌ولت رسم کنید.</p>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل:</h4>
@@ -385,30 +374,30 @@
                 <p>حداکثر <span class="ltr-text">1.0%</span>؛ وزن باقیمانده نباید از <span class="ltr-text">5</span> میلی‌گرم تجاوز کند.</p>
             </div>
 
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">جیوه، روش IIa <span class="ltr-text">(261)</span></h3>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">جیوه، روش IIa <a href="General chapters/261.html" class="text-blue-600 hover:underline" target="_blank">261</a></h3>
             <div class="card interactive-card">
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول مادر جیوه و محلول استاندارد جیوه:</h4>
-                <p>طبق دستورالعمل جیوه <span class="ltr-text">(261)</span> عمل کنید.</p>
+                <p>طبق دستورالعمل جیوه <a href="General chapters/261.html" class="text-blue-600 hover:underline" target="_blank">261</a> عمل کنید.</p>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استاندارد:</h4>
-                <p>طبق دستورالعمل جیوه <span class="ltr-text">(261)</span> عمل کنید، بجز استفاده از 3 میلی‌لیتر اسید هیدروکلریک به جای 3 میلی‌لیتر اسید سولفوریک.</p>
+                <p>طبق دستورالعمل جیوه <a href="General chapters/261.html" class="text-blue-600 hover:underline" target="_blank">261</a> عمل کنید، بجز استفاده از 3 میلی‌لیتر اسید هیدروکلریک به جای 3 میلی‌لیتر اسید سولفوریک.</p>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول مادر نمونه:</h4>
                 <p><span class="ltr-text">4.0</span> گرم در یک بشر 100 میلی‌لیتری، و با احتیاط در 14 میلی‌لیتر اسید هیدروکلریک 6 نرمال حل کنید.</p>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه:</h4>
-                <p>طبق دستورالعمل جیوه <span class="ltr-text">(261)</span> عمل کنید، بجز استفاده از 3 میلی‌لیتر اسید هیدروکلریک به جای 3 میلی‌لیتر اسید سولفوریک.</p>
+                <p>طبق دستورالعمل جیوه <a href="General chapters/261.html" class="text-blue-600 hover:underline" target="_blank">261</a> عمل کنید، بجز استفاده از 3 میلی‌لیتر اسید هیدروکلریک به جای 3 میلی‌لیتر اسید سولفوریک.</p>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل</h4>
                 <p>نمونه‌ها: محلول استاندارد و محلول نمونه</p>
-                <p>طبق دستورالعمل جیوه <span class="ltr-text">(261)</span> عمل کنید.</p>
+                <p>طبق دستورالعمل جیوه <a href="General chapters/261.html" class="text-blue-600 hover:underline" target="_blank">261</a> عمل کنید.</p>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
                 <p>حداکثر <span class="ltr-text">0.5</span> ppm</p>
                 <div class="mt-4">
                     <label for="mercuryStatus" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                    <select id="mercuryStatus" name="mercuryStatus" class="status-dropdown">
+                    <select id="mercuryStatus" name="mercuryStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
                 </div>
-                <textarea id="mercuryAdditionalSpecs" name="mercuryAdditionalSpecs" rows="3" placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4"></textarea>
+                <textarea id="mercuryAdditionalSpecs" name="mercuryAdditionalSpecs" rows="3" placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
         </div>
 
@@ -416,7 +405,7 @@
         <div id="specific_tests" class="tab-content card hidden">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
 
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">کاهش وزن در اثر خشک شدن <span class="ltr-text">(731)</span></h3>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">کاهش وزن در اثر خشک شدن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h3>
             <div class="card interactive-card">
                 <p>نمونه را در دمای <span class="ltr-text">200°</span> به مدت <span class="ltr-text">4</span> ساعت خشک کنید: حداکثر <span class="ltr-text">2.0%</span> از وزن خود را از دست می‌دهد.</p>
                 <div class="formula-display">
@@ -519,7 +508,7 @@
             <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته بندی و نگهداری</h3>
             <p>در ظروف کاملاً بسته نگهداری شود.</p>
 
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP <span class="ltr-text">(11)</span></h3>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h3>
             <p>USP سدیم فلوراید RS</p>
         </div>
 
@@ -1213,6 +1202,7 @@
             document.querySelector('.tab-button.tab-active').click();
         });
     </script>
+
 
 </body>
 </html>

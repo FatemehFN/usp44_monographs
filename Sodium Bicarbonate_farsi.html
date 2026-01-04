@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف سدیم بیکربنات (USP)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -82,49 +86,10 @@
             cursor: pointer;
             border: none;
         }
-        .additional-spec-input {
-             box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-        }
-        .status-dropdown {
-            border-color: #d1d5db;
-        }
-        .input-field-class {
-            direction: ltr;
-            text-align: left;
-            display: inline-block;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-            border: 1px solid #d1d5db;
-            background-color: #fff;
-            border-radius: 0.375rem;
-            width: 16rem; /* 256px */
-            padding: 0.5rem 0.75rem;
-            color: #374151;
-            line-height: 1.5;
-        }
-        .input-field-class:focus {
-            outline: none;
-            box-shadow: 0 0 0 2px #3b82f6;
-        }
-         .dropdown-class {
-            direction: ltr;
-            text-align: left;
-            display: inline-block;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-            border: 1px solid #d1d5db;
-            background-color: #fff;
-            border-radius: 0.375rem;
-            width: 12rem; /* 192px */
-            padding: 0.5rem 0.75rem;
-            color: #374151;
-            line-height: 1.5;
-        }
-        .dropdown-class:focus {
-            outline: none;
-            box-shadow: 0 0 0 2px #3b82f6;
-        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+
 
     <div class="container mx-auto p-4 max-w-4xl">
 
@@ -151,9 +116,9 @@
         <div id="identification" class="tab-content hidden">
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">A. آزمون‌های شناسایی - عمومی á191ñ، سدیم:</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">A. آزمون‌های شناسایی - عمومی <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a>، سدیم:</h3>
                 <p class="mb-4">الزامات را برآورده می‌کند.</p>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">B. آزمون‌های شناسایی - عمومی á191ñ، بیکربنات:</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">B. آزمون‌های شناسایی - عمومی <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a>، بیکربنات:</h3>
                 <p class="mb-4">الزامات را برآورده می‌کند.</p>
             </div>
         </div>
@@ -194,7 +159,7 @@
                     <div class="mt-1">
                         <span class="font-bold">وضعیت:</span> <span id="assay-status" class="inline-block"></span>
                     </div>
-                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
+                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
                 </div>
             </div>
         </div>
@@ -214,7 +179,7 @@
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
-                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
+                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">کربنات (در صورت برچسب‌گذاری برای همودیالیز)</h3>
@@ -264,7 +229,7 @@
                     <div class="mt-1">
                         <span class="font-bold">وضعیت:</span> <span id="carbonate-status" class="inline-block"></span>
                     </div>
-                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
+                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">کربنات معمولی</h3>
@@ -278,10 +243,10 @@
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
+                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
                 </div>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">کلراید و سولفات á221ñ، کلراید</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">کلراید و سولفات <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a>، کلراید</h3>
                 <p><span class="font-bold">نمونه:</span> 0.35 گرم</p>
                 <p><span class="font-bold">معیارهای پذیرش:</span> کلراید بیش از معادل 1.5 میلی‌لیتر اسید هیدروکلریک 0.0010 نیوتنی (حداکثر 0.015%) نباشد.</p>
                 <div class="interactive-card">
@@ -291,7 +256,7 @@
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
+                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">حد ترکیبات گوگردی</h3>
@@ -307,10 +272,10 @@
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
+                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
                 </div>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">آلومینیوم á206ñ (در صورت برچسب‌گذاری برای همودیالیز)</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">آلومینیوم <a href="General chapters/206.html" class="text-blue-600 hover:underline" target="_blank">206</a> (در صورت برچسب‌گذاری برای همودیالیز)</h3>
                 <p><span class="font-bold">آماده‌سازی تست:</span> 1.0 گرم سدیم بیکربنات را در یک فلاسک حجمی 100 میلی‌لیتری بریزید. با احتیاط 4 میلی‌لیتر اسید نیتریک اضافه کنید. به مدت 30 دقیقه سونوگرافی کنید و با آب تا حجم برسانید.</p>
                 <p><span class="font-bold">معیارهای پذیرش:</span> حداکثر 2 میکروگرم بر گرم</p>
                  <div class="interactive-card">
@@ -320,10 +285,10 @@
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
+                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
                 </div>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">آرسنیک á211ñ، روش I</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">آرسنیک <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a>، روش I</h3>
                 <p><span class="font-bold">آماده‌سازی تست:</span> 1.5 گرم سدیم بیکربنات را در 20 میلی‌لیتر اسید سولفوریک 7 نیوتنی حل کنید و 35 میلی‌لیتر آب اضافه کنید.</p>
                 <p><span class="font-bold">تحلیل:</span> همانطور که در بخش مربوطه ذکر شده عمل کنید، با حذف افزودن 20 میلی‌لیتر اسید سولفوریک 7 نیوتنی.</p>
                 <p><span class="font-bold">معیارهای پذیرش:</span> حداکثر 2 ppm</p>
@@ -334,7 +299,7 @@
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
+                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">کلسیم (در صورت برچسب‌گذاری برای همودیالیز)</h3>
@@ -344,7 +309,7 @@
                 <p><span class="font-bold">محلول نمونه:</span> 3.0 گرم سدیم بیکربنات را در یک فلاسک حجمی 100 میلی‌لیتری بریزید. 6 میلی‌لیتر اسید هیدروکلریک 6 نیوتنی و 1 گرم پتاسیم کلراید اضافه کنید و با آب تا حجم برسانید.</p>
                 <p><span class="font-bold">بلنک:</span> محلول پتاسیم کلراید</p>
                 <p><span class="font-bold">شرایط دستگاهی</span></p>
-                <p>(به اسپکتروسکوپی جذب اتمی á852ñ مراجعه کنید.)</p>
+                <p>(به اسپکتروسکوپی جذب اتمی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید.)</p>
                 <p><span class="font-bold">حالت:</span> اسپکتروفتومتری جذب اتمی</p>
                 <p><span class="font-bold">طول موج تحلیلی:</span> خط انتشار کلسیم در 422.7 نانومتر</p>
                 <p><span class="font-bold">لامپ:</span> کاتد توخالی کلسیم</p>
@@ -384,7 +349,7 @@
                     <div class="mt-1">
                         <span class="font-bold">وضعیت:</span> <span id="calcium-status" class="inline-block"></span>
                     </div>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
+                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">منیزیم (در صورت برچسب‌گذاری برای همودیالیز)</h3>
@@ -392,7 +357,7 @@
                 <p><span class="font-bold">محلول پتاسیم کلراید، محلول نمونه و بلنک:</span> همانطور که در آزمون کلسیم آمده عمل کنید.</p>
                 <p><span class="font-bold">محلول‌های استاندارد:</span> به 1.000 گرم منیزیم در یک بشر 250 میلی‌لیتری حاوی 20 میلی‌لیتر آب، با احتیاط 20 میلی‌لیتر اسید هیدروکلریک اضافه کنید، در صورت لزوم برای تکمیل واکنش گرم کنید. این محلول را در یک فلاسک حجمی 1000 میلی‌لیتری حاوی 10 گرم پتاسیم کلراید بریزید و با آب تا حجم برسانید. 10.0 میلی‌لیتر از این محلول را در یک فلاسک حجمی 100 میلی‌لیتری حاوی 1 گرم پتاسیم کلراید بریزید و با آب تا حجم برسانید. 10.0 میلی‌لیتر از این محلول را در یک فلاسک حجمی 100 میلی‌لیتری دوم بریزید و با محلول پتاسیم کلراید تا حجم برسانید. این محلول حاوی 10.0 میکروگرم بر میلی‌لیتر منیزیم است. 2.0، 3.0، 4.0 و 5.0 میلی‌لیتر از این محلول را در فلاسک‌های حجمی 100 میلی‌لیتری جداگانه (هر کدام حاوی 6 میلی‌لیتر اسید هیدروکلریک 6 نیوتنی) بریزید و با محلول پتاسیم کلراید تا حجم برسانید. این محلول‌های استاندارد به ترتیب حاوی 0.2، 0.3، 0.4 و 0.5 میکروگرم بر میلی‌لیتر منیزیم هستند.</p>
                 <p><span class="font-bold">شرایط دستگاهی</span></p>
-                <p>(به اسپکتروسکوپی جذب اتمی á852ñ مراجعه کنید.)</p>
+                <p>(به اسپکتروسکوپی جذب اتمی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید.)</p>
                 <p><span class="font-bold">حالت:</span> اسپکتروفتومتری جذب اتمی</p>
                 <p><span class="font-bold">طول موج تحلیلی:</span> خط انتشار منیزیم در 285.2 نانومتر</p>
                 <p><span class="font-bold">لامپ:</span> کاتد توخالی منیزیم</p>
@@ -432,7 +397,7 @@
                     <div class="mt-1">
                         <span class="font-bold">وضعیت:</span> <span id="magnesium-status" class="inline-block"></span>
                     </div>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
+                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">مس (در صورت برچسب‌گذاری برای همودیالیز)</h3>
@@ -443,7 +408,7 @@
                 <p><span class="font-bold">محلول نمونه اسپایک شده:</span> به 10.0 میلی‌لیتر محلول نمونه، 20 میکروگرم محلول استاندارد اضافه کنید. این محلول حاوی 0.02 میکروگرم بر میلی‌لیتر مس اضافه شده است.</p>
                 <p><span class="font-bold">بلنک:</span> رقیق کننده</p>
                 <p><span class="font-bold">شرایط دستگاهی</span></p>
-                <p>(به اسپکتروسکوپی جذب اتمی á852ñ مراجعه کنید.)</p>
+                <p>(به اسپکتروسکوپی جذب اتمی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید.)</p>
                 <p><span class="font-bold">حالت:</span> اسپکتروفتومتری جذب اتمی</p>
                 <p><span class="font-bold">طول موج تحلیلی:</span> خط انتشار مس در 324.7 نانومتر</p>
                 <p><span class="font-bold">لامپ:</span> کاتد توخالی مس</p>
@@ -480,15 +445,15 @@
                     <div class="mt-1">
                         <span class="font-bold">وضعیت:</span> <span id="copper-status" class="inline-block"></span>
                     </div>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
+                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
                 </div>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">آهن á241ñ (در صورت برچسب‌گذاری برای همودیالیز)</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">آهن <a href="General chapters/241.html" class="text-blue-600 hover:underline" target="_blank">241</a> (در صورت برچسب‌گذاری برای همودیالیز)</h3>
                 <p><span class="font-bold">محلول نمونه:</span> 2.0 گرم سدیم بیکربنات را در یک بشر بریزید و با اسید هیدروکلریک خنثی کنید و حجم اسید مصرفی را یادداشت کنید. این محلول را با کمک آب در یک فلاسک حجمی 25 میلی‌لیتری منتقل کنید.</p>
                 <p><span class="font-bold">محلول استاندارد:</span> 1.0 میلی‌لیتر از محلول استاندارد آهن را در یک فلاسک حجمی 25 میلی‌لیتری بریزید. همان حجم اسید هیدروکلریک را که برای تهیه محلول نمونه استفاده شد، اضافه کنید.</p>
                 <p><span class="font-bold">بلنک:</span> از همان حجم اسید هیدروکلریک در یک فلاسک حجمی 25 میلی‌لیتری که برای تهیه محلول نمونه استفاده شد، استفاده کنید.</p>
                 <p><span class="font-bold">شرایط دستگاهی</span></p>
-                <p>(به اسپکتروسکوپی فرابنفش-مرئی á857ñ مراجعه کنید.)</p>
+                <p>(به اسپکتروسکوپی فرابنفش-مرئی <a href="General chapters/857.html" class="text-blue-600 hover:underline" target="_blank">857</a> مراجعه کنید.)</p>
                 <p><span class="font-bold">حالت:</span> UV-Vis</p>
                 <p><span class="font-bold">طول موج تحلیلی:</span> 480 نانومتر</p>
                 <p><span class="font-bold">تحلیل</span></p>
@@ -503,7 +468,7 @@
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
+                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">حد آمونیاک</h3>
@@ -549,7 +514,7 @@
                 <p><span class="font-bold">محلول استاندارد:</span> 0.02 میکروگرم بر میلی‌لیتر یون‌های آمونیوم از محلول استاندارد یون کروماتوگرافی آمونیوم قابل ردیابی NIST که به صورت تجاری در دسترس است</p>
                 <p><span class="font-bold">محلول نمونه:</span> 1 میلی‌گرم بر میلی‌لیتر سدیم بیکربنات در آب</p>
                 <p><span class="font-bold">سیستم کروماتوگرافی</span></p>
-                <p>(به کروماتوگرافی á621ñ، سیستم مناسبت مراجعه کنید.)</p>
+                <p>(به کروماتوگرافی <a href="General chapters/621.html" class="text-blue-600 hover:underline" target="_blank">621</a>، سیستم مناسبت مراجعه کنید.)</p>
                 <p><span class="font-bold">حالت:</span> LC</p>
                 <p><span class="font-bold">دشکننده:</span> هدایت با سرکوب. [نکته—برای عملکرد بهتر، سرکوب کننده 2 میلی‌متری توصیه می‌شود.]</p>
                 <p><span class="font-bold">ستون‌ها</span></p>
@@ -577,7 +542,7 @@
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
+                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">حد مواد آلی (در صورت برچسب‌گذاری برای همودیالیز)</h3>
@@ -635,7 +600,7 @@
                     <div class="mt-1">
                         <span class="font-bold">وضعیت:</span> <span id="organics-status" class="inline-block"></span>
                     </div>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
+                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
                 </div>
 
             </div>
@@ -646,7 +611,7 @@
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">از دست دادن در هنگام خشک شدن á731ñ</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">از دست دادن در هنگام خشک شدن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h3>
                 <p><span class="font-bold">نمونه:</span> 4 گرم</p>
                 <p><span class="font-bold">تحلیل:</span> نمونه را به مدت 4 ساعت روی سیلیکاژل خشک کنید.</p>
                 <p><span class="font-bold">معیارهای پذیرش:</span> حداکثر 0.25%</p>
@@ -676,7 +641,7 @@
                     <div class="mt-1">
                         <span class="font-bold">وضعیت:</span> <span id="lod-status" class="inline-block"></span>
                     </div>
-                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
+                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">باقیمانده پس از اشتعال</h3>
@@ -707,7 +672,7 @@
                     <div class="mt-1">
                         <span class="font-bold">وضعیت:</span> <span id="roi-status" class="inline-block"></span>
                     </div>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
+                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">مواد قلیایی و نمک‌های اسیدی (حد)</h3>
@@ -719,7 +684,7 @@
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
+                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">مواد نامحلول در الکل</h3>
@@ -731,7 +696,7 @@
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
+                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
                 </div>
 
                  <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">مواد کاهنده</h3>
@@ -773,7 +738,7 @@
                     <div class="mt-1">
                         <span class="font-bold">وضعیت:</span> <span id="reducing-status" class="inline-block"></span>
                     </div>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
+                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
                 </div>
             </div>
         </div>
@@ -1035,6 +1000,7 @@
             showTab('definition');
         });
     </script>
+
 
 </body>
 </html>

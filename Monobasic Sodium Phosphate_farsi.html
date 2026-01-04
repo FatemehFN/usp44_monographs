@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف فسفات سدیم مونو بازی (USP)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -83,27 +86,10 @@
             cursor: pointer;
             border: none;
         }
-        .additional-spec-input {
-            shadow: appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline;
-        }
-        .status-dropdown {
-            shadow: appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48;
-            width: 12rem; /* 192px */
-            background-color: #fff;
-            border-color: #d1d5db;
-        }
-        .input-field {
-            direction: ltr;
-            text-align: left;
-            display: inline-block;
-            shadow: appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2;
-            width: 16rem; /* 256px */
-            background-color: #fff;
-            border-color: #d1d5db;
-        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+
     <div class="container mx-auto p-4 max-w-4xl">
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">فسفات سدیم مونو بازی</h1>
 
@@ -207,7 +193,7 @@
                     <div>
                         <span id="insoluble_status"></span>
                     </div>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input mt-4"></textarea>
+                    <textarea placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">کلرید و سولفات</h3>
@@ -229,12 +215,12 @@
                 <div class="interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت آلومینیوم، کلسیم و عناصر مرتبط</h4>
                     <label for="aluminum_status">وضعیت:</label><br>
-                    <select id="aluminum_status" name="aluminum_status" class="status-dropdown">
+                    <select id="aluminum_status" name="aluminum_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">قبول</option>
                         <option value="Fail">رد</option>
                     </select>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input mt-4"></textarea>
+                    <textarea placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">آرسنیک، روش I <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a></h3>
@@ -276,7 +262,7 @@
                     <div>
                         <span id="arsenic_status"></span>
                     </div>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input mt-4"></textarea>
+                    <textarea placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
         </div>
@@ -292,12 +278,12 @@
                 <div class="interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت pH</h4>
                     <label for="ph_status">وضعیت:</label><br>
-                    <select id="ph_status" name="ph_status" class="status-dropdown">
+                    <select id="ph_status" name="ph_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">قبول</option>
                         <option value="Fail">رد</option>
                     </select>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input mt-4"></textarea>
+                    <textarea placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">تعیین آب، روش I <a href="General chapters/921.html" class="text-blue-600 hover:underline" target="_blank">921</a></h3>
@@ -352,7 +338,7 @@
                     <div>
                         <span id="lod_status"></span>
                     </div>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input mt-4"></textarea>
+                    <textarea placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">مانده در اثر اشتعال (Residue on Ignition)</h3>
@@ -382,7 +368,7 @@
                     <div>
                         <span id="roi_status"></span>
                     </div>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input mt-4"></textarea>
+                    <textarea placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
             </div>
@@ -572,5 +558,6 @@
             document.querySelector('.tab-button').click();
         });
     </script>
+
 </body>
 </html>

@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف فروس فومارات (USP)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -82,50 +86,10 @@
             cursor: pointer;
             border: none;
         }
-        .additional-spec-input {
-            shadow-appearance: none;
-            border: 1px solid #d1d5db;
-            border-radius: 0.375rem;
-            width: 100%;
-            padding: 0.5rem 0.75rem;
-            color: #374151;
-            line-height: 1.5;
-            focus:outline-none;
-            focus:shadow-outline;
-            margin-top: 0.5rem;
-        }
-        .status-dropdown {
-            shadow-appearance: none;
-            border: 1px solid #d1d5db;
-            background-color: white;
-            border-radius: 0.375rem;
-            width: 12rem; /* 192px */
-            padding: 0.5rem 0.75rem;
-            color: #374151;
-            line-height: 1.5;
-            focus:outline-none;
-            focus:shadow-outline;
-        }
-        .input-field-custom {
-            direction: ltr;
-            text-align: left;
-            display: inline-block;
-            shadow-appearance: none;
-            border: 1px solid #d1d5db;
-            background-color: white;
-            border-radius: 0.375rem;
-            width: 16rem; /* 256px */
-            padding: 0.5rem 0.75rem;
-            color: #374151;
-            line-height: 1.5;
-            focus:outline-none;
-            focus:shadow-outline;
-            margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+
     <div class="container mx-auto p-4 max-w-4xl">
 
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">مونوگراف فروس فومارات (USP)</h1>
@@ -151,7 +115,7 @@
             <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. جذب مادون قرمز</h3>
             <p>نمونه: به 1.5 گرم فروس فومارات، 25 میلی‌لیتر اسید کلریدریک رقیق (1 به 2) اضافه کنید. با آب تا 50 میلی‌لیتر رقیق کنید، برای حل شدن حرارت دهید، سپس خنک کرده و در یک کراشه شیشه‌ای متخلخل ریز فیلتر کنید. رسوب را با اسید کلریدریک رقیق (3 به 100) بشویید، فیلتر را برای تست شناسایی B نگه دارید، و رسوب را در دمای 105 درجه سانتی‌گراد خشک کنید.</p>
             <p>معیارهای پذیرش: جذب IR پراکنده در پتاسیم بروماید از رسوب خشک شده، فقط در همان طول موج‌هایی که آماده‌سازی مشابه از USP Fumaric Acid RS دارد، حداکثر را نشان می‌دهد.</p>
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">ب. تست‌های شناسایی - عمومی، آهن á191ñ</h3>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">ب. تست‌های شناسایی - عمومی، آهن <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a></h3>
             <p>بخشی از فیلتر به دست آمده در تست شناسایی A، الزامات را برآورده می‌کند.</p>
         </div>
 
@@ -162,7 +126,7 @@
             <p>نمونه: 500 میلی‌گرم فروس فومارات</p>
             <p>شاهد: مانند بخش آنالیز، بدون نمونه عمل کنید.</p>
             <p>سیستم تیتراسیون</p>
-            <p>(به تیتراسیون á541ñ مراجعه کنید.)</p>
+            <p>(به تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید.)</p>
             <p>حالت: تیتراسیون مستقیم</p>
             <p>تیترانت: 0.1 نرمال سولفات سریوم VS</p>
             <p>تشخیص نقطه پایانی: بصری</p>
@@ -206,7 +170,7 @@
                     <span id="status_assay" class="font-bold"></span>
                 </div>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea class="additional-spec-input"></textarea>
+                <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
         </div>
 
@@ -231,10 +195,10 @@
                     <span id="status_sulfate" class="font-bold"></span>
                 </div>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea class="additional-spec-input"></textarea>
+                <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">آرسنیک، روش I á211ñ</h3>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آرسنیک، روش I <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a></h3>
             <p>آماده‌سازی تست: 2.0 گرم در 10 میلی‌لیتر آب، 10 میلی‌لیتر اسید سولفوریک اضافه کنید. حرارت دهید تا اسید فوماریک کاملاً رسوب کند، خنک کنید، 30 میلی‌لیتر آب اضافه کرده و در یک فلاسک حجمی 100 میلی‌لیتری فیلتر کنید. رسوب را با آب بشویید، شستشوها را به فلاسک اضافه کنید، سپس با آب به حجم برسانید و مخلوط کنید. 50.0 میلی‌لیتر از این محلول را در فلاسک ژنراتور آرسین منتقل کرده و با آب تا 55 میلی‌لیتر رقیق کنید.</p>
             <p>آنالیز: مطابق با فصل عمل کنید، به جز حذف افزودن 20 میلی‌لیتر اسید سولفوریک 7N که برای رویه مشخص شده است.</p>
             <p>معیارهای پذیرش: حداکثر 3 ppm</p>
@@ -259,7 +223,7 @@
                     <span id="status_arsenic" class="font-bold"></span>
                 </div>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea class="additional-spec-input"></textarea>
+                <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
 
@@ -267,7 +231,7 @@
             <p>نمونه: 2 گرم فروس فومارات</p>
             <p>شاهد: مطابق با بخش آنالیز، بدون نمونه عمل کنید.</p>
             <p>سیستم تیتراسیون</p>
-            <p>(به تیتراسیون á541ñ مراجعه کنید.)</p>
+            <p>(به تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید.)</p>
             <p>حالت: تیتراسیون مستقیم</p>
             <p>تیترانت: 0.1 نرمال سدیم تیوسولفات VS</p>
             <p>تشخیص نقطه پایانی: بصری</p>
@@ -311,7 +275,7 @@
                     <span id="status_fe" class="font-bold"></span>
                 </div>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea class="additional-spec-input"></textarea>
+                <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
             <h3 class="text-xl font-semibold text-blue-600 mb-2">حد سرب</h3>
@@ -323,7 +287,7 @@
             <p>شاهد: به یک بشر 50 میلی‌لیتری 6 میلی‌لیتر اسید نیتریک و 10 میلی‌لیتر اسید پرکلریک اضافه کرده و در هود تا خشکی تبخیر کنید. [احتیاط — از اسید پرکلریک در هود بخار با تهویه مناسب و اقدامات احتیاطی لازم استفاده کنید.]</p>
             <p>خنک کنید، باقیمانده را در 10 میلی‌لیتر اسید کلریدریک 9 نرمال حل کرده و با کمک حدود 10 میلی‌لیتر آب به یک فلاسک حجمی 50 میلی‌لیتری منتقل کنید. 20 میلی‌لیتر محلول اسید اسکوربیک-سدیم یدید و 5.0 میلی‌لیتر محلول تری‌اوکتیل‌فسفین اکسید اضافه کرده، به مدت 30 ثانیه تکان دهید و اجازه دهید جدا شوند. آب اضافه کنید تا لایه حلال آلی به گردن فلاسک برسد، دوباره تکان دهید و اجازه دهید جدا شود. لایه آلی، شاهد است و حاوی 0 میکروگرم/میلی‌لیتر سرب است.</p>
             <p>شرایط دستگاهی</p>
-            <p>(به طیف‌سنجی جذب اتمی á852ñ مراجعه کنید.)</p>
+            <p>(به طیف‌سنجی جذب اتمی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید.)</p>
             <p>حالت: طیف‌سنجی جذب اتمی</p>
             <p>طول موج تحلیلی: 283.3 nm</p>
             <p>لامپ: کاتد توخالی سرب</p>
@@ -364,12 +328,12 @@
                     <span id="status_lead" class="font-bold"></span>
                 </div>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea class="additional-spec-input"></textarea>
+                <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
             <h3 class="text-xl font-semibold text-blue-600 mb-2">جیوه</h3>
             <p>[نکته — این تست را در نور کم انجام دهید، زیرا دیتیزونات جیوه به نور حساس است.]</p>
-            <p>محلول هیدروکسیلامین هیدروکلراید، محلول جیوه استاندارد، محلول استخراج دیتیزون و محلول رقیق شده استخراج دیتیزون: مطابق با جیوه á261ñ، روش I آماده کنید.</p>
+            <p>محلول هیدروکسیلامین هیدروکلراید، محلول جیوه استاندارد، محلول استخراج دیتیزون و محلول رقیق شده استخراج دیتیزون: مطابق با جیوه <a href="General chapters/261.html" class="text-blue-600 hover:underline" target="_blank">261</a>، روش I آماده کنید.</p>
             <p>محلول کنترل: 3.0 میلی‌لیتر محلول جیوه استاندارد، 30 میلی‌لیتر اسید نیتریک رقیق (1 در 10)، 5 میلی‌لیتر محلول سیترات سدیم 250 میلی‌گرم/میلی‌لیتر و 1 میلی‌لیتر محلول هیدروکسیلامین هیدروکلراید را مخلوط کنید.</p>
             <p>آماده‌سازی تست: 1 گرم فروس فومارات را در 30 میلی‌لیتر اسید نیتریک رقیق (1 در 10) با کمک حرارت، روی حمام بخار، حل کنید. با غوطه‌ور کردن در حمام یخ، به سرعت خنک کنید و از یک فیلتر با تخلخل ریز که قبلاً با اسید نیتریک رقیق (1 در 10) و آب شسته شده است، عبور دهید. به فیلتر 20 میلی‌لیتر محلول سیترات سدیم 250 میلی‌گرم/میلی‌لیتر و 1 میلی‌لیتر محلول هیدروکسیلامین هیدروکلراید اضافه کنید.</p>
             <p>آنالیز: محلول کنترل را با آمونیاک به pH 1.8 تنظیم کنید و محلول نمونه را با اسید سولفوریک به pH 1.8 تنظیم کنید. به طور جداگانه محلول‌ها را در جداکننده‌ها منتقل کنید. محلول نمونه و محلول کنترل را به صورت موازی به شرح زیر عمل کنید.</p>
@@ -380,13 +344,13 @@
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب حد جیوه</h4>
                 <p>این تست نیازی به محاسبه ندارد. وضعیت را انتخاب کنید.</p>
                 <label for="status_mercury" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                <select id="status_mercury" name="status_mercury" class="status-dropdown">
+                <select id="status_mercury" name="status_mercury" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                     <option value=""></option>
                     <option value="Pass">Pass</option>
                     <option value="Fail">Fail</option>
                 </select>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea class="additional-spec-input"></textarea>
+                <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
         </div>
@@ -395,7 +359,7 @@
         <div id="specific-tests" class="tab-content hidden p-4 card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
 
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">از دست دادن وزن در خشک کردن á731ñ</h3>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">از دست دادن وزن در خشک کردن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h3>
             <p>آنالیز: در دمای 105 درجه سانتی‌گراد به مدت 16 ساعت خشک کنید.</p>
             <p>معیارهای پذیرش: حداکثر 1.5%</p>
 
@@ -422,7 +386,7 @@
                     <span id="status_lod" class="font-bold"></span>
                 </div>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea class="additional-spec-input"></textarea>
+                <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
         </div>
@@ -432,7 +396,7 @@
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
             <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته بندی و نگهداری</h3>
             <p>در ظروف خوب بسته بندی شده نگهداری شود.</p>
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP á11ñ</h3>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h3>
             <p>USP Fumaric Acid RS</p>
         </div>
 
@@ -618,5 +582,6 @@
             showTab('definition');
         });
     </script>
+
 </body>
 </html>

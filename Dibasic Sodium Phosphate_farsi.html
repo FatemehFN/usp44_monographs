@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف سدیم هیدروژن فسفات دو پایه (USP)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="text/javascript" async
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
     <style>
         body {
@@ -83,26 +86,10 @@
             cursor: pointer;
             border: none;
         }
-        .additional-spec-input {
-            shadow-md appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline;
-        }
-        .status-dropdown {
-            shadow-md appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48; /* w-48 is 12rem */
-        }
-        .input-field {
-            ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2; /* w-64 is 16rem */
-        }
-        .calculation-result {
-            margin-top: 0.5rem;
-            font-weight: bold;
-        }
-        .status-message {
-            margin-top: 0.5rem;
-            font-weight: bold;
-        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+
     <div class="container mx-auto p-4 max-w-4xl">
 
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">سدیم هیدروژن فسفات دو پایه</h1>
@@ -224,7 +211,7 @@
                     </div>
                     <div>
                         <label for="additional_specs_assay">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_specs_assay" name="additional_specs_assay" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional_specs_assay" name="additional_specs_assay" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
             </div>
@@ -267,7 +254,7 @@
                     </div>
                     <div>
                         <label for="additional_specs_insoluble">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_specs_insoluble" name="additional_specs_insoluble" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional_specs_insoluble" name="additional_specs_insoluble" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
 
@@ -320,7 +307,7 @@
                     </div>
                     <div>
                         <label for="additional_specs_arsenic">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_specs_arsenic" name="additional_specs_arsenic" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional_specs_arsenic" name="additional_specs_arsenic" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
             </div>
@@ -392,7 +379,7 @@
                     </div>
                     <div>
                         <label for="additional_specs_lod">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_specs_lod" name="additional_specs_lod" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional_specs_lod" name="additional_specs_lod" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
 
@@ -427,7 +414,7 @@
                     </div>
                     <div>
                         <label for="additional_specs_roi">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_specs_roi" name="additional_specs_roi" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional_specs_roi" name="additional_specs_roi" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
             </div>
@@ -625,5 +612,6 @@
             showTab('definition');
         });
     </script>
+
 </body>
 </html>

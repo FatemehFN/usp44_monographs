@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف سیترات روی (USP)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -82,27 +86,10 @@
             cursor: pointer;
             border: none;
         }
-        .status-dropdown, .additional-spec-input {
-             box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-        }
-        .status-dropdown {
-            width: 12rem; /* 192px */
-            background-color: #fff;
-            border-color: #d1d5db;
-        }
-        .additional-spec-input {
-            width: 100%;
-            background-color: #fff;
-            border-color: #d1d5db;
-        }
-        .input-field {
-            width: 16rem; /* 256px */
-            background-color: #fff;
-            border-color: #d1d5db;
-        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+
     <div class="container mx-auto p-4 max-w-4xl">
 
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">مونوگراف سیترات روی (USP)</h1>
@@ -128,9 +115,9 @@
         <div id="identification" style="display: none;">
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. آزمون‌های شناسایی - عمومی، روی á191ñ</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. آزمون‌های شناسایی - عمومی، روی <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a></h3>
                 <p>محلول (1 در 10) الزامات را برآورده می‌کند.</p>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">ب. آزمون‌های شناسایی - عمومی، سیترات á191ñ</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">ب. آزمون‌های شناسایی - عمومی، سیترات <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a></h3>
                 <p>محلول (1 در 10) الزامات را برآورده می‌کند.</p>
             </div>
         </div>
@@ -199,10 +186,10 @@
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات، کلرید á221ñ</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات، کلرید <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a></h3>
                 <p>قسمت <span class="ltr-text">1.0-g</span> هیچ کلریدی بیشتر از معادل <span class="ltr-text">0.7 mL</span> اسید هیدروکلریک <span class="ltr-text">0.020 N</span> نشان نمی‌دهد (حداکثر <span class="ltr-text">0.05%</span>).</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات، سولفات á221ñ</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات، سولفات <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a></h3>
                 <p>قسمت <span class="ltr-text">1.8-g</span> هیچ سولفاتی بیشتر از معادل <span class="ltr-text">0.5 mL</span> اسید سولفوریک <span class="ltr-text">0.020 N</span> نشان نمی‌دهد (حداکثر <span class="ltr-text">0.05%</span>).</p>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">حد آرسنیک، کادمیوم و سرب</h3>
@@ -330,7 +317,7 @@
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
 
                 <div class="card interactive-card">
-                    <h3 class="text-lg font-semibold text-blue-600 mb-2">از دست دادن وزن در هنگام خشک شدن á731ñ</h3>
+                    <h3 class="text-lg font-semibold text-blue-600 mb-2">از دست دادن وزن در هنگام خشک شدن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h3>
                     <div class="formula-display">
                         $$LOD = \frac{(W_{1}+W_{sa})-W_2}{W_{sa}} \times 100$$
                     </div>
@@ -362,7 +349,7 @@
                     <p>شمارش کل میکروبی هوازی نباید از <span class="ltr-text">103</span> cfu/g تجاوز کند. شمارش کل مخمرها و کپک‌ها نباید از <span class="ltr-text">102</span> cfu/g تجاوز کند.</p>
                     <div class="mt-4">
                         <label for="microbial-status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                        <select id="microbial-status" name="microbial-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48 my-2">
+                        <select id="microbial-status" name="microbial-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                             <option value=""></option>
                             <option value="Pass">Pass</option>
                             <option value="Fail">Fail</option>
@@ -377,7 +364,7 @@
                     <p>الزامات آزمون برای عدم وجود اشرشیا کلی را برآورده می‌کند.</p>
                     <div class="mt-4">
                         <label for="e coli-status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                        <select id="e-coli-status" name="e-coli-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48 my-2">
+                        <select id="e-coli-status" name="e-coli-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                             <option value=""></option>
                             <option value="Pass">Pass</option>
                             <option value="Fail">Fail</option>
@@ -617,5 +604,6 @@
             showTab('definition');
         });
     </script>
+
 </body>
 </html>

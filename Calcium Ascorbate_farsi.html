@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف کلسیم آسکوربات (USP)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -81,21 +86,10 @@
             cursor: pointer;
             border: none;
         }
-        .additional-spec-input {
-            shadow: appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline;
-        }
-        .status-dropdown {
-            shadow: appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48;
-        }
-        .input-field {
-            direction: ltr;
-            text-align: left;
-            display: inline-block;
-            shadow: appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2;
-        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+
     <div class="container mx-auto p-4 max-w-4xl">
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">کلسیم آسکوربات</h1>
         <p class="text-lg text-center text-gray-700 mb-6">
@@ -124,7 +118,7 @@
             <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایش‌های شناسایی - عمومی</h3>
             <p><strong>الف.</strong> محلول <span class="ltr-text">100 mg/mL</span> الزامات را برآورده می‌کند.</p>
             <p><strong>ب.</strong> محلول <span class="ltr-text">100 mg/mL</span> محلول <span class="ltr-text">100 mg/mL</span> دی‌کلروفنول-ایندوفنول را بی‌رنگ می‌کند.</p>
-            <p><strong>ج.</strong> ▲آزمایش‌های شناسایی طیف‌سنجی á197ñ، طیف‌سنجی مادون قرمز: <span class="ltr-text">197M</span>▲ (CN 1-May-2020)</p>
+            <p><strong>ج.</strong> ▲آزمایش‌های شناسایی طیف‌سنجی <a href="General chapters/197.html" class="text-blue-600 hover:underline" target="_blank">197</a>، طیف‌سنجی مادون قرمز: <span class="ltr-text">197M</span>▲ (CN 1-May-2020)</p>
         </div>
 
         <!-- Assay Tab -->
@@ -134,7 +128,7 @@
             <p><strong>نمونه:</strong> <span class="ltr-text">300 mg</span> کلسیم آسکوربات</p>
             <p><strong>شاهد:</strong> <span class="ltr-text">50 mL</span> آب</p>
             <p><strong>سیستم تیترسنجی</strong></p>
-            <p>(به تیترسنجی á541ñ مراجعه کنید)</p>
+            <p>(به تیترسنجی <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید)</p>
             <p><strong>حالت:</strong> تیترسنجی مستقیم</p>
             <p><strong>تیترانت:</strong> ید 0.1 نرمال VS</p>
             <p><strong>تشخیص نقطه پایانی:</strong> بصری</p>
@@ -186,7 +180,7 @@
                 </div>
                 <div class="mt-4">
                     <label for="additionalSpecsAssay" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="additionalSpecsAssay" name="additionalSpecsAssay" class="additional-spec-input"></textarea>
+                    <textarea id="additionalSpecsAssay" name="additionalSpecsAssay" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
         </div>
@@ -194,7 +188,7 @@
         <!-- Impurities Tab -->
         <div id="impurities" class="tab-content card hidden">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آرسنیک، روش I á211ñ</h4>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آرسنیک، روش I <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a></h4>
             <p>NMT <span class="ltr-text">3 µg/g</span></p>
 
             <div class="card interactive-card">
@@ -211,7 +205,7 @@
                 </div>
                 <div class="mt-4">
                     <label for="additionalSpecsArsenic" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="additionalSpecsArsenic" name="additionalSpecsArsenic" class="additional-spec-input"></textarea>
+                    <textarea id="additionalSpecsArsenic" name="additionalSpecsArsenic" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
 
@@ -221,7 +215,7 @@
             <p><strong>محلول استاندارد اولیه:</strong> <span class="ltr-text">1.1052 mg/mL</span> USP سدیم فلوراید RS در آب</p>
             <p><strong>محلول استاندارد:</strong> <span class="ltr-text">20.0 mL</span> محلول استاندارد اولیه را به یک فلاسک حجمی <span class="ltr-text">100 mL</span> حاوی <span class="ltr-text">50.0 mL</span> محلول بافر منتقل کنید، با آب تا حجم برسانید و مخلوط کنید. هر میلی‌لیتر محلول استاندارد حاوی <span class="ltr-text">100 µg</span> یون فلوراید است.</p>
             <p><strong>محلول نمونه:</strong> <span class="ltr-text">2.0 g</span> کلسیم آسکوربات را به یک بشر حاوی یک همزن مغناطیسی با روکش پلاستیکی منتقل کنید. <span class="ltr-text">20 mL</span> آب و <span class="ltr-text">2.0 mL</span> اسید کلریدریک اضافه کنید و تا حل شدن هم بزنید. <span class="ltr-text">50.0 mL</span> محلول بافر و مقدار کافی آب برای رساندن حجم به <span class="ltr-text">100 mL</span> اضافه کنید.</p>
-            <p><strong>سیستم الکترود:</strong> از یک الکترود نشانگر یون فلوراید-اختصاصی و یک الکترود مرجع نقره–کلرید نقره که به یک pH متر با قابلیت اندازه‌گیری پتانسیل با حداقل تکرارپذیری ± <span class="ltr-text">0.2 mV</span> (به pH á791ñ مراجعه کنید) متصل است، استفاده کنید.</p>
+            <p><strong>سیستم الکترود:</strong> از یک الکترود نشانگر یون فلوراید-اختصاصی و یک الکترود مرجع نقره–کلرید نقره که به یک pH متر با قابلیت اندازه‌گیری پتانسیل با حداقل تکرارپذیری ± <span class="ltr-text">0.2 mV</span> (به pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a> مراجعه کنید) متصل است، استفاده کنید.</p>
             <p><strong>تحلیل</strong></p>
             <p><strong>نمونه‌ها:</strong> محلول استاندارد و محلول نمونه</p>
             <p><strong>خط پاسخ استاندارد:</strong> <span class="ltr-text">50.0 mL</span> محلول بافر و <span class="ltr-text">2.0 mL</span> اسید کلریدریک را به یک بشر منتقل کنید و آب را تا حجم <span class="ltr-text">100 mL</span> اضافه کنید. یک همزن مغناطیسی با روکش پلاستیکی اضافه کنید، الکترودها را در محلول قرار دهید، به مدت <span class="ltr-text">15 min</span> هم بزنید و پتانسیل را بر حسب mV بخوانید. هم زدن را ادامه دهید و در فواصل <span class="ltr-text">5 min</span>، <span class="ltr-text">100</span>، <span class="ltr-text">100</span>، <span class="ltr-text">300</span> و <span class="ltr-text">500 µL</span> محلول استاندارد اضافه کنید و پتانسیل را <span class="ltr-text">5 min</span> پس از هر افزودن بخوانید. لگاریتم غلظت‌های تجمعی یون فلوراید (<span class="ltr-text">0.1</span>، <span class="ltr-text">0.2</span>، <span class="ltr-text">0.5</span> و <span class="ltr-text">1.0 µg/mL</span>) را بر حسب mV رسم کنید.</p>
@@ -264,7 +258,7 @@
                 </div>
                 <div class="mt-4">
                     <label for="additionalSpecsFluoride" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="additionalSpecsFluoride" name="additionalSpecsFluoride" class="additional-spec-input"></textarea>
+                    <textarea id="additionalSpecsFluoride" name="additionalSpecsFluoride" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
         </div>
@@ -272,7 +266,7 @@
         <!-- Specific Tests Tab -->
         <div id="specific-tests" class="tab-content card hidden">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">دوران نوری، دوران ویژه á781Sñ</h4>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">دوران نوری، دوران ویژه <a href="General chapters/781.html" class="text-blue-600 hover:underline" target="_blank">781</a>Sñ</h4>
             <p><strong>محلول نمونه:</strong> <span class="ltr-text">50 mg/mL</span> در آب عاری از دی‌اکسید کربن</p>
             <p>[<strong>نکته:</strong> اندازه‌گیری‌ها را بلافاصله پس از تهیه انجام دهید.]</p>
             <p><strong>معیارهای پذیرش:</strong> <span class="ltr-text">+95°</span> تا <span class="ltr-text">+97°</span></p>
@@ -291,11 +285,11 @@
                 </div>
                 <div class="mt-4">
                     <label for="additionalSpecsOpticalRotation" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="additionalSpecsOpticalRotation" name="additionalSpecsOpticalRotation" class="additional-spec-input"></textarea>
+                    <textarea id="additionalSpecsOpticalRotation" name="additionalSpecsOpticalRotation" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
 
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">pH á791ñ</h4>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a></h4>
             <p><strong>محلول نمونه:</strong> <span class="ltr-text">100 mg/mL</span></p>
             <p><strong>معیارهای پذیرش:</strong> <span class="ltr-text">6.8</span>–<span class="ltr-text">7.4</span></p>
 
@@ -313,11 +307,11 @@
                 </div>
                 <div class="mt-4">
                     <label for="additionalSpecsPH" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="additionalSpecsPH" name="additionalSpecsPH" class="additional-spec-input"></textarea>
+                    <textarea id="additionalSpecsPH" name="additionalSpecsPH" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
 
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">خشک شدن á731ñ</h4>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">خشک شدن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h4>
             <p><strong>روش کار:</strong> <span class="ltr-text">3 g</span> را در دمای <span class="ltr-text">105°</span> به مدت <span class="ltr-text">2 ساعت</span> خشک کنید: نباید بیش از <span class="ltr-text">0.1%</span> از وزن خود را از دست بدهد.</p>
 
             <div class="card interactive-card">
@@ -349,11 +343,11 @@
                 </div>
                 <div class="mt-4">
                     <label for="additionalSpecsLossOnDrying" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="additionalSpecsLossOnDrying" name="additionalSpecsLossOnDrying" class="additional-spec-input"></textarea>
+                    <textarea id="additionalSpecsLossOnDrying" name="additionalSpecsLossOnDrying" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
 
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">باقیمانده احتراق á621ñ</h4>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">باقیمانده احتراق <a href="General chapters/621.html" class="text-blue-600 hover:underline" target="_blank">621</a></h4>
             <p><strong>روش کار:</strong> <span class="ltr-text">1 g</span> نمونه را در یک بوته احتراق بسوزانید تا تمام مواد آلی بسوزند. <span class="ltr-text">1 mL</span> اسید سولفوریک 3N اضافه کنید، سپس با احتیاط حرارت دهید و در دمای <span class="ltr-text">600° ± 50°</span> تا رسیدن به وزن ثابت، احتراق کنید. باقیمانده نباید بیش از <span class="ltr-text">0.1%</span> وزن نمونه باشد.</p>
             <div class="formula-display">
                 $$ROI = \frac{W_3 - W_1}{W_2} \times 100$$
@@ -389,7 +383,7 @@
                 </div>
                 <div class="mt-4">
                     <label for="additionalSpecsResidueOnIgnition" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="additionalSpecsResidueOnIgnition" name="additionalSpecsResidueOnIgnition" class="additional-spec-input"></textarea>
+                    <textarea id="additionalSpecsResidueOnIgnition" name="additionalSpecsResidueOnIgnition" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
 
@@ -400,7 +394,7 @@
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">بسته‌بندی و نگهداری</h4>
             <p>در ظروف دربسته و مقاوم در برابر نور نگهداری شود.</p>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">استانداردهای مرجع USP á11ñ</h4>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h4>
             <ul>
                 <li>USP Calcium Ascorbate RS</li>
                 <li>USP Sodium Fluoride RS</li>
@@ -624,5 +618,6 @@
             document.getElementById('residueOnIgnitionResultPpm').innerText = resultPpm.toFixed(2);
         }
     </script>
+
 </body>
 </html>

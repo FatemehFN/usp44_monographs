@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف اکسید منیزیم (USP)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="text/javascript" async
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
     <style>
         body {
@@ -83,15 +86,10 @@
             cursor: pointer;
             border: none;
         }
-        .additional-spec-input {
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-        }
-        .status-dropdown, .input-field {
-             box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+
     <div class="container mx-auto p-4 max-w-4xl">
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">اکسید منیزیم</h1>
 
@@ -116,7 +114,7 @@
         <div id="identification" class="tab-content hidden">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
             <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. تست‌های شناسایی - عمومی á191ñ، تست‌های شناسایی شیمیایی، منیزیم</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. تست‌های شناسایی - عمومی <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a>، تست‌های شناسایی شیمیایی، منیزیم</h3>
                 <p><strong>نمونه:</strong> محلولی در اسید هیدروکلریک رقیق.</p>
                 <p><strong>معیارهای پذیرش:</strong> الزامات را برآورده می‌کند.</p>
                 <p class="mt-3"><strong>موارد اضافه شده:</strong></p>
@@ -139,7 +137,7 @@
                 <p><strong>محلول نمونه استوک:</strong> <span class="ltr-text">3.3 mg/mL</span> اکسید منیزیم را از اکسید منیزیم تازه اشتعال یافته طبق دستورالعمل محلول استاندارد استوک تهیه کنید.</p>
                 <p><strong>محلول نمونه:</strong> <span class="ltr-text">33 µg/mL</span> اکسید منیزیم در آب از محلول نمونه استوک.</p>
                 <p><strong>سیستم کروماتوگرافی</strong></p>
-                <p>(به کروماتوگرافی á621ñ، تناسب سیستم مراجعه کنید.)</p>
+                <p>(به کروماتوگرافی <a href="General chapters/621.html" class="text-blue-600 hover:underline" target="_blank">621</a>، تناسب سیستم مراجعه کنید.)</p>
                 <p><strong>حالت:</strong> LC</p>
                 <p><strong>آشکارساز:</strong> هدایت‌سنجی با سرکوب</p>
                 <p><strong>ستون‌ها</strong></p>
@@ -295,7 +293,7 @@
             </div>
 
             <div class="card mt-6">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">آهن á241ñ</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">آهن <a href="General chapters/241.html" class="text-blue-600 hover:underline" target="_blank">241</a></h3>
                 <p><strong>نمونه:</strong> <span class="ltr-text">40</span> mg اکسید منیزیم</p>
                 <p><strong>آماده‌سازی تست:</strong> نمونه را به مدت <span class="ltr-text">1</span> دقیقه با <span class="ltr-text">5</span> میلی‌لیتر اسید نیتریک <span class="ltr-text">2 N</span> بجوشانید. خنک کنید، با آب تا <span class="ltr-text">50</span> میلی‌لیتر رقیق کرده و مخلوط کنید. <span class="ltr-text">25</span> میلی‌لیتر از این محلول را با آب تا <span class="ltr-text">45</span> میلی‌لیتر رقیق کرده و <span class="ltr-text">2</span> میلی‌لیتر اسید هیدروکلریک اضافه کنید.</p>
                 <p><strong>معیارهای پذیرش:</strong> <span class="ltr-text">NMT 0.05%</span></p>
@@ -322,7 +320,7 @@
         <div id="specific-tests" class="tab-content hidden">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
             <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">از دست دادن در احتراق á733ñ</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">از دست دادن در احتراق <a href="General chapters/733.html" class="text-blue-600 hover:underline" target="_blank">733</a></h3>
                 <p><strong>نمونه:</strong> <span class="ltr-text">500–1000</span> mg</p>
                 <p><strong>تجزیه و تحلیل:</strong> نمونه را در یک بوته پلاتینی وزن شده منتقل کرده و در محدوده دمایی (<span class="ltr-text">800°–900°</span>) <span class="ltr-text">± 25°</span> تا وزن ثابت اشتعال دهید.</p>
                 <p><strong>معیارهای پذیرش:</strong> <span class="ltr-text">NMT 10.0%</span></p>
@@ -357,7 +355,7 @@
             </div>
 
             <div class="card mt-6">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">چگالی حجمی و چگالی کوبیده شده پودرها á616ñ</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">چگالی حجمی و چگالی کوبیده شده پودرها <a href="General chapters/616.html" class="text-blue-600 hover:underline" target="_blank">616</a></h3>
                 <p><strong>چگالی حجمی، روش اول:</strong> با استفاده از رویه مشخص شده در فصل، چگالی حجمی اکسید منیزیم را تعیین کنید.</p>
                 <div class="card interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">چگالی حجمی و چگالی کوبیده شده</h4>
@@ -386,7 +384,7 @@
                 <p>در ظروف دربسته نگهداری شود.</p>
                 <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">برچسب‌گذاری:</h3>
                 <p>آن را برچسب‌گذاری کنید تا چگالی حجمی آن مشخص شود. چگالی نشان داده شده می‌تواند به صورت بازه‌ای باشد.</p>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">▲ استانداردهای مرجع USP á11ñ</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">▲ استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h3>
                 <p>USP Calcium Carbonate RS</p>
                 <p>USP Magnesium Oxide RS▲ (تاریخ اجرای رسمی: 1 ژوئن 2021)</p>
             </div>
@@ -652,5 +650,6 @@
             document.querySelector('.tab-button').click();
         });
     </script>
+
 </body>
 </html>

@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف کلسیم سیلیکات (USP)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -82,26 +86,10 @@
             cursor: pointer;
             border: none;
         }
-        .status-dropdown {
-            width: 12rem; /* 192px */
-            background-color: white;
-            border-color: #d1d5db; /* Light gray */
-        }
-        .additional-spec-input {
-            width: 100%;
-            background-color: white;
-            border-color: #d1d5db; /* Light gray */
-        }
-        .input-field {
-            direction: ltr;
-            text-align: left;
-            width: 16rem; /* 256px */
-            background-color: white;
-            border-color: #d1d5db; /* Light gray */
-        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+
     <div class="container mx-auto p-4 max-w-4xl">
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">کلسیم سیلیکات</h1>
 
@@ -125,7 +113,7 @@
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">A. تست‌های شناسایی - عمومی، کلسیم á191ñ</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">A. تست‌های شناسایی - عمومی، کلسیم <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a></h3>
                 <p><strong>محلول نمونه:</strong> 0.5 گرم را با 10 میلی‌لیتر اسید هیدروکلریک 3 نرم مخلوط کنید. فیلتر کنید و فیلترات را با هیدروکسید آمونیوم 6 نرم تا کاغذ لیتموس خنثی کنید.</p>
                 <p><strong>معیارهای پذیرش:</strong> فیلترات خنثی شده الزامات را برآورده می‌کند.</p>
 
@@ -171,7 +159,7 @@
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">اکسید کلسیم</h3>
                 <p><strong>محلول نمونه:</strong> از مخلوط فیلترات و شستشوهای نگهداری شده از سنجش دی‌اکسید سیلیکون استفاده کنید.</p>
                 <p><strong>سیستم تیتراسیون</strong></p>
-                <p>(به تیتراسیون á541ñ مراجعه کنید.)</p>
+                <p>(به تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید.)</p>
                 <p><strong>حالت:</strong> تیتراسیون مستقیم</p>
                 <p><strong>تیترانت:</strong> 0.05 مولار ادتات دی‌سدیم VS</p>
                 <p><strong>تشخیص نقطه پایانی:</strong> بصری</p>
@@ -231,7 +219,7 @@
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">ضرر در اشتعال á733ñ</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">ضرر در اشتعال <a href="General chapters/733.html" class="text-blue-600 hover:underline" target="_blank">733</a></h3>
                 <p>1 گرم را در یک بوته وزن شده مناسب منتقل کنید، در دمای 105 درجه سانتی‌گراد به مدت 2 ساعت خشک کنید و در دمای 900 درجه سانتی‌گراد تا رسیدن به وزن ثابت اشتعال دهید: نباید بیش از 20.0% از وزن خود را از دست بدهد.</p>
 
                 <div class="card interactive-card">
@@ -329,7 +317,7 @@
                 <p><strong>محلول نمونه:</strong> 2.0 گرم کلسیم سیلیکات را در یک بشر 150 میلی‌لیتری وزن کنید. با 50 میلی‌لیتر رقیق کننده اسید نیتریک مخلوط کنید. با یک شیشه ساعت بپوشانید و به مدت 20 دقیقه بجوشانید. بگذارید خنک شود. با کمک خلاء، از یک فیلتر شیشه‌ای عبور دهید<sup>5</sup> و فیلتر را چندین بار با آب بشویید. فیلترات را به یک فلاسک حجمی 100 میلی‌لیتری منتقل کنید. با آب تا حجم برسانید و مخلوط کنید.</p>
                 <p><strong>محلول تناسب سیستم:</strong> 5 میلی‌لیتر از محلول استاندارد و 50 میلی‌لیتر رقیق کننده اسید نیتریک را به یک فلاسک حجمی 100 میلی‌لیتری منتقل کنید. با آب تا حجم برسانید و مخلوط کنید. این محلول حاوی معادل 0.05 میکروگرم سرب/میلی‌لیتر است.</p>
                 <p><strong>شرایط دستگاهی</strong></p>
-                <p>(به طیف‌سنجی جذب اتمی á852ñ مراجعه کنید.)</p>
+                <p>(به طیف‌سنجی جذب اتمی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید.)</p>
                 <p><strong>حالت:</strong> اسپکتروفتومتر جذب اتمی کوره گرافیتی</p>
                 <p><strong>طول موج تحلیلی:</strong> 283.3 نانومتر (خط انتشار سرب)</p>
                 <p><strong>لامپ:</strong> لامپ کاتد توخالی سرب و وسیله کافی برای تصحیح پس‌زمینه زیمان</p>
@@ -415,7 +403,7 @@
                 <p><strong>بافر تنظیم کننده قدرت یونی:</strong> 42 میلی‌لیتر اسید هیدروکلریک، 121 گرم تریس (هیدروکسی متیل) آمینومتان، و 115 گرم تارتارات سدیم را به یک فلاسک حجمی 500 میلی‌لیتری حاوی 250 میلی‌لیتر آب منتقل کنید. هم بزنید تا حل شود و با آب تا حجم برسانید.</p>
                 <p><strong>محلول استوک استاندارد:</strong> 221 میکروگرم/میلی‌لیتر سدیم فلوراید USP RS. این محلول استوک حاوی 100 میکروگرم/میلی‌لیتر یون فلوراید است.</p>
                 <p><strong>محلول نمونه:</strong> 2.0 گرم کلسیم سیلیکات را به یک بشر پلی‌تِف 100 میلی‌لیتری حاوی یک میله همزن مغناطیسی منتقل کنید. 20 میلی‌لیتر آب و 2.0 میلی‌لیتر اسید هیدروکلریک اضافه کنید. با یک شیشه ساعت بپوشانید و برای 1 دقیقه، ضمن هم زدن مداوم، به جوش شدید برسانید. از حرارت بردارید و خنک کنید. سوسپانسیون خنک شده را به یک بشر پلی‌تِف 100 میلی‌لیتری منتقل کنید. 25 میلی‌لیتر محلول بافر اضافه کنید و با آمونیاک هیدروکسید یا اسید هیدروکلریک به pH 5-6 تنظیم کنید. 50 میلی‌لیتر بافر تنظیم کننده قدرت یونی اضافه کنید و با آب 100 میلی‌لیتر محلول تهیه کنید.</p>
-                <p><strong>سیستم الکترود:</strong> از یک الکترود نشانگر یون ویژه فلوراید و یک الکترود مرجع مناسب متصل به یک pH متر که قادر به اندازه‌گیری پتانسیل با تکرارپذیری ±0.2 میلی‌ولت است (به pH á791ñ مراجعه کنید) استفاده کنید.</p>
+                <p><strong>سیستم الکترود:</strong> از یک الکترود نشانگر یون ویژه فلوراید و یک الکترود مرجع مناسب متصل به یک pH متر که قادر به اندازه‌گیری پتانسیل با تکرارپذیری ±0.2 میلی‌ولت است (به pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a> مراجعه کنید) استفاده کنید.</p>
                 <p><strong>خط پاسخ استاندارد:</strong> یک خط پاسخ استاندارد با چهار محلول استاندارد حاوی 0، 0.10، 0.20، و 0.40 میکروگرم/میلی‌لیتر فلوراید به شرح زیر تهیه کنید. 23 میلی‌لیتر آب، 2 میلی‌لیتر اسید هیدروکلریک، و 25 میلی‌لیتر محلول بافر را به یک بشر پلاستیکی 100 میلی‌لیتری اضافه کنید. با آمونیاک هیدروکسید به pH 5-6 تنظیم کنید و بافر تنظیم کننده قدرت یونی را اضافه کنید تا 100 میلی‌لیتر محلول حاصل شود. الکترود را در محلول قرار دهید، حداقل به مدت 15 دقیقه هم بزنید و پتانسیل محلول استاندارد حاوی 0 میکروگرم/میلی‌لیتر فلوراید را ثبت کنید. هنگامی که الکترود پایدار شد، 100 میکرولیتر از محلول استوک استاندارد را به بشر اضافه کنید و هم بزنید. به الکترود 5 دقیقه فرصت دهید تا پایدار شود و پتانسیل محلول‌های استاندارد حاوی 0.10 میکروگرم/میلی‌لیتر فلوراید را اندازه‌گیری کنید. به طور مشابه، 100 و 200 میکرولیتر دیگر از محلول استوک استاندارد را اضافه کنید و پتانسیل محلول‌های استاندارد حاوی 0.20 میکروگرم/میلی‌لیتر فلوراید و 0.40 میکروگرم/میلی‌لیتر فلوراید را به ترتیب ثبت کنید. پس از هر افزودن، قبل از ثبت خواندن، به مدت 5 دقیقه به هم زدن ادامه دهید.</p>
                 <p><strong>تحلیل:</strong> الکترود کالیبره شده را در محلول نمونه قرار دهید، به مدت 5 دقیقه هم بزنید و اندازه‌گیری را ثبت کنید. از پتانسیل اندازه‌گیری شده محلول نمونه و خط پاسخ استاندارد، غلظت C، بر حسب میکروگرم/میلی‌لیتر، یون فلوراید در محلول نمونه را تعیین کنید.</p>
                 <p>مقدار فلوراید را در کلسیم سیلیکات، بر حسب ppm، محاسبه کنید:</p>
@@ -463,7 +451,7 @@
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">pH á791ñ</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a></h3>
                 <p>8.4–11.2، تعیین شده در سوسپانسیون آبی مخلوط شده (1 به 20)</p>
                 <div class="card interactive-card">
                     <h4>pH</h4>
@@ -559,7 +547,7 @@
                 <p>در ظروف کاملاً بسته نگهداری شود.</p>
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">برچسب گذاری</h3>
                 <p>برچسب گذاری، درصد یا محدوده درصدهای ادعا شده برای محتوای اکسید کلسیم و محتوای دی‌اکسید سیلیکون را نشان می‌دهد.</p>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP á11ñ</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h3>
                 <p>سدیم فلوراید USP RS</p>
             </div>
         </div>
@@ -1090,5 +1078,6 @@
             document.querySelector('.tab-button').click();
         });
     </script>
+
 </body>
 </html>

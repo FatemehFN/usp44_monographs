@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف محلول سدیم لاکتات (USP)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -81,45 +86,10 @@
             cursor: pointer;
             border: none;
         }
-        .additional-spec-input {
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-            appearance: none;
-            border: 1px solid #d1d5db;
-            background-color: #fff;
-            border-radius: 0.375rem;
-            width: 100%;
-            padding: 0.5rem 0.75rem;
-            color: #374151;
-            line-height: 1.5;
-            margin-top: 0.5rem;
-        }
-        .status-dropdown {
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-            appearance: none;
-            border: 1px solid #d1d5db;
-            background-color: #fff;
-            border-radius: 0.375rem;
-            width: 12rem; /* w-48 */
-            padding: 0.5rem 0.75rem;
-            color: #374151;
-            line-height: 1.5;
-        }
-        .input-field-style {
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-            appearance: none;
-            border: 1px solid #d1d5db;
-            background-color: #fff;
-            border-radius: 0.375rem;
-            width: 16rem; /* w-64 */
-            padding: 0.5rem 0.75rem;
-            color: #374151;
-            line-height: 1.5;
-            margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+
     <div class="container mx-auto p-4 max-w-4xl">
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">محلول سدیم لاکتات</h1>
 
@@ -190,7 +160,7 @@
                     </div>
 
                     <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                    <textarea class="additional-spec-input" rows="3"></textarea>
+                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
                 </div>
             </div>
         </div>
@@ -209,52 +179,52 @@
                         $$</span>
                     </div>
                     <label for="chloride-status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                    <select id="chloride-status" name="chloride-status" class="status-dropdown">
+                    <select id="chloride-status" name="chloride-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
                     <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                    <textarea class="additional-spec-input" rows="3"></textarea>
+                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
                 </div>
 
                 <div class="interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سولفات</h4>
                     <p class="mb-4">به 10 میلی‌لیتر از محلول (1 در 100) 2 قطره اسید هیدروکلریک و 1 میلی‌لیتر معرف کلرید باریم TS اضافه کنید: هیچ کدورت ایجاد نمی‌شود.</p>
                     <label for="sulfate-status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                    <select id="sulfate-status" name="sulfate-status" class="status-dropdown">
+                    <select id="sulfate-status" name="sulfate-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
                     <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                    <textarea class="additional-spec-input" rows="3"></textarea>
+                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
                 </div>
 
                 <div class="interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">قندها</h4>
                     <p class="mb-4">به 10 میلی‌لیتر از معرف تارتارات مس قلیایی داغ TS، 5 قطره محلول اضافه کنید: هیچ رسوب قرمزی تشکیل نمی‌شود.</p>
                     <label for="sugars-status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                    <select id="sugars-status" name="sugars-status" class="status-dropdown">
+                    <select id="sugars-status" name="sugars-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
                     <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                    <textarea class="additional-spec-input" rows="3"></textarea>
+                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
                 </div>
 
                 <div class="interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محدودیت سیترات، اگزالات، فسفات یا تارتارات</h4>
                     <p class="mb-4">5 میلی‌لیتر را با آب جوشیده و سرد شده تا 50 میلی‌لیتر رقیق کنید. به 4 میلی‌لیتر از این محلول، آمونیاک هیدروکسید 6 نرمال یا اسید هیدروکلریک 3 نرمال، در صورت نیاز، برای رساندن pH به بین 7.3 تا 7.7 اضافه کنید. 1 میلی‌لیتر معرف کلرید کلسیم TS اضافه کرده و به مدت 5 دقیقه در حمام آب جوش حرارت دهید: محلول شفاف باقی می‌ماند.</p>
                     <label for="citrate-oxalate-status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                    <select id="citrate-oxalate-status" name="citrate-oxalate-status" class="status-dropdown">
+                    <select id="citrate-oxalate-status" name="citrate-oxalate-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
                     <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                    <textarea class="additional-spec-input" rows="3"></textarea>
+                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
                 </div>
 
                 <div class="interactive-card">
@@ -270,13 +240,13 @@
                         $$</span>
                     </div>
                     <label for="methanol-esters-status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                    <select id="methanol-esters-status" name="methanol-esters-status" class="status-dropdown">
+                    <select id="methanol-esters-status" name="methanol-esters-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
                     <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                    <textarea class="additional-spec-input" rows="3"></textarea>
+                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
                 </div>
             </div>
         </div>
@@ -307,7 +277,7 @@
                         <span id="acid-insoluble-status" class="font-bold"></span>
                     </div>
                     <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                    <textarea class="additional-spec-input" rows="3"></textarea>
+                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
                 </div>
 
                 <div class="interactive-card">
@@ -331,7 +301,7 @@
                         <span id="mg-alkali-status" class="font-bold"></span>
                     </div>
                     <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                    <textarea class="additional-spec-input" rows="3"></textarea>
+                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
                 </div>
 
                 <div class="interactive-card">
@@ -355,7 +325,7 @@
                         <span id="alcohol-insoluble-status" class="font-bold"></span>
                     </div>
                     <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                    <textarea class="additional-spec-input" rows="3"></textarea>
+                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
                 </div>
 
                 <div class="interactive-card">
@@ -383,7 +353,7 @@
                         <span id="lod-status" class="font-bold"></span>
                     </div>
                     <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                    <textarea class="additional-spec-input" rows="3"></textarea>
+                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
                 </div>
 
                 <div class="interactive-card">
@@ -411,7 +381,7 @@
                         <span id="roi-status" class="font-bold"></span>
                     </div>
                     <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                    <textarea class="additional-spec-input" rows="3"></textarea>
+                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
                 </div>
 
                 <div class="interactive-card">
@@ -447,7 +417,7 @@
                         <span id="reducing-substances-status" class="font-bold"></span>
                     </div>
                     <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                    <textarea class="additional-spec-input" rows="3"></textarea>
+                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
                 </div>
             </div>
         </div>
@@ -619,5 +589,6 @@
             showTab('definition');
         });
     </script>
+
 </body>
 </html>

@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف سیترات آمونیوم فریک (USP)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="text/javascript" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
     <style>
         body {
@@ -83,18 +86,10 @@
             cursor: pointer;
             border: none;
         }
-        .additional-spec-input {
-            shadow: appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline;
-        }
-        .status-dropdown {
-             shadow: appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48;
-        }
-        .input-field {
-            ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2;
-        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+
     <div class="container mx-auto p-4 max-w-4xl">
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">سیترات آمونیوم فریک</h1>
 
@@ -165,7 +160,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="additional_spec_assay" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_assay" name="additional_spec_assay" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional_spec_assay" name="additional_spec_assay" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
             </div>
@@ -186,7 +181,7 @@
                     <div class="grid grid-cols-1 gap-4">
                          <div>
                             <label for="turbidity_sulfate" class="block text-sm font-bold mb-2">مشاهده شده:</label>
-                            <select id="turbidity_sulfate" name="turbidity_sulfate" class="status-dropdown">
+                            <select id="turbidity_sulfate" name="turbidity_sulfate" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                                 <option value=""></option>
                                 <option value="Pass">Pass</option>
                                 <option value="Fail">Fail</option>
@@ -195,7 +190,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="additional_spec_sulfate" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_sulfate" name="additional_spec_sulfate" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional_spec_sulfate" name="additional_spec_sulfate" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
 
@@ -210,7 +205,7 @@
                      <div class="grid grid-cols-1 gap-4">
                         <div>
                             <label for="turbidity_oxalate" class="block text-sm font-bold mb-2">مشاهده شده:</label>
-                            <select id="turbidity_oxalate" name="turbidity_oxalate" class="status-dropdown">
+                            <select id="turbidity_oxalate" name="turbidity_oxalate" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                                 <option value=""></option>
                                 <option value="Pass">Pass</option>
                                 <option value="Fail">Fail</option>
@@ -219,13 +214,13 @@
                     </div>
                     <div class="mt-4">
                         <label for="additional_spec_oxalate" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_oxalate" name="additional_spec_oxalate" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional_spec_oxalate" name="additional_spec_oxalate" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">جیوه</h3>
-                <p class="mb-3">محلول پایه جیوه و محلول استاندارد جیوه - مطابق با روش I در بخش جیوه á261ñ عمل کنید.</p>
-                <p class="mb-3">دستگاه تشخیص جیوه، دستگاه هوادهی، و محلول کلرید قلع - مطابق با روش IIa و IIb در بخش جیوه á261ñ عمل کنید.</p>
+                <p class="mb-3">محلول پایه جیوه و محلول استاندارد جیوه - مطابق با روش I در بخش جیوه <a href="General chapters/261.html" class="text-blue-600 hover:underline" target="_blank">261</a> عمل کنید.</p>
+                <p class="mb-3">دستگاه تشخیص جیوه، دستگاه هوادهی، و محلول کلرید قلع - مطابق با روش IIa و IIb در بخش جیوه <a href="General chapters/261.html" class="text-blue-600 hover:underline" target="_blank">261</a> عمل کنید.</p>
                 <p class="mb-3">محلول‌های استاندارد - 0.25، 0.50، 1.0 و 3.5 میلی‌لیتر از محلول استاندارد جیوه را به چهار بطری جداگانه با درپوش شیشه‌ای، مانند بطری‌های اکسیژن مصرفی بیولوژیکی، با ظرفیت حدود 300 میلی‌لیتر منتقل کنید. محتویات هر بطری را با آب تا 100 میلی‌لیتر رقیق کرده و مخلوط کنید. این محلول‌ها به ترتیب معادل 2.5، 5.0، 10.0 و 35.0 نانوگرم جیوه در میلی‌لیتر هستند.</p>
                 <p class="mb-3">محلول آزمون - حدود 1.000 گرم سیترات آمونیوم فریک را دقیقاً وزن کرده، به یک بطری سانتریفیوژ 200 میلی‌لیتری با درب پیچ‌دار پوشیده شده با تفلون منتقل کنید و 5 میلی‌لیتر اسید نیتریک و 5 میلی‌لیتر اسید کلریدریک اضافه کنید. درب بطری را محکم ببندید، به مدت 1 ساعت در حمام بخار هضم کنید و بگذارید خنک شود. محلول را به طور کمی به یک بطری مناسب با درپوش شیشه‌ای منتقل کنید، با آب تا 100 میلی‌لیتر رقیق کرده و به مدت 2 دقیقه هوا را از محلول عبور دهید. یک بلانک معرف را به همین ترتیب آماده کنید.</p>
                 <p class="mb-3">روش - 5 میلی‌لیتر محلول کلرید قلع را به هر محلول اضافه کرده و بلافاصله حباب‌گیر دستگاه هوادهی را وصل کنید. جذب‌ها را مطابق دستورالعمل سازنده دستگاه دریافت کنید. یک تعیین بلانک انجام داده و هرگونه تصحیح لازم را اعمال کنید. جذب محلول‌های استاندارد را بر حسب غلظت، در میکروگرم در میلی‌لیتر، جیوه ترسیم کرده و خط راست بهینه را رسم کنید. از نمودار حاصل، غلظت، در میکروگرم در گرم، جیوه را در محلول آزمون تعیین کنید: نه بیشتر از 10 میکروگرم در گرم یافت می‌شود.</p>
@@ -247,7 +242,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="additional_spec_mercury" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_mercury" name="additional_spec_mercury" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional_spec_mercury" name="additional_spec_mercury" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
 
@@ -255,7 +250,7 @@
                 <p class="mb-3">محلول پایه استاندارد - حدود 159.8 میلی‌گرم نیترات سرب را دقیقاً وزن کرده، در 100 میلی‌لیتر آب حاوی 1 میلی‌لیتر اسید نیتریک حل کنید. با آب به 1000.0 میلی‌لیتر برسانید و مخلوط کنید.</p>
                 <p class="mb-3">محلول استاندارد - [توجه - این محلول را در روز استفاده آماده کنید.] 10.0 میلی‌لیتر محلول پایه استاندارد را به یک فلاسک حجمی 500 میلی‌لیتری منتقل کنید، با آب به حجم برسانید و مخلوط کنید. هر میلی‌لیتر حاوی معادل 2 میکروگرم سرب (Pb) است.</p>
                 <p class="mb-3">محلول آزمون - حدود 15 گرم سیترات آمونیوم فریک را دقیقاً وزن کرده، به یک فلاسک حجمی 100 میلی‌لیتری (که قبلاً با اسید نیتریک و آب شسته شده است) منتقل کنید، در مخلوطی از 50 میلی‌لیتر آب و 1 میلی‌لیتر اسید نیتریک حل کنید، با آب به حجم برسانید و مخلوط کنید.</p>
-                <p class="mb-3">روش - با استفاده از یک اسپکتروفتومتر جذب اتمی مناسب (به جذب اتمی اسپکتروسکوپی á852ñ مراجعه کنید) مجهز به اصلاح کننده پس‌زمینه قوس دوتریوم، یک دستگاه نمایش دیجیتال و یک سر مشعل قادر به تحمل 15% محتوای جامد، یک تعیین بلانک با آب، با پیروی از دستورالعمل‌های عملیاتی سازنده، انجام دهید.</p>
+                <p class="mb-3">روش - با استفاده از یک اسپکتروفتومتر جذب اتمی مناسب (به جذب اتمی اسپکتروسکوپی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید) مجهز به اصلاح کننده پس‌زمینه قوس دوتریوم، یک دستگاه نمایش دیجیتال و یک سر مشعل قادر به تحمل <a href="General chapters/15.html" class="text-blue-600 hover:underline" target="_blank">15</a>% محتوای جامد، یک تعیین بلانک با آب، با پیروی از دستورالعمل‌های عملیاتی سازنده، انجام دهید.</p>
                 <p class="mb-3">به طور جداگانه، قسمت‌هایی از محلول استاندارد و محلول آزمون را آسپیراسیون کرده و جذب‌ها را ثبت کنید. محتوای سرب، در میکروگرم در گرم، در قسمت سیترات آمونیوم فریک گرفته شده را با فرمول محاسبه کنید:</p>
                 <div class="formula-display">
                     $$ Lead\ content = \frac{100(C)}{W} \times \frac{AU}{AS} $$
@@ -297,7 +292,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="additional_spec_lead" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_lead" name="additional_spec_lead" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional_spec_lead" name="additional_spec_lead" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
             </div>
@@ -334,7 +329,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="additional_spec_acid_insoluble" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_acid_insoluble" name="additional_spec_acid_insoluble" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional_spec_acid_insoluble" name="additional_spec_acid_insoluble" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
 
@@ -365,7 +360,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="additional_spec_sulfate_alkali" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_sulfate_alkali" name="additional_spec_sulfate_alkali" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional_spec_sulfate_alkali" name="additional_spec_sulfate_alkali" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
 
@@ -396,7 +391,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="additional_spec_alcohol_insoluble" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_alcohol_insoluble" name="additional_spec_alcohol_insoluble" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional_spec_alcohol_insoluble" name="additional_spec_alcohol_insoluble" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
 
@@ -432,7 +427,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="additional_spec_loss_drying" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_loss_drying" name="additional_spec_loss_drying" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional_spec_loss_drying" name="additional_spec_loss_drying" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
 
@@ -468,7 +463,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="additional_spec_residue_ignition" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_residue_ignition" name="additional_spec_residue_ignition" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional_spec_residue_ignition" name="additional_spec_residue_ignition" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
 
@@ -514,7 +509,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="additional_spec_reducing" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_reducing" name="additional_spec_reducing" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional_spec_reducing" name="additional_spec_reducing" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
             </div>
@@ -763,5 +758,6 @@
         }
 
     </script>
+
 </body>
 </html>

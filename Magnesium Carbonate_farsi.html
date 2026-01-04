@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف کربنات منیزیم (USP)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -82,25 +86,10 @@
             cursor: pointer;
             border: none;
         }
-        .additional-spec-input {
-            shadow: appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline;
-        }
-        .status-dropdown {
-            shadow: appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48;
-            width: 12rem; /* 192px */
-            background-color: #fff;
-            border-color: #d1d5db;
-        }
-        .input-field-style {
-            direction: ltr;
-            shadow: appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2;
-            width: 16rem; /* 256px */
-            background-color: #fff;
-            border-color: #d1d5db;
-        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+
     <div class="container mx-auto p-4 max-w-4xl">
 
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">کربنات منیزیم</h1>
@@ -125,13 +114,13 @@
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. تست‌های شناسایی - عمومی á191ñ، تست‌های شناسایی شیمیایی، منیزیم</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. تست‌های شناسایی - عمومی <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a>، تست‌های شناسایی شیمیایی، منیزیم</h3>
                 <p class="mb-4">محلول نمونه: هنگام واکنش با 3 نرمال اسید هیدروکلریک، با جوشش حل می‌شود.</p>
                 <p class="mb-4">معیارهای پذیرش: الزامات را برآورده می‌کند.</p>
                 <p class="mb-4">اضافه کردن موارد زیر:</p>
                 <p class="mb-4">▲• ب. زمان نگهداری پیک منیزیم محلول نمونه با محلول استاندارد مطابقت دارد، همانطور که در سنجش بدست آمده است.▲ (رسمی 1 ژوئن 2021)</p>
                 <p class="mb-4">اضافه کردن موارد زیر:</p>
-                <p class="mb-4">▲• ج. تست‌های شناسایی - عمومی á191ñ، تست‌های شناسایی شیمیایی، کربنات</p>
+                <p class="mb-4">▲• ج. تست‌های شناسایی - عمومی <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a>، تست‌های شناسایی شیمیایی، کربنات</p>
                 <p class="mb-4">تجزیه و تحلیل: طبق روش تست A عمل کنید.</p>
                 <p class="mb-4">معیارهای پذیرش: الزامات را برآورده می‌کند.▲ (رسمی 1 ژوئن 2021)</p>
             </div>
@@ -151,7 +140,7 @@
                 <p class="mb-4">محلول نمونه مادر: <span class="ltr-text">8.0 mg/mL</span> کربنات منیزیم که طبق دستورالعمل محلول استاندارد مادر تهیه شده است.</p>
                 <p class="mb-4">محلول نمونه: <span class="ltr-text">80 µg/mL</span> کربنات منیزیم در آب از محلول نمونه مادر</p>
                 <p class="mb-4">سیستم کروماتوگرافی</p>
-                <p class="mb-4">(به کروماتوگرافی á621ñ، سازگاری سیستم مراجعه کنید.)</p>
+                <p class="mb-4">(به کروماتوگرافی <a href="General chapters/621.html" class="text-blue-600 hover:underline" target="_blank">621</a>، سازگاری سیستم مراجعه کنید.)</p>
                 <p class="mb-4">حالت: LC</p>
                 <p class="mb-4">آشکارساز: هدایت‌سنجی با سرکوب</p>
                 <p class="mb-4">ستون‌ها</p>
@@ -204,7 +193,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="additional-specs-assay" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional-specs-assay" name="additional-specs-assay" rows="4" class="additional-spec-input"></textarea>
+                        <textarea id="additional-specs-assay" name="additional-specs-assay" rows="4" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
 
@@ -239,7 +228,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="additional-specs-soluble-salts" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional-specs-soluble-salts" name="additional-specs-soluble-salts" rows="4" class="additional-spec-input"></textarea>
+                        <textarea id="additional-specs-soluble-salts" name="additional-specs-soluble-salts" rows="4" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
                 <p class="mb-4">معیارهای پذیرش: وزن باقی‌مانده نباید از <span class="ltr-text">10 mg</span> (NMT 1.0%) تجاوز کند.</p>
@@ -266,24 +255,24 @@
                     </div>
                     <div class="mt-4">
                         <label for="additional-specs-acid-insoluble" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional-specs-acid-insoluble" name="additional-specs-acid-insoluble" rows="4" class="additional-spec-input"></textarea>
+                        <textarea id="additional-specs-acid-insoluble" name="additional-specs-acid-insoluble" rows="4" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
                 <p class="mb-4">معیارهای پذیرش: وزن باقی‌مانده مشتعل نباید از <span class="ltr-text">2.5 mg</span> (NMT 0.05%) تجاوز کند.</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">• آرسنیک á211ñ، رویه‌ها، روش I</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">• آرسنیک <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a>، رویه‌ها، روش I</h3>
                 <p class="mb-4">آماده‌سازی تست: <span class="ltr-text">750 mg</span> در <span class="ltr-text">25 mL</span> اسید هیدروکلریک 3 نرمال</p>
                 <div class="interactive-card card">
                     <h3 class="text-xl font-semibold text-blue-600 mb-2">محدودیت آرسنیک</h3>
                     <p class="mb-4">وضعیت:</p>
-                    <select id="arsenic-status" name="arsenic-status" class="status-dropdown">
+                    <select id="arsenic-status" name="arsenic-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
                     <div class="mt-4">
                         <label for="additional-specs-arsenic" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional-specs-arsenic" name="additional-specs-arsenic" rows="4" class="additional-spec-input"></textarea>
+                        <textarea id="additional-specs-arsenic" name="additional-specs-arsenic" rows="4" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
                 <p class="mb-4">معیارهای پذیرش: <span class="ltr-text">NMT 4 ppm</span></p>
@@ -305,31 +294,31 @@
                 <div class="interactive-card card">
                     <h3 class="text-xl font-semibold text-blue-600 mb-2">محدودیت کلسیم</h3>
                     <p class="mb-4">وضعیت:</p>
-                    <select id="calcium-limit-status" name="calcium-limit-status" class="status-dropdown">
+                    <select id="calcium-limit-status" name="calcium-limit-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
                     <div class="mt-4">
                         <label for="additional-specs-calcium-limit" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional-specs-calcium-limit" name="additional-specs-calcium-limit" rows="4" class="additional-spec-input"></textarea>
+                        <textarea id="additional-specs-calcium-limit" name="additional-specs-calcium-limit" rows="4" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
                 <p class="mb-4">معیارهای پذیرش: <span class="ltr-text">NMT 0.45%</span>. ▲پاسخ پیک کلسیم از محلول نمونه نباید از پاسخ پیک کلسیم از محلول استاندارد بیشتر باشد.▲ (رسمی 1 ژوئن 2021)</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">• آهن á241ñ</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">• آهن <a href="General chapters/241.html" class="text-blue-600 hover:underline" target="_blank">241</a></h3>
                 <p class="mb-4">آماده‌سازی تست: <span class="ltr-text">50 mg</span> را با <span class="ltr-text">5 mL</span> اسید نیتریک 2 نرمال به مدت 1 دقیقه بجوشانید. خنک کنید، با آب به حجم <span class="ltr-text">45 mL</span> برسانید، <span class="ltr-text">2 mL</span> اسید هیدروکلریک اضافه کنید و مخلوط کنید.</p>
                 <div class="interactive-card card">
                     <h3 class="text-xl font-semibold text-blue-600 mb-2">محدودیت آهن</h3>
                     <p class="mb-4">وضعیت:</p>
-                    <select id="iron-limit-status" name="iron-limit-status" class="status-dropdown">
+                    <select id="iron-limit-status" name="iron-limit-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
                     <div class="mt-4">
                         <label for="additional-specs-iron-limit" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional-specs-iron-limit" name="additional-specs-iron-limit" rows="4" class="additional-spec-input"></textarea>
+                        <textarea id="additional-specs-iron-limit" name="additional-specs-iron-limit" rows="4" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
                 <p class="mb-4">معیارهای پذیرش: <span class="ltr-text">NMT 200 ppm</span></p>
@@ -339,19 +328,19 @@
         <div id="specific-tests" class="tab-content hidden">
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">• تست‌های شمارش میکروبی á61ñ و تست‌های میکروارگانیسم‌های مشخص á62ñ</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">• تست‌های شمارش میکروبی <a href="General chapters/61.html" class="text-blue-600 hover:underline" target="_blank">61</a> و تست‌های میکروارگانیسم‌های مشخص <a href="General chapters/62.html" class="text-blue-600 hover:underline" target="_blank">62</a></h3>
                 <p class="mb-4">شرایط را برای عدم وجود اشرشیا کلی برآورده می‌کند.</p>
                 <div class="interactive-card card">
                     <h3 class="text-xl font-semibold text-blue-600 mb-2">تست‌های شمارش میکروبی و میکروارگانیسم‌های مشخص</h3>
                     <p class="mb-4">وضعیت:</p>
-                    <select id="microbial-tests-status" name="microbial-tests-status" class="status-dropdown">
+                    <select id="microbial-tests-status" name="microbial-tests-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
                     <div class="mt-4">
                         <label for="additional-specs-microbial-tests" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional-specs-microbial-tests" name="additional-specs-microbial-tests" rows="4" class="additional-spec-input"></textarea>
+                        <textarea id="additional-specs-microbial-tests" name="additional-specs-microbial-tests" rows="4" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
             </div>
@@ -362,7 +351,7 @@
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">• بسته‌بندی و نگهداری</h3>
                 <p class="mb-4">در ظروف ▲محکم▲ (رسمی 1 ژوئن 2021) نگهداری شود.</p>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">• استانداردهای مرجع USP á11ñ</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">• استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h3>
                 <p class="mb-4">USP Calcium Carbonate RS</p>
                 <p class="mb-4">USP Magnesium Oxide RS▲ (رسمی 1 ژوئن 2021)</p>
             </div>
@@ -482,5 +471,6 @@
             document.querySelector('.tab-button').click();
         });
     </script>
+
 </body>
 </html>

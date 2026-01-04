@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف فسفات پتاسیم دی‌بازیک (USP)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="text/javascript" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
     <style>
         body {
@@ -83,32 +86,10 @@
             cursor: pointer;
             border: none;
         }
-        .additional-spec-input {
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-        }
-        .status-dropdown {
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-        }
-        .input-field {
-            direction: ltr;
-            text-align: left;
-            display: inline-block;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-            border: 1px solid #d1d5db;
-            background-color: #fff;
-            border-radius: 0.375rem;
-            width: 16rem; /* 256px */
-            padding: 0.5rem 0.75rem;
-            color: #374151;
-            line-height: 1.5;
-        }
-        .input-field:focus {
-            outline: none;
-            box-shadow: 0 0 0 2px #2563eb;
-        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+
 
 <div class="container mx-auto p-4 max-w-4xl">
 
@@ -184,7 +165,7 @@
                     <br>
                     <span class="font-bold">وضعیت: </span><span id="status_assay"></span>
                 </div>
-                <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4 w-full p-2 border rounded"></textarea>
+                <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
         </div>
     </div>
@@ -219,7 +200,7 @@
                     <br>
                     <span class="font-bold">وضعیت: </span><span id="status_insoluble"></span>
                 </div>
-                <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4 w-full p-2 border rounded"></textarea>
+                <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کربنات</h4>
@@ -229,12 +210,12 @@
             <div class="card interactive-card">
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد کربنات</h4>
                  <label for="carbonate_status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                <select id="carbonate_status" name="carbonate_status" class="status-dropdown w-48 mt-2">
+                <select id="carbonate_status" name="carbonate_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                     <option value=""></option>
                     <option value="Pass">Pass</option>
                     <option value="Fail">Fail</option>
                 </select>
-                 <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4 w-full p-2 border rounded"></textarea>
+                 <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کلرید و سولفات، کلرید <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a></h4>
@@ -243,12 +224,12 @@
             <div class="card interactive-card">
                  <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد کلرید</h4>
                  <label for="chloride_status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                <select id="chloride_status" name="chloride_status" class="status-dropdown w-48 mt-2">
+                <select id="chloride_status" name="chloride_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                     <option value=""></option>
                     <option value="Pass">Pass</option>
                     <option value="Fail">Fail</option>
                 </select>
-                 <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4 w-full p-2 border rounded"></textarea>
+                 <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کلرید و سولفات، سولفات <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a></h4>
@@ -257,24 +238,24 @@
             <div class="card interactive-card">
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد سولفات</h4>
                 <label for="sulfate_status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                <select id="sulfate_status" name="sulfate_status" class="status-dropdown w-48 mt-2">
+                <select id="sulfate_status" name="sulfate_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                     <option value=""></option>
                     <option value="Pass">Pass</option>
                     <option value="Fail">Fail</option>
                 </select>
-                 <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4 w-full p-2 border rounded"></textarea>
+                 <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آرسنیک، روش I <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a>: <span class="ltr-text">NMT 3</span> ppm</h4>
             <div class="card interactive-card">
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد آرسنیک</h4>
                 <label for="arsenic_status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                <select id="arsenic_status" name="arsenic_status" class="status-dropdown w-48 mt-2">
+                <select id="arsenic_status" name="arsenic_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                     <option value=""></option>
                     <option value="Pass">Pass</option>
                     <option value="Fail">Fail</option>
                 </select>
-                 <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4 w-full p-2 border rounded"></textarea>
+                 <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آهن</h4>
@@ -284,24 +265,24 @@
             <div class="card interactive-card">
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد آهن</h4>
                 <label for="iron_status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                <select id="iron_status" name="iron_status" class="status-dropdown w-48 mt-2">
+                <select id="iron_status" name="iron_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                     <option value=""></option>
                     <option value="Pass">Pass</option>
                     <option value="Fail">Fail</option>
                 </select>
-                 <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4 w-full p-2 border rounded"></textarea>
+                 <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سدیم: محلولی (<span class="ltr-text">1</span> در <span class="ltr-text">10</span>) که روی سیم پلاتین تست می‌شود، رنگ زرد برجسته‌ای به شعله غیرلومینسانس نمی‌دهد.</h4>
             <div class="card interactive-card">
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد سدیم</h4>
                 <label for="sodium_status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                <select id="sodium_status" name="sodium_status" class="status-dropdown w-48 mt-2">
+                <select id="sodium_status" name="sodium_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                     <option value=""></option>
                     <option value="Pass">Pass</option>
                     <option value="Fail">Fail</option>
                 </select>
-                 <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4 w-full p-2 border rounded"></textarea>
+                 <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد فلوراید</h4>
@@ -340,7 +321,7 @@
                     <br>
                     <span class="font-bold">وضعیت: </span><span id="status_fluoride"></span>
                 </div>
-                <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4 w-full p-2 border rounded"></textarea>
+                <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد نمک مونو یا تریبازیک</h4>
@@ -350,12 +331,12 @@
             <div class="card interactive-card">
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد نمک مونو یا تریبازیک</h4>
                 <label for="monobasic_tribasic_status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                <select id="monobasic_tribasic_status" name="monobasic_tribasic_status" class="status-dropdown w-48 mt-2">
+                <select id="monobasic_tribasic_status" name="monobasic_tribasic_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                     <option value=""></option>
                     <option value="Pass">Pass</option>
                     <option value="Fail">Fail</option>
                 </select>
-                 <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4 w-full p-2 border rounded"></textarea>
+                 <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
         </div>
     </div>
@@ -368,12 +349,12 @@
             <div class="card interactive-card">
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">pH</h4>
                 <label for="ph_status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                <select id="ph_status" name="ph_status" class="status-dropdown w-48 mt-2">
+                <select id="ph_status" name="ph_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                     <option value=""></option>
                     <option value="Pass">Pass</option>
                     <option value="Fail">Fail</option>
                 </select>
-                <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4 w-full p-2 border rounded"></textarea>
+                <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">خloss on Drying (Loss on Drying) <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a>: نمونه را در دمای <span class="ltr-text">105°</span> تا رسیدن به وزن ثابت خشک کنید: نباید بیشتر از <span class="ltr-text">1.0%</span> از وزن خود را از دست بدهد.</h4>
@@ -404,7 +385,7 @@
                     <br>
                     <span class="font-bold">وضعیت: </span><span id="status_lod"></span>
                 </div>
-                 <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4 w-full p-2 border rounded"></textarea>
+                 <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">Residue on Ignition (Residue on Ignition)</h4>
@@ -435,7 +416,7 @@
                     <br>
                     <span class="font-bold">وضعیت: </span><span id="status_roi"></span>
                 </div>
-                 <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4 w-full p-2 border rounded"></textarea>
+                 <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
              <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">Reducing Substances</h4>
@@ -476,7 +457,7 @@
                     <br>
                     <span class="font-bold">وضعیت: </span><span id="status_reducing"></span>
                 </div>
-                 <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4 w-full p-2 border rounded"></textarea>
+                 <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
         </div>
     </div>
@@ -810,6 +791,7 @@
     // Initialize the first tab to be visible
     document.querySelector('.tab-button').click();
 </script>
+
 
 </body>
 </html>

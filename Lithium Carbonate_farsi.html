@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف کربنات لیتیم (USP)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -82,27 +86,10 @@
             cursor: pointer;
             border: none;
         }
-        .additional-spec-input {
-            shadow: appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline;
-        }
-        .status-dropdown {
-             shadow: appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48;
-             width: 12rem; /* 192px */
-             background-color: white;
-             border-color: #d1d5db; /* light gray */
-        }
-        .input-field {
-            direction: ltr;
-            text-align: left;
-            display: inline-block;
-            shadow: appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2;
-            width: 16rem; /* 256px */
-            background-color: white;
-            border-color: #d1d5db; /* light gray */
-        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+
     <div class="container mx-auto p-4 max-w-4xl">
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">کربنات لیتیم</h1>
 
@@ -141,7 +128,7 @@
             <p class="mb-4"><span class="font-bold">محلول استاندارد:</span> 100 میکروگرم بر میلی‌لیتر از USP Lithium Carbonate RS در رقیق‌کننده</p>
             <p class="mb-4"><span class="font-bold">محلول نمونه:</span> 100 میکروگرم بر میلی‌لیتر از کربنات لیتیم در رقیق‌کننده</p>
             <p class="mb-4"><span class="font-bold">سیستم کروماتوگرافی</span></p>
-            <p class="mb-4">(به کروماتوگرافی á621ñ، آمادگی سیستم مراجعه کنید.)</p>
+            <p class="mb-4">(به کروماتوگرافی <a href="General chapters/621.html" class="text-blue-600 hover:underline" target="_blank">621</a>، آمادگی سیستم مراجعه کنید.)</p>
             <p class="mb-4"><span class="font-bold">حالت:</span> LC</p>
             <p class="mb-4"><span class="font-bold">آشکارساز:</span> رسانایی با سرکوب</p>
             <p class="mb-4"><span class="font-bold">ستون‌ها</span></p>
@@ -197,7 +184,7 @@
                 </div>
                 <div class="mt-2">
                     <label for="assay-additional-spec" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="assay-additional-spec" name="assay-additional-spec" rows="3" class="additional-spec-input"></textarea>
+                    <textarea id="assay-additional-spec" name="assay-additional-spec" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
         </div>
@@ -263,11 +250,11 @@
                 </div>
                  <div class="mt-2">
                     <label for="impurities-additional-spec" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="impurities-additional-spec" name="impurities-additional-spec" rows="3" class="additional-spec-input"></textarea>
+                    <textarea id="impurities-additional-spec" name="impurities-additional-spec" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
 
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات á221ñ، سولفات</h3>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a>، سولفات</h3>
             <p class="mb-4"><span class="font-bold">محلول استاندارد:</span> 1 میلی‌لیتر از اسید سولفوریک 0.020 نرم و 1 میلی‌لیتر اسید کلریدریک 3 نرم را به یک ظرف مناسب منتقل کنید. با آب تا حجم 40 میلی‌لیتر رقیق کنید.</p>
             <p class="mb-4"><span class="font-bold">محلول نمونه:</span> 1.0 گرم کربنات لیتیم را به یک ظرف مناسب منتقل کنید. 10 میلی‌لیتر اسید کلریدریک 3 نرم را اضافه کنید. با آب تا حجم 40 میلی‌لیتر رقیق کنید.</p>
             <p class="mb-4"><span class="font-bold">تجزیه و تحلیل:</span> به طور جداگانه، 1 میلی‌لیتر کلرید باریم TS را به محلول استاندارد و محلول نمونه اضافه کنید.</p>
@@ -275,18 +262,18 @@
             <div class="card interactive-card">
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت کلرید و سولفات (سولفات)</h4>
                 <label for="sulfate-status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                <select id="sulfate-status" name="sulfate-status" class="status-dropdown">
+                <select id="sulfate-status" name="sulfate-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                     <option value=""></option>
                     <option value="Pass">قبول</option>
                     <option value="Fail">رد</option>
                 </select>
                  <div class="mt-2">
                     <label for="sulfate-additional-spec" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="sulfate-additional-spec" name="sulfate-additional-spec" rows="3" class="additional-spec-input"></textarea>
+                    <textarea id="sulfate-additional-spec" name="sulfate-additional-spec" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
 
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات á221ñ، کلرید</h3>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a>، کلرید</h3>
             <p class="mb-4"><span class="font-bold">محلول استاندارد:</span> 0.5 میلی‌لیتر از اسید کلریدریک 0.02 نرم و 1.2 میلی‌لیتر اسید نیتریک را به یک ظرف مناسب منتقل کنید. با آب تا حجم 50 میلی‌لیتر رقیق کنید.</p>
             <p class="mb-4"><span class="font-bold">محلول نمونه:</span> 500 میلی‌گرم کربنات لیتیم را به یک ظرف مناسب منتقل کنید. 1.2 میلی‌لیتر اسید نیتریک را اضافه کنید. با آب تا حجم 50 میلی‌لیتر رقیق کنید.</p>
             <p class="mb-4"><span class="font-bold">تجزیه و تحلیل:</span> به طور جداگانه، 1 میلی‌لیتر نیترات نقره TS را به محلول استاندارد و محلول نمونه اضافه کنید.</p>
@@ -294,14 +281,14 @@
             <div class="card interactive-card">
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت کلرید و سولفات (کلرید)</h4>
                 <label for="chloride-status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                <select id="chloride-status" name="chloride-status" class="status-dropdown">
+                <select id="chloride-status" name="chloride-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                     <option value=""></option>
                     <option value="Pass">قبول</option>
                     <option value="Fail">رد</option>
                 </select>
                  <div class="mt-2">
                     <label for="chloride-additional-spec" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="chloride-additional-spec" name="chloride-additional-spec" rows="3" class="additional-spec-input"></textarea>
+                    <textarea id="chloride-additional-spec" name="chloride-additional-spec" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
         </div>
@@ -309,7 +296,7 @@
         <!-- SPECIFIC TESTS Tab -->
         <div id="specific-tests" class="tab-content card hidden">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">از دست دادن در هنگام خشک شدن á731ñ</h3>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">از دست دادن در هنگام خشک شدن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h3>
             <p class="mb-4"><span class="font-bold">تجزیه و تحلیل:</span> در دمای 200 درجه به مدت 4 ساعت خشک کنید.</p>
             <p class="mb-4"><span class="font-bold">معیارهای پذیرش:</span> NMT 1.0%</p>
 
@@ -337,7 +324,7 @@
                 </div>
                  <div class="mt-2">
                     <label for="lod-additional-spec" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="lod-additional-spec" name="lod-additional-spec" rows="3" class="additional-spec-input"></textarea>
+                    <textarea id="lod-additional-spec" name="lod-additional-spec" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
         </div>
@@ -347,7 +334,7 @@
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
             <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری</h3>
             <p class="mb-4">در ظروف کاملاً بسته نگهداری شود.</p>
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP á11ñ</h3>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h3>
             <p class="mb-4">USP Lithium Carbonate RS</p>
             <p class="mb-4">(USP 1-Aug-2020)</p>
         </div>
@@ -478,5 +465,6 @@
             document.querySelector('.tab-button').click();
         });
     </script>
+
 </body>
 </html>

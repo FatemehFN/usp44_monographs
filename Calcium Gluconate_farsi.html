@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف کلسیم گلوکونات (USP)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -82,27 +86,10 @@
             cursor: pointer;
             border: none;
         }
-        .additional-spec-input {
-            shadow: appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline;
-        }
-        .status-dropdown {
-             shadow: appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48;
-             width: 12rem; /* 192px */
-             background-color: #fff;
-             border-color: #d1d5db;
-        }
-        .input-field {
-            direction: ltr;
-            text-align: left;
-            display: inline-block;
-            shadow: appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2;
-            width: 16rem; /* 256px */
-            background-color: #fff;
-            border-color: #d1d5db;
-        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+
     <div class="container mx-auto p-4 max-w-4xl">
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">کلسیم گلوکونات</h1>
 
@@ -126,7 +113,7 @@
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. تست‌های شناسایی (عمومی á191ñ)</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. تست‌های شناسایی (عمومی <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a>)</h3>
                 <p class="mb-4">محلول نمونه: 20 mg/mL</p>
                 <p class="mb-4">معیارهای پذیرش: الزامات را برآورده می‌کند.</p>
 
@@ -234,7 +221,7 @@
                 <p class="mb-4">نمونه: 800 میلی‌گرم کلسیم گلوکونات انیدروس یا کلسیم گلوکونات مونوهیدرات</p>
                 <p class="mb-4">شاهد: 150 میلی‌لیتر آب حاوی 2 میلی‌لیتر هیدروکلریک اسید 3 مولار</p>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم تیتراسیون</h4>
-                <p class="mb-4">(به تیتراسیون á541ñ مراجعه کنید.)</p>
+                <p class="mb-4">(به تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید.)</p>
                 <p class="mb-4">حالت: تیتراسیون مستقیم</p>
                 <p class="mb-4">تیترانت: 0.05 مولار ادتات دی‌سدیم VS</p>
                 <p class="mb-4">تشخیص نقطه پایان: بصری</p>
@@ -281,7 +268,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="additional-specs-assay" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional-specs-assay" name="additional-specs-assay" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional-specs-assay" name="additional-specs-assay" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
             </div>
@@ -291,7 +278,7 @@
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">آرسنیک á211ñ، روش I</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">آرسنیک <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a>، روش I</h3>
                 <p class="mb-4">آماده‌سازی نمونه: 1.0 گرم را در مخلوطی از 10 میلی‌لیتر هیدروکلریک اسید و 20 میلی‌لیتر آب حل کرده و با آب تا 55 میلی‌لیتر رقیق کنید.</p>
                 <p class="mb-4">تجزیه و تحلیل: طبق دستورالعمل فصل عمل کنید، به جز حذف 20 میلی‌لیتر اسید سولفوریک 7 مولار.</p>
                 <p class="mb-4">معیارهای پذیرش: حداکثر 3 ppm</p>
@@ -299,7 +286,7 @@
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تست حد آرسنیک</h4>
                     <div class="flex flex-col items-center">
                         <p class="mb-2 text-sm text-gray-600">وضعیت:</p>
-                        <select id="arsenic-status" name="arsenic-status" class="status-dropdown">
+                        <select id="arsenic-status" name="arsenic-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                             <option value=""></option>
                             <option value="Pass">قبول</option>
                             <option value="Fail">رد</option>
@@ -307,17 +294,17 @@
                     </div>
                     <div class="mt-4">
                         <label for="additional-specs-arsenic" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional-specs-arsenic" name="additional-specs-arsenic" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional-specs-arsenic" name="additional-specs-arsenic" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات á221ñ، کلرید</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a>، کلرید</h3>
                 <p class="mb-4">یک قسمت 1.0 گرمی نباید کلرید بیشتری نسبت به معادل 0.07 میلی‌لیتر اسید هیدروکلریک 0.020 مولار (0.005%) نشان دهد. در صورتی که برای تهیه اشکال دارویی تزریقی برچسب‌گذاری نشده باشد، یک قسمت 1.0 گرمی نباید کلرید بیشتری نسبت به معادل 1 میلی‌لیتر اسید هیدروکلریک 0.020 مولار (0.07%) نشان دهد.</p>
                 <div class="interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تست حد کلرید</h4>
                     <div class="flex flex-col items-center">
                         <p class="mb-2 text-sm text-gray-600">وضعیت:</p>
-                        <select id="chloride-status" name="chloride-status" class="status-dropdown">
+                        <select id="chloride-status" name="chloride-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                             <option value=""></option>
                             <option value="Pass">قبول</option>
                             <option value="Fail">رد</option>
@@ -325,17 +312,17 @@
                     </div>
                     <div class="mt-4">
                         <label for="additional-specs-chloride" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional-specs-chloride" name="additional-specs-chloride" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional-specs-chloride" name="additional-specs-chloride" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات á221ñ، سولفات</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a>، سولفات</h3>
                 <p class="mb-4">یک قسمت 2.0 گرمی که در آب جوش حل شده است، نباید سولفات بیشتری نسبت به معادل 0.1 میلی‌لیتر اسید سولفوریک 0.020 مولار (0.005%) نشان دهد. در صورتی که برای تهیه اشکال دارویی تزریقی برچسب‌گذاری نشده باشد، یک قسمت 2.0 گرمی که در آب جوش حل شده است، نباید سولفات بیشتری نسبت به معادل 1 میلی‌لیتر اسید سولفوریک 0.020 مولار (0.05%) نشان دهد.</p>
                 <div class="interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تست حد سولفات</h4>
                     <div class="flex flex-col items-center">
                         <p class="mb-2 text-sm text-gray-600">وضعیت:</p>
-                        <select id="sulfate-status" name="sulfate-status" class="status-dropdown">
+                        <select id="sulfate-status" name="sulfate-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                             <option value=""></option>
                             <option value="Pass">قبول</option>
                             <option value="Fail">رد</option>
@@ -343,7 +330,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="additional-specs-sulfate" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional-specs-sulfate" name="additional-specs-sulfate" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional-specs-sulfate" name="additional-specs-sulfate" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
 
@@ -354,7 +341,7 @@
                 <p class="mb-4">محلول نمونه: 40 میلی‌گرم/میلی‌لیتر کلسیم گلوکونات در اسید نیتریک 10%</p>
                 <p class="mb-4">محلول شاهد: محلول اسید نیتریک 10%</p>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط دستگاهی</h4>
-                <p class="mb-4">(به پلاسمای اسپکتروسکوپی á730ñ مراجعه کنید.)</p>
+                <p class="mb-4">(به پلاسمای اسپکتروسکوپی <a href="General chapters/730.html" class="text-blue-600 hover:underline" target="_blank">730</a> مراجعه کنید.)</p>
                 <p class="mb-4">حالت: طیف‌سنجی نشر نوری پلاسمای جفت شده القایی (ICP–OES)</p>
                 <p class="mb-4">طول موج‌های نشر: 239.562 نانومتر یا طول موج بهینه شده برای آهن؛ 371.029 نانومتر یا طول موج بهینه شده برای ایتریم.</p>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">قابلیت اطمینان سیستم</h4>
@@ -394,7 +381,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="additional-specs-iron" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional-specs-iron" name="additional-specs-iron" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional-specs-iron" name="additional-specs-iron" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
 
@@ -425,7 +412,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="additional-specs-mgalkali" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional-specs-mgalkali" name="additional-specs-mgalkali" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional-specs-mgalkali" name="additional-specs-mgalkali" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
 
@@ -444,7 +431,7 @@
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تست حد فسفات</h4>
                     <div class="flex flex-col items-center">
                         <p class="mb-2 text-sm text-gray-600">وضعیت:</p>
-                        <select id="phosphate-status" name="phosphate-status" class="status-dropdown">
+                        <select id="phosphate-status" name="phosphate-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                             <option value=""></option>
                             <option value="Pass">قبول</option>
                             <option value="Fail">رد</option>
@@ -452,7 +439,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="additional-specs-phosphate" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional-specs-phosphate" name="additional-specs-phosphate" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional-specs-phosphate" name="additional-specs-phosphate" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
 
@@ -465,7 +452,7 @@
                 <p class="mb-4">محلول استاندارد: 1.5 میکروگرم/میلی‌لیتر اگزالات سدیم در محلول B</p>
                 <p class="mb-4">محلول نمونه: 20 میلی‌گرم/میلی‌لیتر کلسیم گلوکونات در محلول B. در صورت لزوم سونوگرافی کنید.</p>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم کروماتوگرافی</h4>
-                <p class="mb-4">(به کروماتوگرافی á621ñ، قابلیت اطمینان سیستم مراجعه کنید.)</p>
+                <p class="mb-4">(به کروماتوگرافی <a href="General chapters/621.html" class="text-blue-600 hover:underline" target="_blank">621</a>، قابلیت اطمینان سیستم مراجعه کنید.)</p>
                 <p class="mb-4">حالت: کروماتوگرافی یونی</p>
                 <p class="mb-4">آشکارساز: هدایت</p>
                 <p class="mb-4">ستون‌ها</p>
@@ -499,7 +486,7 @@
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تست حد اگزالات</h4>
                     <div class="flex flex-col items-center">
                         <p class="mb-2 text-sm text-gray-600">وضعیت:</p>
-                        <select id="oxalate-status" name="oxalate-status" class="status-dropdown">
+                        <select id="oxalate-status" name="oxalate-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                             <option value=""></option>
                             <option value="Pass">قبول</option>
                             <option value="Fail">رد</option>
@@ -507,7 +494,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="additional-specs-oxalate" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional-specs-oxalate" name="additional-specs-oxalate" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional-specs-oxalate" name="additional-specs-oxalate" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
 
@@ -515,7 +502,7 @@
                 <p class="mb-4">نمونه: 1.0 گرم کلسیم گلوکونات</p>
                 <p class="mb-4">شاهد: 20 میلی‌لیتر آب</p>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم تیتراسیون</h4>
-                <p class="mb-4">(به تیتراسیون á541ñ مراجعه کنید.)</p>
+                <p class="mb-4">(به تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید.)</p>
                 <p class="mb-4">حالت: تیتراسیون باقی‌مانده</p>
                 <p class="mb-4">تیترانت: 0.1 مولار ید VS</p>
                 <p class="mb-4">تیترانت برگشتی: 0.1 مولار سدیم تیوسولفات VS</p>
@@ -562,7 +549,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="additional-specs-reducing" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional-specs-reducing" name="additional-specs-reducing" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional-specs-reducing" name="additional-specs-reducing" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
             </div>
@@ -572,7 +559,7 @@
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">از دست دادن در هنگام خشک شدن á731ñ</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">از دست دادن در هنگام خشک شدن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h3>
                 <p class="mb-4">تجزیه و تحلیل: در دمای 105 درجه سانتی‌گراد به مدت 16 ساعت خشک کنید.</p>
                 <p class="mb-4">معیارهای پذیرش</p>
                 <p class="mb-4">انیدروس: حداکثر 3.0%</p>
@@ -603,7 +590,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="additional-specs-lod" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional-specs-lod" name="additional-specs-lod" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional-specs-lod" name="additional-specs-lod" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
 
@@ -635,7 +622,7 @@
                     </div>
                     <div class="mt-4">
                         <label for="additional-specs-roi" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional-specs-roi" name="additional-specs-roi" rows="3" class="additional-spec-input"></textarea>
+                        <textarea id="additional-specs-roi" name="additional-specs-roi" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                     </div>
                 </div>
             </div>
@@ -651,7 +638,7 @@
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">برچسب‌گذاری</h3>
                 <p class="mb-4">برچسب‌گذاری شود تا مشخص شود آیا انیدروس است یا مونوهیدرات. در صورتی که مقدار کلسیم گلوکونات در برچسب‌گذاری هر محلولی حاوی کلسیم گلوکونات ذکر شده باشد، این مقدار بر اساس کلسیم گلوکونات انیدروس (<span class="ltr-text">C<sub>12</sub>H<sub>22</sub>CaO<sub>14</sub></span>) در نظر گرفته می‌شود. کلسیم گلوکونات در نظر گرفته شده برای تهیه اشکال دارویی تزریقی، اینگونه برچسب‌گذاری می‌شود. کلسیم گلوکوناتی که برای تهیه اشکال دارویی تزریقی در نظر گرفته نشده است، اینگونه برچسب‌گذاری می‌شود؛ علاوه بر این، ممکن است به عنوان قابل استفاده برای تهیه اشکال دارویی خوراکی نیز برچسب‌گذاری شود.</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP á11ñ</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h3>
                 <ul class="list-disc pl-6">
                     <li>USP Calcium Gluconate Anhydrous RS</li>
                     <li>USP Calcium Gluconate Monohydrate RS</li>
@@ -920,5 +907,6 @@
             showTab('definition');
         });
     </script>
+
 </body>
 </html>

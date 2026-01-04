@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف اسید سیتریک انیدروس (USP)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="text/javascript" async
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
     <style>
         body {
@@ -83,21 +86,10 @@
             cursor: pointer;
             border: none;
         }
-        .additional-spec-input {
-            shadow: appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline;
-        }
-        .status-dropdown {
-            shadow: appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48;
-        }
-        .input-field {
-            direction: ltr;
-            text-align: left;
-            display: inline-block;
-            shadow: appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2;
-        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+
     <div class="container mx-auto p-4 max-w-4xl">
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">اسید سیتریک انیدروس</h1>
 
@@ -122,7 +114,7 @@
         <div id="identification" class="tab-content hidden">
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">تست‌های شناسایی طیفی á197ñ، طیف‌سنجی مادون قرمز: 197K</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">تست‌های شناسایی طیفی <a href="General chapters/197.html" class="text-blue-600 hover:underline" target="_blank">197</a>، طیف‌سنجی مادون قرمز: <a href="General chapters/197.html" class="text-blue-600 hover:underline" target="_blank">197</a>K</h3>
                 <p class="mb-3">ماده مورد بررسی را در دمای 105 درجه سانتی‌گراد به مدت 2 ساعت خشک کنید.</p>
             </div>
         </div>
@@ -159,7 +151,7 @@
                         <span class="font-bold">وضعیت:</span> <span id="assay_status" class="ltr-text">--</span>
                     </div>
                     <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h5>
-                    <textarea id="assay_additional_specs" name="assay_additional_specs" class="additional-spec-input"></textarea>
+                    <textarea id="assay_additional_specs" name="assay_additional_specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
         </div>
@@ -169,7 +161,7 @@
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">باقیمانده پس از اشتعال á281ñ</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">باقیمانده پس از اشتعال <a href="General chapters/281.html" class="text-blue-600 hover:underline" target="_blank">281</a></h3>
                 <p class="mb-3">حداکثر 0.1%، تعیین شده بر روی 1.0 گرم.</p>
                 <div class="card interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب باقیمانده پس از اشتعال</h4>
@@ -194,7 +186,7 @@
                         <span class="font-bold">وضعیت:</span> <span id="roi_status" class="ltr-text">--</span>
                     </div>
                     <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h5>
-                    <textarea id="roi_additional_specs" name="roi_additional_specs" class="additional-spec-input"></textarea>
+                    <textarea id="roi_additional_specs" name="roi_additional_specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">سولفات</h3>
@@ -208,13 +200,13 @@
                 <div class="card interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت سولفات</h4>
                     <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">وضعیت:</h5>
-                    <select id="sulfate_status" name="sulfate_status" class="status-dropdown">
+                    <select id="sulfate_status" name="sulfate_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
                     <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h5>
-                    <textarea id="sulfate_additional_specs" name="sulfate_additional_specs" class="additional-spec-input"></textarea>
+                    <textarea id="sulfate_additional_specs" name="sulfate_additional_specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">حد مجاز آلومینیوم (در صورتی که برای استفاده در محلول‌های دیالیز برچسب‌گذاری شده باشد)</h3>
@@ -252,7 +244,7 @@
                         <span class="font-bold">وضعیت:</span> <span id="aluminum_status" class="ltr-text">--</span>
                     </div>
                     <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h5>
-                    <textarea id="aluminum_additional_specs" name="aluminum_additional_specs" class="additional-spec-input"></textarea>
+                    <textarea id="aluminum_additional_specs" name="aluminum_additional_specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">حد مجاز اسید اگزالیک</h3>
@@ -264,13 +256,13 @@
                 <div class="card interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت حد مجاز اسید اگزالیک</h4>
                     <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">وضعیت:</h5>
-                    <select id="oxalic_acid_status" name="oxalic_acid_status" class="status-dropdown">
+                    <select id="oxalic_acid_status" name="oxalic_acid_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
                     <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h5>
-                    <textarea id="oxalic_acid_additional_specs" name="oxalic_acid_additional_specs" class="additional-spec-input"></textarea>
+                    <textarea id="oxalic_acid_additional_specs" name="oxalic_acid_additional_specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
         </div>
@@ -280,18 +272,18 @@
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">تست اندوتوکسین‌های باکتریایی á85ñ</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">تست اندوتوکسین‌های باکتریایی <a href="General chapters/85.html" class="text-blue-600 hover:underline" target="_blank">85</a></h3>
                 <p class="mb-3">سطح اندوتوکسین‌های باکتریایی به گونه‌ای است که نیازهای مونوگراف داروی مربوطه که در آن اسید سیتریک انیدروس استفاده می‌شود، برآورده می‌شود. جایی که برچسب نشان می‌دهد که اسید سیتریک انیدروس باید در طول آماده‌سازی اشکال دارویی تزریقی تحت پردازش بیشتری قرار گیرد، سطح اندوتوکسین‌های باکتریایی به گونه‌ای است که نیازهای مونوگراف داروی مربوطه که در آن اسید سیتریک انیدروس استفاده می‌شود، برآورده می‌شود.</p>
                 <div class="card interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت تست اندوتوکسین‌های باکتریایی</h4>
                     <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">وضعیت:</h5>
-                    <select id="bacterial_endotoxins_status" name="bacterial_endotoxins_status" class="status-dropdown">
+                    <select id="bacterial_endotoxins_status" name="bacterial_endotoxins_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
                     <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h5>
-                    <textarea id="bacterial_endotoxins_additional_specs" name="bacterial_endotoxins_additional_specs" class="additional-spec-input"></textarea>
+                    <textarea id="bacterial_endotoxins_additional_specs" name="bacterial_endotoxins_additional_specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">شفافیت محلول</h3>
@@ -304,19 +296,19 @@
                 <p class="mb-3">سوسپانسیون استاندارد B: 10.0 میلی‌لیتر استاندارد اپالسانس را با آب به 90 میلی‌لیتر برسانید.</p>
                 <p class="mb-3">محلول نمونه: 200 میلی‌گرم/میلی‌لیتر اسید سیتریک انیدروس در آب.</p>
                 <p class="mb-3">آنالیز: سوسپانسیون استاندارد A، سوسپانسیون استاندارد B، آب و محلول نمونه.</p>
-                <p class="mb-3">مقدار کافی از محلول نمونه را به یک لوله آزمایش شیشه‌ای بی‌رنگ، شفاف، خنثی با ته صاف و قطر داخلی 15-25 میلی‌متر منتقل کنید تا عمق 40 میلی‌متر به دست آید. به طور مشابه، مقادیری از سوسپانسیون استاندارد A، سوسپانسیون استاندارد B و آب را به لوله‌های آزمایش جداگانه مشابه منتقل کنید. محلول نمونه، سوسپانسیون استاندارد A، سوسپانسیون استاندارد B و آب را در نور روز پراکنده، از بالا در مقابل پس‌زمینه سیاه مشاهده کنید (به مقایسه بصری á630ñ مراجعه کنید).</p>
+                <p class="mb-3">مقدار کافی از محلول نمونه را به یک لوله آزمایش شیشه‌ای بی‌رنگ، شفاف، خنثی با ته صاف و قطر داخلی 15-25 میلی‌متر منتقل کنید تا عمق 40 میلی‌متر به دست آید. به طور مشابه، مقادیری از سوسپانسیون استاندارد A، سوسپانسیون استاندارد B و آب را به لوله‌های آزمایش جداگانه مشابه منتقل کنید. محلول نمونه، سوسپانسیون استاندارد A، سوسپانسیون استاندارد B و آب را در نور روز پراکنده، از بالا در مقابل پس‌زمینه سیاه مشاهده کنید (به مقایسه بصری <a href="General chapters/630.html" class="text-blue-600 hover:underline" target="_blank">630</a> مراجعه کنید).</p>
                 <p class="mb-3">[نکته — پراکندگی نور باید به گونه‌ای باشد که سوسپانسیون استاندارد A به راحتی از آب قابل تشخیص باشد و سوسپانسیون استاندارد B به راحتی از سوسپانسیون استاندارد A قابل تشخیص باشد.]</p>
                 <p class="mb-3">معیارهای پذیرش: محلول نمونه باید همان شفافیت آب را نشان دهد یا اپالسانس آن نباید بیشتر از سوسپانسیون استاندارد A باشد.</p>
                 <div class="card interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت شفافیت محلول</h4>
                     <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">وضعیت:</h5>
-                    <select id="clarity_status" name="clarity_status" class="status-dropdown">
+                    <select id="clarity_status" name="clarity_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
                     <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h5>
-                    <textarea id="clarity_additional_specs" name="clarity_additional_specs" class="additional-spec-input"></textarea>
+                    <textarea id="clarity_additional_specs" name="clarity_additional_specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">رنگ محلول</h3>
@@ -329,54 +321,54 @@
                 <p class="mb-3">محلول استاندارد C: 0.75 میلی‌لیتر محلول پایه استاندارد C را با اسید هیدروکلریک رقیق شده (10 گرم/لیتر) به 100 میلی‌لیتر برسانید.</p>
                 <p class="mb-3">محلول نمونه: طبق روش آزمایش شفافیت محلول آماده شود.</p>
                 <p class="mb-3">آنالیز 1: آب و محلول نمونه.</p>
-                <p class="mb-3">مقدار کافی از محلول نمونه را به یک لوله آزمایش شیشه‌ای بی‌رنگ، شفاف، خنثی با ته صاف و قطر داخلی 15-25 میلی‌متر منتقل کنید تا عمق 40 میلی‌متر به دست آید. به طور مشابه، آب را به یک لوله آزمایش جداگانه مشابه منتقل کنید. محلول نمونه و آب را در نور روز پراکنده، از بالا در مقابل پس‌زمینه سفید مشاهده کنید (به مقایسه بصری á630ñ مراجعه کنید).</p>
+                <p class="mb-3">مقدار کافی از محلول نمونه را به یک لوله آزمایش شیشه‌ای بی‌رنگ، شفاف، خنثی با ته صاف و قطر داخلی 15-25 میلی‌متر منتقل کنید تا عمق 40 میلی‌متر به دست آید. به طور مشابه، آب را به یک لوله آزمایش جداگانه مشابه منتقل کنید. محلول نمونه و آب را در نور روز پراکنده، از بالا در مقابل پس‌زمینه سفید مشاهده کنید (به مقایسه بصری <a href="General chapters/630.html" class="text-blue-600 hover:underline" target="_blank">630</a> مراجعه کنید).</p>
                 <p class="mb-3">معیارهای پذیرش 1: محلول نمونه نباید رنگی شدیدتر از آب داشته باشد. در صورت رنگی‌تر بودن، آنالیز 2 را دنبال کنید.</p>
                 <p class="mb-3">آنالیز 2: محلول استاندارد A، محلول استاندارد B، محلول استاندارد C و محلول نمونه.</p>
-                <p class="mb-3">مقدار کافی از محلول استاندارد A، محلول استاندارد B و محلول استاندارد C را به لوله‌های آزمایش جداگانه شیشه‌ای بی‌رنگ، شفاف، خنثی با ته صاف و قطر داخلی 15-25 میلی‌متر منتقل کنید تا عمق 40 میلی‌متر به دست آید. محلول نمونه از آنالیز 1 را با محلول استاندارد A، محلول استاندارد B و محلول استاندارد C در نور روز پراکنده، از بالا در مقابل پس‌زمینه سفید مقایسه کنید (به مقایسه بصری á630ñ مراجعه کنید).</p>
+                <p class="mb-3">مقدار کافی از محلول استاندارد A، محلول استاندارد B و محلول استاندارد C را به لوله‌های آزمایش جداگانه شیشه‌ای بی‌رنگ، شفاف، خنثی با ته صاف و قطر داخلی 15-25 میلی‌متر منتقل کنید تا عمق 40 میلی‌متر به دست آید. محلول نمونه از آنالیز 1 را با محلول استاندارد A، محلول استاندارد B و محلول استاندارد C در نور روز پراکنده، از بالا در مقابل پس‌زمینه سفید مقایسه کنید (به مقایسه بصری <a href="General chapters/630.html" class="text-blue-600 hover:underline" target="_blank">630</a> مراجعه کنید).</p>
                 <p class="mb-3">معیارهای پذیرش 2: محلول نمونه نباید رنگی شدیدتر از محلول‌های استاندارد A، B و C داشته باشد.</p>
                 <div class="card interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت رنگ محلول</h4>
                     <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">وضعیت:</h5>
-                    <select id="color_status" name="color_status" class="status-dropdown">
+                    <select id="color_status" name="color_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
                     <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h5>
-                    <textarea id="color_additional_specs" name="color_additional_specs" class="additional-spec-input"></textarea>
+                    <textarea id="color_additional_specs" name="color_additional_specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">مواد قابل کربن‌شدن سریع</h3>
                 <p class="mb-3">نمونه: 1.0 گرم پودر اسید سیتریک انیدروس.</p>
                 <p class="mb-3">آنالیز: نمونه را به یک لوله آزمایش 22 میلی‌متر × 175 میلی‌متر که قبلاً با 10 میلی‌لیتر اسید سولفوریک شسته شده و به مدت 10 دقیقه اجازه تخلیه داده شده، منتقل کنید. 10 میلی‌لیتر اسید سولفوریک اضافه کنید، تا زمانی که محلول کامل شود هم بزنید و لوله را در حمام آب در دمای 90 ± 1 درجه سانتی‌گراد به مدت 60 ± 0.5 دقیقه غوطه‌ور کنید، سطح اسید را در تمام مدت پایین‌تر از سطح آب نگه دارید. لوله را در آب جاری سرد کنید و اسید را به یک لوله مقایسه رنگ منتقل کنید.</p>
-                <p class="mb-3">معیارهای پذیرش: رنگ اسید نباید تیره‌تر از حجم مشابه مایع تطبیق‌دهنده K (به رنگ و عدم وجود رنگ á631ñ مراجعه کنید) در یک لوله مشابه باشد، لوله‌ها از بالا در مقابل پس‌زمینه سفید مشاهده می‌شوند.</p>
+                <p class="mb-3">معیارهای پذیرش: رنگ اسید نباید تیره‌تر از حجم مشابه مایع تطبیق‌دهنده K (به رنگ و عدم وجود رنگ <a href="General chapters/631.html" class="text-blue-600 hover:underline" target="_blank">631</a> مراجعه کنید) در یک لوله مشابه باشد، لوله‌ها از بالا در مقابل پس‌زمینه سفید مشاهده می‌شوند.</p>
                 <div class="card interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت مواد قابل کربن‌شدن سریع</h4>
                     <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">وضعیت:</h5>
-                    <select id="carbonizable_status" name="carbonizable_status" class="status-dropdown">
+                    <select id="carbonizable_status" name="carbonizable_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
                     <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h5>
-                    <textarea id="carbonizable_additional_specs" name="carbonizable_additional_specs" class="additional-spec-input"></textarea>
+                    <textarea id="carbonizable_additional_specs" name="carbonizable_additional_specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">تست استریلیتی á71ñ</h3>
-                <p class="mb-3">جایی که برچسب نشان می‌دهد که اسید سیتریک انیدروس استریل است، الزامات تست استریلیتی á71ñ را در مونوگراف‌های دارویی مربوطه که در آنها اسید سیتریک انیدروس استفاده می‌شود، برآورده می‌کند.</p>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">تست استریلیتی <a href="General chapters/71.html" class="text-blue-600 hover:underline" target="_blank">71</a></h3>
+                <p class="mb-3">جایی که برچسب نشان می‌دهد که اسید سیتریک انیدروس استریل است، الزامات تست استریلیتی <a href="General chapters/71.html" class="text-blue-600 hover:underline" target="_blank">71</a> را در مونوگراف‌های دارویی مربوطه که در آنها اسید سیتریک انیدروس استفاده می‌شود، برآورده می‌کند.</p>
                 <div class="card interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت تست استریلیتی</h4>
                     <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">وضعیت:</h5>
-                    <select id="sterility_status" name="sterility_status" class="status-dropdown">
+                    <select id="sterility_status" name="sterility_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
                     <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h5>
-                    <textarea id="sterility_additional_specs" name="sterility_additional_specs" class="additional-spec-input"></textarea>
+                    <textarea id="sterility_additional_specs" name="sterility_additional_specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">تعیین آب، روش I á921ñ</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">تعیین آب، روش I <a href="General chapters/921.html" class="text-blue-600 hover:underline" target="_blank">921</a></h3>
                 <p class="mb-3">نمونه: 2.0 گرم اسید سیتریک انیدروس.</p>
                 <p class="mb-3">معیارهای پذیرش: حداکثر 1.0%.</p>
                 <div class="card interactive-card">
@@ -402,7 +394,7 @@
                         <span class="font-bold">وضعیت:</span> <span id="water_status" class="ltr-text">--</span>
                     </div>
                     <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h5>
-                    <textarea id="water_additional_specs" name="water_additional_specs" class="additional-spec-input"></textarea>
+                    <textarea id="water_additional_specs" name="water_additional_specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
         </div>
@@ -418,7 +410,7 @@
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">برچسب‌گذاری</h3>
                 <p class="mb-3">جایی که برای محلول‌های دیالیز در نظر گرفته شده است، اینگونه برچسب‌گذاری شود. جایی که اسید سیتریک انیدروس باید در طول آماده‌سازی اشکال دارویی تزریقی تحت پردازش بیشتری قرار گیرد تا سطوح قابل قبول اندوتوکسین‌های باکتریایی تضمین شود، اینگونه برچسب‌گذاری شود. جایی که اسید سیتریک انیدروس استریل است، اینگونه برچسب‌گذاری شود.</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP á11ñ</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h3>
                 <p class="mb-3">USP Citric Acid RS</p>
             </div>
         </div>
@@ -548,5 +540,6 @@
             }
         }
     </script>
+
 </body>
 </html>

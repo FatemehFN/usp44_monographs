@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف کلسیم پروپیونات (USP)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="text/javascript" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
     <style>
         body {
@@ -83,17 +86,10 @@
             cursor: pointer;
             border: none;
         }
-        .additional-spec-input {
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-            border: 1px solid #d1d5db; /* Light gray border */
-        }
-        .status-dropdown {
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-            border: 1px solid #d1d5db; /* Light gray border */
-        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+
     <div class="container mx-auto p-4 max-w-4xl">
 
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">مونوگراف کلسیم پروپیونات (USP)</h1>
@@ -157,7 +153,7 @@
                     <div class="mt-2">
                         <span class="font-bold">وضعیت:</span> <span id="assayStatus" class="inline-block"></span>
                     </div>
-                    <textarea id="assayAdditionalSpec" name="assayAdditionalSpec" rows="3" placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4"></textarea>
+                    <textarea id="assayAdditionalSpec" name="assayAdditionalSpec" rows="3" placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
         </div>
@@ -169,7 +165,7 @@
                 <h3 class="text-xl font-semibold text-gray-700 mb-2">حد فلوراید</h3>
                 <p class="mb-2">بافر: <span class="ltr-text">294.1</span> میلی‌گرم در میلی‌لیتر سدیم سیترات دی‌هیدرات</p>
                 <p class="mb-2">محلول استاندارد: <span class="ltr-text">2.21</span> میلی‌گرم در میلی‌لیتر USP سدیم فلوراید RS. [توجه - محلول را در بطری پلاستیکی نگهداری کنید.] در روز استفاده، <span class="ltr-text">5.0</span> میلی‌لیتر از محلول حاصل را به فلاسک حجمی <span class="ltr-text">1000</span> میلی‌لیتری منتقل کنید، با آب تا حجم رقیق کنید و مخلوط کنید. هر میلی‌لیتر از این محلول حاوی <span class="ltr-text">5</span> میکروگرم یون فلوراید است.</p>
-                <p class="mb-2">سیستم الکترود: از یک الکترود نشانگر یون فلوراید-اختصاصی و یک الکترود مرجع نقره-کلرید نقره متصل به پی‌اچ‌متر که قادر به اندازه‌گیری پتانسیل‌ها با حداقل تکرارپذیری <span class="ltr-text">±0.2</span> میلی‌ولت است، استفاده کنید (به <span class="ltr-text">pH á791ñ</span> مراجعه کنید).</p>
+                <p class="mb-2">سیستم الکترود: از یک الکترود نشانگر یون فلوراید-اختصاصی و یک الکترود مرجع نقره-کلرید نقره متصل به پی‌اچ‌متر که قادر به اندازه‌گیری پتانسیل‌ها با حداقل تکرارپذیری <span class="ltr-text">±0.2</span> میلی‌ولت است، استفاده کنید (به <span class="ltr-text">pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a></span> مراجعه کنید).</p>
                 <p class="mb-2">خط پاسخ استاندارد: <span class="ltr-text">1.0</span>، <span class="ltr-text">2.0</span>، <span class="ltr-text">3.0</span>، <span class="ltr-text">5.0</span>، <span class="ltr-text">10.0</span>، و <span class="ltr-text">15.0</span> میلی‌لیتر از محلول استاندارد را به ظروف پلاستیکی جداگانه <span class="ltr-text">250</span> میلی‌لیتری منتقل کنید. <span class="ltr-text">50</span> میلی‌لیتر آب، <span class="ltr-text">5</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">1</span> نرمال، <span class="ltr-text">10</span> میلی‌لیتر بافر، و <span class="ltr-text">10</span> میلی‌لیتر اِدِتات دی‌سدیم <span class="ltr-text">0.2</span> مولار اضافه کرده و مخلوط کنید. هر محلول را به فلاسک‌های حجمی جداگانه <span class="ltr-text">100</span> میلی‌لیتری منتقل کنید، با آب تا حجم رقیق کنید و مخلوط کنید. یک قسمت <span class="ltr-text">50</span> میلی‌لیتری از هر محلول را به ظروف پلاستیکی جداگانه <span class="ltr-text">125</span> میلی‌لیتری منتقل کنید و پتانسیل، بر حسب میلی‌ولت، هر محلول را با استفاده از سیستم الکترود بخوانید. منحنی کالیبراسیون را در مقابل پتانسیل، بر حسب میلی‌ولت، روی کاغذ نیمه‌لگاریتمی دو دوره‌ای با میکروگرم فلوراید در هر <span class="ltr-text">100</span> میلی‌لیتر محلول در مقیاس لگاریتمی ترسیم کنید. ¹</p>
                 <p class="mb-2">نمونه: <span class="ltr-text">1.0</span> گرم</p>
                 <p class="mb-2">آنالیز: نمونه را به یک بشر <span class="ltr-text">150</span> میلی‌لیتری منتقل کنید، <span class="ltr-text">10</span> میلی‌لیتر آب اضافه کنید و در حالی که به طور مداوم هم می‌زنید، به آرامی <span class="ltr-text">20</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">1</span> نرمال برای حل شدن نمونه اضافه کنید. <span class="ltr-text">1</span> دقیقه به سرعت بجوشانید. به یک ظرف پلاستیکی <span class="ltr-text">250</span> میلی‌لیتری منتقل کرده و به سرعت در حمام یخ خنک کنید. <span class="ltr-text">15</span> میلی‌لیتر بافر و <span class="ltr-text">10</span> میلی‌لیتر اِدِتات دی‌سدیم <span class="ltr-text">0.2</span> مولار اضافه کرده و مخلوط کنید. در صورت لزوم، pH را با اسید هیدروکلریک <span class="ltr-text">1</span> نرمال یا سدیم هیدروکسید <span class="ltr-text">1</span> نرمال روی <span class="ltr-text">5.5 ± 0.1</span> تنظیم کنید. به فلاسک حجمی <span class="ltr-text">100</span> میلی‌لیتری منتقل کنید، با آب تا حجم رقیق کنید و مخلوط کنید. یک قسمت <span class="ltr-text">50</span> میلی‌لیتری از این محلول را به یک ظرف پلاستیکی <span class="ltr-text">125</span> میلی‌لیتری منتقل کرده و پتانسیل را با استفاده از سیستم الکترود ثبت کنید. غلظت فلوراید، بر حسب میکروگرم در میلی‌لیتر، در نمونه را تعیین کنید.</p>
@@ -203,7 +199,7 @@
                     <div class="mt-2">
                         <span class="font-bold">وضعیت:</span> <span id="fluorideLimitStatus" class="inline-block"></span>
                     </div>
-                    <textarea id="fluorideLimitAdditionalSpec" name="fluorideLimitAdditionalSpec" rows="3" placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4"></textarea>
+                    <textarea id="fluorideLimitAdditionalSpec" name="fluorideLimitAdditionalSpec" rows="3" placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-gray-700 mb-2 mt-6">حد سرب</h3>
@@ -212,7 +208,7 @@
                 <p class="mb-2">بلانک نمونه: <span class="ltr-text">5</span> میلی‌لیتر محلول <span class="ltr-text">25%</span> اسید سولفوریک را در یک ظرف تبخیر بریزید. در زیر هود، ظرف را روی حمام بخار قرار دهید تا بیشتر آب آن تبخیر شود. ظرف را روی شعله قرار دهید و نمونه را با خارج کردن بیشتر اسید سولفوریک به آرامی پیش‌خاکستر کنید. ظرف را در کوره با دمای <span class="ltr-text">525°</span> قرار دهید و نمونه را تا زمانی که باقیمانده عاری از کربن به نظر برسد، خاکستر کنید. خنک کنید و داخل ظرف تبخیر را با احتیاط با آب بشویید. <span class="ltr-text">5</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">1</span> نرمال اضافه کنید. ظرف را روی حمام بخار قرار دهید و تا خشکی تبخیر کنید. <span class="ltr-text">1.0</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">3</span> نرمال و تقریباً <span class="ltr-text">5</span> میلی‌لیتر آب اضافه کنید و روی حمام بخار برای حل کردن هر گونه باقیمانده، کمی حرارت دهید. محلول را به طور کمی به یک فلاسک حجمی <span class="ltr-text">10</span> میلی‌لیتری منتقل کنید، تا حجم رقیق کنید و مخلوط کنید.</p>
                 <p class="mb-2">محلول نمونه: <span class="ltr-text">10</span> گرم کلسیم پروپیونات را، تا نزدیکترین <span class="ltr-text">0.1</span> میلی‌گرم، در یک ظرف تبخیر قرار دهید. مقدار کافی محلول <span class="ltr-text">25%</span> اسید سولفوریک اضافه کنید و اسید سولفوریک را به طور یکنواخت در نمونه توزیع کنید. طبق دستورالعمل زیر "بلانک نمونه" از "در زیر هود..." ادامه دهید.</p>
                 <p class="mb-2">شرایط دستگاهی</p>
-                <p class="mb-2">(به <span class="ltr-text">Atomic Absorption Spectroscopy á852ñ</span> مراجعه کنید.)</p>
+                <p class="mb-2">(به <span class="ltr-text">Atomic Absorption Spectroscopy <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a></span> مراجعه کنید.)</p>
                 <p class="mb-2">حالت: جذب اتمی</p>
                 <p class="mb-2">طول موج تحلیلی: <span class="ltr-text">283.3</span> نانومتر</p>
                 <p class="mb-2">لامپ: تخلیه الکترود سرب</p>
@@ -263,7 +259,7 @@
                     <div class="mt-2">
                         <span class="font-bold">وضعیت:</span> <span id="leadLimitStatus" class="inline-block"></span>
                     </div>
-                    <textarea id="leadLimitAdditionalSpec" name="leadLimitAdditionalSpec" rows="3" placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4"></textarea>
+                    <textarea id="leadLimitAdditionalSpec" name="leadLimitAdditionalSpec" rows="3" placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-gray-700 mb-2 mt-6">منیزیم (به صورت MgO)</h3>
@@ -284,13 +280,13 @@
                     
                     <div>
                         <label for="magnesium_status" class="block text-sm font-medium text-gray-700">وضعیت</label>
-                        <select id="magnesium_status" name="magnesium_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48 my-2">
+                        <select id="magnesium_status" name="magnesium_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                             <option value=""></option>
                             <option value="Pass">Pass</option>
                             <option value="Fail">Fail</option>
                         </select>
                     </div>
-                    <textarea id="magnesiumAdditionalSpec" name="magnesiumAdditionalSpec" rows="3" placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4"></textarea>
+                    <textarea id="magnesiumAdditionalSpec" name="magnesiumAdditionalSpec" rows="3" placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
         </div>
@@ -333,10 +329,10 @@
                     <div class="mt-2">
                         <span class="font-bold">وضعیت:</span> <span id="wiStatus" class="inline-block"></span>
                     </div>
-                    <textarea id="wiAdditionalSpec" name="wiAdditionalSpec" rows="3" placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4"></textarea>
+                    <textarea id="wiAdditionalSpec" name="wiAdditionalSpec" rows="3" placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 mt-6">pH á791ñ</h3>
+                <h3 class="text-xl font-semibold text-gray-700 mb-2 mt-6">pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a></h3>
                 <p class="mb-2"><span class="ltr-text">7.5–10.5</span>، در محلول (<span class="ltr-text">1</span> در <span class="ltr-text">10</span>)</p>
 
                 <div class="card interactive-card">
@@ -355,10 +351,10 @@
                     <div class="mt-4">
                         <span class="font-bold">وضعیت:</span> <span id="phStatus" class="inline-block"></span>
                     </div>
-                    <textarea id="phAdditionalSpec" name="phAdditionalSpec" rows="3" placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4"></textarea>
+                    <textarea id="phAdditionalSpec" name="phAdditionalSpec" rows="3" placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 mt-6">تعیین آب á921ñ، روش I</h3>
+                <h3 class="text-xl font-semibold text-gray-700 mb-2 mt-6">تعیین آب <a href="General chapters/921.html" class="text-blue-600 hover:underline" target="_blank">921</a>، روش I</h3>
                 <p class="mb-2">حداکثر <span class="ltr-text">5.0%</span></p>
 
                 <div class="card interactive-card">
@@ -391,10 +387,10 @@
                     <div class="mt-2">
                         <span class="font-bold">وضعیت:</span> <span id="waterDeterminationStatus" class="inline-block"></span>
                     </div>
-                    <textarea id="waterDeterminationAdditionalSpec" name="waterDeterminationAdditionalSpec" rows="3" placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4"></textarea>
+                    <textarea id="waterDeterminationAdditionalSpec" name="waterDeterminationAdditionalSpec" rows="3" placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 mt-6">خشک شدن á731ñ</h3>
+                <h3 class="text-xl font-semibold text-gray-700 mb-2 mt-6">خشک شدن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h3>
                 <p class="mb-2">آنالیز: در دمای <span class="ltr-text">105°</span> برای <span class="ltr-text">2</span> ساعت خشک کنید.</p>
                 <p class="mb-2">معیارهای پذیرش: حداکثر <span class="ltr-text">4%</span></p>
 
@@ -423,7 +419,7 @@
                     <div class="mt-2">
                         <span class="font-bold">وضعیت:</span> <span id="lodStatus" class="inline-block"></span>
                     </div>
-                    <textarea id="lodAdditionalSpec" name="lodAdditionalSpec" rows="3" placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mt-4"></textarea>
+                    <textarea id="lodAdditionalSpec" name="lodAdditionalSpec" rows="3" placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
         </div>
@@ -433,7 +429,7 @@
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
                 <h3 class="text-xl font-semibold text-gray-700 mb-2">بسته بندی و نگهداری</h3>
                 <p class="mb-2">در ظروف محکم بسته نگهداری شود. هیچ الزامات نگهداری مشخص نشده است.</p>
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 mt-6">استانداردهای مرجع USP á11ñ</h3>
+                <h3 class="text-xl font-semibold text-gray-700 mb-2 mt-6">استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h3>
                 <p class="mb-2">USP سدیم فلوراید RS</p>
             </div>
         </div>
@@ -650,5 +646,6 @@
             }
         }
     </script>
+
 </body>
 </html>

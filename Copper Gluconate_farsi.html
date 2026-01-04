@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف گلوکونات مس (USP)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -82,38 +86,10 @@
             cursor: pointer;
             border: none;
         }
-        .additional-spec-input {
-            shadow: appearance-none;
-            border: 1px solid #d1d5db; /* Light gray border */
-            border-radius: 0.375rem;
-            width: 100%;
-            padding: 0.5rem 0.75rem;
-            color: #374151; /* Dark gray text */
-            line-height: 1.5; /* Default line height */
-            outline: none;
-            focus: {
-                shadow: 'outline';
-            }
-        }
-        .status-dropdown {
-            shadow: appearance-none;
-            border: 1px solid #d1d5db;
-            background-color: white;
-            border-radius: 0.375rem;
-            padding: 0.5rem 0.75rem;
-            color: #374151;
-            line-height: 1.5;
-            focus: {
-                shadow: 'outline';
-            }
-            width: 12rem; /* 192px */
-        }
-        .input-field-width {
-            width: 16rem; /* 256px */
-        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+
     <div class="container mx-auto p-4 max-w-4xl">
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">مونوگراف گلوکونات مس (USP)</h1>
 
@@ -138,14 +114,14 @@
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. آزمون‌های شناسایی - عمومی</h3>
-                <p><strong>مس á191ñ:</strong> محلول 50 میلی‌گرم بر میلی‌لیتر شرایط را برآورده می‌کند.</p>
+                <p><strong>مس <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a>:</strong> محلول 50 میلی‌گرم بر میلی‌لیتر شرایط را برآورده می‌کند.</p>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">ب. آزمون شناسایی کروماتوگرافی لایه نازک</h3>
                 <p><strong>محلول استاندارد:</strong> 10 میلی‌گرم بر میلی‌لیتر RS گلوکونات پتاسیم USP</p>
                 <p><strong>محلول نمونه:</strong> 10 میلی‌گرم بر میلی‌لیتر گلوکونات مس، در صورت لزوم برای حل کردن در حمام آب 60 درجه سانتی‌گراد حرارت داده شود.</p>
 
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم کروماتوگرافی</h4>
-                <p>(به کروماتوگرافی á621ñ، کروماتوگرافی لایه نازک مراجعه کنید.)</p>
+                <p>(به کروماتوگرافی <a href="General chapters/621.html" class="text-blue-600 hover:underline" target="_blank">621</a>، کروماتوگرافی لایه نازک مراجعه کنید.)</p>
                 <p><strong>حالت:</strong> TLC</p>
                 <p><strong>جاذب:</strong> لایه 0.25 میلی‌متر ژل سیلیکا کروماتوگرافی</p>
                 <p><strong>حجم اعمال:</strong> 5 µL</p>
@@ -168,7 +144,7 @@
                 <p><strong>شستشو:</strong> 100 میلی‌لیتر آب</p>
 
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم تیتراسیون</h4>
-                <p>(به تیتراسیون á541ñ مراجعه کنید.)</p>
+                <p>(به تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید.)</p>
                 <p><strong>حالت:</strong> تیتراسیون غیرمستقیم</p>
                 <p><strong>تیترانت:</strong> سدیم تیو‌سولفات 0.1 نرمال VS</p>
                 <p><strong>تشخیص نقطه پایانی:</strong> بصری</p>
@@ -210,7 +186,7 @@
                         <p>وضعیت: <span id="assay-status">--</span></p>
                     </div>
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                    <textarea id="assay-additional-spec" name="assay-additional-spec" rows="3" class="additional-spec-input"></textarea>
+                    <textarea id="assay-additional-spec" name="assay-additional-spec" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
         </div>
@@ -220,7 +196,7 @@
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات</h3>
-                <p><strong>کلرید á221ñ</strong></p>
+                <p><strong>کلرید <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a></strong></p>
                 <p><strong>محلول استاندارد:</strong> 1.0 میلی‌لیتر اسید هیدروکلریک 0.020 نرمال</p>
                 <p><strong>نمونه:</strong> 1.0 گرم</p>
                 <p><strong>معیارهای پذیرش:</strong> NMT 0.07%</p>
@@ -247,10 +223,10 @@
                         <p>وضعیت: <span id="chloride-status">--</span></p>
                     </div>
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                    <textarea id="chloride-additional-spec" name="chloride-additional-spec" rows="3" class="additional-spec-input"></textarea>
+                    <textarea id="chloride-additional-spec" name="chloride-additional-spec" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
-                <p><strong>سولفات á221ñ</strong></p>
+                <p><strong>سولفات <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a></strong></p>
                 <p><strong>محلول استاندارد:</strong> 1.0 میلی‌لیتر اسید سولفوریک 0.020 نرمال</p>
                 <p><strong>نمونه:</strong> 2.0 گرم</p>
                 <p><strong>معیارهای پذیرش:</strong> NMT 0.05%</p>
@@ -277,10 +253,10 @@
                         <p>وضعیت: <span id="sulfate-status">--</span></p>
                     </div>
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                    <textarea id="sulfate-additional-spec" name="sulfate-additional-spec" rows="3" class="additional-spec-input"></textarea>
+                    <textarea id="sulfate-additional-spec" name="sulfate-additional-spec" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">آرسنیک، روش I á211ñ</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">آرسنیک، روش I <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a></h3>
                 <p><strong>آماده‌سازی تست:</strong> 1.0 گرم در 35 میلی‌لیتر آب</p>
                 <p><strong>معیارهای پذیرش:</strong> NMT 3 ppm</p>
 
@@ -298,7 +274,7 @@
                         <p>وضعیت: <span id="arsenic-status">--</span></p>
                     </div>
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                    <textarea id="arsenic-additional-spec" name="arsenic-additional-spec" rows="3" class="additional-spec-input"></textarea>
+                    <textarea id="arsenic-additional-spec" name="arsenic-additional-spec" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">محدودیت سرب</h3>
@@ -313,7 +289,7 @@
                 <p><strong>محلول نمونه D:</strong> 10.0 میلی‌لیتر از محلول مادر نمونه را با 10.0 میلی‌لیتر محلول استاندارد مخلوط کنید. این محلول حاوی 0.020 میکروگرم بر میلی‌لیتر سرب اضافه شده از محلول استاندارد است.</p>
 
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط دستگاهی</h4>
-                <p>(به اسپکتروسکوپی جذب اتمی á852ñ مراجعه کنید.)</p>
+                <p>(به اسپکتروسکوپی جذب اتمی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید.)</p>
                 <p><strong>حالت:</strong> اسپکتروفتومتری جذب اتمی کوره گرافیتی</p>
                 <p><strong>طول موج تحلیلی:</strong> 283.3 nm</p>
                 <p><strong>لامپ:</strong> کاتد توخالی سرب</p>
@@ -395,7 +371,7 @@
                         <p>وضعیت: <span id="lead-status">--</span></p>
                     </div>
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                    <textarea id="lead-additional-spec" name="lead-additional-spec" rows="3" class="additional-spec-input"></textarea>
+                    <textarea id="lead-additional-spec" name="lead-additional-spec" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
         </div>
@@ -409,7 +385,7 @@
                 <p><strong>شستشو:</strong> 10 میلی‌لیتر آب</p>
 
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم تیتراسیون</h4>
-                <p>(به تیتراسیون á541ñ مراجعه کنید.)</p>
+                <p>(به تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید.)</p>
                 <p><strong>حالت:</strong> تیتراسیون باقی‌مانده</p>
                 <p><strong>تیترانت:</strong> ید 0.1 نرمال VS</p>
                 <p><strong>ضد تیترانت:</strong> سدیم تیو‌سولفات 0.1 نرمال VS</p>
@@ -452,7 +428,7 @@
                         <p>وضعیت: <span id="reducing-status">--</span></p>
                     </div>
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                    <textarea id="reducing-additional-spec" name="reducing-additional-spec" rows="3" class="additional-spec-input"></textarea>
+                    <textarea id="reducing-additional-spec" name="reducing-additional-spec" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
         </div>
@@ -464,7 +440,7 @@
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته بندی و نگهداری</h3>
                 <p>در ظروف خوب بسته نگهداری شود.</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP á11ñ</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h3>
                 <p>USP Potassium Gluconate RS</p>
             </div>
         </div>
@@ -640,5 +616,6 @@
             document.querySelector('.tab-button').click();
         });
     </script>
+
 </body>
 </html>

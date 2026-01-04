@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف زینک گلوکونات (USP)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="text/javascript" async
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
     <style>
         body {
@@ -83,24 +86,10 @@
             cursor: pointer;
             border: none;
         }
-        .additional-spec-input {
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-        }
-        .status-dropdown {
-            border-color: #d1d5db;
-        }
-        .input-field-style {
-            direction: ltr;
-            text-align: left;
-            display: inline-block;
-            shadow: appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2;
-            width: 16rem;
-            background-color: #fff;
-            border-color: #d1d5db;
-        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+
     <div class="container mx-auto p-4 max-w-4xl">
 
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">مونوگراف زینک گلوکونات (USP)</h1>
@@ -126,12 +115,12 @@
         <div id="identification" class="tab-content" style="display:none;">
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
-                <h3 class="text-xl font-semibold text-gray-700 mb-2">الف. آزمون‌های شناسایی - عمومی، روی (Zinc) <span class="ltr-text">á191ñ</span></h3>
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">الف. آزمون‌های شناسایی - عمومی، روی (Zinc) <span class="ltr-text"><a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a></span></h3>
                 <p class="mb-2">محلولی با غلظت 100 میلی‌گرم در میلی‌لیتر، الزامات را برآورده می‌کند.</p>
 
                 <h3 class="text-xl font-semibold text-gray-700 mb-2">ب. کروماتوگرافی لایه نازک (TLC)</h3>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم کروماتوگرافی</h4>
-                <p class="mb-2">(به کروماتوگرافی <span class="ltr-text">á621ñ</span>، کروماتوگرافی لایه نازک مراجعه کنید.)</p>
+                <p class="mb-2">(به کروماتوگرافی <span class="ltr-text"><a href="General chapters/621.html" class="text-blue-600 hover:underline" target="_blank">621</a></span>، کروماتوگرافی لایه نازک مراجعه کنید.)</p>
                 <ul class="list-disc list-inside mb-2">
                     <li>حالت: TLC</li>
                     <li>جاذب: لایه 0.25 میلی‌متری ژل سیلیکا کروماتوگرافی</li>
@@ -169,7 +158,7 @@
                     <p class="mb-2">شستشو: 100 میلی‌لیتر آب</p>
 
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم تیتراسیون</h4>
-                    <p class="mb-2">(به تیتراسیون <span class="ltr-text">á541ñ</span> مراجعه کنید.)</p>
+                    <p class="mb-2">(به تیتراسیون <span class="ltr-text"><a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a></span> مراجعه کنید.)</p>
                     <ul class="list-disc list-inside mb-2">
                         <li>حالت: تیتراسیون مستقیم</li>
                         <li>تیترانت: 0.05 مولار ادتات دی‌سدیم VS</li>
@@ -225,14 +214,14 @@
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
 
-                <h3 class="text-xl font-semibold text-gray-700 mb-2">کلرید و سولفات، کلرید <span class="ltr-text">á221ñ</span></h3>
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">کلرید و سولفات، کلرید <span class="ltr-text"><a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a></span></h3>
                 <div class="interactive-card card">
                     <p>محلول استاندارد: 0.7 میلی‌لیتر اسید هیدروکلریک 0.020 نرمال</p>
                     <p>نمونه: 1.0 گرم</p>
                     <p>معیار پذیرش: حداکثر 0.05%</p>
                     <div class="mt-4">
                         <label for="chloride_status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
-                        <select id="chloride_status" name="chloride_status" class="status-dropdown shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                        <select id="chloride_status" name="chloride_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                             <option value=""></option>
                             <option value="Pass">Pass</option>
                             <option value="Fail">Fail</option>
@@ -244,14 +233,14 @@
                     </div>
                 </div>
 
-                <h3 class="text-xl font-semibold text-gray-700 mb-2">کلرید و سولفات، سولفات <span class="ltr-text">á221ñ</span></h3>
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">کلرید و سولفات، سولفات <span class="ltr-text"><a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a></span></h3>
                 <div class="interactive-card card">
                     <p>محلول استاندارد: 1.0 میلی‌لیتر اسید سولفوریک 0.020 نرمال</p>
                     <p>نمونه: 2.0 گرم</p>
                     <p>معیار پذیرش: حداکثر 0.05%</p>
                     <div class="mt-4">
                         <label for="sulfate_status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
-                        <select id="sulfate_status" name="sulfate_status" class="status-dropdown shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                        <select id="sulfate_status" name="sulfate_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                             <option value=""></option>
                             <option value="Pass">Pass</option>
                             <option value="Fail">Fail</option>
@@ -263,13 +252,13 @@
                     </div>
                 </div>
 
-                <h3 class="text-xl font-semibold text-gray-700 mb-2">آرسنیک، روش I <span class="ltr-text">á211ñ</span></h3>
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">آرسنیک، روش I <span class="ltr-text"><a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a></span></h3>
                 <div class="interactive-card card">
                     <p>آماده‌سازی تست: 1 گرم در 35 میلی‌لیتر آب</p>
                     <p>معیار پذیرش: حداکثر 3 ppm</p>
                     <div class="mt-4">
                         <label for="arsenic_status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
-                        <select id="arsenic_status" name="arsenic_status" class="status-dropdown shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                        <select id="arsenic_status" name="arsenic_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                             <option value=""></option>
                             <option value="Pass">Pass</option>
                             <option value="Fail">Fail</option>
@@ -292,7 +281,7 @@
                     <p>شستشو: به یک فلاسک حجمی 50 میلی‌لیتری، 10 میلی‌لیتر اسید هیدروکلریک 9 نرمال، 10 میلی‌لیتر آب، 20 میلی‌لیتر محلول اسید اسکوربیک-سدیم یدید و 5.0 میلی‌لیتر محلول تری‌اکتیل‌فسفین اکسید اضافه کنید. به مدت 30 ثانیه تکان دهید و اجازه دهید جدا شود. آب اضافه کنید تا لایه حلال آلی وارد گردن فلاسک شود، دوباره تکان دهید و اجازه دهید جدا شود. لایه آلی شستشو است و حاوی 0 میکروگرم در میلی‌لیتر سرب است.</p>
 
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط ابزار دقیق</h4>
-                    <p class="mb-2">(به طیف‌سنجی جذب اتمی <span class="ltr-text">á852ñ</span> مراجعه کنید.)</p>
+                    <p class="mb-2">(به طیف‌سنجی جذب اتمی <span class="ltr-text"><a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a></span> مراجعه کنید.)</p>
                     <ul class="list-disc list-inside mb-2">
                         <li>حالت: طیف‌سنجی جذب اتمی</li>
                         <li>طول موج تحلیلی: 283.3 نانومتر</li>
@@ -310,7 +299,7 @@
                     <p class="mb-2">معیار پذیرش: حداکثر 10 ppm: جذب محلول نمونه از جذب محلول استاندارد تجاوز نمی‌کند.</p>
                     <div class="mt-4">
                         <label for="lead_status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
-                        <select id="lead_status" name="lead_status" class="status-dropdown shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                        <select id="lead_status" name="lead_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                             <option value=""></option>
                             <option value="Pass">Pass</option>
                             <option value="Fail">Fail</option>
@@ -333,7 +322,7 @@
                     <p>شستشو: آب</p>
 
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط ابزار دقیق</h4>
-                    <p class="mb-2">(به طیف‌سنجی جذب اتمی <span class="ltr-text">á852ñ</span> مراجعه کنید.)</p>
+                    <p class="mb-2">(به طیف‌سنجی جذب اتمی <span class="ltr-text"><a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a></span> مراجعه کنید.)</p>
                     <ul class="list-disc list-inside mb-2">
                         <li>حالت: طیف‌سنجی جذب اتمی</li>
                         <li>طول موج تحلیلی: 228.8 نانومتر</li>
@@ -353,7 +342,7 @@
                     <p class="mb-2">معیار پذیرش: حداکثر 5 ppm</p>
                     <div class="mt-4">
                         <label for="cadmium_status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
-                        <select id="cadmium_status" name="cadmium_status" class="status-dropdown shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                        <select id="cadmium_status" name="cadmium_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                             <option value=""></option>
                             <option value="Pass">Pass</option>
                             <option value="Fail">Fail</option>
@@ -371,7 +360,7 @@
                     <p>شستشو: 10 میلی‌لیتر آب</p>
 
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم تیتراسیون</h4>
-                    <p class="mb-2">(به تیتراسیون <span class="ltr-text">á541ñ</span> مراجعه کنید.)</p>
+                    <p class="mb-2">(به تیتراسیون <span class="ltr-text"><a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a></span> مراجعه کنید.)</p>
                     <ul class="list-disc list-inside mb-2">
                         <li>حالت: تیتراسیون باقیمانده</li>
                         <li>تیترانت: 0.1 نرمال ید VS</li>
@@ -432,13 +421,13 @@
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
 
-                <h3 class="text-xl font-semibold text-gray-700 mb-2">PH <span class="ltr-text">á791ñ</span></h3>
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">PH <span class="ltr-text"><a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a></span></h3>
                 <div class="interactive-card card">
                     <p>محلول نمونه: 10 میلی‌گرم در میلی‌لیتر</p>
                     <p>معیار پذیرش: 5.5–7.5</p>
                     <div class="mt-4">
                         <label for="ph_status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
-                        <select id="ph_status" name="ph_status" class="status-dropdown shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                        <select id="ph_status" name="ph_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                             <option value=""></option>
                             <option value="Pass">Pass</option>
                             <option value="Fail">Fail</option>
@@ -450,12 +439,12 @@
                     </div>
                 </div>
 
-                <h3 class="text-xl font-semibold text-gray-700 mb-2">تعیین آب، روش Ib <span class="ltr-text">á921ñ</span></h3>
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">تعیین آب، روش Ib <span class="ltr-text"><a href="General chapters/921.html" class="text-blue-600 hover:underline" target="_blank">921</a></span></h3>
                 <div class="interactive-card card">
                     <p>معیار پذیرش: حداکثر 11.6%</p>
                     <div class="mt-4">
                         <label for="water_status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
-                        <select id="water_status" name="water_status" class="status-dropdown shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                        <select id="water_status" name="water_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                             <option value=""></option>
                             <option value="Pass">Pass</option>
                             <option value="Fail">Fail</option>
@@ -477,7 +466,7 @@
                 <h3 class="text-xl font-semibold text-gray-700 mb-2">بسته‌بندی و نگهداری</h3>
                 <p class="mb-2">در ظروف خوب بسته نگهداری شود.</p>
 
-                <h3 class="text-xl font-semibold text-gray-700 mb-2">استانداردهای مرجع USP <span class="ltr-text">á11ñ</span></h3>
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">استانداردهای مرجع USP <span class="ltr-text"><a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></span></h3>
                 <p class="mb-2">USP Potassium Gluconate RS</p>
             </div>
         </div>
@@ -553,5 +542,6 @@
             }
         }
     </script>
+
 </body>
 </html>

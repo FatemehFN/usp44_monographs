@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف هیدروکسید منیزیم (USP)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="text/javascript" async
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
     <style>
         body {
@@ -83,24 +86,10 @@
             cursor: pointer;
             border: none;
         }
-        .additional-spec-input {
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-            background-color: #fff;
-            border-radius: 0.375rem;
-            width: 100%;
-            padding: 0.5rem 0.75rem;
-            text-align: left; /* Keep input text left-aligned */
-        }
-        .status-dropdown {
-             box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-            background-color: #fff;
-            border-radius: 0.375rem;
-            width: 12rem; /* 192px */
-            padding: 0.5rem 0.75rem;
-        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+
     <div class="container mx-auto p-4 max-w-4xl">
 
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">هیدروکسید منیزیم</h1>
@@ -121,7 +110,7 @@
 
         <div id="identification" class="tab-content hidden card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. تست‌های شناسایی - عمومی á191ñ، شناسایی شیمیایی، منیزیم</h3>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. تست‌های شناسایی - عمومی <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a>، شناسایی شیمیایی، منیزیم</h3>
             <p class="mb-2">محلول نمونه: 50 mg/mL در اسید هیدروکلریک 3 N</p>
             <p class="mb-4">معیارهای پذیرش: الزامات را برآورده می‌کند</p>
             <p class="mb-2">اضافه کردن موارد زیر:</p>
@@ -141,7 +130,7 @@
             <p class="mb-2">محلول مادر نمونه: 4.8 میلی گرم/میلی لیتر هیدروکسید منیزیم از هیدروکسید منیزیم خشک شده قبلی، همانطور که در محلول مادر استاندارد آمده است، تهیه کنید.</p>
             <p class="mb-2">محلول نمونه: 48 میکروگرم/میلی لیتر هیدروکسید منیزیم در آب از محلول مادر نمونه</p>
             <p class="mb-2">سیستم کروماتوگرافی</p>
-            <p class="mb-2">(به کروماتوگرافی á621ñ، مناسبت سیستم مراجعه کنید.)</p>
+            <p class="mb-2">(به کروماتوگرافی <a href="General chapters/621.html" class="text-blue-600 hover:underline" target="_blank">621</a>، مناسبت سیستم مراجعه کنید.)</p>
             <p class="mb-2">حالت: LC</p>
             <p class="mb-2">آشکارساز: هدایت‌سنجی با سرکوب</p>
             <p class="mb-2">ستون‌ها</p>
@@ -204,7 +193,7 @@
                     <span class="font-bold">نتیجه (ppm):</span> <span id="assayResultPpm" class="font-bold"></span>
                 </div>
                 <h4 class="text-lg font-semibold text-gray-700 mt-4 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea id="assayAdditionalSpec" name="assayAdditionalSpec" class="additional-spec-input"></textarea>
+                <textarea id="assayAdditionalSpec" name="assayAdditionalSpec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
         </div>
 
@@ -245,7 +234,7 @@
                     <span class="font-bold">نتیجه (درصد):</span> <span id="solubleSaltsResultPercent" class="font-bold"></span>
                 </div>
                 <h4 class="text-lg font-semibold text-gray-700 mt-4 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea id="solubleSaltsAdditionalSpec" name="solubleSaltsAdditionalSpec" class="additional-spec-input"></textarea>
+                <textarea id="solubleSaltsAdditionalSpec" name="solubleSaltsAdditionalSpec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
             <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">کربنات</h3>
@@ -257,14 +246,14 @@
                  <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد کربنات</h4>
                  <div class="mb-4">
                     <p>وضعیت:</p>
-                    <select id="carbonateStatus" name="carbonateStatus" class="status-dropdown">
+                    <select id="carbonateStatus" name="carbonateStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
                 </div>
                 <h4 class="text-lg font-semibold text-gray-700 mt-4 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea id="carbonateAdditionalSpec" name="carbonateAdditionalSpec" class="additional-spec-input"></textarea>
+                <textarea id="carbonateAdditionalSpec" name="carbonateAdditionalSpec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
             <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">حد کلسیم</h3>
@@ -287,14 +276,14 @@
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد کلسیم</h4>
                 <div class="mb-4">
                     <p>وضعیت:</p>
-                    <select id="calciumStatus" name="calciumStatus" class="status-dropdown">
+                    <select id="calciumStatus" name="calciumStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
                 </div>
                 <h4 class="text-lg font-semibold text-gray-700 mt-4 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea id="calciumAdditionalSpec" name="calciumAdditionalSpec" class="additional-spec-input"></textarea>
+                <textarea id="calciumAdditionalSpec" name="calciumAdditionalSpec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
             <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">حد سرب</h3>
@@ -311,12 +300,12 @@
             <p class="mb-2">محلول نمونه: حدود 0.25 گرم هیدروکسید منیزیم را با دقت وزن کنید. 3.0 میلی لیتر اسید نیتریک را با احتیاط اضافه کنید و مخلوط کنید تا نمونه حل شود. این محلول را با دقت به یک فلاسک حجمی 50 میلی لیتری منتقل کرده و با آب به حجم برسانید.</p>
             <p class="mb-4">[نکته: غلظت‌های مشخص شده در محلول استاندارد A، محلول استاندارد B و محلول نمونه در صورت استفاده از دستگاه ICP–MS توصیه می‌شوند. اگر از دستگاه طیف‌سنجی انتشار نوری جفت شده با القای پلاسما (ICP–OES) استفاده شود، غلظت‌ها را می‌توان برای تطابق با محدوده کاری دستگاه اصلاح کرد.]</p>
             <p class="mb-2">شرایط دستگاهی</p>
-            <p class="mb-2">(به طیف‌سنجی پلاسما á730ñ مراجعه کنید.)</p>
+            <p class="mb-2">(به طیف‌سنجی پلاسما <a href="General chapters/730.html" class="text-blue-600 hover:underline" target="_blank">730</a> مراجعه کنید.)</p>
             <p class="mb-2">حالت: ICP–MS چهارگانه یا ICP–OES</p>
             <p class="mb-2">ایزوتوپ‌های تحلیلی ICP–MS: ▲206، 207 و 208 amu برای سرب؛ 205 amu برای استاندارد داخلی تالیوم. [نکته: دستگاه باید تمام ایزوتوپ‌های سرب (206، 207 و 208 amu) و استاندارد داخلی تالیوم (205 amu) را بخواند و محتوای کل سرب را با استفاده از مجموع هر سه ایزوتوپ گزارش کند.]▲ (رسمی 1 ژوئن 2021)</p>
             <p class="mb-4">طول موج تحلیلی ICP–OES: 220.353 نانومتر. [نکته: برای به حداقل رساندن تداخل ماتریس هنگام استفاده از ICP-OES، توصیه می‌شود از روش افزودنی‌های استاندارد استفاده شود.]</p>
             <p class="mb-2">مناسبت سیستم</p>
-            <p class="mb-4">[نکته: عملکرد دستگاه باید مطابق با مشخصات سازنده برای رزولوشن و حساسیت تأیید شود. قبل از تجزیه و تحلیل نمونه‌ها، دستگاه باید یک بررسی عملکرد مناسب را پشت سر بگذارد (به طیف‌سنجی پلاسما á730ñ، صلاحیت دستگاه‌های طیف‌سنجی پلاسما، صلاحیت عملکرد مراجعه کنید).]</p>
+            <p class="mb-4">[نکته: عملکرد دستگاه باید مطابق با مشخصات سازنده برای رزولوشن و حساسیت تأیید شود. قبل از تجزیه و تحلیل نمونه‌ها، دستگاه باید یک بررسی عملکرد مناسب را پشت سر بگذارد (به طیف‌سنجی پلاسما <a href="General chapters/730.html" class="text-blue-600 hover:underline" target="_blank">730</a>، صلاحیت دستگاه‌های طیف‌سنجی پلاسما، صلاحیت عملکرد مراجعه کنید).]</p>
             <p class="mb-2">نمونه‌ها: محلول بلانک، محلول استاندارد A و محلول استاندارد B</p>
             <p class="mb-2">الزامات مناسبت</p>
             <p class="mb-4">خطی بودن: یک منحنی کالیبراسیون خطی با استفاده از پاسخ‌های محلول بلانک، محلول استاندارد A و محلول استاندارد B بسازید. ضریب همبستگی NLT 0.999 است.</p>
@@ -327,37 +316,37 @@
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد سرب</h4>
                 <div class="mb-4">
                     <p>وضعیت:</p>
-                    <select id="leadStatus" name="leadStatus" class="status-dropdown">
+                    <select id="leadStatus" name="leadStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
                 </div>
                 <h4 class="text-lg font-semibold text-gray-700 mt-4 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea id="leadAdditionalSpec" name="leadAdditionalSpec" class="additional-spec-input"></textarea>
+                <textarea id="leadAdditionalSpec" name="leadAdditionalSpec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
         </div>
 
         <div id="specific-tests" class="tab-content hidden card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایشات شمارش میکروبی á61ñ و آزمایشات برای میکروب‌های مشخص á62ñ:</h3>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایشات شمارش میکروبی <a href="General chapters/61.html" class="text-blue-600 hover:underline" target="_blank">61</a> و آزمایشات برای میکروب‌های مشخص <a href="General chapters/62.html" class="text-blue-600 hover:underline" target="_blank">62</a>:</h3>
             <p class="mb-4">الزامات آزمایش برای عدم وجود اشرشیا کلی را برآورده می‌کند.</p>
 
             <div class="card interactive-card">
                  <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آزمایش برای عدم وجود اشرشیا کلی</h4>
                  <div class="mb-4">
                     <p>وضعیت:</p>
-                    <select id="ecoliStatus" name="ecoliStatus" class="status-dropdown">
+                    <select id="ecoliStatus" name="ecoliStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
                 </div>
                 <h4 class="text-lg font-semibold text-gray-700 mt-4 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea id="ecoliAdditionalSpec" name="ecoliAdditionalSpec" class="additional-spec-input"></textarea>
+                <textarea id="ecoliAdditionalSpec" name="ecoliAdditionalSpec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
-            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">کاهش وزن در اثر خشک شدن á731ñ</h3>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">کاهش وزن در اثر خشک شدن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h3>
             <p class="mb-4">تجزیه و تحلیل: در دمای 105 درجه به مدت 2 ساعت خشک کنید.</p>
             <p class="mb-4">معیارهای پذیرش: NMT 2.0%</p>
 
@@ -388,10 +377,10 @@
                     <span class="font-bold">وضعیت:</span> <span id="lodStatus" class="font-bold"></span>
                 </div>
                 <h4 class="text-lg font-semibold text-gray-700 mt-4 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea id="lodAdditionalSpec" name="lodAdditionalSpec" class="additional-spec-input"></textarea>
+                <textarea id="lodAdditionalSpec" name="lodAdditionalSpec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
 
-            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">کاهش وزن در اثر اشتعال á733ñ</h3>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">کاهش وزن در اثر اشتعال <a href="General chapters/733.html" class="text-blue-600 hover:underline" target="_blank">733</a></h3>
             <p class="mb-4">تجزیه و تحلیل: در دمای 800 درجه، با افزایش تدریجی حرارت، تا رسیدن به وزن ثابت، مشتعل کنید.</p>
             <p class="mb-4">معیارهای پذیرش: 30.0%–33.0%</p>
 
@@ -399,14 +388,14 @@
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کاهش وزن در اثر اشتعال</h4>
                  <div class="mb-4">
                     <p>وضعیت:</p>
-                    <select id="lossOnIgnitionStatus" name="lossOnIgnitionStatus" class="status-dropdown">
+                    <select id="lossOnIgnitionStatus" name="lossOnIgnitionStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
                 </div>
                 <h4 class="text-lg font-semibold text-gray-700 mt-4 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea id="lossOnIgnitionAdditionalSpec" name="lossOnIgnitionAdditionalSpec" class="additional-spec-input"></textarea>
+                <textarea id="lossOnIgnitionAdditionalSpec" name="lossOnIgnitionAdditionalSpec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
             </div>
         </div>
 
@@ -414,7 +403,7 @@
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
             <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری:</h3>
             <p class="mb-4">در ظروف دربسته نگهداری شود.</p>
-            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">▲استانداردهای مرجع USP á11ñ</h3>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">▲استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h3>
             <p class="mb-4">USP Calcium Carbonate RS</p>
             <p class="mb-4">USP Magnesium Hydroxide RS▲ (رسمی 1 ژوئن 2021)</p>
         </div>
@@ -622,5 +611,6 @@
         // Initial display of the first tab
         document.getElementById('definition').classList.remove('hidden');
     </script>
+
 </body>
 </html>

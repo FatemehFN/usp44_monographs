@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف تالک (USP)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -82,34 +86,10 @@
             cursor: pointer;
             border: none;
         }
-        .additional-spec-input {
-            shadow-appearance: none;
-            border: 1px solid #d1d5db;
-            border-radius: 0.375rem;
-            width: 100%;
-            padding: 0.5rem 0.75rem;
-            color: #374151;
-            line-height: 1.5;
-            outline: none;
-            focus:outline-none;
-            focus:shadow-outline;
-            margin-top: 0.5rem;
-        }
-        .status-dropdown {
-            shadow-appearance: none;
-            border: 1px solid #d1d5db;
-            background-color: white;
-            border-radius: 0.375rem;
-            width: 12rem; /* 192px */
-            padding: 0.5rem 0.75rem;
-            color: #374151;
-            line-height: 1.5;
-            focus:outline-none;
-            focus:shadow-outline;
-        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+
     <div class="container mx-auto p-4 max-w-4xl">
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">مونوگراف تالک</h1>
 
@@ -321,7 +301,7 @@
                 اگر رنگ صورتی ظاهر شود، حداکثر <span class="ltr-text">2.5 mL</span> اسید هیدروکلریک <span class="ltr-text">0.1 N</span> برای از بین بردن آن لازم است.
 
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت:</h4>
-                <select id="free_alkali_status" name="free_alkali_status" class="status-dropdown">
+                <select id="free_alkali_status" name="free_alkali_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                     <option value=""></option>
                     <option value="Pass">Pass</option>
                     <option value="Fail">Fail</option>
@@ -336,7 +316,7 @@
                 حداکثر <span class="ltr-text">10 µg/g</span>.
 
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت:</h4>
-                <select id="lead_status" name="lead_status" class="status-dropdown">
+                <select id="lead_status" name="lead_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                     <option value=""></option>
                     <option value="Pass">Pass</option>
                     <option value="Fail">Fail</option>
@@ -447,7 +427,7 @@
                 <span class="ltr-text">7.0–10.8</span>
 
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت:</h4>
-                <select id="ph_status" name="ph_status" class="status-dropdown">
+                <select id="ph_status" name="ph_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                     <option value=""></option>
                     <option value="Pass">Pass</option>
                     <option value="Fail">Fail</option>
@@ -976,5 +956,6 @@
             document.querySelector('.tab-button').click();
         });
     </script>
+
 </body>
 </html>

@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف کلسیم فسفات دی‌بازیک انیدروس (USP)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="text/javascript" async
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    <!-- Vazirmatn Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
     <style>
         body {
@@ -83,21 +86,10 @@
             cursor: pointer;
             border: none;
         }
-        .additional-spec-input {
-            shadow: appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline;
-        }
-        .status-dropdown {
-            shadow: appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48;
-        }
-        .input-field {
-            direction: ltr;
-            text-align: left;
-            display: inline-block;
-            shadow: appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2;
-        }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+
     <div class="container mx-auto p-4 max-w-4xl">
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">کلسیم فسفات دی‌بازیک انیدروس (USP)</h1>
 
@@ -142,7 +134,7 @@
                 <p><strong>محلول نمونه:</strong> 400 میلی‌گرم کلسیم فسفات دی‌بازیک انیدروس را در یک فلاسک حجمی 200 میلی‌لیتری منتقل کنید. با کمک حرارت ملایم در صورت لزوم در 12 میلی‌لیتر اسید هیدروکلریک رقیق حل کرده و با آب تا حجم برسانید.</p>
                 <p><strong>شاهد:</strong> 20 میلی‌لیتر آب حاوی 1.2 میلی‌لیتر اسید هیدروکلریک رقیق.</p>
                 <p><strong>سیستم تیتراسیون</strong></p>
-                <p>(به تیتراسیون á541ñ مراجعه کنید.)</p>
+                <p>(به تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید.)</p>
                 <p><strong>حالت:</strong> تیتراسیون باقیمانده</p>
                 <p><strong>تیترانت:</strong> 0.02 مولار ادتات دی‌سدیم VS</p>
                 <p><strong>تیترانت پشتیبان:</strong> 0.02 مولار روی سولفات VS</p>
@@ -190,7 +182,7 @@
                         <p>نتیجه: <span id="assayResult" class="font-bold"></span></p>
                         <p>وضعیت: <span id="assayStatus" class="font-bold"></span></p>
                     </div>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4"></textarea>
+                    <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
         </div>
@@ -207,15 +199,15 @@
                 <div class="card interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تست کربنات</h4>
                     <label class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
-                    <select id="carbonateStatus" name="carbonateStatus" class="status-dropdown">
+                    <select id="carbonateStatus" name="carbonateStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4"></textarea>
+                    <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلراید و سولفات á221ñ، کلراید</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلراید و سولفات <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a>، کلراید</h3>
                 <p><strong>محلول استاندارد:</strong> به 0.70 میلی‌لیتر اسید هیدروکلریک 0.01 N، 6 میلی‌لیتر اسید نیتریک رقیق اضافه کرده و با آب تا 50 میلی‌لیتر برسانید.</p>
                 <p><strong>محلول نمونه:</strong> به 0.20 گرم کلسیم فسفات دی‌بازیک انیدروس، 20 میلی‌لیتر آب و 13 میلی‌لیتر اسید نیتریک رقیق اضافه کرده و در صورت لزوم به آرامی گرم کنید تا کاملاً حل شود. با آب تا 100 میلی‌لیتر برسانید و در صورت لزوم فیلتر کنید. از 50 میلی‌لیتر محلول به عنوان محلول نمونه استفاده کنید.</p>
                 <p><strong>آزمایش</strong></p>
@@ -226,15 +218,15 @@
                 <div class="card interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تست کلراید</h4>
                     <label class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
-                    <select id="chlorideStatus" name="chlorideStatus" class="status-dropdown">
+                    <select id="chlorideStatus" name="chlorideStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4"></textarea>
+                    <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلراید و سولفات á221ñ، سولفات</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلراید و سولفات <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a>، سولفات</h3>
                 <p><strong>محلول استاندارد:</strong> به 1.0 میلی‌لیتر اسید سولفوریک 0.010 N، 1 میلی‌لیتر اسید هیدروکلریک رقیق اضافه کرده و با آب تا 50 میلی‌لیتر برسانید.</p>
                 <p><strong>محلول نمونه:</strong> به 0.5 گرم کلسیم فسفات دی‌بازیک انیدروس، 5 میلی‌لیتر آب و 5 میلی‌لیتر اسید هیدروکلریک رقیق اضافه کرده و در صورت لزوم به آرامی گرم کنید تا کاملاً حل شود. با آب تا 100 میلی‌لیتر برسانید و در صورت لزوم فیلتر کنید. به 20 میلی‌لیتر از محلول 1 میلی‌لیتر اسید هیدروکلریک رقیق اضافه کرده و با آب تا 50 میلی‌لیتر برسانید.</p>
                 <p><strong>آزمایش</strong></p>
@@ -245,27 +237,27 @@
                 <div class="card interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تست سولفات</h4>
                     <label class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
-                    <select id="sulfateStatus" name="sulfateStatus" class="status-dropdown">
+                    <select id="sulfateStatus" name="sulfateStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4"></textarea>
+                    <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">◆ آرسنیک á211ñ، روش I◆</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">◆ آرسنیک <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a>، روش I◆</h3>
                 <p><strong>آماده‌سازی تست:</strong> 1.0 گرم در 25 میلی‌لیتر اسید هیدروکلریک 3 نرمال، با آب تا 55 میلی‌لیتر رقیق شده. اضافه کردن 20 میلی‌لیتر اسید سولفوریک 7 نرمال مشخص شده در روش کار را حذف کنید.</p>
                 <p><strong>معیارهای پذیرش:</strong> نـ 3 میکروگرم بر گرم◆</p>
 
                 <div class="card interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تست آرسنیک</h4>
                     <label class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
-                    <select id="arsenicStatus" name="arsenicStatus" class="status-dropdown">
+                    <select id="arsenicStatus" name="arsenicStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4"></textarea>
+                    <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">باریم</h3>
@@ -276,12 +268,12 @@
                 <div class="card interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تست باریم</h4>
                     <label class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
-                    <select id="bariumStatus" name="bariumStatus" class="status-dropdown">
+                    <select id="bariumStatus" name="bariumStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4"></textarea>
+                    <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">حد مواد نامحلول در اسید</h3>
@@ -314,7 +306,7 @@
                         <p>نتیجه: <span id="limitAcidInsolubleResult" class="font-bold"></span></p>
                         <p>وضعیت: <span id="limitAcidInsolubleStatus" class="font-bold"></span></p>
                     </div>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4"></textarea>
+                    <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">◆ حد فلوراید◆</h3>
@@ -323,7 +315,7 @@
                 <p><strong>محلول استانداردstock:</strong> 1.1052 میلی‌گرم بر میلی‌لیتر USP سدیم فلوراید RS در آب</p>
                 <p><strong>محلول استاندارد:</strong> 20.0 میلی‌لیتر محلول استانداردstock را در یک فلاسک حجمی 100 میلی‌لیتری حاوی 50.0 میلی‌لیتر محلول بافر بریزید، با آب تا حجم برسانید و مخلوط کنید. هر میلی‌لیتر از این محلول حاوی 100 میکروگرم یون فلوراید است.</p>
                 <p><strong>محلول نمونه:</strong> 2.0 گرم کلسیم فسفات دی‌بازیک انیدروس را در یک بشر حاوی یک همزن با روکش پلاستیکی منتقل کنید. 20 میلی‌لیتر آب و 2.0 میلی‌لیتر اسید هیدروکلریک اضافه کرده و تا حل شدن هم بزنید. 50.0 میلی‌لیتر محلول بافر و آب کافی برای رساندن به 100 میلی‌لیتر اضافه کنید.</p>
-                <p><strong>سیستم الکترود:</strong> از یک الکترود نشانگر یون فلوراید-اختصاصی و یک الکترود مرجع نقره-نقره کلرید متصل به یک pH متر که قادر به اندازه‌گیری پتانسیل‌ها با حداقل تکرارپذیری ±0.2 میلی‌ولت است (به pH á791ñ مراجعه کنید) استفاده کنید.</p>
+                <p><strong>سیستم الکترود:</strong> از یک الکترود نشانگر یون فلوراید-اختصاصی و یک الکترود مرجع نقره-نقره کلرید متصل به یک pH متر که قادر به اندازه‌گیری پتانسیل‌ها با حداقل تکرارپذیری ±0.2 میلی‌ولت است (به pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a> مراجعه کنید) استفاده کنید.</p>
                 <p><strong>آزمایش</strong></p>
                 <p><strong>نمونه‌ها:</strong> محلول استاندارد و محلول نمونه</p>
                 <p><strong>خط پاسخ استاندارد:</strong> 50.0 میلی‌لیتر محلول بافر و 2.0 میلی‌لیتر اسید هیدروکلریک را در یک بشر بریزید، و آب را برای رساندن به 100 میلی‌لیتر اضافه کنید. یک همزن با روکش پلاستیکی اضافه کنید، الکترودها را در محلول قرار دهید، به مدت 15 دقیقه هم بزنید، و پتانسیل را بر حسب میلی‌ولت بخوانید. ضمن هم زدن، هر 5 دقیقه 100، 100، 300 و 500 میکرولیتر محلول استاندارد اضافه کنید و پتانسیل را 5 دقیقه پس از هر بار افزودن بخوانید. لگاریتم غلظت‌های تجمعی یون فلوراید (0.1، 0.2، 0.5 و 1.0 میکروگرم بر میلی‌لیتر) را در برابر پتانسیل بر حسب میلی‌ولت رسم کنید.</p>
@@ -362,7 +354,7 @@
                         <p>نتیجه: <span id="fluorideLimitResult" class="font-bold"></span></p>
                         <p>وضعیت: <span id="fluorideLimitStatus" class="font-bold"></span></p>
                     </div>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4"></textarea>
+                    <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
         </div>
@@ -371,7 +363,7 @@
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">اتلاف در هنگام احتراق á733ñ</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">اتلاف در هنگام احتراق <a href="General chapters/733.html" class="text-blue-600 hover:underline" target="_blank">733</a></h3>
                 <p><strong>نمونه:</strong> 1 گرم کلسیم فسفات دی‌بازیک انیدروس</p>
                 <p><strong>آزمایش:</strong> نمونه را در دمای 800–825 درجه سانتی‌گراد تا رسیدن به وزن ثابت بسوزانید.</p>
                 <p><strong>معیارهای پذیرش:</strong> 6.6%–8.7%</p>
@@ -401,7 +393,7 @@
                         <p>نتیجه: <span id="lossOnIgnitionResult" class="font-bold"></span></p>
                         <p>وضعیت: <span id="lossOnIgnitionStatus" class="font-bold"></span></p>
                     </div>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4"></textarea>
+                    <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
         </div>
@@ -413,18 +405,18 @@
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">◆بسته‌بندی و نگهداری:◆</h3>
                 <p>در ظروف کاملاً بسته نگهداری شود. الزامات نگهداری مشخص نشده است.◆</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">◆استانداردهای مرجع USP á11ñ◆</h3>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">◆استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a>◆</h3>
                 <p>USP سدیم فلوراید RS</p>
 
                 <div class="card interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">بسته‌بندی و نگهداری</h4>
                     <label class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
-                    <select id="packagingStatus" name="packagingStatus" class="status-dropdown">
+                    <select id="packagingStatus" name="packagingStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
                         <option value=""></option>
                         <option value="Pass">Pass</option>
                         <option value="Fail">Fail</option>
                     </select>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input mt-4"></textarea>
+                    <textarea placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
         </div>
@@ -581,5 +573,6 @@
             }
         }
     </script>
+
 </body>
 </html>
