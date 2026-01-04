@@ -636,7 +636,7 @@
         // Weight 2 (W2_lod): Dried weight of the sample (or sample + container)
         // Loss = W1_lod - W2_lod
         // LOD (%) = (Loss / W1_lod) * 100
-        // The provided formula: $$LOD=rac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$
+        // The provided formula: $$LOD=\frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$
         // This formula is highly unusual. "Wsa" is usually for "weight of sample anhydrous".
         // Let's assume W1 is empty crucible, Wsa is sample weight, and W2 is crucible + dried sample.
         // Then LOD = ( (Wsa + W1) - W2 ) / Wsa * 100. Still doesn't make sense.
@@ -656,7 +656,7 @@
         // Then LOD = (W_initial_sample_weight - W_dried_sample_weight) / W_initial_sample_weight * 100
         // This requires only two variables.
 
-        // **Reinterpreting the provided formula:** $$LOD=rac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$
+        // **Reinterpreting the provided formula:** $$LOD=\frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$
         // This formula implies that Wsa is the denominator.
         // Let's assume:
         // Wsa = Initial weight of the sample.
@@ -670,7 +670,7 @@
         // W_dried_sample = W2 - W1
         // Loss = W_sample_initial - W_dried_sample = Wsa - (W2 - W1)
         // LOD = (Loss / W_sample_initial) * 100 = (Wsa - (W2 - W1)) / Wsa * 100
-        // This is different from the provided formula: $$LOD=rac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$
+        // This is different from the provided formula: $$LOD=\frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$
         // The provided formula's numerator is (W1 + Wsa) - W2.
         // If Wsa is sample weight, and W1 is crucible weight, and W2 is crucible + dried sample:
         // Loss = (W_crucible + W_sample_initial) - (W_crucible + W_sample_dried) = W_sample_initial - W_sample_dried.

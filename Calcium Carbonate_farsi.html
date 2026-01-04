@@ -160,7 +160,7 @@
                     </div>
                     <div>
                         <label for="F" class="block text-sm font-medium text-gray-700">ضریب هم‌ارزی (mg/mmol) (F)</label>
-                        <input type="text" id="F" name="F" class="calculation-input" value="100.09">
+                        <input type="text" id="F" name="F" class="calculation-input">
                     </div>
                     <div>
                         <label for="W" class="block text-sm font-medium text-gray-700">وزن نمونه (mg) (W)</label>
@@ -318,7 +318,7 @@
                 <div class="grid grid-cols-1 gap-4">
                     <div>
                         <label for="fluorideV" class="block text-sm font-medium text-gray-700">حجم محلول نمونه (mL) (V)</label>
-                        <input type="text" id="fluorideV" name="fluorideV" class="calculation-input" value="100">
+                        <input type="text" id="fluorideV" name="fluorideV" class="calculation-input">
                     </div>
                     <div>
                         <label for="fluorideC" class="block text-sm font-medium text-gray-700">غلظت فلوراید در محلول نمونه (µg/mL) (C)</label>
@@ -480,11 +480,11 @@
                     </div>
                     <div>
                         <label for="reducingN" class="block text-sm font-medium text-gray-700">نرمالیته (N)</label>
-                        <input type="text" id="reducingN" name="reducingN" class="calculation-input" value="0.01">
+                        <input type="text" id="reducingN" name="reducingN" class="calculation-input">
                     </div>
                     <div>
                         <label for="reducingF" class="block text-sm font-medium text-gray-700">ضریب هم‌ارزی (F)</label>
-                        <input type="text" id="reducingF" name="reducingF" class="calculation-input" value="1.0">
+                        <input type="text" id="reducingF" name="reducingF" class="calculation-input">
                     </div>
                     <div>
                         <label for="reducingW" class="block text-sm font-medium text-gray-700">وزن نمونه (g) (W)</label>
@@ -751,7 +751,7 @@
                 // Residue weight = W1-W2. This must be <= 5 mg.
 
                 // Given the constraint: "If the test is "Limit of Acid-Insoluble substances" or "Limit of Magnesium and Alkali Salts" or "Alcohol-insoluble matter," then display the formula $$Result = (W_{2}-W_{1})*1000$$ and create an interactive calculator with input fields for `W1` and `W2`."
-                // And for "Loss on drying" or "Loss on Ignition," display the formula $$LOD=rac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$ and create an interactive calculator with input fields for `W1`, `Wsa`, and `W2`.
+                // And for "Loss on drying" or "Loss on Ignition," display the formula $$LOD=\frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$ and create an interactive calculator with input fields for `W1`, `Wsa`, and `W2`.
 
                 // For Magnesium and Alkali Salts, the PDF *shows* the LOD formula.
                 // This is a contradiction. The instruction says use the *formula* provided.
@@ -821,7 +821,7 @@
                 // Residue_Weight = W1 - W2
 
                 // The provided formula `(W_{1}+W_{sa})-W_2` is problematic.
-                // Given the direct instruction "If the test is ... 'Limit of Magnesium and Alkali Salts' ... display the formula $$LOD=rac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$"
+                // Given the direct instruction "If the test is ... 'Limit of Magnesium and Alkali Salts' ... display the formula $$LOD=\frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$"
                 // I MUST use this formula.
                 // Let's assume the input fields correspond to the variables in this formula:
                 // W1 = initial sample weight (g)
@@ -893,7 +893,7 @@
                 // Then residue weight is W1 - W2.
                 // Percentage is (W1 - W2) / Wsa * 100.
 
-                // Given the strict instruction: "If the test is ... 'Limit of Magnesium and Alkali Salts' ... display the formula $$LOD=rac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$"
+                // Given the strict instruction: "If the test is ... 'Limit of Magnesium and Alkali Salts' ... display the formula $$LOD=\frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$"
                 // I must use this formula.
                 // Let's assume:
                 // W1 = Weight of crucible + residue (g)
@@ -1057,7 +1057,7 @@
             // Or, W1 is initial sample, W2 is final sample, and Wsa is the initial sample (denominator).
             // `(Initial + Final - Crucible) / Initial * 100`.
 
-            // Given the instruction: "If the test is 'Loss on drying' or 'Loss on Ignition,' then display the formula $$LOD=rac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$ and create an interactive calculator with input fields for `W1`, `Wsa`, and `W2`."
+            // Given the instruction: "If the test is 'Loss on drying' or 'Loss on Ignition,' then display the formula $$LOD=\frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$ and create an interactive calculator with input fields for `W1`, `Wsa`, and `W2`."
             // I must use this formula.
             // Let's assume the most common interpretation for LOD inputs in a calculator:
             // W1: Initial sample weight (g)

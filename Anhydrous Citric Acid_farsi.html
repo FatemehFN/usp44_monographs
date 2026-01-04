@@ -130,7 +130,7 @@
 
                 <div class="card interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب سنجش</h4>
-                    <p class="mb-3">فرمول: <span class="ltr-text">$$Assay = rac{V_{NaOH} \times N_{NaOH} \times 64.03}{W_{Sample}} \times 100$$</span></p>
+                    <p class="mb-3">فرمول: <span class="ltr-text">$$Assay = \frac{V_{NaOH} \times N_{NaOH} \times 64.03}{W_{Sample}} \times 100$$</span></p>
                     <div class="mb-4">
                         <label for="volume_naoh" class="block text-gray-700 text-sm font-bold mb-2">حجم <span class="ltr-text">NaOH</span> (mL):</label>
                         <input type="text" id="volume_naoh" name="volume_naoh" class="input-field">
@@ -165,7 +165,7 @@
                 <p class="mb-3">حداکثر 0.1%، تعیین شده بر روی 1.0 گرم.</p>
                 <div class="card interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب باقیمانده پس از اشتعال</h4>
-                    <p class="mb-3">فرمول: <span class="ltr-text">$$ROI= rac{W_3-W_1}{W_2}*100$$</span></p>
+                    <p class="mb-3">فرمول: <span class="ltr-text">$$ROI= \frac{W_3-W_1}{W_2}*100$$</span></p>
                     <div class="mb-4">
                         <label for="roi_w1" class="block text-gray-700 text-sm font-bold mb-2">وزن ظرف خالی (g):</label>
                         <input type="text" id="roi_w1" name="roi_w1" class="input-field">
@@ -234,7 +234,7 @@
                     </div>
                     <div class="mb-4">
                         <label for="aluminum_std_conc" class="block text-gray-700 text-sm font-bold mb-2">غلظت استاندارد (ppm):</label>
-                        <input type="text" id="aluminum_std_conc" name="aluminum_std_conc" class="input-field" value="0.2">
+                        <input type="text" id="aluminum_std_conc" name="aluminum_std_conc" class="input-field">
                     </div>
                     <button class="calculation-button" onclick="calculateAluminumLimit()">محاسبه</button>
                     <div class="mt-4">
@@ -373,7 +373,7 @@
                 <p class="mb-3">معیارهای پذیرش: حداکثر 1.0%.</p>
                 <div class="card interactive-card">
                     <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب تعیین آب (روش I)</h4>
-                    <p class="mb-3">فرمول: <span class="ltr-text">$$LOD= rac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$</span></p>
+                    <p class="mb-3">فرمول: <span class="ltr-text">$$LOD= \frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$</span></p>
                     <div class="mb-4">
                         <label for="water_w1" class="block text-gray-700 text-sm font-bold mb-2">وزن ظرف + نمونه قبل از خشک کردن (g):</label>
                         <input type="text" id="water_w1" name="water_w1" class="input-field">
