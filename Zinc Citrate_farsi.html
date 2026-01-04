@@ -8,7 +8,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -61,6 +60,12 @@
             margin-bottom: 1rem;
             direction: ltr;
         }
+        .pass-text {
+            color: #22c55e;
+        }
+        .fail-text {
+            color: #ef4444;
+        }
         .interactive-card {
             background-color: #e0f2fe;
             border: 1px solid #90cdf4;
@@ -68,148 +73,326 @@
             margin-top: 1rem;
             border-radius: 0.5rem;
         }
+        .calculation-button {
+            background-color: #2563eb;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+        .status-dropdown, .additional-spec-input {
+             box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .status-dropdown {
+            width: 12rem; /* 192px */
+            background-color: #fff;
+            border-color: #d1d5db;
+        }
+        .additional-spec-input {
+            width: 100%;
+            background-color: #fff;
+            border-color: #d1d5db;
+        }
+        .input-field {
+            width: 16rem; /* 256px */
+            background-color: #fff;
+            border-color: #d1d5db;
+        }
     </style>
 </head>
 <body>
     <div class="container mx-auto p-4 max-w-4xl">
 
-        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">سیترات روی (USP)</h1>
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">مونوگراف سیترات روی (USP)</h1>
 
         <div class="flex justify-center mb-6 border-b border-gray-200">
             <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab('definition')">تعریف</button>
             <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('identification')">شناسایی</button>
             <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('assay')">سنجش</button>
             <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('impurities')">ناخالصی‌ها</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('specific_tests')">آزمایشات خاص</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('additional_requirements')">الزامات اضافی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('specific-tests')">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('additional-requirements')">الزامات اضافی</button>
         </div>
 
         <!-- Definition Tab -->
-        <div id="definition" class="tab-content">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+        <div id="definition">
             <div class="card">
-                <p>سیترات روی حاوی نباید کمتر از <span class="ltr-text">31.3%</span> روی (Zn) باشد، محاسبه شده بر اساس پایه خشک.</p>
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+                <p>سیترات روی حاوی حداقل <span class="ltr-text">31.3%</span> روی (Zn) است که بر اساس مبنای خشک شده محاسبه می‌شود.</p>
             </div>
         </div>
 
         <!-- Identification Tab -->
-        <div id="identification" class="tab-content hidden">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
-
+        <div id="identification" style="display: none;">
             <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایش‌های شناسایی</h3>
-                <div class="interactive-card card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">الف. آزمایش‌های شناسایی - عمومی، روی &#x201C;191&#x201D;:</h4>
-                    <p>محلول (<span class="ltr-text">1</span> در <span class="ltr-text">10</span>) الزامات را برآورده می‌کند.</p>
-                </div>
-                <div class="interactive-card card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ب. آزمایش‌های شناسایی - عمومی، سیترات &#x201C;191&#x201D;:</h4>
-                    <p>محلول (<span class="ltr-text">1</span> در <span class="ltr-text">10</span>) الزامات را برآورده می‌کند.</p>
-                </div>
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. آزمون‌های شناسایی - عمومی، روی á191ñ</h3>
+                <p>محلول (1 در 10) الزامات را برآورده می‌کند.</p>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">ب. آزمون‌های شناسایی - عمومی، سیترات á191ñ</h3>
+                <p>محلول (1 در 10) الزامات را برآورده می‌کند.</p>
             </div>
         </div>
 
         <!-- Assay Tab -->
-        <div id="assay" class="tab-content hidden">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
-
+        <div id="assay" style="display: none;">
             <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">روش کار</h3>
-                <p><strong>نمونه:</strong> <span class="ltr-text">350</span> mg سیترات روی، قبلاً در <span class="ltr-text">105°</span> به مدت <span class="ltr-text">2</span> ساعت خشک شده است.</p>
-                <p><strong>شاهد:</strong> <span class="ltr-text">60</span> mL آب</p>
-                <p><strong>سیستم تیتراسیون</strong></p>
-                <p>(به تیتراسیون &#x201C;<span class="ltr-text">541</span>&#x201D; مراجعه کنید.)</p>
-                <p><strong>حالت:</strong> تیتراسیون مستقیم</p>
-                <p><strong>تیترانت:</strong> <span class="ltr-text">0.05</span> M ادتات دی‌سدیم VS</p>
-                <p><strong>تشخیص نقطه پایانی:</strong> بصری</p>
-                <p><strong>تجزیه و تحلیل:</strong> نمونه را در <span class="ltr-text">60</span> mL آب حل کنید. <span class="ltr-text">10</span> mL بافر آمونیاک-کلرید آمونیوم TS و <span class="ltr-text">0.1</span> mL اریکروم سیاه TS اضافه کنید. با تیتترانت تا نقطه پایانی آبی تیتر کنید. تعیین شاهد را انجام دهید.</p>
-                <p>درصد روی (Zn) را در نمونه سیترات روی گرفته شده محاسبه کنید:</p>
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش کار</h4>
+                <p>نمونه: <span class="ltr-text">350 mg</span> سیترات روی، قبلاً در دمای <span class="ltr-text">105°</span> به مدت <span class="ltr-text">2</span> ساعت خشک شده است.</p>
+                <p>شاهد: <span class="ltr-text">60 mL</span> آب</p>
+                <p>سیستم تیتراسیون</p>
+                <p>(به تیتریمتری á<a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a>ñ مراجعه کنید.)</p>
+                <p>حالت: تیتراسیون مستقیم</p>
+                <p>تیترانت: <span class="ltr-text">0.05 M</span> ادتات دی‌سدیم VS</p>
+                <p>تشخیص نقطه پایانی: بصری</p>
+                <p>تحلیل: نمونه را در <span class="ltr-text">60 mL</span> آب حل کنید. <span class="ltr-text">10 mL</span> بافر آمونیاک-آمونیوم کلراید TS و <span class="ltr-text">0.1 mL</span> اریکروم سیاه TS اضافه کنید. با تیترانت تا نقطه پایانی آبی تیتراسیون کنید. تعیین شاهد را انجام دهید.</p>
+                <p>درصد روی (Zn) را در قسمت سیترات روی برداشته شده محاسبه کنید:</p>
                 <div class="formula-display">
-                    <p>Result = \(\frac{[(V - B) \times M \times F \times 100]}{W}\)</p>
+                    $$Result = \frac{(V - B) \times M \times F \times 100}{W}$$
                 </div>
-                <p><span class="ltr-text">V</span> = حجم تیتترانت نمونه (mL)</p>
-                <p><span class="ltr-text">B</span> = حجم تیتترانت شاهد (mL)</p>
-                <p><span class="ltr-text">M</span> = مولاریته تیتترانت (mM/mL)</p>
-                <p><span class="ltr-text">F</span> = ضریب هم‌ارزی، <span class="ltr-text">65.4</span> mg/mM</p>
-                <p><span class="ltr-text">W</span> = وزن نمونه (mg)</p>
-                <p><strong>معیارهای پذیرش:</strong> نباید کمتر از <span class="ltr-text">31.3%</span> بر اساس پایه خشک باشد.</p>
+                <p>V = حجم تیترانت نمونه (mL)</p>
+                <p>B = حجم تیترانت شاهد (mL)</p>
+                <p>M = مولاریته تیترانت (mM/mL)</p>
+                <p>F = فاکتور هم‌ارزی، <span class="ltr-text">65.4 mg/mM</span></p>
+                <p>W = وزن نمونه (mg)</p>
+                <p>معیارهای پذیرش: حداقل <span class="ltr-text">31.3%</span> بر مبنای خشک شده</p>
+
+                <div class="card interactive-card">
+                    <h3 class="text-lg font-semibold text-blue-600 mb-2">محاسبه‌گر سنجش روی</h3>
+                    <div class="grid grid-cols-1 gap-2">
+                        <div>
+                            <label for="assay-V" class="block text-sm font-medium text-gray-700">حجم تیترانت نمونه (mL) (V):</label>
+                            <input type="text" id="assay-V" name="assay-V" class="input-field shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                        </div>
+                        <div>
+                            <label for="assay-B" class="block text-sm font-medium text-gray-700">حجم تیترانت شاهد (mL) (B):</label>
+                            <input type="text" id="assay-B" name="assay-B" class="input-field shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                        </div>
+                        <div>
+                            <label for="assay-M" class="block text-sm font-medium text-gray-700">مولاریته تیترانت (mM/mL) (M):</label>
+                            <input type="text" id="assay-M" name="assay-M" class="input-field shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2" value="0.05">
+                        </div>
+                        <div>
+                            <label for="assay-F" class="block text-sm font-medium text-gray-700">فاکتور هم‌ارزی (mg/mM) (F):</label>
+                            <input type="text" id="assay-F" name="assay-F" class="input-field shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2" value="65.4">
+                        </div>
+                        <div>
+                            <label for="assay-W" class="block text-sm font-medium text-gray-700">وزن نمونه (mg) (W):</label>
+                            <input type="text" id="assay-W" name="assay-W" class="input-field shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                        </div>
+                    </div>
+                    <button class="calculation-button mt-4" onclick="calculateAssay()">محاسبه</button>
+                    <div class="mt-4">
+                        <p>نتیجه: <span id="assay-result" class="font-bold"></span></p>
+                        <p>وضعیت: <span id="assay-status" class="font-bold"></span></p>
+                    </div>
+                    <label for="assay-additional-specs" class="block text-sm font-medium text-gray-700 mt-4">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="assay-additional-specs" name="assay-additional-specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
             </div>
         </div>
 
         <!-- Impurities Tab -->
-        <div id="impurities" class="tab-content hidden">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
-
+        <div id="impurities" style="display: none;">
             <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات</h3>
-                <div class="interactive-card card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کلرید &#x201C;<span class="ltr-text">221</span>&#x201D;:</h4>
-                    <p>یک نمونه <span class="ltr-text">1.0</span>-g نباید کلرید بیشتری نسبت به معادل <span class="ltr-text">0.7</span> mL اسید هیدروکلریک <span class="ltr-text">0.020</span> N نشان دهد (نباید بیشتر از <span class="ltr-text">0.05%</span>).</p>
-                </div>
-                <div class="interactive-card card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سولفات &#x201C;<span class="ltr-text">221</span>&#x201D;:</h4>
-                    <p>یک نمونه <span class="ltr-text">1.8</span>-g نباید سولفات بیشتری نسبت به معادل <span class="ltr-text">0.5</span> mL اسید سولفوریک <span class="ltr-text">0.020</span> N نشان دهد (نباید بیشتر از <span class="ltr-text">0.05%</span>).</p>
-                </div>
-            </div>
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
 
-            <div class="card mt-4">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات، کلرید á221ñ</h3>
+                <p>قسمت <span class="ltr-text">1.0-g</span> هیچ کلریدی بیشتر از معادل <span class="ltr-text">0.7 mL</span> اسید هیدروکلریک <span class="ltr-text">0.020 N</span> نشان نمی‌دهد (حداکثر <span class="ltr-text">0.05%</span>).</p>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات، سولفات á221ñ</h3>
+                <p>قسمت <span class="ltr-text">1.8-g</span> هیچ سولفاتی بیشتر از معادل <span class="ltr-text">0.5 mL</span> اسید سولفوریک <span class="ltr-text">0.020 N</span> نشان نمی‌دهد (حداکثر <span class="ltr-text">0.05%</span>).</p>
+
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">حد آرسنیک، کادمیوم و سرب</h3>
-                <p><strong>محلول استاندارد آرسنیک:</strong> <span class="ltr-text">1.0</span> µg/mL در اسید نیتریک <span class="ltr-text">1%</span>، تهیه شده از محلول استاندارد آرسنیک (<span class="ltr-text">10</span> mg/L)</p>
-                <p><strong>محلول استاندارد کادمیوم:</strong> <span class="ltr-text">1.0</span> µg/mL در اسید نیتریک <span class="ltr-text">1%</span>، تهیه شده از محلول استاندارد کادمیوم (<span class="ltr-text">10</span> mg/L)</p>
-                <p><strong>محلول استاندارد سرب:</strong> <span class="ltr-text">1.0</span> µg/mL در اسید نیتریک <span class="ltr-text">1%</span>، تهیه شده از محلول استاندارد سرب (<span class="ltr-text">10</span> mg/L)</p>
-                <p><strong>محلول استاندارد چند عنصری:</strong> <span class="ltr-text">10</span> µg/L سرب، <span class="ltr-text">5</span> µg/L کادمیوم، و <span class="ltr-text">3</span> µg/L آرسنیک در اسید نیتریک <span class="ltr-text">1%</span>، تهیه شده به ترتیب از محلول استاندارد سرب، محلول استاندارد کادمیوم، و محلول استاندارد آرسنیک.</p>
-                <p><strong>محلول نمونه:</strong> <span class="ltr-text">2</span> mg/mL سیترات روی در اسید نیتریک <span class="ltr-text">1%</span></p>
-                <p><strong>شرایط دستگاهی</strong></p>
-                <p>(به طیف‌سنجی پلاسما &#x201C;<span class="ltr-text">730</span>&#x201D; مراجعه کنید.)</p>
-                <p><strong>حالت:</strong> ICP-MS</p>
-                <p><strong>فرکانس رادیویی:</strong> <span class="ltr-text">1350</span> وات</p>
-                <p><strong>نرخ جریان نبولایزر:</strong> <span class="ltr-text">0.9</span> L/min</p>
-                <p>[<strong>توجه:</strong> تنظیمات فرکانس رادیویی و نرخ جریان نبولایزر ممکن است بر اساس توصیه سازنده توسعه یافته و بهینه شوند.]</p>
-                <p><strong>جرم‌های اتمی تشخیص:</strong> As، Cd، و Pb</p>
-                <p><strong>شاهد:</strong> محلول اسید نیتریک <span class="ltr-text">1%</span></p>
-                <p><strong>تجزیه و تحلیل:</strong></p>
-                <p><strong>نمونه‌ها:</strong> محلول استاندارد چند عنصری، محلول نمونه، و شاهد.</p>
-                <p>پاسخ‌های محلول استاندارد چند عنصری، محلول نمونه، و شاهد را در جرم‌های مشخص شده در بالا تعیین کنید.</p>
-                <p>محتوای هر عنصر را بر حسب µg/g در نمونه سیترات روی گرفته شده محاسبه کنید:</p>
+                <p>محلول استاندارد آرسنیک: <span class="ltr-text">1.0 µg/mL</span> در اسید نیتریک <span class="ltr-text">1%</span>، تهیه شده از محلول استاندارد آرسنیک (<span class="ltr-text">10 mg/L</span>)</p>
+                <p>محلول استاندارد کادمیوم: <span class="ltr-text">1.0 µg/mL</span> در اسید نیتریک <span class="ltr-text">1%</span>، تهیه شده از محلول استاندارد کادمیوم (<span class="ltr-text">10 mg/L</span>)</p>
+                <p>محلول استاندارد سرب: <span class="ltr-text">1.0 µg/mL</span> در اسید نیتریک <span class="ltr-text">1%</span>، تهیه شده از محلول استاندارد سرب (<span class="ltr-text">10 mg/L</span>)</p>
+                <p>محلول استاندارد چند عنصری: <span class="ltr-text">10 µg/L</span> سرب، <span class="ltr-text">5 µg/L</span> کادمیوم و <span class="ltr-text">3 µg/L</span> آرسنیک در اسید نیتریک <span class="ltr-text">1%</span>، تهیه شده به ترتیب از محلول استاندارد سرب، محلول استاندارد کادمیوم و محلول استاندارد آرسنیک.</p>
+                <p>محلول نمونه: <span class="ltr-text">2 mg/mL</span> سیترات روی در اسید نیتریک <span class="ltr-text">1%</span></p>
+                <p>شرایط دستگاهی</p>
+                <p>(به طیف‌سنجی پلاسما á<a href="General chapters/730.html" class="text-blue-600 hover:underline" target="_blank">730</a>ñ مراجعه کنید.)</p>
+                <p>حالت: ICP-MS</p>
+                <p>فرکانس رادیویی: <span class="ltr-text">1350 Watts</span></p>
+                <p>نرخ جریان نبولایزر: <span class="ltr-text">0.9 L/min</span></p>
+                <p>[نکته — تنظیمات فرکانس رادیویی و نرخ جریان نبولایزر ممکن است بر اساس توصیه سازنده توسعه یافته و بهینه شوند.]</p>
+                <p>جرم‌های اتمی تشخیص: As، Cd و Pb</p>
+                <p>شاهد: محلول اسید نیتریک <span class="ltr-text">1%</span></p>
+                <p>تحلیل</p>
+                <p>نمونه‌ها: محلول استاندارد چند عنصری، محلول نمونه و شاهد</p>
+                <p>پاسخ‌ها را برای محلول استاندارد چند عنصری، محلول نمونه و شاهد در جرم‌های مشخص شده در بالا تعیین کنید.</p>
+                <p>محتوای هر عنصر را بر حسب µg/g در قسمت سیترات روی برداشته شده محاسبه کنید:</p>
                 <div class="formula-display">
-                    <p>Result = \(\frac{rU}{rS} \times \frac{CS}{CU}\)</p>
+                    $$Result = \frac{rU}{rS} \times \frac{CS}{CU}$$
                 </div>
-                <p><span class="ltr-text">rU</span> = پاسخ پیک عنصر مربوطه از محلول نمونه</p>
-                <p><span class="ltr-text">rS</span> = پاسخ پیک عنصر مربوطه از محلول استاندارد چند عنصری</p>
-                <p><span class="ltr-text">CS</span> = غلظت عنصر مربوطه در محلول استاندارد چند عنصری (µg/L)</p>
-                <p><span class="ltr-text">CU</span> = غلظت سیترات روی در محلول نمونه (g/L)</p>
-                <p><strong>معیارهای پذیرش</strong></p>
-                <p><strong>آرسنیک:</strong> نباید بیشتر از <span class="ltr-text">3</span> µg/g باشد.</p>
-                <p><strong>کادمیوم:</strong> نباید بیشتر از <span class="ltr-text">5</span> µg/g باشد.</p>
-                <p><strong>سرب:</strong> نباید بیشتر از <span class="ltr-text">10</span> µg/g باشد.</p>
+                <p>rU = پاسخ پیک عنصر مربوطه از محلول نمونه</p>
+                <p>rS = پاسخ پیک عنصر مربوطه از محلول استاندارد چند عنصری</p>
+                <p>CS = غلظت عنصر مربوطه در محلول استاندارد چند عنصری (µg/L)</p>
+                <p>CU = غلظت سیترات روی در محلول نمونه (g/L)</p>
+                <p>معیارهای پذیرش</p>
+                <p>آرسنیک: حداکثر <span class="ltr-text">3 µg/g</span></p>
+                <p>کادمیوم: حداکثر <span class="ltr-text">5 µg/g</span></p>
+                <p>سرب: حداکثر <span class="ltr-text">10 µg/g</span></p>
+
+                <div class="card interactive-card">
+                    <h3 class="text-lg font-semibold text-blue-600 mb-2">حد آرسنیک</h3>
+                    <div class="grid grid-cols-1 gap-2">
+                        <div>
+                            <label for="arsenic-rU" class="block text-sm font-medium text-gray-700">پاسخ پیک نمونه (rU):</label>
+                            <input type="text" id="arsenic-rU" name="arsenic-rU" class="input-field shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                        </div>
+                        <div>
+                            <label for="arsenic-rS" class="block text-sm font-medium text-gray-700">پاسخ پیک استاندارد (rS):</label>
+                            <input type="text" id="arsenic-rS" name="arsenic-rS" class="input-field shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                        </div>
+                        <div>
+                            <label for="arsenic-CS" class="block text-sm font-medium text-gray-700">غلظت استاندارد (CS) (µg/L):</label>
+                            <input type="text" id="arsenic-CS" name="arsenic-CS" class="input-field shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2" value="3">
+                        </div>
+                        <div>
+                            <label for="arsenic-CU" class="block text-sm font-medium text-gray-700">غلظت نمونه (CU) (g/L):</label>
+                            <input type="text" id="arsenic-CU" name="arsenic-CU" class="input-field shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2" value="2">
+                        </div>
+                    </div>
+                    <button class="calculation-button mt-4" onclick="calculateArsenic()">محاسبه</button>
+                    <div class="mt-4">
+                        <p>نتیجه: <span id="arsenic-result" class="font-bold"></span> µg/g</p>
+                        <p>وضعیت: <span id="arsenic-status" class="font-bold"></span></p>
+                    </div>
+                    <label for="arsenic-additional-specs" class="block text-sm font-medium text-gray-700 mt-4">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="arsenic-additional-specs" name="arsenic-additional-specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+
+                <div class="card interactive-card">
+                    <h3 class="text-lg font-semibold text-blue-600 mb-2">حد کادمیوم</h3>
+                    <div class="grid grid-cols-1 gap-2">
+                        <div>
+                            <label for="cadmium-rU" class="block text-sm font-medium text-gray-700">پاسخ پیک نمونه (rU):</label>
+                            <input type="text" id="cadmium-rU" name="cadmium-rU" class="input-field shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                        </div>
+                        <div>
+                            <label for="cadmium-rS" class="block text-sm font-medium text-gray-700">پاسخ پیک استاندارد (rS):</label>
+                            <input type="text" id="cadmium-rS" name="cadmium-rS" class="input-field shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                        </div>
+                        <div>
+                            <label for="cadmium-CS" class="block text-sm font-medium text-gray-700">غلظت استاندارد (CS) (µg/L):</label>
+                            <input type="text" id="cadmium-CS" name="cadmium-CS" class="input-field shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2" value="5">
+                        </div>
+                        <div>
+                            <label for="cadmium-CU" class="block text-sm font-medium text-gray-700">غلظت نمونه (CU) (g/L):</label>
+                            <input type="text" id="cadmium-CU" name="cadmium-CU" class="input-field shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2" value="2">
+                        </div>
+                    </div>
+                    <button class="calculation-button mt-4" onclick="calculateCadmium()">محاسبه</button>
+                    <div class="mt-4">
+                        <p>نتیجه: <span id="cadmium-result" class="font-bold"></span> µg/g</p>
+                        <p>وضعیت: <span id="cadmium-status" class="font-bold"></span></p>
+                    </div>
+                    <label for="cadmium-additional-specs" class="block text-sm font-medium text-gray-700 mt-4">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="cadmium-additional-specs" name="cadmium-additional-specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+
+                <div class="card interactive-card">
+                    <h3 class="text-lg font-semibold text-blue-600 mb-2">حد سرب</h3>
+                    <div class="grid grid-cols-1 gap-2">
+                        <div>
+                            <label for="lead-rU" class="block text-sm font-medium text-gray-700">پاسخ پیک نمونه (rU):</label>
+                            <input type="text" id="lead-rU" name="lead-rU" class="input-field shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                        </div>
+                        <div>
+                            <label for="lead-rS" class="block text-sm font-medium text-gray-700">پاسخ پیک استاندارد (rS):</label>
+                            <input type="text" id="lead-rS" name="lead-rS" class="input-field shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                        </div>
+                        <div>
+                            <label for="lead-CS" class="block text-sm font-medium text-gray-700">غلظت استاندارد (CS) (µg/L):</label>
+                            <input type="text" id="lead-CS" name="lead-CS" class="input-field shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2" value="10">
+                        </div>
+                        <div>
+                            <label for="lead-CU" class="block text-sm font-medium text-gray-700">غلظت نمونه (CU) (g/L):</label>
+                            <input type="text" id="lead-CU" name="lead-CU" class="input-field shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2" value="2">
+                        </div>
+                    </div>
+                    <button class="calculation-button mt-4" onclick="calculateLead()">محاسبه</button>
+                    <div class="mt-4">
+                        <p>نتیجه: <span id="lead-result" class="font-bold"></span> µg/g</p>
+                        <p>وضعیت: <span id="lead-status" class="font-bold"></span></p>
+                    </div>
+                    <label for="lead-additional-specs" class="block text-sm font-medium text-gray-700 mt-4">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="lead-additional-specs" name="lead-additional-specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
             </div>
         </div>
 
         <!-- Specific Tests Tab -->
-        <div id="specific_tests" class="tab-content hidden">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
-
+        <div id="specific-tests" style="display: none;">
             <div class="card">
-                <div class="interactive-card card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">اتلاف در خشک شدن &#x201C;<span class="ltr-text">731</span>&#x201D;:</h4>
-                    <p>نمونه را در <span class="ltr-text">105°</span> به مدت <span class="ltr-text">2</span> ساعت خشک کنید: وزن آن نباید بیشتر از <span class="ltr-text">1.0%</span> کاهش یابد.</p>
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+
+                <div class="card interactive-card">
+                    <h3 class="text-lg font-semibold text-blue-600 mb-2">از دست دادن وزن در هنگام خشک شدن á731ñ</h3>
+                    <div class="formula-display">
+                        $$LOD = \frac{(W_{1}+W_{sa})-W_2}{W_{sa}} \times 100$$
+                    </div>
+                    <div class="grid grid-cols-1 gap-2">
+                        <div>
+                            <label for="lod-W1" class="block text-sm font-medium text-gray-700">وزن اولیه (mg) (W1):</label>
+                            <input type="text" id="lod-W1" name="lod-W1" class="input-field shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                        </div>
+                        <div>
+                            <label for="lod-Wsa" class="block text-sm font-medium text-gray-700">وزن نمونه خشک شده (mg) (Wsa):</label>
+                            <input type="text" id="lod-Wsa" name="lod-Wsa" class="input-field shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                        </div>
+                        <div>
+                            <label for="lod-W2" class="block text-sm font-medium text-gray-700">وزن پس از خشک شدن (mg) (W2):</label>
+                            <input type="text" id="lod-W2" name="lod-W2" class="input-field shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
+                        </div>
+                    </div>
+                    <button class="calculation-button mt-4" onclick="calculateLOD()">محاسبه</button>
+                    <div class="mt-4">
+                        <p>نتیجه: <span id="lod-result" class="font-bold"></span> %</p>
+                        <p>وضعیت: <span id="lod-status" class="font-bold"></span></p>
+                    </div>
+                    <label for="lod-additional-specs" class="block text-sm font-medium text-gray-700 mt-4">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="lod-additional-specs" name="lod-additional-specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
-                <div class="interactive-card card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آزمایشات شمارش میکروبی &#x201C;<span class="ltr-text">2021</span>&#x201D;:</h4>
-                    <p>تعداد کل میکروب‌های هوازی نباید از <span class="ltr-text">103</span> cfu/g تجاوز کند. تعداد کل مخمرها و کپک‌ها نباید از <span class="ltr-text">102</span> cfu/g تجاوز کند.</p>
+
+                <div class="card interactive-card">
+                    <h3 class="text-lg font-semibold text-blue-600 mb-2">تعداد آزمون‌های میکروبی</h3>
+                    <p>شمارش کل میکروبی هوازی نباید از <span class="ltr-text">103</span> cfu/g تجاوز کند. شمارش کل مخمرها و کپک‌ها نباید از <span class="ltr-text">102</span> cfu/g تجاوز کند.</p>
+                    <div class="mt-4">
+                        <label for="microbial-status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
+                        <select id="microbial-status" name="microbial-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48 my-2">
+                            <option value=""></option>
+                            <option value="Pass">Pass</option>
+                            <option value="Fail">Fail</option>
+                        </select>
+                    </div>
+                    <label for="microbial-additional-specs" class="block text-sm font-medium text-gray-700 mt-4">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="microbial-additional-specs" name="microbial-additional-specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
-                <div class="interactive-card card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش‌های میکروبیولوژیکی برای عدم حضور میکروارگانیسم‌های مشخص شده &#x201C;<span class="ltr-text">2022</span>&#x201D;:</h4>
-                    <p>الزامات آزمایش عدم حضور اشریشیا کلی را برآورده می‌کند.</p>
+
+                <div class="card interactive-card">
+                    <h3 class="text-lg font-semibold text-blue-600 mb-2">روش‌های میکروبی برای عدم وجود میکروارگانیسم‌های مشخص</h3>
+                    <p>الزامات آزمون برای عدم وجود اشرشیا کلی را برآورده می‌کند.</p>
+                    <div class="mt-4">
+                        <label for="e coli-status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
+                        <select id="e-coli-status" name="e-coli-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48 my-2">
+                            <option value=""></option>
+                            <option value="Pass">Pass</option>
+                            <option value="Fail">Fail</option>
+                        </select>
+                    </div>
+                    <label for="e-coli-additional-specs" class="block text-sm font-medium text-gray-700 mt-4">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="e-coli-additional-specs" name="e-coli-additional-specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
                 </div>
             </div>
         </div>
 
         <!-- Additional Requirements Tab -->
-        <div id="additional_requirements" class="tab-content hidden">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
-
+        <div id="additional-requirements" style="display: none;">
             <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری</h3>
                 <p>در ظروف کاملاً بسته نگهداری شود.</p>
             </div>
@@ -219,21 +402,220 @@
 
     <script>
         function showTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(tab => {
-                tab.classList.add('hidden');
-            });
-            document.getElementById(tabId).classList.remove('hidden');
-
-            document.querySelectorAll('.tab-button').forEach(button => {
-                button.classList.remove('tab-active');
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => {
                 button.classList.add('tab-inactive');
+                button.classList.remove('tab-active');
             });
-            event.target.classList.remove('tab-inactive');
-            event.target.classList.add('tab-active');
+
+            const contentDivs = document.querySelectorAll('div[id^="definition"], div[id^="identification"], div[id^="assay"], div[id^="impurities"], div[id^="specific-tests"], div[id^="additional-requirements"]');
+            contentDivs.forEach(div => {
+                div.style.display = 'none';
+            });
+
+            const activeTabButton = document.querySelector(`.tab-button[onclick="showTab('${tabId}')"]`);
+            if (activeTabButton) {
+                activeTabButton.classList.add('tab-active');
+                activeTabButton.classList.remove('tab-inactive');
+            }
+
+            const activeContentDiv = document.getElementById(tabId);
+            if (activeContentDiv) {
+                activeContentDiv.style.display = 'block';
+            }
         }
 
-        // Show the first tab by default
-        document.getElementById('definition').classList.remove('hidden');
+        // Assay Calculation
+        function calculateAssay() {
+            const V = parseFloat(document.getElementById('assay-V').value);
+            const B = parseFloat(document.getElementById('assay-B').value);
+            const M = parseFloat(document.getElementById('assay-M').value); // mM/mL
+            const F = parseFloat(document.getElementById('assay-F').value); // mg/mM
+            const W = parseFloat(document.getElementById('assay-W').value); // mg
+
+            const resultSpan = document.getElementById('assay-result');
+            const statusSpan = document.getElementById('assay-status');
+
+            if (isNaN(V) || isNaN(B) || isNaN(M) || isNaN(F) || isNaN(W) || W === 0) {
+                resultSpan.textContent = 'لطفاً تمام مقادیر معتبر را وارد کنید.';
+                resultSpan.className = 'font-bold';
+                statusSpan.textContent = '';
+                return;
+            }
+
+            // Calculation: (V - B) * M * F is in mg, need to convert to percentage of Zn
+            // M is mM/mL, F is mg/mM, so M*F is mg/mL. W is mg.
+            // Let's re-evaluate units for clarity.
+            // V, B in mL
+            // M in mM/mL
+            // F in mg/mM
+            // W in mg
+
+            // M * F = (mM/mL) * (mg/mM) = mg/mL
+            // (V - B) * M * F = mL * (mg/mL) = mg of Zn in the sample
+            // To get percentage of Zn on dried basis:
+            // Percentage Zn = (mg of Zn / mg of sample) * 100
+
+            const mgZn = (V - B) * M * F;
+            const percentageZn = (mgZn / W) * 100;
+
+            resultSpan.textContent = percentageZn.toFixed(2) + '%';
+
+            const acceptanceCriteria = 31.3;
+            if (percentageZn >= acceptanceCriteria) {
+                resultSpan.className = 'font-bold pass-text';
+                statusSpan.textContent = 'قبول';
+                statusSpan.className = 'font-bold pass-text';
+            } else {
+                resultSpan.className = 'font-bold fail-text';
+                statusSpan.textContent = 'رد';
+                statusSpan.className = 'font-bold fail-text';
+            }
+        }
+
+        // Impurities Calculations
+        function calculateArsenic() {
+            const rU = parseFloat(document.getElementById('arsenic-rU').value);
+            const rS = parseFloat(document.getElementById('arsenic-rS').value);
+            const CS = parseFloat(document.getElementById('arsenic-CS').value); // µg/L
+            const CU = parseFloat(document.getElementById('arsenic-CU').value); // g/L
+
+            const resultSpan = document.getElementById('arsenic-result');
+            const statusSpan = document.getElementById('arsenic-status');
+
+            if (isNaN(rU) || isNaN(rS) || isNaN(CS) || isNaN(CU) || rS === 0 || CU === 0) {
+                resultSpan.textContent = 'لطفاً تمام مقادیر معتبر را وارد کنید.';
+                resultSpan.className = 'font-bold';
+                statusSpan.textContent = '';
+                return;
+            }
+
+            // Result = (rU/rS) * (CS/CU)
+            // CS is in µg/L, CU is in g/L. Need consistent units for concentration ratio.
+            // Let's assume CS is concentration of standard in µg/L, and CU is concentration of sample in g/L.
+            // The formula needs CS in µg/L and CU in g/L.
+            // For the final result to be in µg/g (ppm), the units in the ratio CS/CU should align correctly.
+            // CS = 3 µg/L. CU = 2 g/L = 2000 g/L * 1000 mg/g * 1000 µg/mg = 2,000,000 µg/L. This conversion is too big.
+            // Let's check the unit CU = concentration of Zinc Citrate in the Sample solution (g/L)
+            // The formula is given as Result = (rU/rS) * (CS/CU).
+            // If CS is in µg/L and CU is in g/L, then CS/CU will have units of (µg/L) / (g/L) = µg/g. This is correct.
+
+            const result = (rU / rS) * (CS / CU);
+            resultSpan.textContent = result.toFixed(2);
+
+            const acceptanceCriteria = 3; // µg/g
+            if (result <= acceptanceCriteria) {
+                resultSpan.className = 'font-bold pass-text';
+                statusSpan.textContent = 'قبول';
+                statusSpan.className = 'font-bold pass-text';
+            } else {
+                resultSpan.className = 'font-bold fail-text';
+                statusSpan.textContent = 'رد';
+                statusSpan.className = 'font-bold fail-text';
+            }
+        }
+
+        function calculateCadmium() {
+            const rU = parseFloat(document.getElementById('cadmium-rU').value);
+            const rS = parseFloat(document.getElementById('cadmium-rS').value);
+            const CS = parseFloat(document.getElementById('cadmium-CS').value); // µg/L
+            const CU = parseFloat(document.getElementById('cadmium-CU').value); // g/L
+
+            const resultSpan = document.getElementById('cadmium-result');
+            const statusSpan = document.getElementById('cadmium-status');
+
+            if (isNaN(rU) || isNaN(rS) || isNaN(CS) || isNaN(CU) || rS === 0 || CU === 0) {
+                resultSpan.textContent = 'لطفاً تمام مقادیر معتبر را وارد کنید.';
+                resultSpan.className = 'font-bold';
+                statusSpan.textContent = '';
+                return;
+            }
+
+            const result = (rU / rS) * (CS / CU);
+            resultSpan.textContent = result.toFixed(2);
+
+            const acceptanceCriteria = 5; // µg/g
+            if (result <= acceptanceCriteria) {
+                resultSpan.className = 'font-bold pass-text';
+                statusSpan.textContent = 'قبول';
+                statusSpan.className = 'font-bold pass-text';
+            } else {
+                resultSpan.className = 'font-bold fail-text';
+                statusSpan.textContent = 'رد';
+                statusSpan.className = 'font-bold fail-text';
+            }
+        }
+
+        function calculateLead() {
+            const rU = parseFloat(document.getElementById('lead-rU').value);
+            const rS = parseFloat(document.getElementById('lead-rS').value);
+            const CS = parseFloat(document.getElementById('lead-CS').value); // µg/L
+            const CU = parseFloat(document.getElementById('lead-CU').value); // g/L
+
+            const resultSpan = document.getElementById('lead-result');
+            const statusSpan = document.getElementById('lead-status');
+
+            if (isNaN(rU) || isNaN(rS) || isNaN(CS) || isNaN(CU) || rS === 0 || CU === 0) {
+                resultSpan.textContent = 'لطفاً تمام مقادیر معتبر را وارد کنید.';
+                resultSpan.className = 'font-bold';
+                statusSpan.textContent = '';
+                return;
+            }
+
+            const result = (rU / rS) * (CS / CU);
+            resultSpan.textContent = result.toFixed(2);
+
+            const acceptanceCriteria = 10; // µg/g
+            if (result <= acceptanceCriteria) {
+                resultSpan.className = 'font-bold pass-text';
+                statusSpan.textContent = 'قبول';
+                statusSpan.className = 'font-bold pass-text';
+            } else {
+                resultSpan.className = 'font-bold fail-text';
+                statusSpan.textContent = 'رد';
+                statusSpan.className = 'font-bold fail-text';
+            }
+        }
+
+
+        // Specific Tests Calculations
+
+        function calculateLOD() {
+            const W1 = parseFloat(document.getElementById('lod-W1').value);
+            const Wsa = parseFloat(document.getElementById('lod-Wsa').value);
+            const W2 = parseFloat(document.getElementById('lod-W2').value);
+
+            const resultSpan = document.getElementById('lod-result');
+            const statusSpan = document.getElementById('lod-status');
+
+            if (isNaN(W1) || isNaN(Wsa) || isNaN(W2) || Wsa === 0) {
+                resultSpan.textContent = 'لطفاً تمام مقادیر معتبر را وارد کنید.';
+                resultSpan.className = 'font-bold';
+                statusSpan.textContent = '';
+                return;
+            }
+
+            // Formula: LOD = ((W1 + Wsa) - W2) / Wsa * 100
+            const lod = ((W1 + Wsa) - W2) / Wsa * 100;
+            resultSpan.textContent = lod.toFixed(2) + '%';
+
+            const acceptanceCriteria = 1.0;
+            if (lod <= acceptanceCriteria) {
+                resultSpan.className = 'font-bold pass-text';
+                statusSpan.textContent = 'قبول';
+                statusSpan.className = 'font-bold pass-text';
+            } else {
+                resultSpan.className = 'font-bold fail-text';
+                statusSpan.textContent = 'رد';
+                statusSpan.className = 'font-bold fail-text';
+            }
+        }
+
+
+        // Initial tab display
+        document.addEventListener('DOMContentLoaded', () => {
+            showTab('definition');
+        });
     </script>
 </body>
 </html>

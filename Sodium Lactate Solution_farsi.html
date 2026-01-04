@@ -6,9 +6,7 @@
     <title>مونوگراف محلول سدیم لاکتات (USP)</title>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="text/javascript" async
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -61,6 +59,12 @@
             margin-bottom: 1rem;
             direction: ltr;
         }
+        .pass-text {
+            color: #22c55e;
+        }
+        .fail-text {
+            color: #ef4444;
+        }
         .interactive-card {
             background-color: #e0f2fe;
             border: 1px solid #90cdf4;
@@ -68,129 +72,551 @@
             margin-top: 1rem;
             border-radius: 0.5rem;
         }
+        .calculation-button {
+            background-color: #2563eb;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+        .additional-spec-input {
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            appearance: none;
+            border: 1px solid #d1d5db;
+            background-color: #fff;
+            border-radius: 0.375rem;
+            width: 100%;
+            padding: 0.5rem 0.75rem;
+            color: #374151;
+            line-height: 1.5;
+            margin-top: 0.5rem;
+        }
+        .status-dropdown {
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            appearance: none;
+            border: 1px solid #d1d5db;
+            background-color: #fff;
+            border-radius: 0.375rem;
+            width: 12rem; /* w-48 */
+            padding: 0.5rem 0.75rem;
+            color: #374151;
+            line-height: 1.5;
+        }
+        .input-field-style {
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            appearance: none;
+            border: 1px solid #d1d5db;
+            background-color: #fff;
+            border-radius: 0.375rem;
+            width: 16rem; /* w-64 */
+            padding: 0.5rem 0.75rem;
+            color: #374151;
+            line-height: 1.5;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
     </style>
 </head>
 <body>
     <div class="container mx-auto p-4 max-w-4xl">
-
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">محلول سدیم لاکتات</h1>
 
         <div class="flex justify-center mb-6 border-b border-gray-200">
-            <button class="tab-button py-2 px-4 border-b-2 tab-active">تعریف</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive">شناسایی</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive">سنجش</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive">ناخالصی‌ها</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive">آزمایشات خاص</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive">الزامات اضافی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab('definition')">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('identification')">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('assay')">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('impurities')">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('specific-tests')">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('additional-requirements')">الزامات اضافی</button>
         </div>
 
-        <div class="content-section">
-
-            <div class="tab-pane" style="display: block;">
+        <!-- Definition Tab -->
+        <div id="definition">
+            <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
-                <div class="card">
-                    <p class="mb-4">محلول سدیم لاکتات محلولی آبی است که حاوی نه کمتر از <span class="ltr-text">50.0</span> درصد وزنی مونو سدیم لاکتات است. این محلول باید حاوی نه کمتر از <span class="ltr-text">98.0</span> درصد و نه بیشتر از <span class="ltr-text">102.0</span> درصد از مقدار ذکر شده روی برچسب، از <span class="ltr-text">C₃H₅NaO₃</span> باشد.</p>
-                    <p class="mb-4"><strong>بسته‌بندی و نگهداری</strong>—در ظروف در بسته نگهداری شود.</p>
-                    <p><strong>برچسب‌گذاری</strong>—برچسب آن باید محتوای سدیم لاکتات را مشخص کند.</p>
-                </div>
-            </div>
+                <p class="mb-4">محلول سدیم لاکتات محلولی آبی است که وزنی معادل نه کمتر از 50.0 درصد لاکتات مونوسدیم را دارا می‌باشد. این محلول نه کمتر از 98.0 درصد و نه بیشتر از 102.0 درصد مقدار اعلام شده C3H5NaO3 را دارا می‌باشد.</p>
 
-            <div class="tab-pane" style="display: none;">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری</h3>
+                <p class="mb-4">در ظروف دربسته نگهداری شود.</p>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">برچسب‌گذاری</h3>
+                <p class="mb-4">برچسب آن باید محتوای سدیم لاکتات را نشان دهد.</p>
+            </div>
+        </div>
+
+        <!-- Identification Tab -->
+        <div id="identification" class="hidden">
+            <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
-                <div class="card">
-                    <p class="mb-4">واکنش‌های لازم برای سدیم á<span class="ltr-text">191</span>ñ و لاکتات á<span class="ltr-text">191</span>ñ را نشان می‌دهد.</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">pH</h4>
-                    <div class="interactive-card card">
-                        <p>pH á<span class="ltr-text">791</span>ñ: بین <span class="ltr-text">5.0</span> و <span class="ltr-text">9.0</span>.</p>
-                    </div>
-                </div>
-            </div>
+                <p class="mb-4">این محلول با تست‌های مربوط به <span class="ltr-text">Sodium</span> &#x230B;191&#x230C; و <span class="ltr-text">Lactate</span> &#x230B;191&#x230C; مطابقت دارد.</p>
 
-            <div class="tab-pane" style="display: none;">
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">pH &#x230B;791&#x230C;</h3>
+                <p class="mb-4">بین 5.0 تا 9.0.</p>
+            </div>
+        </div>
+
+        <!-- Assay Tab -->
+        <div id="assay" class="hidden">
+            <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
-                <div class="card">
-                    <p class="mb-4">به دقت حجمی از محلول را که معادل حدود <span class="ltr-text">300</span> میلی‌گرم سدیم لاکتات است، در یک فلاسک مناسب وزن کرده، <span class="ltr-text">60</span> میلی‌لیتر از مخلوط <span class="ltr-text">1</span> در <span class="ltr-text">5</span> انیدرید استیک در اسید استیک گلاسیال اضافه کنید، مخلوط کرده و برای <span class="ltr-text">20</span> دقیقه کنار بگذارید. با <span class="ltr-text">0.1 N</span> اسید پرکلریک VS تیتر کنید و نقطه پایانی را به روش پتانسیومتری تعیین کنید. یک تعیین شاهد انجام دهید و هرگونه اصلاح لازم را اعمال کنید. هر میلی‌لیتر <span class="ltr-text">0.1 N</span> اسید پرکلریک معادل <span class="ltr-text">11.21</span> میلی‌گرم <span class="ltr-text">C₃H₅NaO₃</span> است.</p>
+
+                <div class="interactive-card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تعیین مقدار</h4>
+                    <p class="mb-4">وزن دقیقی از محلول را که معادل حدود 300 میلی‌گرم سدیم لاکتات است، در یک فلاسک مناسب وزن کنید، 60 میلی‌لیتر از مخلوط 1 به 5 استیک انیدرید در استیک اسید را اضافه کرده، مخلوط کنید و به مدت 20 دقیقه بگذارید بماند. با 0.1 نرمال اسید پرکلریک تیتر کنید و نقطه پایانی را به صورت پتانسیومتری تعیین کنید. یک تعیین شاهد انجام دهید و هرگونه تصحیح لازم را اعمال کنید. هر میلی‌لیتر از 0.1 نرمال اسید پرکلریک معادل 11.21 میلی‌گرم C3H5NaO3 است.</p>
+                    <div class="formula-display">
+                        <span>$$
+                        \text{C}_3\text{H}_5\text{NaO}_3 = (\text{mL of } 0.1 \text{ N HClO}_4) \times 11.21
+                        $$</span>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="assay-volume" class="block text-sm font-medium text-gray-700">حجم محلول (mL)</label>
+                        <input type="text" id="assay-volume" name="assay-volume" class="input-field-style">
+                    </div>
+                    <div class="mb-4">
+                        <label for="assay-weight" class="block text-sm font-medium text-gray-700">وزن سدیم لاکتات (mg)</label>
+                        <input type="text" id="assay-weight" name="assay-weight" class="input-field-style" readonly>
+                    </div>
+                    <div class="mb-4">
+                        <label for="assay-concentration" class="block text-sm font-medium text-gray-700">غلظت (درصد)</label>
+                        <input type="text" id="assay-concentration" name="assay-concentration" class="input-field-style" readonly>
+                    </div>
+                    <button class="calculation-button" onclick="calculateAssay()">محاسبه</button>
+                    <div class="mt-4">
+                        <span id="assay-result" class="font-bold"></span>
+                        <span id="assay-status" class="font-bold"></span>
+                    </div>
+
+                    <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-2">توضیحات اضافه / Additional Specifications:</h4>
+                    <textarea class="additional-spec-input" rows="3"></textarea>
                 </div>
             </div>
+        </div>
 
-            <div class="tab-pane" style="display: none;">
+        <!-- Impurities Tab -->
+        <div id="impurities" class="hidden">
+            <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
 
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کلرید</h4>
-                <div class="interactive-card card">
-                    <p>بخشی معادل <span class="ltr-text">1</span> گرم سدیم لاکتات، نباید کلرید بیشتری نسبت به <span class="ltr-text">0.7</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">0.020 N</span> (معادل <span class="ltr-text">0.05%</span>) نشان دهد.</p>
+                <div class="interactive-card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کلرید &#x230B;221&#x230C;</h4>
+                    <p class="mb-4">بخشی معادل 1 گرم سدیم لاکتات، نباید کلریدی بیشتر از معادل 0.7 میلی‌لیتر اسید هیدروکلریک 0.020 نرمال (0.05%) نشان دهد.</p>
+                    <div class="formula-display">
+                        <span>$$
+                        \text{Chloride Limit} = 0.7 \text{ mL of } 0.020 \text{ N HCl}
+                        $$</span>
+                    </div>
+                    <label for="chloride-status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
+                    <select id="chloride-status" name="chloride-status" class="status-dropdown">
+                        <option value=""></option>
+                        <option value="Pass">Pass</option>
+                        <option value="Fail">Fail</option>
+                    </select>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-2">توضیحات اضافه / Additional Specifications:</h4>
+                    <textarea class="additional-spec-input" rows="3"></textarea>
                 </div>
 
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سولفات</h4>
-                <div class="interactive-card card">
-                    <p>به <span class="ltr-text">10</span> میلی‌لیتر از محلول (<span class="ltr-text">1</span> در <span class="ltr-text">100</span>)، <span class="ltr-text">2</span> قطره اسید هیدروکلریک و <span class="ltr-text">1</span> میلی‌لیتر معرف کلرید باریم TS اضافه کنید: هیچ کدورت تولید نمی‌شود.</p>
+                <div class="interactive-card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سولفات</h4>
+                    <p class="mb-4">به 10 میلی‌لیتر از محلول (1 در 100) 2 قطره اسید هیدروکلریک و 1 میلی‌لیتر معرف کلرید باریم TS اضافه کنید: هیچ کدورت ایجاد نمی‌شود.</p>
+                    <label for="sulfate-status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
+                    <select id="sulfate-status" name="sulfate-status" class="status-dropdown">
+                        <option value=""></option>
+                        <option value="Pass">Pass</option>
+                        <option value="Fail">Fail</option>
+                    </select>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-2">توضیحات اضافه / Additional Specifications:</h4>
+                    <textarea class="additional-spec-input" rows="3"></textarea>
                 </div>
 
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">قندها</h4>
-                <div class="interactive-card card">
-                    <p>به <span class="ltr-text">10</span> میلی‌لیتر از معرف داغ تارتارات مس قلیا TS، <span class="ltr-text">5</span> قطره محلول اضافه کنید: هیچ رسوب قرمزی تشکیل نمی‌شود.</p>
+                <div class="interactive-card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">قندها</h4>
+                    <p class="mb-4">به 10 میلی‌لیتر از معرف تارتارات مس قلیایی داغ TS، 5 قطره محلول اضافه کنید: هیچ رسوب قرمزی تشکیل نمی‌شود.</p>
+                    <label for="sugars-status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
+                    <select id="sugars-status" name="sugars-status" class="status-dropdown">
+                        <option value=""></option>
+                        <option value="Pass">Pass</option>
+                        <option value="Fail">Fail</option>
+                    </select>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-2">توضیحات اضافه / Additional Specifications:</h4>
+                    <textarea class="additional-spec-input" rows="3"></textarea>
                 </div>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">محدودیت سیترات، اگزالات، فسفات یا تارتارات</h3>
-                <div class="interactive-card card">
-                    <p><span class="ltr-text">5</span> میلی‌لیتر را با آب اخیراً جوشانده شده و سرد شده تا <span class="ltr-text">50</span> میلی‌لیتر رقیق کنید. به <span class="ltr-text">4</span> میلی‌لیتر از این محلول، هیدروکسید آمونیوم <span class="ltr-text">6 N</span> یا اسید هیدروکلریک <span class="ltr-text">3 N</span>، در صورت لزوم، اضافه کنید تا pH به بین <span class="ltr-text">7.3</span> و <span class="ltr-text">7.7</span> برسد. <span class="ltr-text">1</span> میلی‌لیتر معرف کلرید کلسیم TS اضافه کرده و به مدت <span class="ltr-text">5</span> دقیقه در حمام آب جوش حرارت دهید: محلول شفاف باقی می‌ماند.</p>
+                <div class="interactive-card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محدودیت سیترات، اگزالات، فسفات یا تارتارات</h4>
+                    <p class="mb-4">5 میلی‌لیتر را با آب جوشیده و سرد شده تا 50 میلی‌لیتر رقیق کنید. به 4 میلی‌لیتر از این محلول، آمونیاک هیدروکسید 6 نرمال یا اسید هیدروکلریک 3 نرمال، در صورت نیاز، برای رساندن pH به بین 7.3 تا 7.7 اضافه کنید. 1 میلی‌لیتر معرف کلرید کلسیم TS اضافه کرده و به مدت 5 دقیقه در حمام آب جوش حرارت دهید: محلول شفاف باقی می‌ماند.</p>
+                    <label for="citrate-oxalate-status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
+                    <select id="citrate-oxalate-status" name="citrate-oxalate-status" class="status-dropdown">
+                        <option value=""></option>
+                        <option value="Pass">Pass</option>
+                        <option value="Fail">Fail</option>
+                    </select>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-2">توضیحات اضافه / Additional Specifications:</h4>
+                    <textarea class="additional-spec-input" rows="3"></textarea>
                 </div>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">محدودیت متانول و استرهای متیل</h3>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول پرمنگنات پتاسیم و اسید فسفریک</h4>
-                <div class="interactive-card card">
-                    <p><span class="ltr-text">3</span> گرم پرمنگنات پتاسیم را در مخلوطی از <span class="ltr-text">15</span> میلی‌لیتر اسید فسفریک و <span class="ltr-text">70</span> میلی‌لیتر آب حل کنید. با آب تا <span class="ltr-text">100</span> میلی‌لیتر رقیق کنید.</p>
-                </div>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول اسید اگزالیک و سولفوریک</h4>
-                <div class="interactive-card card">
-                    <p>با احتیاط <span class="ltr-text">50</span> میلی‌لیتر اسید سولفوریک را به <span class="ltr-text">50</span> میلی‌لیتر آب اضافه کنید، مخلوط کرده، سرد کنید، <span class="ltr-text">5</span> گرم اسید اگزالیک اضافه کنید و مخلوط کنید تا حل شود.</p>
-                </div>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آماده‌سازی استاندارد</h4>
-                <div class="interactive-card card">
-                    <p>محلولی حاوی <span class="ltr-text">10.0</span> میلی‌گرم متانول در <span class="ltr-text">100</span> میلی‌لیتر الکل رقیق شده (<span class="ltr-text">1</span> در <span class="ltr-text">10</span>) آماده کنید.</p>
-                </div>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آماده‌سازی آزمایش</h4>
-                <div class="interactive-card card">
-                    <p><span class="ltr-text">40.0</span> گرم را در یک فلاسک ته گرد با درپوش شیشه‌ای بریزید، <span class="ltr-text">10</span> میلی‌لیتر آب اضافه کنید و با احتیاط <span class="ltr-text">30</span> میلی‌لیتر پتاسیم هیدروکسید <span class="ltr-text">5 N</span> اضافه کنید. یک کندانسور را به فلاسک وصل کنید و با بخار تقطیر کنید، مقطر را در یک ظرف مدرج مناسب <span class="ltr-text">100</span> میلی‌لیتری حاوی <span class="ltr-text">10</span> میلی‌لیتر الکل جمع‌آوری کنید. تقطیر را تا زمانی که حجم در گیرنده به حدود <span class="ltr-text">95</span> میلی‌لیتر برسد ادامه دهید و مقطر را با آب تا <span class="ltr-text">100.0</span> میلی‌لیتر رقیق کنید.</p>
-                </div>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش</h4>
-                <div class="interactive-card card">
-                    <p><span class="ltr-text">10.0</span> میلی‌لیتر از آماده‌سازی استاندارد و <span class="ltr-text">10.0</span> میلی‌لیتر از آماده‌سازی آزمایش را به فلاسک‌های حجمی <span class="ltr-text">25</span> میلی‌لیتری منتقل کنید، به هر کدام <span class="ltr-text">5.0</span> میلی‌لیتر محلول پرمنگنات پتاسیم و اسید فسفریک اضافه کرده و مخلوط کنید. پس از <span class="ltr-text">15</span> دقیقه، به هر کدام <span class="ltr-text">2.0</span> میلی‌لیتر محلول اسید اگزالیک و سولفوریک اضافه کنید، با یک میله شیشه‌ای هم بزنید تا محلول بی‌رنگ شود، <span class="ltr-text">5.0</span> میلی‌لیتر معرف فوجی-سولفیت اسید TS اضافه کنید و با آب تا حجم نهایی رقیق کنید. پس از <span class="ltr-text">2</span> ساعت، جذب نوری هر دو محلول را به طور همزمان در سلول‌های <span class="ltr-text">1</span> سانتی‌متری در طول موج حداکثر جذب در حدود <span class="ltr-text">575</span> نانومتر با یک اسپکتروفتومتر مناسب، با استفاده از آب به عنوان شاهد، تعیین کنید: جذب نوری محلول حاصل از آماده‌سازی آزمایش نباید بیشتر از جذب نوری حاصل از آماده‌سازی استاندارد باشد (حدود <span class="ltr-text">0.025%</span>).</p>
+                <div class="interactive-card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محدودیت متانول و استرهای متیل</h4>
+                    <p class="mb-4"><strong>معرف پتاسیم پرمنگنات و اسید فسفریک:</strong> 3 گرم پتاسیم پرمنگنات را در مخلوطی از 15 میلی‌لیتر اسید فسفریک و 70 میلی‌لیتر آب حل کنید. با آب تا 100 میلی‌لیتر رقیق کنید.</p>
+                    <p class="mb-4"><strong>معرف اسید اگزالیک و اسید سولفوریک:</strong> با احتیاط 50 میلی‌لیتر اسید سولفوریک را به 50 میلی‌لیتر آب اضافه کنید، مخلوط کنید، خنک کنید، 5 گرم اسید اگزالیک اضافه کنید و مخلوط کنید تا حل شود.</p>
+                    <p class="mb-4"><strong>آماده‌سازی استاندارد:</strong> محلولی حاوی 10.0 میلی‌گرم متانول در 100 میلی‌لیتر الکل رقیق (1 در 10) تهیه کنید.</p>
+                    <p class="mb-4"><strong>آماده‌سازی تست:</strong> 40.0 گرم را در یک فلاسک ته گرد با درپوش شیشه‌ای بریزید، 10 میلی‌لیتر آب اضافه کنید، و با احتیاط 30 میلی‌لیتر پتاسیم هیدروکسید 5 نرمال اضافه کنید. یک کندانسور را به فلاسک وصل کنید، و با بخار تقطیر کنید، تقطیر را در یک ظرف مدرج 100 میلی‌لیتری مناسب حاوی 10 میلی‌لیتر الکل جمع‌آوری کنید. تقطیر را تا زمانی که حجم در گیرنده تقریباً به 95 میلی‌لیتر برسد ادامه دهید، و تقطیر را با آب تا 100.0 میلی‌لیتر رقیق کنید.</p>
+                    <p class="mb-4"><strong>روش:</strong> 10.0 میلی‌لیتر از آماده‌سازی استاندارد و 10.0 میلی‌لیتر از آماده‌سازی تست را در فلاسک‌های حجمی 25 میلی‌لیتری بریزید، به هر کدام 5.0 میلی‌لیتر معرف پتاسیم پرمنگنات و اسید فسفریک اضافه کنید و مخلوط کنید. پس از 15 دقیقه، به هر کدام 2.0 میلی‌لیتر معرف اسید اگزالیک و اسید سولفوریک اضافه کنید، با یک میله شیشه‌ای هم بزنید تا محلول بی‌رنگ شود، 5.0 میلی‌لیتر معرف فوکسین-سولفورسید TS را اضافه کنید، و با آب تا حجم نهایی رقیق کنید. پس از 2 ساعت، به طور همزمان جذب هر دو محلول را در سلول‌های 1 سانتی‌متری در طول موج حداکثر جذب در حدود 575 نانومتر، با یک اسپکتروفتومتر مناسب، با استفاده از آب به عنوان شاهد، تعیین کنید: جذب محلول از آماده‌سازی تست نباید بیشتر از جذب آماده‌سازی استاندارد باشد (0.025%).</p>
+                    <div class="formula-display">
+                        <span>$$
+                        \text{Absorbance of Test Preparation} \le \text{Absorbance of Standard Preparation} \quad (0.025\%)
+                        $$</span>
+                    </div>
+                    <label for="methanol-esters-status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
+                    <select id="methanol-esters-status" name="methanol-esters-status" class="status-dropdown">
+                        <option value=""></option>
+                        <option value="Pass">Pass</option>
+                        <option value="Fail">Fail</option>
+                    </select>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-2">توضیحات اضافه / Additional Specifications:</h4>
+                    <textarea class="additional-spec-input" rows="3"></textarea>
                 </div>
             </div>
+        </div>
 
-            <div class="tab-pane" style="display: none;">
+        <!-- Specific Tests Tab -->
+        <div id="specific-tests" class="hidden">
+            <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
-                <div class="card">
-                    <p>در اینجا هیچ بخش "آزمایشات خاص" در متن منبع وجود ندارد.</p>
+
+                <div class="interactive-card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محدودیت مواد نامحلول در اسید</h4>
+                    <div class="formula-display">
+                        <span>$$
+                        Result = (W_2 - W_1) \times 1000
+                        $$</span>
+                    </div>
+                    <div class="mb-4">
+                        <label for="acid-insoluble-w1" class="block text-sm font-medium text-gray-700">W1 (g)</label>
+                        <input type="text" id="acid-insoluble-w1" name="acid-insoluble-w1" class="input-field-style">
+                    </div>
+                    <div class="mb-4">
+                        <label for="acid-insoluble-w2" class="block text-sm font-medium text-gray-700">W2 (g)</label>
+                        <input type="text" id="acid-insoluble-w2" name="acid-insoluble-w2" class="input-field-style">
+                    </div>
+                    <button class="calculation-button" onclick="calculateAcidInsoluble()">محاسبه</button>
+                    <div class="mt-4">
+                        <span id="acid-insoluble-result" class="font-bold"></span>
+                        <span id="acid-insoluble-status" class="font-bold"></span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-2">توضیحات اضافه / Additional Specifications:</h4>
+                    <textarea class="additional-spec-input" rows="3"></textarea>
+                </div>
+
+                <div class="interactive-card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محدودیت منیزیم و نمک‌های قلیایی</h4>
+                    <div class="formula-display">
+                        <span>$$
+                        Result = (W_2 - W_1) \times 1000
+                        $$</span>
+                    </div>
+                    <div class="mb-4">
+                        <label for="mg-alkali-w1" class="block text-sm font-medium text-gray-700">W1 (g)</label>
+                        <input type="text" id="mg-alkali-w1" name="mg-alkali-w1" class="input-field-style">
+                    </div>
+                    <div class="mb-4">
+                        <label for="mg-alkali-w2" class="block text-sm font-medium text-gray-700">W2 (g)</label>
+                        <input type="text" id="mg-alkali-w2" name="mg-alkali-w2" class="input-field-style">
+                    </div>
+                    <button class="calculation-button" onclick="calculateMgAlkali()">محاسبه</button>
+                    <div class="mt-4">
+                        <span id="mg-alkali-result" class="font-bold"></span>
+                        <span id="mg-alkali-status" class="font-bold"></span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-2">توضیحات اضافه / Additional Specifications:</h4>
+                    <textarea class="additional-spec-input" rows="3"></textarea>
+                </div>
+
+                <div class="interactive-card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماده نامحلول در الکل</h4>
+                    <div class="formula-display">
+                        <span>$$
+                        Result = (W_2 - W_1) \times 1000
+                        $$</span>
+                    </div>
+                    <div class="mb-4">
+                        <label for="alcohol-insoluble-w1" class="block text-sm font-medium text-gray-700">W1 (g)</label>
+                        <input type="text" id="alcohol-insoluble-w1" name="alcohol-insoluble-w1" class="input-field-style">
+                    </div>
+                    <div class="mb-4">
+                        <label for="alcohol-insoluble-w2" class="block text-sm font-medium text-gray-700">W2 (g)</label>
+                        <input type="text" id="alcohol-insoluble-w2" name="alcohol-insoluble-w2" class="input-field-style">
+                    </div>
+                    <button class="calculation-button" onclick="calculateAlcoholInsoluble()">محاسبه</button>
+                    <div class="mt-4">
+                        <span id="alcohol-insoluble-result" class="font-bold"></span>
+                        <span id="alcohol-insoluble-status" class="font-bold"></span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-2">توضیحات اضافه / Additional Specifications:</h4>
+                    <textarea class="additional-spec-input" rows="3"></textarea>
+                </div>
+
+                <div class="interactive-card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تلفات در هنگام خشک شدن (Loss on Drying)</h4>
+                    <div class="formula-display">
+                        <span>$$
+                        LOD = \frac{(W_1 + W_{sa}) - W_2}{W_{sa}} \times 100
+                        $$</span>
+                    </div>
+                    <div class="mb-4">
+                        <label for="lod-w1" class="block text-sm font-medium text-gray-700">W1 (g)</label>
+                        <input type="text" id="lod-w1" name="lod-w1" class="input-field-style">
+                    </div>
+                    <div class="mb-4">
+                        <label for="lod-wsa" class="block text-sm font-medium text-gray-700">Wsa (g)</label>
+                        <input type="text" id="lod-wsa" name="lod-wsa" class="input-field-style">
+                    </div>
+                    <div class="mb-4">
+                        <label for="lod-w2" class="block text-sm font-medium text-gray-700">W2 (g)</label>
+                        <input type="text" id="lod-w2" name="lod-w2" class="input-field-style">
+                    </div>
+                    <button class="calculation-button" onclick="calculateLOD()">محاسبه</button>
+                    <div class="mt-4">
+                        <span id="lod-result" class="font-bold"></span>
+                        <span id="lod-status" class="font-bold"></span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-2">توضیحات اضافه / Additional Specifications:</h4>
+                    <textarea class="additional-spec-input" rows="3"></textarea>
+                </div>
+
+                <div class="interactive-card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">باقیمانده در هنگام اشتعال (Residue on Ignition)</h4>
+                    <div class="formula-display">
+                        <span>$$
+                        ROI = \frac{W_3 - W_1}{W_2} \times 100
+                        $$</span>
+                    </div>
+                    <div class="mb-4">
+                        <label for="roi-w1" class="block text-sm font-medium text-gray-700">W1 (g)</label>
+                        <input type="text" id="roi-w1" name="roi-w1" class="input-field-style">
+                    </div>
+                    <div class="mb-4">
+                        <label for="roi-w2" class="block text-sm font-medium text-gray-700">W2 (g)</label>
+                        <input type="text" id="roi-w2" name="roi-w2" class="input-field-style">
+                    </div>
+                    <div class="mb-4">
+                        <label for="roi-w3" class="block text-sm font-medium text-gray-700">W3 (g)</label>
+                        <input type="text" id="roi-w3" name="roi-w3" class="input-field-style">
+                    </div>
+                    <button class="calculation-button" onclick="calculateROI()">محاسبه</button>
+                    <div class="mt-4">
+                        <span id="roi-result" class="font-bold"></span>
+                        <span id="roi-status" class="font-bold"></span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-2">توضیحات اضافه / Additional Specifications:</h4>
+                    <textarea class="additional-spec-input" rows="3"></textarea>
+                </div>
+
+                <div class="interactive-card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مواد احیاکننده (Reducing Substances)</h4>
+                    <div class="formula-display">
+                        <span>$$
+                        Result = \left[ \frac{(V_B - V_S) \times N \times 27 \times F}{W} \right] \times 100
+                        $$</span>
+                    </div>
+                    <div class="mb-4">
+                        <label for="reducing-vb" class="block text-sm font-medium text-gray-700">V<sub>B</sub> (mL)</label>
+                        <input type="text" id="reducing-vb" name="reducing-vb" class="input-field-style">
+                    </div>
+                    <div class="mb-4">
+                        <label for="reducing-vs" class="block text-sm font-medium text-gray-700">V<sub>S</sub> (mL)</label>
+                        <input type="text" id="reducing-vs" name="reducing-vs" class="input-field-style">
+                    </div>
+                    <div class="mb-4">
+                        <label for="reducing-n" class="block text-sm font-medium text-gray-700">N (Normalit y)</label>
+                        <input type="text" id="reducing-n" name="reducing-n" class="input-field-style">
+                    </div>
+                    <div class="mb-4">
+                        <label for="reducing-f" class="block text-sm font-medium text-gray-700">F (Factor)</label>
+                        <input type="text" id="reducing-f" name="reducing-f" class="input-field-style">
+                    </div>
+                    <div class="mb-4">
+                        <label for="reducing-w" class="block text-sm font-medium text-gray-700">W (g)</label>
+                        <input type="text" id="reducing-w" name="reducing-w" class="input-field-style">
+                    </div>
+                    <button class="calculation-button" onclick="calculateReducingSubstances()">محاسبه</button>
+                    <div class="mt-4">
+                        <span id="reducing-substances-result" class="font-bold"></span>
+                        <span id="reducing-substances-status" class="font-bold"></span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-6 mb-2">توضیحات اضافه / Additional Specifications:</h4>
+                    <textarea class="additional-spec-input" rows="3"></textarea>
                 </div>
             </div>
+        </div>
 
-            <div class="tab-pane" style="display: none;">
+        <!-- Additional Requirements Tab -->
+        <div id="additional-requirements" class="hidden">
+            <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
-                <div class="card">
-                    <p>در اینجا هیچ بخش "الزامات اضافی" در متن منبع وجود ندارد.</p>
-                </div>
+                <p class="mb-4">این بخش شامل الزاماتی است که ممکن است بر اساس منابع خارجی یا تفسیرهای خاصی از مونوگراف اضافه شوند.</p>
             </div>
-
         </div>
 
     </div>
 
     <script>
-        const tabButtons = document.querySelectorAll('.tab-button');
-        const tabPanes = document.querySelectorAll('.tab-pane');
-
-        tabButtons.forEach((button, index) => {
-            button.addEventListener('click', () => {
-                tabButtons.forEach(btn => btn.classList.add('tab-inactive'));
-                tabButtons.forEach(btn => btn.classList.remove('tab-active'));
-                button.classList.add('tab-active');
-                button.classList.remove('tab-inactive');
-
-                tabPanes.forEach(pane => pane.style.display = 'none');
-                tabPanes[index].style.display = 'block';
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab-button');
+            tabs.forEach(tab => {
+                tab.classList.remove('tab-active');
+                tab.classList.add('tab-inactive');
             });
+            const currentTabButton = document.querySelector(`.tab-button[onclick="showTab('${tabId}')"]`);
+            currentTabButton.classList.add('tab-active');
+            currentTabButton.classList.remove('tab-inactive');
+
+            const tabContents = document.querySelectorAll('div[id^="definition"], div[id^="identification"], div[id^="assay"], div[id^="impurities"], div[id^="specific-tests"], div[id^="additional-requirements"]');
+            tabContents.forEach(content => {
+                content.classList.add('hidden');
+            });
+            document.getElementById(tabId).classList.remove('hidden');
+        }
+
+        function calculateAssay() {
+            const volume = parseFloat(document.getElementById('assay-volume').value);
+            const N = 0.1; // 0.1 N perchloric acid
+            const equivalence = 11.21; // mg of C3H5NaO3 per mL of 0.1 N HClO4
+
+            if (!isNaN(volume)) {
+                const weight = volume * equivalence;
+                const percentage = (weight / 300) * 100; // Assuming 300 mg is the target
+
+                document.getElementById('assay-weight').value = weight.toFixed(2);
+                document.getElementById('assay-concentration').value = percentage.toFixed(2) + '%';
+
+                let resultSpan = document.getElementById('assay-result');
+                let statusSpan = document.getElementById('assay-status');
+
+                resultSpan.textContent = `وزن سدیم لاکتات: ${weight.toFixed(2)} mg`;
+                if (percentage >= 98.0 && percentage <= 102.0) {
+                    statusSpan.textContent = 'وضعیت: Pass';
+                    statusSpan.className = 'font-bold pass-text';
+                } else {
+                    statusSpan.textContent = 'وضعیت: Fail';
+                    statusSpan.className = 'font-bold fail-text';
+                }
+            } else {
+                document.getElementById('assay-weight').value = '';
+                document.getElementById('assay-concentration').value = '';
+                document.getElementById('assay-result').textContent = '';
+                document.getElementById('assay-status').textContent = '';
+            }
+        }
+
+        function updateStatus(result, statusId, resultSpanId, statusSpanId, lowerLimit, upperLimit) {
+            const statusSpan = document.getElementById(statusSpanId);
+            const resultSpan = document.getElementById(resultSpanId);
+
+            resultSpan.textContent = `نتیجه: ${result.toFixed(4)}`;
+            if (result >= lowerLimit && result <= upperLimit) {
+                statusSpan.textContent = 'وضعیت: Pass';
+                statusSpan.className = 'font-bold pass-text';
+            } else {
+                statusSpan.textContent = 'وضعیت: Fail';
+                statusSpan.className = 'font-bold fail-text';
+            }
+        }
+
+        function calculateAcidInsoluble() {
+            const w1 = parseFloat(document.getElementById('acid-insoluble-w1').value);
+            const w2 = parseFloat(document.getElementById('acid-insoluble-w2').value);
+            const limit = 0.1; // Assuming a limit, e.g., 0.1%
+
+            if (!isNaN(w1) && !isNaN(w2)) {
+                const result = (w2 - w1) * 1000;
+                updateStatus(result, 'acid-insoluble-status', 'acid-insoluble-result', 'acid-insoluble-status', 0, limit);
+            } else {
+                document.getElementById('acid-insoluble-result').textContent = '';
+                document.getElementById('acid-insoluble-status').textContent = '';
+            }
+        }
+
+        function calculateMgAlkali() {
+            const w1 = parseFloat(document.getElementById('mg-alkali-w1').value);
+            const w2 = parseFloat(document.getElementById('mg-alkali-w2').value);
+            const limit = 0.1; // Assuming a limit, e.g., 0.1%
+
+            if (!isNaN(w1) && !isNaN(w2)) {
+                const result = (w2 - w1) * 1000;
+                updateStatus(result, 'mg-alkali-status', 'mg-alkali-result', 'mg-alkali-status', 0, limit);
+            } else {
+                document.getElementById('mg-alkali-result').textContent = '';
+                document.getElementById('mg-alkali-status').textContent = '';
+            }
+        }
+
+        function calculateAlcoholInsoluble() {
+            const w1 = parseFloat(document.getElementById('alcohol-insoluble-w1').value);
+            const w2 = parseFloat(document.getElementById('alcohol-insoluble-w2').value);
+            const limit = 0.1; // Assuming a limit, e.g., 0.1%
+
+            if (!isNaN(w1) && !isNaN(w2)) {
+                const result = (w2 - w1) * 1000;
+                updateStatus(result, 'alcohol-insoluble-status', 'alcohol-insoluble-result', 'alcohol-insoluble-status', 0, limit);
+            } else {
+                document.getElementById('alcohol-insoluble-result').textContent = '';
+                document.getElementById('alcohol-insoluble-status').textContent = '';
+            }
+        }
+
+        function calculateLOD() {
+            const w1 = parseFloat(document.getElementById('lod-w1').value);
+            const wsa = parseFloat(document.getElementById('lod-wsa').value);
+            const w2 = parseFloat(document.getElementById('lod-w2').value);
+            const limit = 2.0; // Assuming a limit, e.g., 2.0%
+
+            if (!isNaN(w1) && !isNaN(wsa) && !isNaN(w2)) {
+                const result = ((w1 + wsa) - w2) / wsa * 100;
+                updateStatus(result, 'lod-status', 'lod-result', 'lod-status', 0, limit);
+            } else {
+                document.getElementById('lod-result').textContent = '';
+                document.getElementById('lod-status').textContent = '';
+            }
+        }
+
+        function calculateROI() {
+            const w1 = parseFloat(document.getElementById('roi-w1').value);
+            const w2 = parseFloat(document.getElementById('roi-w2').value);
+            const w3 = parseFloat(document.getElementById('roi-w3').value);
+            const limit = 0.1; // Assuming a limit, e.g., 0.1%
+
+            if (!isNaN(w1) && !isNaN(w2) && !isNaN(w3)) {
+                const result = (w3 - w1) / w2 * 100;
+                updateStatus(result, 'roi-status', 'roi-result', 'roi-status', 0, limit);
+            } else {
+                document.getElementById('roi-result').textContent = '';
+                document.getElementById('roi-status').textContent = '';
+            }
+        }
+
+        function calculateReducingSubstances() {
+            const vb = parseFloat(document.getElementById('reducing-vb').value);
+            const vs = parseFloat(document.getElementById('reducing-vs').value);
+            const n = parseFloat(document.getElementById('reducing-n').value);
+            const f = parseFloat(document.getElementById('reducing-f').value);
+            const w = parseFloat(document.getElementById('reducing-w').value);
+            const limit = 5.0; // Assuming a limit, e.g., 5.0%
+
+            if (!isNaN(vb) && !isNaN(vs) && !isNaN(n) && !isNaN(f) && !isNaN(w) && w !== 0) {
+                const result = ((vb - vs) * n * 27 * f) / w * 100;
+                updateStatus(result, 'reducing-substances-status', 'reducing-substances-result', 'reducing-substances-status', 0, limit);
+            } else {
+                document.getElementById('reducing-substances-result').textContent = '';
+                document.getElementById('reducing-substances-status').textContent = '';
+            }
+        }
+
+        // Initialize the first tab on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            showTab('definition');
         });
     </script>
 </body>

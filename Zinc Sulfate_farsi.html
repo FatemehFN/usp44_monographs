@@ -6,7 +6,9 @@
     <title>مونوگراف سولفات روی (USP)</title>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -59,12 +61,70 @@
             margin-bottom: 1rem;
             direction: ltr;
         }
+        .pass-text {
+            color: #22c55e;
+        }
+        .fail-text {
+            color: #ef4444;
+        }
         .interactive-card {
             background-color: #e0f2fe;
             border: 1px solid #90cdf4;
             padding: 1rem;
             margin-top: 1rem;
             border-radius: 0.5rem;
+        }
+        .calculation-button {
+            background-color: #2563eb;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+        .additional-spec-input {
+            shadow-appearance: none;
+            border: 1px solid #d1d5db;
+            border-radius: 0.375rem;
+            width: 100%;
+            padding: 0.5rem 0.75rem;
+            color: #374151;
+            line-height: 1.5;
+            focus: outline-none focus:shadow-outline;
+            margin-top: 0.5rem;
+        }
+        .status-dropdown {
+             shadow-appearance: none;
+            border: 1px solid #d1d5db;
+            background-color: white;
+            border-radius: 0.375rem;
+            width: 12rem;
+            padding: 0.5rem 0.75rem;
+            color: #374151;
+            line-height: 1.5;
+            focus: outline-none focus:shadow-outline;
+        }
+        .input-field-wrapper {
+            margin-bottom: 1rem;
+        }
+        .input-field {
+            direction: ltr;
+            text-align: left;
+            shadow-appearance: none;
+            border: 1px solid #d1d5db;
+            background-color: white;
+            border-radius: 0.375rem;
+            width: 16rem; /* 256px */
+            padding: 0.5rem 0.75rem;
+            color: #374151;
+            line-height: 1.5;
+            focus: outline-none focus:shadow-outline;
+            margin-top: 0.5rem;
+        }
+        .result-span {
+            display: block;
+            margin-top: 0.5rem;
         }
     </style>
 </head>
@@ -73,130 +133,301 @@
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">سولفات روی</h1>
 
         <div class="flex justify-center mb-6 border-b border-gray-200">
-            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab('definition')">تعریف</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('identification')">شناسایی</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('assay')">سنجش</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('impurities')">ناخالصی‌ها</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('specific-tests')">آزمایشات خاص</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('additional-requirements')">الزامات اضافی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" data-tab="definition">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="identification">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="assay">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="impurities">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="specific-tests">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="additional-requirements">الزامات اضافی</button>
         </div>
 
-        <div id="definition" class="content active">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+        <!-- Definition Tab -->
+        <div id="definition" class="tab-content">
             <div class="card">
-                <p>سولفات روی حاوی یک یا هفت مولکول آب هیدراتاسیون است. مونوهیدرات حاوی نلت 89.0% و نمت 90.4% سولفات روی (<span class="ltr-text">ZnSO4</span>)، معادل نلت 99.0% و نمت 100.5% سولفات روی مونوهیدرات (<span class="ltr-text">ZnSO4 · H2O</span>) است، و هپتاهیدرات حاوی نلت 55.6% و نمت 61.0% سولفات روی (<span class="ltr-text">ZnSO4</span>)، معادل نلت 99.0% و نمت 108.7% سولفات روی هپتاهیدرات (<span class="ltr-text">ZnSO4 · 7H2O</span>) است.</p>
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+                <p class="mb-4">سولفات روی حاوی یک یا هفت مولکول آب هیدراتاسیون است.</p>
+                <p class="mb-4">مونوهیدرات حاوی حداقل 89.0% و حداکثر 90.4% سولفات روی (ZnSO4) است که معادل حداقل 99.0% و حداکثر 100.5% سولفات روی مونوهیدرات (ZnSO4 · H2O) می‌باشد، و هپتاهیدرات حاوی حداقل 55.6% و حداکثر 61.0% سولفات روی (ZnSO4) است که معادل حداقل 99.0% و حداکثر 108.7% سولفات روی هپتاهیدرات (ZnSO4 · 7H2O) می‌باشد.</p>
             </div>
         </div>
 
-        <div id="identification" class="content hidden">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+        <!-- Identification Tab -->
+        <div id="identification" class="tab-content hidden">
             <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایشات شناسایی</h3>
-                <div class="interactive-card card">
-                    <p><strong>الف. آزمون‌های شناسایی - عمومی، روی </strong><span class="ltr-text">[191]</span>: الزامات را برآورده می‌کند.</p>
-                </div>
-                <div class="interactive-card card">
-                    <p><strong>ب. آزمون‌های شناسایی - عمومی، سولفات </strong><span class="ltr-text">[191]</span>: الزامات را برآورده می‌کند.</p>
-                </div>
+                <ul class="list-disc pl-6">
+                    <li><b>الف. آزمایشات شناسایی - عمومی، روی (Zinc) <span class="ltr-text"><a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a></span>:</b> الزامات را برآورده می‌کند.</li>
+                    <li><b>ب. آزمایشات شناسایی - عمومی، سولفات (Sulfate) <span class="ltr-text"><a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a></span>:</b> الزامات را برآورده می‌کند.</li>
+                </ul>
             </div>
         </div>
 
-        <div id="assay" class="content hidden">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+        <!-- Assay Tab -->
+        <div id="assay" class="tab-content hidden">
             <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش کار</h4>
-                <p><strong>نمونه:</strong> مقدار سولفات روی معادل 170 میلی‌گرم سولفات روی (<span class="ltr-text">ZnSO4</span>)</p>
-                <p><strong>تجزیه:</strong> نمونه را در 100 میلی‌لیتر آب حل کنید. 5 میلی‌لیتر بافر آمونیاک-آمونیوم کلراید TS و 0.1 میلی‌لیتر اریکروم سیاه TS اضافه کنید و با 0.05 مولار ادتات دی‌سدیم VS تا زمانی که محلول به رنگ آبی تیره درآید، تیتر کنید. هر میلی‌لیتر 0.05 مولار ادتات دی‌سدیم معادل 8.072 میلی‌گرم سولفات روی (<span class="ltr-text">ZnSO4</span>) است.</p>
+                <p class="mb-4"><b>نمونه:</b> مقداری سولفات روی معادل 170 میلی‌گرم سولفات روی (ZnSO4)</p>
+                <p class="mb-4"><b>تجزیه:</b> نمونه را در 100 میلی‌لیتر آب حل کنید. 5 میلی‌لیتر بافر آمونیاک-آمونیوم کلراید TS و 0.1 میلی‌لیتر اریکروم بلک TS اضافه کرده و با 0.05 مولار ادتات دی‌سدیم VS تیتر کنید تا محلول آبی عمیق شود. هر میلی‌لیتر 0.05 مولار ادتات دی‌سدیم معادل 8.072 میلی‌گرم سولفات روی (ZnSO4) است.</p>
+
                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
-                <p><strong>مونوهیدرات:</strong> 89.0%–90.4% سولفات روی (<span class="ltr-text">ZnSO4</span>)، معادل 99.0%–100.5% سولفات روی مونوهیدرات (<span class="ltr-text">ZnSO4 · H2O</span>)</p>
-                <p><strong>هپتاهیدرات:</strong> 55.6%–61.0% سولفات روی (<span class="ltr-text">ZnSO4</span>)، معادل 99.0%–108.7% سولفات روی هپتاهیدرات (<span class="ltr-text">ZnSO4 · 7H2O</span>)</p>
-            </div>
-        </div>
+                <ul class="list-disc pl-6">
+                    <li><b>مونوهیدرات:</b> 89.0%–90.4% سولفات روی (ZnSO4)، معادل 99.0%–100.5% سولفات روی مونوهیدرات (ZnSO4 · H2O)</li>
+                    <li><b>هپتاهیدرات:</b> 55.6%–61.0% سولفات روی (ZnSO4)، معادل 99.0%–108.7% سولفات روی هپتاهیدرات (ZnSO4 · 7H2O)</li>
+                </ul>
 
-        <div id="impurities" class="content hidden">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
-            <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">آرسنیک، روش I</h3>
-                <div class="interactive-card card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آماده‌سازی تست</h4>
-                    <p>بخشی معادل 215 میلی‌گرم سولفات روی (<span class="ltr-text">ZnSO4</span>) را در 35 میلی‌لیتر آب حل کنید.</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
-                    <p>نمت 14 ppm</p>
-                </div>
-            </div>
-            <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">سرب</h3>
-                <div class="interactive-card card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استاندارد</h4>
-                    <p>5 میلی‌لیتر آب، 0.50 میلی‌لیتر محلول استاندارد سرب TS و 10 میلی‌لیتر محلول سیانید پتاسیم (1 در 10) را در یک لوله مقایسه رنگی ترکیب کنید.</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آماده‌سازی تست</h4>
-                    <p>مقداری معادل 0.25 گرم سولفات روی (<span class="ltr-text">ZnSO4</span>) را در 5 میلی‌لیتر آب حل کرده و محلول را به یک لوله مقایسه رنگی مشابه و منطبق منتقل کنید. 10 میلی‌لیتر محلول سیانید پتاسیم (1 در 10) اضافه کرده و اجازه دهید مخلوط شفاف شود.</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه</h4>
-                    <p>به محلول استاندارد و آماده‌سازی تست، 0.1 میلی‌لیتر سولفید سدیم TS اضافه کنید. محتویات هر لوله را مخلوط کرده و به مدت 5 دقیقه قرار دهید.</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
-                    <p>با نگاه کردن به سمت پایین بر روی یک سطح سفید، آماده‌سازی تست تیره‌تر از محلول استاندارد نیست (نمت 20 ppm سرب).</p>
-                </div>
-            </div>
-            <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">قلیاها و فلزات قلیایی خاکی</h3>
-                <div class="interactive-card card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه</h4>
-                    <p>معادل 1.12 گرم سولفات روی (<span class="ltr-text">ZnSO4</span>) را در 150 میلی‌لیتر آب در یک فلاسک حجمی 200 میلی‌لیتری حل کنید. به اندازه کافی سولفید آمونیوم TS اضافه کنید تا روی به طور کامل رسوب کند و با آب تا حجم برسانید. از یک فیلتر خشک عبور داده و اولین بخش از فیلتر را دور بریزید.</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه</h4>
-                    <p>به 100 میلی‌لیتر از فیلتر محلول نمونه، چند قطره اسید سولفوریک اضافه کرده، در یک ظرف وزن شده تبخیر کرده و تا وزن ثابت حرارت دهید.</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
-                    <p>وزن باقیمانده نمت 5 میلی‌گرم (0.9%).</p>
+                <div class="card interactive-card">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">محاسبه سنجش</h3>
+                    <div class="formula-display">
+                        <span>$$
+                            \text{Assay Result (ZnSO}_4\text{)} = \frac{V \times M \times 100}{W} \%
+                        $$</span>
+                    </div>
+                    <div class="input-field-wrapper">
+                        <label for="assay-v" class="block text-sm font-bold text-gray-700">حجم تیترانت (mL)</label>
+                        <input type="text" id="assay-v" name="assay-v" class="input-field">
+                    </div>
+                    <div class="input-field-wrapper">
+                        <label for="assay-m" class="block text-sm font-bold text-gray-700">مولاریته ادتات دی‌سدیم (M)</label>
+                        <input type="text" id="assay-m" name="assay-m" class="input-field">
+                    </div>
+                    <div class="input-field-wrapper">
+                        <label for="assay-w" class="block text-sm font-bold text-gray-700">وزن نمونه (mg)</label>
+                        <input type="text" id="assay-w" name="assay-w" class="input-field">
+                    </div>
+                    <button onclick="calculateAssay()" class="calculation-button">محاسبه</button>
+                    <span id="assay-result" class="result-span"></span>
+                    <span id="assay-status" class="result-span"></span>
+                    <div class="mt-4">
+                        <label for="assay-additional" class="block text-sm font-bold text-gray-700">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="assay-additional" name="assay-additional" class="additional-spec-input"></textarea>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div id="specific-tests" class="content hidden">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+        <!-- Impurities Tab -->
+        <div id="impurities" class="tab-content hidden">
             <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">آرسنیک، روش I <span class="ltr-text"><a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a></span></h3>
+                <p class="mb-4"><b>آماده‌سازی نمونه:</b> بخشی معادل 215 میلی‌گرم سولفات روی (ZnSO4) را در 35 میلی‌لیتر آب حل کنید.</p>
+                <p class="mb-4"><b>معیارهای پذیرش:</b> حداکثر 14 ppm</p>
+                <div class="card interactive-card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حدود آرسنیک</h4>
+                    <label for="arsenic-status" class="block text-sm font-bold text-gray-700">وضعیت:</label>
+                    <select id="arsenic-status" name="arsenic-status" class="status-dropdown">
+                        <option value=""></option>
+                        <option value="Pass">Pass</option>
+                        <option value="Fail">Fail</option>
+                    </select>
+                    <div class="mt-4">
+                        <label for="arsenic-additional" class="block text-sm font-bold text-gray-700">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="arsenic-additional" name="arsenic-additional" class="additional-spec-input"></textarea>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">سرب (Lead) <span class="ltr-text"><a href="General chapters/251.html" class="text-blue-600 hover:underline" target="_blank">251</a></span></h3>
+                <p class="mb-4"><b>محلول استاندارد:</b> 5 میلی‌لیتر آب، 0.50 میلی‌لیتر محلول استاندارد سرب TS و 10 میلی‌لیتر محلول سیانور پتاسیم (1 در 10) را در یک لوله مقایسه رنگ ترکیب کنید.</p>
+                <p class="mb-4"><b>آماده‌سازی نمونه:</b> مقداری معادل 0.25 گرم سولفات روی (ZnSO4) را در 5 میلی‌لیتر آب حل کرده و محلول را به یک لوله مقایسه رنگ مشابه و منطبق منتقل کنید. 10 میلی‌لیتر محلول سیانور پتاسیم (1 در 10) اضافه کرده و اجازه دهید مخلوط شفاف شود.</p>
+                <p class="mb-4"><b>تجزیه:</b> به محلول استاندارد و آماده‌سازی نمونه، 0.1 میلی‌لیتر سولفید سدیم TS اضافه کنید. محتویات هر لوله را مخلوط کرده و به مدت 5 دقیقه قرار دهید.</p>
+                <p class="mb-4"><b>معیارهای پذیرش:</b> با نگاه کردن به پایین روی یک سطح سفید، آماده‌سازی نمونه تیره‌تر از محلول استاندارد نیست (حداکثر 20 ppm سرب).</p>
+                <div class="card interactive-card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حدود سرب</h4>
+                    <label for="lead-status" class="block text-sm font-bold text-gray-700">وضعیت:</label>
+                    <select id="lead-status" name="lead-status" class="status-dropdown">
+                        <option value=""></option>
+                        <option value="Pass">Pass</option>
+                        <option value="Fail">Fail</option>
+                    </select>
+                    <div class="mt-4">
+                        <label for="lead-additional" class="block text-sm font-bold text-gray-700">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="lead-additional" name="lead-additional" class="additional-spec-input"></textarea>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">قلیایی‌ها و فلزات قلیایی خاکی</h3>
+                <p class="mb-4"><b>محلول نمونه:</b> معادل 1.12 گرم سولفات روی (ZnSO4) را در 150 میلی‌لیتر آب در یک فلاسک حجمی 200 میلی‌لیتری حل کنید. به اندازه کافی سولفید آمونیوم TS اضافه کنید تا روی کاملاً رسوب کند و با آب تا حجم برسانید. از یک فیلتر خشک عبور دهید و قسمت اول فیلتر شده را دور بریزید.</p>
+                <p class="mb-4"><b>تجزیه:</b> به 100 میلی‌لیتر از فیلتر محلول نمونه، چند قطره اسید سولفوریک اضافه کنید، در یک ظرف وزن شده تبخیر کنید و تا وزن ثابت حرارت دهید.</p>
+                <p class="mb-4"><b>معیارهای پذیرش:</b> وزن باقیمانده حداکثر 5 میلی‌گرم (0.9%).</p>
+                <div class="card interactive-card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حدود قلیایی‌ها و فلزات قلیایی خاکی</h4>
+                    <div class="formula-display">
+                        <span>$$
+                            Result = \frac{W_{residue}}{W_{sample\_taken}} \times 100 \%
+                        $$</span>
+                    </div>
+                     <div class="input-field-wrapper">
+                        <label for="alkalies-residue" class="block text-sm font-bold text-gray-700">وزن باقیمانده (mg)</label>
+                        <input type="text" id="alkalies-residue" name="alkalies-residue" class="input-field">
+                    </div>
+                    <div class="input-field-wrapper">
+                        <label for="alkalies-sample" class="block text-sm font-bold text-gray-700">وزن نمونه گرفته شده (g)</label>
+                        <input type="text" id="alkalies-sample" name="alkalies-sample" class="input-field">
+                    </div>
+                    <button onclick="calculateAlkalies()" class="calculation-button">محاسبه</button>
+                    <span id="alkalies-result" class="result-span"></span>
+                    <span id="alkalies-status" class="result-span"></span>
+                    <div class="mt-4">
+                        <label for="alkalies-additional" class="block text-sm font-bold text-gray-700">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="alkalies-additional" name="alkalies-additional" class="additional-spec-input"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Specific Tests Tab -->
+        <div id="specific-tests" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">اسیدیته</h3>
-                <div class="interactive-card card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه</h4>
-                    <p>28 میلی‌گرم بر میلی‌لیتر سولفات روی (<span class="ltr-text">ZnSO4</span>)</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
-                    <p>محلول نمونه با متیل اورنج TS صورتی رنگ نمی‌شود.</p>
+                <p class="mb-4"><b>محلول نمونه:</b> 28 میلی‌گرم بر میلی‌لیتر سولفات روی (ZnSO4)</p>
+                <p class="mb-4"><b>معیارهای پذیرش:</b> محلول نمونه توسط متیل اورنج TS صورتی رنگ نمی‌شود.</p>
+                <div class="card interactive-card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">اسیدیته</h4>
+                    <label for="acidity-status" class="block text-sm font-bold text-gray-700">وضعیت:</label>
+                    <select id="acidity-status" name="acidity-status" class="status-dropdown">
+                        <option value=""></option>
+                        <option value="Pass">Pass</option>
+                        <option value="Fail">Fail</option>
+                    </select>
+                    <div class="mt-4">
+                        <label for="acidity-additional" class="block text-sm font-bold text-gray-700">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="acidity-additional" name="acidity-additional" class="additional-spec-input"></textarea>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div id="additional-requirements" class="content hidden">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+        <!-- Additional Requirements Tab -->
+        <div id="additional-requirements" class="tab-content hidden">
             <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری</h3>
-                <p>در ظروف دربسته نگهداری شود.</p>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">برچسب‌گذاری</h3>
-                <p>برچسب نشان می‌دهد که آیا مونوهیدرات یا هپتاهیدرات است. برچسب هرگونه آماده‌سازی خوراکی یا تزریقی حاوی سولفات روی باید محتوای روی عنصری را ذکر کند.</p>
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته بندی و نگهداری</h3>
+                <p class="mb-4">در ظروف دربسته نگهداری شود.</p>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">برچسب گذاری</h3>
+                <p class="mb-4">برچسب باید نشان دهد که آیا مونوهیدرات است یا هپتاهیدرات. برچسب هرگونه داروی خوراکی یا تزریقی حاوی سولفات روی باید محتوای روی عنصری را بیان کند.</p>
             </div>
         </div>
 
-        <script>
-            function showTab(tabId) {
-                const tabs = document.querySelectorAll('.tab-button');
-                const contents = document.querySelectorAll('.content');
+    </div>
 
-                tabs.forEach(tab => {
-                    tab.classList.remove('tab-active');
-                    tab.classList.add('tab-inactive');
-                });
+    <script>
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.add('tab-inactive', 'border-transparent'));
+                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('tab-active'));
 
-                contents.forEach(content => {
+                button.classList.remove('tab-inactive', 'border-transparent');
+                button.classList.add('tab-active');
+
+                const tabId = button.getAttribute('data-tab');
+                document.querySelectorAll('.tab-content').forEach(content => {
                     content.classList.add('hidden');
                 });
-
                 document.getElementById(tabId).classList.remove('hidden');
-                document.querySelector(`.tab-button[onclick="showTab('${tabId}')"]`).classList.add('tab-active');
-                document.querySelector(`.tab-button[onclick="showTab('${tabId}')"]`).classList.remove('tab-inactive');
+            });
+        });
+
+        function calculateAssay() {
+            const v = parseFloat(document.getElementById('assay-v').value);
+            const m = parseFloat(document.getElementById('assay-m').value);
+            const w = parseFloat(document.getElementById('assay-w').value);
+
+            const resultSpan = document.getElementById('assay-result');
+            const statusSpan = document.getElementById('assay-status');
+
+            if (isNaN(v) || isNaN(m) || isNaN(w) || w === 0) {
+                resultSpan.textContent = 'لطفاً مقادیر معتبر وارد کنید.';
+                resultSpan.className = 'result-span';
+                statusSpan.textContent = '';
+                return;
             }
 
-            // Initialize with the first tab active
-            document.addEventListener('DOMContentLoaded', () => {
-                document.querySelector('.tab-button.tab-active').click();
-            });
-        </script>
-    </div>
+            const assayZnSO4 = (v * m * 8.072 * 100) / w; // Each mL of 0.05 M edetate disodium is equivalent to 8.072 mg of zinc sulfate (ZnSO4)
+
+            let percentageZnSO4 = assayZnSO4;
+            let percentageZnSO4_monohydrate = (assayZnSO4 / 161.44) * 183.47; // Molecular weight of ZnSO4 * H2O is 179.45.
+            let percentageZnSO4_heptahydrate = (assayZnSO4 / 161.44) * 287.54; // Molecular weight of ZnSO4 * 7H2O is 287.54.
+
+            let resultText = `نتیجه (ZnSO4): <span class="ltr-text">${assayZnSO4.toFixed(2)}%</span><br>`;
+
+            // Determine hydrate and check limits
+            let status = '';
+            let monographType = '';
+
+            if (percentageZnSO4 >= 89.0 && percentageZnSO4 <= 90.4) {
+                monographType = 'monohydrate';
+                resultText += `نتیجه (ZnSO4 · H2O): <span class="ltr-text">${percentageZnSO4_monohydrate.toFixed(2)}%</span><br>`;
+                if (percentageZnSO4_monohydrate >= 99.0 && percentageZnSO4_monohydrate <= 100.5) {
+                    status = 'Pass';
+                } else {
+                    status = 'Fail';
+                }
+            } else if (percentageZnSO4 >= 55.6 && percentageZnSO4 <= 61.0) {
+                monographType = 'heptahydrate';
+                resultText += `نتیجه (ZnSO4 · 7H2O): <span class="ltr-text">${percentageZnSO4_heptahydrate.toFixed(2)}%</span><br>`;
+                 if (percentageZnSO4_heptahydrate >= 99.0 && percentageZnSO4_heptahydrate <= 108.7) {
+                    status = 'Pass';
+                } else {
+                    status = 'Fail';
+                }
+            } else {
+                monographType = 'unknown';
+                status = 'Fail';
+                resultText += `نتیجه (ZnSO4) خارج از محدوده مونوهیدرات و هپتاهیدرات است.<br>`;
+            }
+
+            resultSpan.innerHTML = resultText;
+
+            if (status === 'Pass') {
+                statusSpan.textContent = 'وضعیت: Pass';
+                statusSpan.className = 'result-span pass-text';
+            } else {
+                statusSpan.textContent = 'وضعیت: Fail';
+                statusSpan.className = 'result-span fail-text';
+            }
+        }
+
+        function calculateAlkalies() {
+            const residue = parseFloat(document.getElementById('alkalies-residue').value);
+            const sample = parseFloat(document.getElementById('alkalies-sample').value);
+
+            const resultSpan = document.getElementById('alkalies-result');
+            const statusSpan = document.getElementById('alkalies-status');
+
+            if (isNaN(residue) || isNaN(sample) || sample === 0) {
+                resultSpan.textContent = 'لطفاً مقادیر معتبر وارد کنید.';
+                resultSpan.className = 'result-span';
+                statusSpan.textContent = '';
+                return;
+            }
+
+            const percentage = (residue / (sample * 1000)) * 100; // sample is in g, residue is in mg
+
+            let resultText = `نتیجه: <span class="ltr-text">${percentage.toFixed(3)}%</span><br>`;
+            let status = '';
+
+            if (percentage <= 0.9) {
+                status = 'Pass';
+            } else {
+                status = 'Fail';
+            }
+
+            resultSpan.innerHTML = resultText;
+
+            if (status === 'Pass') {
+                statusSpan.textContent = 'وضعیت: Pass';
+                statusSpan.className = 'result-span pass-text';
+            } else {
+                statusSpan.textContent = 'وضعیت: Fail';
+                statusSpan.className = 'result-span fail-text';
+            }
+        }
+    </script>
 </body>
 </html>

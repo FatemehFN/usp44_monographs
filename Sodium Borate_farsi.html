@@ -61,6 +61,12 @@
             margin-bottom: 1rem;
             direction: ltr;
         }
+        .pass-text {
+            color: #22c55e;
+        }
+        .fail-text {
+            color: #ef4444;
+        }
         .interactive-card {
             background-color: #e0f2fe;
             border: 1px solid #90cdf4;
@@ -68,89 +74,183 @@
             margin-top: 1rem;
             border-radius: 0.5rem;
         }
+        .calculation-button {
+            background-color: #2563eb;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+        .additional-spec-input {
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            border: 1px solid #d1d5db;
+            border-radius: 0.375rem;
+            width: 100%;
+            padding: 0.5rem 0.75rem;
+            margin-top: 0.5rem;
+        }
+        .status-dropdown {
+             box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+             border: 1px solid #d1d5db;
+             background-color: white;
+             border-radius: 0.375rem;
+             padding: 0.5rem 0.75rem;
+             width: 12rem; /* 192px */
+        }
+        .input-field {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+            shadow: appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2;
+            width: 16rem; /* 256px */
+            border-color: #d1d5db;
+        }
     </style>
 </head>
 <body>
     <div class="container mx-auto p-4 max-w-4xl">
-        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">بورات سدیم</h1>
+
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">مونوگراف بورات سدیم (USP)</h1>
 
         <div class="flex justify-center mb-6 border-b border-gray-200">
-            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab('definition')">تعریف</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('identification')">شناسایی</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('assay')">سنجش</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('impurities')">ناخالصی‌ها</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('special-tests')">آزمایشات خاص</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('additional-requirements')">الزامات اضافی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab(event, 'definition')">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'identification')">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'assay')">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'impurities')">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'specificTests')">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'additionalRequirements')">الزامات اضافی</button>
         </div>
 
-        <div id="definition" class="tab-content card">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
-            <p>بورات سدیم حاوی مقداری <span class="ltr-text">Na₂B₄O₇</span> معادل با حداقل 99.0% و حداکثر 105.0% <span class="ltr-text">Na₂B₄O₇ · 10H₂O</span> است.</p>
+        <!-- Definition Tab -->
+        <div id="definition" class="tab-content">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+                <p class="mb-4">بورات سدیم حاوی مقداری Na2B4O7 معادل با حداقل 99.0% و حداکثر 105.0% Na2B4O7 · 10H2O است.</p>
+            </div>
         </div>
 
-        <div id="identification" class="tab-content hidden card">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+        <!-- Identification Tab -->
+        <div id="identification" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایش‌های شناسایی - عمومی</h3>
 
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایش‌های شناسایی - عمومی</h3>
-
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آ. آزمایش‌های شناسایی - عمومی، سدیم</h4>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">الف. سدیم</h4>
                 <p>محلول نمونه: 1 در 20</p>
-                <p>معیارهای پذیرش: مطابق با الزامات</p>
-            </div>
+                <p>معیارهای پذیرش: الزامات را برآورده می‌کند.</p>
 
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ب. آزمایش‌های شناسایی - عمومی، بورات</h4>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ب. بورات</h4>
                 <p>محلول نمونه: 1 در 20</p>
-                <p>معیارهای پذیرش: مطابق با الزامات</p>
+                <p>معیارهای پذیرش: الزامات را برآورده می‌کند.</p>
             </div>
         </div>
 
-        <div id="assay" class="tab-content hidden card">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+        <!-- Assay Tab -->
+        <div id="assay" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
 
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش</h4>
-            <p>نمونه: 3 گرم بورات سدیم</p>
-            <p>سیستم تیتراسیون</p>
-            <p>(به تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید.)</p>
-            <p>حالت: تیتراسیون مستقیم</p>
-            <p>تیترانت: محلول اسید هیدروکلریک 0.5 نرمال VS</p>
-            <p>شستشو: 50 میلی‌لیتر آب</p>
-            <p>تشخیص نقطه پایانی: بصری</p>
-            <p>تحلیل: نمونه را در 50 میلی‌لیتر آب حل کنید، متیل رد TS را اضافه کرده و با محلول اسید هیدروکلریک 0.5 نرمال VS تیتر کنید.</p>
-            <p>[نکته — ممکن است برای حل شدن اولیه نیاز به گرم کردن روی حمام بخار باشد.]</p>
-            <p>درصد بورات سدیم (<span class="ltr-text">Na₂B₄O₇ · 10H₂O</span>) در نمونه گرفته شده را محاسبه کنید:</p>
-            <div class="formula-display">
-                $$ \text{Result} = \frac{[(V - B) \times N \times F] \times 100}{W} $$
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">روش کار</h3>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه</h4>
+                <p>3 گرم بورات سدیم</p>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم تیترسنجی</h4>
+                <p>(تیتراسیون مراجعه کنید <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a>.)</p>
+                <p>حالت: تیترسنجی مستقیم</p>
+                <p>تیترانت: محلول استاندارد اسید هیدروکلریک 0.5 N</p>
+                <p>شاهد: 50 میلی‌لیتر آب</p>
+                <p>تشخیص نقطه پایانی: بصری</p>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل</h4>
+                <p>نمونه را در 50 میلی‌لیتر آب حل کنید، متیل رد TS را اضافه کنید و با محلول استاندارد اسید هیدروکلریک 0.5 N تیتر کنید.</p>
+                <p>[نکته - ممکن است گرم کردن روی حمام بخار برای حل شدن اولیه لازم باشد.]</p>
+
+                <p>درصد بورات سدیم (Na2B4O7 · 10H2O) را در نمونه گرفته شده محاسبه کنید:</p>
+                <div class="formula-display">
+                    $$Result = \frac{(V - B) \times N \times F}{W} \times 100$$
+                </div>
+                <p>V = حجم تیترانت مصرفی توسط نمونه (mL)</p>
+                <p>B = حجم تیترانت مصرفی توسط شاهد (mL)</p>
+                <p>N = نرمالیته واقعی تیترانت (mEq/mL)</p>
+                <p>F = ضریب هم‌ارزی، <span class="ltr-text">190.7 mg/mEq</span></p>
+                <p>W = وزن نمونه (mg)</p>
+
+                <div class="interactive-card card">
+                    <h3 class="text-lg font-semibold text-gray-700 mb-3">ماشین حساب سنجش</h3>
+                    <div class="mb-3">
+                        <label for="assay-V" class="block text-sm font-medium text-gray-700">حجم تیترانت مصرفی توسط نمونه (V) (mL):</label>
+                        <input type="text" id="assay-V" name="assay-V" class="input-field">
+                    </div>
+                    <div class="mb-3">
+                        <label for="assay-B" class="block text-sm font-medium text-gray-700">حجم تیترانت مصرفی توسط شاهد (B) (mL):</label>
+                        <input type="text" id="assay-B" name="assay-B" class="input-field">
+                    </div>
+                    <div class="mb-3">
+                        <label for="assay-N" class="block text-sm font-medium text-gray-700">نرمالیته واقعی تیترانت (N) (mEq/mL):</label>
+                        <input type="text" id="assay-N" name="assay-N" class="input-field">
+                    </div>
+                    <div class="mb-3">
+                        <label for="assay-W" class="block text-sm font-medium text-gray-700">وزن نمونه (W) (mg):</label>
+                        <input type="text" id="assay-W" name="assay-W" class="input-field">
+                    </div>
+                    <button class="calculation-button" onclick="calculateAssay()">محاسبه</button>
+                    <div class="mt-4">
+                        <p>نتیجه: <span id="assay-result" class="font-bold"></span></p>
+                        <p>وضعیت: <span id="assay-status" class="font-bold"></span></p>
+                    </div>
+                    <div class="mt-4">
+                        <label for="assay-additional" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="assay-additional" name="assay-additional" class="additional-spec-input"></textarea>
+                    </div>
+                </div>
+
+                <p>معیارهای پذیرش: 99.0%–105.0%</p>
             </div>
-            <p><span class="ltr-text">V</span> = حجم تیترانت مصرفی توسط نمونه (میلی‌لیتر)</p>
-            <p><span class="ltr-text">B</span> = حجم تیترانت مصرفی توسط شستشو (میلی‌لیتر)</p>
-            <p><span class="ltr-text">N</span> = نرمالیته واقعی تیترانت (mEq/mL)</p>
-            <p><span class="ltr-text">F</span> = ضریب هم‌ارزی، 190.7 میلی‌گرم بر mEq</p>
-            <p><span class="ltr-text">W</span> = وزن نمونه (میلی‌گرم)</p>
-            <p>معیارهای پذیرش: 99.0%–105.0%</p>
         </div>
 
-        <div id="impurities" class="tab-content hidden card">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+        <!-- Impurities Tab -->
+        <div id="impurities" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
 
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">کربنات و بیکربنات</h3>
-            <div class="card interactive-card">
-                <p>محلول نمونه: به 5 میلی‌لیتر از یک محلول (1 در 20)، که در یک لوله آزمایش حاوی 1 میلی‌لیتر اسید هیدروکلریک 3 نرمال است، اضافه کنید.</p>
-                <p>معیارهای پذیرش: هیچ کف‌سازی مشاهده نمی‌شود.</p>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">کربنات و بیکربنات</h3>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه</h4>
+                <p>به 5 میلی‌لیتر از محلول (1 در 20) که در یک لوله آزمایش قرار دارد، 1 میلی‌لیتر اسید هیدروکلریک 3 N اضافه کنید.</p>
+                <p>معیارهای پذیرش: هیچ‌گونه جوشش مشاهده نمی‌شود.</p>
+
+                <div class="interactive-card card">
+                    <h3 class="text-lg font-semibold text-gray-700 mb-3">وضعیت کربنات و بیکربنات</h3>
+                    <div class="mb-3">
+                        <label for="carbonate-status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
+                        <select id="carbonate-status" name="carbonate-status" class="status-dropdown">
+                            <option value=""></option>
+                            <option value="Pass">قبول</option>
+                            <option value="Fail">رد</option>
+                        </select>
+                    </div>
+                    <div class="mt-4">
+                        <label for="carbonate-additional" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="carbonate-additional" name="carbonate-additional" class="additional-spec-input"></textarea>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div id="special-tests" class="tab-content hidden card">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
-            <p>این بخش شامل آزمون های شناسایی عمومی است که در بخش شناسایی ذکر شده است.</p>
+        <!-- Specific Tests Tab -->
+        <div id="specificTests" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+                <!-- Placeholder for specific tests, if any are defined in a more complex scenario -->
+            </div>
         </div>
 
-        <div id="additional-requirements" class="tab-content hidden card">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
-
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری</h3>
-            <div class="card interactive-card">
+        <!-- Additional Requirements Tab -->
+        <div id="additionalRequirements" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری</h3>
                 <p>در ظروف دربسته نگهداری شود.</p>
             </div>
         </div>
@@ -158,27 +258,54 @@
     </div>
 
     <script>
-        function showTab(tabId) {
-            const tabContents = document.querySelectorAll('.tab-content');
-            tabContents.forEach(content => {
-                content.classList.add('hidden');
-            });
+        function showTab(event, tabId) {
+            // Hide all tab content
+            var tabContents = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.add("hidden");
+            }
 
-            const tabButtons = document.querySelectorAll('.tab-button');
-            tabButtons.forEach(button => {
-                button.classList.remove('tab-active');
-                button.classList.add('tab-inactive');
-            });
+            // Remove 'tab-active' from all buttons
+            var tabButtons = document.getElementsByClassName("tab-button");
+            for (var i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("tab-active");
+                tabButtons[i].classList.add("tab-inactive");
+            }
 
-            document.getElementById(tabId).classList.remove('hidden');
-            document.querySelector(`button[onclick="showTab('${tabId}')"]`).classList.remove('tab-inactive');
-            document.querySelector(`button[onclick="showTab('${tabId}')"]`).classList.add('tab-active');
+            // Show the current tab content
+            document.getElementById(tabId).classList.remove("hidden");
+
+            // Add 'tab-active' to the clicked button
+            event.currentTarget.classList.remove("tab-inactive");
+            event.currentTarget.classList.add("tab-active");
         }
 
-        // Show the first tab by default
-        document.addEventListener('DOMContentLoaded', () => {
-            showTab('definition');
-        });
+        function calculateAssay() {
+            const V = parseFloat(document.getElementById('assay-V').value);
+            const B = parseFloat(document.getElementById('assay-B').value);
+            const N = parseFloat(document.getElementById('assay-N').value);
+            const W = parseFloat(document.getElementById('assay-W').value);
+            const F = 190.7; // mg/mEq
+
+            const resultSpan = document.getElementById('assay-result');
+            const statusSpan = document.getElementById('assay-status');
+
+            if (!isNaN(V) && !isNaN(B) && !isNaN(N) && !isNaN(W) && W !== 0) {
+                const result = ((V - B) * N * F) / W * 100;
+                resultSpan.textContent = `${result.toFixed(2)}%`;
+
+                if (result >= 99.0 && result <= 105.0) {
+                    statusSpan.textContent = "قبول";
+                    statusSpan.className = "font-bold pass-text";
+                } else {
+                    statusSpan.textContent = "رد";
+                    statusSpan.className = "font-bold fail-text";
+                }
+            } else {
+                resultSpan.textContent = "لطفاً مقادیر معتبر را وارد کنید.";
+                statusSpan.textContent = "";
+            }
+        }
     </script>
 </body>
 </html>

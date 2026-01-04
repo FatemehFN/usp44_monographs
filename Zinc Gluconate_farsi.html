@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مونوگراف گلوکونات روی (USP)</title>
+    <title>مونوگراف زینک گلوکونات (USP)</title>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script type="text/javascript" async
@@ -61,6 +61,12 @@
             margin-bottom: 1rem;
             direction: ltr;
         }
+        .pass-text {
+            color: #22c55e;
+        }
+        .fail-text {
+            color: #ef4444;
+        }
         .interactive-card {
             background-color: #e0f2fe;
             border: 1px solid #90cdf4;
@@ -68,230 +74,484 @@
             margin-top: 1rem;
             border-radius: 0.5rem;
         }
+        .calculation-button {
+            background-color: #2563eb;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+        .additional-spec-input {
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .status-dropdown {
+            border-color: #d1d5db;
+        }
+        .input-field-style {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+            shadow: appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2;
+            width: 16rem;
+            background-color: #fff;
+            border-color: #d1d5db;
+        }
     </style>
 </head>
 <body>
     <div class="container mx-auto p-4 max-w-4xl">
 
-        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">گلوکونات روی</h1>
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">مونوگراف زینک گلوکونات (USP)</h1>
 
         <div class="flex justify-center mb-6 border-b border-gray-200">
-            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab(event, 'definition')">تعریف</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'identification')">شناسایی</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'assay')">سنجش</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'impurities')">ناخالصی‌ها</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'specific_tests')">آزمایشات خاص</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'additional_requirements')">الزامات اضافی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="openTab(event, 'definition')">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'identification')">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'assay')">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'impurities')">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'specific-tests')">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'additional-requirements')">الزامات اضافی</button>
         </div>
 
+        <!-- Definition Tab -->
         <div id="definition" class="tab-content">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
             <div class="card">
-                <p>گلوکونات روی حاوی نه کمتر از 97.0% و نه بیشتر از 102.0% گلوکونات روی (<span class="ltr-text">C12H22O14Zn</span>)، با محاسبه بر اساس پایه انیدروس، می‌باشد.</p>
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+                <p class="mb-2">زینک گلوکونات حاوی 97.0% تا 102.0% زینک گلوکونات (<span class="ltr-text">C12H22O14Zn</span>) محاسبه شده بر اساس پایه انیدروس است.</p>
             </div>
         </div>
 
-        <div id="identification" class="tab-content hidden">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
-
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">الف. آزمون‌های شناسایی – عمومی، روی <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a></h4>
-                <p>محلول 100 میلی‌گرم در میلی‌لیتر الزامات را برآورده می‌کند.</p>
-            </div>
-
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ب. کروماتوگرافی لایه نازک</h4>
-                <p><strong>محلول استاندارد:</strong> 10 میلی‌گرم در میلی‌لیتر از USP Potassium Gluconate RS</p>
-                <p><strong>محلول نمونه:</strong> 10 میلی‌گرم در میلی‌لیتر گلوکونات روی، در صورت لزوم با حرارت دادن در حمام آب در دمای 60 درجه سانتی‌گراد برای حل شدن.</p>
-                <p><strong>سیستم کروماتوگرافی</strong></p>
-                <p>(به کروماتوگرافی <a href="General chapters/621.html" class="text-blue-600 hover:underline" target="_blank">621</a>، کروماتوگرافی لایه نازک مراجعه کنید.)</p>
-                <p><strong>حالت:</strong> TLC</p>
-                <p><strong>جاذب:</strong> لایه 0.25 میلی‌متری از ژل سیلیکای کروماتوگرافی</p>
-                <p><strong>حجم اعمال:</strong> 5 µL</p>
-                <p><strong>سیستم حلال توسعه:</strong> الکل، اتیل استات، آمونیوم هیدروکسید و آب (50:10:10:30)</p>
-                <p><strong>معرف اسپری:</strong> 2.5 گرم مولیبدات آمونیوم را در 50 میلی‌لیتر اسید سولفوریک 2 نرمال در یک فلاسک حجمی 100 میلی‌لیتری حل کنید، 1.0 گرم سولفات سری اضافه کنید، هم بزنید تا حل شود، و با اسید سولفوریک 2 نرمال تا حجم برسانید.</p>
-                <p><strong>تجزیه و تحلیل</strong></p>
-                <p><strong>نمونه‌ها:</strong> محلول استاندارد و محلول نمونه</p>
-                <p>کروماتوگرام را تا زمانی که لبه حلال حدود سه چهارم طول صفحه حرکت کند، توسعه دهید. صفحه را از محفظه خارج کرده و در دمای 110 درجه سانتی‌گراد به مدت 20 دقیقه خشک کنید. اجازه دهید خنک شود و با معرف اسپری اسپری کنید. صفحه را در دمای 110 درجه سانتی‌گراد به مدت حدود 10 دقیقه حرارت دهید.</p>
-                <p><strong>معیارهای پذیرش:</strong> نقطه اصلی محلول نمونه از نظر رنگ، اندازه و مقدار RF با محلول استاندارد مطابقت دارد.</p>
-            </div>
-        </div>
-
-        <div id="assay" class="tab-content hidden">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش</h4>
-                <p><strong>نمونه:</strong> 700 میلی‌گرم گلوکونات روی</p>
-                <p><strong>شاهد:</strong> 100 میلی‌لیتر آب</p>
-                <p><strong>سیستم تیتراسیون</strong></p>
-                <p>(به تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید.)</p>
-                <p><strong>حالت:</strong> تیتراسیون مستقیم</p>
-                <p><strong>تیترانت:</strong> 0.05 مولار ادتات دی‌سدیم VS</p>
-                <p><strong>شناسایی نقطه پایانی:</strong> بصری</p>
-                <p><strong>تجزیه و تحلیل:</strong> نمونه را در 100 میلی‌لیتر آب حل کنید. 5 میلی‌لیتر بافر آمونیاک-کلرید آمونیوم TS و 0.1 میلی‌لیتر اریوکروم سیاه TS اضافه کنید. تا زمانی که محلول به رنگ آبی تیره درآید، با تیتترانت تیتر کنید. تعیین شاهد را انجام دهید.</p>
-                <p>درصد گلوکونات روی (<span class="ltr-text">C12H22O14Zn</span>) را در نمونه گرفته شده محاسبه کنید:</p>
-                <div class="formula-display">
-                    $$ \text{Result} = \frac{[(V_S - V_B) \times M \times F]}{W} \times 100 $$
-                </div>
-                <p><span class="ltr-text">V<sub>S</sub></span> = حجم تیتترانت مصرفی توسط نمونه (mL)</p>
-                <p><span class="ltr-text">V<sub>B</sub></span> = حجم تیتترانت مصرفی توسط شاهد (mL)</p>
-                <p><span class="ltr-text">M</span> = مولاریته تیتترانت (mmol/mL)</p>
-                <p><span class="ltr-text">F</span> = ضریب معادل، 455.7 mg/mmol</p>
-                <p><span class="ltr-text">W</span> = وزن نمونه (mg)</p>
-                <p><strong>معیارهای پذیرش:</strong> 97.0%–102.0% بر اساس پایه انیدروس</p>
-            </div>
-        </div>
-
-        <div id="impurities" class="tab-content hidden">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
-
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کلرید و سولفات، کلرید <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a></h4>
-                <p><strong>محلول استاندارد:</strong> 0.7 میلی‌لیتر اسید هیدروکلریک 0.020 نرمال</p>
-                <p><strong>نمونه:</strong> 1.0 گرم</p>
-                <p><strong>معیارهای پذیرش:</strong> NMT 0.05%</p>
-            </div>
-
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کلرید و سولفات، سولفات <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a></h4>
-                <p><strong>محلول استاندارد:</strong> 1.0 میلی‌لیتر اسید سولفوریک 0.020 نرمال</p>
-                <p><strong>نمونه:</strong> 2.0 گرم</p>
-                <p><strong>معیارهای پذیرش:</strong> NMT 0.05%</p>
-            </div>
-
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آرسنیک، روش I <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a></h4>
-                <p><strong>آماده‌سازی تست:</strong> 1 گرم در 35 میلی‌لیتر آب</p>
-                <p><strong>معیارهای پذیرش:</strong> NMT 3 ppm</p>
-            </div>
-
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محدودیت سرب</h4>
-                <p>[<strong>توجه</strong>—برای آماده‌سازی تمام محلول‌های آبی و برای شستشوی ظروف شیشه‌ای قبل از استفاده، از آبی استفاده کنید که از یک رزین تبادل یونی مخلوط اسید قوی، باز قوی عبور کرده است. تمام معرف‌ها را با کمترین میزان سرب ممکن انتخاب کنید و تمام محلول‌های معرف را در ظروف شیشه‌ای بوروسیلیکات نگهداری کنید. ظروف شیشه‌ای را قبل از استفاده با غوطه‌ور کردن در اسید نیتریک 8 نرمال گرم به مدت 30 دقیقه و سپس شستشو با آب دیونیزه تمیز کنید.]</p>
-                <p><strong>محلول اسید اسکوربیک-سدیم یدید:</strong> 100 میلی‌گرم در میلی‌لیتر اسید اسکوربیک و 192.5 میلی‌گرم در میلی‌لیتر سدیم یدید.</p>
-                <p>[<strong>احتیاط</strong>—این محلول باعث تحریک می‌شود. از تماس با چشم، پوست و لباس خودداری کنید. اقدامات احتیاطی ویژه را در دفع قسمت‌های استفاده نشده محلول‌هایی که این معرف به آنها اضافه شده است، رعایت کنید.]</p>
-                <p><strong>محلول استاندارد:</strong> 5.0 میلی‌لیتر از محلول پایه نیترات سرب TS را به یک فلاسک حجمی 100 میلی‌لیتری منتقل کرده و با آب تا حجم برسانید. 2.0 میلی‌لیتر از محلول حاصل را به یک فلاسک حجمی 50 میلی‌لیتری منتقل کرده و 10 میلی‌لیتر اسید هیدروکلریک 9 نرمال و 10 میلی‌لیتر آب اضافه کنید. 20 میلی‌لیتر محلول اسید اسکوربیک-سدیم یدید و 5.0 میلی‌لیتر محلول تری‌اوکتیل‌فسفین اکسید اضافه کنید. به مدت 30 ثانیه تکان دهید و اجازه دهید جدا شود. برای رساندن لایه حلال آلی به گردن فلاسک، آب اضافه کنید، دوباره تکان دهید و اجازه دهید جدا شود. لایه آلی محلول استاندارد است و حاوی 2 میکروگرم در میلی‌لیتر سرب می‌باشد.</p>
-                <p><strong>محلول نمونه:</strong> به یک فلاسک حجمی 50 میلی‌لیتری، 1.0 گرم گلوکونات روی، 10 میلی‌لیتر اسید هیدروکلریک 9 نرمال، 10 میلی‌لیتر آب، 20 میلی‌لیتر محلول اسید اسکوربیک-سدیم یدید و 5.0 میلی‌لیتر محلول تری‌اوکتیل‌فسفین اکسید اضافه کنید. به مدت 30 ثانیه تکان دهید و اجازه دهید جدا شود. برای رساندن لایه حلال آلی به گردن فلاسک، آب اضافه کنید، دوباره تکان دهید و اجازه دهید جدا شود. لایه آلی محلول نمونه است.</p>
-                <p><strong>شاهد:</strong> به یک فلاسک حجمی 50 میلی‌لیتری، 10 میلی‌لیتر اسید هیدروکلریک 9 نرمال، 10 میلی‌لیتر آب، 20 میلی‌لیتر محلول اسید اسکوربیک-سدیم یدید و 5.0 میلی‌لیتر محلول تری‌اوکتیل‌فسفین اکسید اضافه کنید. به مدت 30 ثانیه تکان دهید و اجازه دهید جدا شود. برای رساندن لایه حلال آلی به گردن فلاسک، آب اضافه کنید، دوباره تکان دهید و اجازه دهید جدا شود. لایه آلی شاهد است و حاوی 0 میکروگرم در میلی‌لیتر سرب می‌باشد.</p>
-                <p><strong>شرایط دستگاهی</strong></p>
-                <p>(به طیف‌سنجی جذب اتمی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید.)</p>
-                <p><strong>حالت:</strong> طیف‌سنجی جذب اتمی</p>
-                <p><strong>طول موج آنالیتیکی:</strong> 283.3 nm</p>
-                <p><strong>لامپ:</strong> کاتد توخالی سرب</p>
-                <p><strong>شعله:</strong> هوا-استیلن</p>
-                <p><strong>سیستم انطباق‌پذیری</strong></p>
-                <p><strong>نمونه‌ها:</strong> محلول استاندارد و شاهد</p>
-                <p><strong>الزامات انطباق‌پذیری:</strong> جذب محلول استاندارد و جذب شاهد به طور قابل توجهی متفاوت است.</p>
-                <p><strong>تجزیه و تحلیل</strong></p>
-                <p><strong>نمونه‌ها:</strong> محلول استاندارد، محلول نمونه و شاهد</p>
-                <p>به طور همزمان جذب شاهد، محلول استاندارد و محلول نمونه را تعیین کنید. از شاهد برای صفر کردن دستگاه استفاده کنید.</p>
-                <p><strong>معیارهای پذیرش:</strong> NMT 10 ppm: جذب محلول نمونه از جذب محلول استاندارد تجاوز نمی‌کند.</p>
-            </div>
-
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محدودیت کادمیوم</h4>
-                <p><strong>محلول استاندارد پایه:</strong> 0.1372 میلی‌گرم در میلی‌لیتر نیترات کادمیوم</p>
-                <p><strong>محلول استاندارد:</strong> 25 میلی‌لیتر از محلول استاندارد پایه را به یک فلاسک حجمی 100 میلی‌لیتری پیپت کرده، 1 میلی‌لیتر اسید هیدروکلریک اضافه کنید، با آب تا حجم برسانید و مخلوط کنید. حاوی 12.5 میکروگرم در میلی‌لیتر کادمیوم (Cd) است.</p>
-                <p><strong>محلول نمونه پایه:</strong> 10.0 گرم گلوکونات روی را به یک فلاسک حجمی 50 میلی‌لیتری منتقل کرده و در آب حل کرده و با آب تا حجم برسانید.</p>
-                <p><strong>محلول نمونه A:</strong> 5.0 میلی‌لیتر از محلول نمونه پایه را به یک فلاسک حجمی 25 میلی‌لیتری منتقل کرده و با آب تا حجم برسانید. این محلول حاوی 0 میکروگرم در میلی‌لیتر کادمیوم اضافه شده از محلول استاندارد است.</p>
-                <p><strong>محلول نمونه B:</strong> 5.0 میلی‌لیتر از محلول نمونه پایه را به یک فلاسک حجمی 25 میلی‌لیتری منتقل کرده، 2.0 میلی‌لیتر از محلول استاندارد اضافه کرده و با آب تا حجم برسانید. این محلول حاوی 1.0 میکروگرم در میلی‌لیتر کادمیوم اضافه شده از محلول استاندارد است.</p>
-                <p><strong>محلول نمونه C:</strong> 5.0 میلی‌لیتر از محلول نمونه پایه را به یک فلاسک حجمی 25 میلی‌لیتری منتقل کرده، 4.0 میلی‌لیتر از محلول استاندارد اضافه کرده و با آب تا حجم برسانید. این محلول حاوی 2.0 میکروگرم در میلی‌لیتر کادمیوم اضافه شده از محلول استاندارد است.</p>
-                <p><strong>شاهد:</strong> آب</p>
-                <p><strong>شرایط دستگاهی</strong></p>
-                <p>(به طیف‌سنجی جذب اتمی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید.)</p>
-                <p><strong>حالت:</strong> طیف‌سنجی جذب اتمی</p>
-                <p><strong>طول موج آنالیتیکی:</strong> 228.8 nm</p>
-                <p><strong>لامپ:</strong> کاتد توخالی کادمیوم</p>
-                <p><strong>شعله:</strong> هوا-استیلن</p>
-                <p><strong>تجزیه و تحلیل</strong></p>
-                <p><strong>نمونه‌ها:</strong> محلول نمونه A، محلول نمونه B و محلول نمونه C</p>
-                <p>جذب‌ها را تعیین کنید. مقادیر جذب محلول نمونه A، محلول نمونه B و محلول نمونه C را از جذب شاهد تصحیح کنید. جذب‌های تصحیح شده محلول نمونه A، محلول نمونه B و محلول نمونه C را بر حسب غلظت کادمیوم اضافه شده، بر حسب میکروگرم در میلی‌لیتر، رسم کنید. خط راستی را که بهترین برازش را با سه نقطه دارد، رسم کنید و خط را تا زمانی که محور غلظت را قطع کند، برون‌یابی کنید. از نقطه تلاقی، مقدار کادمیوم را بر حسب میکروگرم در میلی‌لیتر در محلول نمونه A تعیین کنید.</p>
-                <p>محتوای کادمیوم را در قسمت گلوکونات روی گرفته شده محاسبه کنید:</p>
-                <div class="formula-display">
-                    $$ \text{Result} = (C \times V)/W $$
-                </div>
-                <p><span class="ltr-text">C</span> = غلظت کادمیوم در محلول نمونه A (µg/mL)، تعیین شده از نقطه تلاقی خط رگرسیون خطی</p>
-                <p><span class="ltr-text">V</span> = حجم حلال گرفته شده برای آماده‌سازی محلول نمونه A (mL)</p>
-                <p><span class="ltr-text">W</span> = وزن گلوکونات روی گرفته شده برای آماده‌سازی محلول نمونه A (g)</p>
-                <p><strong>معیارهای پذیرش:</strong> NMT 5 ppm</p>
-            </div>
-
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مواد احیا کننده</h4>
-                <p><strong>نمونه:</strong> 1.0 گرم گلوکونات روی</p>
-                <p><strong>شاهد:</strong> 10 میلی‌لیتر آب</p>
-                <p><strong>سیستم تیتراسیون</strong></p>
-                <p>(به تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید.)</p>
-                <p><strong>حالت:</strong> تیتراسیون باقی‌مانده</p>
-                <p><strong>تیترانت:</strong> 0.1 نرمال ید VS</p>
-                <p><strong>تیترانت پشتیبان:</strong> 0.1 نرمال سدیم تیوسولفات VS</p>
-                <p><strong>شناسایی نقطه پایانی:</strong> بصری</p>
-                <p><strong>تجزیه و تحلیل:</strong> نمونه را در یک فلاسک مخروطی 250 میلی‌لیتری بریزید، در 10 میلی‌لیتر آب حل کنید و 25 میلی‌لیتر قلیایی سیترات مس TS اضافه کنید. فلاسک را بپوشانید، به آرامی به مدت 5 دقیقه بجوشانید، زمان‌بندی دقیق انجام دهید و به سرعت تا دمای اتاق خنک کنید. 25 میلی‌لیتر اسید استیک 0.6 نرمال، 10.0 میلی‌لیتر تیترانت و 10 میلی‌لیتر اسید هیدروکلریک 3 نرمال اضافه کنید و با تیترانت پشتیبان تیتر کنید و 3 میلی‌لیتر نشاسته TS را در هنگام نزدیک شدن به نقطه پایانی اضافه کنید. تعیین شاهد را انجام دهید.</p>
-                <p>درصد مواد احیا کننده (به عنوان دکستروز) را در نمونه گرفته شده محاسبه کنید:</p>
-                <div class="formula-display">
-                    $$ \text{Result} = \frac{[(V_B - V_S) \times N \times F]}{W} \times 100 $$
-                </div>
-                <p><span class="ltr-text">V<sub>B</sub></span> = حجم تیترانت پشتیبان مصرفی توسط شاهد (mL)</p>
-                <p><span class="ltr-text">V<sub>S</sub></span> = حجم تیترانت پشتیبان مصرفی توسط نمونه (mL)</p>
-                <p><span class="ltr-text">N</span> = نرمالیته تیترانت پشتیبان (mEq/mL)</p>
-                <p><span class="ltr-text">F</span> = ضریب معادل، 27 mg/mEq</p>
-                <p><span class="ltr-text">W</span> = وزن نمونه (mg)</p>
-                <p><strong>معیارهای پذیرش:</strong> NMT 1.0%</p>
-            </div>
-        </div>
-
-        <div id="specific_tests" class="tab-content hidden">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
-
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a></h4>
-                <p><strong>محلول نمونه:</strong> 10 میلی‌گرم در میلی‌لیتر</p>
-                <p><strong>معیارهای پذیرش:</strong> 5.5–7.5</p>
-            </div>
-
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تعیین آب، روش Ib <a href="General chapters/921.html" class="text-blue-600 hover:underline" target="_blank">921</a></h4>
-                <p>NMT 11.6%</p>
-            </div>
-        </div>
-
-        <div id="additional_requirements" class="tab-content hidden">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+        <!-- Identification Tab -->
+        <div id="identification" class="tab-content" style="display:none;">
             <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری</h3>
-                <p>در ظروف دربسته خوب نگهداری شود.</p>
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">الف. آزمون‌های شناسایی - عمومی، روی (Zinc) <span class="ltr-text">á191ñ</span></h3>
+                <p class="mb-2">محلولی با غلظت 100 میلی‌گرم در میلی‌لیتر، الزامات را برآورده می‌کند.</p>
+
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">ب. کروماتوگرافی لایه نازک (TLC)</h3>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم کروماتوگرافی</h4>
+                <p class="mb-2">(به کروماتوگرافی <span class="ltr-text">á621ñ</span>، کروماتوگرافی لایه نازک مراجعه کنید.)</p>
+                <ul class="list-disc list-inside mb-2">
+                    <li>حالت: TLC</li>
+                    <li>جاذب: لایه 0.25 میلی‌متری ژل سیلیکا کروماتوگرافی</li>
+                    <li>حجم تزریق: 5 µL</li>
+                    <li>سیستم حلال توسعه: الکل، اتیل استات، آمونیوم هیدروکسید و آب (50:10:10:30)</li>
+                    <li>معرف اسپری: 2.5 گرم آمونیوم مولیبدات را در 50 میلی‌لیتر اسید سولفوریک 2 نرمال در یک فلاسک حجمی 100 میلی‌لیتری حل کنید، 1.0 گرم سریوم سولفات اضافه کنید، بچرخانید تا حل شود و با اسید سولفوریک 2 نرمال تا حجم برسانید.</li>
+                </ul>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
+                <ul class="list-disc list-inside mb-2">
+                    <li>نمونه‌ها: محلول استاندارد و محلول نمونه</li>
+                    <li>کروماتوگرام را توسعه دهید تا زمانی که جبهه حلال حدود سه چهارم طول صفحه حرکت کند.</li>
+                    <li>صفحه را از محفظه خارج کرده و در دمای 110 درجه سانتی‌گراد به مدت 20 دقیقه خشک کنید.</li>
+                    <li>اجازه دهید خنک شود و با معرف اسپری اسپری کنید.</li>
+                    <li>صفحه را در دمای 110 درجه سانتی‌گراد به مدت حدود 10 دقیقه حرارت دهید.</li>
+                </ul>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
+                <p class="mb-2">لکه اصلی محلول نمونه از نظر رنگ، اندازه و مقدار RF با لکه محلول استاندارد مطابقت دارد.</p>
+
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">محلول استاندارد</h3>
+                <p class="mb-2">10 میلی‌گرم در میلی‌لیتر از USP Potassium Gluconate RS</p>
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">محلول نمونه</h3>
+                <p class="mb-2">10 میلی‌گرم در میلی‌لیتر زینک گلوکونات، در صورت لزوم با حرارت دادن در حمام آب در دمای 60 درجه سانتی‌گراد برای حل شدن</p>
             </div>
+        </div>
+
+        <!-- Assay Tab -->
+        <div id="assay" class="tab-content" style="display:none;">
             <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h3>
-                <p>USP Potassium Gluconate RS</p>
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">روش کار</h3>
+                <div class="interactive-card card">
+                    <p class="mb-2">نمونه: 700 میلی‌گرم زینک گلوکونات</p>
+                    <p class="mb-2">شستشو: 100 میلی‌لیتر آب</p>
+
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم تیتراسیون</h4>
+                    <p class="mb-2">(به تیتراسیون <span class="ltr-text">á541ñ</span> مراجعه کنید.)</p>
+                    <ul class="list-disc list-inside mb-2">
+                        <li>حالت: تیتراسیون مستقیم</li>
+                        <li>تیترانت: 0.05 مولار ادتات دی‌سدیم VS</li>
+                        <li>تشخیص نقطه پایانی: بصری</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
+                    <p class="mb-2">نمونه را در 100 میلی‌لیتر آب حل کنید. 5 میلی‌لیتر بافر آمونیاک-آمونیم کلراید TS و 0.1 میلی‌لیتر اریکروم سیاه TS اضافه کنید. با تیتترانت تیتر کنید تا محلول به رنگ آبی تیره درآید. یک تعیین شستشو انجام دهید.</p>
+
+                    <div class="formula-display">
+                        $$Result = \frac{[(V_S - V_B) \times M \times F]}{W} \times 100$$
+                    </div>
+
+                    <div id="assay-calculator">
+                        <div class="mb-4">
+                            <label for="assay_VS" class="block text-gray-700 text-sm font-bold mb-2">حجم تیترانت مصرفی توسط نمونه (VS - mL):</label>
+                            <input type="text" id="assay_VS" name="assay_VS" class="input-field-style">
+                        </div>
+                        <div class="mb-4">
+                            <label for="assay_VB" class="block text-gray-700 text-sm font-bold mb-2">حجم تیترانت مصرفی توسط شستشو (VB - mL):</label>
+                            <input type="text" id="assay_VB" name="assay_VB" class="input-field-style">
+                        </div>
+                        <div class="mb-4">
+                            <label for="assay_M" class="block text-gray-700 text-sm font-bold mb-2">غلظت مولار تیترانت (M - mmol/mL):</label>
+                            <input type="text" id="assay_M" name="assay_M" class="input-field-style" value="0.05">
+                        </div>
+                        <div class="mb-4">
+                            <label for="assay_W" class="block text-gray-700 text-sm font-bold mb-2">وزن نمونه (W - mg):</label>
+                            <input type="text" id="assay_W" name="assay_W" class="input-field-style">
+                        </div>
+                        <input type="hidden" id="assay_F" name="assay_F" value="455.7">
+
+                        <button class="calculation-button mb-4" onclick="calculateAssay()">محاسبه</button>
+                        <div id="assay-result" class="mt-2">
+                            <p>نتیجه: <span id="assay-percentage">--</span>%</p>
+                        </div>
+                        <div id="assay-status" class="mt-2"></div>
+                    </div>
+
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
+                    <p class="mb-2">97.0%–102.0% بر اساس پایه انیدروس</p>
+                </div>
+
+                <div class="mt-4">
+                    <label for="assay_additional_specs" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="assay_additional_specs" name="assay_additional_specs" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Impurities Tab -->
+        <div id="impurities" class="tab-content" style="display:none;">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">کلرید و سولفات، کلرید <span class="ltr-text">á221ñ</span></h3>
+                <div class="interactive-card card">
+                    <p>محلول استاندارد: 0.7 میلی‌لیتر اسید هیدروکلریک 0.020 نرمال</p>
+                    <p>نمونه: 1.0 گرم</p>
+                    <p>معیار پذیرش: حداکثر 0.05%</p>
+                    <div class="mt-4">
+                        <label for="chloride_status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
+                        <select id="chloride_status" name="chloride_status" class="status-dropdown shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                            <option value=""></option>
+                            <option value="Pass">Pass</option>
+                            <option value="Fail">Fail</option>
+                        </select>
+                    </div>
+                    <div class="mt-4">
+                        <label for="chloride_additional_specs" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="chloride_additional_specs" name="chloride_additional_specs" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">کلرید و سولفات، سولفات <span class="ltr-text">á221ñ</span></h3>
+                <div class="interactive-card card">
+                    <p>محلول استاندارد: 1.0 میلی‌لیتر اسید سولفوریک 0.020 نرمال</p>
+                    <p>نمونه: 2.0 گرم</p>
+                    <p>معیار پذیرش: حداکثر 0.05%</p>
+                    <div class="mt-4">
+                        <label for="sulfate_status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
+                        <select id="sulfate_status" name="sulfate_status" class="status-dropdown shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                            <option value=""></option>
+                            <option value="Pass">Pass</option>
+                            <option value="Fail">Fail</option>
+                        </select>
+                    </div>
+                    <div class="mt-4">
+                        <label for="sulfate_additional_specs" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="sulfate_additional_specs" name="sulfate_additional_specs" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">آرسنیک، روش I <span class="ltr-text">á211ñ</span></h3>
+                <div class="interactive-card card">
+                    <p>آماده‌سازی تست: 1 گرم در 35 میلی‌لیتر آب</p>
+                    <p>معیار پذیرش: حداکثر 3 ppm</p>
+                    <div class="mt-4">
+                        <label for="arsenic_status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
+                        <select id="arsenic_status" name="arsenic_status" class="status-dropdown shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                            <option value=""></option>
+                            <option value="Pass">Pass</option>
+                            <option value="Fail">Fail</option>
+                        </select>
+                    </div>
+                    <div class="mt-4">
+                        <label for="arsenic_additional_specs" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="arsenic_additional_specs" name="arsenic_additional_specs" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">محدودیت سرب (LIMIT OF LEAD)</h3>
+                <div class="interactive-card card">
+                    <p>[نکته - برای آماده‌سازی تمامی محلول‌های آبی و شستشوی ظروف شیشه‌ای قبل از استفاده، از آبی استفاده کنید که از یک رزین تبادل یونی مخلوط اسید قوی، باز قوی عبور داده شده است. تمامی معرف‌ها را طوری انتخاب کنید که کمترین میزان سرب ممکن را داشته باشند و تمامی محلول‌های معرف را در ظروف شیشه‌ای بوروسیلیکات نگهداری کنید. ظروف شیشه‌ای را قبل از استفاده با خیساندن در محلول اسید نیتریک 8 نرمال گرم به مدت 30 دقیقه و شستشو با آب دیونیزه تمیز کنید.]</p>
+                    <p>محلول اسید اسکوربیک-سدیم یدید: 100 میلی‌گرم در میلی‌لیتر اسید اسکوربیک و 192.5 میلی‌گرم در میلی‌لیتر سدیم یدید</p>
+                    <p>محلول تری‌اکتیل‌فسفین اکسید: 50 میلی‌گرم در میلی‌لیتر تری‌اکتیل‌فسفین اکسید در 4-متیل-2-پنتانون.</p>
+                    <p>[احتیاط - این محلول باعث تحریک می‌شود. از تماس با چشم، پوست و لباس خودداری کنید. در دفع قسمت‌های استفاده نشده از محلول‌هایی که این معرف به آن‌ها اضافه شده است، اقدامات احتیاطی ویژه‌ای را انجام دهید.]</p>
+                    <p>محلول استاندارد: 5.0 میلی‌لیتر از محلول استوک نیترات سرب TS را به یک فلاسک حجمی 100 میلی‌لیتری منتقل کرده و با آب تا حجم برسانید. 2.0 میلی‌لیتر از محلول حاصل را به یک فلاسک حجمی 50 میلی‌لیتری منتقل کرده و 10 میلی‌لیتر اسید هیدروکلریک 9 نرمال و 10 میلی‌لیتر آب اضافه کنید. 20 میلی‌لیتر محلول اسید اسکوربیک-سدیم یدید و 5.0 میلی‌لیتر محلول تری‌اکتیل‌فسفین اکسید اضافه کنید. به مدت 30 ثانیه تکان دهید و اجازه دهید جدا شود. آب اضافه کنید تا لایه حلال آلی وارد گردن فلاسک شود، دوباره تکان دهید و اجازه دهید جدا شود. لایه آلی محلول استاندارد است و حاوی 2 میکروگرم در میلی‌لیتر سرب است.</p>
+                    <p>محلول نمونه: به یک فلاسک حجمی 50 میلی‌لیتری، 1.0 گرم زینک گلوکونات، 10 میلی‌لیتر اسید هیدروکلریک 9 نرمال، 10 میلی‌لیتر آب، 20 میلی‌لیتر محلول اسید اسکوربیک-سدیم یدید و 5.0 میلی‌لیتر محلول تری‌اکتیل‌فسفین اکسید اضافه کنید. به مدت 30 ثانیه تکان دهید و اجازه دهید جدا شود. آب اضافه کنید تا لایه حلال آلی وارد گردن فلاسک شود، دوباره تکان دهید و اجازه دهید جدا شود. لایه آلی محلول نمونه است.</p>
+                    <p>شستشو: به یک فلاسک حجمی 50 میلی‌لیتری، 10 میلی‌لیتر اسید هیدروکلریک 9 نرمال، 10 میلی‌لیتر آب، 20 میلی‌لیتر محلول اسید اسکوربیک-سدیم یدید و 5.0 میلی‌لیتر محلول تری‌اکتیل‌فسفین اکسید اضافه کنید. به مدت 30 ثانیه تکان دهید و اجازه دهید جدا شود. آب اضافه کنید تا لایه حلال آلی وارد گردن فلاسک شود، دوباره تکان دهید و اجازه دهید جدا شود. لایه آلی شستشو است و حاوی 0 میکروگرم در میلی‌لیتر سرب است.</p>
+
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط ابزار دقیق</h4>
+                    <p class="mb-2">(به طیف‌سنجی جذب اتمی <span class="ltr-text">á852ñ</span> مراجعه کنید.)</p>
+                    <ul class="list-disc list-inside mb-2">
+                        <li>حالت: طیف‌سنجی جذب اتمی</li>
+                        <li>طول موج تحلیلی: 283.3 نانومتر</li>
+                        <li>لامپ: کاتد توخالی سرب</li>
+                        <li>شعله: هوا-استیلن</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مناسبت سیستم</h4>
+                    <p class="mb-2">نمونه‌ها: محلول استاندارد و شستشو</p>
+                    <p class="mb-2">شرایط مناسبت: جذب محلول استاندارد و جذب شستشو به طور قابل توجهی متفاوت است.</p>
+
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
+                    <p class="mb-2">نمونه‌ها: محلول استاندارد، محلول نمونه و شستشو</p>
+                    <p class="mb-2">به طور همزمان جذب شستشو، محلول استاندارد و محلول نمونه را تعیین کنید. از شستشو برای تنظیم صفر دستگاه استفاده کنید.</p>
+                    <p class="mb-2">معیار پذیرش: حداکثر 10 ppm: جذب محلول نمونه از جذب محلول استاندارد تجاوز نمی‌کند.</p>
+                    <div class="mt-4">
+                        <label for="lead_status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
+                        <select id="lead_status" name="lead_status" class="status-dropdown shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                            <option value=""></option>
+                            <option value="Pass">Pass</option>
+                            <option value="Fail">Fail</option>
+                        </select>
+                    </div>
+                    <div class="mt-4">
+                        <label for="lead_additional_specs" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="lead_additional_specs" name="lead_additional_specs" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">محدودیت کادمیم (LIMIT OF CADMIUM)</h3>
+                <div class="interactive-card card">
+                    <p>محلول استوک استاندارد: 0.1372 میلی‌گرم در میلی‌لیتر نیترات کادمیم</p>
+                    <p>محلول استاندارد: 25 میلی‌لیتر از محلول استوک استاندارد را به یک فلاسک حجمی 100 میلی‌لیتری منتقل کنید، 1 میلی‌لیتر اسید هیدروکلریک اضافه کنید، با آب تا حجم برسانید و مخلوط کنید. حاوی 12.5 میکروگرم در میلی‌لیتر کادمیم (Cd) است.</p>
+                    <p>محلول استوک نمونه: 10.0 گرم زینک گلوکونات را در یک فلاسک حجمی 50 میلی‌لیتری منتقل کرده و در آب حل و تا حجم برسانید.</p>
+                    <p>محلول نمونه A: 5.0 میلی‌لیتر از محلول استوک نمونه را به یک فلاسک حجمی 25 میلی‌لیتری منتقل کرده و با آب تا حجم برسانید. این محلول حاوی 0 میکروگرم در میلی‌لیتر کادمیم اضافه شده از محلول استاندارد است.</p>
+                    <p>محلول نمونه B: 5.0 میلی‌لیتر از محلول استوک نمونه را به یک فلاسک حجمی 25 میلی‌لیتری منتقل کرده، 2.0 میلی‌لیتر از محلول استاندارد اضافه کنید و با آب تا حجم برسانید. این محلول حاوی 1.0 میکروگرم در میلی‌لیتر کادمیم اضافه شده از محلول استاندارد است.</p>
+                    <p>محلول نمونه C: 5.0 میلی‌لیتر از محلول استوک نمونه را به یک فلاسک حجمی 25 میلی‌لیتری منتقل کرده، 4.0 میلی‌لیتر از محلول استاندارد اضافه کنید و با آب تا حجم برسانید. این محلول حاوی 2.0 میکروگرم در میلی‌لیتر کادمیم اضافه شده از محلول استاندارد است.</p>
+                    <p>شستشو: آب</p>
+
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط ابزار دقیق</h4>
+                    <p class="mb-2">(به طیف‌سنجی جذب اتمی <span class="ltr-text">á852ñ</span> مراجعه کنید.)</p>
+                    <ul class="list-disc list-inside mb-2">
+                        <li>حالت: طیف‌سنجی جذب اتمی</li>
+                        <li>طول موج تحلیلی: 228.8 نانومتر</li>
+                        <li>لامپ: کاتد توخالی کادمیم</li>
+                        <li>شعله: هوا-استیلن</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
+                    <p class="mb-2">نمونه‌ها: محلول نمونه A، محلول نمونه B و محلول نمونه C</p>
+                    <p class="mb-2">جذب‌ها را تعیین کنید. مقادیر جذب محلول نمونه A، محلول نمونه B و محلول نمونه C را از جذب شستشو تصحیح کنید. جذب‌های تصحیح شده محلول نمونه A، محلول نمونه B و محلول نمونه C را در برابر غلظت‌های کادمیم اضافه شده، بر حسب میکروگرم در میلی‌لیتر، ترسیم کنید. خط مستقیمی را که به بهترین وجه سه نقطه را برازش می‌دهد، رسم کنید و خط را تا جایی که محور غلظت را قطع کند، برون‌یابی کنید. از نقطه تقاطع، مقدار کادمیم را بر حسب میکروگرم در میلی‌لیتر در محلول نمونه A تعیین کنید.</p>
+                    <div class="formula-display">
+                        $$Result = \frac{(C \times V)}{W}$$
+                    </div>
+                    <p class="mb-2">C = غلظت کادمیم در محلول نمونه A (µg/mL)، تعیین شده از نقطه تقاطع خط رگرسیون خطی</p>
+                    <p class="mb-2">V = حجم حلال گرفته شده برای تهیه محلول نمونه A (mL)</p>
+                    <p class="mb-2">W = وزن زینک گلوکونات گرفته شده برای تهیه محلول نمونه A (g)</p>
+                    <p class="mb-2">معیار پذیرش: حداکثر 5 ppm</p>
+                    <div class="mt-4">
+                        <label for="cadmium_status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
+                        <select id="cadmium_status" name="cadmium_status" class="status-dropdown shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                            <option value=""></option>
+                            <option value="Pass">Pass</option>
+                            <option value="Fail">Fail</option>
+                        </select>
+                    </div>
+                    <div class="mt-4">
+                        <label for="cadmium_additional_specs" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="cadmium_additional_specs" name="cadmium_additional_specs" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">مواد کاهنده (REDUCING SUBSTANCES)</h3>
+                <div class="interactive-card card">
+                    <p>نمونه: 1.0 گرم زینک گلوکونات</p>
+                    <p>شستشو: 10 میلی‌لیتر آب</p>
+
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم تیتراسیون</h4>
+                    <p class="mb-2">(به تیتراسیون <span class="ltr-text">á541ñ</span> مراجعه کنید.)</p>
+                    <ul class="list-disc list-inside mb-2">
+                        <li>حالت: تیتراسیون باقیمانده</li>
+                        <li>تیترانت: 0.1 نرمال ید VS</li>
+                        <li>تیترانت پشتیبان: 0.1 نرمال سدیم تیوسولفات VS</li>
+                        <li>تشخیص نقطه پایانی: بصری</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
+                    <p class="mb-2">نمونه را به یک فلاسک مخروطی 250 میلی‌لیتری منتقل کنید، در 10 میلی‌لیتر آب حل کرده و 25 میلی‌لیتر قلیایی مس سیترات TS اضافه کنید. فلاسک را بپوشانید، به آرامی به مدت 5 دقیقه، با زمان‌بندی دقیق، بجوشانید و به سرعت به دمای اتاق خنک کنید. 25 میلی‌لیتر اسید استیک 0.6 نرمال، 10.0 میلی‌لیتر تیترانت و 10 میلی‌لیتر اسید هیدروکلریک 3 نرمال اضافه کنید و با تیترانت پشتیبان تیتر کنید و 3 میلی‌لیتر نشاسته TS را هنگام نزدیک شدن به نقطه پایانی اضافه کنید. تعیین شستشو را انجام دهید.</p>
+
+                    <div class="formula-display">
+                        $$Result = \frac{[(V_B - V_S) \times N \times F]}{W} \times 100$$
+                    </div>
+                    <p class="mb-2">VB = حجم تیترانت پشتیبان مصرفی توسط شستشو (mL)</p>
+                    <p class="mb-2">VS = حجم تیترانت پشتیبان مصرفی توسط نمونه (mL)</p>
+                    <p class="mb-2">N = نرمالیته تیترانت پشتیبان (mEq/mL)</p>
+                    <p class="mb-2">F = ضریب هم‌ارزی، 27 mg/mEq</p>
+                    <p class="mb-2">W = وزن نمونه (mg)</p>
+
+                    <div id="reducing-substances-calculator">
+                        <div class="mb-4">
+                            <label for="reducing_VB" class="block text-gray-700 text-sm font-bold mb-2">حجم تیترانت پشتیبان مصرفی توسط شستشو (VB - mL):</label>
+                            <input type="text" id="reducing_VB" name="reducing_VB" class="input-field-style">
+                        </div>
+                        <div class="mb-4">
+                            <label for="reducing_VS" class="block text-gray-700 text-sm font-bold mb-2">حجم تیترانت پشتیبان مصرفی توسط نمونه (VS - mL):</label>
+                            <input type="text" id="reducing_VS" name="reducing_VS" class="input-field-style">
+                        </div>
+                        <div class="mb-4">
+                            <label for="reducing_N" class="block text-gray-700 text-sm font-bold mb-2">نرمالیته تیترانت پشتیبان (N - mEq/mL):</label>
+                            <input type="text" id="reducing_N" name="reducing_N" class="input-field-style" value="0.1">
+                        </div>
+                        <div class="mb-4">
+                            <label for="reducing_W" class="block text-gray-700 text-sm font-bold mb-2">وزن نمونه (W - mg):</label>
+                            <input type="text" id="reducing_W" name="reducing_W" class="input-field-style">
+                        </div>
+                        <input type="hidden" id="reducing_F" name="reducing_F" value="27">
+
+                        <button class="calculation-button mb-4" onclick="calculateReducingSubstances()">محاسبه</button>
+                        <div id="reducing-substances-result" class="mt-2">
+                            <p>نتیجه: <span id="reducing-substances-percentage">--</span>%</p>
+                        </div>
+                        <div id="reducing-substances-status" class="mt-2"></div>
+                    </div>
+
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیار پذیرش</h4>
+                    <p class="mb-2">حداکثر 1.0%</p>
+                    <div class="mt-4">
+                        <label for="reducing_additional_specs" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="reducing_additional_specs" name="reducing_additional_specs" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Specific Tests Tab -->
+        <div id="specific-tests" class="tab-content" style="display:none;">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">PH <span class="ltr-text">á791ñ</span></h3>
+                <div class="interactive-card card">
+                    <p>محلول نمونه: 10 میلی‌گرم در میلی‌لیتر</p>
+                    <p>معیار پذیرش: 5.5–7.5</p>
+                    <div class="mt-4">
+                        <label for="ph_status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
+                        <select id="ph_status" name="ph_status" class="status-dropdown shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                            <option value=""></option>
+                            <option value="Pass">Pass</option>
+                            <option value="Fail">Fail</option>
+                        </select>
+                    </div>
+                    <div class="mt-4">
+                        <label for="ph_additional_specs" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="ph_additional_specs" name="ph_additional_specs" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">تعیین آب، روش Ib <span class="ltr-text">á921ñ</span></h3>
+                <div class="interactive-card card">
+                    <p>معیار پذیرش: حداکثر 11.6%</p>
+                    <div class="mt-4">
+                        <label for="water_status" class="block text-gray-700 text-sm font-bold mb-2">وضعیت:</label>
+                        <select id="water_status" name="water_status" class="status-dropdown shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
+                            <option value=""></option>
+                            <option value="Pass">Pass</option>
+                            <option value="Fail">Fail</option>
+                        </select>
+                    </div>
+                    <div class="mt-4">
+                        <label for="water_additional_specs" class="block text-gray-700 text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="water_additional_specs" name="water_additional_specs" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Requirements Tab -->
+        <div id="additional-requirements" class="tab-content" style="display:none;">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">بسته‌بندی و نگهداری</h3>
+                <p class="mb-2">در ظروف خوب بسته نگهداری شود.</p>
+
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">استانداردهای مرجع USP <span class="ltr-text">á11ñ</span></h3>
+                <p class="mb-2">USP Potassium Gluconate RS</p>
             </div>
         </div>
 
     </div>
 
     <script>
-        function showTab(event, tabName) {
+        function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tab-content");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
-                tabcontent[i].classList.add("hidden");
             }
             tablinks = document.getElementsByClassName("tab-button");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" tab-active", "").replace(" tab-inactive", "");
-                tablinks[i].classList.add("tab-inactive");
+                tablinks[i].className += " tab-inactive";
             }
             document.getElementById(tabName).style.display = "block";
-            document.getElementById(tabName).classList.remove("hidden");
-            event.currentTarget.className = event.currentTarget.className.replace(" tab-inactive", "");
-            event.currentTarget.classList.add("tab-active");
+            evt.currentTarget.className = evt.currentTarget.className.replace(" tab-inactive", "");
+            evt.currentTarget.className += " tab-active";
         }
 
-        // Set the default tab to be 'definition'
-        document.addEventListener("DOMContentLoaded", function() {
-            document.querySelector('.tab-button[onclick*="definition"]').click();
-        });
+        function calculateAssay() {
+            const VS = parseFloat(document.getElementById("assay_VS").value);
+            const VB = parseFloat(document.getElementById("assay_VB").value);
+            const M = parseFloat(document.getElementById("assay_M").value);
+            const F = parseFloat(document.getElementById("assay_F").value);
+            const W = parseFloat(document.getElementById("assay_W").value);
+
+            const resultSpan = document.getElementById("assay-percentage");
+            const statusSpan = document.getElementById("assay-status");
+
+            if (isNaN(VS) || isNaN(VB) || isNaN(M) || isNaN(F) || isNaN(W) || W === 0) {
+                resultSpan.textContent = "--";
+                statusSpan.textContent = "";
+                return;
+            }
+
+            const result = ((VS - VB) * M * F) / W * 100;
+            resultSpan.textContent = result.toFixed(2);
+
+            if (result >= 97.0 && result <= 102.0) {
+                statusSpan.innerHTML = `<span class="pass-text">وضعیت: Pass</span>`;
+            } else {
+                statusSpan.innerHTML = `<span class="fail-text">وضعیت: Fail</span>`;
+            }
+        }
+
+        function calculateReducingSubstances() {
+            const VB = parseFloat(document.getElementById("reducing_VB").value);
+            const VS = parseFloat(document.getElementById("reducing_VS").value);
+            const N = parseFloat(document.getElementById("reducing_N").value);
+            const F = parseFloat(document.getElementById("reducing_F").value);
+            const W = parseFloat(document.getElementById("reducing_W").value);
+
+            const resultSpan = document.getElementById("reducing-substances-percentage");
+            const statusSpan = document.getElementById("reducing-substances-status");
+
+            if (isNaN(VB) || isNaN(VS) || isNaN(N) || isNaN(F) || isNaN(W) || W === 0) {
+                resultSpan.textContent = "--";
+                statusSpan.textContent = "";
+                return;
+            }
+
+            const result = ((VB - VS) * N * F) / W * 100;
+            resultSpan.textContent = result.toFixed(3);
+
+            if (result <= 1.0) {
+                statusSpan.innerHTML = `<span class="pass-text">وضعیت: Pass</span>`;
+            } else {
+                statusSpan.innerHTML = `<span class="fail-text">وضعیت: Fail</span>`;
+            }
+        }
     </script>
 </body>
 </html>

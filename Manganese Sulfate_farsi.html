@@ -6,9 +6,8 @@
     <title>مونوگراف سولفات منگنز (USP)</title>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="text/javascript" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -61,6 +60,12 @@
             margin-bottom: 1rem;
             direction: ltr;
         }
+        .pass-text {
+            color: #22c55e;
+        }
+        .fail-text {
+            color: #ef4444;
+        }
         .interactive-card {
             background-color: #e0f2fe;
             border: 1px solid #90cdf4;
@@ -68,135 +73,299 @@
             margin-top: 1rem;
             border-radius: 0.5rem;
         }
+        .calculation-button {
+            background-color: #2563eb;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+        .additional-spec-input {
+            shadow: none;
+            appearance: none;
+            border: 1px solid #d1d5db;
+            border-radius: 0.375rem;
+            width: 100%;
+            padding: 0.5rem 0.75rem;
+            color: #374151;
+            line-height: 1.5;
+            margin-top: 0.5rem;
+        }
+        .additional-spec-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px #3b82f6; /* Tailwind's focus ring color */
+        }
+        .status-dropdown {
+            shadow: none;
+            appearance: none;
+            border: 1px solid #d1d5db;
+            border-radius: 0.375rem;
+            width: 12rem; /* w-48 */
+            padding: 0.5rem 0.75rem;
+            color: #374151;
+            line-height: 1.5;
+            background-color: white;
+        }
+        .status-dropdown:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px #3b82f6; /* Tailwind's focus ring color */
+        }
+        .input-field {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+            shadow: none;
+            appearance: none;
+            border: 1px solid #d1d5db;
+            background-color: white;
+            border-radius: 0.375rem;
+            width: 16rem; /* w-64 */
+            padding: 0.5rem 0.75rem;
+            color: #374151;
+            line-height: 1.5;
+            margin-top: 0.5rem;
+        }
+        .input-field:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px #3b82f6; /* Tailwind's focus ring color */
+        }
     </style>
 </head>
 <body>
     <div class="container mx-auto p-4 max-w-4xl">
 
-        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">مونوگراف سولفات منگنز (USP)</h1>
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">سولفات منگنز انژکشن</h1>
 
         <div class="flex justify-center mb-6 border-b border-gray-200">
-            <button class="tab-button py-2 px-4 border-b-2 tab-active">تعریف</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive">شناسایی</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive">سنجش</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive">ناخالصی‌ها</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive">آزمایشات خاص</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive">الزامات اضافی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="openTab(event, 'definition')">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'identification')">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'assay')">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'impurities')">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'specific-tests')">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'additional-requirements')">الزامات اضافی</button>
         </div>
 
-        <div id="content-area">
-            <div class="tab-content active">
+        <div id="definition" class="tab-content">
+            <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
-                <div class="card">
-                    <p class="mb-3">▲حذف این مونوگراف به تعویق افتاده است. از تاریخ ۱ آگوست ۲۰۱۹، این مونوگراف متن رسمی USP باقی می‌ماند.▲ (RB 1-Aug-2019)</p>
-                    <p class="mb-3">"تزریق سولفات منگنز" محلولی استریل از سولفات منگنز در آب برای تزریق. این محلول حاوی نه دهم (۹۰.۰) درصد و نه بیشتر از صد و ده (۱۱۰.۰) درصد مقدار منگنز (Mn) مشخص شده است.</p>
-                </div>
+                <p class="mb-4">سولفات منگنز انژکشن یک محلول استریل از سولفات منگنز در آب برای تزریق است. این محلول حاوی نه دهم (90.0%) تا یک و یک دهم (110.0%) مقدار منگنز (Mn) ذکر شده در برچسب، است.</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">بسته‌بندی و نگهداری</h3>
-                <div class="card">
-                    <p>در ظروف تک دوز یا چند دوز، ترجیحاً از شیشه نوع I یا نوع II نگهداری شود.</p>
-                </div>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته بندی و نگهداری</h3>
+                <p class="mb-4">در ظروف تک دوز یا چند دوز، ترجیحاً از شیشه نوع I یا II نگهداری شود.</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">برچسب‌گذاری</h3>
-                <div class="card">
-                    <p>تزریق را طوری برچسب‌گذاری کنید که نشان دهد قبل از تجویز باید به قدرت مناسب با آب استریل برای تزریق یا مایع مناسب دیگر رقیق شود.</p>
-                </div>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">برچسب گذاری</h3>
+                <p class="mb-4">انژکشن را برچسب گذاری کنید تا نشان دهد که قبل از تجویز باید به غلظت مناسب با آب استریل برای تزریق یا مایع مناسب دیگر رقیق شود.</p>
             </div>
+        </div>
 
-            <div class="tab-content hidden">
+        <div id="identification" class="tab-content hidden">
+            <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
-                <div class="card">
-                    <p>آماده‌سازی سنجش، که طبق دستورالعمل در بخش سنجش تهیه شده است، حداکثر جذب را در حدود <span class="ltr-text">279 nm</span> در هنگام تست طبق دستورالعمل رویه در بخش سنجش نشان می‌دهد.</p>
-                </div>
+                <p class="mb-4">آماده سازی سنجش، که طبق دستورالعمل در سنجش آماده شده است، حداکثر جذب را در حدود <span class="ltr-text">279 nm</span> هنگام آزمایش طبق دستورالعمل رویه در سنجش، نشان می دهد.</p>
             </div>
+        </div>
 
-            <div class="tab-content hidden">
+        <div id="assay" class="tab-content hidden">
+            <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
-                <div class="card">
-                    <p class="mb-3">محلول سدیم کلرید، محلول پایه منگنز، و آماده‌سازی‌های استاندارد - همانطور که در بخش سنجش زیر "تزریق کلرید منگنز" آمده است، تهیه کنید.</p>
-                    <p class="mb-3">آماده‌سازی سنجش - حجم دقیقی از تزریق را که معادل حدود <span class="ltr-text">1 mg</span> منگنز است، به یک فلاسک حجمی <span class="ltr-text">100-mL</span> منتقل کنید، با آب تا حجم مورد نظر رقیق کرده و مخلوط کنید. <span class="ltr-text">10 mL</span> از این محلول را به یک فلاسک حجمی <span class="ltr-text">50-mL</span> پیپت کنید، با آب تا حجم مورد نظر رقیق کرده و مخلوط کنید.</p>
-                    <p>رویه‌ - طبق رویه در سنجش زیر "تزریق کلرید منگنز" عمل کنید.</p>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول سدیم کلراید، محلول سهام منگنز، و محلول های استاندارد</h4>
+                <p class="mb-4">طبق دستورالعمل در سنجش تحت سولفات منگنز انژکشن آماده کنید.</p>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آماده سازی سنجش</h4>
+                <p class="mb-4">یک حجم دقیقاً اندازه گیری شده از انژکشن، معادل حدود 1 میلی گرم منگنز را به یک فلاسک حجمی 100 میلی لیتری منتقل کنید، با آب تا حجم برسانید و مخلوط کنید. 10 میلی لیتر از این محلول را به یک فلاسک حجمی 50 میلی لیتری پیپت کنید، با آب تا حجم برسانید و مخلوط کنید.</p>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش</h4>
+                <p class="mb-4">طبق روش در سنجش تحت سولفات منگنز انژکشن عمل کنید.</p>
+
+                <div class="card interactive-card">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">سنجش منگنز</h3>
+                    <p class="mb-4">این بخش شامل محاسبات سنجش بر اساس مقادیر جذب است. در حال حاضر، هیچ فرمول محاسباتی صریحی در متن منبع برای این قسمت وجود ندارد که نیاز به ورودی کاربر داشته باشد. بنابراین، یک فیلد انتخاب وضعیت ارائه شده است.</p>
+
+                    <div class="mb-4">
+                        <label for="assay-status" class="block text-gray-700 font-bold mb-2">وضعیت:</label>
+                        <select id="assay-status" name="assay-status" class="status-dropdown">
+                            <option value=""></option>
+                            <option value="Pass">Pass</option>
+                            <option value="Fail">Fail</option>
+                        </select>
+                    </div>
+
+                    <label for="assay-additional-spec" class="block text-gray-700 font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="assay-additional-spec" name="assay-additional-spec" rows="3" class="additional-spec-input"></textarea>
                 </div>
             </div>
+        </div>
 
-            <div class="tab-content hidden">
+        <div id="impurities" class="tab-content hidden">
+            <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
-                <div class="card">
-                    <p>در حال حاضر اطلاعاتی در این بخش وجود ندارد.</p>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">باکتریال اندوتوکسین تست á85ñ</h3>
+                <p class="mb-4">حاوی بیش از <span class="ltr-text">0.45</span> واحد اندوتوکسین USP در هر میکروگرم منگنز نیست.</p>
+
+                <div class="card interactive-card">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">تست باکتریال اندوتوکسین</h3>
+                    <p class="mb-4">لطفاً مقادیر زیر را برای محاسبه نتیجه وارد کنید.</p>
+
+                    <div class="mb-4">
+                        <label for="endotoxin-ug-mn" class="block text-gray-700 font-bold mb-2">منگنز (µg)</label>
+                        <input type="text" id="endotoxin-ug-mn" name="endotoxin-ug-mn" class="input-field">
+                    </div>
+                    <div class="mb-4">
+                        <label for="endotoxin-limit" class="block text-gray-700 font-bold mb-2">حد مجاز (USP U/µg Mn)</label>
+                        <input type="text" id="endotoxin-limit" name="endotoxin-limit" value="0.45" class="input-field">
+                    </div>
+
+                    <button class="calculation-button" onclick="calculateEndotoxinLimit()">محاسبه</button>
+                    <div class="mt-4">
+                        <span class="font-bold">نتیجه:</span> <span id="endotoxin-result">--</span> USP U/µg Mn
+                        <br>
+                        <span class="font-bold">وضعیت:</span> <span id="endotoxin-status" class="font-bold">--</span>
+                    </div>
+                    <label for="endotoxin-additional-spec" class="block text-gray-700 font-bold mt-4 mb-2">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="endotoxin-additional-spec" name="endotoxin-additional-spec" rows="3" class="additional-spec-input"></textarea>
                 </div>
             </div>
+        </div>
 
-            <div class="tab-content hidden">
+        <div id="specific-tests" class="tab-content hidden">
+            <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
-                <div class="card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تست اندوتوکسین باکتریایی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a></h4>
-                    <div class="interactive-card card">
-                        <p>حاوی نه بیشتر از <span class="ltr-text">0.45</span> واحد اندوتوکسین USP در هر <span class="ltr-text">µg</span> منگنز است.</p>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">pH á791ñ</h3>
+                <p class="mb-4">بین <span class="ltr-text">2.0</span> و <span class="ltr-text">3.5</span>.</p>
+
+                <div class="card interactive-card">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">تست pH</h3>
+                    <p class="mb-4">لطفاً مقدار pH را وارد کنید.</p>
+                    <div class="mb-4">
+                        <label for="ph-value" class="block text-gray-700 font-bold mb-2">مقدار pH</label>
+                        <input type="text" id="ph-value" name="ph-value" class="input-field">
                     </div>
 
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a></h4>
-                    <div class="interactive-card card">
-                        <p>بین <span class="ltr-text">2.0</span> و <span class="ltr-text">3.5</span> است.</p>
+                    <button class="calculation-button" onclick="calculatePhLimit()">بررسی</button>
+                    <div class="mt-4">
+                        <span class="font-bold">وضعیت:</span> <span id="ph-status" class="font-bold">--</span>
                     </div>
+                    <label for="ph-additional-spec" class="block text-gray-700 font-bold mt-4 mb-2">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="ph-additional-spec" name="ph-additional-spec" rows="3" class="additional-spec-input"></textarea>
+                </div>
 
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ذرات معلق در تزریقات <a href="General chapters/788.html" class="text-blue-600 hover:underline" target="_blank">788</a></h4>
-                    <div class="interactive-card card">
-                        <p>الزامات مربوط به تزریقات حجمی کوچک را برآورده می‌کند.</p>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">ذرات معلق در انژکشن ها á788ñ</h3>
+                <p class="mb-4">الزامات مربوط به انژکشن های با حجم کم را برآورده می کند.</p>
+
+                <div class="card interactive-card">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">تست ذرات معلق</h3>
+                    <p class="mb-4">لطفاً نتایج تست ذرات معلق را وارد کنید.</p>
+                    <div class="mb-4">
+                        <label for="particulate-matter-status" class="block text-gray-700 font-bold mb-2">وضعیت:</label>
+                        <select id="particulate-matter-status" name="particulate-matter-status" class="status-dropdown">
+                            <option value=""></option>
+                            <option value="Pass">Pass</option>
+                            <option value="Fail">Fail</option>
+                        </select>
                     </div>
+                    <label for="particulate-matter-additional-spec" class="block text-gray-700 font-bold mt-4 mb-2">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="particulate-matter-additional-spec" name="particulate-matter-additional-spec" rows="3" class="additional-spec-input"></textarea>
                 </div>
             </div>
+        </div>
 
-            <div class="tab-content hidden">
+        <div id="additional-requirements" class="tab-content hidden">
+            <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
-                <div class="card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سایر الزامات</h4>
-                    <div class="interactive-card card">
-                        <p>الزامات تحت "تزریقات و محصولات دارویی قابل کاشت" <a href="General chapters/1.html" class="text-blue-600 hover:underline" target="_blank">1</a> را برآورده می‌کند.</p>
+                <p class="mb-4">این محلول الزامات تحت انژکشن ها و محصولات دارویی کاشته شده á1ñ را برآورده می کند.</p>
+
+                <div class="card interactive-card">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">الزامات عمومی</h3>
+                    <p class="mb-4">لطفاً وضعیت انطباق را مشخص کنید.</p>
+                    <div class="mb-4">
+                        <label for="general-requirements-status" class="block text-gray-700 font-bold mb-2">وضعیت:</label>
+                        <select id="general-requirements-status" name="general-requirements-status" class="status-dropdown">
+                            <option value=""></option>
+                            <option value="Pass">Pass</option>
+                            <option value="Fail">Fail</option>
+                        </select>
                     </div>
+                    <label for="general-requirements-additional-spec" class="block text-gray-700 font-bold mt-4 mb-2">توضیحات اضافه / Additional Specifications:</label>
+                    <textarea id="general-requirements-additional-spec" name="general-requirements-additional-spec" rows="3" class="additional-spec-input"></textarea>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const tabButtons = document.querySelectorAll('.tab-button');
-            const tabContents = document.querySelectorAll('.tab-content');
+        function openTab(event, tabName) {
+            var i, tabcontent, tabbuttons;
 
-            tabButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    // Remove active class from all buttons
-                    tabButtons.forEach(btn => btn.classList.add('tab-inactive', 'border-transparent'));
-                    tabButtons.forEach(btn => btn.classList.remove('tab-active', 'border-blue-500')); // Removed specific blue border class
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.add("hidden");
+            }
 
-                    // Add active class to the clicked button
-                    button.classList.add('tab-active');
-                    button.classList.remove('tab-inactive', 'border-transparent'); // Removed specific transparent class
+            tabbuttons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("tab-active");
+                tabbuttons[i].classList.add("tab-inactive");
+            }
 
-                    // Hide all tab content
-                    tabContents.forEach(content => content.classList.add('hidden'));
+            document.getElementById(tabName).classList.remove("hidden");
+            event.currentTarget.classList.remove("tab-inactive");
+            event.currentTarget.classList.add("tab-active");
+        }
 
-                    // Show the corresponding tab content
-                    const targetId = button.textContent.trim();
-                    let targetIndex = -1;
-                    switch(targetId) {
-                        case 'تعریف': targetIndex = 0; break;
-                        case 'شناسایی': targetIndex = 1; break;
-                        case 'سنجش': targetIndex = 2; break;
-                        case 'ناخالصی‌ها': targetIndex = 3; break;
-                        case 'آزمایشات خاص': targetIndex = 4; break;
-                        case 'الزامات اضافی': targetIndex = 5; break;
-                    }
+        function calculateEndotoxinLimit() {
+            const ugMn = parseFloat(document.getElementById('endotoxin-ug-mn').value);
+            const limit = parseFloat(document.getElementById('endotoxin-limit').value);
+            const resultSpan = document.getElementById('endotoxin-result');
+            const statusSpan = document.getElementById('endotoxin-status');
 
-                    if (targetIndex !== -1 && tabContents[targetIndex]) {
-                        tabContents[targetIndex].classList.remove('hidden');
-                    }
-                });
-            });
+            if (isNaN(ugMn)) {
+                resultSpan.textContent = "--";
+                statusSpan.textContent = "--";
+                statusSpan.className = "font-bold";
+                return;
+            }
 
-            // Activate the first tab by default
-            document.querySelector('.tab-button.tab-active').click();
-        });
+            const result = ugMn; // The test directly compares the measured value to the limit.
+            resultSpan.textContent = result.toFixed(2);
+
+            if (result <= limit) {
+                statusSpan.textContent = "Pass";
+                statusSpan.className = "font-bold pass-text";
+            } else {
+                statusSpan.textContent = "Fail";
+                statusSpan.className = "font-bold fail-text";
+            }
+        }
+
+        function calculatePhLimit() {
+            const phValue = parseFloat(document.getElementById('ph-value').value);
+            const statusSpan = document.getElementById('ph-status');
+
+            if (isNaN(phValue)) {
+                statusSpan.textContent = "--";
+                statusSpan.className = "font-bold";
+                return;
+            }
+
+            if (phValue >= 2.0 && phValue <= 3.5) {
+                statusSpan.textContent = "Pass";
+                statusSpan.className = "font-bold pass-text";
+            } else {
+                statusSpan.textContent = "Fail";
+                statusSpan.className = "font-bold fail-text";
+            }
+        }
+
+        // Add other calculation functions here as needed for other tabs.
+        // For now, other interactive elements only have dropdowns or are placeholders.
+
+        // Initialize the first tab to be visible
+        document.querySelector('.tab-button').click();
     </script>
 </body>
 </html>

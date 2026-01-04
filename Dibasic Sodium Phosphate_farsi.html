@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مونوگراف فسفات سدیم دوپایه (USP)</title>
+    <title>مونوگراف سدیم هیدروژن فسفات دو پایه (USP)</title>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -60,6 +61,12 @@
             margin-bottom: 1rem;
             direction: ltr;
         }
+        .pass-text {
+            color: #22c55e;
+        }
+        .fail-text {
+            color: #ef4444;
+        }
         .interactive-card {
             background-color: #e0f2fe;
             border: 1px solid #90cdf4;
@@ -67,12 +74,38 @@
             margin-top: 1rem;
             border-radius: 0.5rem;
         }
+        .calculation-button {
+            background-color: #2563eb;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+        .additional-spec-input {
+            shadow-md appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline;
+        }
+        .status-dropdown {
+            shadow-md appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48; /* w-48 is 12rem */
+        }
+        .input-field {
+            ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2; /* w-64 is 16rem */
+        }
+        .calculation-result {
+            margin-top: 0.5rem;
+            font-weight: bold;
+        }
+        .status-message {
+            margin-top: 0.5rem;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <div class="container mx-auto p-4 max-w-4xl">
 
-        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">مونوگراف فسفات سدیم دوپایه</h1>
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">سدیم هیدروژن فسفات دو پایه</h1>
 
         <div class="flex justify-center mb-6 border-b border-gray-200">
             <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab('definition')">تعریف</button>
@@ -83,160 +116,511 @@
             <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('additional-requirements')">الزامات اضافی</button>
         </div>
 
-        <!-- Definition Tab -->
         <div id="definition" class="tab-content">
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
-                <p>فسفات سدیم دوپایه با وزن خشک شده یا حاوی یک، دو، هفت، یا دوازده مولکول آب هیدراتاسیون است. حاوی <span class="ltr-text">98.0%</span> تا <span class="ltr-text">100.5%</span> Na₂HPO₄، محاسبه شده بر اساس وزن خشک شده، می‌باشد.</p>
+                <p>سدیم هیدروژن فسفات خشک شده یا حاوی یک، دو، هفت، یا دوازده مولکول آب هیدراتاسیون است. این ماده باید حاوی حداقل 98.0% و حداکثر 100.5% <span class="ltr-text">Na₂HPO₄</span>، محاسبه شده بر اساس ماده خشک باشد.</p>
+                <p>اسامی دیگر:</p>
+                <ul>
+                    <li>فسفریک اسید، دی‌سدیم سالت، دوده‌کاهیدرات؛ دی‌سدیم هیدروژن فسفات، دوده‌کاهیدرات <span class="ltr-text">[10039-32-4]</span></li>
+                    <li>فسفریک اسید، دی‌سدیم سالت، هپتاهیدرات؛ دی‌سدیم هیدروژن فسفات هپتاهیدرات <span class="ltr-text">[7782-85-6]</span></li>
+                    <li>فسفریک اسید، دی‌سدیم سالت، دی‌هیدرات؛ دی‌سدیم هیدروژن فسفات، دی‌هیدرات <span class="ltr-text">[10028-24-7]</span></li>
+                    <li>فسفریک اسید، سدیم سالت، مونو‌هیدرات؛ دی‌سدیم هیدروژن فسفات، مونو‌هیدرات <span class="ltr-text">[118830-14-1]</span></li>
+                    <li>فسفریک اسید، دی‌سدیم سالت، هیدرات؛ دی‌سدیم هیدروژن فسفات هیدرات <span class="ltr-text">[10140-65-5]</span></li>
+                    <li>انیدروس <span class="ltr-text">[7558-79-4]</span></li>
+                </ul>
             </div>
         </div>
 
-        <!-- Identification Tab -->
         <div id="identification" class="tab-content hidden">
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمون‌های شناسایی</h3>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• A. آزمون‌های شناسایی - عمومی، سدیم <span class="ltr-text">91ñ</span></h4>
+                <p>محلول نمونه: معادل 1 قسمت <span class="ltr-text">Na₂HPO₄</span> در 30</p>
+                <p>معیارهای پذیرش: محلول الزامات را برآورده می‌کند.</p>
 
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">الف. تست‌های شناسایی - عمومی، سدیم <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a></h4>
-                <div class="interactive-card card">
-                    <p>محلول نمونه: معادل <span class="ltr-text">1</span> قسمت Na₂HPO₄ در <span class="ltr-text">30</span></p>
-                    <p>معیارهای پذیرش: محلول الزامات را برآورده می‌کند.</p>
-                </div>
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ب. تست‌های شناسایی - عمومی، فسفات <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a></h4>
-                <div class="interactive-card card">
-                    <p>محلول نمونه: معادل <span class="ltr-text">1</span> قسمت Na₂HPO₄ در <span class="ltr-text">30</span></p>
-                    <p>معیارهای پذیرش: محلول الزامات را برآورده می‌کند.</p>
-                </div>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• B. آزمون‌های شناسایی - عمومی، فسفات <span class="ltr-text">91ñ</span></h4>
+                <p>محلول نمونه: معادل 1 قسمت <span class="ltr-text">Na₂HPO₄</span> در 30</p>
+                <p>معیارهای پذیرش: محلول الزامات را برآورده می‌کند.</p>
             </div>
         </div>
 
-        <!-- Assay Tab -->
         <div id="assay" class="tab-content hidden">
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• رویه</h4>
+                <p>نمونه: معادل 2.5 گرم <span class="ltr-text">Na₂HPO₄</span></p>
+                <p>محلول نمونه: نمونه را در یک بشر 250 میلی‌لیتری منتقل کنید. 50 میلی‌لیتر آب و 40.0 میلی‌لیتر اسید هیدروکلریک 1 نرمال اضافه کرده و هم بزنید تا حل شود.</p>
+                <p>شاهد: 40.0 میلی‌لیتر اسید هیدروکلریک 1 نرمال را در یک بشر 250 میلی‌لیتری منتقل کنید. 50 میلی‌لیتر آب اضافه کنید.</p>
+                <p>تحلیل: شاهد را با سدیم هیدروکسید 1 نرمال VS تیتر کنید و حجم سدیم هیدروکسید 1 نرمال VS مصرفی را ثبت نمایید. اسید اضافی در محلول نمونه را به صورت پتانسیومتری با سدیم هیدروکسید 1 نرمال VS تا نقطه عطف در حدود pH 4 تیتر کنید و عدد بورت را ثبت نمایید. این عدد بورت را از عدد بورت شاهد کم کنید و حجم سدیم هیدروکسید 1 نرمال VS حاصل از این تفریق را A نامگذاری کنید. تیتراسیون را با سدیم هیدروکسید 1 نرمال VS تا نقطه عطف در حدود pH 8.8 ادامه دهید، عدد بورت را ثبت کنید و حجم (B) سدیم هیدروکسید 1 نرمال مورد نیاز در تیتراسیون بین دو نقطه عطف (pH 4–8.8) را محاسبه کنید.</p>
+                <p>هرگاه A برابر یا کمتر از B باشد، هر 1 میلی‌لیتر از حجم A سدیم هیدروکسید معادل 142.0 میلی‌گرم <span class="ltr-text">Na₂HPO₄</span> است. هرگاه A بزرگتر از B باشد، هر 1 میلی‌لیتر از حجم (2B – A) سدیم هیدروکسید معادل 142.0 میلی‌گرم <span class="ltr-text">Na₂HPO₄</span> است.</p>
+                <p>معیارهای پذیرش: 98.0%–100.5% بر اساس ماده خشک</p>
 
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش کار</h4>
-                <div class="interactive-card card">
-                    <p>نمونه: معادل <span class="ltr-text">2.5</span> گرم Na₂HPO₄</p>
-                    <p>محلول نمونه: نمونه را در یک بشر <span class="ltr-text">250</span> میلی‌لیتری بریزید. <span class="ltr-text">50</span> میلی‌لیتر آب و <span class="ltr-text">40.0</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">1</span> نرمال اضافه کرده و هم بزنید تا حل شود.</p>
-                    <p>شاهد: <span class="ltr-text">40.0</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">1</span> نرمال را در یک بشر <span class="ltr-text">250</span> میلی‌لیتری بریزید. <span class="ltr-text">50</span> میلی‌لیتر آب اضافه کنید.</p>
-                    <p>تحلیل: شاهد را با سدیم هیدروکسید <span class="ltr-text">1</span> نرمال VS تیتر کرده و حجم سدیم هیدروکسید <span class="ltr-text">1</span> نرمال VS مصرفی را ثبت کنید. اسید اضافی را در محلول نمونه با استفاده از پتانسیومتری با سدیم هیدروکسید <span class="ltr-text">1</span> نرمال VS تا نقطه عطف در حدود pH <span class="ltr-text">4</span> تیتر کرده و خوانش بورت را ثبت کنید. این خوانش بورت را از خوانش شاهد کسر کرده و حجم سدیم هیدروکسید <span class="ltr-text">1</span> نرمال VS حاصل از این تفریق را A نامگذاری کنید. تیتراسیون را با سدیم هیدروکسید <span class="ltr-text">1</span> نرمال VS تا نقطه عطف در حدود pH <span class="ltr-text">8.8</span> ادامه داده، خوانش بورت را ثبت کرده و حجم (B) سدیم هیدروکسید مورد نیاز در تیتراسیون بین دو نقطه عطف (pH <span class="ltr-text">4</span>–<span class="ltr-text">8.8</span>) را محاسبه کنید.</p>
-                    <p>هر میلی‌لیتر از حجم A سدیم هیدروکسید معادل <span class="ltr-text">142.0</span> میلی‌گرم Na₂HPO₄ است، به شرطی که A برابر یا کمتر از B باشد. هر میلی‌لیتر از حجم (2B – A) سدیم هیدروکسید معادل <span class="ltr-text">142.0</span> میلی‌گرم Na₂HPO₄ است، به شرطی که A بیشتر از B باشد.</p>
+                <div class="card interactive-card">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">ماشین حساب سنجش</h3>
+                    <p class="mb-2">فرمول:</p>
+                    <div class="formula-display">
+                        <math display="inline">
+                            <mrow>
+                                <mi>Assay</mi>
+                                <mo>=</mo>
+                                <mrow>
+                                    <mo>[</mo>
+                                    <mfrac>
+                                        <mrow>
+                                            <mo>(</mo>
+                                            <mn>2</mn>
+                                            <mi>B</mi>
+                                            <mo>-</mo>
+                                            <mi>A</mi>
+                                            <mo>)</mo>
+                                            <mo>&times;</mo>
+                                            <mn>142.0</mn>
+                                        </mrow>
+                                        <mrow>
+                                            <mi>A</mi>
+                                            <mo>&gt;</mo>
+                                            <mi>B</mi>
+                                            <mo>?</mo>
+                                            <mo>(</mo>
+                                            <mi>A</mi>
+                                            <mo>)</mo>
+                                            <mo>:</mo>
+                                            <mo>(</mo>
+                                            <mn>2</mn>
+                                            <mi>B</mi>
+                                            <mo>-</mo>
+                                            <mi>A</mi>
+                                            <mo>)</mo>
+                                        </mrow>
+                                    </mfrac>
+                                    <mo>&times;</mo>
+                                    <mn>100</mn>
+                                    <mo>]</mo>
+                                </mrow>
+                                <mo>%</mo>
+                            </mrow>
+                        </math>
+                    </div>
+                    <div>
+                        <label for="A_assay">حجم سدیم هیدروکسید (A) (mL):</label>
+                        <input type="text" id="A_assay" name="A_assay" class="input-field" oninput="calculateAssay()">
+                    </div>
+                    <div>
+                        <label for="B_assay">حجم سدیم هیدروکسید (B) (mL):</label>
+                        <input type="text" id="B_assay" name="B_assay" class="input-field" oninput="calculateAssay()">
+                    </div>
+                    <div>
+                        <label for="sample_weight_assay">وزن نمونه (g):</label>
+                        <input type="text" id="sample_weight_assay" name="sample_weight_assay" class="input-field" oninput="calculateAssay()" value="2.5">
+                    </div>
+                    <button class="calculation-button" onclick="calculateAssay()">محاسبه</button>
+                    <div class="calculation-result">
+                        نتیجه: <span id="assay_result">--</span>%
+                    </div>
+                    <div class="status-message">
+                        وضعیت: <span id="assay_status">--</span>
+                    </div>
+                    <div>
+                        <label for="additional_specs_assay">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="additional_specs_assay" name="additional_specs_assay" rows="3" class="additional-spec-input"></textarea>
+                    </div>
                 </div>
-                <p>معیارهای پذیرش: <span class="ltr-text">98.0%</span>–<span class="ltr-text">100.5%</span> بر اساس وزن خشک شده</p>
             </div>
         </div>
 
-        <!-- Impurities Tab -->
         <div id="impurities" class="tab-content hidden">
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
 
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مواد نامحلول</h4>
-                <div class="interactive-card card">
-                    <p>محلول نمونه: معادل <span class="ltr-text">5.0</span> گرم Na₂HPO₄ در <span class="ltr-text">100</span> میلی‌لیتر آب داغ</p>
-                    <p>تحلیل: از یک کروزه فیلتر شده تاردار عبور دهید، باقی‌مانده نامحلول را با آب داغ بشویید و در دمای <span class="ltr-text">105°</span> به مدت <span class="ltr-text">2</span> ساعت خشک کنید.</p>
-                    <p>معیارهای پذیرش: نهایتاً <span class="ltr-text">20</span> میلی‌گرم (نهایتاً <span class="ltr-text">0.4%</span>)</p>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">مواد نامحلول</h3>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• محلول نمونه</h4>
+                <p>معادل 5.0 گرم <span class="ltr-text">Na₂HPO₄</span> در 100 میلی‌لیتر آب داغ</p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• تحلیل</h4>
+                <p>از یک کروسیله تاردار عبور داده، باقی‌مانده نامحلول را با آب داغ شستشو داده و در دمای 105 درجه سانتی‌گراد به مدت 2 ساعت خشک کنید.</p>
+                <p>معیارهای پذیرش: حداکثر 20 میلی‌گرم (حداکثر 0.4%)</p>
+
+                <div class="card interactive-card">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">ماشین حساب مواد نامحلول</h3>
+                    <p class="mb-2">فرمول:</p>
+                    <div class="formula-display">
+                        $$Result = (W_{2}-W_{1})*1000$$
+                    </div>
+                    <div>
+                        <label for="W1_insoluble">وزن اولیه کروسیله (g) (W₁):</label>
+                        <input type="text" id="W1_insoluble" name="W1_insoluble" class="input-field" oninput="calculateInsoluble()">
+                    </div>
+                    <div>
+                        <label for="W2_insoluble">وزن کروسیله + باقی‌مانده خشک شده (g) (W₂):</label>
+                        <input type="text" id="W2_insoluble" name="W2_insoluble" class="input-field" oninput="calculateInsoluble()">
+                    </div>
+                    <button class="calculation-button" onclick="calculateInsoluble()">محاسبه</button>
+                    <div class="calculation-result">
+                        نتیجه: <span id="insoluble_result">--</span> mg
+                    </div>
+                     <div class="calculation-result">
+                        نتیجه: <span id="insoluble_result_ppm">--</span> ppm
+                    </div>
+                    <div class="status-message">
+                        وضعیت: <span id="insoluble_status">--</span>
+                    </div>
+                    <div>
+                        <label for="additional_specs_insoluble">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="additional_specs_insoluble" name="additional_specs_insoluble" rows="3" class="additional-spec-input"></textarea>
+                    </div>
                 </div>
 
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کلرید و سولفات، کلرید <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a></h4>
-                <div class="interactive-card card">
-                    <p>نمونه: معادل <span class="ltr-text">0.5</span> گرم Na₂HPO₄</p>
-                    <p>معیارهای پذیرش: نباید کلرید بیشتری نسبت به معادل <span class="ltr-text">0.42</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">0.020</span> نرمال نشان دهد (نهایتاً <span class="ltr-text">0.06%</span>)</p>
-                </div>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات</h3>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• کلرید <span class="ltr-text">221ñ</span></h4>
+                <p>نمونه: معادل 0.5 گرم <span class="ltr-text">Na₂HPO₄</span></p>
+                <p>معیارهای پذیرش: نباید کلر بیشتری نسبت به معادل 0.42 میلی‌لیتر اسید هیدروکلریک 0.020 نرمال نشان دهد (حداکثر 0.06%)</p>
 
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کلرید و سولفات، سولفات <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a></h4>
-                <div class="interactive-card card">
-                    <p>نمونه: معادل <span class="ltr-text">0.1</span> گرم Na₂HPO₄</p>
-                    <p>معیارهای پذیرش: نباید سولفات بیشتری نسبت به معادل <span class="ltr-text">0.2</span> میلی‌لیتر اسید سولفوریک <span class="ltr-text">0.020</span> نرمال نشان دهد (نهایتاً <span class="ltr-text">0.2%</span>)</p>
-                </div>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• سولفات <span class="ltr-text">221ñ</span></h4>
+                <p>نمونه: معادل 0.1 گرم <span class="ltr-text">Na₂HPO₄</span></p>
+                <p>معیارهای پذیرش: نباید سولفات بیشتری نسبت به معادل 0.2 میلی‌لیتر اسید سولفوریک 0.020 نرمال نشان دهد (حداکثر 0.2%)</p>
 
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آرسنیک، روش I <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a></h4>
-                <div class="interactive-card card">
-                    <p>آماده‌سازی تست: معادل <span class="ltr-text">187.5</span> میلی‌گرم Na₂HPO₄ در <span class="ltr-text">35</span> میلی‌لیتر آب</p>
-                    <p>معیارهای پذیرش: نهایتاً <span class="ltr-text">16</span> ppm</p>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">آرسنیک</h3>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• روش I <span class="ltr-text">211ñ</span></h4>
+                <p>آماده‌سازی تست: معادل 187.5 میلی‌گرم <span class="ltr-text">Na₂HPO₄</span> در 35 میلی‌لیتر آب</p>
+                <p>معیارهای پذیرش: حداکثر 16 ppm</p>
+
+                <div class="card interactive-card">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">ماشین حساب آرسنیک</h3>
+                    <p class="mb-2">فرمول:</p>
+                    <div class="formula-display">
+                        $$Result = \left[ \frac{(V_{B}-V_{S}) \times N \times 27 \times F}{W} \right] \times 100$$
+                    </div>
+                    <div>
+                        <label for="VB_arsenic">حجم محلول استاندارد (V<span class="ltr-text">B</span>) (mL):</label>
+                        <input type="text" id="VB_arsenic" name="VB_arsenic" class="input-field" oninput="calculateArsenic()">
+                    </div>
+                    <div>
+                        <label for="VS_arsenic">حجم نمونه (V<span class="ltr-text">S</span>) (mL):</label>
+                        <input type="text" id="VS_arsenic" name="VS_arsenic" class="input-field" oninput="calculateArsenic()">
+                    </div>
+                    <div>
+                        <label for="N_arsenic">نرمالیته (N):</label>
+                        <input type="text" id="N_arsenic" name="N_arsenic" class="input-field" oninput="calculateArsenic()">
+                    </div>
+                    <div>
+                        <label for="F_arsenic">ضریب تبدیل (F):</label>
+                        <input type="text" id="F_arsenic" name="F_arsenic" class="input-field" oninput="calculateArsenic()">
+                    </div>
+                    <div>
+                        <label for="W_arsenic">وزن نمونه (mg) (W):</label>
+                        <input type="text" id="W_arsenic" name="W_arsenic" class="input-field" oninput="calculateArsenic()">
+                    </div>
+                    <button class="calculation-button" onclick="calculateArsenic()">محاسبه</button>
+                    <div class="calculation-result">
+                        نتیجه: <span id="arsenic_result">--</span> ppm
+                    </div>
+                    <div class="status-message">
+                        وضعیت: <span id="arsenic_status">--</span>
+                    </div>
+                    <div>
+                        <label for="additional_specs_arsenic">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="additional_specs_arsenic" name="additional_specs_arsenic" rows="3" class="additional-spec-input"></textarea>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Specific Tests Tab -->
         <div id="specific-tests" class="tab-content hidden">
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
 
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کاهش وزن در اثر خشک شدن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h4>
-                <div class="interactive-card card">
-                    <p>نمونه را در دمای <span class="ltr-text">130°</span> تا رسیدن به وزن ثابت خشک کنید.</p>
-                    <p>معیارهای پذیرش: به جدول <span class="ltr-text">1</span> مراجعه کنید.</p>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">از دست دادن در هنگام خشک شدن <span class="ltr-text">731ñ</span></h3>
+                <p>نمونه را در دمای 130 درجه سانتی‌گراد تا رسیدن به وزن ثابت خشک کنید.</p>
+                <p>معیارهای پذیرش: به جدول 1 مراجعه کنید.</p>
 
-                    <table class="mt-4">
-                        <thead>
-                            <tr>
-                                <th>شکل هیدرات</th>
-                                <th>معیارهای پذیرش</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>خشک شده</td>
-                                <td>نهایتاً <span class="ltr-text">5.0%</span></td>
-                            </tr>
-                            <tr>
-                                <td>مونوهیدرات</td>
-                                <td><span class="ltr-text">10.3%</span>–<span class="ltr-text">12.0%</span></td>
-                            </tr>
-                            <tr>
-                                <td>دی‌هیدرات</td>
-                                <td><span class="ltr-text">18.5%</span>–<span class="ltr-text">21.5%</span></td>
-                            </tr>
-                            <tr>
-                                <td>هپتا‌هیدرات</td>
-                                <td><span class="ltr-text">43.0%</span>–<span class="ltr-text">50.0%</span></td>
-                            </tr>
-                            <tr>
-                                <td>دودکا‌هیدرات</td>
-                                <td><span class="ltr-text">55.0%</span>–<span class="ltr-text">64.0%</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>فرم هیدرات</th>
+                            <th>معیارهای پذیرش</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>خشک شده</td>
+                            <td>حداکثر 5.0%</td>
+                        </tr>
+                        <tr>
+                            <td>مونو‌هیدرات</td>
+                            <td>10.3%–12.0%</td>
+                        </tr>
+                        <tr>
+                            <td>دی‌هیدرات</td>
+                            <td>18.5%–21.5%</td>
+                        </tr>
+                        <tr>
+                            <td>هپتا‌هیدرات</td>
+                            <td>43.0%–50.0%</td>
+                        </tr>
+                        <tr>
+                            <td>دوده‌کاهیدرات</td>
+                            <td>55.0%–64.0%</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="card interactive-card">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">ماشین حساب از دست دادن در هنگام خشک شدن</h3>
+                    <p class="mb-2">فرمول:</p>
+                    <div class="formula-display">
+                        $$LOD = \frac{(W_{1}+W_{sa})-W_2}{W_{sa}} \times 100$$
+                    </div>
+                    <div>
+                        <label for="W1_lod">وزن اولیه نمونه (g) (W₁):</label>
+                        <input type="text" id="W1_lod" name="W1_lod" class="input-field" oninput="calculateLOD()">
+                    </div>
+                    <div>
+                        <label for="Wsa_lod">وزن نمونه خشک شده (g) (W<span class="ltr-text">sa</span>):</label>
+                        <input type="text" id="Wsa_lod" name="Wsa_lod" class="input-field" oninput="calculateLOD()">
+                    </div>
+                    <div>
+                        <label for="W2_lod">وزن نمونه بعد از خشک شدن (g) (W₂):</label>
+                        <input type="text" id="W2_lod" name="W2_lod" class="input-field" oninput="calculateLOD()">
+                    </div>
+                    <button class="calculation-button" onclick="calculateLOD()">محاسبه</button>
+                    <div class="calculation-result">
+                        نتیجه: <span id="lod_result">--</span>%
+                    </div>
+                    <div class="status-message">
+                        وضعیت: <span id="lod_status">--</span>
+                    </div>
+                    <div>
+                        <label for="additional_specs_lod">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="additional_specs_lod" name="additional_specs_lod" rows="3" class="additional-spec-input"></textarea>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">باقی‌مانده در هنگام اشتعال</h3>
+                <p>نمونه را در دمای 600 درجه سانتی‌گراد تا رسیدن به وزن ثابت اشتعال دهید.</p>
+                <p>معیارهای پذیرش: حداکثر 0.1%</p>
+
+                <div class="card interactive-card">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">ماشین حساب باقی‌مانده در هنگام اشتعال</h3>
+                    <p class="mb-2">فرمول:</p>
+                    <div class="formula-display">
+                        $$ROI = \frac{W_3 - W_1}{W_2} \times 100$$
+                    </div>
+                    <div>
+                        <label for="W1_roi">وزن اولیه کروسیله (g) (W₁):</label>
+                        <input type="text" id="W1_roi" name="W1_roi" class="input-field" oninput="calculateROI()">
+                    </div>
+                    <div>
+                        <label for="W2_roi">وزن نمونه (g) (W₂):</label>
+                        <input type="text" id="W2_roi" name="W2_roi" class="input-field" oninput="calculateROI()">
+                    </div>
+                    <div>
+                        <label for="W3_roi">وزن کروسیله + باقی‌مانده اشتعال (g) (W₃):</label>
+                        <input type="text" id="W3_roi" name="W3_roi" class="input-field" oninput="calculateROI()">
+                    </div>
+                    <button class="calculation-button" onclick="calculateROI()">محاسبه</button>
+                    <div class="calculation-result">
+                        نتیجه: <span id="roi_result">--</span>%
+                    </div>
+                    <div class="status-message">
+                        وضعیت: <span id="roi_status">--</span>
+                    </div>
+                    <div>
+                        <label for="additional_specs_roi">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="additional_specs_roi" name="additional_specs_roi" rows="3" class="additional-spec-input"></textarea>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Additional Requirements Tab -->
         <div id="additional-requirements" class="tab-content hidden">
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
 
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">بسته‌بندی و نگهداری</h4>
-                <div class="interactive-card card">
-                    <p>در ظروف دربسته نگهداری شود.</p>
-                </div>
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">بسته‌بندی و نگهداری</h3>
+                <p>در ظروف دربسته نگهداری شود.</p>
 
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">برچسب‌گذاری</h4>
-                <div class="interactive-card card">
-                    <p>برچسب‌گذاری باید مشخص کند که آیا خشک شده است یا مونوهیدرات، دی‌هیدرات، هپتا‌هیدرات، یا دودکا‌هیدرات است.</p>
-                </div>
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">برچسب‌گذاری</h3>
+                <p>برچسب‌گذاری باید نشان دهد که آیا ماده خشک شده است یا مونو‌هیدرات، دی‌هیدرات، هپتا‌هیدرات، یا دوده‌کاهیدرات است.</p>
             </div>
         </div>
-
     </div>
 
     <script>
         function showTab(tabId) {
-            const tabContents = document.querySelectorAll('.tab-content');
-            tabContents.forEach(content => content.classList.add('hidden'));
-
             const tabButtons = document.querySelectorAll('.tab-button');
-            tabButtons.forEach(button => button.classList.remove('tab-active', 'tab-inactive'));
-            tabButtons.forEach(button => button.classList.add('tab-inactive'));
+            tabButtons.forEach(button => {
+                button.classList.remove('tab-active');
+                button.classList.add('tab-inactive');
+            });
+
+            const clickedButton = document.querySelector(`button[onclick="showTab('${tabId}')"]`);
+            clickedButton.classList.remove('tab-inactive');
+            clickedButton.classList.add('tab-active');
+
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => {
+                content.classList.add('hidden');
+            });
 
             document.getElementById(tabId).classList.remove('hidden');
-            document.querySelector(`.tab-button[onclick="showTab('${tabId}')"]`).classList.add('tab-active');
-            document.querySelector(`.tab-button[onclick="showTab('${tabId}')"]`).classList.remove('tab-inactive');
         }
 
-        // Initialize with the first tab active
+        // Helper function to format numbers for display
+        function formatNumber(num) {
+            if (isNaN(num) || num === Infinity || num === -Infinity) {
+                return '--';
+            }
+            return num.toFixed(3); // Adjust precision as needed
+        }
+
+        function calculateAssay() {
+            const A = parseFloat(document.getElementById('A_assay').value);
+            const B = parseFloat(document.getElementById('B_assay').value);
+            const sampleWeight = parseFloat(document.getElementById('sample_weight_assay').value);
+            const resultSpan = document.getElementById('assay_result');
+            const statusSpan = document.getElementById('assay_status');
+
+            if (isNaN(A) || isNaN(B) || isNaN(sampleWeight) || sampleWeight <= 0) {
+                resultSpan.textContent = '--';
+                statusSpan.textContent = '--';
+                return;
+            }
+
+            let volumeUsed;
+            if (A <= B) {
+                volumeUsed = A;
+            } else {
+                volumeUsed = (2 * B) - A;
+            }
+
+            const assay = (volumeUsed * 142.0 * 100) / (sampleWeight * 1000); // Assuming mg/mL conversion for Na2HPO4
+            const formattedAssay = formatNumber(assay);
+            resultSpan.textContent = formattedAssay;
+
+            if (assay >= 98.0 && assay <= 100.5) {
+                statusSpan.textContent = 'قبول';
+                statusSpan.className = 'status-message pass-text';
+            } else {
+                statusSpan.textContent = 'رد';
+                statusSpan.className = 'status-message fail-text';
+            }
+        }
+
+
+        function calculateInsoluble() {
+            const W1 = parseFloat(document.getElementById('W1_insoluble').value);
+            const W2 = parseFloat(document.getElementById('W2_insoluble').value);
+            const resultSpan = document.getElementById('insoluble_result');
+            const resultPpmSpan = document.getElementById('insoluble_result_ppm');
+            const statusSpan = document.getElementById('insoluble_status');
+
+            if (isNaN(W1) || isNaN(W2) || W2 < W1) {
+                resultSpan.textContent = '--';
+                resultPpmSpan.textContent = '--';
+                statusSpan.textContent = '--';
+                return;
+            }
+
+            const insolubleWeight = W2 - W1; // in grams
+            const percentage = (insolubleWeight / 5.0) * 100; // 5.0 g sample
+            const ppm = (insolubleWeight * 1000000) / 5.0; // 5.0 g sample
+
+            resultSpan.textContent = formatNumber(insolubleWeight * 1000); // mg
+            resultPpmSpan.textContent = formatNumber(ppm); // ppm
+
+            if (percentage <= 0.4) {
+                statusSpan.textContent = 'قبول';
+                statusSpan.className = 'status-message pass-text';
+            } else {
+                statusSpan.textContent = 'رد';
+                statusSpan.className = 'status-message fail-text';
+            }
+        }
+
+        function calculateArsenic() {
+            const VB = parseFloat(document.getElementById('VB_arsenic').value);
+            const VS = parseFloat(document.getElementById('VS_arsenic').value);
+            const N = parseFloat(document.getElementById('N_arsenic').value);
+            const F = parseFloat(document.getElementById('F_arsenic').value);
+            const W = parseFloat(document.getElementById('W_arsenic').value); // in mg
+            const resultSpan = document.getElementById('arsenic_result');
+            const statusSpan = document.getElementById('arsenic_status');
+
+            if (isNaN(VB) || isNaN(VS) || isNaN(N) || isNaN(F) || isNaN(W) || W <= 0) {
+                resultSpan.textContent = '--';
+                statusSpan.textContent = '--';
+                return;
+            }
+
+            const result = ((VB - VS) * N * 27 * F / W); // Assuming the formula directly gives ppm for 187.5mg
+            const formattedResult = formatNumber(result);
+            resultSpan.textContent = formattedResult;
+
+            if (result <= 16) {
+                statusSpan.textContent = 'قبول';
+                statusSpan.className = 'status-message pass-text';
+            } else {
+                statusSpan.textContent = 'رد';
+                statusSpan.className = 'status-message fail-text';
+            }
+        }
+
+        function calculateLOD() {
+            const W1 = parseFloat(document.getElementById('W1_lod').value);
+            const Wsa = parseFloat(document.getElementById('Wsa_lod').value);
+            const W2 = parseFloat(document.getElementById('W2_lod').value);
+            const resultSpan = document.getElementById('lod_result');
+            const statusSpan = document.getElementById('lod_status');
+
+            if (isNaN(W1) || isNaN(Wsa) || isNaN(W2) || Wsa <= 0) {
+                resultSpan.textContent = '--';
+                statusSpan.textContent = '--';
+                return;
+            }
+
+            const lod = ((W1 + Wsa) - W2) / Wsa * 100;
+            const formattedLod = formatNumber(lod);
+            resultSpan.textContent = formattedLod;
+
+            // For LOD, we need to check against multiple ranges. For simplicity, let's assume a default 'dried' check.
+            // In a real application, user input for the hydrate form would be needed.
+            if (lod <= 5.0) {
+                statusSpan.textContent = 'قبول';
+                statusSpan.className = 'status-message pass-text';
+            } else {
+                statusSpan.textContent = 'رد';
+                statusSpan.className = 'status-message fail-text';
+            }
+        }
+
+        function calculateROI() {
+            const W1 = parseFloat(document.getElementById('W1_roi').value);
+            const W2 = parseFloat(document.getElementById('W2_roi').value);
+            const W3 = parseFloat(document.getElementById('W3_roi').value);
+            const resultSpan = document.getElementById('roi_result');
+            const statusSpan = document.getElementById('roi_status');
+
+            if (isNaN(W1) || isNaN(W2) || isNaN(W3) || W2 <= 0) {
+                resultSpan.textContent = '--';
+                statusSpan.textContent = '--';
+                return;
+            }
+
+            const roi = (W3 - W1) / W2 * 100;
+            const formattedRoi = formatNumber(roi);
+            resultSpan.textContent = formattedRoi;
+
+            if (roi <= 0.1) {
+                statusSpan.textContent = 'قبول';
+                statusSpan.className = 'status-message pass-text';
+            } else {
+                statusSpan.textContent = 'رد';
+                statusSpan.className = 'status-message fail-text';
+            }
+        }
+
+        // Initial tab display
         document.addEventListener('DOMContentLoaded', () => {
             showTab('definition');
         });

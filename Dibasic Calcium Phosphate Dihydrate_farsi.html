@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مونوگراف دی‌کلسیم فسفات دی‌هیدرات</title>
+    <title>مونوگراف کلسیم فسفات دی‌بازیک دی‌هیدرات (USP)</title>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
+
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -60,6 +60,12 @@
             margin-bottom: 1rem;
             direction: ltr;
         }
+        .pass-text {
+            color: #22c55e;
+        }
+        .fail-text {
+            color: #ef4444;
+        }
         .interactive-card {
             background-color: #e0f2fe;
             border: 1px solid #90cdf4;
@@ -67,256 +73,483 @@
             margin-top: 1rem;
             border-radius: 0.5rem;
         }
+        .calculation-button {
+            background-color: #2563eb;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+        .additional-spec-input {
+             shadow: appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline
+        }
+        .status-dropdown {
+            shadow: appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48
+        }
+        .input-field-style {
+            ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2
+        }
     </style>
 </head>
 <body>
     <div class="container mx-auto p-4 max-w-4xl">
-        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">دی‌کلسیم فسفات دی‌هیدرات</h1>
+
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">کلسیم فسفات دی‌بازیک دی‌هیدرات</h1>
 
         <div class="flex justify-center mb-6 border-b border-gray-200">
-            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab('definition')">تعریف</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('identification')">شناسایی</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('assay')">سنجش</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('impurities')">ناخالصی‌ها</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('specific-tests')">آزمایشات خاص</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('additional-requirements')">الزامات اضافی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab(event, 'definition')">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'identification')">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'assay')">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'impurities')">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'specific-tests')">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'additional-requirements')">الزامات اضافی</button>
         </div>
 
         <div id="definition" class="tab-content">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
             <div class="card">
-                <p>دی‌کلسیم فسفات دی‌هیدرات حاوی دو مولکول آب هیدراتاسیون است. این ماده باید حاوی 98.0% تا 105.0% دی‌کلسیم فسفات دی‌هیدرات (<span class="ltr-text">CaHPO₄ · 2H₂O</span>) باشد.</p>
-                <p>فرمول شیمیایی: <span class="ltr-text">CaHPO₄ · 2H₂O</span></p>
-                <p>وزن مولکولی: <span class="ltr-text">172.09</span></p>
-                <p>نام‌های دیگر: فسفات کلسیم اسید (1:1)؛ فسفات کلسیم، دی‌هیدرات (1:1) [<span class="ltr-text">7789-77-7</span>]</p>
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+                <p>کلسیم فسفات دی‌بازیک دی‌هیدرات حاوی دو مولکول آب هیدراته است. این ماده حاوی حداقل 98.0% و حداکثر 105.0% کلسیم فسفات دی‌بازیک دی‌هیدرات (<span class="ltr-text">CaHPO4 · 2H2O</span>) است.</p>
             </div>
         </div>
 
         <div id="identification" class="tab-content hidden">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
-
             <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">شناسایی A</h3>
-                <div class="interactive-card card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه</h4>
-                    <p>0.1 گرم دی‌کلسیم فسفات دی‌هیدرات</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل</h4>
-                    <p>نمونه را با گرم کردن در 10 میلی‌لیتر اسید هیدروکلریک 2 نرم حل کنید. 2.5 میلی‌لیتر آمونیاک TS را قطره قطره اضافه کنید، در حالی که تکان می‌دهید، و سپس 5 میلی‌لیتر آمونیوم اگزالات TS را اضافه کنید.</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
-                    <p>رسوب سفیدی تشکیل می‌شود.</p>
-                </div>
-            </div>
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
 
-            <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">شناسایی B</h3>
-                <div class="interactive-card card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه</h4>
-                    <p>0.1 گرم دی‌کلسیم فسفات دی‌هیدرات</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل</h4>
-                    <p>نمونه را در 5 میلی‌لیتر اسید نیتریک رقیق شده حل کنید. محلول را تا 70 درجه سانتی‌گراد گرم کنید و 2 میلی‌لیتر محلول 10% آمونیوم مولیبدات (تازه تهیه شده) را اضافه کنید.</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
-                    <p>رسوب زرد رنگ آمونیوم فسفومولیبدات تشکیل می‌شود.</p>
-                </div>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">الف.</h3>
+                <p>نمونه: 0.1 گرم کلسیم فسفات دی‌بازیک دی‌هیدرات</p>
+                <p>آنالیز: نمونه را با گرم کردن در 10 میلی‌لیتر اسید هیدروکلریک 2 نرم حل کنید. 2.5 میلی‌لیتر آمونیاک TS را قطره قطره با تکان دادن اضافه کرده و سپس 5 میلی‌لیتر آمونیوم اگزالات TS اضافه کنید.</p>
+                <p>معیارهای پذیرش: رسوب سفید تشکیل می‌شود.</p>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">ب.</h3>
+                <p>نمونه: 0.1 گرم کلسیم فسفات دی‌بازیک دی‌هیدرات</p>
+                <p>آنالیز: نمونه را در 5 میلی‌لیتر اسید نیتریک رقیق حل کنید. محلول را تا 70 درجه سانتی‌گراد گرم کرده و 2 میلی‌لیتر محلول 10% آمونیوم مولیبدات (تازه تهیه شده) اضافه کنید.</p>
+                <p>معیارهای پذیرش: رسوب زرد آمونیوم فسفومولیبدات تشکیل می‌شود.</p>
             </div>
         </div>
 
         <div id="assay" class="tab-content hidden">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
-
             <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">روش کار</h3>
+                <p>بافر: 53.5 گرم آمونیوم کلراید را با مقدار کافی آب در یک فلاسک حجمی 1000 میلی‌لیتری حل کنید. 570 میلی‌لیتر آب آمونیاک غلیظ اضافه کرده و با آب به حجم برسانید. pH این محلول 10.7 است.</p>
+                <p>محلول نمونه: 400 میلی‌گرم کلسیم فسفات دی‌بازیک دی‌هیدرات را به یک فلاسک حجمی 200 میلی‌لیتری منتقل کنید. با کمک حرارت ملایم در صورت لزوم در 12 میلی‌لیتر اسید هیدروکلریک رقیق حل کرده و با آب به حجم برسانید.</p>
+                <p>شاهد: 20 میلی‌لیتر آب حاوی 1.2 میلی‌لیتر اسید هیدروکلریک رقیق</p>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم تیتراسیون</h4>
+                <p>(به تیتراسیون á541ñ مراجعه کنید.)</p>
+                <p>حالت: تیتراسیون باقی‌مانده</p>
+                <p>تیترانت: 0.02 مولار ادتات دی‌سدیم VS</p>
+                <p>تیترانت برگشتی: 0.02 مولار روی سولفات VS</p>
+                <p>تشخیص نقطه پایانی: بصری</p>
+                <p>آنالیز: به 20.0 میلی‌لیتر از محلول نمونه، 25.0 میلی‌لیتر تیترانت، 50 میلی‌لیتر آب و 5 میلی‌لیتر بافر اضافه کنید. 25 میلی‌گرم شناساگر اریکروم سیاه تی–سدیم کلراید اضافه کنید. تیترانت اضافی را با تیترانت برگشتی تیتراسیون کنید. تعیین شاهد را به همان نحو انجام دهید.</p>
+                <p>درصد کلسیم فسفات دی‌بازیک دی‌هیدرات (<span class="ltr-text">CaHPO4 · 2H2O</span>) را در نمونه گرفته شده محاسبه کنید:</p>
+                <div class="formula-display">
+                    $$Result = \{[(V_{B} - V_{S}) \times M \times F]/W\} \times 100$$
+                </div>
+                <p><span class="ltr-text">V<sub>B</sub></span> = حجم تیترانت برگشتی مصرف شده توسط شاهد (mL)</p>
+                <p><span class="ltr-text">V<sub>S</sub></span> = حجم تیترانت برگشتی مصرف شده توسط نمونه (mL)</p>
+                <p><span class="ltr-text">M</span> = مولاریته واقعی تیترانت برگشتی (mM/mL)</p>
+                <p><span class="ltr-text">F</span> = ضریب هم‌ارزی، 172.1 mg/mM</p>
+                <p><span class="ltr-text">W</span> = وزن نمونه (mg) در 20.0 میلی‌لیتر از محلول نمونه</p>
+                <p>معیارهای پذیرش: 98.0%–105.0%</p>
+
                 <div class="interactive-card card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">بافر</h4>
-                    <p>53.5 گرم آمونیوم کلراید را با آب کافی در یک فلاسک حجمی 1000 میلی‌لیتری حل کنید. 570 میلی‌لیتر آمونیاک قوی اضافه کنید و با آب تا حجم برسانید. pH این محلول 10.7 است.</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه</h4>
-                    <p>400 میلی‌گرم دی‌کلسیم فسفات دی‌هیدرات را در یک فلاسک حجمی 200 میلی‌لیتری منتقل کنید. با کمک حرارت ملایم، در صورت لزوم، در 12 میلی‌لیتر اسید هیدروکلریک رقیق شده حل کنید و با آب تا حجم برسانید.</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شاهد</h4>
-                    <p>20 میلی‌لیتر آب حاوی 1.2 میلی‌لیتر اسید هیدروکلریک رقیق شده</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم تیتراسیون</h4>
-                    <p>(به تیتراسیون مراجعه کنید á<a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a>ñ.)</p>
-                    <p>حالت: تیتراسیون باقی‌مانده</p>
-                    <p>تیترانت: <span class="ltr-text">0.02 M</span> ادتات دی‌سدیم VS</p>
-                    <p>تیترانت معکوس: <span class="ltr-text">0.02 M</span> روی سولفات VS</p>
-                    <p>شناسایی نقطه پایانی: چشمی</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل</h4>
-                    <p>به 20.0 میلی‌لیتر از محلول نمونه، 25.0 میلی‌لیتر تیترانت، 50 میلی‌لیتر آب و 5 میلی‌لیتر بافر اضافه کنید. 25 میلی‌گرم شناساگر اریوکروم بلک تی-سدیم کلراید اضافه کنید. تیترانت اضافی را با تیترانت معکوس تیتر کنید. تعیین شاهد را به همان صورت انجام دهید.</p>
-                    <p>درصد دی‌کلسیم فسفات دی‌هیدرات (<span class="ltr-text">CaHPO₄ · 2H₂O</span>) در نمونه گرفته شده را محاسبه کنید:</p>
-                    <div class="formula-display">
-                        <p>Result = {[(V<span class="ltr-text">B</span> − V<span class="ltr-text">S</span>) × M × F]/W} × 100</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب سنجش</h4>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div>
+                            <label for="VB" class="block text-sm font-medium text-gray-700">حجم تیترانت برگشتی شاهد (VB) (mL)</label>
+                            <input type="text" id="VB" name="VB" class="input-field-style" oninput="calculateAssay()">
+                        </div>
+                        <div>
+                            <label for="VS" class="block text-sm font-medium text-gray-700">حجم تیترانت برگشتی نمونه (VS) (mL)</label>
+                            <input type="text" id="VS" name="VS" class="input-field-style" oninput="calculateAssay()">
+                        </div>
+                        <div>
+                            <label for="M" class="block text-sm font-medium text-gray-700">مولاریته واقعی تیترانت برگشتی (M) (mM/mL)</label>
+                            <input type="text" id="M" name="M" class="input-field-style" oninput="calculateAssay()">
+                        </div>
+                        <div>
+                            <label for="W" class="block text-sm font-medium text-gray-700">وزن نمونه (W) (mg)</label>
+                            <input type="text" id="W" name="W" class="input-field-style" oninput="calculateAssay()">
+                        </div>
                     </div>
-                    <p>V<span class="ltr-text">B</span> = حجم تیترانت معکوس مصرف شده توسط شاهد (mL)</p>
-                    <p>V<span class="ltr-text">S</span> = حجم تیترانت معکوس مصرف شده توسط نمونه (mL)</p>
-                    <p>M = مولاریته واقعی تیترانت معکوس (mM/mL)</p>
-                    <p>F = ضریب هم‌ارزی، <span class="ltr-text">172.1 mg/mM</span></p>
-                    <p>W = وزن نمونه (mg) در 20.0 میلی‌لیتر محلول نمونه</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
-                    <p><span class="ltr-text">98.0%–105.0%</span></p>
+                    <button class="calculation-button mt-4" onclick="calculateAssay()">محاسبه</button>
+                    <div class="mt-4">
+                        <p>نتیجه: <span id="assayResult" class="font-bold"></span></p>
+                        <p>وضعیت: <span id="assayStatus" class="font-bold"></span></p>
+                    </div>
+                    <div class="mt-2">
+                        <label for="additionalSpecsAssay" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="additionalSpecsAssay" name="additionalSpecsAssay" rows="3" class="additional-spec-input mt-1"></textarea>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div id="impurities" class="tab-content hidden">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
-
             <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">کربنات</h3>
+                <p>نمونه: 1.0 گرم کلسیم فسفات دی‌بازیک دی‌هیدرات</p>
+                <p>آنالیز: نمونه را با 5 میلی‌لیتر آب بدون دی‌اکسید کربن مخلوط کرده و بلافاصله 2 میلی‌لیتر اسید هیدروکلریک اضافه کنید.</p>
+                <p>معیارهای پذیرش: هیچگونه جوشش رخ نمی‌دهد.</p>
                 <div class="interactive-card card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه</h4>
-                    <p>1.0 گرم دی‌کلسیم فسفات دی‌هیدرات</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل</h4>
-                    <p>نمونه را با 5 میلی‌لیتر آب بدون کربنیک مخلوط کنید و بلافاصله 2 میلی‌لیتر اسید هیدروکلریک اضافه کنید.</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
-                    <p>هیچ جوشش رخ ندهد.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات، کلرید á<a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a>ñ</h3>
-                <div class="interactive-card card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">استاندارد</h4>
-                    <p>0.70 میلی‌لیتر اسید هیدروکلریک 0.010 N</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه</h4>
-                    <p>0.2 گرم دی‌کلسیم فسفات دی‌هیدرات</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل</h4>
-                    <p>به نمونه 20 میلی‌لیتر آب و 13 میلی‌لیتر اسید نیتریک رقیق شده اضافه کنید و در صورت لزوم به آرامی گرم کنید تا کاملاً حل شود. با آب تا 100 میلی‌لیتر رقیق کرده و در صورت لزوم فیلتر کنید. به 50 میلی‌لیتر از فیلترات، 1 میلی‌لیتر نقره نیترات TS اضافه کنید.</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
-                    <p>کدورت نمونه از استاندارد تجاوز نکند (NMT 0.25%).</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات، سولفات á<a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a>ñ</h3>
-                <div class="interactive-card card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">استاندارد</h4>
-                    <p>1.0 میلی‌لیتر اسید سولفوریک 0.010 N</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه</h4>
-                    <p>0.5 گرم دی‌کلسیم فسفات دی‌هیدرات</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل</h4>
-                    <p>به نمونه 5 میلی‌لیتر آب و 5 میلی‌لیتر اسید هیدروکلریک رقیق شده اضافه کنید و در صورت لزوم به آرامی گرم کنید تا کاملاً حل شود. با آب تا 100 میلی‌لیتر رقیق کرده و در صورت لزوم فیلتر کنید. به 20 میلی‌لیتر از فیلترات، 1 میلی‌لیتر اسید هیدروکلریک رقیق شده اضافه کنید و با آب تا 50 میلی‌لیتر رقیق کنید. 1 میلی‌لیتر باریم کلراید TS اضافه کنید.</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
-                    <p>کدورت نمونه از استاندارد تجاوز نکند (NMT 0.5%).</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">آرسنیک، روش I á<a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a>ñ</h3>
-                <div class="interactive-card card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آماده‌سازی نمونه</h4>
-                    <p>1.0 گرم در 25 میلی‌لیتر اسید هیدروکلریک 3 نرم، رقیق شده با آب تا 55 میلی‌لیتر. افزودن 20 میلی‌لیتر اسید سولفوریک 7 نرم مشخص شده در روش کار را حذف کنید.</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
-                    <p>NMT 3 µg/g</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">باریم</h3>
-                <div class="interactive-card card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه</h4>
-                    <p>0.5 گرم دی‌کلسیم فسفات دی‌هیدرات</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل</h4>
-                    <p>نمونه را با 10 میلی‌لیتر آب به جوش بیاورید و 1 میلی‌لیتر اسید هیدروکلریک را قطره قطره اضافه کنید، پس از هر بار افزودن هم بزنید. اجازه دهید خنک شود و در صورت لزوم فیلتر کنید. به فیلترات 2 میلی‌لیتر پتاسیم سولفات TS اضافه کنید.</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
-                    <p>در عرض 10 دقیقه هیچ کدورت ایجاد نمی‌شود.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">محدودیت مواد نامحلول در اسید</h3>
-                <div class="interactive-card card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه</h4>
-                    <p>5.0 گرم را در مخلوطی از 40 میلی‌لیتر آب و 10 میلی‌لیتر اسید هیدروکلریک با جوشاندن ملایم برای 5 دقیقه حل کنید.</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل</h4>
-                    <p>پس از خنک شدن، ماده نامحلول را روی کاغذ صافی بدون خاکستر جمع‌آوری کنید و با آب بشویید تا آخرین شستشو واکنش برای کلرید ندهد (با افزودن نقره نیترات TS کدورت حاصل نشود). تا رسوب و کاغذ صافی بدون خاکستر را در دمای 600 ± 50 درجه سانتی‌گراد تا احتراق کامل، حرارت دهید.</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
-                    <p>وزن رسوب نباید از 10 میلی‌گرم تجاوز کند (NMT 0.2%).</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">محدودیت فلوراید</h3>
-                <div class="interactive-card card">
-                    <p>[توجه — تمام محلول‌ها را در ظروف پلاستیکی تهیه و نگهداری کنید.]</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول بافر</h4>
-                    <p><span class="ltr-text">294 mg/mL</span> سدیم سیترات دی‌هیدرات در آب</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استانداردstock</h4>
-                    <p><span class="ltr-text">1.1052 mg/mL</span> USP سدیم فلوراید RS در آب</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استاندارد</h4>
-                    <p>20.0 میلی‌لیتر محلول استانداردstock را در یک فلاسک حجمی 100 میلی‌لیتری حاوی 50.0 میلی‌لیتر محلول بافر منتقل کنید، با آب تا حجم برسانید و مخلوط کنید. هر میلی‌لیتر از این محلول حاوی 100 میکروگرم یون فلوراید است.</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه</h4>
-                    <p>2.0 گرم دی‌کلسیم فسفات دی‌هیدرات را در یک بشر حاوی یک همزن با پوشش پلاستیکی منتقل کنید. 20 میلی‌لیتر آب و 2.0 میلی‌لیتر اسید هیدروکلریک اضافه کنید و تا حل شدن هم بزنید. 50.0 میلی‌لیتر محلول بافر و آب کافی برای رساندن به حجم 100 میلی‌لیتر اضافه کنید.</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم الکترود</h4>
-                    <p>از یک الکترود نشانگر یون ویژه فلوراید و یک الکترود مرجع نقره/نقره کلراید متصل به یک pH متر با قابلیت اندازه‌گیری پتانسیل‌ها با حداقل تکرارپذیری ±0.2 میلی‌ولت (به pH á<a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a>ñ مراجعه کنید) استفاده کنید.</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل</h4>
-                    <p>نمونه‌ها: محلول استاندارد و محلول نمونه</p>
-                    <p>خط پاسخ استاندارد: 50.0 میلی‌لیتر محلول بافر و 2.0 میلی‌لیتر اسید هیدروکلریک را در یک بشر منتقل کنید و آب اضافه کنید تا به 100 میلی‌لیتر برسد. یک همزن با پوشش پلاستیکی اضافه کنید، الکترودها را در محلول قرار دهید، 15 دقیقه هم بزنید و پتانسیل را بر حسب میلی‌ولت بخوانید. به هم زدن ادامه دهید و در فواصل 5 دقیقه‌ای، 100، 100، 300 و 500 میکرولیتر محلول استاندارد اضافه کنید و 5 دقیقه پس از هر افزودن، پتانسیل را بخوانید. لگاریتم غلظت‌های تجمعی یون فلوراید (0.1، 0.2، 0.5 و 1.0 میکروگرم در میلی‌لیتر) را در مقابل پتانسیل بر حسب میلی‌ولت رسم کنید.</p>
-                    <p>الکترودها را بشویید و خشک کنید، آنها را در محلول نمونه قرار دهید، 5 دقیقه هم بزنید و پتانسیل را بر حسب میلی‌ولت بخوانید. از پتانسیل اندازه‌گیری شده و خط پاسخ استاندارد، غلظت C (در میکروگرم در میلی‌لیتر) یون فلوراید را در محلول نمونه تعیین کنید.</p>
-                    <p>محتوای فلوراید (ppm) را در بخش دی‌کلسیم فسفات دی‌هیدرات گرفته شده محاسبه کنید:</p>
-                    <div class="formula-display">
-                        <p>Result = (V × C)/W</p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت کربنات</h4>
+                    <div class="flex items-center">
+                        <label for="carbonateStatus" class="mr-4 text-sm font-medium text-gray-700">وضعیت:</label>
+                        <select id="carbonateStatus" name="carbonateStatus" class="status-dropdown">
+                            <option value=""></option>
+                            <option value="Pass">قبول</option>
+                            <option value="Fail">رد</option>
+                        </select>
                     </div>
-                    <p>V = حجم محلول نمونه (mL)</p>
-                    <p>C = غلظت یون فلوراید، تعیین شده از خط پاسخ استاندارد، در محلول نمونه (µg/mL)</p>
-                    <p>W = وزن دی‌کلسیم فسفات دی‌هیدرات گرفته شده برای تهیه محلول نمونه (g)</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
-                    <p>NMT 50 ppm</p>
+                     <div class="mt-2">
+                        <label for="additionalSpecsCarbonate" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="additionalSpecsCarbonate" name="additionalSpecsCarbonate" rows="3" class="additional-spec-input mt-1"></textarea>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلراید و سولفات، کلراید á221ñ</h3>
+                <p>استاندارد: 0.70 میلی‌لیتر اسید هیدروکلریک 0.010 نرم</p>
+                <p>نمونه: 0.2 گرم ▲▲ (ERR 1-Aug-2020) کلسیم فسفات دی‌بازیک دی‌هیدرات</p>
+                <p>آنالیز: به نمونه 20 میلی‌لیتر آب و 13 میلی‌لیتر اسید نیتریک رقیق اضافه کرده و در صورت لزوم با حرارت ملایم کاملاً حل کنید. با آب به 100 میلی‌لیتر برسانید و در صورت لزوم فیلتر کنید. به 50 میلی‌لیتر از فیلتر 1 میلی‌لیتر نقره نیترات TS اضافه کنید.</p>
+                <p>معیارهای پذیرش: کدورت نمونه از استاندارد تجاوز نمی‌کند (حداکثر 0.25%).</p>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت کلراید</h4>
+                    <div class="flex items-center">
+                        <label for="chlorideStatus" class="mr-4 text-sm font-medium text-gray-700">وضعیت:</label>
+                        <select id="chlorideStatus" name="chlorideStatus" class="status-dropdown">
+                            <option value=""></option>
+                            <option value="Pass">قبول</option>
+                            <option value="Fail">رد</option>
+                        </select>
+                    </div>
+                     <div class="mt-2">
+                        <label for="additionalSpecsChloride" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="additionalSpecsChloride" name="additionalSpecsChloride" rows="3" class="additional-spec-input mt-1"></textarea>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلراید و سولفات، سولفات á221ñ</h3>
+                <p>استاندارد: 1.0 میلی‌لیتر اسید سولفوریک 0.010 نرم</p>
+                <p>نمونه: 0.5 گرم کلسیم فسفات دی‌بازیک دی‌هیدرات</p>
+                <p>آنالیز: به نمونه 5 میلی‌لیتر آب و 5 میلی‌لیتر اسید هیدروکلریک رقیق اضافه کرده و در صورت لزوم با حرارت ملایم کاملاً حل کنید. با آب به 100 میلی‌لیتر برسانید و در صورت لزوم فیلتر کنید. به 20 میلی‌لیتر از فیلتر 1 میلی‌لیتر اسید هیدروکلریک رقیق اضافه کرده و با آب به 50 میلی‌لیتر برسانید. 1 میلی‌لیتر باریم کلراید TS اضافه کنید.</p>
+                <p>معیارهای پذیرش: کدورت نمونه از استاندارد تجاوز نمی‌کند (حداکثر 0.5%).</p>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت سولفات</h4>
+                    <div class="flex items-center">
+                        <label for="sulfateStatus" class="mr-4 text-sm font-medium text-gray-700">وضعیت:</label>
+                        <select id="sulfateStatus" name="sulfateStatus" class="status-dropdown">
+                            <option value=""></option>
+                            <option value="Pass">قبول</option>
+                            <option value="Fail">رد</option>
+                        </select>
+                    </div>
+                     <div class="mt-2">
+                        <label for="additionalSpecsSulfate" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="additionalSpecsSulfate" name="additionalSpecsSulfate" rows="3" class="additional-spec-input mt-1"></textarea>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">آرسنیک، روش I á211ñ</h3>
+                <p>آماده‌سازی تست: 1.0 گرم در 25 میلی‌لیتر اسید هیدروکلریک 3 نرم، با آب تا 55 میلی‌لیتر رقیق شده. افزودن 20 میلی‌لیتر اسید سولفوریک 7 نرم مشخص شده در روش کار را حذف کنید.</p>
+                <p>معیارهای پذیرش: حداکثر 3 میکروگرم بر گرم</p>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت آرسنیک</h4>
+                    <div class="flex items-center">
+                        <label for="arsenicStatus" class="mr-4 text-sm font-medium text-gray-700">وضعیت:</label>
+                        <select id="arsenicStatus" name="arsenicStatus" class="status-dropdown">
+                            <option value=""></option>
+                            <option value="Pass">قبول</option>
+                            <option value="Fail">رد</option>
+                        </select>
+                    </div>
+                     <div class="mt-2">
+                        <label for="additionalSpecsArsenic" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="additionalSpecsArsenic" name="additionalSpecsArsenic" rows="3" class="additional-spec-input mt-1"></textarea>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">باریم</h3>
+                <p>نمونه: 0.5 گرم کلسیم فسفات دی‌بازیک دی‌هیدرات</p>
+                <p>آنالیز: نمونه را با 10 میلی‌لیتر آب بجوشانید و 1 میلی‌لیتر اسید هیدروکلریک را قطره قطره اضافه کنید، بعد از هر بار افزودن هم بزنید. بگذارید خنک شود و در صورت لزوم فیلتر کنید. به فیلتر 2 میلی‌لیتر پتاسیم سولفات TS اضافه کنید.</p>
+                <p>معیارهای پذیرش: در عرض 10 دقیقه هیچگونه کدورت تولید نمی‌شود.</p>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت باریم</h4>
+                    <div class="flex items-center">
+                        <label for="bariumStatus" class="mr-4 text-sm font-medium text-gray-700">وضعیت:</label>
+                        <select id="bariumStatus" name="bariumStatus" class="status-dropdown">
+                            <option value=""></option>
+                            <option value="Pass">قبول</option>
+                            <option value="Fail">رد</option>
+                        </select>
+                    </div>
+                     <div class="mt-2">
+                        <label for="additionalSpecsBarium" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="additionalSpecsBarium" name="additionalSpecsBarium" rows="3" class="additional-spec-input mt-1"></textarea>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">حد مواد نامحلول در اسید</h3>
+                <p>محلول نمونه: 5.0 گرم را در مخلوطی از 40 میلی‌لیتر آب و 10 میلی‌لیتر اسید هیدروکلریک با جوشاندن ملایم به مدت 5 دقیقه حل کنید.</p>
+                <p>آنالیز: پس از خنک شدن، ماده نامحلول را روی کاغذ صافی بدون خاکستر جمع‌آوری کرده و با آب شستشو دهید تا آخرین شستشو واکنشی برای کلراید ندهد (با افزودن نقره نیترات TS کدورت ایجاد نشود). در دمای 600 ± 50 درجه سانتی‌گراد تا زمان سوختن کامل باقیمانده و کاغذ صافی بدون خاکستر، حرارت دهید.</p>
+                <p>معیارهای پذیرش: وزن باقیمانده از 10 میلی‌گرم تجاوز نمی‌کند (حداکثر 0.2%).</p>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب حد مواد نامحلول در اسید</h4>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div>
+                            <label for="W1_acid" class="block text-sm font-medium text-gray-700">وزن باقیمانده (W1) (mg)</label>
+                            <input type="text" id="W1_acid" name="W1_acid" class="input-field-style" oninput="calculateAcidInsoluble()">
+                        </div>
+                        <div>
+                            <label for="W2_acid" class="block text-sm font-medium text-gray-700">وزن اولیه نمونه (W2) (g)</label>
+                            <input type="text" id="W2_acid" name="W2_acid" class="input-field-style" oninput="calculateAcidInsoluble()">
+                        </div>
+                    </div>
+                    <button class="calculation-button mt-4" onclick="calculateAcidInsoluble()">محاسبه</button>
+                    <div class="mt-4">
+                        <p>نتیجه: <span id="acidInsolubleResult" class="font-bold"></span> %</p>
+                        <p>وضعیت: <span id="acidInsolubleStatus" class="font-bold"></span></p>
+                    </div>
+                     <div class="mt-2">
+                        <label for="additionalSpecsAcidInsoluble" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="additionalSpecsAcidInsoluble" name="additionalSpecsAcidInsoluble" rows="3" class="additional-spec-input mt-1"></textarea>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">حد فلوراید</h3>
+                <p>[توجه — تمام محلول‌ها را در ظروف پلاستیکی تهیه و نگهداری کنید.]</p>
+                <p>محلول بافر: 294 میلی‌گرم بر میلی‌لیتر سدیم سیترات دی‌هیدرات در آب</p>
+                <p>محلول مادر استاندارد: 1.1052 میلی‌گرم بر میلی‌لیتر USP سدیم فلوراید RS در آب</p>
+                <p>محلول استاندارد: 20.0 میلی‌لیتر از محلول مادر استاندارد را به یک فلاسک حجمی 100 میلی‌لیتری حاوی 50.0 میلی‌لیتر محلول بافر منتقل کنید، با آب به حجم برسانید و مخلوط کنید. هر میلی‌لیتر از این محلول حاوی 100 میکروگرم یون فلوراید است.</p>
+                <p>محلول نمونه: 2.0 گرم کلسیم فسفات دی‌هیدرات را به یک بشر حاوی یک همزن مغناطیسی با پوشش پلاستیکی منتقل کنید. 20 میلی‌لیتر آب و 2.0 میلی‌لیتر اسید هیدروکلریک اضافه کرده و تا حل شدن هم بزنید. 50.0 میلی‌لیتر محلول بافر و مقدار کافی آب اضافه کنید تا حجم به 100 میلی‌لیتر برسد.</p>
+                <p>سیستم الکترود: از یک الکترود حساس به یون فلوراید و یک الکترود مرجع نقره–نقره کلراید که به یک pH متر متصل است و قادر به اندازه‌گیری پتانسیل‌ها با حداقل تکرارپذیری ±0.2 میلی‌ولت است (به pH á791ñ مراجعه کنید) استفاده کنید.</p>
+                <p>آنالیز</p>
+                <p>نمونه‌ها: محلول استاندارد و محلول نمونه</p>
+                <p>خط پاسخ استاندارد: 50.0 میلی‌لیتر محلول بافر و 2.0 میلی‌لیتر اسید هیدروکلریک را به یک بشر منتقل کنید و تا حجم 100 میلی‌لیتر آب اضافه کنید. یک همزن مغناطیسی با پوشش پلاستیکی اضافه کنید، الکترودها را در محلول قرار دهید، به مدت 15 دقیقه هم بزنید و پتانسیل را بر حسب میلی‌ولت بخوانید. هم زدن را ادامه دهید و در فواصل 5 دقیقه‌ای، 100، 100، 300 و 500 میکرولیتر از محلول استاندارد اضافه کنید و پتانسیل را 5 دقیقه پس از هر بار افزودن بخوانید. لگاریتم غلظت‌های تجمعی یون فلوراید (0.1، 0.2، 0.5 و 1.0 میکروگرم بر میلی‌لیتر) را در مقابل پتانسیل بر حسب میلی‌ولت رسم کنید.</p>
+                <p>الکترودها را شسته و خشک کنید، آنها را در محلول نمونه قرار دهید، به مدت 5 دقیقه هم بزنید و پتانسیل را بر حسب میلی‌ولت بخوانید. غلظت C (بر حسب میکروگرم بر میلی‌لیتر) یون فلوراید را در محلول نمونه، بر اساس پتانسیل اندازه‌گیری شده و خط پاسخ استاندارد تعیین کنید.</p>
+                <p>محتوای فلوراید (ppm) را در بخش کلسیم فسفات دی‌هیدرات گرفته شده محاسبه کنید:</p>
+                <div class="formula-display">
+                    $$Result = (V \times C) / W$$
+                </div>
+                <p><span class="ltr-text">V</span> = حجم محلول نمونه (mL)</p>
+                <p><span class="ltr-text">C</span> = غلظت یون فلوراید، تعیین شده از خط پاسخ استاندارد، در محلول نمونه (µg/mL)</p>
+                <p><span class="ltr-text">W</span> = وزن کلسیم فسفات دی‌هیدرات گرفته شده برای تهیه محلول نمونه (g)</p>
+                <p>معیارهای پذیرش: حداکثر 50 ppm</p>
+                <div class="interactive-card card">
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب حد فلوراید</h4>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div>
+                            <label for="V_fluoride" class="block text-sm font-medium text-gray-700">حجم محلول نمونه (V) (mL)</label>
+                            <input type="text" id="V_fluoride" name="V_fluoride" class="input-field-style" oninput="calculateFluoride()">
+                        </div>
+                        <div>
+                            <label for="C_fluoride" class="block text-sm font-medium text-gray-700">غلظت یون فلوراید (C) (µg/mL)</label>
+                            <input type="text" id="C_fluoride" name="C_fluoride" class="input-field-style" oninput="calculateFluoride()">
+                        </div>
+                        <div>
+                            <label for="W_fluoride" class="block text-sm font-medium text-gray-700">وزن نمونه (W) (g)</label>
+                            <input type="text" id="W_fluoride" name="W_fluoride" class="input-field-style" oninput="calculateFluoride()">
+                        </div>
+                    </div>
+                    <button class="calculation-button mt-4" onclick="calculateFluoride()">محاسبه</button>
+                    <div class="mt-4">
+                        <p>نتیجه: <span id="fluorideResult" class="font-bold"></span> ppm</p>
+                        <p>وضعیت: <span id="fluorideStatus" class="font-bold"></span></p>
+                    </div>
+                     <div class="mt-2">
+                        <label for="additionalSpecsFluoride" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="additionalSpecsFluoride" name="additionalSpecsFluoride" rows="3" class="additional-spec-input mt-1"></textarea>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div id="specific-tests" class="tab-content hidden">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
-
             <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">کاهش وزن در اثر حرارت á<a href="General chapters/733.html" class="text-blue-600 hover:underline" target="_blank">733</a>ñ</h3>
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">اتلاف در هنگام احتراق á733ñ</h3>
+                <p>نمونه: 1 گرم کلسیم فسفات دی‌بازیک دی‌هیدرات</p>
+                <p>آنالیز: نمونه را در دمای 800 تا 825 درجه سانتی‌گراد تا رسیدن به وزن ثابت حرارت دهید.</p>
+                <p>معیارهای پذیرش: 24.5%–26.5%</p>
                 <div class="interactive-card card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه</h4>
-                    <p>1 گرم دی‌کلسیم فسفات دی‌هیدرات</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل</h4>
-                    <p>نمونه را در دمای 800 تا 825 درجه سانتی‌گراد تا رسیدن به وزن ثابت، حرارت دهید.</p>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
-                    <p><span class="ltr-text">24.5%–26.5%</span></p>
+                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب اتلاف در هنگام احتراق</h4>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div>
+                            <label for="W1_loi" class="block text-sm font-medium text-gray-700">وزن اولیه نمونه (W1) (g)</label>
+                            <input type="text" id="W1_loi" name="W1_loi" class="input-field-style" oninput="calculateLOI()">
+                        </div>
+                        <div>
+                            <label for="Wsa_loi" class="block text-sm font-medium text-gray-700">وزن نمونه خشک شده (Wsa) (g)</label>
+                            <input type="text" id="Wsa_loi" name="Wsa_loi" class="input-field-style" oninput="calculateLOI()">
+                        </div>
+                        <div>
+                            <label for="W2_loi" class="block text-sm font-medium text-gray-700">وزن پس از احتراق (W2) (g)</label>
+                            <input type="text" id="W2_loi" name="W2_loi" class="input-field-style" oninput="calculateLOI()">
+                        </div>
+                    </div>
+                    <button class="calculation-button mt-4" onclick="calculateLOI()">محاسبه</button>
+                    <div class="mt-4">
+                        <p>نتیجه: <span id="loiResult" class="font-bold"></span> %</p>
+                        <p>وضعیت: <span id="loiStatus" class="font-bold"></span></p>
+                    </div>
+                     <div class="mt-2">
+                        <label for="additionalSpecsLOI" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
+                        <textarea id="additionalSpecsLOI" name="additionalSpecsLOI" rows="3" class="additional-spec-input mt-1"></textarea>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div id="additional-requirements" class="tab-content hidden">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
-
             <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری</h3>
-                <div class="interactive-card card">
-                    <p>در ظروف کاملاً بسته نگهداری شود. الزامات خاصی برای نگهداری ذکر نشده است.</p>
-                </div>
-            </div>
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
 
-            <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP á<a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a>ñ</h3>
-                <div class="interactive-card card">
-                    <p>USP سدیم فلوراید RS</p>
-                </div>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته بندی و نگهداری:</h3>
+                <p>در ظروف کاملاً بسته نگهداری شود. الزامات نگهداری مشخص نشده است.</p>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP á11ñ</h3>
+                <p>USP Sodium Fluoride RS</p>
             </div>
         </div>
 
     </div>
 
     <script>
-        function showTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(tab => {
-                tab.classList.add('hidden');
-            });
-            document.getElementById(tabId).classList.remove('hidden');
+        function showTab(event, tabId) {
+            // Remove 'tab-active' from all buttons and hide all tab contents
+            var tabButtons = document.getElementsByClassName("tab-button");
+            for (var i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("tab-active");
+                tabButtons[i].classList.add("tab-inactive");
+            }
 
-            document.querySelectorAll('.tab-button').forEach(button => {
-                button.classList.remove('tab-active');
-                button.classList.add('tab-inactive');
-            });
-            event.target.classList.remove('tab-inactive');
-            event.target.classList.add('tab-active');
+            var tabContents = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.add("hidden");
+            }
+
+            // Add 'tab-active' to the clicked button and show the corresponding tab content
+            event.currentTarget.classList.remove("tab-inactive");
+            event.currentTarget.classList.add("tab-active");
+
+            document.getElementById(tabId).classList.remove("hidden");
         }
 
-        // Initialize the first tab to be visible
-        document.addEventListener('DOMContentLoaded', () => {
-            showTab('definition');
+        function calculateAssay() {
+            const VB = parseFloat(document.getElementById("VB").value);
+            const VS = parseFloat(document.getElementById("VS").value);
+            const M = parseFloat(document.getElementById("M").value);
+            const W = parseFloat(document.getElementById("W").value);
+
+            const assayResultSpan = document.getElementById("assayResult");
+            const assayStatusSpan = document.getElementById("assayStatus");
+
+            if (!isNaN(VB) && !isNaN(VS) && !isNaN(M) && !isNaN(W) && W !== 0) {
+                const result = ((VB - VS) * M * 172.1) / W;
+                assayResultSpan.textContent = result.toFixed(2) + "%";
+
+                if (result >= 98.0 && result <= 105.0) {
+                    assayStatusSpan.textContent = "قبول";
+                    assayStatusSpan.className = "font-bold pass-text";
+                } else {
+                    assayStatusSpan.textContent = "رد";
+                    assayStatusSpan.className = "font-bold fail-text";
+                }
+            } else {
+                assayResultSpan.textContent = "";
+                assayStatusSpan.textContent = "";
+                assayStatusSpan.className = "font-bold";
+            }
+        }
+
+        function calculateAcidInsoluble() {
+            const W1 = parseFloat(document.getElementById("W1_acid").value);
+            const W2 = parseFloat(document.getElementById("W2_acid").value);
+
+            const acidInsolubleResultSpan = document.getElementById("acidInsolubleResult");
+            const acidInsolubleStatusSpan = document.getElementById("acidInsolubleStatus");
+
+            if (!isNaN(W1) && !isNaN(W2) && W2 !== 0) {
+                const result = ((W1) / (W2 * 10)) * 100; // W2 is in g, so * 1000/100 = *10
+                acidInsolubleResultSpan.textContent = result.toFixed(2);
+
+                if (result <= 0.2) {
+                    acidInsolubleStatusSpan.textContent = "قبول";
+                    acidInsolubleStatusSpan.className = "font-bold pass-text";
+                } else {
+                    acidInsolubleStatusSpan.textContent = "رد";
+                    acidInsolubleStatusSpan.className = "font-bold fail-text";
+                }
+            } else {
+                acidInsolubleResultSpan.textContent = "";
+                acidInsolubleStatusSpan.textContent = "";
+                acidInsolubleStatusSpan.className = "font-bold";
+            }
+        }
+
+        function calculateLOI() {
+            const W1 = parseFloat(document.getElementById("W1_loi").value);
+            const Wsa = parseFloat(document.getElementById("Wsa_loi").value);
+            const W2 = parseFloat(document.getElementById("W2_loi").value);
+
+            const loiResultSpan = document.getElementById("loiResult");
+            const loiStatusSpan = document.getElementById("loiStatus");
+
+            if (!isNaN(W1) && !isNaN(Wsa) && !isNaN(W2) && Wsa !== 0) {
+                const result = ((W1 + Wsa) - W2) / Wsa * 100;
+                loiResultSpan.textContent = result.toFixed(2);
+
+                if (result >= 24.5 && result <= 26.5) {
+                    loiStatusSpan.textContent = "قبول";
+                    loiStatusSpan.className = "font-bold pass-text";
+                } else {
+                    loiStatusSpan.textContent = "رد";
+                    loiStatusSpan.className = "font-bold fail-text";
+                }
+            } else {
+                loiResultSpan.textContent = "";
+                loiStatusSpan.textContent = "";
+                loiStatusSpan.className = "font-bold";
+            }
+        }
+
+        function calculateFluoride() {
+            const V = parseFloat(document.getElementById("V_fluoride").value);
+            const C = parseFloat(document.getElementById("C_fluoride").value);
+            const W = parseFloat(document.getElementById("W_fluoride").value);
+
+            const fluorideResultSpan = document.getElementById("fluorideResult");
+            const fluorideStatusSpan = document.getElementById("fluorideStatus");
+
+            if (!isNaN(V) && !isNaN(C) && !isNaN(W) && W !== 0) {
+                const result = (V * C) / W;
+                fluorideResultSpan.textContent = result.toFixed(0);
+
+                if (result <= 50) {
+                    fluorideStatusSpan.textContent = "قبول";
+                    fluorideStatusSpan.className = "font-bold pass-text";
+                } else {
+                    fluorideStatusSpan.textContent = "رد";
+                    fluorideStatusSpan.className = "font-bold fail-text";
+                }
+            } else {
+                fluorideResultSpan.textContent = "";
+                fluorideStatusSpan.textContent = "";
+                fluorideStatusSpan.className = "font-bold";
+            }
+        }
+
+
+        // Initialize the first tab to be visible on load
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector(".tab-button").click();
         });
     </script>
 </body>
