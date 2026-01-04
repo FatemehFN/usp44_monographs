@@ -106,54 +106,7 @@
             <p class="mb-4">کشندگی فرایند در دماهای غیر از <span class="ltr-text">121°</span> می‌تواند برای تعیین کشندگی معادل با کشندگی ارائه شده در <span class="ltr-text">121°</span> محاسبه شود. اثربخشی فرایند استریلیزاسیون با حرارت مرطوب ذاتاً به دمای هدف <span class="ltr-text">121°</span> که صرفاً تبدیل سلسیوس <span class="ltr-text">250°F</span> است، گره خورده نیست و می‌توان از دماهای دیگر نیز استفاده کرد. سیستم‌های کنترل استریلیزر برای استریلیزاسیون مستقیم معمولاً حداقل زمان را در دمای تنظیم شده پس از حذف اولیه هوا/تراکم ارائه می‌دهند. استریلیزرهای بخار با استفاده از سنسورهای دما که در خط تخلیه قبل از تله ترموستاتیک قرار دارند، کنترل می‌شوند، اگرچه ممکن است از طرح‌های کنترل دیگری نیز استفاده شود. دمای این مکان معمولاً برای مستندسازی دائمی شرایط استریلیزاسیون ثبت می‌شود. در استریلیزاسیون با تماس مستقیم، تجاوز از حداقل الزامات زمان-دما یا F0 به دلیل پیامدهای نامطلوب ناچیز برای مواد در حال استریل شدن قابل قبول است.</p>
             <p class="mb-4">کل کشندگی را می‌توان در طول فرایند محاسبه کرد. برای دمای مرجع خاص <span class="ltr-text">121°</span> و مقدار z برابر <span class="ltr-text">10°</span>، کل F0 انباشته شده را می‌توان با معادله زیر تعیین کرد:</p>
             <div class="formula-display">
-                <math xmlns="http://www.w3.org/1998/Math/MathML">
-                    <semantics>
-                        <mrow>
-                            <msub>
-                                <mi>F</mi>
-                                <mn>0</mn>
-                            </msub>
-                            <mo>=</mo>
-                            <mstyle displaystyle="true">
-                                <mrow>
-                                    <munderover>
-                                        <mo>&sum;</mo>
-                                        <mrow>
-                                            <mi>i</mi>
-                                            <mo>=</mo>
-                                            <mn>1</mn>
-                                        </mrow>
-                                        <mi>n</mi>
-                                    </munderover>
-                                    <msup>
-                                        <mn>10</mn>
-                                        <mrow>
-                                            <mfrac>
-                                                <mrow>
-                                                    <mo stretchy="false">(</mo>
-                                                    <msub>
-                                                        <mi>T</mi>
-                                                        <mi>i</mi>
-                                                    </msub>
-                                                    <mo>&minus;</mo>
-                                                    <mn>121</mn>
-                                                    <mo stretchy="false">)</mo>
-                                                </mrow>
-                                                <mrow>
-                                                    <mn>10</mn>
-                                                </mrow>
-                                            </mfrac>
-                                        </mrow>
-                                    </msup>
-                                    <mo>&times;</mo>
-                                    <mi mathvariant="normal">Δ</mi>
-                                    <mi>t</mi>
-                                </mrow>
-                            </mstyle>
-                        </mrow>
-                        <annotation encoding="application/x-tex">F_0 = \sum_{i=1}^{n} 10^{\frac{(T_i - 121)}{10}} \times \Delta t</annotation>
-                    </semantics>
-                </math>
+                $$F_0 = \sum_{i=1}^{n} 10^{\frac{(T_i - 121)}{10}} \times \Delta t$$
             </div>
             <p class="mb-4">که در آن:</p>
             <ul class="list-disc list-inside mb-4">
