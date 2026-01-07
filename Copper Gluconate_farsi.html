@@ -4,14 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف گلوکونات مس (USP)</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Vazirmatn Font -->
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
-    <!-- MathJax -->
-    <script type="text/javascript" id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -70,552 +66,178 @@
         .fail-text {
             color: #ef4444;
         }
-        .interactive-card {
-            background-color: #e0f2fe;
-            border: 1px solid #90cdf4;
-            padding: 1rem;
-            margin-top: 1rem;
-            border-radius: 0.5rem;
-        }
-        .calculation-button {
-            background-color: #2563eb;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
+<body>
     <div class="container mx-auto p-4 max-w-4xl">
+
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">مونوگراف گلوکونات مس (USP)</h1>
 
         <div class="flex justify-center mb-6 border-b border-gray-200">
-            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab(event, 'definition')">تعریف</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'identification')">شناسایی</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'assay')">سنجش</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'impurities')">ناخالصی‌ها</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'specific-tests')">آزمایشات خاص</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'additional-requirements')">الزامات اضافی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab(event, 'definition')">تعریف</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'identification')">شناسایی</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'assay')">سنجش</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'impurities')">ناخالصی‌ها</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'special-tests')">آزمایشات خاص</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'additional-requirements')">الزامات اضافی</button>
         </div>
 
-        <div id="definition" class="tab-content">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
-                <p>گلوکونات مس حاوی 98.0% تا 102.0% گلوکونات مس (C<sub>12</sub>H<sub>22</sub>CuO<sub>14</sub>) است.</p>
+        <div id="definition" class="tab-content card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+            <p>گلوکونات مس حاوی حداقل 98.0% و حداکثر 102.0% گلوکونات مس (<span class="ltr-text">C12H22CuO14</span>) است.</p>
+        </div>
+
+        <div id="identification" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. آزمون‌های شناسایی - عمومی</h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مس (Copper) <span class="ltr-text">[<a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a>]</span></h4>
+            <p>یک محلول 50 میلی‌گرم/میلی‌لیتر الزامات را برآورده می‌کند.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">ب. آزمون شناسایی کروماتوگرافی لایه نازک</h3>
+            <p><b>محلول استاندارد:</b> 10 میلی‌گرم/میلی‌لیتر از USP Potassium Gluconate RS</p>
+            <p><b>محلول نمونه:</b> 10 میلی‌گرم/میلی‌لیتر گلوکونات مس، در صورت نیاز با گرم کردن در حمام آب در دمای 60 درجه سانتی‌گراد برای حل شدن.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم کروماتوگرافی</h4>
+            <p>(رجوع کنید به کروماتوگرافی <span class="ltr-text">[<a href="General chapters/621.html" class="text-blue-600 hover:underline" target="_blank">621</a>]</span>، کروماتوگرافی لایه نازک.)</p>
+            <p><b>حالت:</b> TLC</p>
+            <p><b>جاذب:</b> لایه 0.25 میلی‌متری ژل سیلیکای کروماتوگرافی</p>
+            <p><b>حجم اعمال:</b> 5 µL</p>
+            <p><b>سیستم حلال توسعه:</b> الکل، اتیل استات، آمونیوم هیدروکسید، و آب (50:10:10:30)</p>
+            <p><b>معرف پاشش:</b> 2.5 گرم مولیبدات آمونیوم را در 50 میلی‌لیتر اسید سولفوریک 2 نرمال در یک فلاسک حجمی 100 میلی‌لیتری حل کنید، 1.0 گرم سولفات سری را اضافه کنید، برای حل شدن بچرخانید، و با اسید سولفوریک 2 نرمال تا حجم رقیق کنید.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز</h4>
+            <p><b>نمونه‌ها:</b> محلول استاندارد و محلول نمونه</p>
+            <p>کروماتوگرام را تا زمانی که لبه حلال حدود سه‌چهارم طول صفحه را طی کند، توسعه دهید. صفحه را از محفظه خارج کرده و در دمای 110 درجه سانتی‌گراد به مدت 20 دقیقه خشک کنید. اجازه دهید خنک شود و با معرف پاشش اسپری کنید. صفحه را در دمای 110 درجه سانتی‌گراد به مدت حدود 10 دقیقه حرارت دهید.</p>
+            <p><b>معیارهای پذیرش:</b> لکه اصلی محلول نمونه از نظر رنگ، اندازه و مقدار RF با لکه محلول استاندارد مطابقت دارد.</p>
+        </div>
+
+        <div id="assay" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. روش کار</h3>
+            <p><b>نمونه:</b> 1.5 گرم گلوکونات مس</p>
+            <p><b>شستشو:</b> 100 میلی‌لیتر آب</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم تیتراسیون</h4>
+            <p>(رجوع کنید به تیتراسیون <span class="ltr-text">[<a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a>]</span>.)</p>
+            <p><b>حالت:</b> تیتراسیون غیرمستقیم</p>
+            <p><b>تیترانت:</b> 0.1 نرمال سدیم تیوسولفات VS</p>
+            <p><b>تشخیص نقطه پایانی:</b> بصری</p>
+            <p><b>آنالیز:</b> نمونه را در 100 میلی‌لیتر آب حل کنید. 2 میلی‌لیتر اسید استیک یخچالی و 5 گرم پتاسیم یدید اضافه کنید، مخلوط کنید، و با تیترانت تا رنگ زرد کم‌رنگ تیتراسیون کنید. 2 گرم تیوسیانات آمونیوم اضافه کنید و مخلوط کنید. 3 میلی‌لیتر نشاسته TS اضافه کنید و به تیتراسیون تا نقطه پایانی سفید شیری ادامه دهید. تعیین شستشو را انجام دهید.</p>
+            <p>درصد گلوکونات مس (<span class="ltr-text">C12H22CuO14</span>) را در نمونه گرفته شده محاسبه کنید:</p>
+            <div class="formula-display">
+                <p>$$ \text{Result} = \frac{[(V_S - V_B) \times N \times F]}{W} \times 100 $$</p>
             </div>
+            <p><span class="ltr-text">VS</span> = حجم تیترانت مصرف شده توسط نمونه (mL)</p>
+            <p><span class="ltr-text">VB</span> = حجم تیترانت مصرف شده توسط شستشو (mL)</p>
+            <p><span class="ltr-text">N</span> = نرمالیته واقعی تیترانت (mEq/mL)</p>
+            <p><span class="ltr-text">F</span> = ضریب معادل‌سازی، 453.8 میلی‌گرم/mEq</p>
+            <p><span class="ltr-text">W</span> = وزن نمونه (mg)</p>
+            <p><b>معیارهای پذیرش:</b> 98.0%–102.0%</p>
         </div>
 
-        <div id="identification" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+        <div id="impurities" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات، کلرید</h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کلرید <span class="ltr-text">[<a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a>]</span></h4>
+            <p><b>محلول استاندارد:</b> 1.0 میلی‌لیتر اسید هیدروکلریک 0.020 نرمال</p>
+            <p><b>نمونه:</b> 1.0 گرم</p>
+            <p><b>معیارهای پذیرش:</b> حداکثر 0.07%</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. آزمون‌های شناسایی - عمومی</h3>
-                <p><strong>مس <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a>:</strong> محلول 50 میلی‌گرم بر میلی‌لیتر شرایط را برآورده می‌کند.</p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات، سولفات</h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سولفات <span class="ltr-text">[<a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a>]</span></h4>
+            <p><b>محلول استاندارد:</b> 1.0 میلی‌لیتر اسید سولفوریک 0.020 نرمال</p>
+            <p><b>نمونه:</b> 2.0 گرم</p>
+            <p><b>معیارهای پذیرش:</b> حداکثر 0.05%</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">ب. آزمون شناسایی کروماتوگرافی لایه نازک</h3>
-                <p><strong>محلول استاندارد:</strong> 10 میلی‌گرم بر میلی‌لیتر RS گلوکونات پتاسیم USP</p>
-                <p><strong>محلول نمونه:</strong> 10 میلی‌گرم بر میلی‌لیتر گلوکونات مس، در صورت لزوم برای حل کردن در حمام آب 60 درجه سانتی‌گراد حرارت داده شود.</p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آرسنیک، روش I</h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آرسنیک، روش I <span class="ltr-text">[<a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a>]</span></h4>
+            <p><b>آماده‌سازی تست:</b> 1.0 گرم در 35 میلی‌لیتر آب</p>
+            <p><b>معیارهای پذیرش:</b> حداکثر 3 ppm</p>
 
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم کروماتوگرافی</h4>
-                <p>(به کروماتوگرافی <a href="General chapters/621.html" class="text-blue-600 hover:underline" target="_blank">621</a>، کروماتوگرافی لایه نازک مراجعه کنید.)</p>
-                <p><strong>حالت:</strong> TLC</p>
-                <p><strong>جاذب:</strong> لایه 0.25 میلی‌متر ژل سیلیکا کروماتوگرافی</p>
-                <p><strong>حجم اعمال:</strong> 5 µL</p>
-                <p><strong>سیستم حلال توسعه:</strong> الکل، اتیل استات، آمونیوم هیدروکسید و آب (50:10:10:30)</p>
-                <p><strong>معرف اسپری:</strong> 2.5 گرم مولیبدات آمونیوم را در 50 میلی‌لیتر اسید سولفوریک 2 نرمال در یک فلاسک حجمی 100 میلی‌لیتر حل کنید، 1.0 گرم سولفات سریم اضافه کنید، بچرخانید تا حل شود و با اسید سولفوریک 2 نرمال تا حجم برسانید.</p>
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
-                <p><strong>نمونه‌ها:</strong> محلول استاندارد و محلول نمونه</p>
-                <p>کروماتوگرام را تا زمانی که جبهه حلال حدود سه چهارم طول صفحه حرکت کند، توسعه دهید. صفحه را از محفظه خارج کرده و در دمای 110 درجه سانتی‌گراد به مدت 20 دقیقه خشک کنید. اجازه دهید خنک شود و با معرف اسپری اسپری کنید. صفحه را در دمای 110 درجه سانتی‌گراد به مدت حدود 10 دقیقه حرارت دهید.</p>
-                <p><strong>معیارهای پذیرش:</strong> لکه اصلی محلول نمونه از نظر رنگ، اندازه و مقدار RF با محلول استاندارد مطابقت دارد.</p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">محدودیت سرب</h3>
+            <p>[<b>نکته:</b> برای تهیه تمام محلول‌های آبی و برای شستشوی ظروف شیشه‌ای قبل از استفاده، از آبی استفاده کنید که از یک رزین تبادل یونی بستر مختلط اسید قوی، باز قوی عبور داده شده است. تمام معرف‌ها را با کمترین میزان سرب ممکن انتخاب کنید و تمام محلول‌های معرف را در ظروف شیشه‌ای بوروسیلیکات نگهداری کنید. ظروف شیشه‌ای را قبل از استفاده با غوطه‌ور کردن در اسید نیتریک 8 نرمال گرم به مدت 30 دقیقه و شستشو با آب دیونیزه تمیز کنید.]</p>
+            <p><b>محلول مادر استاندارد:</b> 10.0 میلی‌لیتر از محلول مادر استاندارد نیترات سرب TS را به یک فلاسک حجمی 100 میلی‌لیتری منتقل کنید. 40 میلی‌لیتر آب و 5 میلی‌لیتر اسید نیتریک اضافه کنید و با آب تا حجم رقیق کنید.</p>
+            <p><b>محلول استاندارد:</b> 0.40 میلی‌لیتر از محلول مادر استاندارد را به یک فلاسک حجمی 100 میلی‌لیتری منتقل کنید. 50 میلی‌لیتر آب و 1 میلی‌لیتر اسید نیتریک اضافه کنید و با آب تا حجم رقیق کنید. این محلول حاوی 0.04 µg/mL سرب است.</p>
+            <p><b>محلول مادر نمونه:</b> 4 گرم گلوکونات مس را به یک فلاسک حجمی 100 میلی‌لیتری منتقل کنید. 50 میلی‌لیتر آب و 5 میلی‌لیتر اسید نیتریک اضافه کنید و برای حل شدن نمونه، سونوگرافی کنید. با آب تا حجم رقیق کنید. 4.0 میلی‌لیتر از این محلول را به یک فلاسک حجمی 100 میلی‌لیتری دوم منتقل کنید. 50 میلی‌لیتر آب و 1 میلی‌لیتر اسید نیتریک اضافه کنید، با آب تا حجم رقیق کنید و مخلوط کنید.</p>
+            <p><b>شستشو:</b> 1.2 میلی‌لیتر اسید نیتریک را به یک فلاسک حجمی 100 میلی‌لیتری منتقل کرده و با آب تا حجم رقیق کنید.</p>
+            <p><b>محلول نمونه A:</b> 10.0 میلی‌لیتر از محلول مادر نمونه را با 10.0 میلی‌لیتر شستشو مخلوط کنید. این محلول حاوی 0.00 µg/mL سرب اضافه شده از محلول استاندارد است.</p>
+            <p><b>محلول نمونه B:</b> 10.0 میلی‌لیتر از محلول مادر نمونه را با 4.0 میلی‌لیتر محلول استاندارد و 6.0 میلی‌لیتر شستشو مخلوط کنید. این محلول حاوی 0.008 µg/mL سرب اضافه شده از محلول استاندارد است.</p>
+            <p><b>محلول نمونه C:</b> 10.0 میلی‌لیتر از محلول مادر نمونه را با 7.0 میلی‌لیتر محلول استاندارد و 3.0 میلی‌لیتر شستشو مخلوط کنید. این محلول حاوی 0.014 µg/mL سرب اضافه شده از محلول استاندارد است.</p>
+            <p><b>محلول نمونه D:</b> 10.0 میلی‌لیتر از محلول مادر نمونه را با 10.0 میلی‌لیتر محلول استاندارد مخلوط کنید. این محلول حاوی 0.020 µg/mL سرب اضافه شده از محلول استاندارد است.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط دستگاهی</h4>
+            <p>(رجوع کنید به طیف‌سنجی جذب اتمی <span class="ltr-text">[<a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a>]</span>.)</p>
+            <p><b>حالت:</b> طیف‌سنجی جذب اتمی کوره گرافیتی</p>
+            <p><b>طول موج تحلیلی:</b> 283.3 nm</p>
+            <p><b>لامپ:</b> کاتد توخالی سرب</p>
+            <p><b>نرخ جریان آرگون:</b> 3 L/min، یا طبق یادداشت</p>
+            <p><b>دمای لوله گرافیتی:</b> به جدول 1 مراجعه کنید.</p>
+            <p><b>حجم تزریق:</b> 20 µL</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز</h4>
+            <p><b>نمونه‌ها:</b> شستشو و محلول‌های نمونه A، B، C، و D</p>
+            <p>لوله گرافیتی به گونه‌ای برنامه‌ریزی حرارتی می‌شود که در حدود 2 دقیقه به 2000 درجه سانتی‌گراد برسد، همانطور که در جدول 1 نشان داده شده است. هنگامی که دما به 2000 درجه سانتی‌گراد رسید، جذب را در 283.3 نانومتر، با تصحیح جذب پس‌زمینه، تعیین کنید. محلول‌های نمونه و شستشو را تزریق کرده و جذب‌ها را تعیین کنید. مقادیر جذب محلول‌های نمونه را با کسر مقدار جذب از شستشو از هر کدام، تصحیح کنید. جذب‌های تصحیح شده محلول‌های نمونه را در مقابل غلظت سرب اضافه شده، بر حسب µg/mL، رسم کنید. خط مستقیمی را که به بهترین وجه چهار نقطه را برازش می‌دهد، رسم کنید و خط را تا جایی که محور غلظت را قطع کند، برون‌یابی کنید. از نقطه تقاطع، غلظت، C، بر حسب µg/mL، سرب را در محلول نمونه A تعیین کنید.</p>
+            <p>محتوای سرب را در بخش گلوکونات مس گرفته شده محاسبه کنید:</p>
+            <div class="formula-display">
+                <p>$$ \text{Result} = \frac{(C \times V)}{W} $$</p>
             </div>
-        </div>
+            <p><span class="ltr-text">C</span> = غلظت سرب در محلول نمونه A (µg/mL)، تعیین شده از نقطه تقاطع خط رگرسیون خطی</p>
+            <p><span class="ltr-text">V</span> = حجم حلال گرفته شده برای تهیه محلول نمونه A (mL)</p>
+            <p><span class="ltr-text">W</span> = وزن گلوکونات کلسیم گرفته شده برای تهیه محلول نمونه A (g) (این باید گلوکونات مس باشد)</p>
+            <p><b>معیارهای پذیرش:</b> حداکثر 25 µg/g</p>
 
-        <div id="assay" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش</h4>
-                <p><strong>نمونه:</strong> 1.5 گرم گلوکونات مس</p>
-                <p><strong>شستشو:</strong> 100 میلی‌لیتر آب</p>
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم تیتراسیون</h4>
-                <p>(به تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید.)</p>
-                <p><strong>حالت:</strong> تیتراسیون غیرمستقیم</p>
-                <p><strong>تیترانت:</strong> سدیم تیو‌سولفات 0.1 نرمال VS</p>
-                <p><strong>تشخیص نقطه پایانی:</strong> بصری</p>
-                <p><strong>تجزیه و تحلیل:</strong> نمونه را در 100 میلی‌لیتر آب حل کنید. 2 میلی‌لیتر اسید استیک گلاسیال و 5 گرم پتاسیم یدید اضافه کنید، مخلوط کنید و با تیترانت تا رنگ زرد کم‌رنگ تیتراسیون کنید. 2 گرم تیوسیانات آمونیوم اضافه کنید و مخلوط کنید. 3 میلی‌لیتر نشاسته TS اضافه کنید و به تیتراسیون تا نقطه پایانی سفید شیری ادامه دهید. تعیین شستشو را انجام دهید.</p>
-                <p>درصد گلوکونات مس (C<sub>12</sub>H<sub>22</sub>CuO<sub>14</sub>) را در نمونه گرفته شده محاسبه کنید:</p>
-                <div class="formula-display">
-                    $$Result = \frac{(V_S - V_B) \times N \times F}{W} \times 100$$
-                </div>
-                <p><span class="ltr-text">V<sub>S</sub></span> = حجم تیترانت مصرفی توسط نمونه (mL)</p>
-                <p><span class="ltr-text">V<sub>B</sub></span> = حجم تیترانت مصرفی توسط شستشو (mL)</p>
-                <p><span class="ltr-text">N</span> = نرمالیته واقعی تیترانت (mEq/mL)</p>
-                <p><span class="ltr-text">F</span> = ضریب هم‌ارزی، 453.8 میلی‌گرم بر mEq</p>
-                <p><span class="ltr-text">W</span> = وزن نمونه (mg)</p>
-                <p><strong>معیارهای پذیرش:</strong> 98.0%–102.0%</p>
-
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب سنجش</h4>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="vs" class="block text-sm font-medium text-gray-700">حجم تیترانت مصرفی توسط نمونه (VS) (mL)</label>
-                            <input type="text" id="vs" name="vs" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 input-field-width">
-                        </div>
-                        <div>
-                            <label for="vb" class="block text-sm font-medium text-gray-700">حجم تیترانت مصرفی توسط شستشو (VB) (mL)</label>
-                            <input type="text" id="vb" name="vb" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 input-field-width">
-                        </div>
-                        <div>
-                            <label for="n" class="block text-sm font-medium text-gray-700">نرمالیته واقعی تیترانت (N) (mEq/mL)</label>
-                            <input type="text" id="n" name="n" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 input-field-width">
-                        </div>
-                        <div>
-                            <label for="w_assay" class="block text-sm font-medium text-gray-700">وزن نمونه (W) (mg)</label>
-                            <input type="text" id="w_assay" name="w_assay" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 input-field-width">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateAssay()">محاسبه</button>
-                    <div class="mt-4">
-                        <p>نتیجه: <span id="assay-result">--</span>%</p>
-                        <p>وضعیت: <span id="assay-status">--</span></p>
-                    </div>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                    <textarea id="assay-additional-spec" name="assay-additional-spec" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">مواد کاهنده</h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مواد کاهنده</h4>
+            <p><b>نمونه:</b> 1.0 گرم گلوکونات مس</p>
+            <p><b>شستشو:</b> 10 میلی‌لیتر آب</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم تیتراسیون</h4>
+            <p>(رجوع کنید به تیتراسیون <span class="ltr-text">[<a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a>]</span>.)</p>
+            <p><b>حالت:</b> تیتراسیون باقی‌مانده</p>
+            <p><b>تیترانت:</b> 0.1 نرمال ید VS</p>
+            <p><b>تیترانت پشتیبان:</b> 0.1 نرمال سدیم تیوسولفات VS</p>
+            <p><b>تشخیص نقطه پایانی:</b> بصری</p>
+            <p><b>آنالیز:</b> نمونه را در یک فلاسک مخروطی 250 میلی‌لیتری منتقل کنید، 10 میلی‌لیتر آب برای حل کردن نمونه اضافه کنید، سپس 25 میلی‌لیتر سیترات مس قلیایی TS اضافه کنید. فلاسک را بپوشانید، به آرامی به مدت 5 دقیقه، با زمان‌بندی دقیق، بجوشانید و به سرعت تا دمای اتاق خنک کنید. 25 میلی‌لیتر اسید استیک 0.6 نرمال، 10.0 میلی‌لیتر تیترانت، و 10 میلی‌لیتر اسید هیدروکلریک 3 نرمال اضافه کنید و با تیترانت پشتیبان تیتراسیون کنید، 3 میلی‌لیتر نشاسته TS را در هنگام نزدیک شدن به نقطه پایانی اضافه کنید. تعیین شستشو را انجام دهید.</p>
+            <p>درصد مواد کاهنده (به صورت دکستروز) را در نمونه گرفته شده محاسبه کنید:</p>
+            <div class="formula-display">
+                <p>$$ \text{Result} = \frac{[(V_B - V_S) \times N \times F]}{W} \times 100 $$</p>
             </div>
+            <p><span class="ltr-text">VB</span> = حجم تیترانت پشتیبان مصرف شده توسط شستشو (mL)</p>
+            <p><span class="ltr-text">VS</span> = حجم تیترانت پشتیبان مصرف شده توسط نمونه (mL)</p>
+            <p><span class="ltr-text">N</span> = نرمالیته واقعی تیترانت پشتیبان (mEq/mL)</p>
+            <p><span class="ltr-text">F</span> = ضریب معادل‌سازی، 27 میلی‌گرم/mEq</p>
+            <p><span class="ltr-text">W</span> = وزن نمونه (mg)</p>
+            <p><b>معیارهای پذیرش:</b> حداکثر 1.0%</p>
         </div>
 
-        <div id="impurities" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلرید و سولفات</h3>
-                <p><strong>کلرید <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a></strong></p>
-                <p><strong>محلول استاندارد:</strong> 1.0 میلی‌لیتر اسید هیدروکلریک 0.020 نرمال</p>
-                <p><strong>نمونه:</strong> 1.0 گرم</p>
-                <p><strong>معیارهای پذیرش:</strong> NMT 0.07%</p>
-
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تعیین کلرید</h4>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="chloride_sample_weight" class="block text-sm font-medium text-gray-700">وزن نمونه (g)</label>
-                            <input type="text" id="chloride_sample_weight" name="chloride_sample_weight" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 input-field-width">
-                        </div>
-                        <div>
-                            <label for="chloride_turbidity" class="block text-sm font-medium text-gray-700">توربیدیتی نمونه (mL)</label>
-                            <input type="text" id="chloride_turbidity" name="chloride_turbidity" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 input-field-width">
-                        </div>
-                        <div>
-                            <label for="chloride_standard_volume" class="block text-sm font-medium text-gray-700">حجم محلول استاندارد (mL)</label>
-                            <input type="text" id="chloride_standard_volume" name="chloride_standard_volume" readonly class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 input-field-width">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateChloride()">محاسبه</button>
-                    <div class="mt-4">
-                        <p>نتیجه: <span id="chloride-result">--</span>%</p>
-                        <p>وضعیت: <span id="chloride-status">--</span></p>
-                    </div>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                    <textarea id="chloride-additional-spec" name="chloride-additional-spec" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-
-                <p><strong>سولفات <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a></strong></p>
-                <p><strong>محلول استاندارد:</strong> 1.0 میلی‌لیتر اسید سولفوریک 0.020 نرمال</p>
-                <p><strong>نمونه:</strong> 2.0 گرم</p>
-                <p><strong>معیارهای پذیرش:</strong> NMT 0.05%</p>
-
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تعیین سولفات</h4>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="sulfate_sample_weight" class="block text-sm font-medium text-gray-700">وزن نمونه (g)</label>
-                            <input type="text" id="sulfate_sample_weight" name="sulfate_sample_weight" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 input-field-width">
-                        </div>
-                        <div>
-                            <label for="sulfate_turbidity" class="block text-sm font-medium text-gray-700">توربیدیتی نمونه (mL)</label>
-                            <input type="text" id="sulfate_turbidity" name="sulfate_turbidity" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 input-field-width">
-                        </div>
-                        <div>
-                            <label for="sulfate_standard_volume" class="block text-sm font-medium text-gray-700">حجم محلول استاندارد (mL)</label>
-                            <input type="text" id="sulfate_standard_volume" name="sulfate_standard_volume" readonly class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 input-field-width">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateSulfate()">محاسبه</button>
-                    <div class="mt-4">
-                        <p>نتیجه: <span id="sulfate-result">--</span>%</p>
-                        <p>وضعیت: <span id="sulfate-status">--</span></p>
-                    </div>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                    <textarea id="sulfate-additional-spec" name="sulfate-additional-spec" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">آرسنیک، روش I <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a></h3>
-                <p><strong>آماده‌سازی تست:</strong> 1.0 گرم در 35 میلی‌لیتر آب</p>
-                <p><strong>معیارهای پذیرش:</strong> NMT 3 ppm</p>
-
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تعیین آرسنیک</h4>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="arsenic_sample_weight" class="block text-sm font-medium text-gray-700">وزن نمونه (g)</label>
-                            <input type="text" id="arsenic_sample_weight" name="arsenic_sample_weight" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 input-field-width">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateArsenic()">محاسبه</button>
-                    <div class="mt-4">
-                        <p>نتیجه: <span id="arsenic-result">--</span> ppm</p>
-                        <p>وضعیت: <span id="arsenic-status">--</span></p>
-                    </div>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                    <textarea id="arsenic-additional-spec" name="arsenic-additional-spec" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">محدودیت سرب</h3>
-                <p>[<strong>توجه</strong>—برای آماده‌سازی تمام محلول‌های آبی و برای شستشوی ظروف شیشه‌ای قبل از استفاده، از آبی استفاده کنید که از یک رزین تبادل یونی مخلوط اسیدی قوی، بازی قوی عبور داده شده است. تمام معرف‌ها را با کمترین میزان سرب ممکن انتخاب کنید و تمام محلول‌های معرف را در ظروف شیشه‌ای بوروسیلیکات نگهداری کنید. ظروف شیشه‌ای را قبل از استفاده با غوطه‌ور کردن در اسید نیتریک 8 نرمال گرم به مدت 30 دقیقه و شستشو با آب دیونیزه تمیز کنید.]</p>
-                <p><strong>محلول مادر استاندارد:</strong> 10.0 میلی‌لیتر از محلول مادر سرب نیترات TS را در یک فلاسک حجمی 100 میلی‌لیتر منتقل کنید. 40 میلی‌لیتر آب و 5 میلی‌لیتر اسید نیتریک اضافه کنید و با آب تا حجم برسانید.</p>
-                <p><strong>محلول استاندارد:</strong> 0.40 میلی‌لیتر از محلول مادر استاندارد را در یک فلاسک حجمی 100 میلی‌لیتر منتقل کنید. 50 میلی‌لیتر آب و 1 میلی‌لیتر اسید نیتریک اضافه کنید و با آب تا حجم برسانید. این محلول حاوی 0.04 میکروگرم بر میلی‌لیتر سرب است.</p>
-                <p><strong>محلول مادر نمونه:</strong> 4 گرم گلوکونات مس را در یک فلاسک حجمی 100 میلی‌لیتر منتقل کنید. 50 میلی‌لیتر آب و 5 میلی‌لیتر اسید نیتریک اضافه کنید، برای حل کردن نمونه اولتراسونیک کنید. با آب تا حجم برسانید. 4.0 میلی‌لیتر از این محلول را در یک فلاسک حجمی 100 میلی‌لیتر دوم منتقل کنید. 50 میلی‌لیتر آب و 1 میلی‌لیتر اسید نیتریک اضافه کنید، با آب تا حجم برسانید و مخلوط کنید.</p>
-                <p><strong>شستشو:</strong> 1.2 میلی‌لیتر اسید نیتریک را در یک فلاسک حجمی 100 میلی‌لیتر منتقل کرده و با آب تا حجم برسانید.</p>
-                <p><strong>محلول نمونه A:</strong> 10.0 میلی‌لیتر از محلول مادر نمونه را با 10.0 میلی‌لیتر شستشو مخلوط کنید. این محلول حاوی 0.00 میکروگرم بر میلی‌لیتر سرب اضافه شده از محلول استاندارد است.</p>
-                <p><strong>محلول نمونه B:</strong> 10.0 میلی‌لیتر از محلول مادر نمونه را با 4.0 میلی‌لیتر محلول استاندارد و 6.0 میلی‌لیتر شستشو مخلوط کنید. این محلول حاوی 0.008 میکروگرم بر میلی‌لیتر سرب اضافه شده از محلول استاندارد است.</p>
-                <p><strong>محلول نمونه C:</strong> 10.0 میلی‌لیتر از محلول مادر نمونه را با 7.0 میلی‌لیتر محلول استاندارد و 3.0 میلی‌لیتر شستشو مخلوط کنید. این محلول حاوی 0.014 میکروگرم بر میلی‌لیتر سرب اضافه شده از محلول استاندارد است.</p>
-                <p><strong>محلول نمونه D:</strong> 10.0 میلی‌لیتر از محلول مادر نمونه را با 10.0 میلی‌لیتر محلول استاندارد مخلوط کنید. این محلول حاوی 0.020 میکروگرم بر میلی‌لیتر سرب اضافه شده از محلول استاندارد است.</p>
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط دستگاهی</h4>
-                <p>(به اسپکتروسکوپی جذب اتمی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید.)</p>
-                <p><strong>حالت:</strong> اسپکتروفتومتری جذب اتمی کوره گرافیتی</p>
-                <p><strong>طول موج تحلیلی:</strong> 283.3 nm</p>
-                <p><strong>لامپ:</strong> کاتد توخالی سرب</p>
-                <p><strong>نرخ جریان آرگون:</strong> 3 لیتر در دقیقه، یا طبق یادداشت</p>
-                <p><strong>دمای لوله گرافیت:</strong> به جدول 1 مراجعه کنید.</p>
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">جدول 1</h4>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>دما (℃)</th>
-                            <th>زمان (s)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>70</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>90</td>
-                            <td>60</td>
-                        </tr>
-                        <tr>
-                            <td>120</td>
-                            <td>15</td>
-                        </tr>
-                        <tr>
-                            <td>250 (بدون جریان گاز)</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td>250</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>250 (بدون جریان گاز)</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>2000</td>
-                            <td>3.2</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p><strong>حجم تزریق:</strong> 20 µL</p>
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
-                <p><strong>نمونه‌ها:</strong> محلول‌های A، B، C و D شستشو و نمونه</p>
-                <p>لوله گرافیت به صورت برنامه‌ریزی شده حرارتی برای رسیدن به 2000 درجه سانتی‌گراد در حدود 2 دقیقه، همانطور که در جدول 1 نشان داده شده است، حرارت داده می‌شود. هنگامی که دما به 2000 درجه سانتی‌گراد می‌رسد، جذب در 283.3 نانومتر، تصحیح شده برای جذب پس‌زمینه، تعیین می‌شود. محلول‌های نمونه و شستشو را تزریق کرده و جذب‌ها را تعیین کنید. مقادیر جذب از محلول‌های نمونه را با کم کردن مقدار جذب از شستشو از هر کدام، تصحیح کنید. جذب‌های تصحیح شده محلول‌های نمونه را در برابر غلظت‌های سرب اضافه شده، بر حسب میکروگرم بر میلی‌لیتر، رسم کنید. خط مستقیم که به بهترین وجه چهار نقطه را برازش می‌دهد، رسم کرده و خط را تا زمانی که با محور غلظت تلاقی کند، برون‌یابی کنید. از نقطه تلاقی، غلظت، C، بر حسب میکروگرم بر میلی‌لیتر، سرب در محلول نمونه A را تعیین کنید.</p>
-                <p>محتوای سرب در بخش گلوکونات مس گرفته شده را محاسبه کنید:</p>
-                <div class="formula-display">
-                    $$Result = \frac{(C \times V)}{W}$$
-                </div>
-                <p><span class="ltr-text">C</span> = غلظت سرب در محلول نمونه A (µg/mL)، که از نقطه تلاقی خط رگرسیون خطی تعیین می‌شود.</p>
-                <p><span class="ltr-text">V</span> = حجم حلال گرفته شده برای تهیه محلول نمونه A (mL)</p>
-                <p><span class="ltr-text">W</span> = وزن گلوکونات کلسیم گرفته شده برای تهیه محلول نمونه A (g)</p>
-                <p><strong>معیارهای پذیرش:</strong> NMT 25 µg/g</p>
-
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب محدودیت سرب</h4>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="lead_c" class="block text-sm font-medium text-gray-700">غلظت سرب در محلول نمونه A (C) (µg/mL)</label>
-                            <input type="text" id="lead_c" name="lead_c" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 input-field-width">
-                        </div>
-                        <div>
-                            <label for="lead_v" class="block text-sm font-medium text-gray-700">حجم حلال برای محلول نمونه A (V) (mL)</label>
-                            <input type="text" id="lead_v" name="lead_v" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 input-field-width">
-                        </div>
-                        <div>
-                            <label for="lead_w" class="block text-sm font-medium text-gray-700">وزن نمونه برای محلول نمونه A (W) (g)</label>
-                            <input type="text" id="lead_w" name="lead_w" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 input-field-width">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateLead()">محاسبه</button>
-                    <div class="mt-4">
-                        <p>نتیجه: <span id="lead-result">--</span> µg/g</p>
-                        <p>وضعیت: <span id="lead-status">--</span></p>
-                    </div>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                    <textarea id="lead-additional-spec" name="lead-additional-spec" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
+        <div id="special-tests" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته بندی و نگهداری</h3>
+            <p>در ظروف کاملاً بسته نگهداری شود.</p>
         </div>
 
-        <div id="specific-tests" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">مواد کاهنده</h3>
-                <p><strong>نمونه:</strong> 1.0 گرم گلوکونات مس</p>
-                <p><strong>شستشو:</strong> 10 میلی‌لیتر آب</p>
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم تیتراسیون</h4>
-                <p>(به تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید.)</p>
-                <p><strong>حالت:</strong> تیتراسیون باقی‌مانده</p>
-                <p><strong>تیترانت:</strong> ید 0.1 نرمال VS</p>
-                <p><strong>ضد تیترانت:</strong> سدیم تیو‌سولفات 0.1 نرمال VS</p>
-                <p><strong>تشخیص نقطه پایانی:</strong> بصری</p>
-                <p><strong>تجزیه و تحلیل:</strong> نمونه را در یک فلاسک مخروطی 250 میلی‌لیتر منتقل کنید، 10 میلی‌لیتر آب برای حل کردن نمونه اضافه کنید، سپس 25 میلی‌لیتر سیترات مس قلیایی TS اضافه کنید. فلاسک را بپوشانید، به آرامی به مدت 5 دقیقه، با زمان‌بندی دقیق، بجوشانید و به سرعت تا دمای اتاق خنک کنید. 25 میلی‌لیتر اسید استیک 0.6 نرمال، 10.0 میلی‌لیتر تیترانت و 10 میلی‌لیتر اسید هیدروکلریک 3 نرمال اضافه کنید و با ضد تیترانت تیتراسیون کنید، در حالی که 3 میلی‌لیتر نشاسته TS را هنگام نزدیک شدن به نقطه پایانی اضافه کنید. تعیین شستشو را انجام دهید.</p>
-                <p>درصد مواد کاهنده (به صورت دکستروز) را در نمونه گرفته شده محاسبه کنید:</p>
-                <div class="formula-display">
-                    $$Result = \frac{(V_B - V_S) \times N \times F}{W} \times 100$$
-                </div>
-                <p><span class="ltr-text">V<sub>B</sub></span> = حجم ضد تیترانت مصرفی توسط شستشو (mL)</p>
-                <p><span class="ltr-text">V<sub>S</sub></span> = حجم ضد تیترانت مصرفی توسط نمونه (mL)</p>
-                <p><span class="ltr-text">N</span> = نرمالیته واقعی ضد تیترانت (mEq/mL)</p>
-                <p><span class="ltr-text">F</span> = ضریب هم‌ارزی، 27 میلی‌گرم بر mEq</p>
-                <p><span class="ltr-text">W</span> = وزن نمونه (mg)</p>
-                <p><strong>معیارهای پذیرش:</strong> NMT 1.0%</p>
-
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب مواد کاهنده</h4>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="reducing_vb" class="block text-sm font-medium text-gray-700">حجم ضد تیترانت برای شستشو (VB) (mL)</label>
-                            <input type="text" id="reducing_vb" name="reducing_vb" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 input-field-width">
-                        </div>
-                        <div>
-                            <label for="reducing_vs" class="block text-sm font-medium text-gray-700">حجم ضد تیترانت برای نمونه (VS) (mL)</label>
-                            <input type="text" id="reducing_vs" name="reducing_vs" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 input-field-width">
-                        </div>
-                        <div>
-                            <label for="reducing_n" class="block text-sm font-medium text-gray-700">نرمالیته ضد تیترانت (N) (mEq/mL)</label>
-                            <input type="text" id="reducing_n" name="reducing_n" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 input-field-width">
-                        </div>
-                        <div>
-                            <label for="reducing_w" class="block text-sm font-medium text-gray-700">وزن نمونه (W) (mg)</label>
-                            <input type="text" id="reducing_w" name="reducing_w" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 input-field-width">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateReducingSubstances()">محاسبه</button>
-                    <div class="mt-4">
-                        <p>نتیجه: <span id="reducing-result">--</span>%</p>
-                        <p>وضعیت: <span id="reducing-status">--</span></p>
-                    </div>
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                    <textarea id="reducing-additional-spec" name="reducing-additional-spec" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
+        <div id="additional-requirements" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP</h3>
+            <p>USP Potassium Gluconate RS</p>
         </div>
 
-        <div id="additional-requirements" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته بندی و نگهداری</h3>
-                <p>در ظروف خوب بسته نگهداری شود.</p>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h3>
-                <p>USP Potassium Gluconate RS</p>
-            </div>
-        </div>
     </div>
 
     <script>
         function showTab(event, tabId) {
-            var tabButtons = document.querySelectorAll('.tab-button');
-            tabButtons.forEach(button => {
+            // Remove the 'tab-active' class from all buttons
+            document.querySelectorAll('.tab-button').forEach(button => {
                 button.classList.remove('tab-active');
                 button.classList.add('tab-inactive');
             });
 
+            // Add the 'tab-active' class to the clicked button
             event.currentTarget.classList.add('tab-active');
             event.currentTarget.classList.remove('tab-inactive');
 
-            var tabContents = document.querySelectorAll('.tab-content');
-            tabContents.forEach(content => {
-                content.classList.add('hidden');
+            // Hide all tab content divs
+            document.querySelectorAll('.tab-content').forEach(div => {
+                div.classList.add('hidden');
             });
 
+            // Show the selected tab content div
             document.getElementById(tabId).classList.remove('hidden');
         }
 
-        function updateStatus(elementId, value, limit) {
-            const statusElement = document.getElementById(elementId);
-            if (value !== null && limit !== null) {
-                if (value <= limit) {
-                    statusElement.textContent = 'Pass';
-                    statusElement.className = 'pass-text';
-                } else {
-                    statusElement.textContent = 'Fail';
-                    statusElement.className = 'fail-text';
-                }
-            } else {
-                statusElement.textContent = '--';
-                statusElement.className = '';
-            }
-        }
-
-        function calculateAssay() {
-            const vs = parseFloat(document.getElementById('vs').value);
-            const vb = parseFloat(document.getElementById('vb').value);
-            const n = parseFloat(document.getElementById('n').value);
-            const w = parseFloat(document.getElementById('w_assay').value);
-            const f = 453.8; // mg/mEq
-
-            if (!isNaN(vs) && !isNaN(vb) && !isNaN(n) && !isNaN(w) && w !== 0) {
-                const result = ((vs - vb) * n * f) / w * 100;
-                document.getElementById('assay-result').textContent = result.toFixed(2);
-                updateStatus('assay-status', result, 102.0); // Acceptance criteria: 98.0%–102.0%
-            } else {
-                document.getElementById('assay-result').textContent = '--';
-                document.getElementById('assay-status').textContent = '--';
-            }
-        }
-
-        function calculateChloride() {
-            const sampleWeight = parseFloat(document.getElementById('chloride_sample_weight').value);
-            const turbidity = parseFloat(document.getElementById('chloride_turbidity').value);
-            const standardVolume = parseFloat(document.getElementById('chloride_standard_volume').value); // 1.0 mL
-            const limit = 0.07; // NMT 0.07%
-
-            if (!isNaN(sampleWeight) && !isNaN(turbidity) && sampleWeight !== 0) {
-                // The formula for Chloride & Sulfate is generally based on comparing sample turbidity to standard turbidity.
-                // A simplified calculation based on common USP methodology:
-                // Result = (Turbidity of Sample / Weight of Sample) * (Volume of Standard / Volume of Sample in Standard comparison) * Factor
-                // This requires more context from the USP monograph or an assumed standard.
-                // For now, we'll simulate a calculation. A more accurate implementation would need the specific factor from USP 221.
-
-                // Assuming the 'turbidity' input represents the direct comparison, and a factor is implied by USP 221.
-                // Let's assume 'turbidity' is the mL of standard equivalent.
-                // A common approach: %Cl = (mL std * N std * 35.45) / (mg sample) * 100
-                // Given standard is 0.020 N HCl, 1 mL = 0.020 mEq.
-                // 1 mEq Cl = 35.45 mg. So 1 mL of 0.020 N HCl provides 0.020 * 35.45 mg Cl.
-                // Let's reinterpret turbidity as the volume of standard that produces equivalent turbidity.
-                // If we assume the turbidity input is directly proportional to the impurity amount relative to the standard.
-                // A more standard approach involves comparing the volume of standard (equivalent to a certain amount of ion) to the sample amount.
-                // Since the provided text doesn't give a direct calculation formula for impurity tests based on turbidity comparison,
-                // we will use a placeholder calculation and status update.
-                // A common simplified calculation for percentage:
-                // If turbidity is the *mL of standard* that gives equivalent turbidity.
-                // %Cl = (turbidity * 0.020 * 35.45 * 100) / (sampleWeight * 1000)
-                const result = (turbidity * 0.020 * 35.45 * 100) / (sampleWeight * 1000);
-
-                document.getElementById('chloride-result').textContent = result.toFixed(4);
-                updateStatus('chloride-status', result, limit);
-            } else {
-                document.getElementById('chloride-result').textContent = '--';
-                document.getElementById('chloride-status').textContent = '--';
-            }
-        }
-
-        function calculateSulfate() {
-            const sampleWeight = parseFloat(document.getElementById('sulfate_sample_weight').value);
-            const turbidity = parseFloat(document.getElementById('sulfate_turbidity').value);
-            const standardVolume = parseFloat(document.getElementById('sulfate_standard_volume').value); // 1.0 mL
-            const limit = 0.05; // NMT 0.05%
-
-            if (!isNaN(sampleWeight) && !isNaN(turbidity) && sampleWeight !== 0) {
-                // Similar to chloride, a direct calculation formula is not provided.
-                // Assuming 'turbidity' is the mL of standard that produces equivalent turbidity.
-                // For sulfate, 1 mL of 0.020 N H2SO4 provides 0.020 mEq.
-                // 1 mEq SO4 = 48.03 mg.
-                // %SO4 = (turbidity * 0.020 * 48.03 * 100) / (sampleWeight * 1000)
-                const result = (turbidity * 0.020 * 48.03 * 100) / (sampleWeight * 1000);
-
-                document.getElementById('sulfate-result').textContent = result.toFixed(4);
-                updateStatus('sulfate-status', result, limit);
-            } else {
-                document.getElementById('sulfate-result').textContent = '--';
-                document.getElementById('sulfate-status').textContent = '--';
-            }
-        }
-
-        function calculateArsenic() {
-            const sampleWeight = parseFloat(document.getElementById('arsenic_sample_weight').value);
-            const limit = 3.0; // NMT 3 ppm
-
-            if (!isNaN(sampleWeight) && sampleWeight !== 0) {
-                // The USP method for Arsenic involves a colorimetric comparison or instrumental analysis.
-                // A direct calculation formula is not explicitly given for 'Arsenic, Method I'.
-                // The acceptance criteria is NMT 3 ppm.
-                // Without a specific formula or a way to input comparator results, we can only prompt for sample weight.
-                // The result is typically determined by comparing to a standard.
-
-                // Placeholder: For demonstration, let's assume a hypothetical result if sample weight is provided.
-                // A real implementation would require more specific inputs from the test procedure.
-                // For now, we'll provide a dropdown for status and a placeholder.
-                // If sample weight is known, a comparison would be made.
-                // For simplicity, we'll just check if sample weight is entered and allow manual status selection.
-                document.getElementById('arsenic-result').textContent = '--'; // Instrumental result would be here.
-            } else {
-                document.getElementById('arsenic-result').textContent = '--';
-            }
-        }
-
-        function calculateLead() {
-            const c = parseFloat(document.getElementById('lead_c').value);
-            const v = parseFloat(document.getElementById('lead_v').value);
-            const w = parseFloat(document.getElementById('lead_w').value);
-            const limit = 25.0; // NMT 25 µg/g
-
-            if (!isNaN(c) && !isNaN(v) && !isNaN(w) && w !== 0) {
-                const result = (c * v) / w;
-                document.getElementById('lead-result').textContent = result.toFixed(2);
-                updateStatus('lead-status', result, limit);
-            } else {
-                document.getElementById('lead-result').textContent = '--';
-                document.getElementById('lead-status').textContent = '--';
-            }
-        }
-
-        function calculateReducingSubstances() {
-            const vb = parseFloat(document.getElementById('reducing_vb').value);
-            const vs = parseFloat(document.getElementById('reducing_vs').value);
-            const n = parseFloat(document.getElementById('reducing_n').value);
-            const w = parseFloat(document.getElementById('reducing_w').value);
-            const f = 27; // mg/mEq
-
-            if (!isNaN(vb) && !isNaN(vs) && !isNaN(n) && !isNaN(w) && w !== 0) {
-                const result = ((vb - vs) * n * f) / w * 100;
-                document.getElementById('reducing-result').textContent = result.toFixed(2);
-                updateStatus('reducing-status', result, 1.0); // Acceptance criteria: NMT 1.0%
-            } else {
-                document.getElementById('reducing-result').textContent = '--';
-                document.getElementById('reducing-status').textContent = '--';
-            }
-        }
-
-        // Initialize the first tab as active
-        document.addEventListener('DOMContentLoaded', () => {
+        // Automatically show the first tab when the page loads
+        document.addEventListener('DOMContentLoaded', (event) => {
             document.querySelector('.tab-button').click();
         });
     </script>
-
 </body>
 </html>

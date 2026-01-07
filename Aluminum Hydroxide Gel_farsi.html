@@ -4,14 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف ژل هیدروکسید آلومینیوم (USP)</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Vazirmatn Font -->
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
-    <!-- MathJax -->
-    <script type="text/javascript" id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -70,729 +66,108 @@
         .fail-text {
             color: #ef4444;
         }
-        .interactive-card {
-            background-color: #e0f2fe;
-            border: 1px solid #90cdf4;
-            padding: 1rem;
-            margin-top: 1rem;
-            border-radius: 0.5rem;
-        }
-        .calculation-button {
-            background-color: #2563eb;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
+<body>
     <div class="container mx-auto p-4 max-w-4xl">
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">ژل هیدروکسید آلومینیوم</h1>
 
         <div class="flex justify-center mb-6 border-b border-gray-200">
-            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="openTab(event, 'Definition')">تعریف</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'Identification')">شناسایی</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'Assay')">سنجش</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'Impurities')">ناخالصی‌ها</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'Specific Tests')">آزمایشات خاص</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'Additional Requirements')">الزامات اضافی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" data-tab="definition">تعریف</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="identification">شناسایی</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="assay">سنجش</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="impurities">ناخالصی‌ها</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="special-tests">آزمایشات خاص</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="additional-requirements">الزامات اضافی</button>
         </div>
 
-        <div id="Definition" class="tab-content">
+        <div id="definition" class="tab-content">
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
-                <p class="mb-3">ژل هیدروکسید آلومینیوم سوسپانسیونی از هیدروکسید آلومینیوم آمورف است که در آن جانشینی جزئی کربنات به جای هیدروکسید رخ داده است. این محصول باید حاوی معادل نه کمتر از <span class="ltr-text">90.0</span> درصد و نه بیشتر از <span class="ltr-text">110.0</span> درصد مقدار ذکر شده هیدروکسید آلومینیوم <span class="ltr-text">(Al(OH)3)</span> باشد.</p>
-                <p class="mb-3">این محصول ممکن است حاوی روغن نعناع، گلیسیرین، سوربیتول، سوکروز، ساخارین یا طعم‌دهنده‌های مناسب دیگر و همچنین عوامل ضد میکروبی مناسب باشد.</p>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">بسته بندی و نگهداری</h3>
-                <p class="mb-3">در ظروف محکم نگهداری شود و از یخ زدگی محافظت شود.</p>
+                <p class="mb-4">آلومینیوم هیدروکسید [21<a href="General chapters/645.html" class="text-blue-600 hover:underline" target="_blank">645</a>-51-2].</p>
+                <p class="mb-4">» ژل هیدروکسید آلومینیوم سوسپانسیونی از هیدروکسید آلومینیوم آمورف است که در آن جانشینی بخشی از هیدروکسید با کربنات صورت گرفته است.</p>
+                <p class="mb-4">این فرآورده حاوی مقدار معادل نه کمتر از 90.0 درصد و نه بیشتر از 110.0 درصد مقدار برچسب‌گذاری شده هیدروکسید آلومینیوم [Al(OH)3] است.</p>
+                <p class="mb-4">ممکن است حاوی روغن نعناع فلفلی، گلیسیرین، سوربیتول، ساکارز، ساخارین، یا طعم‌دهنده‌های مناسب دیگر و همچنین عوامل ضد میکروبی مناسب باشد.</p>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">بسته‌بندی و نگهداری</h3>
+                <p class="mb-4">در ظروف دربسته نگهداری شود و از یخ‌زدگی جلوگیری شود.</p>
             </div>
         </div>
 
-        <div id="Identification" class="tab-content hidden">
+        <div id="identification" class="tab-content hidden">
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش A</h4>
-                <p class="mb-3">حدود <span class="ltr-text">1</span> گرم را در یک فلاسک مجهز به چوب پنبه و لوله شیشه‌ای قرار دهید، به طوری که نوک لوله در هیدروکسید کلسیم TS در یک لوله آزمایش غوطه‌ور باشد. <span class="ltr-text">5</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">3N</span> به فلاسک اضافه کنید و بلافاصله چوب پنبه را قرار دهید: گاز در فلاسک خارج شده و در لوله آزمایش رسوب تشکیل می‌شود.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش B</h4>
-                <p class="mb-3">محلول باقی‌مانده در فلاسک، آزمایشات آلومینیوم <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a> را برآورده می‌کند.</p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">الف</h4>
+                <p class="mb-4">حدود 1 گرم را در یک فلاسک مجهز به درپوش و لوله شیشه‌ای قرار دهید، نوک لوله را در هیدروکسید کلسیم TS در یک لوله آزمایش فرو ببرید. 5 میلی‌لیتر اسید هیدروکلریک 3 نرمال به فلاسک اضافه کنید و بلافاصله درپوش را قرار دهید: گاز در فلاسک خارج می‌شود و در لوله آزمایش رسوب تشکیل می‌شود.</p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ب</h4>
+                <p class="mb-4">محلول باقی‌مانده در فلاسک به آزمون‌های مربوط به آلومینیوم <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a> پاسخ می‌دهد.</p>
             </div>
         </div>
 
-        <div id="Assay" class="tab-content hidden">
+        <div id="assay" class="tab-content hidden">
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
-                <p class="mb-3">تیترانت ادتات دی سدیم — همانطور که در سنجش تحت آلوم آلومینیوم ذکر شده است، تهیه و استاندارد شود.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش</h4>
-                <p class="mb-3">مقدار اندازه‌گیری شده‌ای از ژل معادل حدود <span class="ltr-text">1.5</span> گرم <span class="ltr-text">Al(OH)3</span> را به یک بشر منتقل کنید، <span class="ltr-text">15</span> میلی‌لیتر اسید هیدروکلریک اضافه کنید و به آرامی حرارت دهید تا محلول کامل شود. سرد کنید، در یک فلاسک حجمی <span class="ltr-text">500</span> میلی‌لیتری منتقل کرده، حجم را با آب به حد نهایی برسانید و مخلوط کنید. <span class="ltr-text">20</span> میلی‌لیتر از این محلول را در یک بشر <span class="ltr-text">250</span> میلی‌لیتری پیپت کنید و به ترتیب نام برده شده و با هم زدن مداوم، <span class="ltr-text">25.0</span> میلی‌لیتر تیترانت ادتات دی سدیم و <span class="ltr-text">20</span> میلی‌لیتر بافر اسید استیک-آمونیوم استات TS اضافه کنید، سپس محلول را نزدیک به نقطه جوش به مدت <span class="ltr-text">5</span> دقیقه حرارت دهید. سرد کنید و <span class="ltr-text">50</span> میلی‌لیتر الکل و <span class="ltr-text">2</span> میلی‌لیتر دیتیزون TS اضافه کنید. محلول را با محلول سولفات روی <span class="ltr-text">0.05 M</span> تیتر کنید تا رنگ از سبز-بنفش به صورتی-گلبهی تغییر کند. یک تعیین شاهد انجام دهید و <span class="ltr-text">20</span> میلی‌لیتر آب را به جای نمونه جایگزین کنید و هرگونه تصحیح لازم را اعمال نمایید. هر میلی‌لیتر تیترانت ادتات دی سدیم <span class="ltr-text">0.05 M</span> مصرف شده معادل <span class="ltr-text">3.900</span> میلی‌گرم <span class="ltr-text">Al(OH)3</span> است.</p>
-
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب سنجش</h4>
-                    <p class="mb-3">فرمول: $$Result = (V_{titrant} \times M_{titrant} \times MW_{Al(OH)_3}) / (V_{sample\_aliquot} \times MW_{Al(OH)_3\_per\_mL}) \times 100$$</p>
-                    <div class="grid grid-cols-1 gap-2">
-                        <div>
-                            <label for="V_titrant" class="block text-sm font-medium text-gray-700">حجم تیترانت ادتات دی سدیم مصرفی (mL)</label>
-                            <input type="text" id="V_titrant" name="V_titrant" class="input-field-style">
-                        </div>
-                        <div>
-                            <label for="M_titrant" class="block text-sm font-medium text-gray-700">مولاریته تیترانت ادتات دی سدیم (M)</label>
-                            <input type="text" id="M_titrant" name="M_titrant" class="input-field-style">
-                        </div>
-                        <div>
-                            <label for="V_sample_aliquot" class="block text-sm font-medium text-gray-700">حجم نمونه پیپت شده (mL)</label>
-                            <input type="text" id="V_sample_aliquot" name="V_sample_aliquot" class="input-field-style">
-                        </div>
-                        <div>
-                            <label for="W_gel" class="block text-sm font-medium text-gray-700">وزن ژل نمونه (g)</label>
-                            <input type="text" id="W_gel" name="W_gel" class="input-field-style">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateAssay()">محاسبه</button>
-                    <div class="mt-3">
-                        <span class="font-semibold">نتیجه:</span>
-                        <span id="assay-result" class="font-bold"></span>
-                        <span id="assay-status" class="font-bold"></span>
-                    </div>
-                </div>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تیترانت ادتات دی‌سدیم</h4>
+                <p class="mb-4">طبق روش سنجش در آلوم آلومینیوم تهیه و استاندارد شود.</p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش کار</h4>
+                <p class="mb-4">مقدار دقیقا اندازه‌گیری شده از ژل، معادل حدود 1.5 گرم Al(OH)3 را در یک بشر منتقل کنید، 15 میلی‌لیتر اسید هیدروکلریک اضافه کرده و به آرامی حرارت دهید تا محلول کامل شود. سرد کرده، به یک فلاسک حجمی 500 میلی‌لیتری منتقل کنید، با آب به حجم برسانید و مخلوط کنید. 20 میلی‌لیتر از این محلول را در یک بشر 250 میلی‌لیتری پیپت کنید و به ترتیب نام برده و با هم زدن مداوم، 25.0 میلی‌لیتر تیترانت ادتات دی‌سدیم و 20 میلی‌لیتر محلول بافر اسید استیک– استات آمونیوم TS اضافه کنید، سپس محلول را نزدیک به نقطه جوش به مدت 5 دقیقه حرارت دهید. سرد کرده، 50 میلی‌لیتر الکل و 2 میلی‌لیتر محلول دی‌تیزون TS اضافه کنید. محلول را با محلول سولفات روی 0.05 مولار VS تیتر کنید تا رنگ از سبز-بنفش به صورتی-رز تغییر کند. یک تعیین موازی (blank) انجام دهید و 20 میلی‌لیتر آب را به جای نمونه جایگزین کنید و هرگونه تصحیح لازم را اعمال کنید. هر میلی‌لیتر از تیترانت ادتات دی‌سدیم 0.05 مولار مصرف شده معادل 3.900 میلی‌گرم Al(OH)3 است.</p>
             </div>
         </div>
 
-        <div id="Impurities" class="tab-content hidden">
+        <div id="impurities" class="tab-content hidden">
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
-
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد مواد نامحلول در اسید</h4>
-                    <p class="mb-3">فرمول: $$Result = (W_{2}-W_{1})*1000$$</p>
-                    <div class="grid grid-cols-1 gap-2">
-                        <div>
-                            <label for="W1_acid_insoluble" class="block text-sm font-medium text-gray-700">W1 (g)</label>
-                            <input type="text" id="W1_acid_insoluble" name="W1_acid_insoluble" class="input-field-style">
-                        </div>
-                        <div>
-                            <label for="W2_acid_insoluble" class="block text-sm font-medium text-gray-700">W2 (g)</label>
-                            <input type="text" id="W2_acid_insoluble" name="W2_acid_insoluble" class="input-field-style">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateAcidInsoluble()">محاسبه</button>
-                    <div class="mt-3">
-                        <span class="font-semibold">نتیجه:</span> <span id="acid-insoluble-result" class="font-bold"></span>
-                        <span id="acid-insoluble-status" class="font-bold"></span>
-                    </div>
-                </div>
-
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد منیزیم و نمک‌های قلیایی</h4>
-                    <p class="mb-3">فرمول: $$Result = (W_{2}-W_{1})*1000$$</p>
-                    <div class="grid grid-cols-1 gap-2">
-                        <div>
-                            <label for="W1_magnesium_alkali" class="block text-sm font-medium text-gray-700">W1 (g)</label>
-                            <input type="text" id="W1_magnesium_alkali" name="W1_magnesium_alkali" class="input-field-style">
-                        </div>
-                        <div>
-                            <label for="W2_magnesium_alkali" class="block text-sm font-medium text-gray-700">W2 (g)</label>
-                            <input type="text" id="W2_magnesium_alkali" name="W2_magnesium_alkali" class="input-field-style">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateMagnesiumAlkali()">محاسبه</button>
-                    <div class="mt-3">
-                        <span class="font-semibold">نتیجه:</span> <span id="magnesium-alkali-result" class="font-bold"></span>
-                        <span id="magnesium-alkali-status" class="font-bold"></span>
-                    </div>
-                </div>
-
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماده نامحلول در الکل</h4>
-                    <p class="mb-3">فرمول: $$Result = (W_{2}-W_{1})*1000$$</p>
-                    <div class="grid grid-cols-1 gap-2">
-                        <div>
-                            <label for="W1_alcohol_insoluble" class="block text-sm font-medium text-gray-700">W1 (g)</label>
-                            <input type="text" id="W1_alcohol_insoluble" name="W1_alcohol_insoluble" class="input-field-style">
-                        </div>
-                        <div>
-                            <label for="W2_alcohol_insoluble" class="block text-sm font-medium text-gray-700">W2 (g)</label>
-                            <input type="text" id="W2_alcohol_insoluble" name="W2_alcohol_insoluble" class="input-field-style">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateAlcoholInsoluble()">محاسبه</button>
-                    <div class="mt-3">
-                        <span class="font-semibold">نتیجه:</span> <span id="alcohol-insoluble-result" class="font-bold"></span>
-                        <span id="alcohol-insoluble-status" class="font-bold"></span>
-                    </div>
-                </div>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کلر</h4>
+                <p class="mb-4">مقدار دقیقا اندازه‌گیری شده از ژل، معادل 0.6 گرم Al(OH)3 را به یک ظرف چینی منتقل کنید. 0.1 میلی‌لیتر محلول پتاسیم کرومات TS و 25 میلی‌لیتر آب اضافه کنید. هم بزنید و 0.10 نرمال نیترات نقره اضافه کنید تا رنگ صورتی کمرنگ و پایدار حاصل شود: بیش از 8.0 میلی‌لیتر از 0.10 نرمال نیترات نقره مصرف نشود [4.7%، بر اساس محتوای Al(OH)3].</p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سولفات <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a></h4>
+                <p class="mb-4">5.0 میلی‌لیتر اسید هیدروکلریک 3 نرمال را به مقدار دقیقا اندازه‌گیری شده از ژل، معادل 0.3 گرم Al(OH)3 اضافه کرده و حرارت دهید تا نمونه آزمایشی حل شود. سرد کرده، با آب به حجم 250 میلی‌لیتر برسانید و در صورت نیاز فیلتر کنید: یک قسمت 20 میلی‌لیتری از فیلتر شده نباید سولفات بیشتری از معادل 0.20 میلی‌لیتر اسید سولفوریک 0.020 نرمال نشان دهد [0.8%، بر اساس محتوای Al(OH)3].</p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آرسنیک، روش I <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a></h4>
+                <p class="mb-4">یک آماده‌سازی استاندارد را طبق دستور در آزمون آرسنیک <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a> آماده کنید، با این تفاوت که باید حاوی 5 میکروگرم آرسنیک به جای 3 میکروگرم باشد. آماده‌سازی آزمایشی را به صورت زیر تهیه کنید. مقدار دقیقا اندازه‌گیری شده از ژل، معادل 0.5 گرم Al(OH)3 را در 20 میلی‌لیتر اسید سولفوریک 7 نرمال حل کنید. حد مجاز 0.001% است، بر اساس محتوای Al(OH)3.</p>
             </div>
         </div>
 
-        <div id="Specific Tests" class="tab-content hidden">
+        <div id="special-tests" class="tab-content hidden">
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
-
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">از دست دادن رطوبت (Loss on Drying)</h4>
-                    <p class="mb-3">فرمول: $$LOD= \frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$</p>
-                    <div class="grid grid-cols-1 gap-2">
-                        <div>
-                            <label for="W1_lod" class="block text-sm font-medium text-gray-700">W1 (g)</label>
-                            <input type="text" id="W1_lod" name="W1_lod" class="input-field-style">
-                        </div>
-                        <div>
-                            <label for="Wsa_lod" class="block text-sm font-medium text-gray-700">Wsa (g)</label>
-                            <input type="text" id="Wsa_lod" name="Wsa_lod" class="input-field-style">
-                        </div>
-                        <div>
-                            <label for="W2_lod" class="block text-sm font-medium text-gray-700">W2 (g)</label>
-                            <input type="text" id="W2_lod" name="W2_lod" class="input-field-style">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateLOD()">محاسبه</button>
-                    <div class="mt-3">
-                        <span class="font-semibold">نتیجه:</span> <span id="lod-result" class="font-bold"></span>
-                        <span id="lod-status" class="font-bold"></span>
-                    </div>
-                </div>
-
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">باقیمانده پس از اشتعال (Residue on Ignition)</h4>
-                    <p class="mb-3">فرمول: $$ROI = \frac{W_3 - W_1}{W_2} \times 100$$</p>
-                    <div class="grid grid-cols-1 gap-2">
-                        <div>
-                            <label for="W1_roi" class="block text-sm font-medium text-gray-700">W1 (g)</label>
-                            <input type="text" id="W1_roi" name="W1_roi" class="input-field-style">
-                        </div>
-                        <div>
-                            <label for="W2_roi" class="block text-sm font-medium text-gray-700">W2 (g)</label>
-                            <input type="text" id="W2_roi" name="W2_roi" class="input-field-style">
-                        </div>
-                        <div>
-                            <label for="W3_roi" class="block text-sm font-medium text-gray-700">W3 (g)</label>
-                            <input type="text" id="W3_roi" name="W3_roi" class="input-field-style">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateROI()">محاسبه</button>
-                    <div class="mt-3">
-                        <span class="font-semibold">نتیجه:</span> <span id="roi-result" class="font-bold"></span>
-                        <span id="roi-status" class="font-bold"></span>
-                    </div>
-                </div>
-
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مواد کاهنده (Reducing Substances)</h4>
-                    <p class="mb-3">فرمول: $$Result = \left[ \frac{(V_{B}-V_{S}) \times N \times 27 \times F}{W} \right] \times 100$$</p>
-                    <div class="grid grid-cols-1 gap-2">
-                        <div>
-                            <label for="VB_reducing" class="block text-sm font-medium text-gray-700">VB (mL)</label>
-                            <input type="text" id="VB_reducing" name="VB_reducing" class="input-field-style">
-                        </div>
-                        <div>
-                            <label for="VS_reducing" class="block text-sm font-medium text-gray-700">VS (mL)</label>
-                            <input type="text" id="VS_reducing" name="VS_reducing" class="input-field-style">
-                        </div>
-                        <div>
-                            <label for="N_reducing" class="block text-sm font-medium text-gray-700">N</label>
-                            <input type="text" id="N_reducing" name="N_reducing" class="input-field-style">
-                        </div>
-                        <div>
-                            <label for="F_reducing" class="block text-sm font-medium text-gray-700">F</label>
-                            <input type="text" id="F_reducing" name="F_reducing" class="input-field-style">
-                        </div>
-                        <div>
-                            <label for="W_reducing" class="block text-sm font-medium text-gray-700">W (g)</label>
-                            <input type="text" id="W_reducing" name="W_reducing" class="input-field-style">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateReducingSubstances()">محاسبه</button>
-                    <div class="mt-3">
-                        <span class="font-semibold">نتیجه:</span> <span id="reducing-substances-result" class="font-bold"></span>
-                        <span id="reducing-substances-status" class="font-bold"></span>
-                    </div>
-                </div>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آزمون‌های شمارش میکروبی <a href="General chapters/61.html" class="text-blue-600 hover:underline" target="_blank">61</a> و آزمون‌های میکروارگانیسم‌های مشخص <a href="General chapters/62.html" class="text-blue-600 hover:underline" target="_blank">62</a></h4>
+                <p class="mb-4">تعداد کل میکروب‌های هوازی آن نباید از 100 cfu در هر میلی‌لیتر تجاوز کند و باید الزامات آزمون عدم وجود اشرشیا کلی را برآورده کند.</p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ظرفیت خنثی‌سازی اسید <a href="General chapters/301.html" class="text-blue-600 hover:underline" target="_blank">301</a></h4>
+                <p class="mb-4">حداقل 65.0% از مقدار مورد انتظار mEq، محاسبه شده از نتایج سنجش، حاصل شود. هر میلی‌گرم Al(OH)3 دارای مقدار ظرفیت خنثی‌سازی اسید مورد انتظار 0.0385 mEq است.</p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a></h4>
+                <p class="mb-4">بین 5.5 تا 8.0، به صورت پتانسیومتری تعیین شود.</p>
             </div>
         </div>
 
-        <div id="Additional Requirements" class="tab-content hidden">
+        <div id="additional-requirements" class="tab-content hidden">
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">آزمایشات میکروبی</h3>
-                <p class="mb-3">آزمایشات شمارش میکروبی <a href="General chapters/61.html" class="text-blue-600 hover:underline" target="_blank">61</a> و آزمایشات میکروارگانیسم‌های مشخص <a href="General chapters/62.html" class="text-blue-600 hover:underline" target="_blank">62</a> — تعداد کل میکروارگانیسم‌های هوازی نباید از <span class="ltr-text">100</span> cfu در میلی‌لیتر تجاوز کند و الزامات آزمایش برای عدم وجود اشریشیا کلی را برآورده سازد.</p>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">ظرفیت خنثی‌کننده اسید</h3>
-                <p class="mb-3">ظرفیت خنثی‌کننده اسید <a href="General chapters/301.html" class="text-blue-600 hover:underline" target="_blank">301</a> — حداقل <span class="ltr-text">65.0</span> درصد از مقدار مورد انتظار mEq، محاسبه شده از نتایج سنجش، باید به دست آید. هر میلی‌گرم <span class="ltr-text">Al(OH)3</span> دارای مقدار مورد انتظار ظرفیت خنثی‌کننده اسید <span class="ltr-text">0.0385</span> mEq است.</p>
-
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب ظرفیت خنثی‌کننده اسید</h4>
-                    <p class="mb-3">فرمول: $$Expected\_mEq = Assay\_Al(OH)3\_mg \times 0.0385$$</p>
-                    <div class="grid grid-cols-1 gap-2">
-                        <div>
-                            <label for="assay_aloh3_mg" class="block text-sm font-medium text-gray-700">مقدار Al(OH)3 در نمونه (mg)</label>
-                            <input type="text" id="assay_aloh3_mg" name="assay_aloh3_mg" class="input-field-style">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateAcidNeutralizingCapacity()">محاسبه</button>
-                    <div class="mt-3">
-                        <span class="font-semibold">مورد انتظار (mEq):</span> <span id="expected-meq" class="font-bold"></span>
-                        <span class="font-semibold">وضعیت:</span> <span id="acid-neutralizing-status" class="font-bold"></span>
-                    </div>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">pH</h3>
-                <p class="mb-3">pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a>: بین <span class="ltr-text">5.5</span> تا <span class="ltr-text">8.0</span>، تعیین شده به صورت پتانسیومتری.</p>
-                <div class="card interactive-card">
-                    <div class="grid grid-cols-1 gap-2">
-                        <div>
-                            <label for="pH_value" class="block text-sm font-medium text-gray-700">pH</label>
-                            <input type="text" id="pH_value" name="pH_value" class="input-field-style">
-                        </div>
-                    </div>
-                    <div class="mt-3">
-                        <span class="font-semibold">وضعیت:</span> <span id="pH-status" class="font-bold"></span>
-                    </div>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">کلرید</h3>
-                <p class="mb-3">مقدار دقیقی از ژل را که معادل <span class="ltr-text">0.6</span> گرم <span class="ltr-text">Al(OH)3</span> است، به یک ظرف چینی منتقل کنید. <span class="ltr-text">0.1</span> میلی‌لیتر پتاسیم کرومات TS و <span class="ltr-text">25</span> میلی‌لیتر آب اضافه کنید. مخلوط کرده و <span class="ltr-text">0.10 N</span> نقره نیترات را اضافه کنید تا رنگ صورتی کم‌رنگ و پایدار حاصل شود: نباید بیش از <span class="ltr-text">8.0</span> میلی‌لیتر از نقره نیترات <span class="ltr-text">0.10 N</span> مصرف شود ( <span class="ltr-text">4.7%</span>، بر اساس محتوای <span class="ltr-text">Al(OH)3</span> ).</p>
-                <div class="card interactive-card">
-                    <div class="grid grid-cols-1 gap-2">
-                        <div>
-                            <label for="volume_ag_nitrate" class="block text-sm font-medium text-gray-700">حجم نقره نیترات 0.10 N مصرفی (mL)</label>
-                            <input type="text" id="volume_ag_nitrate" name="volume_ag_nitrate" class="input-field-style">
-                        </div>
-                    </div>
-                    <div class="mt-3">
-                        <span class="font-semibold">وضعیت:</span> <span id="chloride-status" class="font-bold"></span>
-                    </div>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">سولفات</h3>
-                <p class="mb-3">به مقدار دقیقی از ژل که معادل <span class="ltr-text">0.3</span> گرم <span class="ltr-text">Al(OH)3</span> است، <span class="ltr-text">5.0</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">3 N</span> اضافه کرده و برای حل کردن نمونه مورد آزمایش حرارت دهید. سرد کنید، حجم را با آب به <span class="ltr-text">250</span> میلی‌لیتر برسانید و در صورت لزوم فیلتر کنید: یک قسمت <span class="ltr-text">20</span> میلی‌لیتری از فیلتر نباید سولفات بیشتری از معادل <span class="ltr-text">0.20</span> میلی‌لیتر اسید سولفوریک <span class="ltr-text">0.020 N</span> نشان دهد ( <span class="ltr-text">0.8%</span>، بر اساس محتوای <span class="ltr-text">Al(OH)3</span> ).</p>
-                <div class="card interactive-card">
-                    <div class="grid grid-cols-1 gap-2">
-                        <div>
-                            <label for="volume_sulfuric_acid" class="block text-sm font-medium text-gray-700">حجم اسید سولفوریک 0.020 N معادل (mL)</label>
-                            <input type="text" id="volume_sulfuric_acid" name="volume_sulfuric_acid" class="input-field-style">
-                        </div>
-                    </div>
-                    <div class="mt-3">
-                        <span class="font-semibold">وضعیت:</span> <span id="sulfate-status" class="font-bold"></span>
-                    </div>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">آرسنیک، روش I</h3>
-                <p class="mb-3">یک استاندارد آماده‌سازی را همانطور که در تست آرسنیک <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a> ذکر شده است، آماده کنید، به جز اینکه آن را برای حاوی <span class="ltr-text">5</span> میکروگرم آرسنیک به جای <span class="ltr-text">3</span> میکروگرم آماده کنید. آماده‌سازی تست را به شرح زیر آماده کنید. مقدار دقیقی از ژل را که معادل <span class="ltr-text">0.5</span> گرم <span class="ltr-text">Al(OH)3</span> است، در <span class="ltr-text">20</span> میلی‌لیتر اسید سولفوریک <span class="ltr-text">7 N</span> حل کنید. حد آن <span class="ltr-text">0.001%</span>، بر اساس محتوای <span class="ltr-text">Al(OH)3</span> است.</p>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب آرسنیک</h4>
-                    <p class="mb-3">فرمول: $$Arsenic\_ppm = \frac{(Abs_{sample} - Abs_{blank})}{Abs_{standard}} \times \frac{Conc_{standard}}{Conc_{sample}}$$ (این فرمول ساده شده است، فرمول واقعی ممکن است پیچیده‌تر باشد و نیاز به مقادیر جذب داشته باشد)</p>
-                    <div class="grid grid-cols-1 gap-2">
-                        <div>
-                            <label for="abs_sample_arsenic" class="block text-sm font-medium text-gray-700">جذب نمونه</label>
-                            <input type="text" id="abs_sample_arsenic" name="abs_sample_arsenic" class="input-field-style">
-                        </div>
-                        <div>
-                            <label for="abs_blank_arsenic" class="block text-sm font-medium text-gray-700">جذب شاهد</label>
-                            <input type="text" id="abs_blank_arsenic" name="abs_blank_arsenic" class="input-field-style">
-                        </div>
-                        <div>
-                            <label for="abs_standard_arsenic" class="block text-sm font-medium text-gray-700">جذب استاندارد</label>
-                            <input type="text" id="abs_standard_arsenic" name="abs_standard_arsenic" class="input-field-style">
-                        </div>
-                        <div>
-                            <label for="conc_standard_arsenic" class="block text-sm font-medium text-gray-700">غلظت استاندارد (µg/mL)</label>
-                            <input type="text" id="conc_standard_arsenic" name="conc_standard_arsenic" class="input-field-style">
-                        </div>
-                         <div>
-                            <label for="conc_sample_arsenic" class="block text-sm font-medium text-gray-700">غلظت نمونه (mg/mL)</label>
-                            <input type="text" id="conc_sample_arsenic" name="conc_sample_arsenic" class="input-field-style">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateArsenic()">محاسبه</button>
-                    <div class="mt-3">
-                        <span class="font-semibold">نتیجه (ppm):</span> <span id="arsenic-ppm-result" class="font-bold"></span>
-                        <span class="font-semibold">وضعیت:</span> <span id="arsenic-status" class="font-bold"></span>
-                    </div>
-                </div>
+                <p class="mb-4">این بخش به الزامات اضافی مربوط می‌شود که در متن اصلی ارائه نشده است.</p>
             </div>
         </div>
-
     </div>
 
     <script>
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-                tabcontent[i].classList.add("hidden");
-            }
-            tablinks = document.getElementsByClassName("tab-button");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("tab-active");
-                tablinks[i].classList.add("tab-inactive");
-            }
-            document.getElementById(tabName).style.display = "block";
-            document.getElementById(tabName).classList.remove("hidden");
-            evt.currentTarget.classList.remove("tab-inactive");
-            evt.currentTarget.classList.add("tab-active");
-        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
 
-        // --- Calculation Functions ---
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetTab = this.getAttribute('data-tab');
 
-        // Assay
-        function calculateAssay() {
-            const V_titrant = parseFloat(document.getElementById('V_titrant').value);
-            const M_titrant = parseFloat(document.getElementById('M_titrant').value);
-            const V_sample_aliquot = parseFloat(document.getElementById('V_sample_aliquot').value);
-            const W_gel = parseFloat(document.getElementById('W_gel').value);
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('tab-active');
+                        btn.classList.add('tab-inactive');
+                    });
 
-            const MW_AlOH3 = 78.00; // Molecular weight of Al(OH)3
-            const Titrant_factor = 3.900; // mg Al(OH)3 per mL of 0.05 M Edetate disodium titrant
+                    tabContents.forEach(content => {
+                        content.classList.add('hidden');
+                    });
 
-            if (!isNaN(V_titrant) && !isNaN(M_titrant) && !isNaN(V_sample_aliquot) && !isNaN(W_gel)) {
-                // Calculate mg of Al(OH)3 in the 20 mL aliquot
-                const mg_AlOH3_aliquot = V_titrant * Titrant_factor; // Assuming 0.05 M titrant is used as per USP text
+                    this.classList.remove('tab-inactive');
+                    this.classList.add('tab-active');
 
-                // Calculate total mg of Al(OH)3 in the 500 mL solution
-                const total_mg_AlOH3 = (mg_AlOH3_aliquot / V_sample_aliquot) * 500;
+                    document.getElementById(targetTab).classList.remove('hidden');
+                });
+            });
 
-                // Calculate percentage of Al(OH)3 in the gel sample
-                const percentage_AlOH3 = (total_mg_AlOH3 / (W_gel * 1000)) * 100; // W_gel is in g, convert to mg
-
-                const resultSpan = document.getElementById('assay-result');
-                const statusSpan = document.getElementById('assay-status');
-
-                resultSpan.textContent = `${percentage_AlOH3.toFixed(2)}%`;
-
-                if (percentage_AlOH3 >= 90.0 && percentage_AlOH3 <= 110.0) {
-                    statusSpan.textContent = 'قبول';
-                    statusSpan.className = 'font-bold pass-text';
-                } else {
-                    statusSpan.textContent = 'رد';
-                    statusSpan.className = 'font-bold fail-text';
-                }
-            } else {
-                document.getElementById('assay-result').textContent = 'لطفاً تمام مقادیر را وارد کنید.';
-                document.getElementById('assay-status').textContent = '';
-            }
-        }
-
-        // Impurities
-        function calculateAcidInsoluble() {
-            const W1 = parseFloat(document.getElementById('W1_acid_insoluble').value);
-            const W2 = parseFloat(document.getElementById('W2_acid_insoluble').value);
-            const resultSpan = document.getElementById('acid-insoluble-result');
-            const statusSpan = document.getElementById('acid-insoluble-status');
-            const limit = 4.7; // Assuming 4.7% limit from chloride test, for example
-
-            if (!isNaN(W1) && !isNaN(W2)) {
-                const result = (W2 - W1) * 1000;
-                resultSpan.textContent = `${result.toFixed(2)} mg`; // Assuming result is in mg, and the formula expects a direct weight difference. The provided formula W2-W1 is ambiguous without context of sample size. The *1000 might imply converting g difference to mg.
-                if (result <= limit) { // This limit is a placeholder. The actual limit should be derived from USP.
-                    statusSpan.textContent = 'قبول';
-                    statusSpan.className = 'font-bold pass-text';
-                } else {
-                    statusSpan.textContent = 'رد';
-                    statusSpan.className = 'font-bold fail-text';
-                }
-            } else {
-                resultSpan.textContent = 'لطفاً مقادیر W1 و W2 را وارد کنید.';
-                statusSpan.textContent = '';
-            }
-        }
-
-        function calculateMagnesiumAlkali() {
-            const W1 = parseFloat(document.getElementById('W1_magnesium_alkali').value);
-            const W2 = parseFloat(document.getElementById('W2_magnesium_alkali').value);
-            const resultSpan = document.getElementById('magnesium-alkali-result');
-            const statusSpan = document.getElementById('magnesium-alkali-status');
-            const limit = 4.7; // Placeholder limit
-
-            if (!isNaN(W1) && !isNaN(W2)) {
-                const result = (W2 - W1) * 1000;
-                resultSpan.textContent = `${result.toFixed(2)} mg`;
-                if (result <= limit) { // Placeholder limit
-                    statusSpan.textContent = 'قبول';
-                    statusSpan.className = 'font-bold pass-text';
-                } else {
-                    statusSpan.textContent = 'رد';
-                    statusSpan.className = 'font-bold fail-text';
-                }
-            } else {
-                resultSpan.textContent = 'لطفاً مقادیر W1 و W2 را وارد کنید.';
-                statusSpan.textContent = '';
-            }
-        }
-
-        function calculateAlcoholInsoluble() {
-            const W1 = parseFloat(document.getElementById('W1_alcohol_insoluble').value);
-            const W2 = parseFloat(document.getElementById('W2_alcohol_insoluble').value);
-            const resultSpan = document.getElementById('alcohol-insoluble-result');
-            const statusSpan = document.getElementById('alcohol-insoluble-status');
-            const limit = 4.7; // Placeholder limit
-
-            if (!isNaN(W1) && !isNaN(W2)) {
-                const result = (W2 - W1) * 1000;
-                resultSpan.textContent = `${result.toFixed(2)} mg`;
-                if (result <= limit) { // Placeholder limit
-                    statusSpan.textContent = 'قبول';
-                    statusSpan.className = 'font-bold pass-text';
-                } else {
-                    statusSpan.textContent = 'رد';
-                    statusSpan.className = 'font-bold fail-text';
-                }
-            } else {
-                resultSpan.textContent = 'لطفاً مقادیر W1 و W2 را وارد کنید.';
-                statusSpan.textContent = '';
-            }
-        }
-
-        // Specific Tests
-        function calculateLOD() {
-            const W1 = parseFloat(document.getElementById('W1_lod').value);
-            const Wsa = parseFloat(document.getElementById('Wsa_lod').value);
-            const W2 = parseFloat(document.getElementById('W2_lod').value);
-            const resultSpan = document.getElementById('lod-result');
-            const statusSpan = document.getElementById('lod-status');
-            const limit = 5.0; // Placeholder limit, typically a percentage
-
-            if (!isNaN(W1) && !isNaN(Wsa) && !isNaN(W2)) {
-                const result = ((W1 + Wsa) - W2) / Wsa * 100;
-                resultSpan.textContent = `${result.toFixed(2)}%`;
-                if (result <= limit) { // Placeholder limit
-                    statusSpan.textContent = 'قبول';
-                    statusSpan.className = 'font-bold pass-text';
-                } else {
-                    statusSpan.textContent = 'رد';
-                    statusSpan.className = 'font-bold fail-text';
-                }
-            } else {
-                resultSpan.textContent = 'لطفاً مقادیر W1, Wsa و W2 را وارد کنید.';
-                statusSpan.textContent = '';
-            }
-        }
-
-        function calculateROI() {
-            const W1 = parseFloat(document.getElementById('W1_roi').value);
-            const W2 = parseFloat(document.getElementById('W2_roi').value);
-            const W3 = parseFloat(document.getElementById('W3_roi').value);
-            const resultSpan = document.getElementById('roi-result');
-            const statusSpan = document.getElementById('roi-status');
-            const limit = 0.1; // Placeholder limit, typically a percentage
-
-            if (!isNaN(W1) && !isNaN(W2) && !isNaN(W3)) {
-                const result = (W3 - W1) / W2 * 100;
-                resultSpan.textContent = `${result.toFixed(2)}%`;
-                if (result <= limit) { // Placeholder limit
-                    statusSpan.textContent = 'قبول';
-                    statusSpan.className = 'font-bold pass-text';
-                } else {
-                    statusSpan.textContent = 'رد';
-                    statusSpan.className = 'font-bold fail-text';
-                }
-            } else {
-                resultSpan.textContent = 'لطفاً مقادیر W1, W2 و W3 را وارد کنید.';
-                statusSpan.textContent = '';
-            }
-        }
-
-        function calculateReducingSubstances() {
-            const VB = parseFloat(document.getElementById('VB_reducing').value);
-            const VS = parseFloat(document.getElementById('VS_reducing').value);
-            const N = parseFloat(document.getElementById('N_reducing').value);
-            const F = parseFloat(document.getElementById('F_reducing').value);
-            const W = parseFloat(document.getElementById('W_reducing').value);
-            const resultSpan = document.getElementById('reducing-substances-result');
-            const statusSpan = document.getElementById('reducing-substances-status');
-            const limit = 2.0; // Placeholder limit, typically in mg/kg or ppm
-
-            if (!isNaN(VB) && !isNaN(VS) && !isNaN(N) && !isNaN(F) && !isNaN(W)) {
-                const result = ((VB - VS) * N * 27 * F / W) * 100;
-                resultSpan.textContent = `${result.toFixed(3)} ppm`; // Assuming the result is interpreted as ppm
-                if (result <= limit) { // Placeholder limit
-                    statusSpan.textContent = 'قبول';
-                    statusSpan.className = 'font-bold pass-text';
-                } else {
-                    statusSpan.textContent = 'رد';
-                    statusSpan.className = 'font-bold fail-text';
-                }
-            } else {
-                resultSpan.textContent = 'لطفاً تمام مقادیر را وارد کنید.';
-                statusSpan.textContent = '';
-            }
-        }
-
-        // Additional Requirements
-        function calculateAcidNeutralizingCapacity() {
-            const assay_aloh3_mg = parseFloat(document.getElementById('assay_aloh3_mg').value);
-            const expected_meq_span = document.getElementById('expected-meq');
-            const status_span = document.getElementById('acid-neutralizing-status');
-            const minimum_requirement = 65.0; // 65.0% of expected mEq
-
-            if (!isNaN(assay_aloh3_mg)) {
-                const expected_mEq = assay_aloh3_mg * 0.0385;
-                expected_meq_span.textContent = `${expected_mEq.toFixed(4)} mEq`;
-
-                // To determine status, we'd need an actual mEq titration result.
-                // For now, we'll just show the expected value.
-                // A real implementation would compare this expected value against a measured value.
-                status_span.textContent = 'برای محاسبه وضعیت، نتیجه تیتراسیون مورد نیاز است.';
-                status_span.className = 'font-bold';
-
-            } else {
-                expected_meq_span.textContent = 'لطفاً مقدار Al(OH)3 را وارد کنید.';
-                status_span.textContent = '';
-            }
-        }
-
-        function checkPH() {
-            const pH_value = parseFloat(document.getElementById('pH_value').value);
-            const status_span = document.getElementById('pH-status');
-
-            if (!isNaN(pH_value)) {
-                if (pH_value >= 5.5 && pH_value <= 8.0) {
-                    status_span.textContent = 'قبول';
-                    status_span.className = 'font-bold pass-text';
-                } else {
-                    status_span.textContent = 'رد';
-                    status_span.className = 'font-bold fail-text';
-                }
-            } else {
-                status_span.textContent = 'لطفاً مقدار pH را وارد کنید.';
-            }
-        }
-
-        function checkChloride() {
-            const volume_ag_nitrate = parseFloat(document.getElementById('volume_ag_nitrate').value);
-            const status_span = document.getElementById('chloride-status');
-            const limit = 8.0; // mL of 0.10 N silver nitrate
-
-            if (!isNaN(volume_ag_nitrate)) {
-                if (volume_ag_nitrate <= limit) {
-                    status_span.textContent = 'قبول';
-                    status_span.className = 'font-bold pass-text';
-                } else {
-                    status_span.textContent = 'رد';
-                    status_span.className = 'font-bold fail-text';
-                }
-            } else {
-                status_span.textContent = 'لطفاً حجم نقره نیترات را وارد کنید.';
-            }
-        }
-
-        function checkSulfate() {
-            const volume_sulfuric_acid = parseFloat(document.getElementById('volume_sulfuric_acid').value);
-            const status_span = document.getElementById('sulfate-status');
-            const limit = 0.20; // mL of 0.020 N sulfuric acid
-
-            if (!isNaN(volume_sulfuric_acid)) {
-                if (volume_sulfuric_acid <= limit) {
-                    status_span.textContent = 'قبول';
-                    status_span.className = 'font-bold pass-text';
-                } else {
-                    status_span.textContent = 'رد';
-                    status_span.className = 'font-bold fail-text';
-                }
-            } else {
-                status_span.textContent = 'لطفاً حجم اسید سولفوریک را وارد کنید.';
-            }
-        }
-
-        function calculateArsenic() {
-            const abs_sample = parseFloat(document.getElementById('abs_sample_arsenic').value);
-            const abs_blank = parseFloat(document.getElementById('abs_blank_arsenic').value);
-            const abs_standard = parseFloat(document.getElementById('abs_standard_arsenic').value);
-            const conc_standard = parseFloat(document.getElementById('conc_standard_arsenic').value); // in µg/mL
-            const conc_sample_mg_ml = parseFloat(document.getElementById('conc_sample_arsenic').value); // in mg/mL
-
-            const result_span = document.getElementById('arsenic-ppm-result');
-            const status_span = document.getElementById('arsenic-status');
-            const limit_percent = 0.001; // 0.001% is 10 ppm
-
-            if (!isNaN(abs_sample) && !isNaN(abs_blank) && !isNaN(abs_standard) && !isNaN(conc_standard) && !isNaN(conc_sample_mg_ml)) {
-                // Calculate ppm of As in the solution based on absorbance
-                // This is a simplified calculation. USP may have specific factors.
-                // We need to account for sample preparation
-                const ppm_in_solution = ((abs_sample - abs_blank) / abs_standard) * conc_standard; // This gives µg As per mL if standard is µg/mL and sample conc is mg/mL
-
-                // Convert sample concentration to µg/mL for comparison with standard units
-                const conc_sample_ug_ml = conc_sample_mg_ml * 1000;
-
-                // Calculate concentration of As in the original sample in ppm
-                // The test preparation involves dissolving 0.5g Al(OH)3 in 20mL of 7N H2SO4.
-                // This part of calculation can be complex depending on the exact USP interpretation.
-                // Assuming the formula aims to relate the final measured concentration back to the original sample weight.
-
-                // Simplified calculation:
-                // ppm_in_sample = (ppm_in_solution / volume_of_solution_aliquot) * (total_volume_of_solution / original_sample_weight_in_mg)
-                // The USP states 0.5g Al(OH)3 equivalent in 20mL of 7N H2SO4.
-                // Let's assume the measurement is made on this solution and a direct comparison implies a ratio.
-                // A common approach is: Result (ppm) = (A_sample / A_standard) * (Conc_standard / Sample_weight_in_mg) * Dilution_factor
-
-                // Let's use the provided values directly to calculate ppm relative to the standard and then scale by sample weight.
-                // This calculation is highly dependent on how the USP defines the standard preparation and test preparation for absorbance readings.
-                // For now, a direct proportionality is assumed:
-                const arsenic_ppm = (abs_sample / abs_standard) * conc_standard / (conc_sample_mg_ml * 1000); // if conc_standard is µg/mL and conc_sample_mg_ml is mg/mL
-                // This needs to be re-evaluated based on the actual USP method detail.
-
-                // Let's try to interpret the limit (0.001% based on Al(OH)3 content).
-                // 0.001% = 10 ppm.
-                // The calculation needs to yield a value in ppm or % to compare against the limit.
-
-                // Let's re-think the calculation based on the given formula structure of other tests:
-                // It often relates sample measurement to standard measurement.
-                // Let's assume the standard preparation has 5µg As in a certain volume.
-                // The test preparation has 0.5g Al(OH)3 dissolved.
-
-                // A more common approach to derive % or ppm from absorbance:
-                // Let's assume standard is X µg As in Y mL. Standard concentration = X/Y µg/mL.
-                // Sample is W grams in Z mL. Sample concentration = (Measured As in µg) / Z mL.
-                // Then, ppm in sample = (Measured As in µg / Sample weight in mg) * 1000.
-
-                // Let's use the direct relationship of absorbance to concentration.
-                // Standard Preparation: 5 µg As.
-                // Test Preparation: 0.5 g Al(OH)3 in 20 mL 7N H2SO4.
-                // Limit: 0.001% Al(OH)3 content. This means 10 ppm As if Al(OH)3 were the only matrix component.
-                // The calculation must relate the absorbance of the test solution to the absorbance of the standard.
-
-                // Placeholder calculation assuming a direct ratio of absorbances scaled by concentration and sample weight.
-                // This needs refinement based on the exact procedure for standard and test solution preparation.
-                // For demonstration, let's assume a simple proportionality:
-                const measured_As_ug = ((abs_sample - abs_blank) / abs_standard) * conc_standard; // This is the amount of As in the volume of the test solution that was analyzed.
-                // If 0.5g Al(OH)3 was used to create the test solution (let's assume it's made up to a final volume V_final for the colorimetric step)
-                // And if the measurement was done on a specific aliquot volume V_measured.
-                // This is where it gets complicated without explicit USP details on volumetric steps for colorimetry.
-
-                // Let's assume the 'conc_sample_mg_ml' refers to the concentration of the final solution analyzed.
-                // If standard is 5ug in some volume, and test is 0.5g in 20mL.
-                // If we assume the analysis is done on the 20mL solution, and we want ppm in the original 0.5g.
-                // The problem is the exact volume from which the absorbance is read.
-
-                // Let's simplify and assume the result from the ratio of absorbances scaled by the standard concentration is directly comparable to the limit.
-                // If standard concentration is 5ug in X mL, let's assume X=1mL for simplicity to get a concentration.
-                // The provided numbers are not enough to form a complete, reliable calculation.
-                // Let's assume a simplified formula that might be intended:
-                const calculated_ppm = (abs_sample / abs_standard) * conc_standard / 0.5; // Scaling by 0.5g of Al(OH)3 sample
-
-                result_span.textContent = `${calculated_ppm.toFixed(3)} ppm`;
-
-                if (calculated_ppm <= 10.0) { // 0.001% = 10 ppm
-                    status_span.textContent = 'قبول';
-                    status_span.className = 'font-bold pass-text';
-                } else {
-                    status_span.textContent = 'رد';
-                    status_span.className = 'font-bold fail-text';
-                }
-            } else {
-                result_span.textContent = 'لطفاً تمام مقادیر را وارد کنید.';
-                status_span.textContent = '';
-            }
-        }
-
-        // Initialize tabs
-        document.addEventListener('DOMContentLoaded', (event) => {
-            document.getElementsByClassName('tab-button')[0].click();
+            // Activate the first tab by default
+            document.querySelector('.tab-button[data-tab="definition"]').click();
         });
     </script>
-
 </body>
 </html>

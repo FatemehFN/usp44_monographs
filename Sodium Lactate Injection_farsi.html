@@ -3,15 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مونوگراف سدیم لاکتات انژکشن (USP)</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Vazirmatn Font -->
+    <title>مونوگراف محلول سدیم لاکتات (USP)</title>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
-    <!-- MathJax -->
-    <script type="text/javascript" id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -70,495 +67,93 @@
         .fail-text {
             color: #ef4444;
         }
-        .interactive-card {
-            background-color: #e0f2fe;
-            border: 1px solid #90cdf4;
-            padding: 1rem;
-            margin-top: 1rem;
-            border-radius: 0.5rem;
-        }
-        .calculation-button {
-            background-color: #2563eb;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
+<body>
     <div class="container mx-auto p-4 max-w-4xl">
 
-        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">سدیم لاکتات انژکشن</h1>
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">محلول سدیم لاکتات (USP)</h1>
 
         <div class="flex justify-center mb-6 border-b border-gray-200">
-            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab('definition')">تعریف</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('identification')">شناسایی</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('assay')">سنجش</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('impurities')">ناخالصی‌ها</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('specificTests')">آزمایشات خاص</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('additionalRequirements')">الزامات اضافی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" data-tab="definition">تعریف</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="identification">شناسایی</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="assay">سنجش</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="impurities">ناخالصی‌ها</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="special-tests">آزمایشات خاص</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="additional-requirements">الزامات اضافی</button>
         </div>
 
-        <!-- Definition Tab -->
-        <div id="definition" class="tab-content">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
-                <p class="mb-2">سدیم لاکتات انژکشن، محلول استریل سدیم لاکتات در آب برای تزریق، یا محلول استریل اسید لاکتیک در آب برای تزریق است که با کمک سدیم هیدروکسید تهیه شده است. این فراورده حاوی نه کمتر از 95.0 درصد و نه بیشتر از 110.0 درصد مقدار برچسب‌گذاری شده <span class="ltr-text">C<sub>3</sub>H5NaO<sub>3</sub></span> می‌باشد.</p>
+        <div id="definition" class="tab-content card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+            <p class="mb-4">محلول سدیم لاکتات استریل سدیم لاکتات در آب تزریقی، یا محلول استریل اسید لاکتیک در آب تزریقی که با کمک سدیم هیدروکسید تهیه شده است. این محلول حاوی نه کمتر از 95.0 درصد و نه بیشتر از 110.0 درصد مقدار اعلام شده C3H5NaO3 است.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری</h3>
+            <p class="mb-4">در ظروف شیشه‌ای یا پلاستیکی تک دوز نگهداری شود. ظروف شیشه‌ای ترجیحاً از نوع I یا II باشند.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">برچسب‌گذاری</h3>
+            <p class="mb-4">برچسب غلظت کل اسمزی را بر حسب mOsmol در لیتر بیان می‌کند. در صورتی که محتویات کمتر از 100 میلی‌لیتر باشد، یا اگر برچسب بیان کند که تزریق برای تزریق مستقیم نیست بلکه باید قبل از مصرف رقیق شود، برچسب می‌تواند غلظت کل اسمزی را بر حسب mOsmol در میلی‌لیتر نیز بیان کند. برچسب همچنین حاوی هشدار "برای درمان اسیدوز لاکتیک استفاده نشود" است.</p>
+        </div>
+
+        <div id="identification" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+            <p class="mb-4">2 میلی‌لیتر از محلول تزریقی را روی 5 میلی‌لیتر از محلول 1 در 100 کاتکول در اسید سولفوریک بریزید: در ناحیه تماس رنگ قرمز تیره تولید می‌شود.</p>
+        </div>
+
+        <div id="assay" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+            <p class="mb-4">یک حجم از محلول تزریقی را که معادل حدود 300 میلی‌گرم سدیم لاکتات است، در یک بشر کوچک بریزید و تا خشکی تبخیر کنید. 60 میلی‌لیتر از مخلوط 1 در 5 انیدرید استیک در اسید استیک گلاسیال به باقیمانده اضافه کرده و هم بزنید تا باقیمانده کاملاً حل شود. با 0.1 نرمال پرکلریک اسید VS تیتر کنید و نقطه پایانی را پتانسیومتری تعیین کنید. یک تعیین خالی انجام دهید و هرگونه تصحیح لازم را اعمال کنید. هر میلی‌لیتر از 0.1 نرمال پرکلریک اسید معادل 11.21 میلی‌گرم C3H5NaO3 است.</p>
+            <div class="formula-display">
+                <p class="ltr-text">$$1 \text{ mL } 0.1 N \text{ Perchloric acid} \equiv 11.21 \text{ mg } C_3H_5NaO_3$$</p>
             </div>
         </div>
 
-        <!-- Identification Tab -->
-        <div id="identification" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">روش شناسایی</h3>
-                <p class="mb-2">2 میلی‌لیتر از انژکشن را روی 5 میلی‌لیتر از محلول 1 به 100 کاتکول در اسید سولفوریک بریزید: در محل تماس، رنگ قرمز تیره ایجاد می‌شود.</p>
-            </div>
+        <div id="impurities" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+            <p class="mb-4">ناخالصی‌ها در این بخش مشخص نشده‌اند.</p>
         </div>
 
-        <!-- Assay Tab -->
-        <div id="assay" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">روش سنجش</h3>
-                <p class="mb-2">یک حجم از انژکشن که معادل حدود 300 میلی‌گرم سدیم لاکتات باشد را با پیپت در یک بشر کوچک بریزید و تا خشکی تبخیر کنید. 60 میلی‌لیتر از مخلوط 1 به 5 انیدرید استیک در استیک اسید گلاسیال به باقی‌مانده اضافه کرده و هم بزنید تا باقی‌مانده کاملاً حل شود. با 0.1 نرمال پرکلریک اسید تیتر کنید و نقطه پایانی را به صورت پتانسیومتری تعیین نمایید. یک تعیین شاهد انجام دهید و هرگونه تصحیح لازم را اعمال کنید. هر میلی‌لیتر از 0.1 نرمال پرکلریک اسید معادل 11.21 میلی‌گرم <span class="ltr-text">C<sub>3</sub>H5NaO<sub>3</sub></span> است.</p>
+        <div id="special-tests" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
 
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محاسبه سنجش</h4>
-                    <div class="formula-display">
-                        <p>$$Result = mL \times N \times 11.21 \text{ mg/mL}$$</p>
-                    </div>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="assay_mL" class="block text-sm font-medium text-gray-700">حجم انژکشن (mL)</label>
-                            <input type="text" id="assay_mL" name="assay_mL" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                        <div>
-                            <label for="assay_N" class="block text-sm font-medium text-gray-700">نرمالیته (N)</label>
-                            <input type="text" id="assay_N" name="assay_N" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                    </div>
-                    <button class="calculation-button" onclick="calculateAssay()">محاسبه</button>
-                    <div class="mt-4">
-                        <span id="assay_result" class="font-bold"></span>
-                        <span id="assay_status" class="font-bold"></span>
-                    </div>
-                    <div class="mt-2">
-                        <span id="assay_ppm" class="font-bold"></span>
-                    </div>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" id="assay_additional_spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آزمایش اندوتوکسین باکتریایی</h4>
+            <p class="mb-4">حاوی نه بیشتر از 2.0 واحد اندوتوکسین USP در هر میلی‌اکس (mEq) است. <span class="ltr-text"><a href="General chapters/85.html" class="text-blue-600 hover:underline" target="_blank">85</a></span></p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">pH</h4>
+            <p class="mb-4">بین 6.0 تا 7.3 است، محلول تزریقی در صورت لزوم با آب رقیق شده است تا تقریباً 0.16 مولار (20 میلی‌گرم در میلی‌لیتر) باشد. <span class="ltr-text"><a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a></span></p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ذرات معلق در تزریقات</h4>
+            <p class="mb-4">الزامات مربوط به تزریقات با حجم کم را برآورده می‌کند. <span class="ltr-text"><a href="General chapters/788.html" class="text-blue-600 hover:underline" target="_blank">788</a></span></p>
         </div>
 
-        <!-- Impurities Tab -->
-        <div id="impurities" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">محدودیت مواد نامحلول در اسید</h3>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محاسبه محدودیت مواد نامحلول در اسید</h4>
-                    <div class="formula-display">
-                        <p>$$Result = (W_{2}-W_{1})*1000$$</p>
-                    </div>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="acidInsoluble_W1" class="block text-sm font-medium text-gray-700">وزن اولیه (گرم)</label>
-                            <input type="text" id="acidInsoluble_W1" name="acidInsoluble_W1" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                        <div>
-                            <label for="acidInsoluble_W2" class="block text-sm font-medium text-gray-700">وزن نهایی (گرم)</label>
-                            <input type="text" id="acidInsoluble_W2" name="acidInsoluble_W2" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                    </div>
-                    <button class="calculation-button" onclick="calculateAcidInsoluble()">محاسبه</button>
-                    <div class="mt-4">
-                        <span id="acidInsoluble_result" class="font-bold"></span>
-                        <span id="acidInsoluble_status" class="font-bold"></span>
-                    </div>
-                     <div class="mt-2">
-                        <span id="acidInsoluble_ppm" class="font-bold"></span>
-                    </div>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" id="acidInsoluble_additional_spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">محدودیت منیزیم و نمک‌های قلیایی</h3>
-                 <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محاسبه محدودیت منیزیم و نمک‌های قلیایی</h4>
-                    <div class="formula-display">
-                        <p>$$Result = (W_{2}-W_{1})*1000$$</p>
-                    </div>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="magnesiumAlkali_W1" class="block text-sm font-medium text-gray-700">وزن اولیه (گرم)</label>
-                            <input type="text" id="magnesiumAlkali_W1" name="magnesiumAlkali_W1" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                        <div>
-                            <label for="magnesiumAlkali_W2" class="block text-sm font-medium text-gray-700">وزن نهایی (گرم)</label>
-                            <input type="text" id="magnesiumAlkali_W2" name="magnesiumAlkali_W2" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                    </div>
-                    <button class="calculation-button" onclick="calculateMagnesiumAlkali()">محاسبه</button>
-                    <div class="mt-4">
-                        <span id="magnesiumAlkali_result" class="font-bold"></span>
-                        <span id="magnesiumAlkali_status" class="font-bold"></span>
-                    </div>
-                     <div class="mt-2">
-                        <span id="magnesiumAlkali_ppm" class="font-bold"></span>
-                    </div>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" id="magnesiumAlkali_additional_spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">ماده نامحلول در الکل</h3>
-                 <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محاسبه ماده نامحلول در الکل</h4>
-                    <div class="formula-display">
-                        <p>$$Result = (W_{2}-W_{1})*1000$$</p>
-                    </div>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="alcoholInsoluble_W1" class="block text-sm font-medium text-gray-700">وزن اولیه (گرم)</label>
-                            <input type="text" id="alcoholInsoluble_W1" name="alcoholInsoluble_W1" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                        <div>
-                            <label for="alcoholInsoluble_W2" class="block text-sm font-medium text-gray-700">وزن نهایی (گرم)</label>
-                            <input type="text" id="alcoholInsoluble_W2" name="alcoholInsoluble_W2" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                    </div>
-                    <button class="calculation-button" onclick="calculateAlcoholInsoluble()">محاسبه</button>
-                    <div class="mt-4">
-                        <span id="alcoholInsoluble_result" class="font-bold"></span>
-                        <span id="alcoholInsoluble_status" class="font-bold"></span>
-                    </div>
-                     <div class="mt-2">
-                        <span id="alcoholInsoluble_ppm" class="font-bold"></span>
-                    </div>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" id="alcoholInsoluble_additional_spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
-        </div>
-
-        <!-- Specific Tests Tab -->
-        <div id="specificTests" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایش اندوتوکسین باکتریایی <a href="General chapters/85.html" class="text-blue-600 hover:underline" target="_blank">85</a></h3>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت آزمون اندوتوکسین باکتریایی</h4>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="bacterialEndotoxins_status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                            <select id="bacterialEndotoxins_status" name="bacterialEndotoxins_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                                <option value=""></option>
-                                <option value="Pass">Pass</option>
-                                <option value="Fail">Fail</option>
-                            </select>
-                        </div>
-                    </div>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" id="bacterialEndotoxins_additional_spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a></h3>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت آزمون pH</h4>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="ph_status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                            <select id="ph_status" name="ph_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                                <option value=""></option>
-                                <option value="Pass">Pass</option>
-                                <option value="Fail">Fail</option>
-                            </select>
-                        </div>
-                    </div>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" id="ph_additional_spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">ذرات معلق در تزریقات <a href="General chapters/788.html" class="text-blue-600 hover:underline" target="_blank">788</a></h3>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت آزمون ذرات معلق</h4>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="particulateMatter_status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                            <select id="particulateMatter_status" name="particulateMatter_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                                <option value=""></option>
-                                <option value="Pass">Pass</option>
-                                <option value="Fail">Fail</option>
-                            </select>
-                        </div>
-                    </div>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" id="particulateMatter_additional_spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">مواد کاهنده</h3>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محاسبه مواد کاهنده</h4>
-                    <div class="formula-display">
-                        <p>$$Result = \left[ \frac{(V_{B}-V_{S}) \times N \times 27 \times F}{W} \right] \times 100$$</p>
-                    </div>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="reducingSubstances_VB" class="block text-sm font-medium text-gray-700">حجم تیتر شاهد (mL) (VB)</label>
-                            <input type="text" id="reducingSubstances_VB" name="reducingSubstances_VB" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                        <div>
-                            <label for="reducingSubstances_VS" class="block text-sm font-medium text-gray-700">حجم تیتر نمونه (mL) (VS)</label>
-                            <input type="text" id="reducingSubstances_VS" name="reducingSubstances_VS" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                        <div>
-                            <label for="reducingSubstances_N" class="block text-sm font-medium text-gray-700">نرمالیته (N)</label>
-                            <input type="text" id="reducingSubstances_N" name="reducingSubstances_N" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                        <div>
-                            <label for="reducingSubstances_F" class="block text-sm font-medium text-gray-700">ضریب تبدیل (F)</label>
-                            <input type="text" id="reducingSubstances_F" name="reducingSubstances_F" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                        <div>
-                            <label for="reducingSubstances_W" class="block text-sm font-medium text-gray-700">وزن نمونه (g) (W)</label>
-                            <input type="text" id="reducingSubstances_W" name="reducingSubstances_W" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                    </div>
-                    <button class="calculation-button" onclick="calculateReducingSubstances()">محاسبه</button>
-                    <div class="mt-4">
-                        <span id="reducingSubstances_result" class="font-bold"></span>
-                        <span id="reducingSubstances_status" class="font-bold"></span>
-                    </div>
-                    <div class="mt-2">
-                        <span id="reducingSubstances_ppm" class="font-bold"></span>
-                    </div>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" id="reducingSubstances_additional_spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Additional Requirements Tab -->
-        <div id="additionalRequirements" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته بندی و نگهداری</h3>
-                <p class="mb-2">در ظروف شیشه‌ای یا پلاستیکی تک دوز نگهداری شود. ظروف شیشه‌ای ترجیحاً از نوع I یا II باشند.</p>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">برچسب‌گذاری</h3>
-                <p class="mb-2">برچسب، غلظت کل اسمولار را بر حسب mOsmol در لیتر بیان می‌کند. در مواردی که محتویات کمتر از 100 میلی‌لیتر باشد، یا برچسب بیان کند که انژکشن برای تزریق مستقیم نیست و باید قبل از مصرف رقیق شود، برچسب می‌تواند به طور جایگزین غلظت کل اسمولار را بر حسب mOsmol در میلی‌لیتر بیان کند. برچسب همچنین باید حاوی هشدار "برای درمان اسیدوز لاکتیک استفاده نشود" باشد.</p>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">الزامات دیگر</h3>
-                <p class="mb-2">این فراورده الزامات مربوط به انژکشن‌ها و محصولات دارویی کاشته شده <a href="General chapters/1.html" class="text-blue-600 hover:underline" target="_blank">1</a> را برآورده می‌کند.</p>
-            </div>
+        <div id="additional-requirements" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+            <p class="mb-4">الزامات مربوط به تزریقات و محصولات دارویی قابل کاشت را برآورده می‌کند. <span class="ltr-text">1</span></p>
         </div>
     </div>
 
     <script>
-        function showTab(tabId) {
-            const tabContents = document.querySelectorAll('.tab-content');
-            tabContents.forEach(content => content.classList.add('hidden'));
-
+        document.addEventListener('DOMContentLoaded', function() {
             const tabButtons = document.querySelectorAll('.tab-button');
-            tabButtons.forEach(button => button.classList.remove('tab-active'));
-            tabButtons.forEach(button => button.classList.add('tab-inactive'));
+            const tabContents = document.querySelectorAll('.tab-content');
 
-            document.getElementById(tabId).classList.remove('hidden');
-            document.querySelector(`button[onclick="showTab('${tabId}')"]`).classList.remove('tab-inactive');
-            document.querySelector(`button[onclick="showTab('${tabId}')"]`).classList.add('tab-active');
-        }
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('tab-active');
+                        btn.classList.add('tab-inactive');
+                    });
 
-        function calculateAssay() {
-            const mL = parseFloat(document.getElementById('assay_mL').value);
-            const N = parseFloat(document.getElementById('assay_N').value);
-            const resultSpan = document.getElementById('assay_result');
-            const statusSpan = document.getElementById('assay_status');
-            const ppmSpan = document.getElementById('assay_ppm');
+                    // Add active class to the clicked button
+                    this.classList.add('tab-active');
+                    this.classList.remove('tab-inactive');
 
-            if (isNaN(mL) || isNaN(N)) {
-                resultSpan.textContent = "لطفاً مقادیر معتبر وارد کنید.";
-                resultSpan.className = 'text-red-500 font-bold';
-                statusSpan.textContent = "";
-                ppmSpan.textContent = "";
-                return;
-            }
+                    // Hide all tab contents
+                    tabContents.forEach(content => {
+                        content.classList.add('hidden');
+                    });
 
-            const result = mL * N * 11.21; // mg of C3H5NaO3
-            const resultMgPerML = result / mL; // mg/mL
-            const resultPercent = (result / 300) * 100; // Assuming 300mg is the target
-
-            let status = "";
-            let statusClass = "";
-
-            if (resultPercent >= 95.0 && resultPercent <= 110.0) {
-                status = "Pass";
-                statusClass = "pass-text";
-            } else {
-                status = "Fail";
-                statusClass = "fail-text";
-            }
-
-            resultSpan.textContent = `نتیجه: ${result.toFixed(2)} mg (${resultPercent.toFixed(2)}%)`;
-            resultSpan.className = "font-bold";
-            statusSpan.textContent = `وضعیت: ${status}`;
-            statusSpan.className = `font-bold ${statusClass}`;
-            ppmSpan.textContent = ``;
-        }
-
-        function calculateAcidInsoluble() {
-            const W1 = parseFloat(document.getElementById('acidInsoluble_W1').value);
-            const W2 = parseFloat(document.getElementById('acidInsoluble_W2').value);
-            const resultSpan = document.getElementById('acidInsoluble_result');
-            const statusSpan = document.getElementById('acidInsoluble_status');
-            const ppmSpan = document.getElementById('acidInsoluble_ppm');
-
-
-            if (isNaN(W1) || isNaN(W2)) {
-                resultSpan.textContent = "لطفاً مقادیر معتبر وارد کنید.";
-                resultSpan.className = 'text-red-500 font-bold';
-                statusSpan.textContent = "";
-                ppmSpan.textContent = "";
-                return;
-            }
-
-            const result = (W2 - W1) * 1000;
-            const ppm = (result / 100) * 1000000; // Assuming the formula gives %
-
-            let status = "";
-            let statusClass = "";
-
-            if (result <= 0.1) { // Example limit, USP might have a specific limit
-                status = "Pass";
-                statusClass = "pass-text";
-            } else {
-                status = "Fail";
-                statusClass = "fail-text";
-            }
-
-            resultSpan.textContent = `نتیجه: ${result.toFixed(4)} mg/L`;
-            resultSpan.className = "font-bold";
-            statusSpan.textContent = `وضعیت: ${status}`;
-            statusSpan.className = `font-bold ${statusClass}`;
-            ppmSpan.textContent = `(ppm: ${ppm.toFixed(2)})`;
-        }
-
-        function calculateMagnesiumAlkali() {
-             const W1 = parseFloat(document.getElementById('magnesiumAlkali_W1').value);
-            const W2 = parseFloat(document.getElementById('magnesiumAlkali_W2').value);
-            const resultSpan = document.getElementById('magnesiumAlkali_result');
-            const statusSpan = document.getElementById('magnesiumAlkali_status');
-            const ppmSpan = document.getElementById('magnesiumAlkali_ppm');
-
-            if (isNaN(W1) || isNaN(W2)) {
-                resultSpan.textContent = "لطفاً مقادیر معتبر وارد کنید.";
-                resultSpan.className = 'text-red-500 font-bold';
-                statusSpan.textContent = "";
-                ppmSpan.textContent = "";
-                return;
-            }
-
-            const result = (W2 - W1) * 1000;
-            const ppm = (result / 100) * 1000000; // Assuming the formula gives %
-
-            let status = "";
-            let statusClass = "";
-
-            if (result <= 0.1) { // Example limit, USP might have a specific limit
-                status = "Pass";
-                statusClass = "pass-text";
-            } else {
-                status = "Fail";
-                statusClass = "fail-text";
-            }
-
-            resultSpan.textContent = `نتیجه: ${result.toFixed(4)} mg/L`;
-            resultSpan.className = "font-bold";
-            statusSpan.textContent = `وضعیت: ${status}`;
-            statusSpan.className = `font-bold ${statusClass}`;
-            ppmSpan.textContent = `(ppm: ${ppm.toFixed(2)})`;
-        }
-
-         function calculateAlcoholInsoluble() {
-             const W1 = parseFloat(document.getElementById('alcoholInsoluble_W1').value);
-            const W2 = parseFloat(document.getElementById('alcoholInsoluble_W2').value);
-            const resultSpan = document.getElementById('alcoholInsoluble_result');
-            const statusSpan = document.getElementById('alcoholInsoluble_status');
-            const ppmSpan = document.getElementById('alcoholInsoluble_ppm');
-
-
-            if (isNaN(W1) || isNaN(W2)) {
-                resultSpan.textContent = "لطفاً مقادیر معتبر وارد کنید.";
-                resultSpan.className = 'text-red-500 font-bold';
-                statusSpan.textContent = "";
-                ppmSpan.textContent = "";
-                return;
-            }
-
-            const result = (W2 - W1) * 1000;
-            const ppm = (result / 100) * 1000000; // Assuming the formula gives %
-
-            let status = "";
-            let statusClass = "";
-
-            if (result <= 0.1) { // Example limit, USP might have a specific limit
-                status = "Pass";
-                statusClass = "pass-text";
-            } else {
-                status = "Fail";
-                statusClass = "fail-text";
-            }
-
-            resultSpan.textContent = `نتیجه: ${result.toFixed(4)} mg/L`;
-            resultSpan.className = "font-bold";
-            statusSpan.textContent = `وضعیت: ${status}`;
-            statusSpan.className = `font-bold ${statusClass}`;
-            ppmSpan.textContent = `(ppm: ${ppm.toFixed(2)})`;
-        }
-
-        function calculateReducingSubstances() {
-            const VB = parseFloat(document.getElementById('reducingSubstances_VB').value);
-            const VS = parseFloat(document.getElementById('reducingSubstances_VS').value);
-            const N = parseFloat(document.getElementById('reducingSubstances_N').value);
-            const F = parseFloat(document.getElementById('reducingSubstances_F').value);
-            const W = parseFloat(document.getElementById('reducingSubstances_W').value);
-
-            const resultSpan = document.getElementById('reducingSubstances_result');
-            const statusSpan = document.getElementById('reducingSubstances_status');
-            const ppmSpan = document.getElementById('reducingSubstances_ppm');
-
-
-            if (isNaN(VB) || isNaN(VS) || isNaN(N) || isNaN(F) || isNaN(W) || W === 0) {
-                resultSpan.textContent = "لطفاً مقادیر معتبر وارد کنید.";
-                resultSpan.className = 'text-red-500 font-bold';
-                statusSpan.textContent = "";
-                ppmSpan.textContent = "";
-                return;
-            }
-
-            const result = ((VB - VS) * N * 27 * F) / W * 100;
-            const ppm = (result / 100) * 1000000;
-
-            let status = "";
-            let statusClass = "";
-
-            if (result <= 0.1) { // Example limit, USP might have a specific limit
-                status = "Pass";
-                statusClass = "pass-text";
-            } else {
-                status = "Fail";
-                statusClass = "fail-text";
-            }
-
-            resultSpan.textContent = `نتیجه: ${result.toFixed(2)} %`;
-            resultSpan.className = "font-bold";
-            statusSpan.textContent = `وضعیت: ${status}`;
-            statusSpan.className = `font-bold ${statusClass}`;
-            ppmSpan.textContent = `(ppm: ${ppm.toFixed(2)})`;
-        }
-
-        document.addEventListener('DOMContentLoaded', (event) => {
-            showTab('definition');
+                    // Show the corresponding tab content
+                    const targetTab = this.getAttribute('data-tab');
+                    document.getElementById(targetTab).classList.remove('hidden');
+                });
+            });
         });
     </script>
-
 </body>
 </html>

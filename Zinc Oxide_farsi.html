@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف اکسید روی (USP)</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Vazirmatn Font -->
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
-    <!-- MathJax -->
-    <script type="text/javascript" id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
     <style>
         body {
@@ -70,370 +67,110 @@
         .fail-text {
             color: #ef4444;
         }
-        .interactive-card {
-            background-color: #e0f2fe;
-            border: 1px solid #90cdf4;
-            padding: 1rem;
-            margin-top: 1rem;
-            border-radius: 0.5rem;
-        }
-        .calculation-button {
-            background-color: #2563eb;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
-
+<body>
     <div class="container mx-auto p-4 max-w-4xl">
-
-        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">اکسید روی (ZnO)</h1>
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">مونوگراف اکسید روی (USP)</h1>
 
         <div class="flex justify-center mb-6 border-b border-gray-200">
-            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="openTab(event, 'Definition')">تعریف</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'Identification')">شناسایی</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'Assay')">سنجش</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'Impurities')">ناخالصی‌ها</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'SpecificTests')">آزمایشات خاص</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'AdditionalRequirements')">الزامات اضافی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab(event, 'definition')">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'identification')">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'assay')">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'impurities')">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'specific_tests')">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'additional_requirements')">الزامات اضافی</button>
         </div>
 
-        <div id="Definition" class="tab-content card">
+        <div id="definition" class="card tab-content">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
-            <p class="mb-4">اکسید روی، که تازه مشتعل شده است، باید حاوی حداقل 98.0% و حداکثر 102.0% اکسید روی (ZnO) باشد.</p>
-            <p class="mb-4">اکسید روی [1314-13-2].</p>
+            <p>اکسید روی، تازه مشتعل شده، حاوی <span class="ltr-text">NLT 98.0%</span> و <span class="ltr-text">NMT 102.0%</span> اکسید روی (ZnO) است.</p>
         </div>
 
-        <div id="Identification" class="tab-content hidden card">
+        <div id="identification" class="card tab-content hidden">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
             <h3 class="text-xl font-semibold text-blue-600 mb-2">الف</h3>
-            <p class="mb-4">هنگامی که به شدت گرم شود، رنگ زرد به خود می‌گیرد که با سرد شدن از بین می‌رود.</p>
+            <p>هنگامی که به شدت حرارت داده شود، رنگ زردی به خود می‌گیرد که با سرد شدن از بین می‌رود.</p>
             <h3 class="text-xl font-semibold text-blue-600 mb-2">ب</h3>
-            <p class="mb-4">زمان ماند پیک روی در محلول نمونه با زمان ماند پیک روی در محلول استاندارد، همانطور که در سنجش بدست آمده است، مطابقت دارد.</p>
+            <p>زمان نگهداری پیک روی در محلول نمونه با زمان نگهداری پیک روی در محلول استاندارد، همانطور که در سنجش به دست می‌آید، مطابقت دارد.</p>
         </div>
 
-        <div id="Assay" class="tab-content hidden card">
+        <div id="assay" class="card tab-content hidden">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش</h4>
-            <p class="mb-4">مطابق با ▲تعیین روی 591▲، روش کروماتوگرافی یونی▲ (1 مه 2020) پیش بروید.</p>
-            <p class="mb-4">رقیق کننده: 0.2% (w/v) اسید هیدروکلریک</p>
-            <p class="mb-4">محلول استاندارد: 20 میکروگرم/میلی‌لیتر از استاندارد روی USP در رقیق کننده، تهیه شده طبق دستورالعمل فصل.</p>
-            <p class="mb-4">محلول نمونه: 20 میکروگرم/میلی‌لیتر از اکسید روی از اکسید روی تازه مشتعل شده در رقیق کننده، تهیه شده طبق دستورالعمل محلول استاندارد.</p>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز</h4>
-            <p class="mb-4">نمونه‌ها: محلول استاندارد و محلول نمونه.</p>
-            <p class="mb-4">درصد اکسید روی (ZnO) را در بخشی از اکسید روی گرفته شده محاسبه کنید:</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تغییر به این صورت خوانده شود:</h4>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش انجام:</h4>
+            <p>همانطور که در ▲تعیین روی <a href="General chapters/591.html" class="text-blue-600 hover:underline" target="_blank">591</a>، روش کروماتوگرافی یونی▲ (1-May-2020) آمده است، عمل کنید.</p>
+            <p><span class="font-bold">حلال رقیق کننده:</span> <span class="ltr-text">0.2%</span> (w/v) اسید هیدروکلریک</p>
+            <p><span class="font-bold">محلول استاندارد:</span> <span class="ltr-text">20 µg/mL</span> از USP Zinc Oxide RS در حلال رقیق کننده، طبق دستور فصل تهیه شده است.</p>
+            <p><span class="font-bold">محلول نمونه:</span> <span class="ltr-text">20 µg/mL</span> اکسید روی از اکسید روی تازه مشتعل شده در حلال رقیق کننده، طبق دستور محلول استاندارد تهیه شده است.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز:</h4>
+            <p><span class="font-bold">نمونه‌ها:</span> محلول استاندارد و محلول نمونه</p>
+            <p>درصد اکسید روی (ZnO) را در قسمت گرفته شده از اکسید روی محاسبه کنید:</p>
             <div class="formula-display">
-                <p class="math-text">$$Result = (r_U/r_S) \times (C_S/C_U) \times 100$$</p>
+                $$ \text{Result} = (r_U / r_S) \times (C_S / C_U) \times 100 $$
             </div>
-            <p class="mb-4">r<sub>U</sub> = پاسخ پیک روی از محلول نمونه</p>
-            <p class="mb-4">r<sub>S</sub> = پاسخ پیک روی از محلول استاندارد</p>
-            <p class="mb-4">C<sub>S</sub> = غلظت استاندارد روی USP در محلول استاندارد (µg/mL)</p>
-            <p class="mb-4">C<sub>U</sub> = غلظت اکسید روی در محلول نمونه (µg/mL)</p>
-            <p class="mb-4">معیارهای پذیرش: 98.0%–102.0% بر اساس ماده مشتعل شده</p>
-
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب سنجش</h4>
-                <div class="mb-2">
-                    <label for="assay_rU" class="block text-sm font-medium text-gray-700">پاسخ پیک روی (نمونه):</label>
-                    <input type="text" id="assay_rU" name="assay_rU" class="variable-input">
-                </div>
-                <div class="mb-2">
-                    <label for="assay_rS" class="block text-sm font-medium text-gray-700">پاسخ پیک روی (استاندارد):</label>
-                    <input type="text" id="assay_rS" name="assay_rS" class="variable-input">
-                </div>
-                <div class="mb-2">
-                    <label for="assay_CS" class="block text-sm font-medium text-gray-700">غلظت استاندارد (µg/mL):</label>
-                    <input type="text" id="assay_CS" name="assay_CS" class="variable-input">
-                </div>
-                <div class="mb-2">
-                    <label for="assay_CU" class="block text-sm font-medium text-gray-700">غلظت نمونه (µg/mL):</label>
-                    <input type="text" id="assay_CU" name="assay_CU" class="variable-input">
-                </div>
-                <button class="calculation-button" onclick="calculateAssay()">محاسبه</button>
-                <div class="mt-4">
-                    <p>نتیجه: <span id="assay_result">--</span>%</p>
-                    <p>وضعیت: <span id="assay_status">--</span></p>
-                </div>
-                <div class="mt-2">
-                    <p>توضیحات اضافه / Additional Specifications:</p>
-                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
+            <p><span class="font-bold">r<sub>U</sub></span> = پاسخ پیک روی از محلول نمونه</p>
+            <p><span class="font-bold">r<sub>S</sub></span> = پاسخ پیک روی از محلول استاندارد</p>
+            <p><span class="font-bold">C<sub>S</sub></span> = غلظت USP Zinc Oxide RS در محلول استاندارد (<span class="ltr-text">µg/mL</span>)</p>
+            <p><span class="font-bold">C<sub>U</sub></span> = غلظت اکسید روی در محلول نمونه (<span class="ltr-text">µg/mL</span>)</p>
+            <p><span class="font-bold">معیارهای پذیرش:</span> <span class="ltr-text">98.0%–102.0%</span> بر اساس ماده مشتعل شده</p>
         </div>
 
-        <div id="Impurities" class="tab-content hidden card">
+        <div id="impurities" class="card tab-content hidden">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
-
             <h3 class="text-xl font-semibold text-blue-600 mb-2">آرسنیک <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a></h3>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش‌ها، روش I</h4>
-            <p class="mb-4">حداکثر 6 ppm</p>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد آرسنیک</h4>
-                <p class="mb-4">معیارهای پذیرش: حداکثر 6 ppm</p>
-                <div class="mb-2">
-                    <label for="arsenic_ppm" class="block text-sm font-medium text-gray-700">مقدار آرسنیک (ppm):</label>
-                    <input type="text" id="arsenic_ppm" name="arsenic_ppm" class="variable-input">
-                </div>
-                <button class="calculation-button" onclick="checkArsenic()">بررسی</button>
-                <div class="mt-4">
-                    <p>وضعیت: <span id="arsenic_status">--</span></p>
-                </div>
-                <div class="mt-2">
-                    <p>توضیحات اضافه / Additional Specifications:</p>
-                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
-
+            <p>روش‌ها، روش I: <span class="ltr-text">NMT 6 ppm</span></p>
             <h3 class="text-xl font-semibold text-blue-600 mb-2">سرب</h3>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه</h4>
-            <p class="mb-4">2 گرم را به 20 میلی‌لیتر آب اضافه کنید، خوب هم بزنید و 5 میلی‌لیتر اسید استیک یخچالی اضافه کنید. تا زمانی که حل شود، روی حمام بخار گرم کنید.</p>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز</h4>
-            <p class="mb-4">5 قطره از معرف پتاسیم کرومات را اضافه کنید.</p>
-            <p class="mb-4">معیارهای پذیرش: هیچ کدورت یا رسوبی تولید نمی‌شود.</p>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد سرب</h4>
-                <div class="mb-4">
-                    <label for="lead_test" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                    <select id="lead_test" name="lead_test" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                        <option value=""></option>
-                        <option value="Pass">قبول</option>
-                        <option value="Fail">رد</option>
-                    </select>
-                </div>
-                <div class="mt-2">
-                    <p>توضیحات اضافه / Additional Specifications:</p>
-                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
-
+            <p><span class="font-bold">محلول نمونه:</span> <span class="ltr-text">2</span> گرم به <span class="ltr-text">20 mL</span> آب اضافه کنید، به خوبی هم بزنید و <span class="ltr-text">5 mL</span> اسید استیک یخچالی اضافه کنید. روی حمام بخار گرم کنید تا حل شود.</p>
+            <p><span class="font-bold">آنالیز:</span> <span class="ltr-text">5</span> قطره TS کرومات پتاسیم اضافه کنید.</p>
+            <p><span class="font-bold">معیارهای پذیرش:</span> هیچ کدورت یا رسوبی تولید نشود.</p>
             <h3 class="text-xl font-semibold text-blue-600 mb-2">آهن و سایر فلزات سنگین</h3>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه</h4>
-            <p class="mb-4">از محلول آزمون کربنات و رنگ محلول استفاده کنید.</p>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز</h4>
-            <p class="mb-4">2 نمونه 5 میلی‌لیتری از محلول نمونه را خنک کنید. معرف پتاسیم فروسیانید را به نمونه اول اضافه کنید و معرف سدیم سولفید را به نمونه دوم اضافه کنید.</p>
-            <p class="mb-4">معیارهای پذیرش: رسوب‌های سفید در هر دو نمونه تشکیل می‌شوند.</p>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آهن و سایر فلزات سنگین</h4>
-                 <div class="mb-4">
-                    <label for="heavy_metals_test" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                    <select id="heavy_metals_test" name="heavy_metals_test" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                        <option value=""></option>
-                        <option value="Pass">قبول</option>
-                        <option value="Fail">رد</option>
-                    </select>
-                </div>
-                <div class="mt-2">
-                    <p>توضیحات اضافه / Additional Specifications:</p>
-                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
+            <p><span class="font-bold">محلول نمونه:</span> از محلول بخش کربنات و رنگ محلول استفاده کنید.</p>
+            <p><span class="font-bold">آنالیز:</span> <span class="ltr-text">2</span> قسمت جداگانه <span class="ltr-text">5-mL</span> از محلول نمونه را خنک کنید. TS فروسیانید پتاسیم به قسمت اول اضافه کنید، و TS سولفید سدیم به قسمت دوم اضافه کنید.</p>
+            <p><span class="font-bold">معیارهای پذیرش:</span> رسوبات سفید در هر دو قسمت تشکیل می‌شود.</p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">از دست دادن در اثر اشتعال <a href="General chapters/733.html" class="text-blue-600 hover:underline" target="_blank">733</a></h3>
+            <p><span class="font-bold">نمونه:</span> <span class="ltr-text">2</span> گرم</p>
+            <p><span class="font-bold">آنالیز:</span> نمونه را در <span class="ltr-text">500°</span> تا وزن ثابت مشتعل کنید.</p>
+            <p><span class="font-bold">معیارهای پذیرش:</span> <span class="ltr-text">NMT 1.0%</span></p>
         </div>
 
-        <div id="SpecificTests" class="tab-content hidden card">
+        <div id="specific_tests" class="card tab-content hidden">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
-
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">از دست دادن در هنگام اشتعال <a href="General chapters/733.html" class="text-blue-600 hover:underline" target="_blank">733</a></h3>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه</h4>
-            <p class="mb-4">2 گرم</p>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز</h4>
-            <p class="mb-4">نمونه را در 500 درجه سانتی‌گراد تا وزن ثابت مشتعل کنید.</p>
-            <p class="mb-4">معیارهای پذیرش: حداکثر 1.0%</p>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">از دست دادن در هنگام اشتعال</h4>
-                <div class="formula-display">
-                    <p class="math-text">$$LOD = \frac{(W_1 + W_{sa}) - W_2}{W_{sa}} \times 100$$</p>
-                </div>
-                <div class="mb-2">
-                    <label for="loi_W1" class="block text-sm font-medium text-gray-700">وزن اولیه نمونه (گرم):</label>
-                    <input type="text" id="loi_W1" name="loi_W1" class="variable-input">
-                </div>
-                <div class="mb-2">
-                    <label for="loi_Wsa" class="block text-sm font-medium text-gray-700">وزن نمونه خشک شده (گرم):</label>
-                    <input type="text" id="loi_Wsa" name="loi_Wsa" class="variable-input">
-                </div>
-                 <div class="mb-2">
-                    <label for="loi_W2" class="block text-sm font-medium text-gray-700">وزن پس از اشتعال (گرم):</label>
-                    <input type="text" id="loi_W2" name="loi_W2" class="variable-input">
-                </div>
-                <button class="calculation-button" onclick="calculateLOI()">محاسبه</button>
-                <div class="mt-4">
-                    <p>نتیجه: <span id="loi_result">--</span>%</p>
-                    <p>وضعیت: <span id="loi_status">--</span></p>
-                </div>
-                <div class="mt-2">
-                    <p>توضیحات اضافه / Additional Specifications:</p>
-                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
-
             <h3 class="text-xl font-semibold text-blue-600 mb-2">قلیایی بودن</h3>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز</h4>
-            <p class="mb-4">1.0 گرم را با 10 میلی‌لیتر آب داغ مخلوط کنید، 2 قطره معرف فنل فتالئین اضافه کنید و از یک فیلتر مناسب با اندازه منافذ مناسب عبور دهید.</p>
-            <p class="mb-4">معیارهای پذیرش: اگر رنگ قرمز تولید شود، حداکثر 0.30 میلی‌لیتر از 0.10 نرمال اسید هیدروکلریک برای از بین بردن آن لازم است.</p>
-             <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد قلیایی بودن</h4>
-                <div class="mb-2">
-                    <label for="alkalinity_HCl" class="block text-sm font-medium text-gray-700">مقدار اسید لازم (mL):</label>
-                    <input type="text" id="alkalinity_HCl" name="alkalinity_HCl" class="variable-input">
-                </div>
-                <button class="calculation-button" onclick="checkAlkalinity()">بررسی</button>
-                <div class="mt-4">
-                    <p>وضعیت: <span id="alkalinity_status">--</span></p>
-                </div>
-                 <div class="mt-2">
-                    <p>توضیحات اضافه / Additional Specifications:</p>
-                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
-
+            <p><span class="font-bold">آنالیز:</span> <span class="ltr-text">1.0</span> گرم را با <span class="ltr-text">10 mL</span> آب داغ مخلوط کنید، <span class="ltr-text">2</span> قطره TS فنل فتالئین اضافه کنید و از یک فیلتر مناسب با اندازه منافذ مناسب عبور دهید.</p>
+            <p><span class="font-bold">معیارهای پذیرش:</span> اگر رنگ قرمز تولید شود، <span class="ltr-text">NMT 0.30 mL</span> از اسید هیدروکلریک <span class="ltr-text">0.10 N</span> برای از بین بردن آن لازم است.</p>
             <h3 class="text-xl font-semibold text-blue-600 mb-2">کربنات و رنگ محلول</h3>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز</h4>
-            <p class="mb-4">2.0 گرم را با 10 میلی‌لیتر آب مخلوط کنید، 30 میلی‌لیتر 2 نرمال اسید سولفوریک اضافه کنید و با هم زدن مداوم روی حمام بخار حرارت دهید.</p>
-            <p class="mb-4">معیارهای پذیرش: هیچ گونه کف کردنی رخ نمی‌دهد و محلول حاصل شفاف و بی‌رنگ است. [نکته—از این محلول در آزمون آهن و سایر فلزات سنگین استفاده کنید.]</p>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کربنات و رنگ محلول</h4>
-                 <div class="mb-4">
-                    <label for="carbonate_color_test" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                    <select id="carbonate_color_test" name="carbonate_color_test" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                        <option value=""></option>
-                        <option value="Pass">قبول</option>
-                        <option value="Fail">رد</option>
-                    </select>
-                </div>
-                <div class="mt-2">
-                    <p>توضیحات اضافه / Additional Specifications:</p>
-                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
+            <p><span class="font-bold">آنالیز:</span> <span class="ltr-text">2.0</span> گرم را با <span class="ltr-text">10 mL</span> آب مخلوط کنید، <span class="ltr-text">30 mL</span> اسید سولفوریک <span class="ltr-text">2 N</span> اضافه کنید و روی حمام بخار با هم زدن مداوم حرارت دهید.</p>
+            <p><span class="font-bold">معیارهای پذیرش:</span> هیچ جوشش رخ نمی‌دهد، و محلول حاصل شفاف و بی‌رنگ است. [توجه - از این محلول در آزمایش آهن و سایر فلزات سنگین استفاده کنید.]</p>
         </div>
 
-        <div id="AdditionalRequirements" class="tab-content hidden card">
+        <div id="additional_requirements" class="card tab-content hidden">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته بندی و نگهداری</h3>
-            <p class="mb-4">در ظروف دربسته نگهداری شود.</p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری:</h3>
+            <p>در ظروف دربسته نگهداری شود.</p>
         </div>
-
     </div>
 
     <script>
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
+        function showTab(event, tabId) {
+            var tabButtons = document.getElementsByClassName("tab-button");
+            for (var i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("tab-active");
+                tabButtons[i].classList.add("tab-inactive");
             }
-            tablinks = document.getElementsByClassName("tab-button");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" tab-active", "").replace(" tab-inactive", "");
-                tablinks[i].classList.add("tab-inactive");
+
+            var tabContents = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.add("hidden");
             }
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className = evt.currentTarget.className.replace(" tab-inactive", "");
-            evt.currentTarget.classList.add("tab-active");
+
+            event.currentTarget.classList.add("tab-active");
+            event.currentTarget.classList.remove("tab-inactive");
+            document.getElementById(tabId).classList.remove("hidden");
         }
 
-        // Initialize the first tab
-        document.addEventListener('DOMContentLoaded', (event) => {
-            document.querySelector('.tab-button').click();
-        });
-
-        function calculateAssay() {
-            const rU = parseFloat(document.getElementById('assay_rU').value);
-            const rS = parseFloat(document.getElementById('assay_rS').value);
-            const CS = parseFloat(document.getElementById('assay_CS').value);
-            const CU = parseFloat(document.getElementById('assay_CU').value);
-
-            if (isNaN(rU) || isNaN(rS) || isNaN(CS) || isNaN(CU)) {
-                document.getElementById('assay_result').textContent = "ورودی نامعتبر";
-                document.getElementById('assay_status').textContent = "--";
-                return;
-            }
-
-            const result = (rU / rS) * (CS / CU) * 100;
-            const statusElement = document.getElementById('assay_status');
-            const resultElement = document.getElementById('assay_result');
-
-            resultElement.textContent = result.toFixed(2);
-
-            if (result >= 98.0 && result <= 102.0) {
-                statusElement.textContent = "قبول";
-                statusElement.className = "pass-text";
-            } else {
-                statusElement.textContent = "رد";
-                statusElement.className = "fail-text";
-            }
-        }
-
-        function checkArsenic() {
-            const arsenicValue = parseFloat(document.getElementById('arsenic_ppm').value);
-            const statusElement = document.getElementById('arsenic_status');
-
-            if (isNaN(arsenicValue)) {
-                statusElement.textContent = "--";
-                statusElement.className = "";
-                return;
-            }
-
-            if (arsenicValue <= 6) {
-                statusElement.textContent = "قبول";
-                statusElement.className = "pass-text";
-            } else {
-                statusElement.textContent = "رد";
-                statusElement.className = "fail-text";
-            }
-        }
-
-        function calculateLOI() {
-            const W1 = parseFloat(document.getElementById('loi_W1').value);
-            const Wsa = parseFloat(document.getElementById('loi_Wsa').value);
-            const W2 = parseFloat(document.getElementById('loi_W2').value);
-            const resultElement = document.getElementById('loi_result');
-            const statusElement = document.getElementById('loi_status');
-
-            if (isNaN(W1) || isNaN(Wsa) || isNaN(W2) || Wsa === 0) {
-                resultElement.textContent = "ورودی نامعتبر";
-                statusElement.textContent = "--";
-                statusElement.className = "";
-                return;
-            }
-
-            const result = ((W1 + Wsa) - W2) / Wsa * 100;
-            resultElement.textContent = result.toFixed(2);
-
-            if (result <= 1.0) {
-                statusElement.textContent = "قبول";
-                statusElement.className = "pass-text";
-            } else {
-                statusElement.textContent = "رد";
-                statusElement.className = "fail-text";
-            }
-        }
-
-        function checkAlkalinity() {
-            const HClValue = parseFloat(document.getElementById('alkalinity_HCl').value);
-            const statusElement = document.getElementById('alkalinity_status');
-
-            if (isNaN(HClValue)) {
-                statusElement.textContent = "--";
-                statusElement.className = "";
-                return;
-            }
-
-            if (HClValue <= 0.30) {
-                statusElement.textContent = "قبول";
-                statusElement.className = "pass-text";
-            } else {
-                statusElement.textContent = "رد";
-                statusElement.className = "fail-text";
-            }
-        }
+        // Activate the first tab by default
+        document.querySelector('.tab-button').click();
     </script>
-
 </body>
 </html>

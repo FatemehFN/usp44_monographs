@@ -3,15 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مونوگراف کلسیم آسکوربات (USP)</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Vazirmatn Font -->
+    <title>مونوگراف آسکوربات کلسیم (USP)</title>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
-    <!-- MathJax -->
-    <script type="text/javascript" id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -70,32 +67,11 @@
         .fail-text {
             color: #ef4444;
         }
-        .interactive-card {
-            background-color: #e0f2fe;
-            border: 1px solid #90cdf4;
-            padding: 1rem;
-            margin-top: 1rem;
-            border-radius: 0.5rem;
-        }
-        .calculation-button {
-            background-color: #2563eb;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
+<body>
     <div class="container mx-auto p-4 max-w-4xl">
-        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">کلسیم آسکوربات</h1>
-        <p class="text-lg text-center text-gray-700 mb-6">
-            <span class="ltr-text">C<sub>12</sub>H14CaO12 · 2H<sub>2</sub>O</span><br>
-            <span class="ltr-text">426.34</span>
-        </p>
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">آسکوربات کلسیم</h1>
 
         <div class="flex justify-center mb-6 border-b border-gray-200">
             <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab(event, 'definition')">تعریف</button>
@@ -106,518 +82,119 @@
             <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'additional-requirements')">الزامات اضافی</button>
         </div>
 
-        <!-- Definition Tab -->
         <div id="definition" class="tab-content card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
-            <p>کلسیم آسکوربات حاوی <span class="ltr-text">98.0%</span> تا <span class="ltr-text">101.0%</span> کلسیم آسکوربات دی‌هیدرات (<span class="ltr-text">C<sub>12</sub>H14CaO12 · 2H<sub>2</sub>O</span>) است، محاسبه شده بر اساس مقدار موجود.</p>
+            <p>آسکوربات کلسیم حاوی حداقل 98.0% و حداکثر 101.0% دی‌هیدراته آسکوربات کلسیم (<span class="ltr-text">C12H14CaO12 · 2H2O</span>) است که بر اساس وضعیت موجود محاسبه می‌شود.</p>
         </div>
 
-        <!-- Identification Tab -->
-        <div id="identification" class="tab-content card hidden">
+        <div id="identification" class="tab-content hidden card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایش‌های شناسایی - عمومی</h3>
-            <p><strong>الف.</strong> محلول <span class="ltr-text">100 mg/mL</span> الزامات را برآورده می‌کند.</p>
-            <p><strong>ب.</strong> محلول <span class="ltr-text">100 mg/mL</span> محلول <span class="ltr-text">100 mg/mL</span> دی‌کلروفنول-ایندوفنول را بی‌رنگ می‌کند.</p>
-            <p><strong>ج.</strong> ▲آزمایش‌های شناسایی طیف‌سنجی <a href="General chapters/197.html" class="text-blue-600 hover:underline" target="_blank">197</a>، طیف‌سنجی مادون قرمز: <span class="ltr-text">197M</span>▲ (CN 1-May-2020)</p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. تست‌های شناسایی - عمومی، کلسیم <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a></h3>
+            <p>محلول 100 mg/mL الزامات را برآورده می‌کند.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">ب. محلول 100 mg/mL، محلول 100 mg/mL دی‌کلروفنول-ایندوفنول را بی‌رنگ می‌کند.</h3>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تغییر برای خواندن:</h3>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">ج. ▲تست‌های شناسایی طیف‌سنجی <a href="General chapters/197.html" class="text-blue-600 hover:underline" target="_blank">197</a>، طیف‌سنجی مادون قرمز: 197M▲ (CN 1-May-2020)</h3>
         </div>
 
-        <!-- Assay Tab -->
-        <div id="assay" class="tab-content card hidden">
+        <div id="assay" class="tab-content hidden card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش کار</h4>
-            <p><strong>نمونه:</strong> <span class="ltr-text">300 mg</span> کلسیم آسکوربات</p>
-            <p><strong>شاهد:</strong> <span class="ltr-text">50 mL</span> آب</p>
-            <p><strong>سیستم تیترسنجی</strong></p>
-            <p>(به تیترسنجی <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید)</p>
-            <p><strong>حالت:</strong> تیترسنجی مستقیم</p>
-            <p><strong>تیترانت:</strong> ید 0.1 نرمال VS</p>
-            <p><strong>تشخیص نقطه پایانی:</strong> بصری</p>
-            <p><strong>تحلیل:</strong> نمونه را به یک فلاسک ارلن‌مایر 250 میلی‌لیتری منتقل کنید، <span class="ltr-text">50 mL</span> آب اضافه کنید و برای حل شدن مخلوط کنید. بلافاصله با تیترانت تیتر کنید و <span class="ltr-text">3 mL</span> نشاسته TS را هنگام نزدیک شدن به نقطه پایانی اضافه کنید. برای تعیین شاهد، یک تعیین شاهد انجام دهید.</p>
-            <p>درصد کلسیم آسکوربات دی‌هیدرات (<span class="ltr-text">C<sub>12</sub>H14CaO12 · 2H<sub>2</sub>O</span>) را در نمونه گرفته شده محاسبه کنید:</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش انجام</h4>
+            <p>نمونه: 300 mg آسکوربات کلسیم</p>
+            <p>شاهد: 50 mL آب</p>
+            <p>سیستم تیتراسیون</p>
+            <p>(رجوع کنید به تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a>.)</p>
+            <p>حالت: تیتراسیون مستقیم</p>
+            <p>تیترانت: 0.1 N ید VS</p>
+            <p>تشخیص نقطه پایانی: چشمی</p>
+            <p>تحلیل: نمونه را به یک فلاسک مخروطی 250 میلی‌لیتری منتقل کنید، 50 میلی‌لیتر آب اضافه کنید و برای حل شدن مخلوط کنید. بلافاصله با تیترانت تیتراسیون کنید و 3 میلی‌لیتر نشاسته TS را هنگام نزدیک شدن به نقطه پایانی اضافه کنید. تعیین شاهد را انجام دهید.</p>
+            <p>درصد دی‌هیدراته آسکوربات کلسیم (<span class="ltr-text">C12H14CaO12 · 2H2O</span>) را در نمونه گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                $$Result = \left[\frac{(V_S - V_B) \times N \times F}{W}\right] \times 100$$
+                \[Result = {[(V S − V B) × N × F]/W} × 100\]
             </div>
-            <p>
-                <span class="ltr-text">V<sub>S</sub></span> = حجم تیترانت مصرف شده توسط نمونه (mL)<br>
-                <span class="ltr-text">V<sub>B</sub></span> = حجم تیترانت مصرف شده توسط شاهد (mL)<br>
-                <span class="ltr-text">N</span> = نرمالیته تیترانت (mEq/mL)<br>
-                <span class="ltr-text">F</span> = ضریب معادل، <span class="ltr-text">106.6 mg/mEq</span><br>
-                <span class="ltr-text">W</span> = وزن نمونه (mg)
-            </p>
-            <p><strong>معیارهای پذیرش:</strong> <span class="ltr-text">98.0%</span>–<span class="ltr-text">101.0%</span> بر اساس مقدار موجود</p>
-
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب سنجش</h4>
-                <div class="grid grid-cols-1 gap-4">
-                    <div>
-                        <label for="Vs" class="block text-sm font-bold mb-2">حجم تیترانت مصرف شده توسط نمونه (Vs) (mL):</label>
-                        <input type="text" id="Vs" name="Vs" class="input-field">
-                    </div>
-                    <div>
-                        <label for="Vb" class="block text-sm font-bold mb-2">حجم تیترانت مصرف شده توسط شاهد (Vb) (mL):</label>
-                        <input type="text" id="Vb" name="Vb" class="input-field">
-                    </div>
-                    <div>
-                        <label for="N_assay" class="block text-sm font-bold mb-2">نرمالیته تیترانت (N) (mEq/mL):</label>
-                        <input type="text" id="N_assay" name="N_assay" class="input-field">
-                    </div>
-                    <div>
-                        <label for="F_assay" class="block text-sm font-bold mb-2">ضریب معادل (F) (mg/mEq):</label>
-                        <input type="text" id="F_assay" name="F_assay" class="input-field">
-                    </div>
-                    <div>
-                        <label for="W_assay" class="block text-sm font-bold mb-2">وزن نمونه (W) (mg):</label>
-                        <input type="text" id="W_assay" name="W_assay" class="input-field">
-                    </div>
-                </div>
-                <button class="calculation-button mt-4" onclick="calculateAssay()">محاسبه</button>
-                <div class="mt-4">
-                    <span class="font-bold">نتیجه:</span> <span id="assayResult" class="ltr-text">--</span>%
-                    <span class="font-bold">وضعیت:</span> <span id="assayStatus" class="ltr-text">--</span>
-                </div>
-                 <div class="mt-2">
-                    <span class="font-bold">نتیجه (ppm):</span> <span id="assayResultPpm" class="ltr-text">--</span> ppm
-                </div>
-                <div class="mt-4">
-                    <label for="additionalSpecsAssay" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="additionalSpecsAssay" name="additionalSpecsAssay" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
+            <p><span class="ltr-text">V S</span> = حجم تیترانت مصرف شده توسط نمونه (mL)</p>
+            <p><span class="ltr-text">V B</span> = حجم تیترانت مصرف شده توسط شاهد (mL)</p>
+            <p><span class="ltr-text">N</span> = نرمالیته تیترانت (mEq/mL)</p>
+            <p><span class="ltr-text">F</span> = ضریب هم‌ارزی، 106.6 mg/mEq</p>
+            <p><span class="ltr-text">W</span> = وزن نمونه (mg)</p>
+            <p>معیارهای پذیرش: 98.0%–101.0% بر اساس وضعیت موجود</p>
         </div>
 
-        <!-- Impurities Tab -->
-        <div id="impurities" class="tab-content card hidden">
+        <div id="impurities" class="tab-content hidden card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آرسنیک، روش I <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a></h4>
-            <p>NMT <span class="ltr-text">3 µg/g</span></p>
+            <p>حداکثر 3 µg/g</p>
 
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب آرسنیک</h4>
-                <div class="grid grid-cols-1 gap-4">
-                    <div>
-                        <label for="arsenicValue" class="block text-sm font-bold mb-2">مقدار آرسنیک (µg/g):</label>
-                        <input type="text" id="arsenicValue" name="arsenicValue" class="input-field">
-                    </div>
-                </div>
-                <button class="calculation-button mt-4" onclick="calculateArsenic()">بررسی</button>
-                <div class="mt-4">
-                    <span class="font-bold">وضعیت:</span> <span id="arsenicStatus" class="ltr-text">--</span>
-                </div>
-                <div class="mt-4">
-                    <label for="additionalSpecsArsenic" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="additionalSpecsArsenic" name="additionalSpecsArsenic" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
-
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد فلوراید</h4>
-            <p>[<strong>نکته:</strong> تمام محلول‌ها را در ظروف پلاستیکی تهیه و نگهداری کنید.]</p>
-            <p><strong>محلول بافر:</strong> <span class="ltr-text">294 mg/mL</span> سدیم سیترات دی‌هیدرات در آب</p>
-            <p><strong>محلول استاندارد اولیه:</strong> <span class="ltr-text">1.1052 mg/mL</span> USP سدیم فلوراید RS در آب</p>
-            <p><strong>محلول استاندارد:</strong> <span class="ltr-text">20.0 mL</span> محلول استاندارد اولیه را به یک فلاسک حجمی <span class="ltr-text">100 mL</span> حاوی <span class="ltr-text">50.0 mL</span> محلول بافر منتقل کنید، با آب تا حجم برسانید و مخلوط کنید. هر میلی‌لیتر محلول استاندارد حاوی <span class="ltr-text">100 µg</span> یون فلوراید است.</p>
-            <p><strong>محلول نمونه:</strong> <span class="ltr-text">2.0 g</span> کلسیم آسکوربات را به یک بشر حاوی یک همزن مغناطیسی با روکش پلاستیکی منتقل کنید. <span class="ltr-text">20 mL</span> آب و <span class="ltr-text">2.0 mL</span> اسید کلریدریک اضافه کنید و تا حل شدن هم بزنید. <span class="ltr-text">50.0 mL</span> محلول بافر و مقدار کافی آب برای رساندن حجم به <span class="ltr-text">100 mL</span> اضافه کنید.</p>
-            <p><strong>سیستم الکترود:</strong> از یک الکترود نشانگر یون فلوراید-اختصاصی و یک الکترود مرجع نقره–کلرید نقره که به یک pH متر با قابلیت اندازه‌گیری پتانسیل با حداقل تکرارپذیری ± <span class="ltr-text">0.2 mV</span> (به pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a> مراجعه کنید) متصل است، استفاده کنید.</p>
-            <p><strong>تحلیل</strong></p>
-            <p><strong>نمونه‌ها:</strong> محلول استاندارد و محلول نمونه</p>
-            <p><strong>خط پاسخ استاندارد:</strong> <span class="ltr-text">50.0 mL</span> محلول بافر و <span class="ltr-text">2.0 mL</span> اسید کلریدریک را به یک بشر منتقل کنید و آب را تا حجم <span class="ltr-text">100 mL</span> اضافه کنید. یک همزن مغناطیسی با روکش پلاستیکی اضافه کنید، الکترودها را در محلول قرار دهید، به مدت <span class="ltr-text">15 min</span> هم بزنید و پتانسیل را بر حسب mV بخوانید. هم زدن را ادامه دهید و در فواصل <span class="ltr-text">5 min</span>، <span class="ltr-text">100</span>، <span class="ltr-text">100</span>، <span class="ltr-text">300</span> و <span class="ltr-text">500 µL</span> محلول استاندارد اضافه کنید و پتانسیل را <span class="ltr-text">5 min</span> پس از هر افزودن بخوانید. لگاریتم غلظت‌های تجمعی یون فلوراید (<span class="ltr-text">0.1</span>، <span class="ltr-text">0.2</span>، <span class="ltr-text">0.5</span> و <span class="ltr-text">1.0 µg/mL</span>) را بر حسب mV رسم کنید.</p>
-            <p>الکترودها را بشویید و خشک کنید، آنها را در محلول نمونه قرار دهید، به مدت <span class="ltr-text">5 min</span> هم بزنید و پتانسیل را بر حسب mV بخوانید.
-            غلظت C (بر حسب µg/mL) یون فلوراید را در محلول نمونه، با استفاده از خط پاسخ استاندارد تعیین کنید.</p>
-            <p>محتوای فلوراید را در بخش کلسیم آسکوربات گرفته شده محاسبه کنید:</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد مجاز فلوراید</h4>
+            <p>[نکته: تمام محلول‌ها را در ظروف پلاستیکی تهیه و نگهداری کنید.]</p>
+            <p>محلول بافر: 294 mg/mL سیترات سدیم دی‌هیدراته در آب</p>
+            <p>محلول استاندارد پایه: 1.1052 mg/mL فلوراید سدیم USP RS در آب</p>
+            <p>محلول استاندارد: 20.0 میلی‌لیتر از محلول استاندارد پایه را به یک فلاسک حجمی 100 میلی‌لیتری حاوی 50.0 میلی‌لیتر محلول بافر منتقل کنید، با آب حجم را به 100 میلی‌لیتر برسانید و مخلوط کنید. هر میلی‌لیتر از محلول استاندارد حاوی 100 µg یون فلوراید است.</p>
+            <p>محلول نمونه: 2.0 گرم آسکوربات کلسیم را به یک بشر حاوی میله همزن پوشیده از پلاستیک منتقل کنید. 20 میلی‌لیتر آب و 2.0 میلی‌لیتر اسید کلریدریک اضافه کنید و تا حل شدن مخلوط کنید. 50.0 میلی‌لیتر محلول بافر و مقدار کافی آب اضافه کنید تا حجم به 100 میلی‌لیتر برسد.</p>
+            <p>سیستم الکترود: از یک الکترود نشانگر یون خاص فلوراید و یک الکترود مرجع نقره–کلرید نقره که به یک pH متر با قابلیت اندازه‌گیری پتانسیل با حداقل تکرارپذیری ± 0.2 میلی‌ولت (رجوع کنید به pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a>) متصل است، استفاده کنید.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل</h4>
+            <p>نمونه‌ها: محلول استاندارد و محلول نمونه</p>
+            <p>خط پاسخ استاندارد: 50.0 میلی‌لیتر محلول بافر و 2.0 میلی‌لیتر اسید کلریدریک را به یک بشر منتقل کنید و آب اضافه کنید تا حجم به 100 میلی‌لیتر برسد. یک میله همزن پوشیده از پلاستیک اضافه کنید، الکترودها را در محلول فرو ببرید، به مدت 15 دقیقه هم بزنید و پتانسیل را بر حسب میلی‌ولت بخوانید. به هم زدن ادامه دهید و در فواصل 5 دقیقه‌ای 100، 100، 300 و 500 میکرولیتر محلول استاندارد اضافه کنید و پتانسیل را 5 دقیقه پس از هر افزودن بخوانید. لگاریتم غلظت‌های تجمعی یون فلوراید (0.1، 0.2، 0.5 و 1.0 µg/mL) را در مقابل پتانسیل بر حسب میلی‌ولت رسم کنید.</p>
+            <p>الکترودها را بشویید و خشک کنید، آنها را در محلول نمونه فرو ببرید، به مدت 5 دقیقه هم بزنید و پتانسیل را بر حسب میلی‌ولت بخوانید. از پتانسیل اندازه‌گیری شده و خط پاسخ استاندارد، غلظت C (بر حسب µg/mL) یون فلوراید را در محلول نمونه تعیین کنید.</p>
+            <p>محتوای فلوراید را در بخش آسکوربات کلسیم گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                $$Result = (C \times V) / W$$
+                \[Result = (C × V)/W\]
             </div>
-            <p>
-                <span class="ltr-text">C</span> = غلظت یون فلوراید در محلول نمونه (µg/mL)، به دست آمده از خط پاسخ استاندارد<br>
-                <span class="ltr-text">V</span> = حجم محلول نمونه (mL)<br>
-                <span class="ltr-text">W</span> = وزن کلسیم آسکوربات گرفته شده برای تهیه محلول نمونه (g)
-            </p>
-            <p><strong>معیارهای پذیرش:</strong> NMT <span class="ltr-text">10 ppm</span></p>
-
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب حد فلوراید</h4>
-                <div class="grid grid-cols-1 gap-4">
-                    <div>
-                        <label for="C_fluoride" class="block text-sm font-bold mb-2">غلظت یون فلوراید (C) (µg/mL):</label>
-                        <input type="text" id="C_fluoride" name="C_fluoride" class="input-field">
-                    </div>
-                    <div>
-                        <label for="V_fluoride" class="block text-sm font-bold mb-2">حجم محلول نمونه (V) (mL):</label>
-                        <input type="text" id="V_fluoride" name="V_fluoride" class="input-field">
-                    </div>
-                    <div>
-                        <label for="W_fluoride" class="block text-sm font-bold mb-2">وزن کلسیم آسکوربات (W) (g):</label>
-                        <input type="text" id="W_fluoride" name="W_fluoride" class="input-field">
-                    </div>
-                </div>
-                <button class="calculation-button mt-4" onclick="calculateFluoride()">محاسبه</button>
-                <div class="mt-4">
-                    <span class="font-bold">نتیجه (ppm):</span> <span id="fluorideResultPpm" class="ltr-text">--</span> ppm
-                    <span class="font-bold">وضعیت:</span> <span id="fluorideStatus" class="ltr-text">--</span>
-                </div>
-                 <div class="mt-2">
-                    <span class="font-bold">نتیجه (٪):</span> <span id="fluorideResultPercent" class="ltr-text">--</span>%
-                </div>
-                <div class="mt-4">
-                    <label for="additionalSpecsFluoride" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="additionalSpecsFluoride" name="additionalSpecsFluoride" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
+            <p><span class="ltr-text">C</span> = غلظت یون فلوراید در محلول نمونه (µg/mL)، که از خط پاسخ استاندارد به دست آمده است</p>
+            <p><span class="ltr-text">V</span> = حجم محلول نمونه (mL)</p>
+            <p><span class="ltr-text">W</span> = وزن آسکوربات کلسیم گرفته شده برای تهیه محلول نمونه (g)</p>
+            <p>معیارهای پذیرش: حداکثر 10 ppm</p>
         </div>
 
-        <!-- Specific Tests Tab -->
-        <div id="specific-tests" class="tab-content card hidden">
+        <div id="specific-tests" class="tab-content hidden card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">دوران نوری، دوران ویژه <a href="General chapters/781.html" class="text-blue-600 hover:underline" target="_blank">781</a>Sñ</h4>
-            <p><strong>محلول نمونه:</strong> <span class="ltr-text">50 mg/mL</span> در آب عاری از دی‌اکسید کربن</p>
-            <p>[<strong>نکته:</strong> اندازه‌گیری‌ها را بلافاصله پس از تهیه انجام دهید.]</p>
-            <p><strong>معیارهای پذیرش:</strong> <span class="ltr-text">+95°</span> تا <span class="ltr-text">+97°</span></p>
-
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب دوران نوری</h4>
-                 <div class="grid grid-cols-1 gap-4">
-                    <div>
-                        <label for="opticalRotationValue" class="block text-sm font-bold mb-2">مقدار دوران ویژه:</label>
-                        <input type="text" id="opticalRotationValue" name="opticalRotationValue" class="input-field">
-                    </div>
-                </div>
-                <button class="calculation-button mt-4" onclick="calculateOpticalRotation()">بررسی</button>
-                <div class="mt-4">
-                    <span class="font-bold">وضعیت:</span> <span id="opticalRotationStatus" class="ltr-text">--</span>
-                </div>
-                <div class="mt-4">
-                    <label for="additionalSpecsOpticalRotation" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="additionalSpecsOpticalRotation" name="additionalSpecsOpticalRotation" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">چرخش نوری، چرخش ویژه á<a href="General chapters/781.html" class="text-blue-600 hover:underline" target="_blank">781</a>Sñ</h4>
+            <p>محلول نمونه: 50 mg/mL در آب فاقد دی‌اکسید کربن</p>
+            <p>[نکته: اندازه‌گیری‌ها را بلافاصله پس از تهیه انجام دهید.]</p>
+            <p>معیارهای پذیرش: +95° تا +97°</p>
 
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a></h4>
-            <p><strong>محلول نمونه:</strong> <span class="ltr-text">100 mg/mL</span></p>
-            <p><strong>معیارهای پذیرش:</strong> <span class="ltr-text">6.8</span>–<span class="ltr-text">7.4</span></p>
+            <p>محلول نمونه: 100 mg/mL</p>
+            <p>معیارهای پذیرش: 6.8–7.4</p>
 
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب pH</h4>
-                <div class="grid grid-cols-1 gap-4">
-                    <div>
-                        <label for="pHValue" class="block text-sm font-bold mb-2">مقدار pH:</label>
-                        <input type="text" id="pHValue" name="pHValue" class="input-field">
-                    </div>
-                </div>
-                <button class="calculation-button mt-4" onclick="calculatePH()">بررسی</button>
-                <div class="mt-4">
-                    <span class="font-bold">وضعیت:</span> <span id="pHStatus" class="ltr-text">--</span>
-                </div>
-                <div class="mt-4">
-                    <label for="additionalSpecsPH" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="additionalSpecsPH" name="additionalSpecsPH" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
-
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">خشک شدن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h4>
-            <p><strong>روش کار:</strong> <span class="ltr-text">3 g</span> را در دمای <span class="ltr-text">105°</span> به مدت <span class="ltr-text">2 ساعت</span> خشک کنید: نباید بیش از <span class="ltr-text">0.1%</span> از وزن خود را از دست بدهد.</p>
-
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب خشک شدن</h4>
-                <div class="formula-display">
-                    $$LOD = \frac{(W_1 + W_{sa}) - W_2}{W_{sa}} \times 100$$
-                </div>
-                <div class="grid grid-cols-1 gap-4">
-                    <div>
-                        <label for="W1_loss" class="block text-sm font-bold mb-2">وزن اولیه (W1) (mg):</label>
-                        <input type="text" id="W1_loss" name="W1_loss" class="input-field">
-                    </div>
-                    <div>
-                        <label for="Wsa_loss" class="block text-sm font-bold mb-2">وزن نمونه خشک شده (Wsa) (mg):</label>
-                        <input type="text" id="Wsa_loss" name="Wsa_loss" class="input-field">
-                    </div>
-                    <div>
-                        <label for="W2_loss" class="block text-sm font-bold mb-2">وزن پس از خشک شدن (W2) (mg):</label>
-                        <input type="text" id="W2_loss" name="W2_loss" class="input-field">
-                    </div>
-                </div>
-                <button class="calculation-button mt-4" onclick="calculateLossOnDrying()">محاسبه</button>
-                <div class="mt-4">
-                    <span class="font-bold">نتیجه:</span> <span id="lossOnDryingResult" class="ltr-text">--</span>%
-                    <span class="font-bold">وضعیت:</span> <span id="lossOnDryingStatus" class="ltr-text">--</span>
-                </div>
-                <div class="mt-2">
-                    <span class="font-bold">نتیجه (ppm):</span> <span id="lossOnDryingResultPpm" class="ltr-text">--</span> ppm
-                </div>
-                <div class="mt-4">
-                    <label for="additionalSpecsLossOnDrying" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="additionalSpecsLossOnDrying" name="additionalSpecsLossOnDrying" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
-
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">باقیمانده احتراق <a href="General chapters/621.html" class="text-blue-600 hover:underline" target="_blank">621</a></h4>
-            <p><strong>روش کار:</strong> <span class="ltr-text">1 g</span> نمونه را در یک بوته احتراق بسوزانید تا تمام مواد آلی بسوزند. <span class="ltr-text">1 mL</span> اسید سولفوریک 3N اضافه کنید، سپس با احتیاط حرارت دهید و در دمای <span class="ltr-text">600° ± 50°</span> تا رسیدن به وزن ثابت، احتراق کنید. باقیمانده نباید بیش از <span class="ltr-text">0.1%</span> وزن نمونه باشد.</p>
-            <div class="formula-display">
-                $$ROI = \frac{W_3 - W_1}{W_2} \times 100$$
-            </div>
-            <p>
-                <span class="ltr-text">W<sub>1</sub></span> = وزن بوته خالی (g)<br>
-                <span class="ltr-text">W<sub>2</sub></span> = وزن نمونه (g)<br>
-                <span class="ltr-text">W<sub>3</sub></span> = وزن بوته + باقیمانده (g)
-            </p>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب باقیمانده احتراق</h4>
-                <div class="grid grid-cols-1 gap-4">
-                    <div>
-                        <label for="W1_residue" class="block text-sm font-bold mb-2">وزن بوته خالی (W1) (g):</label>
-                        <input type="text" id="W1_residue" name="W1_residue" class="input-field">
-                    </div>
-                    <div>
-                        <label for="W2_residue" class="block text-sm font-bold mb-2">وزن نمونه (W2) (g):</label>
-                        <input type="text" id="W2_residue" name="W2_residue" class="input-field">
-                    </div>
-                    <div>
-                        <label for="W3_residue" class="block text-sm font-bold mb-2">وزن بوته + باقیمانده (W3) (g):</label>
-                        <input type="text" id="W3_residue" name="W3_residue" class="input-field">
-                    </div>
-                </div>
-                <button class="calculation-button mt-4" onclick="calculateResidueOnIgnition()">محاسبه</button>
-                <div class="mt-4">
-                    <span class="font-bold">نتیجه:</span> <span id="residueOnIgnitionResult" class="ltr-text">--</span>%
-                    <span class="font-bold">وضعیت:</span> <span id="residueOnIgnitionStatus" class="ltr-text">--</span>
-                </div>
-                 <div class="mt-2">
-                    <span class="font-bold">نتیجه (ppm):</span> <span id="residueOnIgnitionResultPpm" class="ltr-text">--</span> ppm
-                </div>
-                <div class="mt-4">
-                    <label for="additionalSpecsResidueOnIgnition" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="additionalSpecsResidueOnIgnition" name="additionalSpecsResidueOnIgnition" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
-
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">فقدان رطوبت در خشک کردن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h4>
+            <p>3 گرم را در دمای 105 درجه سانتی‌گراد به مدت 2 ساعت خشک کنید: حداکثر 0.1% از وزن خود را از دست می‌دهد.</p>
         </div>
 
-        <!-- Additional Requirements Tab -->
-        <div id="additional-requirements" class="tab-content card hidden">
+        <div id="additional-requirements" class="tab-content hidden card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">بسته‌بندی و نگهداری</h4>
             <p>در ظروف دربسته و مقاوم در برابر نور نگهداری شود.</p>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h4>
-            <ul>
-                <li>USP Calcium Ascorbate RS</li>
-                <li>USP Sodium Fluoride RS</li>
-            </ul>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">استانداردهای مرجع USP 11</h4>
+            <p>USP Calcium Ascorbate RS</p>
+            <p>USP Sodium Fluoride RS</p>
         </div>
-
     </div>
 
     <script>
-        function showTab(event, tabName) {
-            var i, tabcontent, tablinks;
+        function showTab(event, tabId) {
+            var i, tabcontent, tabbuttons;
+
             tabcontent = document.getElementsByClassName("tab-content");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
                 tabcontent[i].classList.add("hidden");
             }
-            tablinks = document.getElementsByClassName("tab-button");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" tab-active", "");
-                tablinks[i].className = tablinks[i].className.replace(" tab-inactive", "");
+
+            tabbuttons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("tab-active");
+                tabbuttons[i].classList.add("tab-inactive");
             }
-            document.getElementById(tabName).style.display = "block";
-            document.getElementById(tabName).classList.remove("hidden");
-            event.currentTarget.className += " tab-active";
+
+            document.getElementById(tabId).style.display = "block";
+            event.currentTarget.classList.remove("tab-inactive");
+            event.currentTarget.classList.add("tab-active");
         }
 
-        // Initially display the first tab
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelector('.tab-button').click();
-        });
-
-        function calculateAssay() {
-            const Vs = parseFloat(document.getElementById('Vs').value);
-            const Vb = parseFloat(document.getElementById('Vb').value);
-            const N = parseFloat(document.getElementById('N_assay').value);
-            const F = parseFloat(document.getElementById('F_assay').value);
-            const W = parseFloat(document.getElementById('W_assay').value);
-
-            if (isNaN(Vs) || isNaN(Vb) || isNaN(N) || isNaN(F) || isNaN(W)) {
-                document.getElementById('assayResult').innerText = "ورودی نامعتبر";
-                document.getElementById('assayStatus').innerText = "";
-                document.getElementById('assayResultPpm').innerText = "--";
-                return;
-            }
-
-            const result = ((Vs - Vb) * N * F / W) * 100;
-            const resultPpm = (result / 100) * 1000000; // Convert percentage to ppm
-            let status = "";
-            let statusClass = "";
-
-            if (result >= 98.0 && result <= 101.0) {
-                status = "Pass";
-                statusClass = "pass-text";
-            } else {
-                status = "Fail";
-                statusClass = "fail-text";
-            }
-
-            document.getElementById('assayResult').innerText = result.toFixed(2);
-            document.getElementById('assayStatus').innerText = status;
-            document.getElementById('assayStatus').className = `ltr-text ${statusClass}`;
-            document.getElementById('assayResultPpm').innerText = resultPpm.toFixed(2);
-        }
-
-        function calculateArsenic() {
-            const arsenicValue = parseFloat(document.getElementById('arsenicValue').value);
-            let status = "";
-            let statusClass = "";
-
-            if (isNaN(arsenicValue)) {
-                document.getElementById('arsenicStatus').innerText = "ورودی نامعتبر";
-                return;
-            }
-
-            if (arsenicValue <= 3) {
-                status = "Pass";
-                statusClass = "pass-text";
-            } else {
-                status = "Fail";
-                statusClass = "fail-text";
-            }
-
-            document.getElementById('arsenicStatus').innerText = status;
-            document.getElementById('arsenicStatus').className = `ltr-text ${statusClass}`;
-        }
-
-        function calculateFluoride() {
-            const C = parseFloat(document.getElementById('C_fluoride').value);
-            const V = parseFloat(document.getElementById('V_fluoride').value);
-            const W = parseFloat(document.getElementById('W_fluoride').value);
-
-            if (isNaN(C) || isNaN(V) || isNaN(W) || W === 0) {
-                document.getElementById('fluorideResultPpm').innerText = "ورودی نامعتبر";
-                document.getElementById('fluorideStatus').innerText = "";
-                 document.getElementById('fluorideResultPercent').innerText = "--";
-                return;
-            }
-
-            const resultPpm = (C * V) / W;
-            const resultPercent = (resultPpm / 10000) * 100; // Convert ppm to percentage
-            let status = "";
-            let statusClass = "";
-
-            if (resultPpm <= 10) {
-                status = "Pass";
-                statusClass = "pass-text";
-            } else {
-                status = "Fail";
-                statusClass = "fail-text";
-            }
-
-            document.getElementById('fluorideResultPpm').innerText = resultPpm.toFixed(2);
-            document.getElementById('fluorideStatus').innerText = status;
-            document.getElementById('fluorideStatus').className = `ltr-text ${statusClass}`;
-            document.getElementById('fluorideResultPercent').innerText = resultPercent.toFixed(4);
-        }
-
-        function calculateOpticalRotation() {
-            const value = parseFloat(document.getElementById('opticalRotationValue').value);
-            let status = "";
-            let statusClass = "";
-
-            if (isNaN(value)) {
-                document.getElementById('opticalRotationStatus').innerText = "ورودی نامعتبر";
-                return;
-            }
-
-            if (value >= 95 && value <= 97) {
-                status = "Pass";
-                statusClass = "pass-text";
-            } else {
-                status = "Fail";
-                statusClass = "fail-text";
-            }
-
-            document.getElementById('opticalRotationStatus').innerText = status;
-            document.getElementById('opticalRotationStatus').className = `ltr-text ${statusClass}`;
-        }
-
-        function calculatePH() {
-            const value = parseFloat(document.getElementById('pHValue').value);
-            let status = "";
-            let statusClass = "";
-
-            if (isNaN(value)) {
-                document.getElementById('pHStatus').innerText = "ورودی نامعتبر";
-                return;
-            }
-
-            if (value >= 6.8 && value <= 7.4) {
-                status = "Pass";
-                statusClass = "pass-text";
-            } else {
-                status = "Fail";
-                statusClass = "fail-text";
-            }
-
-            document.getElementById('pHStatus').innerText = status;
-            document.getElementById('pHStatus').className = `ltr-text ${statusClass}`;
-        }
-
-        function calculateLossOnDrying() {
-            const W1 = parseFloat(document.getElementById('W1_loss').value);
-            const Wsa = parseFloat(document.getElementById('Wsa_loss').value);
-            const W2 = parseFloat(document.getElementById('W2_loss').value);
-
-            if (isNaN(W1) || isNaN(Wsa) || isNaN(W2) || Wsa === 0) {
-                document.getElementById('lossOnDryingResult').innerText = "ورودی نامعتبر";
-                document.getElementById('lossOnDryingStatus').innerText = "";
-                document.getElementById('lossOnDryingResultPpm').innerText = "--";
-                return;
-            }
-
-            const result = ((W1 + Wsa) - W2) / Wsa * 100;
-            const resultPpm = (result / 100) * 1000000; // Convert percentage to ppm
-            let status = "";
-            let statusClass = "";
-
-            if (result <= 0.1) {
-                status = "Pass";
-                statusClass = "pass-text";
-            } else {
-                status = "Fail";
-                statusClass = "fail-text";
-            }
-
-            document.getElementById('lossOnDryingResult').innerText = result.toFixed(2);
-            document.getElementById('lossOnDryingStatus').innerText = status;
-            document.getElementById('lossOnDryingStatus').className = `ltr-text ${statusClass}`;
-            document.getElementById('lossOnDryingResultPpm').innerText = resultPpm.toFixed(2);
-        }
-
-        function calculateResidueOnIgnition() {
-            const W1 = parseFloat(document.getElementById('W1_residue').value);
-            const W2 = parseFloat(document.getElementById('W2_residue').value);
-            const W3 = parseFloat(document.getElementById('W3_residue').value);
-
-            if (isNaN(W1) || isNaN(W2) || isNaN(W3) || W2 === 0) {
-                document.getElementById('residueOnIgnitionResult').innerText = "ورودی نامعتبر";
-                document.getElementById('residueOnIgnitionStatus').innerText = "";
-                document.getElementById('residueOnIgnitionResultPpm').innerText = "--";
-                return;
-            }
-
-            const result = (W3 - W1) / W2 * 100;
-            const resultPpm = (result / 100) * 1000000; // Convert percentage to ppm
-            let status = "";
-            let statusClass = "";
-
-            if (result <= 0.1) {
-                status = "Pass";
-                statusClass = "pass-text";
-            } else {
-                status = "Fail";
-                statusClass = "fail-text";
-            }
-
-            document.getElementById('residueOnIgnitionResult').innerText = result.toFixed(2);
-            document.getElementById('residueOnIgnitionStatus').innerText = status;
-            document.getElementById('residueOnIgnitionStatus').className = `ltr-text ${statusClass}`;
-            document.getElementById('residueOnIgnitionResultPpm').innerText = resultPpm.toFixed(2);
-        }
+        // Show the first tab by default
+        document.getElementsByClassName("tab-button")[0].click();
     </script>
-
 </body>
 </html>

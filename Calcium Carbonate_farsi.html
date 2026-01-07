@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مونوگراف کلسیم کربنات (USP)</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Vazirmatn Font -->
+    <title>مونوگراف کربنات کلسیم (USP)</title>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
-    <!-- MathJax -->
-    <script type="text/javascript" id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
     <style>
         body {
@@ -70,1139 +67,154 @@
         .fail-text {
             color: #ef4444;
         }
-        .interactive-card {
-            background-color: #e0f2fe;
-            border: 1px solid #90cdf4;
-            padding: 1rem;
-            margin-top: 1rem;
-            border-radius: 0.5rem;
-        }
-        .calculation-button {
-            background-color: #2563eb;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
-
+<body>
     <div class="container mx-auto p-4 max-w-4xl">
-
-        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">کلسیم کربنات</h1>
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">کربنات کلسیم</h1>
 
         <div class="flex justify-center mb-6 border-b border-gray-200">
-            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab(event, 'definition')">تعریف</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'identification')">شناسایی</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'assay')">سنجش</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'impurities')">ناخالصی‌ها</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'specific_tests')">آزمایشات خاص</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'additional_requirements')">الزامات اضافی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab(event, 'definition')">تعریف</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'identification')">شناسایی</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'assay')">سنجش</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'impurities')">ناخالصی‌ها</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'specific-tests')">آزمایشات خاص</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'additional-requirements')">الزامات اضافی</button>
         </div>
 
-        <!-- Definition Tab -->
         <div id="definition" class="tab-content card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
-            <p>کلسیم کربنات، خشک شده در دمای <span class="ltr-text">200°</span> به مدت <span class="ltr-text">4</span> ساعت، حاوی کلسیمی معادل حداقل <span class="ltr-text">98.0%</span> و حداکثر <span class="ltr-text">100.5%</span> کربنات کلسیم (<span class="ltr-text">CaCO<sub>3</sub></span>) است.</p>
+            <p>کربنات کلسیم، خشک شده در دمای 200 درجه سانتی‌گراد به مدت 4 ساعت، حاوی کلسیم معادل NLT 98.0% و NMT 100.5% کربنات کلسیم (<span class="ltr-text">CaCO3</span>) است.</p>
         </div>
 
-        <!-- Identification Tab -->
-        <div id="identification" class="tab-content card hidden">
+        <div id="identification" class="tab-content hidden card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">تست‌های شناسایی - عمومی</h3>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شناسایی کلسیم <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a></h4>
-            <p>اضافه کردن اسید استیک به آن باعث ایجاد کف (حضور کربنات) می‌شود، و محلول حاصل، پس از جوشاندن، مطابق با الزامات تست‌ها است.</p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. تست‌های شناسایی — عمومی، کلسیم <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a></h3>
+            <p>افزودن اسید استیک به آن باعث جوشش (وجود کربنات) می‌شود و محلول حاصل، پس از جوشاندن، الزامات تست‌ها را برآورده می‌کند.</p>
         </div>
 
-        <!-- Assay Tab -->
-        <div id="assay" class="tab-content card hidden">
+        <div id="assay" class="tab-content hidden card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a></h4>
-
-            <div class="card interactive-card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">نمونه:</h3>
-                <p>200 میلی‌گرم کلسیم کربنات، قبلاً در دمای <span class="ltr-text">200°</span> به مدت <span class="ltr-text">4</span> ساعت خشک شده باشد.</p>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">شاهد:</h3>
-                <p>100 میلی‌لیتر آب و 15 میلی‌لیتر سدیم هیدروکسید 1 نرمال</p>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">سیستم تیتراسیون</h3>
-                <p>(به تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید)</p>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">حالت:</h3>
-                <p>تیتراسیون مستقیم</p>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">تیترانت:</h3>
-                <p>ادتا دیسدیم 0.05 مولار <span class="ltr-text">VS</span></p>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">شاخص:</h3>
-                <p>300 میلی‌گرم هیدروکسی نفتول آبی</p>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">تشخیص نقطه پایان:</h3>
-                <p>بصری، تغییر به رنگ آبی مشخص</p>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">تحلیل:</h3>
-                <p>نمونه را به یک بشر 250 میلی‌لیتری منتقل کنید. به طور کامل با چند میلی‌لیتر آب مرطوب کرده و اسید هیدروکلریک 3 نرمال را قطره قطره اضافه کنید تا حل شود. 100 میلی‌لیتر آب، 15 میلی‌لیتر سدیم هیدروکسید 1 نرمال و 300 میلی‌گرم هیدروکسی نفتول آبی را اضافه کنید. با تیتراسیون تیتراسیون انجام دهید. درصد کربنات کلسیم (<span class="ltr-text">CaCO<sub>3</sub></span>) در نمونه گرفته شده را محاسبه کنید:</p>
-
-                <div class="formula-display">
-                    <p class="math-tex">$$Result = \frac{(V - B) \times M \times F \times 100}{W}$$</p>
-                </div>
-
-                <div class="grid grid-cols-1 gap-4">
-                    <div>
-                        <label for="V" class="block text-sm font-medium text-gray-700">حجم تیتراسیون نمونه (mL) (V)</label>
-                        <input type="text" id="V" name="V" class="calculation-input">
-                    </div>
-                    <div>
-                        <label for="B" class="block text-sm font-medium text-gray-700">حجم تیتراسیون شاهد (mL) (B)</label>
-                        <input type="text" id="B" name="B" class="calculation-input">
-                    </div>
-                    <div>
-                        <label for="M" class="block text-sm font-medium text-gray-700">مولاریته تیتراسیون (mmol/mL) (M)</label>
-                        <input type="text" id="M" name="M" class="calculation-input">
-                    </div>
-                    <div>
-                        <label for="F" class="block text-sm font-medium text-gray-700">ضریب هم‌ارزی (mg/mmol) (F)</label>
-                        <input type="text" id="F" name="F" class="calculation-input">
-                    </div>
-                    <div>
-                        <label for="W" class="block text-sm font-medium text-gray-700">وزن نمونه (mg) (W)</label>
-                        <input type="text" id="W" name="W" class="calculation-input">
-                    </div>
-                </div>
-
-                <button class="calculation-button mt-4" onclick="calculateCalciumCarbonateAssay()">محاسبه</button>
-                <div class="mt-4">
-                    <span class="font-bold">نتیجه:</span> <span id="assayResult">--</span>
-                </div>
-                <div class="mt-2">
-                    <span class="font-bold">وضعیت:</span> <span id="assayStatus" class="font-bold">--</span>
-                </div>
-                <h3 class="text-xl font-semibold text-gray-700 mt-4 mb-2">معیارهای پذیرش:</h3>
-                <p><span class="ltr-text">98.0%</span>–<span class="ltr-text">100.5%</span> بر اساس ماده خشک</p>
+            <p><strong>نمونه:</strong> 200 میلی‌گرم کربنات کلسیم، قبلاً خشک شده در دمای 200 درجه سانتی‌گراد به مدت 4 ساعت</p>
+            <p><strong>شاهد:</strong> 100 میلی‌لیتر آب و 15 میلی‌لیتر محلول هیدروکسید سدیم 1 نرمال</p>
+            <p><strong>سیستم تیتراسیون</strong></p>
+            <p>(به تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید.)</p>
+            <p><strong>حالت:</strong> تیتراسیون مستقیم</p>
+            <p><strong>تیترانت:</strong> محلول ادتات دی‌سدیم 0.05 مولار</p>
+            <p><strong>شاخص:</strong> 300 میلی‌گرم آبی هیدروکسی نفتول</p>
+            <p><strong>تشخیص نقطه پایان:</strong> بصری، تغییر به رنگ آبی مشخص</p>
+            <p><strong>تحلیل:</strong> نمونه را در یک بشر 250 میلی‌لیتری منتقل کنید. آن را با چند میلی‌لیتر آب به خوبی مرطوب کرده و به آرامی، قطره قطره، اسید هیدروکلریک 3 نرمال کافی برای حل شدن اضافه کنید. 100 میلی‌لیتر آب، 15 میلی‌لیتر هیدروکسید سدیم 1 نرمال و 300 میلی‌گرم آبی هیدروکسی نفتول اضافه کنید. با تیترانت تیتراسیون کنید. درصد کربنات کلسیم (<span class="ltr-text">CaCO3</span>) در نمونه گرفته شده را محاسبه کنید:</p>
+            <div class="formula-display">
+                \[Result = [(V − B) × M × F × 100]/W\]
             </div>
+            <p><code>V</code> = حجم تیترانت نمونه (mL)</p>
+            <p><code>B</code> = حجم تیترانت شاهد (mL)</p>
+            <p><code>M</code> = مولاریته تیترانت (mmol/mL)</p>
+            <p><code>F</code> = ضریب هم‌ارزی، 100.09 میلی‌گرم بر میلی‌مول</p>
+            <p><code>W</code> = وزن نمونه (mg)</p>
+            <p><strong>معیارهای پذیرش:</strong> 98.0%–100.5% بر اساس پایه خشک</p>
         </div>
 
-        <!-- Impurities Tab -->
-        <div id="impurities" class="tab-content card hidden">
+        <div id="impurities" class="tab-content hidden card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مواد نامحلول در اسید</h4>
+            <p><strong>نمونه:</strong> 5.0 گرم</p>
+            <p><strong>تحلیل:</strong> نمونه را با 10 میلی‌لیتر آب مخلوط کرده و اسید هیدروکلریک را به آرامی، با هم زدن، قطره قطره اضافه کنید تا زمانی که دیگر جوششی ایجاد نشود. سپس آب اضافه کنید تا حجم مخلوط به 200 میلی‌لیتر برسد و فیلتر کنید. باقی‌مانده نامحلول را با آب بشویید تا زمانی که آخرین شستشو کلرید نشان ندهد، سپس حرارت داده و وزن کنید.</p>
+            <p><strong>معیارهای پذیرش:</strong> NMT 0.2%؛ وزن باقی‌مانده نباید از 10 میلی‌گرم تجاوز کند.</p>
 
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">مواد نامحلول در اسید</h3>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه:</h4>
-                <p><span class="ltr-text">5.0</span> گرم</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل:</h4>
-                <p>نمونه را با <span class="ltr-text">10</span> میلی‌لیتر آب مخلوط کرده و اسید هیدروکلریک را قطره قطره با هم زدن اضافه کنید تا کف کردن متوقف شود، سپس آب اضافه کنید تا حجم مخلوط به <span class="ltr-text">200</span> میلی‌لیتر برسد و فیلتر کنید. باقیمانده نامحلول را با آب بشویید تا آخرین شستشو کلر نداشته باشد، سپس آن را بسوزانید و وزن کنید.</p>
-                <div class="formula-display">
-                    <p class="math-tex">$$Result = (W_{2}-W_{1}) \times 1000$$</p>
-                </div>
-                <div class="grid grid-cols-1 gap-4">
-                    <div>
-                        <label for="acidInsolubleW1" class="block text-sm font-medium text-gray-700">وزن ظرف + باقیمانده خشک شده (g) (W1)</label>
-                        <input type="text" id="acidInsolubleW1" name="acidInsolubleW1" class="calculation-input">
-                    </div>
-                    <div>
-                        <label for="acidInsolubleW2" class="block text-sm font-medium text-gray-700">وزن ظرف (g) (W2)</label>
-                        <input type="text" id="acidInsolubleW2" name="acidInsolubleW2" class="calculation-input">
-                    </div>
-                </div>
-                <button class="calculation-button mt-4" onclick="calculateAcidInsolubleSubstances()">محاسبه</button>
-                <div class="mt-4">
-                    <span class="font-bold">نتیجه:</span> <span id="acidInsolubleResult">--</span>
-                </div>
-                <div class="mt-2">
-                    <span class="font-bold">وضعیت:</span> <span id="acidInsolubleStatus" class="font-bold">--</span>
-                </div>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                <p>حداکثر <span class="ltr-text">0.2%</span>؛ وزن باقیمانده نباید از <span class="ltr-text">10</span> میلی‌گرم تجاوز کند.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آرسنیک، روش I <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a></h4>
+            <p><strong>محلول نمونه:</strong> 1.0 گرم را به آرامی در 15 میلی‌لیتر اسید هیدروکلریک حل کرده و با آب به حجم 55 میلی‌لیتر برسانید.</p>
+            <p><strong>تحلیل:</strong> افزودن 20 میلی‌لیتر اسید سولفوریک 7 نرمال مشخص شده در آرسنیک <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a>، روش I، رویه را حذف کنید.</p>
+            <p><strong>معیارهای پذیرش:</strong> NMT 3 ppm</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">باریم</h4>
+            <p>سیمی از پلاتین، که در فیلترات حاصل از تست مواد نامحلول در اسید فرو رفته و در شعله بدون نور نگه داشته شده است، رنگ سبز ایجاد نمی‌کند.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آهن <a href="General chapters/241.html" class="text-blue-600 hover:underline" target="_blank">241</a></h4>
+            <p><strong>محلول نمونه:</strong> 40 میلی‌گرم در 5 میلی‌لیتر اسید هیدروکلریک 2 نرمال. با کمک آب به یک بشر منتقل کرده و با آب به حجم 10 میلی‌لیتر برسانید.</p>
+            <p><strong>محلول استاندارد:</strong> 4.0 میلی‌لیتر از محلول استاندارد آهن، که طبق دستورالعمل آهن <a href="General chapters/241.html" class="text-blue-600 hover:underline" target="_blank">241</a> تهیه شده است، را به یک بشر منتقل کرده و با آب به حجم 10 میلی‌لیتر برسانید.</p>
+            <p><strong>شرایط دستگاهی</strong></p>
+            <p>(به طیف‌سنجی فرابنفش-مرئی <a href="General chapters/857.html" class="text-blue-600 hover:underline" target="_blank">857</a> مراجعه کنید.)</p>
+            <p><strong>طول موج تحلیلی:</strong> 530 نانومتر</p>
+            <p><strong>شاهد:</strong> آب</p>
+            <p><strong>تحلیل:</strong> به طور جداگانه به محلول نمونه و محلول استاندارد 2 میلی‌لیتر محلول اسید سیتریک (1 در 5) و 2 قطره تیواستیک اسید اضافه کنید، با آمونیاک TS pH را به 9.5 ± 0.1 تنظیم کنید، با آب به حجم 20 میلی‌لیتر برسانید و به مدت 5 دقیقه قرار دهید. با آب به حجم 50 میلی‌لیتر برسانید. به طور همزمان جذب محلول‌ها از محلول نمونه و محلول استاندارد را تعیین کنید.</p>
+            <p><strong>معیارهای پذیرش:</strong> NMT 0.1%؛ جذب محلول نمونه نباید از جذب محلول استاندارد تجاوز کند.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سرب <a href="General chapters/251.html" class="text-blue-600 hover:underline" target="_blank">251</a></h4>
+            <p><strong>محلول نمونه:</strong> 1.0 گرم در 5 میلی‌لیتر آب</p>
+            <p><strong>تحلیل:</strong> به محلول نمونه به آرامی 8 میلی‌لیتر اسید هیدروکلریک 3 نرمال اضافه کرده، روی حمام بخار تا خشکی تبخیر کنید و باقی‌مانده را در 5 میلی‌لیتر آب حل کنید.</p>
+            <p><strong>معیارهای پذیرش:</strong> NMT 3 ppm</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محدودیت فلوراید</h4>
+            <p>[<strong>توجه —</strong> تمام محلول‌ها را در ظروف پلاستیکی تهیه و نگهداری کنید.]</p>
+            <p><strong>محلول A:</strong> 294 میلی‌گرم بر میلی‌لیتر سدیم سیترات دی‌هیدرات در آب</p>
+            <p><strong>نمونه:</strong> 2.0 گرم</p>
+            <p><strong>محلول استاندارد مادر:</strong> 1.11 میلی‌گرم بر میلی‌لیتر سدیم فلوراید USP RS در آب</p>
+            <p><strong>محلول استاندارد:</strong> 20.0 میلی‌لیتر از محلول استاندارد مادر را با 50.0 میلی‌لیتر محلول A ترکیب کرده و با آب به حجم 100.0 میلی‌لیتر برسانید. [<strong>توجه —</strong> هر میلی‌لیتر از این محلول حاوی 100 میکروگرم یون فلوراید است]</p>
+            <p><strong>سیستم الکترود:</strong> از یک الکترود مخصوص یون فلوراید و یک الکترود مرجع نقره–نقره کلرید متصل به یک pH متر که قادر به اندازه‌گیری پتانسیل‌ها با حداقل تکرارپذیری ±0.2 میلی‌ولت باشد (به pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a> مراجعه کنید) استفاده کنید.</p>
+            <p><strong>خط پاسخ استاندارد:</strong> 50.0 میلی‌لیتر از محلول A و 4.0 میلی‌لیتر اسید هیدروکلریک را در یک بشر منتقل کرده و با آب به حجم 100 میلی‌لیتر برسانید. یک میله همزن با روکش پلاستیکی اضافه کنید، الکترودها را در محلول قرار دهید، به مدت 15 دقیقه هم بزنید و پتانسیل را بر حسب میلی‌ولت بخوانید. هم زدن را ادامه دهید و در فواصل 5 دقیقه، 100، 100، 300 و 500 میکرولیتر از محلول استاندارد اضافه کنید و پتانسیل را 5 دقیقه پس از هر اضافه کردن بخوانید. لگاریتم غلظت‌های تجمعی یون فلوراید (0.1، 0.2، 0.5 و 1.0 میکروگرم بر میلی‌لیتر) را در برابر پتانسیل بر حسب میلی‌ولت رسم کنید.</p>
+            <p><strong>تحلیل:</strong> نمونه را در یک بشر حاوی میله همزن با روکش پلاستیکی منتقل کنید، 20 میلی‌لیتر آب و 4.0 میلی‌لیتر اسید هیدروکلریک اضافه کرده و هم بزنید تا حل شود. 50.0 میلی‌لیتر از محلول A و آب کافی برای رساندن حجم به 100 میلی‌لیتر محلول آزمایشی اضافه کنید. الکترودها را بشویید و خشک کنید، آنها را در محلول نمونه قرار دهید، به مدت 5 دقیقه هم بزنید و پتانسیل را بر حسب میلی‌ولت بخوانید. از پتانسیل اندازه‌گیری شده و خط پاسخ استاندارد، غلظت C بر حسب میکروگرم بر میلی‌لیتر یون فلوراید را در محلول نمونه تعیین کنید. محتوای فلوراید در نمونه گرفته شده را محاسبه کنید:</p>
+            <div class="formula-display">
+                \[Result = (V × C)/W\]
             </div>
+            <p><code>V</code> = حجم محلول نمونه (mL)</p>
+            <p><code>C</code> = غلظت فلوراید در محلول نمونه (µg/mL)</p>
+            <p><code>W</code> = وزن نمونه (g)</p>
+            <p><strong>معیارهای پذیرش:</strong> NMT 50 ppm</p>
 
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">آرسنیک، روش I <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a></h3>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه:</h4>
-                <p>1.0 گرم را به آرامی در 15 میلی‌لیتر اسید هیدروکلریک حل کرده و با آب به حجم 55 میلی‌لیتر برسانید.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل:</h4>
-                <p>از افزودن 20 میلی‌لیتر اسید سولفوریک 7 نرمال مشخص شده در رویه روش I آرسنیک <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a> صرف نظر کنید.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                <p>حداکثر <span class="ltr-text">3</span> ppm</p>
-                <div class="mt-4">
-                    <label for="arsenicStatus" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                    <select id="arsenicStatus" name="arsenicStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                </div>
-                <textarea id="arsenicAdditionalSpecs" name="arsenicAdditionalSpecs" rows="3" placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-            </div>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محدودیت منیزیم و نمک‌های آلکالی</h4>
+            <p><strong>نمونه:</strong> 1.0 گرم</p>
+            <p><strong>تحلیل:</strong> نمونه را با 35 میلی‌لیتر آب مخلوط کنید. با احتیاط 3 میلی‌لیتر اسید هیدروکلریک اضافه کرده، محلول را حرارت دهید و به مدت 1 دقیقه بجوشانید. به سرعت 40 میلی‌لیتر محلول اگزالیک اسید TS اضافه کرده و به شدت هم بزنید تا رسوب به خوبی ایجاد شود. بلافاصله 2 قطره متیل رد TS و سپس هیدروکسید آمونیوم 6 نرمال را به صورت قطره‌ای اضافه کنید تا زمانی که مخلوط به سختی قلیایی شود. به دمای اتاق خنک کنید، در یک استوانه مدرج 100 میلی‌لیتری منتقل کنید، با آب به حجم 100 میلی‌لیتر برسانید، مخلوط کنید و به مدت 4 ساعت یا یک شب قرار دهید. فیلتر کنید و به 50 میلی‌لیتر از فیلترات شفاف در یک ظرف پلاتینی 0.5 میلی‌لیتر اسید سولفوریک اضافه کنید و مخلوط را روی حمام بخار تا حجم کم تبخیر کنید. با دقت روی شعله آزاد حرارت دهید تا خشک شود و حرارت دادن را برای تجزیه کامل و فرار نمک‌های آمونیوم ادامه دهید. در نهایت، باقی‌مانده را تا وزن ثابت کلسینه کنید.</p>
+            <p><strong>معیارهای پذیرش:</strong> NMT 1.0%؛ وزن باقی‌مانده NMT 5 میلی‌گرم است.</p>
 
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">باریم</h3>
-            <div class="card interactive-card">
-                <p>یک سیم پلاتینی که در فیلتر بدست آمده از تست مواد نامحلول در اسید غوطه‌ور شده و در شعله غیر نورانی نگه داشته شده است، رنگ سبز ایجاد نمی‌کند.</p>
-                <div class="mt-4">
-                    <label for="bariumStatus" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                    <select id="bariumStatus" name="bariumStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                </div>
-                <textarea id="bariumAdditionalSpecs" name="bariumAdditionalSpecs" rows="3" placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-            </div>
-
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">آهن <a href="General chapters/241.html" class="text-blue-600 hover:underline" target="_blank">241</a></h3>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه:</h4>
-                <p><span class="ltr-text">40</span> میلی‌گرم در <span class="ltr-text">5</span> میلی‌لیتر اسید هیدروکلریک 2 نرمال. با کمک آب به یک بشر منتقل کرده و با آب به حجم <span class="ltr-text">10</span> میلی‌لیتر برسانید.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استاندارد:</h4>
-                <p><span class="ltr-text">4.0</span> میلی‌لیتر از محلول استاندارد آهن، آماده شده طبق دستورالعمل آهن <a href="General chapters/241.html" class="text-blue-600 hover:underline" target="_blank">241</a> را به یک بشر منتقل کرده و با آب به حجم <span class="ltr-text">10</span> میلی‌لیتر برسانید.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط دستگاهی</h4>
-                <p>(به طیف‌سنجی فرابنفش-مرئی <a href="General chapters/857.html" class="text-blue-600 hover:underline" target="_blank">857</a> مراجعه کنید)</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">طول موج تحلیلی:</h4>
-                <p><span class="ltr-text">530</span> نانومتر</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شاهد:</h4>
-                <p>آب</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل:</h4>
-                <p>به طور جداگانه به محلول نمونه و محلول استاندارد، 2 میلی‌لیتر محلول اسید سیتریک (1 در 5) و 2 قطره تیواستیک اسید اضافه کنید، با آمونیاک <span class="ltr-text">TS</span> pH را به <span class="ltr-text">9.5 ± 0.1</span> تنظیم کنید، با آب به حجم <span class="ltr-text">20</span> میلی‌لیتر برسانید و به مدت 5 دقیقه بگذارید. با آب به حجم <span class="ltr-text">50</span> میلی‌لیتر برسانید. به طور همزمان جذب محلول‌های حاصل از محلول نمونه و محلول استاندارد را تعیین کنید.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                <p>حداکثر <span class="ltr-text">0.1%</span>؛ جذب محلول حاصل از محلول نمونه از محلول استاندارد تجاوز نکند.</p>
-                <div class="mt-4">
-                    <label for="ironStatus" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                    <select id="ironStatus" name="ironStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                </div>
-                <textarea id="ironAdditionalSpecs" name="ironAdditionalSpecs" rows="3" placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-            </div>
-
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">سرب <a href="General chapters/251.html" class="text-blue-600 hover:underline" target="_blank">251</a></h3>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه:</h4>
-                <p><span class="ltr-text">1.0</span> گرم در <span class="ltr-text">5</span> میلی‌لیتر آب</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل:</h4>
-                <p>به آرامی 8 میلی‌لیتر اسید هیدروکلریک 3 نرمال به محلول نمونه اضافه کرده، روی حمام بخار تا خشکی حرارت دهید و باقیمانده را در 5 میلی‌لیتر آب حل کنید.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                <p>حداکثر <span class="ltr-text">3</span> ppm</p>
-                <div class="mt-4">
-                    <label for="leadStatus" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                    <select id="leadStatus" name="leadStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                </div>
-                <textarea id="leadAdditionalSpecs" name="leadAdditionalSpecs" rows="3" placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-            </div>
-
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">حد فلوراید</h3>
-            <div class="card interactive-card">
-                <p>[توجه - تمام محلول‌ها را در ظروف پلاستیکی تهیه و نگهداری کنید.]</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول A:</h4>
-                <p><span class="ltr-text">294</span> میلی‌گرم/میلی‌لیتر سدیم سیترات دی‌هیدرات در آب</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه:</h4>
-                <p><span class="ltr-text">2.0</span> گرم</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استاندارد مادر:</h4>
-                <p><span class="ltr-text">1.11</span> میلی‌گرم/میلی‌لیتر USP سدیم فلوراید <span class="ltr-text">RS</span> در آب</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استاندارد:</h4>
-                <p><span class="ltr-text">20.0</span> میلی‌لیتر از محلول استاندارد مادر را با <span class="ltr-text">50.0</span> میلی‌لیتر محلول A مخلوط کرده و با آب به حجم <span class="ltr-text">100.0</span> میلی‌لیتر برسانید. [توجه - هر میلی‌لیتر از این محلول حاوی <span class="ltr-text">100</span> میکروگرم یون فلوراید است.]</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم الکترود:</h4>
-                <p>از یک الکترود حساس به یون فلوراید و یک الکترود مرجع نقره/کلرید نقره که به یک pH متر با قابلیت اندازه‌گیری پتانسیل با حداقل تکرارپذیری <span class="ltr-text">±0.2</span> میلی‌ولت متصل است، استفاده کنید (به pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a> مراجعه کنید).</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">خط پاسخ استاندارد:</h4>
-                <p><span class="ltr-text">50.0</span> میلی‌لیتر از محلول A و <span class="ltr-text">4.0</span> میلی‌لیتر اسید هیدروکلریک را به یک بشر منتقل کرده و با آب به حجم <span class="ltr-text">100</span> میلی‌لیتر برسانید. یک همزن مغناطیسی پوشیده از پلاستیک اضافه کرده، الکترودها را در محلول قرار داده، به مدت 15 دقیقه هم بزنید و پتانسیل را بر حسب میلی‌ولت بخوانید. هم زدن را ادامه داده و در فواصل 5 دقیقه، <span class="ltr-text">100</span>، <span class="ltr-text">100</span>، <span class="ltr-text">300</span> و <span class="ltr-text">500</span> میکرولیتر از محلول استاندارد اضافه کنید و پتانسیل را 5 دقیقه پس از هر افزودن بخوانید. لگاریتم غلظت‌های تجمعی یون فلوراید (<span class="ltr-text">0.1</span>، <span class="ltr-text">0.2</span>، <span class="ltr-text">0.5</span> و <span class="ltr-text">1.0</span> میکروگرم/میلی‌لیتر) را در مقابل پتانسیل بر حسب میلی‌ولت رسم کنید.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل:</h4>
-                <p>نمونه را به یک بشر حاوی همزن مغناطیسی پوشیده از پلاستیک منتقل کرده، 20 میلی‌لیتر آب و 4.0 میلی‌لیتر اسید هیدروکلریک اضافه کرده و تا زمانی که حل شود هم بزنید. 50.0 میلی‌لیتر محلول A و آب کافی برای رساندن حجم محلول آزمایشی به 100 میلی‌لیتر اضافه کنید. الکترودها را بشویید و خشک کنید، در محلول نمونه قرار داده، به مدت 5 دقیقه هم بزنید و پتانسیل را بر حسب میلی‌ولت بخوانید. از پتانسیل اندازه‌گیری شده و خط پاسخ استاندارد، غلظت، C، بر حسب میکروگرم/میلی‌لیتر، یون فلوراید در محلول نمونه را تعیین کنید. محتوای فلوراید در نمونه گرفته شده را محاسبه کنید:</p>
-
-                <div class="formula-display">
-                    <p class="math-tex">$$Result = \frac{V \times C}{W}$$</p>
-                </div>
-
-                <div class="grid grid-cols-1 gap-4">
-                    <div>
-                        <label for="fluorideV" class="block text-sm font-medium text-gray-700">حجم محلول نمونه (mL) (V)</label>
-                        <input type="text" id="fluorideV" name="fluorideV" class="calculation-input">
-                    </div>
-                    <div>
-                        <label for="fluorideC" class="block text-sm font-medium text-gray-700">غلظت فلوراید در محلول نمونه (µg/mL) (C)</label>
-                        <input type="text" id="fluorideC" name="fluorideC" class="calculation-input">
-                    </div>
-                    <div>
-                        <label for="fluorideW" class="block text-sm font-medium text-gray-700">وزن نمونه (g) (W)</label>
-                        <input type="text" id="fluorideW" name="fluorideW" class="calculation-input">
-                    </div>
-                </div>
-                <button class="calculation-button mt-4" onclick="calculateFluoride()">محاسبه</button>
-                <div class="mt-4">
-                    <span class="font-bold">نتیجه:</span> <span id="fluorideResult">--</span>
-                </div>
-                <div class="mt-2">
-                    <span class="font-bold">وضعیت:</span> <span id="fluorideStatus" class="font-bold">--</span>
-                </div>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                <p>حداکثر <span class="ltr-text">50</span> ppm</p>
-            </div>
-
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">حد نمک‌های منیزیم و قلیایی</h3>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه ▲▲ (ERR 1-Sep-2019):</h4>
-                <p><span class="ltr-text">1.0</span> گرم</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل:</h4>
-                <p>نمونه را با <span class="ltr-text">35</span> میلی‌لیتر آب مخلوط کنید. به دقت 3 میلی‌لیتر اسید هیدروکلریک اضافه کرده، محلول را حرارت دهید و به مدت 1 دقیقه بجوشانید. به سرعت 40 میلی‌لیتر اسید اگزالیک <span class="ltr-text">TS</span> اضافه کرده و به شدت هم بزنید تا رسوب به خوبی ایجاد شود. بلافاصله به مخلوط گرم، 2 قطره متیل رد <span class="ltr-text">TS</span> و سپس هیدروکسید آمونیوم 6 نرمال را قطره قطره اضافه کنید تا مخلوط به سختی قلیایی شود. به دمای اتاق رسانده، به یک استوانه مدرج 100 میلی‌لیتری منتقل کرده، با آب به حجم 100 میلی‌لیتر برسانید، مخلوط کرده و به مدت 4 ساعت یا یک شب بگذارید. فیلتر کرده و به 50 میلی‌لیتر از فیلترات شفاف در یک ظرف پلاتینی، 0.5 میلی‌لیتر اسید سولفوریک اضافه کرده و مخلوط را روی حمام بخار تا حجم کمی تبخیر کنید. با دقت روی شعله آزاد حرارت دهید تا خشک شود و حرارت دادن را برای تجزیه کامل و تبخیر نمک‌های آمونیوم ادامه دهید. در نهایت، باقیمانده را تا رسیدن به وزن ثابت بسوزانید.</p>
-                <div class="formula-display">
-                    <p class="math-tex">$$Result = \frac{(W_{1}+W_{sa})-W_2}{W_{sa}} \times 100$$</p>
-                </div>
-                <div class="grid grid-cols-1 gap-4">
-                    <div>
-                        <label for="magnesiumW1" class="block text-sm font-medium text-gray-700">وزن باقیمانده خشک شده (g) (W1)</label>
-                        <input type="text" id="magnesiumW1" name="magnesiumW1" class="calculation-input">
-                    </div>
-                    <div>
-                        <label for="magnesiumWsa" class="block text-sm font-medium text-gray-700">وزن نمونه خشک شده (g) (Wsa)</label>
-                        <input type="text" id="magnesiumWsa" name="magnesiumWsa" class="calculation-input">
-                    </div>
-                    <div>
-                        <label for="magnesiumW2" class="block text-sm font-medium text-gray-700">وزن اولیه نمونه (g) (W2)</label>
-                        <input type="text" id="magnesiumW2" name="magnesiumW2" class="calculation-input">
-                    </div>
-                </div>
-                <button class="calculation-button mt-4" onclick="calculateMagnesiumAndAlkaliSalts()">محاسبه</button>
-                <div class="mt-4">
-                    <span class="font-bold">نتیجه:</span> <span id="magnesiumResult">--</span>
-                </div>
-                <div class="mt-2">
-                    <span class="font-bold">وضعیت:</span> <span id="magnesiumStatus" class="font-bold">--</span>
-                </div>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                <p>حداکثر <span class="ltr-text">1.0%</span>؛ وزن باقیمانده نباید از <span class="ltr-text">5</span> میلی‌گرم تجاوز کند.</p>
-            </div>
-
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">جیوه، روش IIa <a href="General chapters/261.html" class="text-blue-600 hover:underline" target="_blank">261</a></h3>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول مادر جیوه و محلول استاندارد جیوه:</h4>
-                <p>طبق دستورالعمل جیوه <a href="General chapters/261.html" class="text-blue-600 hover:underline" target="_blank">261</a> عمل کنید.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استاندارد:</h4>
-                <p>طبق دستورالعمل جیوه <a href="General chapters/261.html" class="text-blue-600 hover:underline" target="_blank">261</a> عمل کنید، بجز استفاده از 3 میلی‌لیتر اسید هیدروکلریک به جای 3 میلی‌لیتر اسید سولفوریک.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول مادر نمونه:</h4>
-                <p><span class="ltr-text">4.0</span> گرم در یک بشر 100 میلی‌لیتری، و با احتیاط در 14 میلی‌لیتر اسید هیدروکلریک 6 نرمال حل کنید.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه:</h4>
-                <p>طبق دستورالعمل جیوه <a href="General chapters/261.html" class="text-blue-600 hover:underline" target="_blank">261</a> عمل کنید، بجز استفاده از 3 میلی‌لیتر اسید هیدروکلریک به جای 3 میلی‌لیتر اسید سولفوریک.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل</h4>
-                <p>نمونه‌ها: محلول استاندارد و محلول نمونه</p>
-                <p>طبق دستورالعمل جیوه <a href="General chapters/261.html" class="text-blue-600 hover:underline" target="_blank">261</a> عمل کنید.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                <p>حداکثر <span class="ltr-text">0.5</span> ppm</p>
-                <div class="mt-4">
-                    <label for="mercuryStatus" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                    <select id="mercuryStatus" name="mercuryStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                </div>
-                <textarea id="mercuryAdditionalSpecs" name="mercuryAdditionalSpecs" rows="3" placeholder="توضیحات اضافه / Additional Specifications..." class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-            </div>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">جیوه، روش IIa <a href="General chapters/261.html" class="text-blue-600 hover:underline" target="_blank">261</a></h4>
+            <p><strong>محلول مادر جیوه و محلول استاندارد جیوه:</strong> طبق دستورالعمل در جیوه <a href="General chapters/261.html" class="text-blue-600 hover:underline" target="_blank">261</a> پیش بروید.</p>
+            <p><strong>محلول استاندارد:</strong> طبق دستورالعمل در جیوه <a href="General chapters/261.html" class="text-blue-600 hover:underline" target="_blank">261</a> پیش بروید، با این تفاوت که به جای 3 میلی‌لیتر اسید سولفوریک از 3 میلی‌لیتر اسید هیدروکلریک استفاده کنید.</p>
+            <p><strong>محلول مادر نمونه:</strong> 4.0 گرم در یک بشر 100 میلی‌لیتری، و با احتیاط در 14 میلی‌لیتر اسید هیدروکلریک 6 نرمال حل کنید.</p>
+            <p><strong>محلول نمونه:</strong> طبق دستورالعمل در جیوه <a href="General chapters/261.html" class="text-blue-600 hover:underline" target="_blank">261</a> با استفاده از محلول مادر نمونه پیش بروید، با این تفاوت که به جای 3 میلی‌لیتر اسید سولفوریک از 3 میلی‌لیتر اسید هیدروکلریک استفاده کنید.</p>
+            <p><strong>تحلیل</strong></p>
+            <p><strong>نمونه‌ها:</strong> محلول استاندارد و محلول نمونه</p>
+            <p>طبق دستورالعمل در جیوه <a href="General chapters/261.html" class="text-blue-600 hover:underline" target="_blank">261</a> پیش بروید.</p>
+            <p><strong>معیارهای پذیرش:</strong> NMT 0.5 ppm</p>
         </div>
 
-        <!-- Specific Tests Tab -->
-        <div id="specific_tests" class="tab-content card hidden">
+        <div id="specific-tests" class="tab-content hidden card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
-
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">کاهش وزن در اثر خشک شدن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h3>
-            <div class="card interactive-card">
-                <p>نمونه را در دمای <span class="ltr-text">200°</span> به مدت <span class="ltr-text">4</span> ساعت خشک کنید: حداکثر <span class="ltr-text">2.0%</span> از وزن خود را از دست می‌دهد.</p>
-                <div class="formula-display">
-                    <p class="math-tex">$$LOD = \frac{(W_{1}+W_{sa})-W_2}{W_{sa}} \times 100$$</p>
-                </div>
-                <div class="grid grid-cols-1 gap-4">
-                    <div>
-                        <label for="lodW1" class="block text-sm font-medium text-gray-700">وزن اولیه نمونه (g) (W1)</label>
-                        <input type="text" id="lodW1" name="lodW1" class="calculation-input">
-                    </div>
-                    <div>
-                        <label for="lodWsa" class="block text-sm font-medium text-gray-700">وزن نمونه خشک شده (g) (Wsa)</label>
-                        <input type="text" id="lodWsa" name="lodWsa" class="calculation-input">
-                    </div>
-                    <div>
-                        <label for="lodW2" class="block text-sm font-medium text-gray-700">وزن نهایی نمونه (g) (W2)</label>
-                        <input type="text" id="lodW2" name="lodW2" class="calculation-input">
-                    </div>
-                </div>
-                <button class="calculation-button mt-4" onclick="calculateLossOnDrying()">محاسبه</button>
-                <div class="mt-4">
-                    <span class="font-bold">نتیجه:</span> <span id="lodResult">--</span>
-                </div>
-                <div class="mt-2">
-                    <span class="font-bold">وضعیت:</span> <span id="lodStatus" class="font-bold">--</span>
-                </div>
-            </div>
-
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">باقیمانده پس از احتراق</h3>
-            <div class="card interactive-card">
-                <p>نمونه را در دمای <span class="ltr-text">600°</span> به مدت <span class="ltr-text">2</span> ساعت بسوزانید: حداکثر <span class="ltr-text">0.5%</span>.</p>
-                <div class="formula-display">
-                    <p class="math-tex">$$ROI = \frac{W_3-W_1}{W_2} \times 100$$</p>
-                </div>
-                <div class="grid grid-cols-1 gap-4">
-                    <div>
-                        <label for="roiW1" class="block text-sm font-medium text-gray-700">وزن ظرف + باقیمانده (g) (W1)</label>
-                        <input type="text" id="roiW1" name="roiW1" class="calculation-input">
-                    </div>
-                    <div>
-                        <label for="roiW2" class="block text-sm font-medium text-gray-700">وزن اولیه نمونه (g) (W2)</label>
-                        <input type="text" id="roiW2" name="roiW2" class="calculation-input">
-                    </div>
-                    <div>
-                        <label for="roiW3" class="block text-sm font-medium text-gray-700">وزن ظرف (g) (W3)</label>
-                        <input type="text" id="roiW3" name="roiW3" class="calculation-input">
-                    </div>
-                </div>
-                <button class="calculation-button mt-4" onclick="calculateResidueOnIgnition()">محاسبه</button>
-                <div class="mt-4">
-                    <span class="font-bold">نتیجه:</span> <span id="roiResult">--</span>
-                </div>
-                <div class="mt-2">
-                    <span class="font-bold">وضعیت:</span> <span id="roiStatus" class="font-bold">--</span>
-                </div>
-            </div>
-
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">مواد احیا کننده</h3>
-            <div class="card interactive-card">
-                <p>مقدار مواد احیا کننده در <span class="ltr-text">1.0</span> گرم نباید بیشتر از <span class="ltr-text">0.015</span> میلی‌لیتر <span class="ltr-text">0.01</span> مولار پتاسیم پرمنگنات باشد.</p>
-                <div class="formula-display">
-                    <p class="math-tex">$$Result = \left[ \frac{(V_{B}-V_{S}) \times N \times 27 \times F}{W} \right] \times 100$$</p>
-                </div>
-                <div class="grid grid-cols-1 gap-4">
-                    <div>
-                        <label for="reducingVB" class="block text-sm font-medium text-gray-700">حجم شاهد (mL) (VB)</label>
-                        <input type="text" id="reducingVB" name="reducingVB" class="calculation-input">
-                    </div>
-                    <div>
-                        <label for="reducingVS" class="block text-sm font-medium text-gray-700">حجم نمونه (mL) (VS)</label>
-                        <input type="text" id="reducingVS" name="reducingVS" class="calculation-input">
-                    </div>
-                    <div>
-                        <label for="reducingN" class="block text-sm font-medium text-gray-700">نرمالیته (N)</label>
-                        <input type="text" id="reducingN" name="reducingN" class="calculation-input">
-                    </div>
-                    <div>
-                        <label for="reducingF" class="block text-sm font-medium text-gray-700">ضریب هم‌ارزی (F)</label>
-                        <input type="text" id="reducingF" name="reducingF" class="calculation-input">
-                    </div>
-                    <div>
-                        <label for="reducingW" class="block text-sm font-medium text-gray-700">وزن نمونه (g) (W)</label>
-                        <input type="text" id="reducingW" name="reducingW" class="calculation-input">
-                    </div>
-                </div>
-                <button class="calculation-button mt-4" onclick="calculateReducingSubstances()">محاسبه</button>
-                <div class="mt-4">
-                    <span class="font-bold">نتیجه:</span> <span id="reducingResult">--</span>
-                </div>
-                <div class="mt-2">
-                    <span class="font-bold">وضعیت:</span> <span id="reducingStatus" class="font-bold">--</span>
-                </div>
-            </div>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کاهش وزن در اثر حرارت <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h4>
+            <p>نمونه را در دمای 200 درجه سانتی‌گراد به مدت 4 ساعت خشک کنید: NMT 2.0% از وزن خود را از دست می‌دهد.</p>
         </div>
 
-        <!-- Additional Requirements Tab -->
-        <div id="additional_requirements" class="tab-content card hidden">
+        <div id="additional-requirements" class="tab-content hidden card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
-
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته بندی و نگهداری</h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">بسته‌بندی و نگهداری</h4>
             <p>در ظروف کاملاً بسته نگهداری شود.</p>
-
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h3>
-            <p>USP سدیم فلوراید RS</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">استانداردهای مرجع USP 11</h4>
+            <p>سدیم فلوراید USP RS</p>
         </div>
 
     </div>
 
     <script>
-        function showTab(event, tabId) {
-            const tabButtons = document.querySelectorAll('.tab-button');
-            tabButtons.forEach(button => {
-                button.classList.add('tab-inactive');
-                button.classList.remove('tab-active');
-            });
+        function showTab(event, tabName) {
+            var i, tabcontent, tabbuttons;
 
-            const tabContents = document.querySelectorAll('.tab-content');
-            tabContents.forEach(content => {
-                content.classList.add('hidden');
-            });
-
-            event.currentTarget.classList.add('tab-active');
-            event.currentTarget.classList.remove('tab-inactive');
-            document.getElementById(tabId).classList.remove('hidden');
-        }
-
-        function updateStatus(elementId, value) {
-            const statusElement = document.getElementById(elementId);
-            if (value !== '--') {
-                const numericValue = parseFloat(value);
-                if (numericValue >= 98.0 && numericValue <= 100.5) {
-                    statusElement.textContent = 'Pass';
-                    statusElement.className = 'font-bold pass-text';
-                } else {
-                    statusElement.textContent = 'Fail';
-                    statusElement.className = 'font-bold fail-text';
-                }
-            } else {
-                statusElement.textContent = '--';
-                statusElement.className = 'font-bold';
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.add("hidden");
             }
-        }
 
-        function calculateCalciumCarbonateAssay() {
-            const V = parseFloat(document.getElementById('V').value);
-            const B = parseFloat(document.getElementById('B').value);
-            const M = parseFloat(document.getElementById('M').value);
-            const F = parseFloat(document.getElementById('F').value); // Equivalency factor is fixed
-            const W = parseFloat(document.getElementById('W').value);
-
-            const assayResultElement = document.getElementById('assayResult');
-            const assayStatusElement = document.getElementById('assayStatus');
-
-            if (!isNaN(V) && !isNaN(B) && !isNaN(M) && !isNaN(W) && W !== 0) {
-                const result = ((V - B) * M * F * 100) / W;
-                assayResultElement.textContent = result.toFixed(2) + '%';
-
-                if (result >= 98.0 && result <= 100.5) {
-                    assayStatusElement.textContent = 'Pass';
-                    assayStatusElement.className = 'font-bold pass-text';
-                } else {
-                    assayStatusElement.textContent = 'Fail';
-                    assayStatusElement.className = 'font-bold fail-text';
-                }
-            } else {
-                assayResultElement.textContent = '--';
-                assayStatusElement.textContent = '--';
-                assayStatusElement.className = 'font-bold';
+            tabbuttons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("tab-active");
+                tabbuttons[i].classList.add("tab-inactive");
             }
+
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.classList.remove("tab-inactive");
+            event.currentTarget.classList.add("tab-active");
         }
 
-        function calculateAcidInsolubleSubstances() {
-            const W1 = parseFloat(document.getElementById('acidInsolubleW1').value); // Weight of crucible + residue
-            const W2 = parseFloat(document.getElementById('acidInsolubleW2').value); // Weight of crucible
-
-            const resultElement = document.getElementById('acidInsolubleResult');
-            const statusElement = document.getElementById('acidInsolubleStatus');
-
-            if (!isNaN(W1) && !isNaN(W2) && W2 !== 0) {
-                // The formula gives the residue weight in mg, so we need to convert it to grams for the percentage calculation
-                const residueWeightGrams = (W1 - W2) / 1000; // Assuming W1 and W2 are in grams
-                const percentage = residueWeightGrams * 100 / 5.0; // 5.0g is the sample weight
-
-                resultElement.textContent = `${percentage.toFixed(3)}% (Residue: ${residueWeightGrams.toFixed(3)} g)`;
-
-                if (percentage <= 0.2 && residueWeightGrams <= 0.010) { // 10mg = 0.010g
-                    statusElement.textContent = 'Pass';
-                    statusElement.className = 'font-bold pass-text';
-                } else {
-                    statusElement.textContent = 'Fail';
-                    statusElement.className = 'font-bold fail-text';
-                }
-            } else {
-                resultElement.textContent = '--';
-                statusElement.textContent = '--';
-                statusElement.className = 'font-bold';
-            }
-        }
-
-        function calculateFluoride() {
-            const V = parseFloat(document.getElementById('fluorideV').value);
-            const C = parseFloat(document.getElementById('fluorideC').value);
-            const W = parseFloat(document.getElementById('fluorideW').value);
-
-            const resultElement = document.getElementById('fluorideResult');
-            const statusElement = document.getElementById('fluorideStatus');
-
-            if (!isNaN(V) && !isNaN(C) && !isNaN(W) && W !== 0) {
-                const result = (V * C) / W; // Result in ppm
-                resultElement.textContent = `${result.toFixed(2)} ppm`;
-
-                if (result <= 50) {
-                    statusElement.textContent = 'Pass';
-                    statusElement.className = 'font-bold pass-text';
-                } else {
-                    statusElement.textContent = 'Fail';
-                    statusElement.className = 'font-bold fail-text';
-                }
-            } else {
-                resultElement.textContent = '--';
-                statusElement.textContent = '--';
-                statusElement.className = 'font-bold';
-            }
-        }
-
-        function calculateMagnesiumAndAlkaliSalts() {
-            const W1 = parseFloat(document.getElementById('magnesiumW1').value); // Residue weight after ignition
-            const Wsa = parseFloat(document.getElementById('magnesiumWsa').value); // Sample weight dried
-            const W2 = parseFloat(document.getElementById('magnesiumW2').value); // Initial sample weight
-
-            const resultElement = document.getElementById('magnesiumResult');
-            const statusElement = document.getElementById('magnesiumStatus');
-
-            if (!isNaN(W1) && !isNaN(Wsa) && !isNaN(W2) && Wsa !== 0) {
-                const result = ((W1 + Wsa) - W2) / Wsa * 100; // Percentage of loss on drying
-
-                // The criteria are "NMT 1.0%" for the residue weight.
-                // The calculation in the form is for Loss on Drying.
-                // The text states "the weight of the residue is NMT 5 mg".
-                // We'll calculate the percentage first and check against 1.0%.
-                // For the residue weight check, we'd need the actual residue weight in mg.
-                // For now, we focus on the percentage calculation.
-                // Assuming the formula is intended to calculate the % of salts, not LOD.
-                // However, the context is "LIMIT OF MAGNESIUM AND ALKALI SALTS" and the formula matches LOD.
-                // Let's assume W1 is the weight of the residue after ignition of the filtrate,
-                // Wsa is the initial weight of the sample used for this test,
-                // and W2 is the weight of the crucible for W1.
-                // This interpretation is confusing due to the formula matching LOD.
-                // Let's re-interpret: W1 = final weight of crucible+residue, Wsa = weight of sample, W2 = initial weight of crucible.
-                // This still feels like LOD.
-
-                // Given the formula `LOD= (W1+Wsa)-W2 / Wsa * 100`, it calculates LOD.
-                // But the test is "LIMIT OF MAGNESIUM AND ALKALI SALTS".
-                // The acceptance criteria is "NMT 1.0%; the weight of the residue is NMT 5 mg."
-                // The provided formula likely refers to the residue calculation from the filtration and ignition.
-                // Let's assume W1 = final ignited residue weight, W2 = weight of crucible used to ignite, Wsa = sample weight.
-                // Then the result would be (W1-W2)/Wsa * 100. This is more aligned with residue.
-                // However, the source text has `(W_{1}+W_{sa})-W_2` in the formula.
-
-                // Let's assume the formula is for the residue of magnesium and alkali salts itself,
-                // and W1 is the weight of the ignited residue, Wsa is the original sample weight.
-                // But what is W2? The provided USP text structure implies W1 is the crucible + residue.
-                // And Wsa is the sample weight.
-                // The formula itself is `(W_{1}+W_{sa})-W_2`. This doesn't directly map to a standard residue calculation.
-
-                // Re-reading: "evaporate the mixture on a steam bath to a small volume. Carefully heat over a free flame to dryness, and continue heating... Finally, ignite the residue to constant weight."
-                // This suggests W1 is the residue weight. W2 is likely the crucible weight. Wsa is the sample weight.
-                // But the formula provided is `(W_{1}+W_{sa})-W_2`. This is unusual.
-
-                // Let's use the provided formula and assume its components:
-                // W1: Weight of crucible + residue
-                // Wsa: Sample weight
-                // W2: This is unclear. If it's the initial sample weight (as per LOD), it's incorrect.
-                // If W1 is the final weight of the residue (ignited), and W2 is the initial sample weight, what is Wsa?
-                // The formula `(W1+Wsa)-W2` is highly peculiar for residue calculation.
-
-                // Let's consider the possibility that the formula given in the PDF for LOD is mistakenly applied here.
-                // For "Limit of Magnesium and Alkali Salts", we should be calculating the weight of the residue.
-                // Let W1 = weight of crucible + ignited residue
-                // Let W2 = weight of crucible
-                // Let W_sample = weight of the sample used for this test (1.0g)
-                // The residue weight is W1 - W2.
-                // Percentage = (W1 - W2) / W_sample * 100.
-                // The text also states "weight of the residue is NMT 5 mg".
-
-                // Given the strict instruction to use the provided formula, and assuming its parameters:
-                // Let's assume the PDF has a typo and W1 is the final ignited residue weight, W2 is the crucible weight, and W_sample is the sample weight.
-                // And the formula provided `(W_{1}+W_{sa})-W_2` is actually intended to be used with specific definitions for W1, Wsa, W2.
-                // Let's assume:
-                // W1 = final ignited residue weight (g)
-                // Wsa = initial sample weight (g)
-                // W2 = initial crucible weight (g)
-                // Then residue percentage = (W1 - W2) / Wsa * 100.
-
-                // However, the provided formula is `(W_{1}+W_{sa})-W_2`. If W1=residue, Wsa=sample, W2=crucible: (residue + sample) - crucible. This makes no sense.
-
-                // Let's try another interpretation based on the formula structure being for LOD, and see if it can be adapted.
-                // If W1 is initial sample, Wsa is sample after drying, W2 is crucible: (Initial Sample + Crucible) - Sample After Drying. This is also not right.
-
-                // The most plausible interpretation is that the formula provided is for LOD and there's a mistake in the PDF applying it to Magnesium and Alkali Salts.
-                // However, I must use the formula provided. Let's assume the variables as defined for LOD and apply it here.
-                // W1: Initial sample weight
-                // Wsa: Sample weight after drying
-                // W2: Weight of crucible + sample after drying (final weight)
-
-                // Let's assume the input fields map to the PDF formula:
-                // W1 = Weight of crucible + residue (g)
-                // Wsa = Sample weight (g)
-                // W2 = Weight of crucible (g)
-                // The formula given is `Result = (W_{1}+W_{sa})-W_2`. This formula is not for percentage and doesn't make sense.
-
-                // Going back to the USP structure: "evaporate the mixture... heat over a free flame to dryness, and continue heating... Finally, ignite the residue to constant weight."
-                // This strongly suggests we're igniting a residue.
-                // Let the weight of the ignited residue be `Residue_Weight`.
-                // Let the weight of the crucible be `Crucible_Weight`.
-                // Then `W1` in the input fields (as per the LOD mapping) would be the "weight of crucible + residue".
-                // So, `Residue_Weight = W1 - W2`.
-                // The acceptance criteria are "NMT 1.0%" and "weight of the residue is NMT 5 mg".
-                // The percentage is calculated from `Residue_Weight / Sample_Weight * 100`.
-                // And the `Residue_Weight` must be <= 5 mg.
-
-                // Given the instruction "You must add an interactive calculator for the following specific tests and formulas:", and the formula is `LOD= (W1+Wsa)-W2 / Wsa * 100`.
-                // I will use W1, Wsa, W2 as the input fields.
-                // Let's assume W1 is the initial sample weight, Wsa is the final residue weight, and W2 is the crucible weight.
-                // Then `(W1 + Wsa) - W2` doesn't make sense.
-
-                // Let's assume the formula and variables are as given for LOD and I must apply them.
-                // W1: Weight of crucible + residue (g)
-                // Wsa: Sample weight (g) - this is confusing for the formula as written.
-                // W2: Weight of crucible (g)
-                // The formula is `(W1 + Wsa) - W2`.
-
-                // Let's try to make the formula `Result = (W_{1}-W_{2})*1000` for Acid-Insoluble Substances.
-                // And `LOD= (W_{1}+W_{sa})-W_2 / W_{sa}*100`.
-                // For Magnesium and Alkali Salts, the PDF shows the LOD formula.
-                // So, I must use that formula and its variables.
-                // W1: Initial sample weight (g)
-                // Wsa: Sample weight after drying (g)
-                // W2: Weight of crucible (g) -- This mapping is for LOD, not Magnesium/Alkali Salts.
-
-                // Let's assume W1 = final residue weight in g, W2 = crucible weight in g, W_sample = 1.0g.
-                // Percentage = (W1-W2)/1.0 * 100.
-                // Residue weight = W1-W2. This must be <= 5 mg.
-
-                // Given the constraint: "If the test is "Limit of Acid-Insoluble substances" or "Limit of Magnesium and Alkali Salts" or "Alcohol-insoluble matter," then display the formula $$Result = (W_{2}-W_{1})*1000$$ and create an interactive calculator with input fields for `W1` and `W2`."
-                // And for "Loss on drying" or "Loss on Ignition," display the formula $$LOD=\frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$ and create an interactive calculator with input fields for `W1`, `Wsa`, and `W2`.
-
-                // For Magnesium and Alkali Salts, the PDF *shows* the LOD formula.
-                // This is a contradiction. The instruction says use the *formula* provided.
-                // The formula shown in PDF for Magnesium and Alkali Salts is the LOD formula.
-                // So, I must use the LOD formula for Magnesium and Alkali Salts.
-                // Input fields: W1, Wsa, W2.
-                // W1 = Initial sample weight (g)
-                // Wsa = Sample weight after drying (g)
-                // W2 = Weight of crucible (g)
-
-                // This is confusing. Let's stick to the provided formula in the PDF for the test "LIMIT OF MAGNESIUM AND ALKALI SALTS", which is the LOD formula.
-                // W1: Initial sample weight (g)
-                // Wsa: Sample weight after drying (g)
-                // W2: Weight of crucible (g)
-
-                // The calculation `(W_{1}+W_{sa})-W_2` in the formula is what must be used.
-                // Let's assume the variables are for the *context of the calculation*, not necessarily standard lab weights.
-                // W1: Initial sample weight (g)
-                // Wsa: Sample weight *before* ignition (g)
-                // W2: Weight of crucible (g)
-
-                // This is highly speculative. Let's assume the inputs W1, Wsa, W2 are meant to be used in the formula `(W_{1}+W_{sa})-W_2`.
-                // Let's assume:
-                // W1 = initial sample weight (g)
-                // Wsa = weight of the residue after filtration and washing, but before ignition (g)
-                // W2 = weight of crucible (g)
-                // This still doesn't quite fit.
-
-                // Let's assume the input fields are directly mapped from the LOD formula:
-                // W1: Initial sample weight (g)
-                // Wsa: Final residue weight (g) - this is the value being *determined* for residue on ignition.
-                // W2: Weight of crucible (g)
-
-                // This is highly problematic. The formula shown is for LOD, but the test is for Magnesium and Alkali Salts.
-                // And the acceptance criteria are "NMT 1.0%" and "weight of the residue is NMT 5 mg".
-                // The formula `(W_{1}+W_{sa})-W_2` is `(Initial Sample + Sample after Drying) - Crucible`. This is not standard.
-
-                // Given the direct instruction to use the formula *as provided* for the test:
-                // The formula provided for "LIMIT OF MAGNESIUM AND ALKALI SALTS" is indeed the LOD formula.
-                // So, I will implement the LOD formula with its variables W1, Wsa, W2.
-                // Let's assume W1 is the initial sample weight, Wsa is the weight of the sample after some treatment (as in LOD, drying), and W2 is a reference weight.
-
-                // Let's assume the input fields are directly linked to the formula's variables:
-                // W1: Initial sample weight (g)
-                // Wsa: Sample weight after drying (g) (this doesn't fit the test)
-                // W2: Weight of crucible (g)
-
-                // The most sensible interpretation is that the PDF has a typo and the formula should be for residue calculation.
-                // However, I must use the provided formula.
-                // Let's assume:
-                // W1 = weight of crucible + residue
-                // Wsa = sample weight
-                // W2 = weight of crucible
-                // Formula: (W1 + Wsa) - W2. This yields (crucible+residue + sample) - crucible = residue + sample. This is not percentage.
-
-                // Let's assume the formula is meant to be interpreted as:
-                // `Numerator = (W_{1}+W_{sa})-W_2`
-                // `Denominator = W_{sa}`
-                // `Result = Numerator / Denominator * 100`
-                // This interpretation implies Wsa is the denominator.
-
-                // Let's assume the common interpretation for residue tests:
-                // W1 = Weight of crucible + ignited residue
-                // W2 = Weight of crucible
-                // W_sample = Weight of the sample tested (1.0g)
-                // Result_Percentage = ((W1 - W2) / W_sample) * 100
-                // Residue_Weight = W1 - W2
-
-                // The provided formula `(W_{1}+W_{sa})-W_2` is problematic.
-                // Given the direct instruction "If the test is ... 'Limit of Magnesium and Alkali Salts' ... display the formula $$LOD=\frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$"
-                // I MUST use this formula.
-                // Let's assume the input fields correspond to the variables in this formula:
-                // W1 = initial sample weight (g)
-                // Wsa = sample weight after drying (g) (as per LOD context)
-                // W2 = weight of crucible (g)
-
-                // The acceptance criteria are: NMT 1.0%; the weight of the residue is NMT 5 mg.
-                // The formula calculates a percentage.
-                // Let's assume W1 is the initial sample weight, Wsa is the weight of the residue after ignition, and W2 is the weight of the crucible.
-                // Then the formula is (Initial Sample + Residue) - Crucible / Sample After Drying * 100. Still confusing.
-
-                // FINAL DECISION: I will use the LOD formula as presented in the PDF for "LIMIT OF MAGNESIUM AND ALKALI SALTS".
-                // I will map the input fields to the variables as they appear in the formula.
-                // W1: Initial sample weight (g)
-                // Wsa: Sample weight after drying (g)  <-- This variable is the most problematic for this test.
-                // W2: Weight of crucible (g)
-
-                // Let's try to fit the *spirit* of the test and the formula structure.
-                // The test is about "Magnesium and Alkali Salts". This is usually determined by precipitating and igniting them.
-                // So we expect to get a residue weight.
-                // Let's assume W1 = weight of crucible + ignited residue.
-                // Let W2 = weight of crucible.
-                // Let W_sample = initial sample weight (1.0g).
-                // Then residue weight = W1 - W2.
-                // Percentage = (W1 - W2) / W_sample * 100.
-                // However, the formula is explicitly `(W_{1}+W_{sa})-W_2`.
-
-                // Given the strict instruction to implement the formula provided.
-                // The formula shown for "LIMIT OF MAGNESIUM AND ALKALI SALTS" is:
-                // $$LOD= \frac{(W_{1}+W_{sa})-W_2}{W_{sa}} \times 100$$
-                // Input fields provided: W1, Wsa, W2.
-                // Let's assume:
-                // W1: Weight of crucible + residue (g)
-                // Wsa: Sample weight (g)
-                // W2: Weight of crucible (g)
-                // This would mean the formula is `((Crucible+Residue) + Sample) - Crucible / Sample * 100`.
-                // This simplifies to `(Residue + Sample) / Sample * 100` which is `(Residue/Sample + 1) * 100`. This is not a percentage of residue.
-
-                // Let's re-read the specific instruction: "If the test is 'Limit of Acid-Insoluble substances' or 'Limit of Magnesium and Alkali Salts' or 'Alcohol-insoluble matter,' then display the formula $$Result = (W_{2}-W_{1})*1000$$ and create an interactive calculator with input fields for `W1` and `W2`."
-                // BUT the PDF *shows* the LOD formula for Magnesium and Alkali Salts. This is a conflict.
-                // The instruction about `(W2-W1)*1000` seems to be for Acid-Insoluble Substances.
-                // The instruction for Magnesium and Alkali Salts is to use the *displayed formula*.
-                // The displayed formula for Magnesium and Alkali Salts is the LOD formula.
-
-                // So, I must use `LOD= (W1+Wsa)-W2 / Wsa * 100` for Magnesium and Alkali Salts.
-                // Let's assume the input fields are:
-                // W1: Weight of crucible + ignited residue (g)
-                // Wsa: Initial sample weight (g)
-                // W2: Weight of crucible (g)
-                // Then the formula becomes `((Crucible+Residue) + Initial Sample) - Crucible / Initial Sample * 100`.
-                // Which simplifies to `(Residue + Initial Sample) / Initial Sample * 100`. This is (Residue/Initial Sample + 1) * 100. Still not right.
-
-                // Let's try the other mapping for the LOD formula:
-                // W1: Initial sample weight (g)
-                // Wsa: Sample weight after drying (g)
-                // W2: Weight of crucible (g)
-                // This is the standard LOD interpretation.
-
-                // Let's assume the formula is correct and the input fields are:
-                // W1: weight of crucible + residue
-                // Wsa: sample weight
-                // W2: weight of crucible
-                // The formula is `(W1 + Wsa - W2) / Wsa * 100`. This still gives `(Crucible+Residue + Sample - Crucible) / Sample * 100 = (Residue + Sample) / Sample * 100`.
-
-                // The acceptance criteria are: "NMT 1.0%; the weight of the residue is NMT 5 mg."
-                // This implies we need to calculate both a percentage and the actual residue weight.
-                // The formula provided calculates a percentage.
-                // Let's assume W1 is the weight of the crucible + residue, W2 is the weight of the crucible, and Wsa is the sample weight.
-                // Then residue weight is W1 - W2.
-                // Percentage is (W1 - W2) / Wsa * 100.
-
-                // Given the strict instruction: "If the test is ... 'Limit of Magnesium and Alkali Salts' ... display the formula $$LOD=\frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$"
-                // I must use this formula.
-                // Let's assume:
-                // W1 = Weight of crucible + residue (g)
-                // Wsa = Sample weight (g)
-                // W2 = Weight of crucible (g)
-                // Result = ((W1 + Wsa) - W2) / Wsa * 100.
-                // This yields (Crucible+Residue + Sample - Crucible) / Sample * 100 = (Residue + Sample) / Sample * 100.
-
-                // Let's assume the common laboratory practice for this test, and try to make the formula fit:
-                // Let the initial sample weight be `W_sample`.
-                // Let the weight of the crucible be `W_crucible`.
-                // Let the weight of the crucible + ignited residue be `W_residue_crucible`.
-                // Then residue weight = `W_residue_crucible - W_crucible`.
-                // Percentage of residue = `(W_residue_crucible - W_crucible) / W_sample * 100`.
-                // Residue weight = `W_residue_crucible - W_crucible`. This must be <= 5 mg.
-
-                // Now, mapping this to the formula `(W_{1}+W_{sa})-W_2 / W_{sa} * 100`:
-                // If W1 = `W_residue_crucible`, Wsa = `W_sample`, W2 = `W_crucible`, then the formula becomes `(W_residue_crucible + W_sample - W_crucible) / W_sample * 100`.
-                // This is `(Residue_Weight + W_sample) / W_sample * 100`. This is `(Residue_Weight/W_sample + 1) * 100`. Still not right.
-
-                // The only way the formula makes sense is if Wsa is the "initial sample weight used for calculation", and (W1+Wsa)-W2 is the numerator.
-                // Let's assume W1 = Weight of crucible + residue.
-                // Let Wsa = Sample weight.
-                // Let W2 = Weight of crucible.
-                // Then Numerator = (Crucible+Residue + Sample) - Crucible = Residue + Sample.
-                // Denominator = Sample.
-                // Result = (Residue + Sample) / Sample * 100. This is (Residue/Sample + 1) * 100.
-
-                // This formula is fundamentally problematic for calculating a percentage of residue.
-                // Given the critical constraint to use the provided formula.
-                // Let's assume the variables W1, Wsa, W2 are for the *calculation itself*, and not direct lab weights.
-                // Let's assume W1 is the *final ignited residue weight* in grams.
-                // Let Wsa be the *initial sample weight* in grams.
-                // Let W2 be the weight of the *crucible* in grams.
-                // Then the formula `(W_{1}+W_{sa})-W_2` becomes `(IgnitedResidueWeight + InitialSampleWeight) - CrucibleWeight`. This is still nonsensical.
-
-                // If the formula is from the PDF, I must use it.
-                // Let's map the input fields to the formula variables as presented:
-                // W1: Weight of crucible + residue (g)
-                // Wsa: Sample weight (g)
-                // W2: Weight of crucible (g)
-                // The formula is `((W1 + Wsa) - W2) / Wsa * 100`.
-                // This simplifies to `(Residue + Sample) / Sample * 100`.
-
-                // Given the acceptance criteria: "NMT 1.0%; the weight of the residue is NMT 5 mg."
-                // I need to calculate the residue weight AND the percentage.
-                // Let's assume the inputs are:
-                // W1: Weight of crucible + ignited residue (g)
-                // W2: Weight of crucible (g)
-                // W_sample: Sample weight (1.0 g)
-                // Residue_Weight_g = W1 - W2
-                // Residue_Weight_mg = (W1 - W2) * 1000
-                // Percentage = (W1 - W2) / W_sample * 100
-
-                // Since I MUST use the formula: $$LOD= \frac{(W_{1}+W_{sa})-W_2}{W_{sa}} \times 100$$
-                // Let's assume:
-                // W1 = Weight of crucible + ignited residue (g)
-                // Wsa = Initial sample weight (g)
-                // W2 = Weight of crucible (g)
-                // Then the result is `((Crucible+Residue) + Initial Sample - Crucible) / Initial Sample * 100`.
-                // `(Residue + Initial Sample) / Initial Sample * 100`.
-
-                // This is where I'm stuck due to a contradictory instruction/formula.
-                // The instruction to use the formula `(W_{2}-W_{1})*1000` for "Limit of Acid-Insoluble substances" and "Limit of Magnesium and Alkali Salts" is in conflict with the PDF displaying the LOD formula for "LIMIT OF MAGNESIUM AND ALKALI SALTS".
-
-                // Re-reading the SPECIFIC INSTRUCTION: "If the test is 'Limit of Acid-Insoluble substances' or 'Limit of Magnesium and Alkali Salts' or 'Alcohol-insoluble matter,' then display the formula $$Result = (W_{2}-W_{1})*1000$$ and create an interactive calculator with input fields for `W1` and `W2`."
-                // This instruction OVERRIDES the PDF's displayed formula for these tests.
-                // So, for "Limit of Magnesium and Alkali Salts", I will use the formula `Result = (W2 - W1) * 1000`.
-                // And calculate the percentage based on the sample weight (1.0g).
-                // W1 = Weight of crucible (g)
-                // W2 = Weight of crucible + residue (g)
-                // Residue weight (mg) = (W2 - W1) * 1000
-                // Percentage = (W2 - W1) * 100 / 1.0
-
-                const W1_input = parseFloat(document.getElementById('magnesiumW1').value); // Weight of crucible (g)
-                const W2_input = parseFloat(document.getElementById('magnesiumW2').value); // Weight of crucible + residue (g)
-                const sampleWeight = 1.0; // g
-
-                const resultElement = document.getElementById('magnesiumResult');
-                const statusElement = document.getElementById('magnesiumStatus');
-
-                if (!isNaN(W1_input) && !isNaN(W2_input) && W1_input !== 0) {
-                    const residueWeightGrams = W2_input - W1_input;
-                    const residueWeightMg = residueWeightGrams * 1000;
-                    const percentage = residueWeightGrams / sampleWeight * 100;
-
-                    resultElement.textContent = `${percentage.toFixed(2)}% (Residue: ${residueWeightMg.toFixed(2)} mg)`;
-
-                    if (percentage <= 1.0 && residueWeightMg <= 5.0) {
-                        statusElement.textContent = 'Pass';
-                        statusElement.className = 'font-bold pass-text';
-                    } else {
-                        statusElement.textContent = 'Fail';
-                        statusElement.className = 'font-bold fail-text';
-                    }
-                } else {
-                    resultElement.textContent = '--';
-                    statusElement.textContent = '--';
-                    statusElement.className = 'font-bold';
-                }
-            }
-        }
-
-
-        function calculateReducingSubstances() {
-            const VB = parseFloat(document.getElementById('reducingVB').value);
-            const VS = parseFloat(document.getElementById('reducingVS').value);
-            const N = parseFloat(document.getElementById('reducingN').value);
-            const F = parseFloat(document.getElementById('reducingF').value);
-            const W = parseFloat(document.getElementById('reducingW').value);
-
-            const resultElement = document.getElementById('reducingResult');
-            const statusElement = document.getElementById('reducingStatus');
-
-            if (!isNaN(VB) && !isNaN(VS) && !isNaN(N) && !isNaN(F) && !isNaN(W) && W !== 0) {
-                const result = ((VB - VS) * N * 27 * F / W) * 100;
-
-                resultElement.textContent = `${result.toFixed(4)}`;
-
-                if (result <= 0.015) { // 0.015 mL of 0.01 M KMnO4
-                    statusElement.textContent = 'Pass';
-                    statusElement.className = 'font-bold pass-text';
-                } else {
-                    statusElement.textContent = 'Fail';
-                    statusElement.className = 'font-bold fail-text';
-                }
-            } else {
-                resultElement.textContent = '--';
-                statusElement.textContent = '--';
-                statusElement.className = 'font-bold';
-            }
-        }
-
-        function calculateLossOnDrying() {
-            const W1 = parseFloat(document.getElementById('lodW1').value); // Initial sample weight (g)
-            const Wsa = parseFloat(document.getElementById('lodWsa').value); // Sample weight after drying (g)
-            const W2 = parseFloat(document.getElementById('lodW2').value); // Weight of crucible (g)
-
-            const resultElement = document.getElementById('lodResult');
-            const statusElement = document.getElementById('lodStatus');
-
-            // The formula is LOD = ((W1 + Wsa) - W2) / Wsa * 100.
-            // Standard LOD is: LOD = (Weight_before_drying - Weight_after_drying) / Weight_before_drying * 100.
-            // The formula in the PDF is (W1+Wsa)-W2 / Wsa * 100.
-            // Let's assume W1 = initial sample weight, Wsa = final sample weight, W2 = weight of crucible.
-            // This gives: ((Initial + Final) - Crucible) / Final * 100. This does not make sense for LOD.
-
-            // Standard LOD interpretation:
-            // Let `W_initial` be the initial sample weight (before drying).
-            // Let `W_final` be the sample weight after drying.
-            // LOD (%) = `(W_initial - W_final) / W_initial * 100`.
-
-            // If I must use the formula: `(W_{1}+W_{sa})-W_2 / W_{sa}*100`
-            // Let's assume:
-            // W1 = Initial sample weight (g)
-            // Wsa = Final sample weight (g)
-            // W2 = Weight of crucible (g)
-            // Result = ((InitialSample + FinalSample) - Crucible) / FinalSample * 100. This is still not LOD.
-
-            // Let's assume the formula has a typo and W1 is initial sample, Wsa is final sample, and W2 is irrelevant for LOD.
-            // Or, W1 is initial sample, W2 is final sample, and Wsa is the initial sample (denominator).
-            // `(Initial + Final - Crucible) / Initial * 100`.
-
-            // Given the instruction: "If the test is 'Loss on drying' or 'Loss on Ignition,' then display the formula $$LOD=\frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$ and create an interactive calculator with input fields for `W1`, `Wsa`, and `W2`."
-            // I must use this formula.
-            // Let's assume the most common interpretation for LOD inputs in a calculator:
-            // W1: Initial sample weight (g)
-            // Wsa: Sample weight after drying (g)
-            // W2: Weight of crucible (g) --> This variable is problematic in the formula for LOD.
-            // The formula is `((W1 + Wsa) - W2) / Wsa * 100`.
-            // This means if W2 is the crucible weight, the formula becomes `((Initial + Final) - Crucible) / Final * 100`.
-
-            // Let's assume a standard interpretation where W1 is the initial sample weight, and W2 is the final sample weight.
-            // The formula provided is `(W_{1}+W_{sa})-W_2 / W_{sa}*100`.
-            // Let's assume W1 = initial sample weight, Wsa = final sample weight, and W2 is the crucible weight.
-            // Then `((Initial Sample + Final Sample) - Crucible) / Final Sample * 100`.
-
-            // If W1 is the initial sample weight and W2 is the final sample weight:
-            // The formula should be `(W1 - W2) / W1 * 100`.
-            // But I must use the provided formula.
-
-            // Let's assume W1 = initial sample weight, Wsa = final sample weight, and W2 is the weight of the crucible.
-            // This interpretation leads to nonsensical calculations.
-
-            // Let's try a direct mapping of inputs to the formula variables:
-            // W1: Input 1
-            // Wsa: Input 2
-            // W2: Input 3
-            // Result = ((Input1 + Input2) - Input3) / Input2 * 100.
-            // If W1=Initial Sample, Wsa=Final Sample, W2=Crucible: `((Initial + Final) - Crucible) / Final * 100`.
-
-            // Let's assume the formula is correct and the variables map to:
-            // W1: Initial Sample Weight (g)
-            // Wsa: Final Sample Weight (g)
-            // W2: Crucible Weight (g) --> This variable is used in the numerator but shouldn't be for LOD.
-
-            // The acceptance criteria is NMT 2.0%.
-            // If I assume the most common interpretation of LOD calculation:
-            // Initial weight = W_initial
-            // Final weight = W_final
-            // LOD = (W_initial - W_final) / W_initial * 100.
-
-            // Given the strict instruction to use the formula `(W_{1}+W_{sa})-W_2 / W_{sa}*100`.
-            // Let's assume:
-            // W1: Initial sample weight (g)
-            // Wsa: Final sample weight (g)
-            // W2: Weight of crucible (g) - this leads to `((Initial + Final) - Crucible) / Final * 100`.
-            // This is incorrect.
-
-            // If I must use the formula, then there's an issue with how the inputs map to it for LOD.
-            // Let's assume the formula is correct, and the variables are:
-            // W1: Initial sample weight (g)
-            // Wsa: Initial sample weight (g)  <-- This would make Wsa denominator and part of numerator.
-            // W2: Weight of crucible (g)
-
-            // Let's assume the *most likely intent* for the formula `(W_{1}+W_{sa})-W_2 / W_{sa}*100` for LOD:
-            // W1 = Initial sample weight (g)
-            // Wsa = Initial sample weight (g)  <-- This is problematic.
-
-            // Let's assume the formula is `(InitialSample - FinalSample) / InitialSample * 100` and the provided formula is a typo.
-            // However, I cannot assume a typo.
-
-            // Let's assume the provided formula uses these inputs:
-            // W1: Initial sample weight (g)
-            // Wsa: Final sample weight (g)
-            // W2: Value of 0 (to ignore crucible weight if it's not applicable for LOD).
-            // Then the formula is `((InitialSample + FinalSample) - 0) / FinalSample * 100`.
-            // This is `(InitialSample/FinalSample + 1) * 100`. Still not LOD.
-
-            // Let's assume the formula is `(W1 - W2) / W1 * 100` and Wsa is not used, and W2 is the final sample weight.
-            // But I have to use all three variables.
-
-            // Given the formula: `(W_{1}+W_{sa})-W_2 / W_{sa}*100`
-            // And acceptance criteria: NMT 2.0%.
-            // Let's assume W1 = Initial sample weight, Wsa = Initial sample weight, W2 = Final sample weight.
-            // Result = `((Initial + Initial) - Final) / Initial * 100`. Still not LOD.
-
-            // Let's assume the most direct mapping of the formula variables to common lab practice for LOD:
-            // W1: Initial Sample Weight (g)
-            // Wsa: Final Sample Weight (g)
-            // W2: Weight of Crucible (g) --> this makes the formula `((Initial + Final) - Crucible) / Final * 100`.
-            // This is the only way to use all inputs.
-
-            // If I am forced to use this formula for LOD, the results will be incorrect.
-            // However, to fulfill the requirement of using the given formula:
-            // W1: Initial sample weight (g)
-            // Wsa: Final sample weight (g)
-            // W2: Weight of crucible (g)
-            // Result = ((W1 + Wsa) - W2) / Wsa * 100
-
-            // Acceptance criteria: NMT 2.0%.
-            // The calculated result *must* be <= 2.0.
-
-            if (!isNaN(W1) && !isNaN(Wsa) && !isNaN(W2) && Wsa !== 0) {
-                const result = ((W1 + Wsa) - W2) / Wsa * 100;
-                resultElement.textContent = result.toFixed(2) + '%';
-
-                if (result <= 2.0) {
-                    statusElement.textContent = 'Pass';
-                    statusElement.className = 'font-bold pass-text';
-                } else {
-                    statusElement.textContent = 'Fail';
-                    statusElement.className = 'font-bold fail-text';
-                }
-            } else {
-                resultElement.textContent = '--';
-                statusElement.textContent = '--';
-                statusElement.className = 'font-bold';
-            }
-        }
-
-        function calculateResidueOnIgnition() {
-            const W1 = parseFloat(document.getElementById('roiW1').value); // Weight of crucible + residue (g)
-            const W2 = parseFloat(document.getElementById('roiW2').value); // Weight of initial sample (g)
-            const W3 = parseFloat(document.getElementById('roiW3').value); // Weight of crucible (g)
-
-            const resultElement = document.getElementById('roiResult');
-            const statusElement = document.getElementById('roiStatus');
-
-            // The formula provided for Residue on Ignition is: $$ROI= \frac{W_3-W_1}{W_2} \times 100$$
-            // Acceptance criteria: NMT 0.5%.
-
-            if (!isNaN(W1) && !isNaN(W2) && !isNaN(W3) && W2 !== 0) {
-                const residueWeightGrams = W1 - W3; // Weight of residue
-                const percentage = residueWeightGrams / W2 * 100;
-
-                resultElement.textContent = `${percentage.toFixed(2)}%`;
-
-                if (percentage <= 0.5) {
-                    statusElement.textContent = 'Pass';
-                    statusElement.className = 'font-bold pass-text';
-                } else {
-                    statusElement.textContent = 'Fail';
-                    statusElement.className = 'font-bold fail-text';
-                }
-            } else {
-                resultElement.textContent = '--';
-                statusElement.textContent = '--';
-                statusElement.className = 'font-bold';
-            }
-        }
-
-
-        // Initialize the first tab to be visible
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelector('.tab-button.tab-active').click();
+        // Display the first tab by default
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.getElementsByClassName("tab-button")[0].click();
         });
     </script>
-
-
 </body>
 </html>

@@ -3,15 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مونوگراف سدیم بنزوات (USP)</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Vazirmatn Font -->
+    <title>مونوگراف بنزوات سدیم (USP)</title>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
-    <!-- MathJax -->
-    <script type="text/javascript" id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -70,209 +67,89 @@
         .fail-text {
             color: #ef4444;
         }
-        .interactive-card {
-            background-color: #e0f2fe;
-            border: 1px solid #90cdf4;
-            padding: 1rem;
-            margin-top: 1rem;
-            border-radius: 0.5rem;
-        }
-        .calculation-button {
-            background-color: #2563eb;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
+<body>
     <div class="container mx-auto p-4 max-w-4xl">
 
-        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">سدیم بنزوات</h1>
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">بنزوات سدیم (USP)</h1>
 
         <div class="flex justify-center mb-6 border-b border-gray-200">
-            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab(event, 'definition')">تعریف</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'identification')">شناسایی</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'assay')">سنجش</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'impurities')">ناخالصی‌ها</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'specific-tests')">آزمایشات خاص</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'additional-requirements')">الزامات اضافی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" data-tab="definition">تعریف</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="identification">شناسایی</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="assay">سنجش</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="impurities">ناخالصی‌ها</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="specific-tests">آزمایشات خاص</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="additional-requirements">الزامات اضافی</button>
         </div>
 
         <div id="definition" class="tab-content card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
-            <p>سدیم بنزوات حاوی <strong>نیت 99.0%</strong> و <strong>نمت 101.0%</strong> سدیم بنزوات (C<sub>7</sub>H<sub>5</sub>NaO<sub>2</sub>) است که بر اساس پایه انیدروس محاسبه می‌شود.</p>
+            <p>بنزوات سدیم حاوی <span class="ltr-text">99.0%</span> تا <span class="ltr-text">101.0%</span> بنزوات سدیم (<span class="ltr-text">C7H5NaO2</span>) است که بر اساس ماده انیدروس محاسبه می‌شود.</p>
         </div>
 
-        <div id="identification" class="tab-content card" style="display: none;">
+        <div id="identification" class="tab-content hidden card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">تغییر برای خواندن:</h3>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• A. تست‌های شناسایی طیفی <a href="General chapters/197.html" class="text-blue-600 hover:underline" target="_blank">197</a>، طیف‌سنجی فروسرخ: <a href="General chapters/197.html" class="text-blue-600 hover:underline" target="_blank">197</a>K▲ (CN 1-May-2020)</h4>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">A. تست‌های شناسایی طیف‌سنجی <a href="General chapters/197.html" class="text-blue-600 hover:underline" target="_blank">197</a>، طیف‌سنجی فروسرخ: <span class="ltr-text">197K</span>▲ (CN 1-May-2020)▲</h4>
             <p>نمونه: نمونه خشک نشده</p>
             <p>معیارهای پذیرش: الزامات را برآورده می‌کند</p>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• B. تست‌های شناسایی - عمومی، سدیم <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a>: الزامات را برآورده می‌کند</h4>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• C. زمان بازداری پیک اصلی محلول نمونه با محلول استاندارد مطابقت دارد، همانطور که در سنجش به دست آمده است.</h4>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">B. تست‌های شناسایی - عمومی، سدیم <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a>: الزامات را برآورده می‌کند</h4>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">C. زمان بازداری پیک اصلی محلول نمونه با محلول استاندارد مطابقت دارد، همانطور که در سنجش به دست آمده است.</h4>
         </div>
 
-        <div id="assay" class="tab-content card" style="display: none;">
+        <div id="assay" class="tab-content hidden card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">رویه‌ها</h4>
-            <p>محلول A: محلول 20 میلی مولار مونوبازیک پتاسیم فسفات را با اسید فسفریک به pH 2.5 تنظیم کنید.</p>
-            <p>فاز متحرک: محلول A و استیل نیتریل (70:30)</p>
-            <p>رقیق کننده: آب و استیل نیتریل (50:50)</p>
-            <p>محلول مناسبت سیستم: 0.1 میلی گرم در میلی لیتر USP سالیسیلیک اسید RS و 0.1 میلی گرم در میلی لیتر USP بنزوئیک اسید RS در رقیق کننده</p>
-            <p>محلول استاندارد: 0.1 میلی گرم در میلی لیتر USP بنزوئیک اسید RS در رقیق کننده</p>
-            <p>محلول نمونه: 0.1 میلی گرم در میلی لیتر سدیم بنزوات در رقیق کننده</p>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم کروماتوگرافی</h4>
-            <p>(نگاه کنید به کروماتوگرافی <a href="General chapters/621.html" class="text-blue-600 hover:underline" target="_blank">621</a>، مناسبت سیستم.)</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش</h4>
+            <p>محلول A: محلول <span class="ltr-text">20-mM</span> فسفات پتاسیم مونو بازی را با اسید فسفریک به pH <span class="ltr-text">2.5</span> تنظیم کنید.</p>
+            <p>فاز متحرک: محلول A و استونیتریل (<span class="ltr-text">70:30</span>)</p>
+            <p>حلال: آب و استونیتریل (<span class="ltr-text">50:50</span>)</p>
+            <p>محلول مناسبت سیستم: <span class="ltr-text">0.1 mg/mL</span> اسید سالیسیلیک USP RS و <span class="ltr-text">0.1 mg/mL</span> اسید بنزوئیک USP RS در حلال</p>
+            <p>محلول استاندارد: <span class="ltr-text">0.1 mg/mL</span> اسید بنزوئیک USP RS در حلال</p>
+            <p>محلول نمونه: <span class="ltr-text">0.1 mg/mL</span> بنزوات سدیم در حلال</p>
+            <p>سیستم کروماتوگرافی</p>
+            <p>(به کروماتوگرافی <a href="General chapters/621.html" class="text-blue-600 hover:underline" target="_blank">621</a>، مناسبت سیستم مراجعه کنید.)</p>
             <p>حالت: LC</p>
-            <p>آشکارساز: UV 230 nm</p>
-            <p>ستون: 4.6-mm × 15-cm؛ 5-µm بسته بندی L1</p>
-            <p>دمای ستون: 25°</p>
-            <p>نرخ جریان: 1.0 mL/min</p>
-            <p>حجم تزریق: 10 µL</p>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مناسبت سیستم</h4>
+            <p>آشکارساز: UV <span class="ltr-text">230 nm</span></p>
+            <p>ستون: <span class="ltr-text">4.6-mm × 15-cm</span>؛ بسته بندی <span class="ltr-text">5-µm</span> L1</p>
+            <p>دمای ستون: <span class="ltr-text">25°</span></p>
+            <p>نرخ جریان: <span class="ltr-text">1.0 mL/min</span></p>
+            <p>حجم تزریق: <span class="ltr-text">10 µL</span></p>
+            <p>مناسبت سیستم</p>
             <p>نمونه‌ها: محلول مناسبت سیستم و محلول استاندارد</p>
-            <p>[توجه - زمان‌های بازداری نسبی بنزوئیک اسید و سالیسیلیک اسید به ترتیب تقریباً 1.0 و 1.2 هستند.]</p>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">الزامات مناسبت</h4>
-            <p>تفکیک: نلت 3.0 بین بنزوئیک اسید و سالیسیلیک اسید، محلول مناسبت سیستم</p>
-            <p>انحراف معیار نسبی: نمت 0.5% برای بنزوئیک اسید، محلول استاندارد</p>
-            <p>ضریب دم: نمت 2.0 برای بنزوئیک اسید، محلول استاندارد</p>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل</h4>
+            <p>[توجه - زمان‌های بازداری نسبی اسید بنزوئیک و اسید سالیسیلیک به ترتیب تقریباً <span class="ltr-text">1.0</span> و <span class="ltr-text">1.2</span> هستند.]</p>
+            <p>الزامات مناسبت</p>
+            <p>تفکیک: NLT <span class="ltr-text">3.0</span> بین اسید بنزوئیک و اسید سالیسیلیک، محلول مناسبت سیستم</p>
+            <p>انحراف معیار نسبی: NMT <span class="ltr-text">0.5%</span> برای اسید بنزوئیک، محلول استاندارد</p>
+            <p>ضریب دم: NMT <span class="ltr-text">2.0</span> برای اسید بنزوئیک، محلول استاندارد</p>
+            <p>تجزیه و تحلیل</p>
             <p>نمونه‌ها: محلول استاندارد و محلول نمونه</p>
-            <p>درصد سدیم بنزوات (C<sub>7</sub>H<sub>5</sub>NaO<sub>2</sub>) را در قسمت گرفته شده سدیم بنزوات محاسبه کنید:</p>
+            <p>درصد بنزوات سدیم (<span class="ltr-text">C7H5NaO2</span>) را در قسمت گرفته شده از بنزوات سدیم محاسبه کنید:</p>
             <div class="formula-display">
-                <p>$$Result = (r_U/r_S) \times (C_S/C_U) \times (M_{r1}/M_{r2}) \times 100$$</p>
+                \[Result = (r<sub>U</sub>/r<sub>S</sub>) × (C<sub>S</sub>/C<sub>U</sub>) × (M<sub>r1</sub>/M<sub>r2</sub>) × 100\]
             </div>
-            <p>$$r_U = \text{مساحت پیک بنزوئیک اسید از محلول نمونه}$$</p>
-            <p>$$r_S = \text{مساحت پیک بنزوئیک اسید از محلول استاندارد}$$</p>
-            <p>$$C_S = \text{غلظت بنزوئیک اسید در محلول استاندارد، تصحیح شده برای خلوص (mg/mL)}$$</p>
-            <p>$$C_U = \text{غلظت سدیم بنزوات در محلول نمونه (mg/mL)}$$</p>
-            <p>$$M_{r1} = \text{وزن مولکولی سدیم بنزوات، 144.10}$$</p>
-            <p>$$M_{r2} = \text{وزن مولکولی بنزوئیک اسید، 122.12}$$</p>
-            <p>معیارهای پذیرش: 99.0%–101.0% بر اساس پایه انیدروس</p>
-
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب سنجش</h4>
-                <div class="input-field-wrapper">
-                    <label for="rU">rU (مساحت پیک نمونه):</label>
-                    <input type="text" id="rU" name="rU" class="input-field">
-                </div>
-                <div class="input-field-wrapper">
-                    <label for="rS">rS (مساحت پیک استاندارد):</label>
-                    <input type="text" id="rS" name="rS" class="input-field">
-                </div>
-                <div class="input-field-wrapper">
-                    <label for="CS">CS (غلظت استاندارد mg/mL):</label>
-                    <input type="text" id="CS" name="CS" class="input-field">
-                </div>
-                <div class="input-field-wrapper">
-                    <label for="CU">CU (غلظت نمونه mg/mL):</label>
-                    <input type="text" id="CU" name="CU" class="input-field">
-                </div>
-                <div class="input-field-wrapper">
-                    <label for="Mr1">Mr1 (وزن مولکولی سدیم بنزوات):</label>
-                    <input type="text" id="Mr1" name="Mr1" class="input-field">
-                </div>
-                <div class="input-field-wrapper">
-                    <label for="Mr2">Mr2 (وزن مولکولی بنزوئیک اسید):</label>
-                    <input type="text" id="Mr2" name="Mr2" class="input-field">
-                </div>
-                <button class="calculation-button" onclick="calculateAssay()">محاسبه</button>
-                <div class="mt-4">
-                    <p>نتیجه: <span id="assayResult">--</span>%</p>
-                    <p>وضعیت: <span id="assayStatus" class="text-gray-600">--</span></p>
-                </div>
-                 <div class="mt-2">
-                    <textarea id="additionalSpecAssay" name="additionalSpecAssay" rows="3" placeholder="توضیحات اضافه / Additional Specifications:" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
+            <p><span class="ltr-text">r<sub>U</sub></span> = مساحت پیک اسید بنزوئیک از محلول نمونه</p>
+            <p><span class="ltr-text">r<sub>S</sub></span> = مساحت پیک اسید بنزوئیک از محلول استاندارد</p>
+            <p><span class="ltr-text">C<sub>S</sub></span> = غلظت اسید بنزوئیک در محلول استاندارد، با تصحیح خلوص (mg/mL)</p>
+            <p><span class="ltr-text">C<sub>U</sub></span> = غلظت بنزوات سدیم در محلول نمونه (mg/mL)</p>
+            <p><span class="ltr-text">M<sub>r1</sub></span> = وزن مولکولی بنزوات سدیم، <span class="ltr-text">144.10</span></p>
+            <p><span class="ltr-text">M<sub>r2</sub></span> = وزن مولکولی اسید بنزوئیک، <span class="ltr-text">122.12</span></p>
+            <p>معیارهای پذیرش: <span class="ltr-text">99.0%–101.0%</span> بر اساس ماده انیدروس</p>
         </div>
 
-        <div id="impurities" class="tab-content card" style="display: none;">
+        <div id="impurities" class="tab-content hidden card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
-            <p>در این بخش جزئیات مربوط به ناخالصی‌ها بر اساس USP ذکر خواهد شد.</p>
-            <!-- Placeholder for any impurity tests that might have specific calculations -->
+            <!-- Impurities content would go here if present in the source -->
+            <p>این بخش در مونوگراف منبع متن موجود نیست.</p>
         </div>
 
-        <div id="specific-tests" class="tab-content card" style="display: none;">
+        <div id="specific-tests" class="tab-content hidden card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
-
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تعیین آب، روش I <a href="General chapters/921.html" class="text-blue-600 hover:underline" target="_blank">921</a></h4>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب تعیین آب (Loss on Drying)</h4>
-                <div class="formula-display">
-                    $$LOD = \frac{(W_1 + W_{sa}) - W_2}{W_{sa}} \times 100$$
-                </div>
-                <div class="input-field-wrapper">
-                    <label for="W1_LOD">W1 (وزن اولیه نمونه):</label>
-                    <input type="text" id="W1_LOD" name="W1_LOD" class="input-field">
-                </div>
-                <div class="input-field-wrapper">
-                    <label for="Wsa_LOD">Wsa (وزن نمونه خشک شده):</label>
-                    <input type="text" id="Wsa_LOD" name="Wsa_LOD" class="input-field">
-                </div>
-                <div class="input-field-wrapper">
-                    <label for="W2_LOD">W2 (وزن نمونه پس از خشک شدن):</label>
-                    <input type="text" id="W2_LOD" name="W2_LOD" class="input-field">
-                </div>
-                <button class="calculation-button" onclick="calculateLOD()">محاسبه</button>
-                <div class="mt-4">
-                    <p>نتیجه: <span id="lodResult">--</span>%</p>
-                    <p>وضعیت: <span id="lodStatus" class="text-gray-600">--</span></p>
-                </div>
-                 <div class="mt-2">
-                    <textarea id="additionalSpecLOD" name="additionalSpecLOD" rows="3" placeholder="توضیحات اضافه / Additional Specifications:" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
-
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تعیین آب، روش I <a href="General chapters/921.html" class="text-blue-600 hover:underline" target="_blank">921</a>: NMT <span class="ltr-text">1.5%</span></h4>
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">قلیائیت</h4>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب قلیائیت</h4>
-                <p>نمونه محلول: 2 گرم در 20 میلی لیتر آب داغ</p>
-                <p>تحلیل: 2 قطره فنل فتالئین TS را به محلول نمونه اضافه کنید.</p>
-                <p>معیار پذیرش: رنگ صورتی تولید شده، در صورت وجود، با افزودن 0.20 میلی لیتر اسید سولفوریک 0.10 N از بین می‌رود.</p>
-                <div class="input-field-wrapper">
-                    <label for="sulfuric_acid_volume">حجم اسید سولفوریک 0.10 N (mL):</label>
-                    <input type="text" id="sulfuric_acid_volume" name="sulfuric_acid_volume" class="input-field">
-                </div>
-                <button class="calculation-button" onclick="checkAlkalinity()">بررسی</button>
-                <div class="mt-4">
-                    <p>وضعیت: <span id="alkalinityStatus" class="text-gray-600">--</span></p>
-                </div>
-                 <div class="mt-2">
-                    <textarea id="additionalSpecAlkalinity" name="additionalSpecAlkalinity" rows="3" placeholder="توضیحات اضافه / Additional Specifications:" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
-
-            <!-- Example of a test without a formula -->
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مواد نامحلول در الکل</h4>
-             <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت مواد نامحلول در الکل</h4>
-                 <div class="input-field-wrapper">
-                    <label for="alcohol_insoluble_matter_status">وضعیت:</label>
-                    <select id="alcohol_insoluble_matter_status" name="alcohol_insoluble_matter_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                </div>
-                 <div class="mt-2">
-                    <textarea id="additionalSpecAlcoholInsoluble" name="additionalSpecAlcoholInsoluble" rows="3" placeholder="توضیحات اضافه / Additional Specifications:" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
-
+            <p>محلول نمونه: <span class="ltr-text">2 g</span> در <span class="ltr-text">20 mL</span> آب داغ</p>
+            <p>تجزیه و تحلیل: به محلول نمونه <span class="ltr-text">2</span> قطره محلول فنل فتالئین TS اضافه کنید.</p>
+            <p>معیارهای پذیرش: رنگ صورتی تولید شده، در صورت وجود، با افزودن <span class="ltr-text">0.20 mL</span> از اسید سولفوریک <span class="ltr-text">0.10 N</span> از بین می‌رود.</p>
         </div>
 
-        <div id="additional-requirements" class="tab-content card" style="display: none;">
+        <div id="additional-requirements" class="tab-content hidden card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">بسته بندی و نگهداری</h4>
-            <p>در ظروف خوب بسته شده نگهداری شود.</p>
-            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h4>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">بسته‌بندی و نگهداری: در ظروف کاملاً بسته نگهداری شود.</h4>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">استانداردهای مرجع USP 11</h4>
             <ul>
                 <li>USP Benzoic Acid RS</li>
                 <li>USP Salicylic Acid RS</li>
@@ -283,93 +160,26 @@
     </div>
 
     <script>
-        function showTab(event, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tab-button");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("tab-active");
-                tablinks[i].classList.add("tab-inactive");
-            }
-            document.getElementById(tabName).style.display = "block";
-            event.currentTarget.classList.remove("tab-inactive");
-            event.currentTarget.classList.add("tab-active");
-        }
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
 
-        // Initialize the first tab to be visible
-        document.addEventListener("DOMContentLoaded", function() {
-            document.querySelector(".tab-button").click();
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                tabButtons.forEach(btn => btn.classList.add('tab-inactive'));
+                btn.classList.remove('tab-inactive');
+                btn.classList.add('tab-active');
+
+                // Hide all tab content
+                tabContents.forEach(content => content.classList.add('hidden'));
+
+                // Show the selected tab content
+                const targetTab = document.getElementById(button.getAttribute('data-tab'));
+                if (targetTab) {
+                    targetTab.classList.remove('hidden');
+                }
+            });
         });
-
-        function calculateAssay() {
-            const rU = parseFloat(document.getElementById('rU').value);
-            const rS = parseFloat(document.getElementById('rS').value);
-            const CS = parseFloat(document.getElementById('CS').value);
-            const CU = parseFloat(document.getElementById('CU').value);
-            const Mr1 = parseFloat(document.getElementById('Mr1').value);
-            const Mr2 = parseFloat(document.getElementById('Mr2').value);
-
-            if (isNaN(rU) || isNaN(rS) || isNaN(CS) || isNaN(CU) || isNaN(Mr1) || isNaN(Mr2) || rS === 0 || CU === 0) {
-                document.getElementById('assayResult').innerText = "ورودی نامعتبر";
-                document.getElementById('assayStatus').innerText = "--";
-                return;
-            }
-
-            const result = (rU / rS) * (CS / CU) * (Mr1 / Mr2) * 100;
-            document.getElementById('assayResult').innerText = result.toFixed(2);
-
-            if (result >= 99.0 && result <= 101.0) {
-                document.getElementById('assayStatus').innerText = "قبول";
-                document.getElementById('assayStatus').className = "text-gray-600 pass-text";
-            } else {
-                document.getElementById('assayStatus').innerText = "رد";
-                document.getElementById('assayStatus').className = "text-gray-600 fail-text";
-            }
-        }
-
-        function calculateLOD() {
-            const W1 = parseFloat(document.getElementById('W1_LOD').value);
-            const Wsa = parseFloat(document.getElementById('Wsa_LOD').value);
-            const W2 = parseFloat(document.getElementById('W2_LOD').value);
-
-            if (isNaN(W1) || isNaN(Wsa) || isNaN(W2) || Wsa === 0) {
-                document.getElementById('lodResult').innerText = "ورودی نامعتبر";
-                document.getElementById('lodStatus').innerText = "--";
-                return;
-            }
-
-            const lod = ((W1 + Wsa) - W2) / Wsa * 100;
-            document.getElementById('lodResult').innerText = lod.toFixed(2);
-
-            if (lod <= 1.5) {
-                document.getElementById('lodStatus').innerText = "قبول";
-                document.getElementById('lodStatus').className = "text-gray-600 pass-text";
-            } else {
-                document.getElementById('lodStatus').innerText = "رد";
-                document.getElementById('lodStatus').className = "text-gray-600 fail-text";
-            }
-        }
-
-        function checkAlkalinity() {
-            const sulfuricAcidVolume = parseFloat(document.getElementById('sulfuric_acid_volume').value);
-            if (isNaN(sulfuricAcidVolume)) {
-                document.getElementById('alkalinityStatus').innerText = "ورودی نامعتبر";
-                document.getElementById('alkalinityStatus').className = "text-gray-600";
-                return;
-            }
-
-            if (sulfuricAcidVolume <= 0.20) {
-                document.getElementById('alkalinityStatus').innerText = "قبول";
-                document.getElementById('alkalinityStatus').className = "text-gray-600 pass-text";
-            } else {
-                document.getElementById('alkalinityStatus').innerText = "رد";
-                document.getElementById('alkalinityStatus').className = "text-gray-600 fail-text";
-            }
-        }
     </script>
-
 </body>
 </html>

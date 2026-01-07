@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف سیترات آمونیوم فریک (USP)</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Vazirmatn Font -->
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
-    <!-- MathJax -->
-    <script type="text/javascript" id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -70,694 +67,133 @@
         .fail-text {
             color: #ef4444;
         }
-        .interactive-card {
-            background-color: #e0f2fe;
-            border: 1px solid #90cdf4;
-            padding: 1rem;
-            margin-top: 1rem;
-            border-radius: 0.5rem;
-        }
-        .calculation-button {
-            background-color: #2563eb;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
+<body>
     <div class="container mx-auto p-4 max-w-4xl">
+
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">سیترات آمونیوم فریک</h1>
 
         <div class="flex justify-center mb-6 border-b border-gray-200">
-            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="openTab(event, 'Definition')">تعریف</button>
-            <button class="tab-button py-2 px-4 border-b-2" onclick="openTab(event, 'Identification')">شناسایی</button>
-            <button class="tab-button py-2 px-4 border-b-2" onclick="openTab(event, 'Assay')">سنجش</button>
-            <button class="tab-button py-2 px-4 border-b-2" onclick="openTab(event, 'Impurities')">ناخالصی‌ها</button>
-            <button class="tab-button py-2 px-4 border-b-2" onclick="openTab(event, 'SpecificTests')">آزمایشات خاص</button>
-            <button class="tab-button py-2 px-4 border-b-2" onclick="openTab(event, 'AdditionalRequirements')">الزامات اضافی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" data-tab="definition">تعریف</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="identification">شناسایی</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="assay">سنجش</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="impurities">ناخالصی‌ها</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="special-tests">آزمایشات خاص</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="additional-requirements">الزامات اضافی</button>
         </div>
 
-        <div id="Definition" class="tab-content">
+        <div id="definition" class="tab-content">
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
-                <p class="mb-3">سیترات آمونیوم فریک شامل نه کمتر از 16.5 درصد و نه بیشتر از 18.5 درصد آهن (Fe) است.</p>
+                <p class="mb-4">سیترات آمونیوم فریک حاوی نه کمتر از 16.5 درصد و نه بیشتر از 18.5 درصد آهن (Fe) است.</p>
 
                 <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری</h3>
-                <p>در ظروف دربسته و مقاوم در برابر نور، در مکانی خنک نگهداری شود.</p>
+                <p class="mb-4">در ظروف دربسته و مقاوم در برابر نور، در مکانی خنک نگهداری شود.</p>
             </div>
         </div>
 
-        <div id="Identification" class="tab-content hidden">
+        <div id="identification" class="tab-content hidden">
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">الف</h3>
-                <p class="mb-3">حدود 0.5 گرم را بسوزانید: کربن شده و باقی‌مانده اکسید آهن باقی می‌گذارد.</p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">الف</h4>
+                <p class="mb-4">حدود <span class="ltr-text">0.5</span> گرم را بسوزانید: کربن شده و باقی‌مانده اکسید آهن باقی می‌گذارد.</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">ب</h3>
-                <p class="mb-3">به 10 میلی‌لیتر محلول سیترات آمونیوم فریک (1 در 100) هیدروکسید آمونیوم 6 نرمال را قطره قطره اضافه کنید: محلول تیره‌تر می‌شود، اما رسوبی تشکیل نمی‌شود.</p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ب</h4>
+                <p class="mb-4">به <span class="ltr-text">10</span> میلی‌لیتر از محلول سیترات آمونیوم فریک (1 در <span class="ltr-text">100</span>) آمونیوم هیدروکسید <span class="ltr-text">6</span> نرمال را قطره قطره اضافه کنید: محلول تیره می‌شود، اما رسوبی تشکیل نمی‌شود.</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">ج</h3>
-                <p class="mb-3">به 5 میلی‌لیتر محلول سیترات آمونیوم فریک (1 در 100) 0.3 میلی‌لیتر پتاسیم پرمنگنات TS و 4 میلی‌لیتر مرکوری سولفات TS اضافه کرده و مخلوط را به جوش بیاورید: رسوب سفید رنگی تشکیل می‌شود.</p>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ج</h4>
+                <p class="mb-4">به <span class="ltr-text">5</span> میلی‌لیتر از محلول سیترات آمونیوم فریک (1 در <span class="ltr-text">100</span>) <span class="ltr-text">0.3</span> میلی‌لیتر پتاسیم پرمنگنات TS و <span class="ltr-text">4</span> میلی‌لیتر مرکوریک سولفات TS اضافه کرده و مخلوط را به جوش بیاورید: رسوب سفید رنگی تشکیل می‌شود.</p>
 
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیترات فریک</h4>
-                <p class="mb-3">به محلول سیترات آمونیوم فریک (1 در 100) پتاسیم فروسیانید TS اضافه کنید: رسوب آبی رنگی تشکیل نمی‌شود.</p>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">سیترات فریک</h3>
+                <p class="mb-4">به محلول سیترات آمونیوم فریک (1 در <span class="ltr-text">100</span>) پتاسیم فروسیانید TS اضافه کنید: هیچ رسوب آبی تشکیل نمی‌شود.</p>
             </div>
         </div>
 
-        <div id="Assay" class="tab-content hidden">
+        <div id="assay" class="tab-content hidden">
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
-                <p class="mb-3">حدود 1 گرم سیترات آمونیوم فریک را دقیقاً وزن کرده، به یک فلاسک مخروطی 250 میلی‌لیتری منتقل کنید و در 25 میلی‌لیتر آب و 5 میلی‌لیتر اسید کلریدریک حل کنید. 4 گرم پتاسیم یدید اضافه کنید، درپوش را بگذارید و به مدت 15 دقیقه دور از نور قرار دهید. 100 میلی‌لیتر آب اضافه کنید و ید آزاد شده را با 0.1 نرمال سدیم تیوسولفات VS تیتر کنید، با استفاده از نشاسته TS به عنوان شناساگر. یک تعیین شاهد را انجام دهید و هرگونه تصحیح لازم را اعمال کنید. هر میلی‌لیتر 0.1 نرمال سدیم تیوسولفات معادل 5.585 میلی‌گرم آهن (Fe) است.</p>
-
-                <div class="card interactive-card">
-                    <h3 class="text-lg font-semibold text-gray-700 mb-3">محاسبه سنجش</h3>
-                    <div class="mb-4">
-                        <div class="formula-display">
-                            $$ Result (mg\ Fe) = V_{S_2O_3} \times N_{S_2O_3} \times 55.85 $$
-                        </div>
-                        <p class="text-center">هر mL از 0.1 N سدیم تیوسولفات معادل 5.585 mg از آهن (Fe) است.</p>
-                    </div>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="v_s2o3_assay" class="block text-sm font-bold mb-2">حجم سدیم تیوسولفات (mL):</label>
-                            <input type="text" id="v_s2o3_assay" name="v_s2o3_assay" class="input-field">
-                        </div>
-                        <div>
-                            <label for="weight_assay" class="block text-sm font-bold mb-2">وزن سیترات آمونیوم فریک (g):</label>
-                            <input type="text" id="weight_assay" name="weight_assay" class="input-field">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateAssay()">محاسبه</button>
-                    <div class="mt-4">
-                        <p>نتیجه: <span id="result_assay"></span></p>
-                        <p>وضعیت: <span id="status_assay"></span></p>
-                    </div>
-                    <div class="mt-4">
-                        <label for="additional_spec_assay" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_assay" name="additional_spec_assay" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
-                </div>
+                <p class="mb-4">حدود <span class="ltr-text">1</span> گرم سیترات آمونیوم فریک را که دقیقاً وزن شده است، به یک فلاسک مخروطی <span class="ltr-text">250</span> میلی‌لیتری منتقل کرده، در <span class="ltr-text">25</span> میلی‌لیتر آب و <span class="ltr-text">5</span> میلی‌لیتر اسید هیدروکلریک حل کنید. <span class="ltr-text">4</span> گرم پتاسیم یدید اضافه کنید، درپوش را ببندید و در تاریکی به مدت <span class="ltr-text">15</span> دقیقه نگه دارید. <span class="ltr-text">100</span> میلی‌لیتر آب اضافه کنید و ید آزاد شده را با سدیم تیوسولفات <span class="ltr-text">0.1</span> نرمال VS تیتر کنید، با استفاده از نشاسته TS به عنوان شناساگر. تعیین مقدار مرجع را انجام دهید و هرگونه تصحیح لازم را اعمال کنید. هر میلی‌لیتر سدیم تیوسولفات <span class="ltr-text">0.1</span> نرمال معادل <span class="ltr-text">5.585</span> میلی‌گرم آهن (Fe) است.</p>
             </div>
         </div>
 
-        <div id="Impurities" class="tab-content hidden">
+        <div id="impurities" class="tab-content hidden">
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">سولفات</h3>
-                <p class="mb-3">100 میلی‌گرم را در 1 میلی‌لیتر اسید کلریدریک 2.7 نرمال حل کرده و با آب به 30 میلی‌لیتر برسانید. 3 میلی‌لیتر باریوم کلرید TS اضافه کنید، با آب به 50 میلی‌لیتر برسانید و مخلوط کنید: هر کدورت تشکیل شده پس از 10 دقیقه نباید بیشتر از کدورت تولید شده در یک محلول شاهد مشابه حاوی 0.31 میلی‌لیتر اسید سولفوریک 0.020 نرمال باشد (0.3%).</p>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">سولفات <span class="ltr-text"><a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a></span></h3>
+                <p class="mb-4"><span class="ltr-text">100</span> میلی‌گرم را در <span class="ltr-text">1</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">2.7</span> نرمال حل کرده و با آب به <span class="ltr-text">30</span> میلی‌لیتر برسانید. <span class="ltr-text">3</span> میلی‌لیتر باریم کلراید TS اضافه کرده، با آب به <span class="ltr-text">50</span> میلی‌لیتر برسانید و مخلوط کنید: هرگونه کدر شدن تشکیل شده پس از <span class="ltr-text">10</span> دقیقه نباید بیشتر از کدر شدن تولید شده در محلول شاهد مشابهی که حاوی <span class="ltr-text">0.31</span> میلی‌لیتر اسید سولفوریک <span class="ltr-text">0.020</span> نرمال است (<span class="ltr-text">0.3%</span>) باشد.</p>
 
-                <div class="card interactive-card">
-                    <h3 class="text-lg font-semibold text-gray-700 mb-3">حد سولفات</h3>
-                    <div class="mb-4">
-                        <p>توضیحات: کدورت پس از 10 دقیقه نباید بیشتر از کدورت کنترل باشد.</p>
-                    </div>
-                    <div class="grid grid-cols-1 gap-4">
-                         <div>
-                            <label for="turbidity_sulfate" class="block text-sm font-bold mb-2">مشاهده شده:</label>
-                            <select id="turbidity_sulfate" name="turbidity_sulfate" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                                <option value=""></option>
-                                <option value="Pass">Pass</option>
-                                <option value="Fail">Fail</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="mt-4">
-                        <label for="additional_spec_sulfate" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_sulfate" name="additional_spec_sulfate" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">اکسالات</h3>
-                <p class="mb-3">1 گرم را در یک جداکننده 125 میلی‌لیتری منتقل کرده، در 10 میلی‌لیتر آب حل کنید، 2 میلی‌لیتر اسید کلریدریک اضافه کرده و به طور متوالی با یک قسمت 50 میلی‌لیتری و یک قسمت 20 میلی‌لیتری اتر استخراج کنید. عصاره‌های اتر ترکیبی را به یک بشر 150 میلی‌لیتری منتقل کرده، 10 میلی‌لیتر آب اضافه کنید و اتر را با تبخیر در حمام بخار حذف کنید. 1 قطره اسید استیک گلاسیال و 1 میلی‌لیتر محلول کلسیم استات (1 در 20) اضافه کنید: طی 5 دقیقه کدورت ایجاد نمی‌شود.</p>
-
-                <div class="card interactive-card">
-                    <h3 class="text-lg font-semibold text-gray-700 mb-3">حد اکسالات</h3>
-                    <div class="mb-4">
-                        <p>توضیحات: طی 5 دقیقه کدورت ایجاد نمی‌شود.</p>
-                    </div>
-                     <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="turbidity_oxalate" class="block text-sm font-bold mb-2">مشاهده شده:</label>
-                            <select id="turbidity_oxalate" name="turbidity_oxalate" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                                <option value=""></option>
-                                <option value="Pass">Pass</option>
-                                <option value="Fail">Fail</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="mt-4">
-                        <label for="additional_spec_oxalate" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_oxalate" name="additional_spec_oxalate" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">جیوه</h3>
-                <p class="mb-3">محلول پایه جیوه و محلول استاندارد جیوه - مطابق با روش I در بخش جیوه <a href="General chapters/261.html" class="text-blue-600 hover:underline" target="_blank">261</a> عمل کنید.</p>
-                <p class="mb-3">دستگاه تشخیص جیوه، دستگاه هوادهی، و محلول کلرید قلع - مطابق با روش IIa و IIb در بخش جیوه <a href="General chapters/261.html" class="text-blue-600 hover:underline" target="_blank">261</a> عمل کنید.</p>
-                <p class="mb-3">محلول‌های استاندارد - 0.25، 0.50، 1.0 و 3.5 میلی‌لیتر از محلول استاندارد جیوه را به چهار بطری جداگانه با درپوش شیشه‌ای، مانند بطری‌های اکسیژن مصرفی بیولوژیکی، با ظرفیت حدود 300 میلی‌لیتر منتقل کنید. محتویات هر بطری را با آب تا 100 میلی‌لیتر رقیق کرده و مخلوط کنید. این محلول‌ها به ترتیب معادل 2.5، 5.0، 10.0 و 35.0 نانوگرم جیوه در میلی‌لیتر هستند.</p>
-                <p class="mb-3">محلول آزمون - حدود 1.000 گرم سیترات آمونیوم فریک را دقیقاً وزن کرده، به یک بطری سانتریفیوژ 200 میلی‌لیتری با درب پیچ‌دار پوشیده شده با تفلون منتقل کنید و 5 میلی‌لیتر اسید نیتریک و 5 میلی‌لیتر اسید کلریدریک اضافه کنید. درب بطری را محکم ببندید، به مدت 1 ساعت در حمام بخار هضم کنید و بگذارید خنک شود. محلول را به طور کمی به یک بطری مناسب با درپوش شیشه‌ای منتقل کنید، با آب تا 100 میلی‌لیتر رقیق کرده و به مدت 2 دقیقه هوا را از محلول عبور دهید. یک بلانک معرف را به همین ترتیب آماده کنید.</p>
-                <p class="mb-3">روش - 5 میلی‌لیتر محلول کلرید قلع را به هر محلول اضافه کرده و بلافاصله حباب‌گیر دستگاه هوادهی را وصل کنید. جذب‌ها را مطابق دستورالعمل سازنده دستگاه دریافت کنید. یک تعیین بلانک انجام داده و هرگونه تصحیح لازم را اعمال کنید. جذب محلول‌های استاندارد را بر حسب غلظت، در میکروگرم در میلی‌لیتر، جیوه ترسیم کرده و خط راست بهینه را رسم کنید. از نمودار حاصل، غلظت، در میکروگرم در گرم، جیوه را در محلول آزمون تعیین کنید: نه بیشتر از 10 میکروگرم در گرم یافت می‌شود.</p>
-
-                <div class="card interactive-card">
-                    <h3 class="text-lg font-semibold text-gray-700 mb-3">حد جیوه</h3>
-                     <div class="mb-4">
-                        <p>توضیحات: نه بیشتر از 10 میکروگرم در گرم جیوه یافت می‌شود.</p>
-                    </div>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="mercury_ug_g" class="block text-sm font-bold mb-2">جیوه (µg/g):</label>
-                            <input type="text" id="mercury_ug_g" name="mercury_ug_g" class="input-field">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateMercuryLimit()">محاسبه</button>
-                    <div class="mt-4">
-                        <p>وضعیت: <span id="status_mercury_limit"></span></p>
-                    </div>
-                    <div class="mt-4">
-                        <label for="additional_spec_mercury" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_mercury" name="additional_spec_mercury" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">حد سرب</h3>
-                <p class="mb-3">محلول پایه استاندارد - حدود 159.8 میلی‌گرم نیترات سرب را دقیقاً وزن کرده، در 100 میلی‌لیتر آب حاوی 1 میلی‌لیتر اسید نیتریک حل کنید. با آب به 1000.0 میلی‌لیتر برسانید و مخلوط کنید.</p>
-                <p class="mb-3">محلول استاندارد - [توجه - این محلول را در روز استفاده آماده کنید.] 10.0 میلی‌لیتر محلول پایه استاندارد را به یک فلاسک حجمی 500 میلی‌لیتری منتقل کنید، با آب به حجم برسانید و مخلوط کنید. هر میلی‌لیتر حاوی معادل 2 میکروگرم سرب (Pb) است.</p>
-                <p class="mb-3">محلول آزمون - حدود 15 گرم سیترات آمونیوم فریک را دقیقاً وزن کرده، به یک فلاسک حجمی 100 میلی‌لیتری (که قبلاً با اسید نیتریک و آب شسته شده است) منتقل کنید، در مخلوطی از 50 میلی‌لیتر آب و 1 میلی‌لیتر اسید نیتریک حل کنید، با آب به حجم برسانید و مخلوط کنید.</p>
-                <p class="mb-3">روش - با استفاده از یک اسپکتروفتومتر جذب اتمی مناسب (به جذب اتمی اسپکتروسکوپی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید) مجهز به اصلاح کننده پس‌زمینه قوس دوتریوم، یک دستگاه نمایش دیجیتال و یک سر مشعل قادر به تحمل <a href="General chapters/15.html" class="text-blue-600 hover:underline" target="_blank">15</a>% محتوای جامد، یک تعیین بلانک با آب، با پیروی از دستورالعمل‌های عملیاتی سازنده، انجام دهید.</p>
-                <p class="mb-3">به طور جداگانه، قسمت‌هایی از محلول استاندارد و محلول آزمون را آسپیراسیون کرده و جذب‌ها را ثبت کنید. محتوای سرب، در میکروگرم در گرم، در قسمت سیترات آمونیوم فریک گرفته شده را با فرمول محاسبه کنید:</p>
-                <div class="formula-display">
-                    $$ Lead\ content = \frac{100(C)}{W} \times \frac{AU}{AS} $$
-                </div>
-                <p class="mb-3">که در آن C غلظت، در میکروگرم در میلی‌لیتر، سرب در محلول استاندارد است؛ W وزن، بر حسب گرم، سیترات آمونیوم فریک گرفته شده است؛ و AU و AS جذب محلول آزمون و محلول استاندارد به ترتیب هستند: نه بیشتر از 10 میکروگرم در گرم یافت می‌شود.</p>
-
-                <div class="card interactive-card">
-                    <h3 class="text-lg font-semibold text-gray-700 mb-3">حد سرب</h3>
-                    <div class="mb-4">
-                        <p>فرمول: $$ Lead\ content = \frac{100(C \times AU)}{W \times AS} $$</p>
-                        <p>C: غلظت سرب در محلول استاندارد (µg/mL)</p>
-                        <p>W: وزن سیترات آمونیوم فریک (g)</p>
-                        <p>AU: جذب محلول آزمون</p>
-                        <p>AS: جذب محلول استاندارد</p>
-                        <p>حد مجاز: نه بیشتر از 10 µg/g</p>
-                    </div>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="c_lead" class="block text-sm font-bold mb-2">C (غلظت استاندارد - µg/mL):</label>
-                            <input type="text" id="c_lead" name="c_lead" class="input-field">
-                        </div>
-                        <div>
-                            <label for="w_lead" class="block text-sm font-bold mb-2">W (وزن نمونه - g):</label>
-                            <input type="text" id="w_lead" name="w_lead" class="input-field">
-                        </div>
-                        <div>
-                            <label for="au_lead" class="block text-sm font-bold mb-2">AU (جذب آزمون):</label>
-                            <input type="text" id="au_lead" name="au_lead" class="input-field">
-                        </div>
-                        <div>
-                            <label for="as_lead" class="block text-sm font-bold mb-2">AS (جذب استاندارد):</label>
-                            <input type="text" id="as_lead" name="as_lead" class="input-field">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateLeadLimit()">محاسبه</button>
-                    <div class="mt-4">
-                        <p>نتیجه: <span id="result_lead_limit"></span></p>
-                        <p>وضعیت: <span id="status_lead_limit"></span></p>
-                    </div>
-                    <div class="mt-4">
-                        <label for="additional_spec_lead" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_lead" name="additional_spec_lead" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
-                </div>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">اگزالات</h3>
+                <p class="mb-4"><span class="ltr-text">1</span> گرم را به یک جداکننده <span class="ltr-text">125</span> میلی‌لیتری منتقل کرده، در <span class="ltr-text">10</span> میلی‌لیتر آب حل کنید، <span class="ltr-text">2</span> میلی‌لیتر اسید هیدروکلریک اضافه کنید و به طور متوالی با یک قسمت <span class="ltr-text">50</span> میلی‌لیتری و یک قسمت <span class="ltr-text">20</span> میلی‌لیتری اتر استخراج کنید. عصاره‌های اتر ترکیبی را به یک بشر <span class="ltr-text">150</span> میلی‌لیتری منتقل کرده، <span class="ltr-text">10</span> میلی‌لیتر آب اضافه کرده و اتر را با تبخیر در حمام بخار خارج کنید. <span class="ltr-text">1</span> قطره اسید استیک گلاسیال و <span class="ltr-text">1</span> میلی‌لیتر محلول کلسیم استات (1 در <span class="ltr-text">20</span>) اضافه کنید: در عرض <span class="ltr-text">5</span> دقیقه هیچ کدری نباید تولید شود.</p>
             </div>
         </div>
 
-        <div id="SpecificTests" class="tab-content hidden">
+        <div id="special-tests" class="tab-content hidden">
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">حد مواد نامحلول در اسید</h3>
-                <p class="mb-3">این بخش مربوط به آزمایشی است که در متن اصلی مشخص نشده اما فرمول آن ارائه شده است.</p>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">جیوه</h3>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول پایه جیوه و محلول استاندارد جیوه</h4>
+                <p class="mb-4">طبق روش I در جیوه <span class="ltr-text">261</span> عمل کنید.</p>
 
-                <div class="card interactive-card">
-                    <h3 class="text-lg font-semibold text-gray-700 mb-3">حد مواد نامحلول در اسید</h3>
-                    <div class="mb-4">
-                        $$ Result = (W_{2}-W_{1}) \times 1000 $$
-                        <p>W1: وزن ظرف خالی و درپوش (g)</p>
-                        <p>W2: وزن ظرف و محتویات پس از خشک شدن (g)</p>
-                    </div>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="w1_acid_insoluble" class="block text-sm font-bold mb-2">W1 (وزن ظرف خالی - g):</label>
-                            <input type="text" id="w1_acid_insoluble" name="w1_acid_insoluble" class="input-field">
-                        </div>
-                        <div>
-                            <label for="w2_acid_insoluble" class="block text-sm font-bold mb-2">W2 (وزن ظرف و محتویات پس از خشک شدن - g):</label>
-                            <input type="text" id="w2_acid_insoluble" name="w2_acid_insoluble" class="input-field">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateAcidInsoluble()">محاسبه</button>
-                    <div class="mt-4">
-                        <p>نتیجه: <span id="result_acid_insoluble"></span></p>
-                        <p>وضعیت: <span id="status_acid_insoluble"></span></p>
-                    </div>
-                    <div class="mt-4">
-                        <label for="additional_spec_acid_insoluble" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_acid_insoluble" name="additional_spec_acid_insoluble" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">دستگاه تشخیص جیوه، دستگاه هوادهی و محلول کلرید قلع</h4>
+                <p class="mb-4">طبق روش IIa و IIb در جیوه <span class="ltr-text">261</span> عمل کنید.</p>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول‌های استاندارد</h4>
+                <p class="mb-4"><span class="ltr-text">0.25</span>، <span class="ltr-text">0.50</span>، <span class="ltr-text">1.0</span> و <span class="ltr-text">3.5</span> میلی‌لیتر از محلول استاندارد جیوه را به چهار بطری جداگانه با درپوش شیشه‌ای، مانند بطری‌های تعیین اکسیژن بیولوژیکی، با ظرفیت حدود <span class="ltr-text">300</span> میلی‌لیتر منتقل کنید. محتویات هر بطری را با آب به <span class="ltr-text">100</span> میلی‌لیتر برسانید و مخلوط کنید. این محلول‌ها معادل <span class="ltr-text">2.5</span>، <span class="ltr-text">5.0</span>، <span class="ltr-text">10.0</span> و <span class="ltr-text">35.0</span> نانوگرم جیوه در هر میلی‌لیتر هستند.</p>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول آزمایشی</h4>
+                <p class="mb-4">حدود <span class="ltr-text">1.000</span> گرم سیترات آمونیوم فریک را که دقیقاً وزن شده است، به یک بطری سانتریفیوژ <span class="ltr-text">200</span> میلی‌لیتری با درپوش پیچی با پوشش تفلون منتقل کنید و <span class="ltr-text">5</span> میلی‌لیتر اسید نیتریک و <span class="ltr-text">5</span> میلی‌لیتر اسید هیدروکلریک اضافه کنید. بطری را محکم ببندید، به مدت <span class="ltr-text">1</span> ساعت در حمام بخار هضم کرده و خنک کنید. محلول را به طور کمی به یک بطری مناسب با درپوش شیشه‌ای منتقل کرده، با آب به <span class="ltr-text">100</span> میلی‌لیتر برسانید و هوا را به مدت <span class="ltr-text">2</span> دقیقه از محلول عبور دهید. محلول مرجع را به همین ترتیب آماده کنید.</p>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش</h4>
+                <p class="mb-4">به هر محلول <span class="ltr-text">5</span> میلی‌لیتر محلول کلرید قلع اضافه کرده و بلافاصله هوادهنده دستگاه هوادهی را وصل کنید. جذب‌ها را طبق دستورالعمل سازنده دستگاه به دست آورید. یک تعیین مرجع انجام دهید و هرگونه تصحیح لازم را اعمال کنید. جذب‌های محلول‌های استاندارد را در مقابل غلظت‌ها، بر حسب میکروگرم در میلی‌لیتر، جیوه ترسیم کرده و خط مستقیم بهترین برازش نقاط ترسیم شده را رسم کنید. از نمودار به دست آمده، غلظت، بر حسب میکروگرم در گرم، جیوه را در محلول آزمایشی تعیین کنید: نباید بیش از <span class="ltr-text">10</span> میکروگرم در گرم یافت شود.</p>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">محدودیت سرب</h3>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول پایه استاندارد</h4>
+                <p class="mb-4">حدود <span class="ltr-text">159.8</span> میلی‌گرم نیترات سرب را که دقیقاً وزن شده است، در <span class="ltr-text">100</span> میلی‌لیتر آب حاوی <span class="ltr-text">1</span> میلی‌لیتر اسید نیتریک حل کنید. با آب به <span class="ltr-text">1000.0</span> میلی‌لیتر برسانید و مخلوط کنید.</p>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استاندارد</h4>
+                <p class="mb-4"><span class="ltr-text">NOTE—</span> این محلول را در روز استفاده آماده کنید. <span class="ltr-text">10.0</span> میلی‌لیتر از محلول پایه استاندارد را به یک فلاسک حجمی <span class="ltr-text">500</span> میلی‌لیتری منتقل کرده، با آب به حجم برسانید و مخلوط کنید. هر میلی‌لیتر معادل <span class="ltr-text">2</span> میکروگرم سرب (Pb) است.</p>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول آزمایشی</h4>
+                <p class="mb-4">حدود <span class="ltr-text">15</span> گرم سیترات آمونیوم فریک را که دقیقاً وزن شده است، به یک فلاسک حجمی <span class="ltr-text">100</span> میلی‌لیتری (که قبلاً با اسید نیتریک و آب شسته شده است) منتقل کنید، در مخلوطی از <span class="ltr-text">50</span> میلی‌لیتر آب و <span class="ltr-text">1</span> میلی‌لیتر اسید نیتریک حل کرده، با آب به حجم برسانید و مخلوط کنید.</p>
+
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش</h4>
+                <p class="mb-4">با استفاده از یک اسپکتروفتومتر جذب اتمی مناسب (به جذب اتمی <span class="ltr-text"><a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a></span> مراجعه کنید) مجهز به تصحیح کننده پس‌زمینه قوس دوتریوم، دستگاه نمایش دیجیتال و سر مشعل قادر به تحمل <span class="ltr-text">15%</span> جامد، یک تعیین مرجع با آب، مطابق با دستورالعمل سازنده انجام دهید.</p>
+                <p class="mb-4">بخش‌هایی از محلول استاندارد و محلول آزمایشی را به طور جداگانه استنشاق کرده و جذب‌ها را ثبت کنید. محتوای سرب، بر حسب میکروگرم در گرم، در قسمت سیترات آمونیوم فریک گرفته شده را با فرمول زیر محاسبه کنید:</p>
+                <div class="formula-display">
+                    $$100 \frac{C}{W} \frac{A_U}{A_S}$$
                 </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">حد سولفات و نمک‌های قلیایی</h3>
-                <p class="mb-3">این بخش مربوط به آزمایشی است که در متن اصلی مشخص نشده اما فرمول آن ارائه شده است.</p>
-
-                <div class="card interactive-card">
-                    <h3 class="text-lg font-semibold text-gray-700 mb-3">حد سولفات و نمک‌های قلیایی</h3>
-                     <div class="mb-4">
-                        $$ Result = (W_{2}-W_{1}) \times 1000 $$
-                        <p>W1: وزن ظرف خالی و درپوش (g)</p>
-                        <p>W2: وزن ظرف و محتویات پس از خشک شدن (g)</p>
-                    </div>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="w1_sulfate_alkali" class="block text-sm font-bold mb-2">W1 (وزن ظرف خالی - g):</label>
-                            <input type="text" id="w1_sulfate_alkali" name="w1_sulfate_alkali" class="input-field">
-                        </div>
-                        <div>
-                            <label for="w2_sulfate_alkali" class="block text-sm font-bold mb-2">W2 (وزن ظرف و محتویات پس از خشک شدن - g):</label>
-                            <input type="text" id="w2_sulfate_alkali" name="w2_sulfate_alkali" class="input-field">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateSulfateAlkaliLimit()">محاسبه</button>
-                    <div class="mt-4">
-                        <p>نتیجه: <span id="result_sulfate_alkali"></span></p>
-                        <p>وضعیت: <span id="status_sulfate_alkali"></span></p>
-                    </div>
-                    <div class="mt-4">
-                        <label for="additional_spec_sulfate_alkali" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_sulfate_alkali" name="additional_spec_sulfate_alkali" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">ماده نامحلول در الکل</h3>
-                <p class="mb-3">این بخش مربوط به آزمایشی است که در متن اصلی مشخص نشده اما فرمول آن ارائه شده است.</p>
-
-                <div class="card interactive-card">
-                    <h3 class="text-lg font-semibold text-gray-700 mb-3">ماده نامحلول در الکل</h3>
-                    <div class="mb-4">
-                        $$ Result = (W_{2}-W_{1}) \times 1000 $$
-                        <p>W1: وزن ظرف خالی و درپوش (g)</p>
-                        <p>W2: وزن ظرف و محتویات پس از خشک شدن (g)</p>
-                    </div>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="w1_alcohol_insoluble" class="block text-sm font-bold mb-2">W1 (وزن ظرف خالی - g):</label>
-                            <input type="text" id="w1_alcohol_insoluble" name="w1_alcohol_insoluble" class="input-field">
-                        </div>
-                        <div>
-                            <label for="w2_alcohol_insoluble" class="block text-sm font-bold mb-2">W2 (وزن ظرف و محتویات پس از خشک شدن - g):</label>
-                            <input type="text" id="w2_alcohol_insoluble" name="w2_alcohol_insoluble" class="input-field">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateAlcoholInsoluble()">محاسبه</button>
-                    <div class="mt-4">
-                        <p>نتیجه: <span id="result_alcohol_insoluble"></span></p>
-                        <p>وضعیت: <span id="status_alcohol_insoluble"></span></p>
-                    </div>
-                    <div class="mt-4">
-                        <label for="additional_spec_alcohol_insoluble" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_alcohol_insoluble" name="additional_spec_alcohol_insoluble" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">از دست دادن در اثر خشک شدن</h3>
-                <p class="mb-3">این بخش مربوط به آزمایشی است که در متن اصلی مشخص نشده اما فرمول آن ارائه شده است.</p>
-
-                <div class="card interactive-card">
-                    <h3 class="text-lg font-semibold text-gray-700 mb-3">از دست دادن در اثر خشک شدن</h3>
-                    <div class="mb-4">
-                        $$ L.O.D. = \frac{(W_{1} + W_{sa}) - W_2}{W_{sa}} \times 100 $$
-                        <p>W1: وزن نمونه قبل از خشک شدن (g)</p>
-                        <p>Wsa: وزن نمونه خشک شده (g)</p>
-                        <p>W2: وزن نمونه پس از خشک شدن (g)</p>
-                    </div>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="w1_loss_drying" class="block text-sm font-bold mb-2">W1 (وزن نمونه قبل از خشک شدن - g):</label>
-                            <input type="text" id="w1_loss_drying" name="w1_loss_drying" class="input-field">
-                        </div>
-                        <div>
-                            <label for="wsa_loss_drying" class="block text-sm font-bold mb-2">Wsa (وزن نمونه خشک شده - g):</label>
-                            <input type="text" id="wsa_loss_drying" name="wsa_loss_drying" class="input-field">
-                        </div>
-                        <div>
-                            <label for="w2_loss_drying" class="block text-sm font-bold mb-2">W2 (وزن نمونه پس از خشک شدن - g):</label>
-                            <input type="text" id="w2_loss_drying" name="w2_loss_drying" class="input-field">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateLossDrying()">محاسبه</button>
-                    <div class="mt-4">
-                        <p>نتیجه: <span id="result_loss_drying"></span>%</p>
-                        <p>وضعیت: <span id="status_loss_drying"></span></p>
-                    </div>
-                    <div class="mt-4">
-                        <label for="additional_spec_loss_drying" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_loss_drying" name="additional_spec_loss_drying" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">باقیمانده پس از اشتعال</h3>
-                <p class="mb-3">این بخش مربوط به آزمایشی است که در متن اصلی مشخص نشده اما فرمول آن ارائه شده است.</p>
-
-                <div class="card interactive-card">
-                    <h3 class="text-lg font-semibold text-gray-700 mb-3">باقیمانده پس از اشتعال</h3>
-                     <div class="mb-4">
-                        $$ ROI = \frac{W_3 - W_1}{W_2} \times 100 $$
-                        <p>W1: وزن ظرف خالی (g)</p>
-                        <p>W2: وزن نمونه (g)</p>
-                        <p>W3: وزن ظرف و باقیمانده پس از اشتعال (g)</p>
-                    </div>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="w1_residue_ignition" class="block text-sm font-bold mb-2">W1 (وزن ظرف خالی - g):</label>
-                            <input type="text" id="w1_residue_ignition" name="w1_residue_ignition" class="input-field">
-                        </div>
-                        <div>
-                            <label for="w2_residue_ignition" class="block text-sm font-bold mb-2">W2 (وزن نمونه - g):</label>
-                            <input type="text" id="w2_residue_ignition" name="w2_residue_ignition" class="input-field">
-                        </div>
-                        <div>
-                            <label for="w3_residue_ignition" class="block text-sm font-bold mb-2">W3 (وزن ظرف و باقیمانده - g):</label>
-                            <input type="text" id="w3_residue_ignition" name="w3_residue_ignition" class="input-field">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateResidueIgnition()">محاسبه</button>
-                    <div class="mt-4">
-                        <p>نتیجه: <span id="result_residue_ignition"></span>%</p>
-                        <p>وضعیت: <span id="status_residue_ignition"></span></p>
-                    </div>
-                    <div class="mt-4">
-                        <label for="additional_spec_residue_ignition" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_residue_ignition" name="additional_spec_residue_ignition" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
-                </div>
-
-                 <h3 class="text-xl font-semibold text-blue-600 mb-2">مواد کاهنده</h3>
-                <p class="mb-3">این بخش مربوط به آزمایشی است که در متن اصلی مشخص نشده اما فرمول آن ارائه شده است.</p>
-
-                <div class="card interactive-card">
-                    <h3 class="text-lg font-semibold text-gray-700 mb-3">مواد کاهنده</h3>
-                    <div class="mb-4">
-                        $$ Result = \left[ \frac{(V_{B}-V_{S}) \times N \times 27 \times F}{W} \right] \times 100 $$
-                        <p>VB: حجم تیتراسیون نمونه (mL)</p>
-                        <p>VS: حجم تیتراسیون شاهد (mL)</p>
-                        <p>N: نرمالیته محلول تیترانت (N)</p>
-                        <p>F: فاکتور</p>
-                        <p>W: وزن نمونه (g)</p>
-                    </div>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="vb_reducing" class="block text-sm font-bold mb-2">VB (حجم تیتراسیون نمونه - mL):</label>
-                            <input type="text" id="vb_reducing" name="vb_reducing" class="input-field">
-                        </div>
-                        <div>
-                            <label for="vs_reducing" class="block text-sm font-bold mb-2">VS (حجم تیتراسیون شاهد - mL):</label>
-                            <input type="text" id="vs_reducing" name="vs_reducing" class="input-field">
-                        </div>
-                        <div>
-                            <label for="n_reducing" class="block text-sm font-bold mb-2">N (نرمالیته - N):</label>
-                            <input type="text" id="n_reducing" name="n_reducing" class="input-field">
-                        </div>
-                        <div>
-                            <label for="f_reducing" class="block text-sm font-bold mb-2">F (فاکتور):</label>
-                            <input type="text" id="f_reducing" name="f_reducing" class="input-field">
-                        </div>
-                        <div>
-                            <label for="w_reducing" class="block text-sm font-bold mb-2">W (وزن نمونه - g):</label>
-                            <input type="text" id="w_reducing" name="w_reducing" class="input-field">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateReducingSubstances()">محاسبه</button>
-                    <div class="mt-4">
-                        <p>نتیجه: <span id="result_reducing_substances"></span>%</p>
-                        <p>وضعیت: <span id="status_reducing_substances"></span></p>
-                    </div>
-                    <div class="mt-4">
-                        <label for="additional_spec_reducing" class="block text-sm font-bold mb-2">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_reducing" name="additional_spec_reducing" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
-                </div>
+                <p class="mb-4">که در آن C غلظت، بر حسب میکروگرم در میلی‌لیتر، سرب در محلول استاندارد است؛ W وزن، بر حسب گرم، سیترات آمونیوم فریک گرفته شده است؛ و AU و AS جذب‌های محلول آزمایشی و محلول استاندارد به ترتیب هستند: نباید بیش از <span class="ltr-text">10</span> میکروگرم در گرم یافت شود.</p>
             </div>
         </div>
 
-        <div id="AdditionalRequirements" class="tab-content hidden">
+        <div id="additional-requirements" class="tab-content hidden">
             <div class="card">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
-                <p class="mb-3">نقل قول ها و پیوندهای داخلی به بخش های عمومی به صورت پیوندهایی به فایل های HTML محلی نمایش داده می شوند.</p>
-                <p class="mb-3">برای پیوند به بخش عمومی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a>، از این قالب استفاده کنید.</p>
+                <p class="mb-4">اطلاعات مربوط به تاریخچه انتشار، تاریخ اعتبار رسمی و اطلاعات انتشار توسط USP.</p>
             </div>
         </div>
 
     </div>
 
     <script>
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tab-button");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" tab-active", "").replace(" tab-inactive", "");
-                tablinks[i].classList.add("tab-inactive");
-            }
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className = evt.currentTarget.className.replace(" tab-inactive", "");
-            evt.currentTarget.classList.add("tab-active");
-        }
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
 
-        // Initialize the first tab to be open
-        document.addEventListener('DOMContentLoaded', (event) => {
-            document.querySelector('.tab-button').click();
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetTab = button.getAttribute('data-tab');
+
+                // Remove active classes from all buttons and hide all content
+                tabButtons.forEach(btn => btn.classList.add('tab-inactive'));
+                tabContents.forEach(content => content.classList.add('hidden'));
+
+                // Add active class to the clicked button
+                button.classList.remove('tab-inactive');
+                button.classList.add('tab-active');
+
+                // Show the target content
+                document.getElementById(targetTab).classList.remove('hidden');
+            });
         });
-
-        // Calculation functions
-        function calculateAssay() {
-            const v_s2o3_assay = parseFloat(document.getElementById('v_s2o3_assay').value);
-            const weight_assay = parseFloat(document.getElementById('weight_assay').value);
-            const resultSpan = document.getElementById('result_assay');
-            const statusSpan = document.getElementById('status_assay');
-
-            if (!isNaN(v_s2o3_assay) && !isNaN(weight_assay) && weight_assay > 0) {
-                const iron_mg = v_s2o3_assay * 0.1 * 5.585; // Assuming 0.1 N Sodium Thiosulfate
-                const iron_percent = (iron_mg / weight_assay); // Result in mg Fe per g sample
-                const formatted_result = iron_percent.toFixed(2);
-
-                resultSpan.textContent = formatted_result + " mg Fe/g";
-                if (iron_percent >= 165 && iron_percent <= 185) { // USP limit 16.5-18.5% Fe, which is 165-185 mg Fe/g
-                    statusSpan.textContent = "Pass";
-                    statusSpan.className = "pass-text";
-                } else {
-                    statusSpan.textContent = "Fail";
-                    statusSpan.className = "fail-text";
-                }
-            } else {
-                resultSpan.textContent = "لطفاً ورودی‌های معتبر وارد کنید.";
-                statusSpan.textContent = "";
-            }
-        }
-
-        function calculateAcidInsoluble() {
-            const w1 = parseFloat(document.getElementById('w1_acid_insoluble').value);
-            const w2 = parseFloat(document.getElementById('w2_acid_insoluble').value);
-            const resultSpan = document.getElementById('result_acid_insoluble');
-            const statusSpan = document.getElementById('status_acid_insoluble');
-
-            if (!isNaN(w1) && !isNaN(w2) && w2 > w1) {
-                const result = (w2 - w1) * 1000;
-                resultSpan.textContent = result.toFixed(4);
-                 // Assuming a limit, e.g., not more than 0.1%
-                if (result <= 0.1) { // Example limit
-                    statusSpan.textContent = "Pass";
-                    statusSpan.className = "pass-text";
-                } else {
-                    statusSpan.textContent = "Fail";
-                    statusSpan.className = "fail-text";
-                }
-            } else {
-                resultSpan.textContent = "لطفاً ورودی‌های معتبر وارد کنید.";
-                statusSpan.textContent = "";
-            }
-        }
-
-        function calculateSulfateAlkaliLimit() {
-            const w1 = parseFloat(document.getElementById('w1_sulfate_alkali').value);
-            const w2 = parseFloat(document.getElementById('w2_sulfate_alkali').value);
-            const resultSpan = document.getElementById('result_sulfate_alkali');
-            const statusSpan = document.getElementById('status_sulfate_alkali');
-
-            if (!isNaN(w1) && !isNaN(w2) && w2 > w1) {
-                const result = (w2 - w1) * 1000;
-                resultSpan.textContent = result.toFixed(4);
-                // Assuming a limit, e.g., not more than 0.5%
-                if (result <= 0.5) { // Example limit
-                    statusSpan.textContent = "Pass";
-                    statusSpan.className = "pass-text";
-                } else {
-                    statusSpan.textContent = "Fail";
-                    statusSpan.className = "fail-text";
-                }
-            } else {
-                resultSpan.textContent = "لطفاً ورودی‌های معتبر وارد کنید.";
-                statusSpan.textContent = "";
-            }
-        }
-
-        function calculateAlcoholInsoluble() {
-            const w1 = parseFloat(document.getElementById('w1_alcohol_insoluble').value);
-            const w2 = parseFloat(document.getElementById('w2_alcohol_insoluble').value);
-            const resultSpan = document.getElementById('result_alcohol_insoluble');
-            const statusSpan = document.getElementById('status_alcohol_insoluble');
-
-            if (!isNaN(w1) && !isNaN(w2) && w2 > w1) {
-                const result = (w2 - w1) * 1000;
-                resultSpan.textContent = result.toFixed(4);
-                // Assuming a limit, e.g., not more than 0.2%
-                if (result <= 0.2) { // Example limit
-                    statusSpan.textContent = "Pass";
-                    statusSpan.className = "pass-text";
-                } else {
-                    statusSpan.textContent = "Fail";
-                    statusSpan.className = "fail-text";
-                }
-            } else {
-                resultSpan.textContent = "لطفاً ورودی‌های معتبر وارد کنید.";
-                statusSpan.textContent = "";
-            }
-        }
-
-        function calculateLossDrying() {
-            const w1 = parseFloat(document.getElementById('w1_loss_drying').value);
-            const wsa = parseFloat(document.getElementById('wsa_loss_drying').value);
-            const w2 = parseFloat(document.getElementById('w2_loss_drying').value);
-            const resultSpan = document.getElementById('result_loss_drying');
-            const statusSpan = document.getElementById('status_loss_drying');
-
-            if (!isNaN(w1) && !isNaN(wsa) && !isNaN(w2) && wsa > 0) {
-                const result = ((w1 + wsa) - w2) / wsa * 100;
-                resultSpan.textContent = result.toFixed(2);
-                // Assuming a limit, e.g., not more than 1.0%
-                if (result <= 1.0) { // Example limit
-                    statusSpan.textContent = "Pass";
-                    statusSpan.className = "pass-text";
-                } else {
-                    statusSpan.textContent = "Fail";
-                    statusSpan.className = "fail-text";
-                }
-            } else {
-                resultSpan.textContent = "لطفاً ورودی‌های معتبر وارد کنید.";
-                statusSpan.textContent = "";
-            }
-        }
-
-        function calculateResidueIgnition() {
-            const w1 = parseFloat(document.getElementById('w1_residue_ignition').value);
-            const w2 = parseFloat(document.getElementById('w2_residue_ignition').value);
-            const w3 = parseFloat(document.getElementById('w3_residue_ignition').value);
-            const resultSpan = document.getElementById('result_residue_ignition');
-            const statusSpan = document.getElementById('status_residue_ignition');
-
-            if (!isNaN(w1) && !isNaN(w2) && !isNaN(w3) && w2 > 0) {
-                const result = (w3 - w1) / w2 * 100;
-                resultSpan.textContent = result.toFixed(4);
-                // Assuming a limit, e.g., not more than 0.1%
-                if (result <= 0.1) { // Example limit
-                    statusSpan.textContent = "Pass";
-                    statusSpan.className = "pass-text";
-                } else {
-                    statusSpan.textContent = "Fail";
-                    statusSpan.className = "fail-text";
-                }
-            } else {
-                resultSpan.textContent = "لطفاً ورودی‌های معتبر وارد کنید.";
-                statusSpan.textContent = "";
-            }
-        }
-
-        function calculateReducingSubstances() {
-            const vb = parseFloat(document.getElementById('vb_reducing').value);
-            const vs = parseFloat(document.getElementById('vs_reducing').value);
-            const n = parseFloat(document.getElementById('n_reducing').value);
-            const f = parseFloat(document.getElementById('f_reducing').value);
-            const w = parseFloat(document.getElementById('w_reducing').value);
-            const resultSpan = document.getElementById('result_reducing_substances');
-            const statusSpan = document.getElementById('status_reducing_substances');
-
-            if (!isNaN(vb) && !isNaN(vs) && !isNaN(n) && !isNaN(f) && !isNaN(w) && w > 0) {
-                const result = ((vb - vs) * n * 27 * f / w) * 100;
-                resultSpan.textContent = result.toFixed(4);
-                // Assuming a limit, e.g., not more than 0.2%
-                if (result <= 0.2) { // Example limit
-                    statusSpan.textContent = "Pass";
-                    statusSpan.className = "pass-text";
-                } else {
-                    statusSpan.textContent = "Fail";
-                    statusSpan.className = "fail-text";
-                }
-            } else {
-                resultSpan.textContent = "لطفاً ورودی‌های معتبر وارد کنید.";
-                statusSpan.textContent = "";
-            }
-        }
-
-        function calculateMercuryLimit() {
-            const mercury_ug_g = parseFloat(document.getElementById('mercury_ug_g').value);
-            const statusSpan = document.getElementById('status_mercury_limit');
-
-            if (!isNaN(mercury_ug_g)) {
-                if (mercury_ug_g <= 10) {
-                    statusSpan.textContent = "Pass";
-                    statusSpan.className = "pass-text";
-                } else {
-                    statusSpan.textContent = "Fail";
-                    statusSpan.className = "fail-text";
-                }
-            } else {
-                statusSpan.textContent = "";
-            }
-        }
-
-        function calculateLeadLimit() {
-            const c = parseFloat(document.getElementById('c_lead').value);
-            const w = parseFloat(document.getElementById('w_lead').value);
-            const au = parseFloat(document.getElementById('au_lead').value);
-            const as = parseFloat(document.getElementById('as_lead').value);
-            const resultSpan = document.getElementById('result_lead_limit');
-            const statusSpan = document.getElementById('status_lead_limit');
-
-            if (!isNaN(c) && !isNaN(w) && !isNaN(au) && !isNaN(as) && w > 0 && as > 0) {
-                const result = (100 * c * au) / (w * as);
-                resultSpan.textContent = result.toFixed(2);
-                if (result <= 10) {
-                    statusSpan.textContent = "Pass";
-                    statusSpan.className = "pass-text";
-                } else {
-                    statusSpan.textContent = "Fail";
-                    statusSpan.className = "fail-text";
-                }
-            } else {
-                resultSpan.textContent = "لطفاً ورودی‌های معتبر وارد کنید.";
-                statusSpan.textContent = "";
-            }
-        }
-
     </script>
-
 </body>
 </html>

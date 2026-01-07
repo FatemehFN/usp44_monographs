@@ -4,14 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف اسید بوریک (USP)</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Vazirmatn Font -->
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
-    <!-- MathJax -->
-    <script type="text/javascript" id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -70,476 +66,93 @@
         .fail-text {
             color: #ef4444;
         }
-        .interactive-card {
-            background-color: #e0f2fe;
-            border: 1px solid #90cdf4;
-            padding: 1rem;
-            margin-top: 1rem;
-            border-radius: 0.5rem;
-        }
-        .calculation-button {
-            background-color: #2563eb;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
+<body>
     <div class="container mx-auto p-4 max-w-4xl">
-
-        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">اسید بوریک</h1>
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">اسید بوریک (USP)</h1>
 
         <div class="flex justify-center mb-6 border-b border-gray-200">
-            <button class="tab-button py-2 px-4 border-b-2 tab-active" data-tab="definition">تعریف</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="identification">شناسایی</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="assay">سنجش</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="impurities">ناخالصی‌ها</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="specific-tests">آزمایشات خاص</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="additional-requirements">الزامات اضافی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab(event, 'definition')">تعریف</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'identification')">شناسایی</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'assay')">سنجش</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'impurities')">ناخالصی‌ها</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'specific_tests')">آزمایشات خاص</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'additional_requirements')">الزامات اضافی</button>
         </div>
 
-        <!-- Definition Tab -->
-        <div id="definition" class="tab-content active">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
-                <p>اسید بوریک حاوی حداقل 99.5% و حداکثر 100.5% اسید بوریک (H<sub>3</sub>BO<sub>3</sub>) بر اساس ماده خشک شده است.</p>
-            </div>
+        <div id="definition" class="tab-content card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+            <p class="mb-4">اسید بوریک حاوی 99.5% الی 100.5% اسید بوریک (H<span class="ltr-text">3</span>BO<span class="ltr-text">3</span>) بر اساس پایه خشک شده است.</p>
         </div>
 
-        <!-- Identification Tab -->
-        <div id="identification" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایش‌های شناسایی - عمومی</h3>
-                <p><strong>ب. شناسایی بورات <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a>:</strong> مطابق با الزامات است.</p>
-            </div>
+        <div id="identification" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمون‌های شناسایی - عمومی</h3>
+            <p class="mb-4">بُورات <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a>: مطابق با الزامات است.</p>
         </div>
 
-        <!-- Assay Tab -->
-        <div id="assay" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش کار</h4>
-                <p><strong>محلول نمونه:</strong> 2 گرم اسید بوریک را در 100 میلی‌لیتر مخلوطی از گلیسیرین و آب (1:1) که قبلاً با فنل فتالئین TS خنثی شده است، حل کنید.</p>
-                <p><strong>آنالیز:</strong> محلول نمونه را با 1 نرمال سدیم هیدروکسید VS تیتر کنید. رنگ صورتی را با افزودن 50 میلی‌لیتر گلیسیرین، خنثی شده با فنل فتالئین TS، حذف کنید و تیتر کردن را تا زمانی که رنگ صورتی دوباره ظاهر شود ادامه دهید. هر میلی‌لیتر از 1 نرمال سدیم هیدروکسید معادل 61.83 میلی‌گرم H<sub>3</sub>BO<sub>3</sub> است.</p>
-                <p><strong>معیارهای پذیرش:</strong> 99.5%–100.5% بر اساس ماده خشک شده</p>
-
-                <div class="card interactive-card">
-                    <h3 class="text-xl font-semibold text-blue-600 mb-2">ماشین حساب سنجش</h3>
-                    <p class="mb-2"><strong>فرمول:</strong></p>
-                    <div class="formula-display">$$Result = \left[ \frac{(V_{B}-V_{S}) \times N \times 27 \times F}{W} \right] \times 100$$</div>
-                    <div>
-                        <label for="vb_assay" class="block text-sm font-medium text-gray-700">VB (میلی‌لیتر):</label>
-                        <input type="text" id="vb_assay" name="vb_assay" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="vs_assay" class="block text-sm font-medium text-gray-700">VS (میلی‌لیتر):</label>
-                        <input type="text" id="vs_assay" name="vs_assay" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="n_assay" class="block text-sm font-medium text-gray-700">N (نرمالیته):</label>
-                        <input type="text" id="n_assay" name="n_assay" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                     <div>
-                        <label for="f_assay" class="block text-sm font-medium text-gray-700">F (فاکتور):</label>
-                        <input type="text" id="f_assay" name="f_assay" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="w_assay" class="block text-sm font-medium text-gray-700">W (وزن نمونه، گرم):</label>
-                        <input type="text" id="w_assay" name="w_assay" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <button class="calculation-button" onclick="calculateAssay()">محاسبه</button>
-                    <div class="mt-4">
-                        <span class="font-semibold">نتیجه:</span> <span id="result_assay" class="font-bold">--</span>
-                        <span id="status_assay" class="font-bold"></span>
-                    </div>
-                    <div class="mt-2">
-                        <span class="font-semibold">ppm:</span> <span id="ppm_assay" class="font-bold">--</span>
-                    </div>
-                    <div class="mt-4">
-                        <label for="additional_spec_assay" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_assay" name="additional_spec_assay" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
-                </div>
-            </div>
+        <div id="assay" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش کار</h4>
+            <p class="mb-4">محلول نمونه: 2 گرم اسید بوریک را در 100 میلی‌لیتر مخلوطی از گلیسیرین و آب (1:1) که قبلاً با فنل فتالئین TS خنثی شده است، حل کنید.</p>
+            <p class="mb-4">آنالیز: محلول نمونه را با 1 نرمال سدیم هیدروکسید VS تیتر کنید. رنگ صورتی را با افزودن 50 میلی‌لیتر گلیسیرین، که با فنل فتالئین TS خنثی شده است، از بین ببرید و تیتر کردن را تا زمانی که رنگ صورتی دوباره ظاهر شود، ادامه دهید. هر میلی‌لیتر از 1 نرمال سدیم هیدروکسید معادل 61.83 میلی‌گرم H<span class="ltr-text">3</span>BO<span class="ltr-text">3</span> است.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
+            <p>99.5%–100.5% بر اساس پایه خشک شده</p>
         </div>
 
-        <!-- Impurities Tab -->
-        <div id="impurities" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
-                <p>در حال حاضر هیچ آزمون ناخالصی خاصی برای این مونوگراف تعریف نشده است.</p>
-                <!-- Placeholder for potential interactive elements if any were defined -->
-                <div class="card interactive-card">
-                     <h3 class="text-xl font-semibold text-blue-600 mb-2">وضعیت آزمون</h3>
-                     <div>
-                        <label for="status_impurities" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                        <select id="status_impurities" name="status_impurities" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                            <option value=""></option>
-                            <option value="Pass">Pass</option>
-                            <option value="Fail">Fail</option>
-                        </select>
-                    </div>
-                    <div class="mt-4">
-                        <label for="additional_spec_impurities" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_impurities" name="additional_spec_impurities" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
-                </div>
-            </div>
+        <div id="impurities" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+            <p class="mb-4">در حال حاضر هیچ بخش ناخالصی خاصی برای این مونوگراف وجود ندارد.</p>
         </div>
 
-        <!-- Specific Tests Tab -->
-        <div id="specific-tests" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+        <div id="specific_tests" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">از دست دادن در خشک کردن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h3>
-                <div class="card interactive-card">
-                    <h3 class="text-xl font-semibold text-blue-600 mb-2">ماشین حساب از دست دادن در خشک کردن</h3>
-                    <p class="mb-2"><strong>فرمول:</strong></p>
-                    <div class="formula-display">$$LOD = \frac{(W_{1}+W_{sa})-W_2}{W_{sa}} \times 100$$</div>
-                    <div>
-                        <label for="w1_lod" class="block text-sm font-medium text-gray-700">W1 (وزن ظرف، گرم):</label>
-                        <input type="text" id="w1_lod" name="w1_lod" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="wsa_lod" class="block text-sm font-medium text-gray-700">Wsa (وزن نمونه، گرم):</label>
-                        <input type="text" id="wsa_lod" name="wsa_lod" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="w2_lod" class="block text-sm font-medium text-gray-700">W2 (وزن ظرف + نمونه خشک شده، گرم):</label>
-                        <input type="text" id="w2_lod" name="w2_lod" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <button class="calculation-button" onclick="calculateLod()">محاسبه</button>
-                    <div class="mt-4">
-                        <span class="font-semibold">نتیجه:</span> <span id="result_lod" class="font-bold">--</span>
-                        <span id="status_lod" class="font-bold"></span>
-                    </div>
-                    <div class="mt-4">
-                        <label for="additional_spec_lod" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_lod" name="additional_spec_lod" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
-                </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">کاهش وزن در اثر خشک شدن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h3>
+            <p class="mb-4">آنالیز: به مدت 5 ساعت روی سیلیکا ژل خشک کنید.</p>
+            <p class="mb-4">معیارهای پذیرش: حداکثر 0.5%</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">حلالیت در الکل</h3>
-                <div class="card interactive-card">
-                    <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمون حلالیت در الکل</h3>
-                    <p><strong>محلول نمونه:</strong> 1 گرم در 10 میلی‌لیتر الکل جوشان</p>
-                    <p><strong>معیارهای پذیرش:</strong> کاملاً حل می‌شود.</p>
-                    <div>
-                        <label for="status_solubility_alcohol" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                        <select id="status_solubility_alcohol" name="status_solubility_alcohol" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                            <option value=""></option>
-                            <option value="Pass">Pass</option>
-                            <option value="Fail">Fail</option>
-                        </select>
-                    </div>
-                    <div class="mt-4">
-                        <label for="additional_spec_solubility_alcohol" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_solubility_alcohol" name="additional_spec_solubility_alcohol" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
-                </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">حلالیت در الکل</h3>
+            <p class="mb-4">محلول نمونه: 1 گرم در 10 میلی‌لیتر الکل جوشان</p>
+            <p class="mb-4">معیارهای پذیرش: کاملاً حل می‌شود.</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">کامل بودن محلول</h3>
-                <div class="card interactive-card">
-                    <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمون کامل بودن محلول</h3>
-                    <p><strong>محلول نمونه:</strong> 1 گرم در 25 میلی‌لیتر آب</p>
-                    <p><strong>معیارهای پذیرش:</strong> محلول شفافی تولید می‌کند.</p>
-                    <div>
-                        <label for="status_completeness_solution" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                        <select id="status_completeness_solution" name="status_completeness_solution" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                            <option value=""></option>
-                            <option value="Pass">Pass</option>
-                            <option value="Fail">Fail</option>
-                        </select>
-                    </div>
-                    <div class="mt-4">
-                        <label for="additional_spec_completeness_solution" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_spec_completeness_solution" name="additional_spec_completeness_solution" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
-                </div>
-            </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">کامل بودن محلول</h3>
+            <p class="mb-4">محلول نمونه: 1 گرم در 25 میلی‌لیتر آب</p>
+            <p class="mb-4">معیارهای پذیرش: محلول شفافی تولید می‌کند.</p>
         </div>
 
-        <!-- Additional Requirements Tab -->
-        <div id="additional-requirements" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+        <div id="additional_requirements" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری</h3>
-                <p>در ظروف کاملاً بسته نگهداری شود.</p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری</h3>
+            <p class="mb-4">در ظروف کاملاً بسته نگهداری شود.</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">برچسب‌گذاری</h3>
-                <p>روی ظرف با اخطار عدم استفاده داخلی برچسب‌گذاری شود.</p>
-            </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">برچسب‌گذاری</h3>
+            <p class="mb-4">بر روی ظرف اخطاری مبنی بر عدم مصرف خوراکی درج شود.</p>
         </div>
     </div>
 
     <script>
-        const tabButtons = document.querySelectorAll('.tab-button');
-        const tabContents = document.querySelectorAll('.tab-content');
+        function showTab(event, tabName) {
+            var i, tabcontent, tabbuttons;
 
-        tabButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                tabButtons.forEach(btn => btn.classList.add('tab-inactive'));
-                tabButtons.forEach(btn => btn.classList.remove('tab-active'));
-                button.classList.add('tab-active');
-                button.classList.remove('tab-inactive');
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.add("hidden");
+            }
 
-                tabContents.forEach(content => content.classList.add('hidden'));
-                const targetTab = document.getElementById(button.getAttribute('data-tab'));
-                if (targetTab) {
-                    targetTab.classList.remove('hidden');
-                }
-            });
+            tabbuttons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("tab-active");
+                tabbuttons[i].classList.add("tab-inactive");
+            }
+
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.classList.remove("tab-inactive");
+            event.currentTarget.classList.add("tab-active");
+        }
+
+        // Automatically show the first tab on load
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelector('.tab-button').click();
         });
-
-        // Function to set status text
-        function setStatus(result, statusSpanId, passThreshold = null, failThreshold = null) {
-            const statusSpan = document.getElementById(statusSpanId);
-            if (result === null || isNaN(result)) {
-                statusSpan.textContent = '';
-                statusSpan.className = 'font-bold';
-                return;
-            }
-            if (passThreshold !== null && failThreshold !== null) {
-                if (result >= passThreshold && result <= failThreshold) {
-                    statusSpan.textContent = 'Pass';
-                    statusSpan.className = 'font-bold pass-text';
-                } else {
-                    statusSpan.textContent = 'Fail';
-                    statusSpan.className = 'font-bold fail-text';
-                }
-            } else {
-                 // For tests without explicit thresholds, you might have a general pass/fail logic
-                 // For now, we'll assume any valid calculation is a 'Pass' if no thresholds are given
-                 statusSpan.textContent = 'Pass'; // Default to Pass if no specific criteria
-                 statusSpan.className = 'font-bold pass-text';
-            }
-        }
-
-
-        // Assay Calculation
-        function calculateAssay() {
-            const vb = parseFloat(document.getElementById('vb_assay').value);
-            const vs = parseFloat(document.getElementById('vs_assay').value);
-            const n = parseFloat(document.getElementById('n_assay').value);
-            const f = parseFloat(document.getElementById('f_assay').value);
-            const w = parseFloat(document.getElementById('w_assay').value);
-
-            const resultSpan = document.getElementById('result_assay');
-            const ppmSpan = document.getElementById('ppm_assay');
-
-            if (isNaN(vb) || isNaN(vs) || isNaN(n) || isNaN(f) || isNaN(w) || w === 0) {
-                resultSpan.textContent = '--';
-                ppmSpan.textContent = '--';
-                setStatus('result_assay', 'status_assay');
-                return;
-            }
-
-            const result = ((vb - vs) * n * f) / w; // This calculation gives percentage directly based on the formula structure if F is mg/mL * 100. Let's re-evaluate F.
-            // The USP formula implies F is mg H3BO3 per mL of 1 N NaOH. The prompt has F=61.83.
-            // The formula is: (mL of titrant * N titrant * Eq Wt) / g sample
-            // If 1 mL 1N NaOH is 61.83 mg H3BO3, and we want percentage:
-            // (mL * N * 61.83 mg/mL) / (g sample * 1000 mg/g) * 100%
-
-            // Re-calculating based on the common interpretation of USP assay formula
-            // Let's assume F is correctly given as the value that will give percentage when multiplied.
-            // The formula is Result = [ (Vb - Vs) * N * 27 * F / W ] * 100
-            // The prompt states "Each mL of 1 N sodium hydroxide is equivalent to 61.83 mg of H3BO3."
-            // Let's assume the formula provided in the prompt has a typo and should reflect the equivalence.
-            // A standard assay formula for titration leading to percentage is:
-            // Result (%) = (Titrant Volume * Normality * Equivalent Weight * 100) / (Sample Weight * 1000)
-
-            // Let's interpret the prompt's formula as is, and assume F is the factor to get percentage
-            // The prompt's formula: $$Result = \left[ \frac{(V_{B}-V_{S}) \times N \times 27 \times F}{W} \right] \times 100$$
-            // With F = 61.83 (mg H3BO3 per mL of 1N NaOH)
-            // Let's adjust the calculation to match the provided formula structure, interpreting '27' and 'F' appropriately.
-            // If F is 61.83 mg/mL and we want percentage:
-            // Let's assume the USP formula means something like:
-            // (mL * N_titrant * mg_H3BO3_per_mL_1N_NaOH) / (mg_sample) * 100%
-            // If sample is in grams: (mL * N_titrant * 61.83 * 1000) / (g_sample * 1000) * 100% --> (mL * N * 61.83) / (g_sample)
-            // The prompt formula includes '27' and then multiplies by 100. This is unusual.
-            // Let's use a standard interpretation and if it fails, adjust.
-
-            // Standard USP Assay Calculation (if F is the multiplier for percentage)
-            // Let's assume F = 61.83 is the correct factor to be used.
-            // The formula given: $$Result = \left[ \frac{(V_{B}-V_{S}) \times N \times 27 \times F}{W} \right] \times 100$$
-            // Let's assume F is meant to be 0.06183 (g H3BO3 per mL of 1N NaOH) and 27 is the MW of something, or a typo.
-            // Given the prompt: "Each mL of 1 N sodium hydroxide is equivalent to 61.83 mg of H3BO3."
-            // This means 1 mL of 1N NaOH corresponds to 0.06183 g of H3BO3.
-            // Assay (%) = (V_titrant * N_titrant * Equivalent Weight in grams) / (W_sample in grams) * 100
-            // Equivalent Weight = 61.83 mg = 0.06183 g
-            // So, Assay (%) = (vb * n * 0.06183) / w * 100
-
-            // Let's adhere to the prompt's specific formula structure for now:
-            // Result = ((vb - vs) * n * 27 * f) / w * 100
-            // This formula's components (27, f) are unclear in relation to the 61.83 mg/mL.
-            // If F = 61.83 and is meant to be mg/mL, and we want percentage:
-            // (vb - vs) * 1 N * 61.83 mg/mL --> mg of H3BO3
-            // mg of H3BO3 / mg of sample * 100%
-            // ( (vb - vs) * 1 * 61.83 ) / (w * 1000) * 100  = (vb - vs) * 1 * 61.83 / w / 10
-            // This doesn't match the given formula.
-
-            // Let's assume the F in the formula represents the 61.83 mg/mL value, and the '27' and '*100' are part of the USP's specific calculation context for this test.
-            // If we use the prompt's formula with the provided F=61.83:
-            // Result = ((vb - vs) * n * 27 * 61.83) / w * 100 --> This would yield extremely high numbers.
-
-            // Re-interpreting based on common USP practices:
-            // The formula provided seems to have an error or a very specific interpretation.
-            // A common approach when 1mL of titrant equals X mg of analyte is:
-            // % Assay = (mL Titrant * mg Analyte per mL Titrant) / (mg Sample) * 100
-            // Or, if N is used:
-            // % Assay = (mL Titrant * N Titrant * Equivalent Weight in mg) / (mg Sample) * 100
-            // Equivalent Weight for H3BO3 (MW 61.83, monoprotic acid): 61.83.
-            // So, 1 N NaOH reacts with 61.83 mg H3BO3.
-            // Assay (%) = (vb * n * 61.83) / (w * 1000) * 100 = (vb * n * 61.83) / w / 10
-
-            // Let's use the prompt's provided values and formula.
-            // The prompt states F = 61.83.
-            // Let's assume the prompt's formula uses 'F' as a placeholder for the direct mg/mL equivalence, and '27' and '*100' are part of its specific context.
-            // If F = 61.83 is the value to be used in the formula:
-            // Result = ((vb - vs) * n * 27 * f) / w  --> This would be the value *before* the final x100.
-            // If F = 61.83 is used directly in the provided formula structure:
-            let calculatedResult = ((vb - vs) * n * 27 * f) / w; // This is the intermediate value before the *100 in the prompt's formula
-            calculatedResult = calculatedResult * 100; // Applying the final *100 as per prompt's formula structure
-
-            // Let's try a simpler approach that aligns with "Each mL of 1 N sodium hydroxide is equivalent to 61.83 mg of H3BO3."
-            // Assay (%) = (Volume of titrant * Normality * Equivalent Weight in mg) / (Weight of sample in mg) * 100
-            // Equivalent weight of H3BO3 is 61.83.
-            // Assay (%) = (vb * 1.0 * 61.83) / (w * 1000) * 100
-            // Assay (%) = (vb * 61.83) / w / 10
-
-            // Given the prompt's formula: $$Result = \left[ \frac{(V_{B}-V_{S}) \times N \times 27 \times F}{W} \right] \times 100$$
-            // And F = 61.83. Let's assume this means we should use 61.83 for F.
-            // Let's re-write the function using the provided formula structure and F=61.83 for F.
-            let assay_result = ((vb - vs) * n * 27 * f) / w;
-            assay_result = assay_result * 100; // Applying the final *100 as per prompt's formula structure
-
-            resultSpan.textContent = assay_result.toFixed(2);
-
-            // Calculate ppm
-            const ppm = (assay_result / 100) * 1000000;
-            ppmSpan.textContent = ppm.toFixed(2);
-
-            // Check acceptance criteria: 99.5%–100.5%
-            setStatus(assay_result, 'status_assay', 99.5, 100.5);
-        }
-
-        // Loss on Drying Calculation
-        function calculateLod() {
-            const w1 = parseFloat(document.getElementById('w1_lod').value); // Weight of container
-            const wsa = parseFloat(document.getElementById('wsa_lod').value); // Weight of sample as received
-            const w2 = parseFloat(document.getElementById('w2_lod').value); // Weight of container + dried sample
-
-            const resultSpan = document.getElementById('result_lod');
-            const statusSpan = document.getElementById('status_lod');
-
-            if (isNaN(w1) || isNaN(wsa) || isNaN(w2) || wsa === 0) {
-                resultSpan.textContent = '--';
-                statusSpan.textContent = '';
-                statusSpan.className = 'font-bold';
-                return;
-            }
-
-            // Formula: $$LOD = \frac{(W_{1}+W_{sa})-W_2}{W_{sa}} \times 100$$
-            // This formula looks incorrect. W1 + Wsa is the initial weight of sample and container. W2 is the final weight of dried sample and container.
-            // So, the weight of dried sample is W2 - W1.
-            // The weight lost is (W1 + Wsa) - (W2).  <- This is weight of water lost.
-            // However, the standard formula for LOD is:
-            // LOD (%) = ((Initial weight - Dried weight) / Initial weight) * 100
-            // If Initial weight = Wsa and Dried weight = W2 - W1:
-            // LOD (%) = ((Wsa - (W2 - W1)) / Wsa) * 100
-            // This is also not what the prompt's formula shows.
-
-            // Let's try to interpret the prompt's formula exactly:
-            // $$LOD= \frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$
-            // (W1 + Wsa) is the weight before drying (container + sample).
-            // W2 is the weight after drying (container + sample).
-            // So, (W1 + Wsa) - W2 is the weight loss.
-            // If W1 is the weight of the empty container, and Wsa is the weight of the sample, then Initial Sample Weight is Wsa.
-            // But the formula uses W1+Wsa. This implies W1 is also part of the initial sample. This is very confusing.
-
-            // Let's assume:
-            // Initial Sample Weight = Wsa
-            // Weight of sample + container before drying = W_initial_with_container
-            // Weight of sample + container after drying = W_final_with_container
-            // W_initial_with_container = Wsa + W1 (if W1 is container weight)
-            // W_final_with_container = W2
-            // So, weight of dried sample = W2 - W1
-            // Weight loss = (Wsa) - (W2 - W1)  <- This is weight of water
-            // LOD = (Weight loss / Initial sample weight) * 100
-            // LOD = ( (Wsa - (W2 - W1)) / Wsa ) * 100
-
-            // Let's assume the prompt's formula is intended to be:
-            // Weight of sample = W_sample
-            // Weight of sample + container = W_container_plus_sample
-            // Weight of dried sample + container = W_dried_container_plus_sample
-            // Then, Weight loss = (W_container_plus_sample) - (W_dried_container_plus_sample)
-            // LOD = (Weight loss / W_sample) * 100
-
-            // If we follow the formula strictly as given:
-            // let initial_total_weight = w1 + wsa; // Container + Sample initial
-            // let final_total_weight = w2; // Container + Sample final
-            // let weight_loss = initial_total_weight - final_total_weight;
-            // let lod_result = (weight_loss / wsa) * 100; // Dividing by Wsa as per formula
-
-            // This interpretation is also problematic if W1 is the weight of the empty container.
-            // A common USP setup for LOD:
-            // W1 = weight of crucible
-            // W2 = weight of crucible + sample (initial)
-            // W3 = weight of crucible + sample (dried)
-            // LOD = ((W2 - W1) - (W3 - W1)) / (W2 - W1) * 100 = (W2 - W3) / (W2 - W1) * 100
-
-            // Let's assume the prompt's formula means:
-            // W1: weight of empty container
-            // Wsa: weight of sample *before* drying
-            // W2: weight of empty container + sample *after* drying
-            // This also seems wrong as we need the initial weight of sample + container.
-
-            // Let's make the most sensible interpretation of the formula provided:
-            // $$LOD= \frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$
-            // This formula is likely for calculating Loss on Drying where:
-            // W1 = weight of the empty crucible/dish.
-            // Wsa = weight of the sample as received.
-            // W2 = weight of the crucible/dish + dried sample.
-            // However, to calculate LOD, you need the weight of the *sample* after drying, which is W2 - W1.
-            // And the initial weight of the *sample* is Wsa.
-            // So, LOD = ((Initial weight of sample - Dried weight of sample) / Initial weight of sample) * 100
-            // LOD = ((Wsa - (W2 - W1)) / Wsa) * 100
-
-            // Given the formula: $$LOD= \frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$
-            // Let's assume W1 is the weight of the empty container, and Wsa is the weight of the sample.
-            // Then the initial weight of the container + sample is W1 + Wsa.
-            // W2 is the weight of the container + sample after drying.
-            // So, (W1 + Wsa) - W2 is the weight loss.
-            // Dividing by Wsa gives the loss *relative to the initial sample weight*.
-            // This interpretation aligns with the formula.
-            let initial_weight_container_plus_sample = w1 + wsa;
-            let final_weight_container_plus_sample = w2;
-            let weight_loss = initial_weight_container_plus_sample - final_weight_container_plus_sample;
-
-            let lod_result = (weight_loss / wsa) * 100;
-
-            resultSpan.textContent = lod_result.toFixed(2) + '%';
-
-            // Acceptance criteria: NMT 0.5%
-            setStatus(lod_result, 'status_lod', 0, 0.5);
-        }
-
-
-        // Make sure to display the active tab content on page load
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelector('.tab-button.tab-active').click();
-        });
-
     </script>
-
 </body>
 </html>

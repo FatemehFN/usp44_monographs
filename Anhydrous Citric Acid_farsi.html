@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف اسید سیتریک انیدروس (USP)</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Vazirmatn Font -->
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
-    <!-- MathJax -->
-    <script type="text/javascript" id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
     <style>
         body {
@@ -70,488 +67,162 @@
         .fail-text {
             color: #ef4444;
         }
-        .interactive-card {
-            background-color: #e0f2fe;
-            border: 1px solid #90cdf4;
-            padding: 1rem;
-            margin-top: 1rem;
-            border-radius: 0.5rem;
-        }
-        .calculation-button {
-            background-color: #2563eb;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
+<body>
     <div class="container mx-auto p-4 max-w-4xl">
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">اسید سیتریک انیدروس</h1>
 
         <div class="flex justify-center mb-6 border-b border-gray-200">
-            <button class="tab-button py-2 px-4 border-b-2 tab-active" data-tab="definition">تعریف</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="identification">شناسایی</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="assay">سنجش</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="impurities">ناخالصی‌ها</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="specific-tests">آزمایشات خاص</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="additional-requirements">الزامات اضافی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" data-tab="definition">تعریف</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="identification">شناسایی</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="assay">سنجش</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="impurities">ناخالصی‌ها</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="specific-tests">آزمایشات خاص</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="additional-requirements">الزامات اضافی</button>
         </div>
 
-        <!-- Definition Tab -->
-        <div id="definition" class="tab-content">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
-                <p class="mb-3">اسید سیتریک انیدروس حاوی 99.5% تا 100.5% <span class="ltr-text">C<sub>6</sub>H8O<sub>7</sub></span>، محاسبه شده بر اساس پایه انیدروس، می‌باشد.</p>
-            </div>
+        <div id="definition" class="tab-content card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+            <p>اسید سیتریک انیدروس باید حاوی <span class="ltr-text">99.5%</span> تا <span class="ltr-text">100.5%</span> <span class="ltr-text">C6H8O7</span> باشد، که بر اساس پایه انیدروس محاسبه شده است.</p>
         </div>
 
-        <!-- Identification Tab -->
-        <div id="identification" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">تست‌های شناسایی طیفی <a href="General chapters/197.html" class="text-blue-600 hover:underline" target="_blank">197</a>، طیف‌سنجی مادون قرمز: <a href="General chapters/197.html" class="text-blue-600 hover:underline" target="_blank">197</a>K</h3>
-                <p class="mb-3">ماده مورد بررسی را در دمای 105 درجه سانتی‌گراد به مدت 2 ساعت خشک کنید.</p>
-            </div>
+        <div id="identification" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تغییر به خواندن:</h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• تست‌های شناسایی طیف‌سنجی <a href="General chapters/197.html" class="text-blue-600 hover:underline" target="_blank">197</a>، طیف‌سنجی فروسرخ: 197K.▲ (CN 1-May-2020)</h4>
+            <p>ماده مورد بررسی را در دمای <span class="ltr-text">105°</span> به مدت <span class="ltr-text">2</span> ساعت خشک کنید.</p>
         </div>
 
-        <!-- Assay Tab -->
-        <div id="assay" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش انجام</h4>
-                <p class="mb-3">نمونه: 0.550 گرم اسید سیتریک انیدروس؛ وزن را با دقت ثبت کنید.</p>
-                <p class="mb-3">آنالیز: نمونه را در 50 میلی‌لیتر آب حل کنید. 0.5 میلی‌لیتر فنل فتالئین TS اضافه کنید. با 1 نرمال سدیم هیدروکسید VS تیتر کنید. هر میلی‌لیتر 1 نرمال سدیم هیدروکسید معادل 64.03 میلی‌گرم <span class="ltr-text">C<sub>6</sub>H8O<sub>7</sub></span> است.</p>
-                <p class="mb-3">معیارهای پذیرش: 99.5%–100.5% بر اساس پایه انیدروس.</p>
-
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب سنجش</h4>
-                    <p class="mb-3">فرمول:</p>
-                    <div class="formula-display">
-                        $$\text{Assay} = \frac{V_{\text{NaOH}} \times N_{\text{NaOH}} \times 64.03}{W_{\text{Sample}}} \times 100$$
-                    </div>
-                    <div class="mb-4">
-                        <label for="volume_naoh" class="block text-gray-700 text-sm font-bold mb-2">حجم <span class="ltr-text">NaOH</span> (mL):</label>
-                        <input type="text" id="volume_naoh" name="volume_naoh" class="input-field">
-                    </div>
-                    <div class="mb-4">
-                        <label for="normality_naoh" class="block text-gray-700 text-sm font-bold mb-2">نرمالیته <span class="ltr-text">NaOH</span>:</label>
-                        <input type="text" id="normality_naoh" name="normality_naoh" class="input-field">
-                    </div>
-                    <div class="mb-4">
-                        <label for="weight_sample" class="block text-gray-700 text-sm font-bold mb-2">وزن نمونه (g):</label>
-                        <input type="text" id="weight_sample" name="weight_sample" class="input-field">
-                    </div>
-                    <button class="calculation-button" onclick="calculateAssay()">محاسبه</button>
-                    <div class="mt-4">
-                        <span class="font-bold">نتیجه:</span> <span id="assay_result" class="ltr-text">--</span> %
-                    </div>
-                    <div class="mt-2">
-                        <span class="font-bold">وضعیت:</span> <span id="assay_status" class="ltr-text">--</span>
-                    </div>
-                    <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h5>
-                    <textarea id="assay_additional_specs" name="assay_additional_specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
+        <div id="assay" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• رویه</h4>
+            <p><strong>نمونه:</strong> <span class="ltr-text">0.550</span> گرم اسید سیتریک انیدروس؛ وزن را به دقت ثبت کنید.</p>
+            <p><strong>تجزیه و تحلیل:</strong> نمونه را در <span class="ltr-text">50</span> میلی‌لیتر آب حل کنید. <span class="ltr-text">0.5</span> میلی‌لیتر فنلفتالئین TS اضافه کنید. با <span class="ltr-text">1 N</span> هیدروکسید سدیم VS تیتر کنید. هر میلی‌لیتر <span class="ltr-text">1 N</span> هیدروکسید سدیم معادل <span class="ltr-text">64.03</span> میلی‌گرم <span class="ltr-text">C6H8O7</span> است.</p>
+            <p><strong>معیارهای پذیرش:</strong> <span class="ltr-text">99.5%</span>–<span class="ltr-text">100.5%</span> بر اساس پایه انیدروس</p>
         </div>
 
-        <!-- Impurities Tab -->
-        <div id="impurities" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+        <div id="impurities" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• باقیمانده پس از احتراق <a href="General chapters/281.html" class="text-blue-600 hover:underline" target="_blank">281</a></h4>
+            <p>حداکثر <span class="ltr-text">0.1%</span>، تعیین شده بر روی <span class="ltr-text">1.0</span> گرم.</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">باقیمانده پس از اشتعال <a href="General chapters/281.html" class="text-blue-600 hover:underline" target="_blank">281</a></h3>
-                <p class="mb-3">حداکثر 0.1%، تعیین شده بر روی 1.0 گرم.</p>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب باقیمانده پس از اشتعال</h4>
-                    <p class="mb-3">فرمول:</p>
-                    <div class="formula-display">
-                        $$\text{ROI} = \frac{W_3-W_1}{W_2} \times 100$$
-                    </div>
-                    <div class="mb-4">
-                        <label for="roi_w1" class="block text-gray-700 text-sm font-bold mb-2">وزن ظرف خالی (g):</label>
-                        <input type="text" id="roi_w1" name="roi_w1" class="input-field">
-                    </div>
-                    <div class="mb-4">
-                        <label for="roi_w2" class="block text-gray-700 text-sm font-bold mb-2">وزن نمونه + ظرف خالی (g):</label>
-                        <input type="text" id="roi_w2" name="roi_w2" class="input-field">
-                    </div>
-                    <div class="mb-4">
-                        <label for="roi_w3" class="block text-gray-700 text-sm font-bold mb-2">وزن باقیمانده + ظرف خالی (g):</label>
-                        <input type="text" id="roi_w3" name="roi_w3" class="input-field">
-                    </div>
-                    <button class="calculation-button" onclick="calculateROI()">محاسبه</button>
-                    <div class="mt-4">
-                        <span class="font-bold">نتیجه:</span> <span id="roi_result" class="ltr-text">--</span> %
-                    </div>
-                    <div class="mt-2">
-                        <span class="font-bold">وضعیت:</span> <span id="roi_status" class="ltr-text">--</span>
-                    </div>
-                    <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h5>
-                    <textarea id="roi_additional_specs" name="roi_additional_specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• سولفات</h4>
+            <p><strong>محلول استاندارد سولفات A:</strong> <span class="ltr-text">1.81</span> میلی‌گرم بر میلی‌لیتر سولفات پتاسیم در الکل <span class="ltr-text">30%</span>. بلافاصله قبل از مصرف، <span class="ltr-text">10.0</span> میلی‌لیتر از این محلول را به یک فلاسک حجمی <span class="ltr-text">1000</span> میلی‌لیتری منتقل کرده، با الکل <span class="ltr-text">30%</span> تا حجم رسانده و مخلوط کنید. این محلول حاوی <span class="ltr-text">10</span> میکروگرم بر میلی‌لیتر سولفات است.</p>
+            <p><strong>محلول استاندارد سولفات B:</strong> <span class="ltr-text">1.81</span> میلی‌گرم بر میلی‌لیتر سولفات پتاسیم در آب. بلافاصله قبل از مصرف، <span class="ltr-text">10.0</span> میلی‌لیتر از این محلول را به یک فلاسک حجمی <span class="ltr-text">1000</span> میلی‌لیتری منتقل کرده، با آب تا حجم رسانده و مخلوط کنید. این محلول حاوی <span class="ltr-text">10</span> میکروگرم بر میلی‌لیتر سولفات است.</p>
+            <p><strong>محلول پایه نمونه:</strong> <span class="ltr-text">66.7</span> میلی‌گرم بر میلی‌لیتر اسید سیتریک انیدروس</p>
+            <p><strong>محلول نمونه:</strong> به <span class="ltr-text">4.5</span> میلی‌لیتر محلول استاندارد سولفات A، <span class="ltr-text">3</span> میلی‌لیتر محلول کلرید باریم (۱ در ۴) اضافه کرده، تکان دهید و به مدت <span class="ltr-text">1</span> دقیقه کنار بگذارید. <span class="ltr-text">2.5</span> میلی‌لیتر از سوسپانسیون حاصل را به <span class="ltr-text">15</span> میلی‌لیتر محلول پایه نمونه و <span class="ltr-text">0.5</span> میلی‌لیتر اسید استیک <span class="ltr-text">5 N</span> اضافه کرده و مخلوط کنید.</p>
+            <p><strong>محلول استاندارد:</strong> طبق رویه محلول نمونه تهیه کنید، با این تفاوت که به جای محلول پایه نمونه از <span class="ltr-text">15</span> میلی‌لیتر محلول استاندارد سولفات B استفاده کنید.</p>
+            <p><strong>تجزیه و تحلیل:</strong></p>
+            <p><strong>نمونه‌ها:</strong> محلول نمونه و محلول استاندارد</p>
+            <p><strong>معیارهای پذیرش:</strong> هرگونه کدورت ایجاد شده در محلول نمونه پس از <span class="ltr-text">5</span> دقیقه سکون، نباید بیشتر از کدورت ایجاد شده در محلول استاندارد (<span class="ltr-text">0.015%</span>) باشد.</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">سولفات</h3>
-                <p class="mb-3">محلول استاندارد سولفات A: 1.81 میلی‌گرم/میلی‌لیتر پتاسیم سولفات در الکل 30%. بلافاصله قبل از مصرف، 10.0 میلی‌لیتر از این محلول را به یک فلاسک حجمی 1000 میلی‌لیتر منتقل کنید، با الکل 30% تا حجم برسانید و مخلوط کنید. این محلول حاوی 10 میکروگرم/میلی‌لیتر سولفات است.</p>
-                <p class="mb-3">محلول استاندارد سولفات B: 1.81 میلی‌گرم/میلی‌لیتر پتاسیم سولفات در آب. بلافاصله قبل از مصرف، 10.0 میلی‌لیتر از این محلول را به یک فلاسک حجمی 1000 میلی‌لیتر منتقل کنید، با آب تا حجم برسانید و مخلوط کنید. این محلول حاوی 10 میکروگرم/میلی‌لیتر سولفات است.</p>
-                <p class="mb-3">محلول پایه نمونه: 66.7 میلی‌گرم/میلی‌لیتر اسید سیتریک انیدروس.</p>
-                <p class="mb-3">محلول نمونه: به 4.5 میلی‌لیتر از محلول استاندارد سولفات A، 3 میلی‌لیتر محلول کلرید باریم (1 در 4) اضافه کنید، تکان دهید و به مدت 1 دقیقه کنار بگذارید. به 2.5 میلی‌لیتر از سوسپانسیون حاصل، 15 میلی‌لیتر از محلول پایه نمونه و 0.5 میلی‌لیتر اسید استیک 5 نرمال اضافه کنید و مخلوط کنید.</p>
-                <p class="mb-3">محلول استاندارد: طبق دستور برای محلول نمونه آماده کنید، به جای محلول پایه نمونه از 15 میلی‌لیتر محلول استاندارد سولفات B استفاده کنید.</p>
-                <p class="mb-3">آنالیز: محلول نمونه و محلول استاندارد.</p>
-                <p class="mb-3">معیارهای پذیرش: هرگونه کدورت تولید شده در محلول نمونه پس از 5 دقیقه ایستادن، بیشتر از کدورت تولید شده در محلول استاندارد (0.015%) نباشد.</p>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت سولفات</h4>
-                    <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">وضعیت:</h5>
-                    <select id="sulfate_status" name="sulfate_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                    <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h5>
-                    <textarea id="sulfate_additional_specs" name="sulfate_additional_specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• حد آلومینیوم (زمانی که برای استفاده در دیالیز برچسب‌گذاری شده است)</h4>
+            <p><strong>محلول استاندارد آلومینیوم:</strong> به <span class="ltr-text">352</span> میلی‌گرم سولفات آلومینیوم پتاسیم در یک فلاسک حجمی <span class="ltr-text">100</span> میلی‌لیتری، چند میلی‌لیتر آب اضافه کنید، بچرخانید تا حل شود، <span class="ltr-text">10</span> میلی‌لیتر اسید سولفوریک رقیق شده اضافه کنید، با آب تا حجم رسانده و مخلوط کنید. بلافاصله قبل از مصرف، <span class="ltr-text">1.0</span> میلی‌لیتر از این محلول را با آب تا <span class="ltr-text">100.0</span> میلی‌لیتر رقیق کنید.</p>
+            <p><strong>بافر استات pH 6.0:</strong> <span class="ltr-text">50</span> گرم آمونیوم استات را در <span class="ltr-text">150</span> میلی‌لیتر آب حل کنید، با اسید استیک گلاسیال به pH <span class="ltr-text">6.0</span> تنظیم کنید، با آب تا <span class="ltr-text">250</span> میلی‌لیتر رقیق کرده و مخلوط کنید.</p>
+            <p><strong>محلول نمونه:</strong> <span class="ltr-text">20.0</span> گرم اسید سیتریک انیدروس را در <span class="ltr-text">100</span> میلی‌لیتر آب حل کنید و <span class="ltr-text">10</span> میلی‌لیتر بافر استات pH <span class="ltr-text">6.0</span> اضافه کنید. این محلول را با مقادیر متوالی <span class="ltr-text">20</span>، <span class="ltr-text">20</span> و <span class="ltr-text">10</span> میلی‌لیتر از محلول <span class="ltr-text">0.5%</span> 8-هیدروکسی‌کینولین در کلروفرم استخراج کنید، عصاره‌های کلروفرم را در یک فلاسک حجمی <span class="ltr-text">50</span> میلی‌لیتری جمع‌آوری کنید. عصاره‌های جمع‌آوری شده را با کلروفرم تا حجم رسانده و مخلوط کنید.</p>
+            <p><strong>محلول استاندارد:</strong> مخلوطی از <span class="ltr-text">2.0</span> میلی‌لیتر محلول استاندارد آلومینیوم، <span class="ltr-text">10</span> میلی‌لیتر بافر استات pH <span class="ltr-text">6.0</span> و <span class="ltr-text">98</span> میلی‌لیتر آب تهیه کنید. این مخلوط را همانند محلول نمونه استخراج کرده، عصاره‌های جمع‌آوری شده را با کلروفرم تا حجم رسانده و مخلوط کنید.</p>
+            <p><strong>محلول شاهد:</strong> مخلوطی از <span class="ltr-text">10</span> میلی‌لیتر بافر استات pH <span class="ltr-text">6.0</span> و <span class="ltr-text">100</span> میلی‌لیتر آب تهیه کنید. این مخلوط را همانند محلول نمونه استخراج کرده، عصاره‌های جمع‌آوری شده را با کلروفرم تا حجم رسانده و مخلوط کنید.</p>
+            <p><strong>شرایط فلورسانس:</strong></p>
+            <p>طول موج تحریک: <span class="ltr-text">392</span> نانومتر</p>
+            <p>طول موج انتشار: <span class="ltr-text">518</span> نانومتر</p>
+            <p><strong>تجزیه و تحلیل:</strong></p>
+            <p><strong>نمونه‌ها:</strong> محلول نمونه و محلول استاندارد</p>
+            <p>شدت فلورسانس نمونه‌ها را در فلورومتر تنظیم شده طبق شرایط فلورسانس، با استفاده از محلول شاهد برای تنظیم دستگاه بر روی صفر، تعیین کنید.</p>
+            <p><strong>معیارهای پذیرش:</strong> فلورسانس محلول نمونه نباید بیشتر از فلورسانس محلول استاندارد (<span class="ltr-text">0.2 ppm</span>) باشد.</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">حد مجاز آلومینیوم (در صورتی که برای استفاده در محلول‌های دیالیز برچسب‌گذاری شده باشد)</h3>
-                <p class="mb-3">محلول استاندارد آلومینیوم: به 352 میلی‌گرم سولفات آلومینیوم پتاسیم در یک فلاسک حجمی 100 میلی‌لیتر، چند میلی‌لیتر آب اضافه کنید، بچرخانید تا حل شود، 10 میلی‌لیتر اسید سولفوریک رقیق شده اضافه کنید، با آب تا حجم برسانید و مخلوط کنید. بلافاصله قبل از مصرف، 1.0 میلی‌لیتر از این محلول را با آب به 100.0 میلی‌لیتر برسانید.</p>
-                <p class="mb-3">بافر استات pH 6.0: 50 گرم آمونیوم استات را در 150 میلی‌لیتر آب حل کنید، با اسید استیک گلاسیال به pH 6.0 برسانید، با آب تا 250 میلی‌لیتر برسانید و مخلوط کنید.</p>
-                <p class="mb-3">محلول نمونه: 20.0 گرم اسید سیتریک انیدروس را در 100 میلی‌لیتر آب حل کنید و 10 میلی‌لیتر بافر استات pH 6.0 اضافه کنید. این محلول را با بخش‌های متوالی 20، 20 و 10 میلی‌لیتر از محلول 0.5% 8-هیدروکسی‌کینولین در کلروفرم استخراج کنید، عصاره‌های کلروفرم را در یک فلاسک حجمی 50 میلی‌لیتر جمع‌آوری کنید. عصاره‌های ترکیبی را با کلروفرم تا حجم برسانید و مخلوط کنید.</p>
-                <p class="mb-3">محلول استاندارد: ترکیبی از 2.0 میلی‌لیتر محلول استاندارد آلومینیوم، 10 میلی‌لیتر بافر استات pH 6.0 و 98 میلی‌لیتر آب آماده کنید. این مخلوط را همانطور که برای محلول نمونه توضیح داده شد، استخراج کنید، عصاره‌های ترکیبی را با کلروفرم تا حجم برسانید و مخلوط کنید.</p>
-                <p class="mb-3">محلول بلانک: ترکیبی از 10 میلی‌لیتر بافر استات pH 6.0 و 100 میلی‌لیتر آب آماده کنید. این مخلوط را همانطور که برای محلول نمونه توضیح داده شد، استخراج کنید، عصاره‌های ترکیبی را با کلروفرم تا حجم برسانید و مخلوط کنید.</p>
-                <p class="mb-3">شرایط فلورسانس‌سنجی:</p>
-                <p class="mb-3">طول موج تحریک: 392 نانومتر</p>
-                <p class="mb-3">طول موج انتشار: 518 نانومتر</p>
-                <p class="mb-3">آنالیز: محلول نمونه و محلول استاندارد.</p>
-                <p class="mb-3">شدت فلورسانس نمونه‌ها را در یک فلورومتر که مطابق با شرایط فلورسانس‌سنجی تنظیم شده است، تعیین کنید، با استفاده از محلول بلانک برای صفر کردن دستگاه.</p>
-                <p class="mb-3">معیارهای پذیرش: فلورسانس محلول نمونه از محلول استاندارد بیشتر نباشد (0.2 ppm).</p>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب حد مجاز آلومینیوم</h4>
-                    <p class="mb-3">فرمول:</p>
-                    <div class="formula-display">
-                        $$\text{Aluminum Limit} = \left( \frac{F_{\text{sample}}}{F_{\text{standard}}} \right) \times \text{Standard Concentration}$$
-                    </div>
-                    <div class="mb-4">
-                        <label for="aluminum_fsample" class="block text-gray-700 text-sm font-bold mb-2">شدت فلورسانس نمونه:</label>
-                        <input type="text" id="aluminum_fsample" name="aluminum_fsample" class="input-field">
-                    </div>
-                    <div class="mb-4">
-                        <label for="aluminum_fstandard" class="block text-gray-700 text-sm font-bold mb-2">شدت فلورسانس استاندارد:</label>
-                        <input type="text" id="aluminum_fstandard" name="aluminum_fstandard" class="input-field">
-                    </div>
-                    <div class="mb-4">
-                        <label for="aluminum_std_conc" class="block text-gray-700 text-sm font-bold mb-2">غلظت استاندارد (ppm):</label>
-                        <input type="text" id="aluminum_std_conc" name="aluminum_std_conc" class="input-field">
-                    </div>
-                    <button class="calculation-button" onclick="calculateAluminumLimit()">محاسبه</button>
-                    <div class="mt-4">
-                        <span class="font-bold">نتیجه:</span> <span id="aluminum_result" class="ltr-text">--</span> ppm
-                    </div>
-                    <div class="mt-2">
-                        <span class="font-bold">وضعیت:</span> <span id="aluminum_status" class="ltr-text">--</span>
-                    </div>
-                    <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h5>
-                    <textarea id="aluminum_additional_specs" name="aluminum_additional_specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">حد مجاز اسید اگزالیک</h3>
-                <p class="mb-3">محلول پایه نمونه: 0.80 گرم اسید سیتریک انیدروس در 4 میلی‌لیتر آب.</p>
-                <p class="mb-3">محلول نمونه: به محلول پایه نمونه 3 میلی‌لیتر اسید هیدروکلریک و 1 گرم روی گرانول اضافه کنید، به مدت 1 دقیقه بجوشانید و به مدت 2 دقیقه کنار بگذارید. مایع رویی را به یک لوله آزمایش حاوی 0.25 میلی‌لیتر محلول فنیل‌هیدرازین هیدروکلراید (1 در 100) منتقل کنید و بجوشانید. به سرعت سرد کنید، به یک استوانه مدرج منتقل کنید و حجم مساوی اسید هیدروکلریک و 0.25 میلی‌لیتر محلول پتاسیم فروسیانید (1 در 20) اضافه کنید. تکان دهید و به مدت 30 دقیقه کنار بگذارید.</p>
-                <p class="mb-3">محلول استاندارد: طبق دستور برای محلول نمونه آماده کنید، به جای محلول پایه نمونه از 4 میلی‌لیتر محلول 0.10 میلی‌گرم/میلی‌لیتر اسید اگزالیک، معادل 0.0714 میلی‌گرم/میلی‌لیتر اسید اگزالیک انیدروس، استفاده کنید. [نکته — همزمان با محلول نمونه آماده شود.]</p>
-                <p class="mb-3">آنالیز: محلول نمونه و محلول استاندارد.</p>
-                <p class="mb-3">معیارهای پذیرش: هر رنگ صورتی تولید شده در محلول نمونه نباید از رنگ تولید شده در محلول استاندارد (0.036%) شدیدتر باشد.</p>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت حد مجاز اسید اگزالیک</h4>
-                    <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">وضعیت:</h5>
-                    <select id="oxalic_acid_status" name="oxalic_acid_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                    <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h5>
-                    <textarea id="oxalic_acid_additional_specs" name="oxalic_acid_additional_specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• حد اسید اگزالیک</h4>
+            <p><strong>محلول پایه نمونه:</strong> <span class="ltr-text">0.80</span> گرم اسید سیتریک انیدروس در <span class="ltr-text">4</span> میلی‌لیتر آب</p>
+            <p><strong>محلول نمونه:</strong> به محلول پایه نمونه <span class="ltr-text">3</span> میلی‌لیتر هیدروکلریک اسید و <span class="ltr-text">1</span> گرم روی گرانول اضافه کنید، به مدت <span class="ltr-text">1</span> دقیقه بجوشانید و به مدت <span class="ltr-text">2</span> دقیقه کنار بگذارید. مایع رویی را به یک لوله آزمایش حاوی <span class="ltr-text">0.25</span> میلی‌لیتر محلول فنیل‌هیدرازین هیدروکلراید (۱ در ۱۰۰) منتقل کرده و به جوش بیاورید. به سرعت سرد کنید، به یک استوانه مدرج منتقل کرده و حجم معادل آن را با هیدروکلریک اسید و <span class="ltr-text">0.25</span> میلی‌لیتر محلول پتاسیم فروسانید (۱ در ۲۰) اضافه کنید. تکان دهید و به مدت <span class="ltr-text">30</span> دقیقه کنار بگذارید.</p>
+            <p><strong>محلول استاندارد:</strong> طبق رویه محلول نمونه تهیه کنید، با این تفاوت که به جای محلول پایه نمونه از <span class="ltr-text">4</span> میلی‌لیتر محلول <span class="ltr-text">0.10</span> میلی‌گرم بر میلی‌لیتر اسید اگزالیک، معادل <span class="ltr-text">0.0714</span> میلی‌گرم بر میلی‌لیتر اسید اگزالیک انیدروس، استفاده کنید. [نکته - همزمان با محلول نمونه تهیه شود.]</p>
+            <p><strong>تجزیه و تحلیل:</strong></p>
+            <p><strong>نمونه‌ها:</strong> محلول نمونه و محلول استاندارد</p>
+            <p><strong>معیارهای پذیرش:</strong> هر رنگ صورتی که در محلول نمونه ایجاد شود، نباید شدیدتر از رنگ ایجاد شده در محلول استاندارد (<span class="ltr-text">0.036%</span>) باشد.</p>
         </div>
 
-        <!-- Specific Tests Tab -->
-        <div id="specific-tests" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+        <div id="specific-tests" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• تست اندوتوکسین باکتریایی <a href="General chapters/85.html" class="text-blue-600 hover:underline" target="_blank">85</a></h4>
+            <p>سطح اندوتوکسین‌های باکتریایی به گونه‌ای است که نیازهای موجود در مونوگراف(های) فرمولاسیون دارویی مربوطه که اسید سیتریک انیدروس در آن‌ها استفاده می‌شود، برآورده می‌شود. در مواردی که برچسب بیان می‌کند اسید سیتریک انیدروس باید در طی آماده‌سازی فرمولاسیون‌های تزریقی تحت پردازش بیشتر قرار گیرد، سطح اندوتوکسین‌های باکتریایی به گونه‌ای است که نیازهای موجود در مونوگراف(های) فرمولاسیون دارویی مربوطه که اسید سیتریک انیدروس در آن‌ها استفاده می‌شود، برآورده می‌شود.</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">تست اندوتوکسین‌های باکتریایی <a href="General chapters/85.html" class="text-blue-600 hover:underline" target="_blank">85</a></h3>
-                <p class="mb-3">سطح اندوتوکسین‌های باکتریایی به گونه‌ای است که نیازهای مونوگراف داروی مربوطه که در آن اسید سیتریک انیدروس استفاده می‌شود، برآورده می‌شود. جایی که برچسب نشان می‌دهد که اسید سیتریک انیدروس باید در طول آماده‌سازی اشکال دارویی تزریقی تحت پردازش بیشتری قرار گیرد، سطح اندوتوکسین‌های باکتریایی به گونه‌ای است که نیازهای مونوگراف داروی مربوطه که در آن اسید سیتریک انیدروس استفاده می‌شود، برآورده می‌شود.</p>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت تست اندوتوکسین‌های باکتریایی</h4>
-                    <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">وضعیت:</h5>
-                    <select id="bacterial_endotoxins_status" name="bacterial_endotoxins_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                    <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h5>
-                    <textarea id="bacterial_endotoxins_additional_specs" name="bacterial_endotoxins_additional_specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تغییر به خواندن:</h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• شفافیت محلول</h4>
+            <p>[نکته - محلول نمونه باید با سوسپانسیون استاندارد A در نور روز پراکنده <span class="ltr-text">5</span> دقیقه پس از تهیه سوسپانسیون استاندارد A مقایسه شود.]</p>
+            <p><strong>محلول هیدرازین سولفات:</strong> <span class="ltr-text">10</span> میلی‌گرم بر میلی‌لیتر هیدرازین سولفات در آب. قبل از استفاده <span class="ltr-text">4–6</span> ساعت کنار بگذارید.</p>
+            <p><strong>محلول متنامین:</strong> <span class="ltr-text">2.5</span> گرم متنامین را به یک فلاسک درپوش‌دار شیشه‌ای <span class="ltr-text">100</span> میلی‌لیتری منتقل کرده، <span class="ltr-text">25.0</span> میلی‌لیتر آب اضافه کنید، درپوش شیشه‌ای را قرار دهید و برای حل شدن مخلوط کنید.</p>
+            <p><strong>سوسپانسیون اپالسنت اولیه:</strong> <span class="ltr-text">25.0</span> میلی‌لیتر محلول هیدرازین سولفات را به محلول متنامین در فلاسک شیشه‌ای درپوش‌دار <span class="ltr-text">100</span> میلی‌لیتری منتقل کنید. مخلوط کرده و <span class="ltr-text">24</span> ساعت کنار بگذارید. [نکته - این سوسپانسیون به مدت <span class="ltr-text">2</span> ماه پایدار است، مشروط بر اینکه در ظرف شیشه‌ای بدون نقص سطح نگهداری شود. سوسپانسیون نباید به شیشه بچسبد و قبل از استفاده باید به خوبی مخلوط شود.]</p>
+            <p><strong>استاندارد اپالسانس:</strong> <span class="ltr-text">15.0</span> میلی‌لیتر سوسپانسیون اپالسنت اولیه را با آب تا <span class="ltr-text">1000</span> میلی‌لیتر رقیق کنید. [نکته - این سوسپانسیون نباید بیش از <span class="ltr-text">24</span> ساعت پس از تهیه استفاده شود.]</p>
+            <p><strong>سوسپانسیون استاندارد A:</strong> <span class="ltr-text">5.0</span> میلی‌لیتر استاندارد اپالسانس را با <span class="ltr-text">95</span> میلی‌لیتر آب رقیق کنید.</p>
+            <p><strong>سوسپانسیون استاندارد B:</strong> <span class="ltr-text">10.0</span> میلی‌لیتر استاندارد اپالسانس را با <span class="ltr-text">90</span> میلی‌لیتر آب رقیق کنید.</p>
+            <p><strong>محلول نمونه:</strong> <span class="ltr-text">200</span> میلی‌گرم بر میلی‌لیتر اسید سیتریک انیدروس در آب</p>
+            <p><strong>تجزیه و تحلیل:</strong></p>
+            <p><strong>نمونه‌ها:</strong> سوسپانسیون استاندارد A، سوسپانسیون استاندارد B، آب و محلول نمونه</p>
+            <p>مقدار کافی از محلول نمونه را به یک لوله آزمایش شیشه‌ای بی‌رنگ، شفاف، خنثی با پایه صاف و قطر داخلی <span class="ltr-text">15–25</span> میلی‌متر منتقل کنید تا عمق <span class="ltr-text">40</span> میلی‌متر ایجاد شود. به طور مشابه، مقادیری از سوسپانسیون استاندارد A، سوسپانسیون استاندارد B و آب را به لوله‌های آزمایش جداگانه منطبق منتقل کنید. محلول نمونه، سوسپانسیون استاندارد A، سوسپانسیون استاندارد B و آب را در نور روز پراکنده، به صورت عمودی در برابر پس‌زمینه سیاه مقایسه کنید (نگاه کنید به ▲مقایسه بصری <a href="General chapters/630.html" class="text-blue-600 hover:underline" target="_blank">630</a>▲ (CN 1-May-2019)). [نکته - پراکندگی نور باید به گونه‌ای باشد که سوسپانسیون استاندارد A به راحتی از آب قابل تشخیص باشد و سوسپانسیون استاندارد B به راحتی از سوسپانسیون استاندارد A قابل تشخیص باشد.]</p>
+            <p><strong>معیارهای پذیرش:</strong> محلول نمونه باید شفافیتی مشابه آب داشته باشد یا اپالسانس آن نباید بیشتر از سوسپانسیون استاندارد A باشد.</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">شفافیت محلول</h3>
-                <p class="mb-3">[نکته — محلول نمونه باید با سوسپانسیون استاندارد A در نور روز پراکنده 5 دقیقه پس از آماده‌سازی سوسپانسیون استاندارد A مقایسه شود.]</p>
-                <p class="mb-3">محلول هیدرازین سولفات: 10 میلی‌گرم/میلی‌لیتر هیدرازین سولفات در آب. قبل از استفاده 4-6 ساعت بگذارید بماند.</p>
-                <p class="mb-3">محلول متنامین: 2.5 گرم متنامین را به یک فلاسک شیشه‌ای درپوش‌دار 100 میلی‌لیتر منتقل کنید، 25.0 میلی‌لیتر آب اضافه کنید، درپوش شیشه‌ای را قرار دهید و برای حل شدن مخلوط کنید.</p>
-                <p class="mb-3">سوسپانسیون اولیه اپالسنت: 25.0 میلی‌لیتر محلول هیدرازین سولفات را به محلول متنامین در فلاسک شیشه‌ای درپوش‌دار 100 میلی‌لیتر منتقل کنید. مخلوط کنید و به مدت 24 ساعت کنار بگذارید. [نکته — این سوسپانسیون به مدت 2 ماه پایدار است، به شرطی که در ظرف شیشه‌ای بدون نقص سطح نگهداری شود. سوسپانسیون نباید به شیشه بچسبد و قبل از استفاده باید به خوبی مخلوط شود.]</p>
-                <p class="mb-3">استاندارد اپالسانس: 15.0 میلی‌لیتر سوسپانسیون اولیه اپالسنت را با آب به 1000 میلی‌لیتر برسانید. [نکته — این سوسپانسیون نباید بیش از 24 ساعت پس از آماده‌سازی استفاده شود.]</p>
-                <p class="mb-3">سوسپانسیون استاندارد A: 5.0 میلی‌لیتر استاندارد اپالسانس را با آب به 100 میلی‌لیتر برسانید.</p>
-                <p class="mb-3">سوسپانسیون استاندارد B: 10.0 میلی‌لیتر استاندارد اپالسانس را با آب به 90 میلی‌لیتر برسانید.</p>
-                <p class="mb-3">محلول نمونه: 200 میلی‌گرم/میلی‌لیتر اسید سیتریک انیدروس در آب.</p>
-                <p class="mb-3">آنالیز: سوسپانسیون استاندارد A، سوسپانسیون استاندارد B، آب و محلول نمونه.</p>
-                <p class="mb-3">مقدار کافی از محلول نمونه را به یک لوله آزمایش شیشه‌ای بی‌رنگ، شفاف، خنثی با ته صاف و قطر داخلی 15-25 میلی‌متر منتقل کنید تا عمق 40 میلی‌متر به دست آید. به طور مشابه، مقادیری از سوسپانسیون استاندارد A، سوسپانسیون استاندارد B و آب را به لوله‌های آزمایش جداگانه مشابه منتقل کنید. محلول نمونه، سوسپانسیون استاندارد A، سوسپانسیون استاندارد B و آب را در نور روز پراکنده، از بالا در مقابل پس‌زمینه سیاه مشاهده کنید (به مقایسه بصری <a href="General chapters/630.html" class="text-blue-600 hover:underline" target="_blank">630</a> مراجعه کنید).</p>
-                <p class="mb-3">[نکته — پراکندگی نور باید به گونه‌ای باشد که سوسپانسیون استاندارد A به راحتی از آب قابل تشخیص باشد و سوسپانسیون استاندارد B به راحتی از سوسپانسیون استاندارد A قابل تشخیص باشد.]</p>
-                <p class="mb-3">معیارهای پذیرش: محلول نمونه باید همان شفافیت آب را نشان دهد یا اپالسانس آن نباید بیشتر از سوسپانسیون استاندارد A باشد.</p>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت شفافیت محلول</h4>
-                    <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">وضعیت:</h5>
-                    <select id="clarity_status" name="clarity_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                    <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h5>
-                    <textarea id="clarity_additional_specs" name="clarity_additional_specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تغییر به خواندن:</h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• رنگ محلول</h4>
+            <p><strong>محلول پایه استاندارد A:</strong> کلرید فریک CS، کلرید کبالتوس CS، و اسید هیدروکلریک رقیق شده (<span class="ltr-text">10</span> گرم بر لیتر) (<span class="ltr-text">2.4: 0.6: 7.0</span>)</p>
+            <p><strong>محلول پایه استاندارد B:</strong> کلرید فریک CS، کلرید کبالتوس CS، سولفات مس CS، و اسید هیدروکلریک رقیق شده (<span class="ltr-text">10</span> گرم بر لیتر) (<span class="ltr-text">2.4: 1.0: 0.4: 6.2</span>)</p>
+            <p><strong>محلول پایه استاندارد C:</strong> کلرید فریک CS، کلرید کبالتوس CS، و سولفات مس CS (<span class="ltr-text">9.6: 0.2: 0.2</span>)</p>
+            <p>[نکته - محلول‌های استاندارد را بلافاصله قبل از استفاده تهیه کنید.]</p>
+            <p><strong>محلول استاندارد A:</strong> <span class="ltr-text">2.5</span> میلی‌لیتر محلول پایه استاندارد A را با اسید هیدروکلریک رقیق شده (<span class="ltr-text">10</span> گرم بر لیتر) تا <span class="ltr-text">100</span> میلی‌لیتر رقیق کنید.</p>
+            <p><strong>محلول استاندارد B:</strong> <span class="ltr-text">2.5</span> میلی‌لیتر محلول پایه استاندارد B را با اسید هیدروکلریک رقیق شده (<span class="ltr-text">10</span> گرم بر لیتر) تا <span class="ltr-text">100</span> میلی‌لیتر رقیق کنید.</p>
+            <p><strong>محلول استاندارد C:</strong> <span class="ltr-text">0.75</span> میلی‌لیتر محلول پایه استاندارد C را با اسید هیدروکلریک رقیق شده (<span class="ltr-text">10</span> گرم بر لیتر) تا <span class="ltr-text">100</span> میلی‌لیتر رقیق کنید.</p>
+            <p><strong>محلول نمونه:</strong> طبق روش آزمون شفافیت محلول تهیه شود.</p>
+            <p><strong>تجزیه و تحلیل 1:</strong></p>
+            <p><strong>نمونه‌ها:</strong> آب و محلول نمونه</p>
+            <p>مقدار کافی از محلول نمونه را به یک لوله آزمایش شیشه‌ای بی‌رنگ، شفاف، خنثی با پایه صاف و قطر داخلی <span class="ltr-text">15–25</span> میلی‌متر منتقل کنید تا عمق <span class="ltr-text">40</span> میلی‌متر ایجاد شود. به طور مشابه، آب را به یک لوله آزمایش جداگانه منطبق منتقل کنید. محلول نمونه و آب را در نور روز پراکنده، به صورت عمودی در برابر پس‌زمینه سفید مقایسه کنید (نگاه کنید به ▲مقایسه بصری <a href="General chapters/630.html" class="text-blue-600 hover:underline" target="_blank">630</a>▲ (CN 1-May-2019)).</p>
+            <p><strong>معیارهای پذیرش 1:</strong> محلول نمونه نباید شدیدتر از آب رنگ داشته باشد. اگر رنگ آن شدیدتر بود، تحلیل 2 را دنبال کنید.</p>
+            <p><strong>تجزیه و تحلیل 2:</strong></p>
+            <p><strong>نمونه‌ها:</strong> محلول استاندارد A، محلول استاندارد B، محلول استاندارد C، و محلول نمونه</p>
+            <p>مقدار کافی از محلول استاندارد A، محلول استاندارد B و محلول استاندارد C را به لوله‌های آزمایش جداگانه شیشه‌ای بی‌رنگ، شفاف، خنثی با پایه صاف و قطر داخلی <span class="ltr-text">15–25</span> میلی‌متر منتقل کنید تا عمق <span class="ltr-text">40</span> میلی‌متر ایجاد شود. محلول نمونه از تحلیل 1 را با محلول استاندارد A، محلول استاندارد B و محلول استاندارد C در نور روز پراکنده، به صورت عمودی در برابر پس‌زمینه سفید مقایسه کنید (نگاه کنید به ▲مقایسه بصری <a href="General chapters/630.html" class="text-blue-600 hover:underline" target="_blank">630</a>▲ (CN 1-May-2019)).</p>
+            <p><strong>معیارهای پذیرش 2:</strong> محلول نمونه نباید شدیدتر از محلول‌های استاندارد A، B و C رنگ داشته باشد.</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">رنگ محلول</h3>
-                <p class="mb-3">محلول پایه استاندارد A: کلرید فریک CS، کلرید کوبالتوس CS و اسید هیدروکلریک رقیق شده (10 گرم/لیتر) (2.4: 0.6: 7.0)</p>
-                <p class="mb-3">محلول پایه استاندارد B: کلرید فریک CS، کلرید کوبالتوس CS، سولفات مس II CS و اسید هیدروکلریک رقیق شده (10 گرم/لیتر) (2.4: 1.0: 0.4: 6.2)</p>
-                <p class="mb-3">محلول پایه استاندارد C: کلرید فریک CS، کلرید کوبالتوس CS و سولفات مس II CS (9.6: 0.2: 0.2)</p>
-                <p class="mb-3">[نکته — محلول‌های استاندارد را بلافاصله قبل از مصرف آماده کنید.]</p>
-                <p class="mb-3">محلول استاندارد A: 2.5 میلی‌لیتر محلول پایه استاندارد A را با اسید هیدروکلریک رقیق شده (10 گرم/لیتر) به 100 میلی‌لیتر برسانید.</p>
-                <p class="mb-3">محلول استاندارد B: 2.5 میلی‌لیتر محلول پایه استاندارد B را با اسید هیدروکلریک رقیق شده (10 گرم/لیتر) به 100 میلی‌لیتر برسانید.</p>
-                <p class="mb-3">محلول استاندارد C: 0.75 میلی‌لیتر محلول پایه استاندارد C را با اسید هیدروکلریک رقیق شده (10 گرم/لیتر) به 100 میلی‌لیتر برسانید.</p>
-                <p class="mb-3">محلول نمونه: طبق روش آزمایش شفافیت محلول آماده شود.</p>
-                <p class="mb-3">آنالیز 1: آب و محلول نمونه.</p>
-                <p class="mb-3">مقدار کافی از محلول نمونه را به یک لوله آزمایش شیشه‌ای بی‌رنگ، شفاف، خنثی با ته صاف و قطر داخلی 15-25 میلی‌متر منتقل کنید تا عمق 40 میلی‌متر به دست آید. به طور مشابه، آب را به یک لوله آزمایش جداگانه مشابه منتقل کنید. محلول نمونه و آب را در نور روز پراکنده، از بالا در مقابل پس‌زمینه سفید مشاهده کنید (به مقایسه بصری <a href="General chapters/630.html" class="text-blue-600 hover:underline" target="_blank">630</a> مراجعه کنید).</p>
-                <p class="mb-3">معیارهای پذیرش 1: محلول نمونه نباید رنگی شدیدتر از آب داشته باشد. در صورت رنگی‌تر بودن، آنالیز 2 را دنبال کنید.</p>
-                <p class="mb-3">آنالیز 2: محلول استاندارد A، محلول استاندارد B، محلول استاندارد C و محلول نمونه.</p>
-                <p class="mb-3">مقدار کافی از محلول استاندارد A، محلول استاندارد B و محلول استاندارد C را به لوله‌های آزمایش جداگانه شیشه‌ای بی‌رنگ، شفاف، خنثی با ته صاف و قطر داخلی 15-25 میلی‌متر منتقل کنید تا عمق 40 میلی‌متر به دست آید. محلول نمونه از آنالیز 1 را با محلول استاندارد A، محلول استاندارد B و محلول استاندارد C در نور روز پراکنده، از بالا در مقابل پس‌زمینه سفید مقایسه کنید (به مقایسه بصری <a href="General chapters/630.html" class="text-blue-600 hover:underline" target="_blank">630</a> مراجعه کنید).</p>
-                <p class="mb-3">معیارهای پذیرش 2: محلول نمونه نباید رنگی شدیدتر از محلول‌های استاندارد A، B و C داشته باشد.</p>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت رنگ محلول</h4>
-                    <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">وضعیت:</h5>
-                    <select id="color_status" name="color_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                    <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h5>
-                    <textarea id="color_additional_specs" name="color_additional_specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• مواد به راحتی قابل کربنیزه شدن</h4>
+            <p><strong>نمونه:</strong> <span class="ltr-text">1.0</span> گرم اسید سیتریک انیدروس پودر شده</p>
+            <p><strong>تجزیه و تحلیل:</strong> نمونه را به یک لوله آزمایش <span class="ltr-text">22</span> میلی‌متر × <span class="ltr-text">175</span> میلی‌متر که قبلاً با <span class="ltr-text">10</span> میلی‌لیتر اسید سولفوریک شسته شده و به مدت <span class="ltr-text">10</span> دقیقه اجازه زهکشی داده شده است، منتقل کنید. <span class="ltr-text">10</span> میلی‌لیتر اسید سولفوریک اضافه کنید، تا حل شدن کامل آژیتاسیون کنید و در حمام آب در دمای <span class="ltr-text">90 ± 1°</span> به مدت <span class="ltr-text">60 ± 0.5</span> دقیقه غوطه‌ور کنید، در تمام مدت سطح اسید را پایین‌تر از سطح آب نگه دارید.</p>
+            <p>لوله را در آب روان سرد کرده و اسید را به یک لوله مقایسه رنگ منتقل کنید.</p>
+            <p><strong>معیارهای پذیرش:</strong> رنگ اسید نباید تیره‌تر از حجم مشابه مایع تطبیق K (نگاه کنید به رنگ و بی‌رنگی <a href="General chapters/631.html" class="text-blue-600 hover:underline" target="_blank">631</a>) در یک لوله تطبیق باشد، لوله‌ها به صورت عمودی در برابر پس‌زمینه سفید مشاهده می‌شوند.</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">مواد قابل کربن‌شدن سریع</h3>
-                <p class="mb-3">نمونه: 1.0 گرم پودر اسید سیتریک انیدروس.</p>
-                <p class="mb-3">آنالیز: نمونه را به یک لوله آزمایش 22 میلی‌متر × 175 میلی‌متر که قبلاً با 10 میلی‌لیتر اسید سولفوریک شسته شده و به مدت 10 دقیقه اجازه تخلیه داده شده، منتقل کنید. 10 میلی‌لیتر اسید سولفوریک اضافه کنید، تا زمانی که محلول کامل شود هم بزنید و لوله را در حمام آب در دمای 90 ± 1 درجه سانتی‌گراد به مدت 60 ± 0.5 دقیقه غوطه‌ور کنید، سطح اسید را در تمام مدت پایین‌تر از سطح آب نگه دارید. لوله را در آب جاری سرد کنید و اسید را به یک لوله مقایسه رنگ منتقل کنید.</p>
-                <p class="mb-3">معیارهای پذیرش: رنگ اسید نباید تیره‌تر از حجم مشابه مایع تطبیق‌دهنده K (به رنگ و عدم وجود رنگ <a href="General chapters/631.html" class="text-blue-600 hover:underline" target="_blank">631</a> مراجعه کنید) در یک لوله مشابه باشد، لوله‌ها از بالا در مقابل پس‌زمینه سفید مشاهده می‌شوند.</p>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت مواد قابل کربن‌شدن سریع</h4>
-                    <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">وضعیت:</h5>
-                    <select id="carbonizable_status" name="carbonizable_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                    <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h5>
-                    <textarea id="carbonizable_additional_specs" name="carbonizable_additional_specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• تست استریلیتی <a href="General chapters/71.html" class="text-blue-600 hover:underline" target="_blank">71</a></h4>
+            <p>در مواردی که برچسب بیان می‌کند اسید سیتریک انیدروس استریل است، این ماده الزامات تست استریلیتی <a href="General chapters/71.html" class="text-blue-600 hover:underline" target="_blank">71</a> را در مونوگراف(های) فرمولاسیون دارویی مربوطه که اسید سیتریک انیدروس در آن‌ها استفاده می‌شود، برآورده می‌کند.</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">تست استریلیتی <a href="General chapters/71.html" class="text-blue-600 hover:underline" target="_blank">71</a></h3>
-                <p class="mb-3">جایی که برچسب نشان می‌دهد که اسید سیتریک انیدروس استریل است، الزامات تست استریلیتی <a href="General chapters/71.html" class="text-blue-600 hover:underline" target="_blank">71</a> را در مونوگراف‌های دارویی مربوطه که در آنها اسید سیتریک انیدروس استفاده می‌شود، برآورده می‌کند.</p>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت تست استریلیتی</h4>
-                    <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">وضعیت:</h5>
-                    <select id="sterility_status" name="sterility_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                    <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h5>
-                    <textarea id="sterility_additional_specs" name="sterility_additional_specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">تعیین آب، روش I <a href="General chapters/921.html" class="text-blue-600 hover:underline" target="_blank">921</a></h3>
-                <p class="mb-3">نمونه: 2.0 گرم اسید سیتریک انیدروس.</p>
-                <p class="mb-3">معیارهای پذیرش: حداکثر 1.0%.</p>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب تعیین آب (روش I)</h4>
-                    <p class="mb-3">فرمول:</p>
-                    <div class="formula-display">
-                        $$\text{LOD} = \frac{(W_{1}+W_{sa})-W_2}{W_{sa}} \times 100$$
-                    </div>
-                    <div class="mb-4">
-                        <label for="water_w1" class="block text-gray-700 text-sm font-bold mb-2">وزن ظرف + نمونه قبل از خشک کردن (g):</label>
-                        <input type="text" id="water_w1" name="water_w1" class="input-field">
-                    </div>
-                    <div class="mb-4">
-                        <label for="water_wsa" class="block text-gray-700 text-sm font-bold mb-2">وزن نمونه (g):</label>
-                        <input type="text" id="water_wsa" name="water_wsa" class="input-field">
-                    </div>
-                    <div class="mb-4">
-                        <label for="water_w2" class="block text-gray-700 text-sm font-bold mb-2">وزن ظرف + نمونه پس از خشک کردن (g):</label>
-                        <input type="text" id="water_w2" name="water_w2" class="input-field">
-                    </div>
-                    <button class="calculation-button" onclick="calculateWaterDetermination()">محاسبه</button>
-                    <div class="mt-4">
-                        <span class="font-bold">نتیجه:</span> <span id="water_result" class="ltr-text">--</span> %
-                    </div>
-                    <div class="mt-2">
-                        <span class="font-bold">وضعیت:</span> <span id="water_status" class="ltr-text">--</span>
-                    </div>
-                    <h5 class="text-sm font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h5>
-                    <textarea id="water_additional_specs" name="water_additional_specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• تعیین آب، روش I <a href="General chapters/921.html" class="text-blue-600 hover:underline" target="_blank">921</a></h4>
+            <p><strong>نمونه:</strong> <span class="ltr-text">2.0</span> گرم اسید سیتریک انیدروس</p>
+            <p><strong>معیارهای پذیرش:</strong> حداکثر <span class="ltr-text">1.0%</span></p>
         </div>
 
-        <!-- Additional Requirements Tab -->
-        <div id="additional-requirements" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+        <div id="additional-requirements" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• بسته‌بندی و نگهداری</h4>
+            <p>در ظروف در بسته نگهداری شود. الزامات نگهداری مشخص نشده است.</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری</h3>
-                <p class="mb-3">در ظروف محکم نگهداری شود. الزامات نگهداری مشخص نشده است.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• برچسب‌گذاری</h4>
+            <p>در مواردی که برای استفاده در محلول‌های دیالیز در نظر گرفته شده است، به این صورت برچسب‌گذاری شود. در مواردی که اسید سیتریک انیدروس باید در طول آماده‌سازی فرمولاسیون‌های تزریقی برای اطمینان از سطوح قابل قبول اندوتوکسین‌های باکتریایی تحت پردازش بیشتر قرار گیرد، به این صورت برچسب‌گذاری شود. در مواردی که اسید سیتریک انیدروس استریل است، به این صورت برچسب‌گذاری شود.</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">برچسب‌گذاری</h3>
-                <p class="mb-3">جایی که برای محلول‌های دیالیز در نظر گرفته شده است، اینگونه برچسب‌گذاری شود. جایی که اسید سیتریک انیدروس باید در طول آماده‌سازی اشکال دارویی تزریقی تحت پردازش بیشتری قرار گیرد تا سطوح قابل قبول اندوتوکسین‌های باکتریایی تضمین شود، اینگونه برچسب‌گذاری شود. جایی که اسید سیتریک انیدروس استریل است، اینگونه برچسب‌گذاری شود.</p>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h3>
-                <p class="mb-3">USP Citric Acid RS</p>
-            </div>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">• استانداردهای مرجع USP 11</h4>
+            <p>USP Citric Acid RS</p>
         </div>
-    </div>
 
-    <script>
-        const tabButtons = document.querySelectorAll('.tab-button');
-        const tabContents = document.querySelectorAll('.tab-content');
+        <script>
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
 
-        tabButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                tabButtons.forEach(btn => btn.classList.add('tab-inactive'));
-                button.classList.remove('tab-inactive');
-                button.classList.add('tab-active');
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove 'tab-active' and add 'tab-inactive' to all buttons
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('tab-active');
+                        btn.classList.add('tab-inactive');
+                    });
+                    // Add 'tab-active' to the clicked button
+                    button.classList.add('tab-active');
 
-                const tabId = button.getAttribute('data-tab');
-                tabContents.forEach(content => content.classList.add('hidden'));
-                document.getElementById(tabId).classList.remove('hidden');
+                    // Hide all tab contents
+                    tabContents.forEach(content => {
+                        content.classList.add('hidden');
+                    });
+                    // Show the corresponding tab content
+                    document.getElementById(button.getAttribute('data-tab')).classList.remove('hidden');
+                });
             });
-        });
-
-        // Assay Calculation
-        function calculateAssay() {
-            const volume = parseFloat(document.getElementById('volume_naoh').value);
-            const normality = parseFloat(document.getElementById('normality_naoh').value);
-            const weight = parseFloat(document.getElementById('weight_sample').value);
-
-            if (!isNaN(volume) && !isNaN(normality) && !isNaN(weight) && weight !== 0) {
-                const assayResult = (volume * normality * 64.03) / weight * 100;
-                const resultElement = document.getElementById('assay_result');
-                const statusElement = document.getElementById('assay_status');
-
-                resultElement.textContent = assayResult.toFixed(2);
-
-                if (assayResult >= 99.5 && assayResult <= 100.5) {
-                    statusElement.textContent = "Pass";
-                    statusElement.className = 'ltr-text font-bold pass-text';
-                } else {
-                    statusElement.textContent = "Fail";
-                    statusElement.className = 'ltr-text font-bold fail-text';
-                }
-            } else {
-                document.getElementById('assay_result').textContent = "--";
-                document.getElementById('assay_status').textContent = "--";
-                document.getElementById('assay_status').className = 'ltr-text';
-            }
-        }
-
-        // Residue on Ignition Calculation
-        function calculateROI() {
-            const w1 = parseFloat(document.getElementById('roi_w1').value);
-            const w2 = parseFloat(document.getElementById('roi_w2').value);
-            const w3 = parseFloat(document.getElementById('roi_w3').value);
-
-            if (!isNaN(w1) && !isNaN(w2) && !isNaN(w3) && w2 !== w1) {
-                const roiResult = ((w3 - w1) / (w2 - w1)) * 100;
-                const resultElement = document.getElementById('roi_result');
-                const statusElement = document.getElementById('roi_status');
-
-                resultElement.textContent = roiResult.toFixed(3);
-
-                if (roiResult <= 0.1) {
-                    statusElement.textContent = "Pass";
-                    statusElement.className = 'ltr-text font-bold pass-text';
-                } else {
-                    statusElement.textContent = "Fail";
-                    statusElement.className = 'ltr-text font-bold fail-text';
-                }
-            } else {
-                document.getElementById('roi_result').textContent = "--";
-                document.getElementById('roi_status').textContent = "--";
-                document.getElementById('roi_status').className = 'ltr-text';
-            }
-        }
-
-        // Limit of Aluminum Calculation
-        function calculateAluminumLimit() {
-            const fSample = parseFloat(document.getElementById('aluminum_fsample').value);
-            const fStandard = parseFloat(document.getElementById('aluminum_fstandard').value);
-            const stdConc = parseFloat(document.getElementById('aluminum_std_conc').value);
-
-            if (!isNaN(fSample) && !isNaN(fStandard) && !isNaN(stdConc) && fStandard !== 0) {
-                const aluminumResult = (fSample / fStandard) * stdConc;
-                const resultElement = document.getElementById('aluminum_result');
-                const statusElement = document.getElementById('aluminum_status');
-
-                resultElement.textContent = aluminumResult.toFixed(3);
-
-                if (aluminumResult <= 0.2) {
-                    statusElement.textContent = "Pass";
-                    statusElement.className = 'ltr-text font-bold pass-text';
-                } else {
-                    statusElement.textContent = "Fail";
-                    statusElement.className = 'ltr-text font-bold fail-text';
-                }
-            } else {
-                document.getElementById('aluminum_result').textContent = "--";
-                document.getElementById('aluminum_status').textContent = "--";
-                document.getElementById('aluminum_status').className = 'ltr-text';
-            }
-        }
-
-        // Water Determination Calculation
-        function calculateWaterDetermination() {
-            const w1 = parseFloat(document.getElementById('water_w1').value);
-            const wsa = parseFloat(document.getElementById('water_wsa').value);
-            const w2 = parseFloat(document.getElementById('water_w2').value);
-
-            if (!isNaN(w1) && !isNaN(wsa) && !isNaN(w2) && wsa !== 0) {
-                const waterResult = ((w1 + wsa) - w2) / wsa * 100;
-                const resultElement = document.getElementById('water_result');
-                const statusElement = document.getElementById('water_status');
-
-                resultElement.textContent = waterResult.toFixed(3);
-
-                if (waterResult <= 1.0) {
-                    statusElement.textContent = "Pass";
-                    statusElement.className = 'ltr-text font-bold pass-text';
-                } else {
-                    statusElement.textContent = "Fail";
-                    statusElement.className = 'ltr-text font-bold fail-text';
-                }
-            } else {
-                document.getElementById('water_result').textContent = "--";
-                document.getElementById('water_status').textContent = "--";
-                document.getElementById('water_status').className = 'ltr-text';
-            }
-        }
-    </script>
-
+        </script>
+    </div>
 </body>
 </html>

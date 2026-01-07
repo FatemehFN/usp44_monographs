@@ -4,14 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف کلسیم پروپیونات (USP)</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Vazirmatn Font -->
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
-    <!-- MathJax -->
-    <script type="text/javascript" id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -70,582 +66,144 @@
         .fail-text {
             color: #ef4444;
         }
-        .interactive-card {
-            background-color: #e0f2fe;
-            border: 1px solid #90cdf4;
-            padding: 1rem;
-            margin-top: 1rem;
-            border-radius: 0.5rem;
-        }
-        .calculation-button {
-            background-color: #2563eb;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
+<body>
     <div class="container mx-auto p-4 max-w-4xl">
 
-        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">مونوگراف کلسیم پروپیونات (USP)</h1>
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">کلسیم پروپیونات</h1>
 
         <div class="flex justify-center mb-6 border-b border-gray-200">
             <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab(event, 'definition')">تعریف</button>
             <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'identification')">شناسایی</button>
             <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'assay')">سنجش</button>
             <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'impurities')">ناخالصی‌ها</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'specific-tests')">آزمایشات خاص</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'additional-requirements')">الزامات اضافی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'specific_tests')">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'additional_requirements')">الزامات اضافی</button>
         </div>
 
-        <div id="definition" class="tab-content">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
-                <p class="mb-2">کلسیم پروپیونات حاوی <span class="ltr-text">98.0%</span> تا <span class="ltr-text">100.5%</span> کلسیم پروپیونات (<span class="ltr-text">C<sub>6</sub>H10CaO<sub>4</sub></span>) است که بر اساس پایه انیدروس محاسبه می‌شود.</p>
+        <div id="definition" class="tab-content card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+            <p>کلسیم پروپیونات حاوی NLT 98.0% و NMT 100.5% کلسیم پروپیونات (<span class="ltr-text">C6H10CaO4</span>) است که بر اساس مبنای انیدروس محاسبه می‌شود.</p>
+        </div>
+
+        <div id="identification" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">الف.</h4>
+            <p>محلول کلسیم پروپیونات (1 در 20) رنگ زرد مایل به قرمز گذرا به شعله غیرنورانی می‌بخشد.</p>
+        </div>
+
+        <div id="assay" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش کار</h4>
+            <p>محلول نمونه: <span class="ltr-text">4 mg/mL</span> کلسیم پروپیونات</p>
+            <p>آنالیز: در حالی که هم زده می‌شود، ترجیحاً با همزن مغناطیسی، <span class="ltr-text">30 mL</span> از محلول <span class="ltr-text">0.05 M</span> ادتات دی‌سدیم VS را از یک بورت <span class="ltr-text">50-mL</span> به <span class="ltr-text">100 mL</span> محلول نمونه اضافه کنید. <span class="ltr-text">15 mL</span> از سدیم هیدروکسید <span class="ltr-text">1 N</span> و <span class="ltr-text">300 mg</span> شناساگر آبی هیدروکسی نفتول را اضافه کرده و تیتر را تا رسیدن به نقطه پایانی آبی ادامه دهید.</p>
+            <p>هر میلی‌لیتر از محلول <span class="ltr-text">0.05 M</span> ادتات دی‌سدیم VS معادل <span class="ltr-text">9.311 mg</span> کلسیم پروپیونات (<span class="ltr-text">C6H10CaO4</span>) است.</p>
+            <p>معیارهای پذیرش: <span class="ltr-text">98.0%–100.5%</span> بر اساس مبنای انیدروس</p>
+        </div>
+
+        <div id="impurities" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">محدودیت فلوراید</h3>
+            <p>بافر: <span class="ltr-text">294.1 mg/mL</span> سدیم سیترات دی‌هیدرات</p>
+            <p>محلول استاندارد: <span class="ltr-text">2.21 mg/mL</span> USP سدیم فلوراید RS. [نکته — محلول را در بطری پلاستیکی نگهداری کنید.] در روز استفاده، <span class="ltr-text">5.0 mL</span> از محلول حاصل را به یک فلاسک حجمی <span class="ltr-text">1000-mL</span> منتقل کرده، با آب تا حجم نهایی رقیق کرده و مخلوط کنید. هر میلی‌لیتر از این محلول حاوی <span class="ltr-text">5 µg</span> یون فلوراید است.</p>
+            <p>سیستم الکترود: از یک الکترود مخصوص فلوراید و یک الکترود مرجع نقره–نقره کلرید متصل به یک pH متر با قابلیت اندازه‌گیری پتانسیل با حداقل تکرارپذیری ±<span class="ltr-text">0.2 mV</span> (به pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a> مراجعه شود) استفاده کنید.</p>
+            <p>خط پاسخ استاندارد: <span class="ltr-text">1.0</span>، <span class="ltr-text">2.0</span>، <span class="ltr-text">3.0</span>، <span class="ltr-text">5.0</span>، <span class="ltr-text">10.0</span> و <span class="ltr-text">15.0 mL</span> از محلول استاندارد را در ظروف پلاستیکی جداگانه <span class="ltr-text">250-mL</span> بریزید. به هر کدام <span class="ltr-text">50 mL</span> آب، <span class="ltr-text">5 mL</span> اسید هیدروکلریک <span class="ltr-text">1 N</span>، <span class="ltr-text">10 mL</span> بافر و <span class="ltr-text">10 mL</span> ادتات دی‌سدیم <span class="ltr-text">0.2 M</span> اضافه کرده و مخلوط کنید. هر محلول را به فلاسک‌های حجمی جداگانه <span class="ltr-text">100-mL</span> منتقل کرده، با آب تا حجم نهایی رقیق کرده و مخلوط کنید. <span class="ltr-text">50 mL</span> از هر محلول را در ظروف پلاستیکی جداگانه <span class="ltr-text">125-mL</span> بریزید و پتانسیل هر محلول را بر حسب میلی‌ولت با استفاده از سیستم الکترود بخوانید. منحنی کالیبراسیون را در مقابل پتانسیل، بر حسب میلی‌ولت، بر روی کاغذ نیمه‌لگاریتمی دو دوره‌ای با غلظت فلوراید بر حسب میکروگرم در <span class="ltr-text">100 mL</span> محلول در مقیاس لگاریتمی رسم کنید.<sup>1</sup></p>
+            <p>نمونه: <span class="ltr-text">1.0 g</span></p>
+            <p>آنالیز: نمونه را در یک بشر شیشه‌ای <span class="ltr-text">150-mL</span> بریزید، <span class="ltr-text">10 mL</span> آب اضافه کنید و در حالی که به طور مداوم هم می‌زنید، به آرامی <span class="ltr-text">20 mL</span> اسید هیدروکلریک <span class="ltr-text">1 N</span> را برای حل کردن نمونه اضافه کنید. به سرعت به مدت <span class="ltr-text">1 min</span> بجوشانید. محلول را به یک ظرف پلاستیکی <span class="ltr-text">250-mL</span> منتقل کرده و به سرعت در حمام یخ خنک کنید. <span class="ltr-text">15 mL</span> بافر و <span class="ltr-text">10 mL</span> ادتات دی‌سدیم <span class="ltr-text">0.2 M</span> اضافه کرده و مخلوط کنید. در صورت لزوم، pH را با اسید هیدروکلریک <span class="ltr-text">1 N</span> یا سدیم هیدروکسید <span class="ltr-text">1 N</span> به <span class="ltr-text">5.5 ± 0.1</span> تنظیم کنید. محلول را به یک فلاسک حجمی <span class="ltr-text">100-mL</span> منتقل کرده، با آب تا حجم نهایی رقیق کرده و مخلوط کنید. <span class="ltr-text">50 mL</span> از این محلول را در یک ظرف پلاستیکی <span class="ltr-text">125-mL</span> بریزید و پتانسیل را با استفاده از سیستم الکترود ثبت کنید. غلظت فلوراید را بر حسب میکروگرم در میلی‌لیتر در نمونه تعیین کنید.</p>
+            <p>معیارهای پذیرش: NMT <span class="ltr-text">30 µg/g</span></p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">محدودیت سرب</h3>
+            <p>محلول اسید سولفوریک <span class="ltr-text">25%</span>: با احتیاط <span class="ltr-text">100 mL</span> اسید سولفوریک را به <span class="ltr-text">300 mL</span> آب با هم زدن مداوم و خنک کردن در حمام یخ اضافه کنید.</p>
+            <p>محلول‌های استاندارد: در روز استفاده، <span class="ltr-text">5.0</span>، <span class="ltr-text">10.0</span> و <span class="ltr-text">20.0 mL</span> از محلول استاندارد سرب TS را در سه فلاسک حجمی جداگانه <span class="ltr-text">100-mL</span> بریزید، به هر کدام <span class="ltr-text">10 mL</span> اسید هیدروکلریک <span class="ltr-text">3 N</span> اضافه کرده و با آب تا حجم نهایی رقیق کنید که متناظر با استانداردهای <span class="ltr-text">0.5-</span>، <span class="ltr-text">1.0-</span> و <span class="ltr-text">2.0-µg/mL</span> باشد.</p>
+            <p>بلانک نمونه: <span class="ltr-text">5 mL</span> از محلول اسید سولفوریک <span class="ltr-text">25%</span> را داخل یک ظرف تبخیر بریزید. در زیر هود، ظرف را روی حمام بخار قرار دهید تا بیشتر آب تبخیر شود. ظرف را روی مشعل قرار داده و نمونه را به آرامی پیش‌خاکستر کنید تا بیشتر اسید سولفوریک خارج شود. ظرف را در کوره با دمای <span class="ltr-text">525°</span> قرار داده و نمونه را تا زمانی که باقیمانده عاری از کربن به نظر برسد، خاکستر کنید. خنک کنید و با احتیاط داخل ظرف تبخیر را با آب بشویید. <span class="ltr-text">5 mL</span> اسید هیدروکلریک <span class="ltr-text">1 N</span> اضافه کنید. ظرف را روی حمام بخار قرار داده و تا خشکی تبخیر کنید. <span class="ltr-text">1.0 mL</span> اسید هیدروکلریک <span class="ltr-text">3 N</span> و تقریباً <span class="ltr-text">5 mL</span> آب اضافه کنید و روی حمام بخار به طور مختصر حرارت دهید تا هرگونه باقیمانده حل شود. محلول را به طور کمی به یک فلاسک حجمی <span class="ltr-text">10-mL</span> منتقل کرده، تا حجم نهایی رقیق کرده و مخلوط کنید.</p>
+            <p>محلول نمونه: <span class="ltr-text">10 g</span> کلسیم پروپیونات را، با دقت تا <span class="ltr-text">0.1 mg</span>، در یک ظرف تبخیر بریزید. مقدار کافی محلول اسید سولفوریک <span class="ltr-text">25%</span> اضافه کرده و اسید سولفوریک را به طور یکنواخت در نمونه پخش کنید. طبق دستورالعمل در بلانک نمونه، با شروع از "در زیر هود..." ادامه دهید.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط دستگاه</h4>
+            <p>(به جذب اتمی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید.)</p>
+            <p>حالت: جذب اتمی</p>
+            <p>طول موج آنالیتیکال: <span class="ltr-text">283.3 nm</span></p>
+            <p>لامپ: تخلیه الکترود سرب</p>
+            <p>شعله: هوا–استیلن</p>
+            <p>عرض شکاف: <span class="ltr-text">0.7 nm</span></p>
+            <p>بلانک دستگاه: آب</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">منحنی استاندارد</h4>
+            <p>نمونه‌ها: محلول‌های استاندارد و بلانک نمونه</p>
+            <p>نمودار: مقادیر جذب تصحیح شده در مقابل غلظت مربوطه (<span class="ltr-text">µg/mL</span>). [نکته — مقادیر جذب تصحیح شده را با کسر جذب بلانک نمونه از جذب محلول‌های استاندارد تعیین کنید.]</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز</h4>
+            <p>نمونه‌ها: بلانک نمونه و محلول نمونه</p>
+            <p>[نکته — مقادیر جذب تصحیح شده را با کسر جذب بلانک نمونه از جذب محلول نمونه تعیین کنید.]</p>
+            <p>از منحنی استاندارد، غلظت سرب را در محلول نمونه تعیین کنید.</p>
+            <p>محتوای سرب را در بخش کلسیم پروپیونات گرفته شده محاسبه کنید:</p>
+            <div class="formula-display">
+                \[Result = (<span class="ltr-text">CS</span> × V)/W\]
             </div>
+            <p>CS: غلظت سرب از منحنی استاندارد (<span class="ltr-text">µg/mL</span>)</p>
+            <p>V: حجم نهایی نمونه (<span class="ltr-text">mL</span>)</p>
+            <p>W: وزن نمونه گرفته شده (<span class="ltr-text">g</span>)</p>
+            <p>معیارهای پذیرش: NMT <span class="ltr-text">2 µg/g</span></p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">منیزیم (به صورت MgO)</h3>
+            <p>محلول استاندارد منیزیم: <span class="ltr-text">50.0 mg</span> فلز منیزیم را در <span class="ltr-text">1 mL</span> اسید هیدروکلریک در یک فلاسک حجمی <span class="ltr-text">1000-mL</span> حل کرده، با آب تا حجم نهایی رقیق کرده و مخلوط کنید.</p>
+            <p>محلول نمونه: <span class="ltr-text">400.0 mg</span> کلسیم پروپیونات، <span class="ltr-text">5 mL</span> اسید هیدروکلریک <span class="ltr-text">2.7 N</span> و حدود <span class="ltr-text">10 mL</span> آب را در یک بشر کوچک ریخته و کلسیم پروپیونات را با حرارت دادن روی صفحه داغ حل کنید.</p>
+            <p>آنالیز: محلول نمونه را تا حجمی حدود <span class="ltr-text">2 mL</span> تبخیر کرده و خنک کنید. مایع باقیمانده را به یک فلاسک حجمی <span class="ltr-text">100-mL</span> منتقل کرده، با آب تا حجم نهایی رقیق کرده و مخلوط کنید. <span class="ltr-text">7.5 mL</span> از این محلول را با آب به <span class="ltr-text">20 mL</span> رقیق کرده، <span class="ltr-text">2 mL</span> سدیم هیدروکسید <span class="ltr-text">1 N</span> و <span class="ltr-text">0.05 mL</span> از محلول <span class="ltr-text">1:1000</span> تیازول زرد اضافه کرده و مخلوط کنید. به مدت <span class="ltr-text">10 min</span> قرار دهید و تکان دهید. هر رنگ تولید شده نباید از رنگ تولید شده توسط <span class="ltr-text">1.0 mL</span> محلول استاندارد منیزیم در همان حجم کنترل که شامل <span class="ltr-text">2.5 mL</span> محلول نمونه (متناظر با <span class="ltr-text">10 mg</span> کلسیم پروپیونات) و مقادیر معرف‌های استفاده شده در آزمایش است، بیشتر باشد.</p>
+            <p>معیارهای پذیرش: محلول از آزمون عبور می‌کند (حدود <span class="ltr-text">0.4%</span>).</p>
         </div>
 
-        <div id="identification" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
-                <h3 class="text-xl font-semibold text-gray-700 mb-2">A.</h3>
-                <p class="mb-2">محلول کلسیم پروپیونات (1 در 20) به شعله غیرنورانی رنگ مایل به زرد-قرمز گذرا می‌بخشد.</p>
-            </div>
+        <div id="specific_tests" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">مواد نامحلول در آب</h3>
+            <p>نمونه: <span class="ltr-text">10 g</span></p>
+            <p>آنالیز: نمونه را در <span class="ltr-text">100 mL</span> آب داغ حل کرده، از یک کروزه فیلتر تراز شده عبور دهید، باقی‌مانده نامحلول را با آب داغ شسته و در <span class="ltr-text">105°</span> تا رسیدن به وزن ثابت خشک کنید.</p>
+            <p>معیارهای پذیرش: NMT <span class="ltr-text">0.2%</span></p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">PH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a></h3>
+            <p><span class="ltr-text">7.5–10.5</span>، در محلولی (<span class="ltr-text">1</span> در <span class="ltr-text">10</span>)</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">تعیین آب <a href="General chapters/921.html" class="text-blue-600 hover:underline" target="_blank">921</a>، روش I</h3>
+            <p>NMT <span class="ltr-text">5.0%</span></p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">ضایعات خشک کردن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h3>
+            <p>آنالیز: در دمای <span class="ltr-text">105°</span> به مدت <span class="ltr-text">2 h</span> خشک کنید.</p>
+            <p>معیارهای پذیرش: NMT <span class="ltr-text">4%</span></p>
         </div>
 
-        <div id="assay" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش کار</h4>
-                <p class="mb-2">محلول نمونه: <span class="ltr-text">4</span> میلی‌گرم در میلی‌لیتر کلسیم پروپیونات</p>
-                <p class="mb-2">آنالیز: در حالی که همزده می‌شود، ترجیحاً با همزن مغناطیسی، <span class="ltr-text">30</span> میلی‌لیتر محلول استاندارد <span class="ltr-text">0.05</span> مولار اِدِتات دی‌سدیم VS را از بورت <span class="ltr-text">50</span> میلی‌لیتری به <span class="ltr-text">100</span> میلی‌لیتر محلول نمونه اضافه کنید. <span class="ltr-text">15</span> میلی‌لیتر سدیم هیدروکسید <span class="ltr-text">1</span> نرمال و <span class="ltr-text">300</span> میلی‌گرم شناساگر هیدروکسی نفتول آبی اضافه کرده و تیتراسیون را تا نقطه پایانی آبی ادامه دهید.</p>
-                <p class="mb-2">هر میلی‌لیتر محلول استاندارد <span class="ltr-text">0.05</span> مولار اِدِتات دی‌سدیم VS معادل <span class="ltr-text">9.311</span> میلی‌گرم کلسیم پروپیونات (<span class="ltr-text">C<sub>6</sub>H10CaO<sub>4</sub></span>) است.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
-                <p class="mb-2"><span class="ltr-text">98.0%–100.5%</span> بر اساس پایه انیدروس</p>
+        <div id="additional_requirements" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
 
-                <div class="card interactive-card">
-                    <h3 class="text-xl font-semibold text-gray-700 mb-2">محاسبه سنجش</h3>
-                    <div class="formula-display">
-                        $$ \text{Assay} = \left( \frac{V_{VS} \times M_{EDTA} \times 1000 \times 100}{W_{sample} \times 1000} \right) $$
-                        <p class="ml-2">or</p>
-                        $$ \text{Assay} = V_{VS} \times 9.311 $$
-                    </div>
-                    <p class="mb-2">هر mL محلول استاندارد <span class="ltr-text">0.05</span> مولار اِدِتات دی‌سدیم VS معادل <span class="ltr-text">9.311</span> mg کلسیم پروپیونات (<span class="ltr-text">C<sub>6</sub>H10CaO<sub>4</sub></span>) است.</p>
-                    
-                    <div>
-                        <label for="vs_volume" class="block text-sm font-medium text-gray-700">حجم محلول استاندارد (mL)</label>
-                        <input type="text" id="vs_volume" name="vs_volume" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="sample_weight" class="block text-sm font-medium text-gray-700">وزن نمونه (mg)</label>
-                        <input type="text" id="sample_weight" name="sample_weight" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    
-                    <button class="calculation-button" onclick="calculateAssay()">محاسبه</button>
-                    <div class="mt-4">
-                        <span class="font-bold">نتیجه:</span> <span id="assayResult" class="inline-block"></span>
-                    </div>
-                    <div class="mt-2">
-                        <span class="font-bold">وضعیت:</span> <span id="assayStatus" class="inline-block"></span>
-                    </div>
-                    <textarea id="assayAdditionalSpec" name="assayAdditionalSpec" rows="3" placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">بسته‌بندی و نگهداری</h3>
+            <p>در ظروف کاملاً بسته نگهداری شود. هیچ الزامات نگهداری مشخصی ذکر نشده است.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">استانداردهای مرجع USP 11</h3>
+            <p>USP سدیم فلوراید RS</p>
         </div>
-
-        <div id="impurities" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
-
-                <h3 class="text-xl font-semibold text-gray-700 mb-2">حد فلوراید</h3>
-                <p class="mb-2">بافر: <span class="ltr-text">294.1</span> میلی‌گرم در میلی‌لیتر سدیم سیترات دی‌هیدرات</p>
-                <p class="mb-2">محلول استاندارد: <span class="ltr-text">2.21</span> میلی‌گرم در میلی‌لیتر USP سدیم فلوراید RS. [توجه - محلول را در بطری پلاستیکی نگهداری کنید.] در روز استفاده، <span class="ltr-text">5.0</span> میلی‌لیتر از محلول حاصل را به فلاسک حجمی <span class="ltr-text">1000</span> میلی‌لیتری منتقل کنید، با آب تا حجم رقیق کنید و مخلوط کنید. هر میلی‌لیتر از این محلول حاوی <span class="ltr-text">5</span> میکروگرم یون فلوراید است.</p>
-                <p class="mb-2">سیستم الکترود: از یک الکترود نشانگر یون فلوراید-اختصاصی و یک الکترود مرجع نقره-کلرید نقره متصل به پی‌اچ‌متر که قادر به اندازه‌گیری پتانسیل‌ها با حداقل تکرارپذیری <span class="ltr-text">±0.2</span> میلی‌ولت است، استفاده کنید (به <span class="ltr-text">pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a></span> مراجعه کنید).</p>
-                <p class="mb-2">خط پاسخ استاندارد: <span class="ltr-text">1.0</span>، <span class="ltr-text">2.0</span>، <span class="ltr-text">3.0</span>، <span class="ltr-text">5.0</span>، <span class="ltr-text">10.0</span>، و <span class="ltr-text">15.0</span> میلی‌لیتر از محلول استاندارد را به ظروف پلاستیکی جداگانه <span class="ltr-text">250</span> میلی‌لیتری منتقل کنید. <span class="ltr-text">50</span> میلی‌لیتر آب، <span class="ltr-text">5</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">1</span> نرمال، <span class="ltr-text">10</span> میلی‌لیتر بافر، و <span class="ltr-text">10</span> میلی‌لیتر اِدِتات دی‌سدیم <span class="ltr-text">0.2</span> مولار اضافه کرده و مخلوط کنید. هر محلول را به فلاسک‌های حجمی جداگانه <span class="ltr-text">100</span> میلی‌لیتری منتقل کنید، با آب تا حجم رقیق کنید و مخلوط کنید. یک قسمت <span class="ltr-text">50</span> میلی‌لیتری از هر محلول را به ظروف پلاستیکی جداگانه <span class="ltr-text">125</span> میلی‌لیتری منتقل کنید و پتانسیل، بر حسب میلی‌ولت، هر محلول را با استفاده از سیستم الکترود بخوانید. منحنی کالیبراسیون را در مقابل پتانسیل، بر حسب میلی‌ولت، روی کاغذ نیمه‌لگاریتمی دو دوره‌ای با میکروگرم فلوراید در هر <span class="ltr-text">100</span> میلی‌لیتر محلول در مقیاس لگاریتمی ترسیم کنید. ¹</p>
-                <p class="mb-2">نمونه: <span class="ltr-text">1.0</span> گرم</p>
-                <p class="mb-2">آنالیز: نمونه را به یک بشر <span class="ltr-text">150</span> میلی‌لیتری منتقل کنید، <span class="ltr-text">10</span> میلی‌لیتر آب اضافه کنید و در حالی که به طور مداوم هم می‌زنید، به آرامی <span class="ltr-text">20</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">1</span> نرمال برای حل شدن نمونه اضافه کنید. <span class="ltr-text">1</span> دقیقه به سرعت بجوشانید. به یک ظرف پلاستیکی <span class="ltr-text">250</span> میلی‌لیتری منتقل کرده و به سرعت در حمام یخ خنک کنید. <span class="ltr-text">15</span> میلی‌لیتر بافر و <span class="ltr-text">10</span> میلی‌لیتر اِدِتات دی‌سدیم <span class="ltr-text">0.2</span> مولار اضافه کرده و مخلوط کنید. در صورت لزوم، pH را با اسید هیدروکلریک <span class="ltr-text">1</span> نرمال یا سدیم هیدروکسید <span class="ltr-text">1</span> نرمال روی <span class="ltr-text">5.5 ± 0.1</span> تنظیم کنید. به فلاسک حجمی <span class="ltr-text">100</span> میلی‌لیتری منتقل کنید، با آب تا حجم رقیق کنید و مخلوط کنید. یک قسمت <span class="ltr-text">50</span> میلی‌لیتری از این محلول را به یک ظرف پلاستیکی <span class="ltr-text">125</span> میلی‌لیتری منتقل کرده و پتانسیل را با استفاده از سیستم الکترود ثبت کنید. غلظت فلوراید، بر حسب میکروگرم در میلی‌لیتر، در نمونه را تعیین کنید.</p>
-                <p class="mb-2">معیارهای پذیرش: حداکثر <span class="ltr-text">30</span> میکروگرم در گرم</p>
-
-                <div class="card interactive-card">
-                    <h3 class="text-xl font-semibold text-gray-700 mb-2">حد فلوراید</h3>
-                    <div class="formula-display">
-                        $$ \text{Fluoride} = \frac{\mu g \text{ F}^{-}}{\text{g sample}} $$
-                    </div>
-                    <p class="mb-2"><strong>محلول استاندارد:</strong> <span class="ltr-text">2.21</span> mg/mL USP Sodium Fluoride RS. هر mL حاوی <span class="ltr-text">5</span> µg فلوراید یون است.</p>
-                    <p class="mb-2"><strong>بافر:</strong> <span class="ltr-text">294.1</span> mg/mL سدیم سیترات دی‌هیدرات</p>
-
-                    <div>
-                        <label for="fluoride_ug_sample" class="block text-sm font-medium text-gray-700">غلظت فلوراید در محلول نمونه (µg/mL)</label>
-                        <input type="text" id="fluoride_ug_sample" name="fluoride_ug_sample" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="fluoride_sample_volume" class="block text-sm font-medium text-gray-700">حجم نهایی محلول نمونه (mL)</label>
-                        <input type="text" id="fluoride_sample_volume" name="fluoride_sample_volume" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                     <div>
-                        <label for="fluoride_sample_weight_g" class="block text-sm font-medium text-gray-700">وزن نمونه (g)</label>
-                        <input type="text" id="fluoride_sample_weight_g" name="fluoride_sample_weight_g" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-
-                    <button class="calculation-button" onclick="calculateFluorideLimit()">محاسبه</button>
-                    <div class="mt-4">
-                        <span class="font-bold">نتیجه:</span> <span id="fluorideLimitResult" class="inline-block"></span>
-                    </div>
-                    <div class="mt-2">
-                        <span class="font-bold">وضعیت:</span> <span id="fluorideLimitStatus" class="inline-block"></span>
-                    </div>
-                    <textarea id="fluorideLimitAdditionalSpec" name="fluorideLimitAdditionalSpec" rows="3" placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 mt-6">حد سرب</h3>
-                <p class="mb-2"><span class="ltr-text">25%</span> محلول اسید سولفوریک: <span class="ltr-text">100</span> میلی‌لیتر اسید سولفوریک را با احتیاط به <span class="ltr-text">300</span> میلی‌لیتر آب با هم زدن مداوم و خنک کردن در حمام یخ اضافه کنید.</p>
-                <p class="mb-2">محلول‌های استاندارد: در روز استفاده، <span class="ltr-text">5.0</span>، <span class="ltr-text">10.0</span>، و <span class="ltr-text">20.0</span> میلی‌لیتر از محلول استاندارد سرب TS را به سه فلاسک حجمی جداگانه <span class="ltr-text">100</span> میلی‌لیتری اضافه کنید، <span class="ltr-text">10</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">3</span> نرمال اضافه کنید و با آب تا حجمی معادل استانداردهای <span class="ltr-text">0.5-</span>، <span class="ltr-text">1.0-</span>، و <span class="ltr-text">2.0</span>- میکروگرم در میلی‌لیتر رقیق کنید.</p>
-                <p class="mb-2">بلانک نمونه: <span class="ltr-text">5</span> میلی‌لیتر محلول <span class="ltr-text">25%</span> اسید سولفوریک را در یک ظرف تبخیر بریزید. در زیر هود، ظرف را روی حمام بخار قرار دهید تا بیشتر آب آن تبخیر شود. ظرف را روی شعله قرار دهید و نمونه را با خارج کردن بیشتر اسید سولفوریک به آرامی پیش‌خاکستر کنید. ظرف را در کوره با دمای <span class="ltr-text">525°</span> قرار دهید و نمونه را تا زمانی که باقیمانده عاری از کربن به نظر برسد، خاکستر کنید. خنک کنید و داخل ظرف تبخیر را با احتیاط با آب بشویید. <span class="ltr-text">5</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">1</span> نرمال اضافه کنید. ظرف را روی حمام بخار قرار دهید و تا خشکی تبخیر کنید. <span class="ltr-text">1.0</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">3</span> نرمال و تقریباً <span class="ltr-text">5</span> میلی‌لیتر آب اضافه کنید و روی حمام بخار برای حل کردن هر گونه باقیمانده، کمی حرارت دهید. محلول را به طور کمی به یک فلاسک حجمی <span class="ltr-text">10</span> میلی‌لیتری منتقل کنید، تا حجم رقیق کنید و مخلوط کنید.</p>
-                <p class="mb-2">محلول نمونه: <span class="ltr-text">10</span> گرم کلسیم پروپیونات را، تا نزدیکترین <span class="ltr-text">0.1</span> میلی‌گرم، در یک ظرف تبخیر قرار دهید. مقدار کافی محلول <span class="ltr-text">25%</span> اسید سولفوریک اضافه کنید و اسید سولفوریک را به طور یکنواخت در نمونه توزیع کنید. طبق دستورالعمل زیر "بلانک نمونه" از "در زیر هود..." ادامه دهید.</p>
-                <p class="mb-2">شرایط دستگاهی</p>
-                <p class="mb-2">(به <span class="ltr-text">Atomic Absorption Spectroscopy <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a></span> مراجعه کنید.)</p>
-                <p class="mb-2">حالت: جذب اتمی</p>
-                <p class="mb-2">طول موج تحلیلی: <span class="ltr-text">283.3</span> نانومتر</p>
-                <p class="mb-2">لامپ: تخلیه الکترود سرب</p>
-                <p class="mb-2">شعله: هوا–استیلن</p>
-                <p class="mb-2">عرض شکاف: <span class="ltr-text">0.7</span> نانومتر</p>
-                <p class="mb-2">بلانک دستگاه: آب</p>
-                <p class="mb-2">منحنی استاندارد</p>
-                <p class="mb-2">نمونه‌ها: محلول‌های استاندارد و بلانک نمونه</p>
-                <p class="mb-2">ترسیم: مقادیر جذب اصلاح شده در مقابل غلظت متناظر (میکروگرم در میلی‌لیتر). [توجه - مقادیر جذب اصلاح شده را با کم کردن جذب بلانک نمونه از جذب محلول‌های استاندارد تعیین کنید.]</p>
-                <p class="mb-2">آنالیز</p>
-                <p class="mb-2">نمونه‌ها: بلانک نمونه و محلول نمونه</p>
-                <p class="mb-2">[توجه - مقادیر جذب اصلاح شده را با کم کردن جذب بلانک نمونه از جذب محلول نمونه تعیین کنید.]</p>
-                <p class="mb-2">از منحنی استاندارد، غلظت سرب در محلول نمونه را تعیین کنید.</p>
-                <p class="mb-2">محتوای سرب را در قسمت کلسیم پروپیونات گرفته شده محاسبه کنید:</p>
-                <div class="formula-display">
-                    $$ \text{Result} = \frac{(C_S \times V)}{W} $$
-                </div>
-                <p class="mb-2"><span class="ltr-text">C</span><sub>S</sub> = غلظت سرب از منحنی استاندارد (µg/mL)</p>
-                <p class="mb-2"><span class="ltr-text">V</span> = حجم نهایی نمونه (mL)</p>
-                <p class="mb-2"><span class="ltr-text">W</span> = وزن نمونه گرفته شده (g)</p>
-                <p class="mb-2">معیارهای پذیرش: حداکثر <span class="ltr-text">2</span> میکروگرم در گرم</p>
-
-                 <div class="card interactive-card">
-                    <h3 class="text-xl font-semibold text-gray-700 mb-2">حد سرب</h3>
-                    <div class="formula-display">
-                         $$ \text{Lead} = \frac{(C_S \times V)}{W} $$
-                    </div>
-                    <p class="mb-2"><strong>استانداردها</strong>: 0.5, 1.0, 2.0 µg/mL</p>
-                    <p class="mb-2"><strong>بلانک نمونه</strong>: جذب بلانک از جذب استانداردها و نمونه کسر می شود.</p>
-
-                    <div>
-                        <label for="lead_cs" class="block text-sm font-medium text-gray-700">غلظت سرب از منحنی استاندارد (µg/mL)</label>
-                        <input type="text" id="lead_cs" name="lead_cs" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="lead_v" class="block text-sm font-medium text-gray-700">حجم نهایی نمونه (mL)</label>
-                        <input type="text" id="lead_v" name="lead_v" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="lead_w" class="block text-sm font-medium text-gray-700">وزن نمونه (g)</label>
-                        <input type="text" id="lead_w" name="lead_w" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-
-                    <button class="calculation-button" onclick="calculateLeadLimit()">محاسبه</button>
-                    <div class="mt-4">
-                        <span class="font-bold">نتیجه:</span> <span id="leadLimitResult" class="inline-block"></span>
-                    </div>
-                    <div class="mt-2">
-                        <span class="font-bold">وضعیت:</span> <span id="leadLimitStatus" class="inline-block"></span>
-                    </div>
-                    <textarea id="leadLimitAdditionalSpec" name="leadLimitAdditionalSpec" rows="3" placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 mt-6">منیزیم (به صورت MgO)</h3>
-                <p class="mb-2">محلول استاندارد منیزیم: <span class="ltr-text">50.0</span> میلی‌گرم فلز منیزیم را در <span class="ltr-text">1</span> میلی‌لیتر اسید هیدروکلریک در یک فلاسک حجمی <span class="ltr-text">1000</span> میلی‌لیتری حل کنید، با آب تا حجم رقیق کنید و مخلوط کنید.</p>
-                <p class="mb-2">محلول نمونه: <span class="ltr-text">400.0</span> میلی‌گرم کلسیم پروپیونات، <span class="ltr-text">5</span> میلی‌لیتر اسید هیدروکلریک <span class="ltr-text">2.7</span> نرمال، و حدود <span class="ltr-text">10</span> میلی‌لیتر آب را در یک بشر کوچک قرار دهید و کلسیم پروپیونات را با گرم کردن روی صفحه داغ حل کنید.</p>
-                <p class="mb-2">آنالیز: محلول نمونه را تا حجمی در حدود <span class="ltr-text">2</span> میلی‌لیتر تبخیر کرده و خنک کنید. مایع باقیمانده را به یک فلاسک حجمی <span class="ltr-text">100</span> میلی‌لیتری منتقل کرده، با آب تا حجم رقیق کنید و مخلوط کنید. <span class="ltr-text">7.5</span> میلی‌لیتر از این محلول را با آب به <span class="ltr-text">20</span> میلی‌لیتر رقیق کنید، <span class="ltr-text">2</span> میلی‌لیتر سدیم هیدروکسید <span class="ltr-text">1</span> نرمال و <span class="ltr-text">0.05</span> میلی‌لیتر از محلول <span class="ltr-text">1:1000</span> تیازول زرد اضافه کرده و مخلوط کنید. <span class="ltr-text">10</span> دقیقه صبر کنید و سپس تکان دهید. هرگونه رنگ تولید شده نباید از رنگ تولید شده توسط <span class="ltr-text">1.0</span> میلی‌لیتر محلول استاندارد منیزیم در همان حجمی که در یک شاهد حاوی <span class="ltr-text">2.5</span> میلی‌لیتر از محلول نمونه (معادل <span class="ltr-text">10</span> میلی‌گرم کلسیم پروپیونات) و مقادیر معرف‌های استفاده شده در آزمایش وجود دارد، بیشتر باشد.</p>
-                <p class="mb-2">معیارهای پذیرش: محلول تست را پاس می‌کند (حدود <span class="ltr-text">0.4%</span>).</p>
-
-                <div class="card interactive-card">
-                    <h3 class="text-xl font-semibold text-gray-700 mb-2">حد منیزیم (به صورت MgO)</h3>
-                    <div class="formula-display">
-                        $$ \text{Magnesium (as MgO)} = \text{color comparison} $$
-                    </div>
-                    <p class="mb-2"><strong>روش</strong>: مقایسه رنگ با استاندارد منیزیم</p>
-                    <p class="mb-2"><strong>استاندارد</strong>: <span class="ltr-text">1.0</span> mL محلول استاندارد منیزیم</p>
-                    <p class="mb-2"><strong>کنترل</strong>: <span class="ltr-text">2.5</span> mL محلول نمونه (معادل <span class="ltr-text">10</span> mg کلسیم پروپیونات)</p>
-                    <p class="mb-2"><strong>محدودیت</strong>: رنگ تولید شده نباید از رنگ شاهد بیشتر باشد.</p>
-                    
-                    <div>
-                        <label for="magnesium_status" class="block text-sm font-medium text-gray-700">وضعیت</label>
-                        <select id="magnesium_status" name="magnesium_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                            <option value=""></option>
-                            <option value="Pass">Pass</option>
-                            <option value="Fail">Fail</option>
-                        </select>
-                    </div>
-                    <textarea id="magnesiumAdditionalSpec" name="magnesiumAdditionalSpec" rows="3" placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
-        </div>
-
-        <div id="specific-tests" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
-
-                <h3 class="text-xl font-semibold text-gray-700 mb-2">مواد نامحلول در آب</h3>
-                <p class="mb-2">نمونه: <span class="ltr-text">10</span> گرم</p>
-                <p class="mb-2">آنالیز: نمونه را در <span class="ltr-text">100</span> میلی‌لیتر آب داغ حل کنید، از یک کروزه فیلتر تارت شده عبور دهید، باقیمانده نامحلول را با آب داغ بشویید و در دمای <span class="ltr-text">105°</span> تا وزن ثابت خشک کنید.</p>
-                <p class="mb-2">معیارهای پذیرش: حداکثر <span class="ltr-text">0.2%</span></p>
-
-                <div class="card interactive-card">
-                    <h3 class="text-xl font-semibold text-gray-700 mb-2">مواد نامحلول در آب</h3>
-                    <div class="formula-display">
-                        $$ \text{Water-insoluble substances} = \frac{(W_2 - W_1)}{W_{sample}} \times 100 $$
-                    </div>
-                    <p class="mb-2"><strong>$W_1$</strong>: وزن کروزه فیلتر تارت شده (g)</p>
-                    <p class="mb-2"><strong>$W_2$</strong>: وزن کروزه فیلتر به همراه باقیمانده نامحلول (g)</p>
-                    <p class="mb-2"><strong>$W_{sample}$</strong>: وزن نمونه (g)</p>
-
-                    <div>
-                        <label for="wi_w1" class="block text-sm font-medium text-gray-700">وزن کروزه فیلتر تارت شده ($W_1$) (g)</label>
-                        <input type="text" id="wi_w1" name="wi_w1" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="wi_w2" class="block text-sm font-medium text-gray-700">وزن کروزه فیلتر با باقیمانده ($W_2$) (g)</label>
-                        <input type="text" id="wi_w2" name="wi_w2" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="wi_sample_weight_g" class="block text-sm font-medium text-gray-700">وزن نمونه ($W_{sample}$) (g)</label>
-                        <input type="text" id="wi_sample_weight_g" name="wi_sample_weight_g" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-
-                    <button class="calculation-button" onclick="calculateWaterInsoluble()">محاسبه</button>
-                    <div class="mt-4">
-                        <span class="font-bold">نتیجه:</span> <span id="wiResult" class="inline-block"></span>
-                    </div>
-                    <div class="mt-2">
-                        <span class="font-bold">وضعیت:</span> <span id="wiStatus" class="inline-block"></span>
-                    </div>
-                    <textarea id="wiAdditionalSpec" name="wiAdditionalSpec" rows="3" placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 mt-6">pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a></h3>
-                <p class="mb-2"><span class="ltr-text">7.5–10.5</span>، در محلول (<span class="ltr-text">1</span> در <span class="ltr-text">10</span>)</p>
-
-                <div class="card interactive-card">
-                    <h3 class="text-xl font-semibold text-gray-700 mb-2">pH</h3>
-                    <div class="formula-display">
-                        $$ \text{pH} = \text{measured value} $$
-                    </div>
-                    <p class="mb-2"><strong>محدوده پذیرش:</strong> <span class="ltr-text">7.5–10.5</span></p>
-
-                    <div>
-                        <label for="ph_value" class="block text-sm font-medium text-gray-700">مقدار pH اندازه‌گیری شده</label>
-                        <input type="text" id="ph_value" name="ph_value" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    
-                    <button class="calculation-button" onclick="calculatePh()">بررسی</button>
-                    <div class="mt-4">
-                        <span class="font-bold">وضعیت:</span> <span id="phStatus" class="inline-block"></span>
-                    </div>
-                    <textarea id="phAdditionalSpec" name="phAdditionalSpec" rows="3" placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 mt-6">تعیین آب <a href="General chapters/921.html" class="text-blue-600 hover:underline" target="_blank">921</a>، روش I</h3>
-                <p class="mb-2">حداکثر <span class="ltr-text">5.0%</span></p>
-
-                <div class="card interactive-card">
-                    <h3 class="text-xl font-semibold text-gray-700 mb-2">تعیین آب</h3>
-                    <div class="formula-display">
-                        $$ \text{Water content} = \frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100 $$
-                    </div>
-                    <p class="mb-2"><strong>$W_1$</strong>: وزن اولیه نمونه (g)</p>
-                    <p class="mb-2"><strong>$W_{sa}$</strong>: وزن نمونه خشک شده (g)</p>
-                    <p class="mb-2"><strong>$W_2$</strong>: وزن نهایی نمونه خشک شده (g)</p>
-                    <p class="mb-2"><strong>محدودیت:</strong> حداکثر <span class="ltr-text">5.0%</span></p>
-
-                    <div>
-                        <label for="water_w1" class="block text-sm font-medium text-gray-700">وزن اولیه نمونه ($W_1$) (g)</label>
-                        <input type="text" id="water_w1" name="water_w1" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="water_wsa" class="block text-sm font-medium text-gray-700">وزن نمونه خشک شده ($W_{sa}$) (g)</label>
-                        <input type="text" id="water_wsa" name="water_wsa" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="water_w2" class="block text-sm font-medium text-gray-700">وزن نهایی نمونه خشک شده ($W_2$) (g)</label>
-                        <input type="text" id="water_w2" name="water_w2" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-
-                    <button class="calculation-button" onclick="calculateWaterDetermination()">محاسبه</button>
-                    <div class="mt-4">
-                        <span class="font-bold">نتیجه:</span> <span id="waterDeterminationResult" class="inline-block"></span>
-                    </div>
-                    <div class="mt-2">
-                        <span class="font-bold">وضعیت:</span> <span id="waterDeterminationStatus" class="inline-block"></span>
-                    </div>
-                    <textarea id="waterDeterminationAdditionalSpec" name="waterDeterminationAdditionalSpec" rows="3" placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 mt-6">خشک شدن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h3>
-                <p class="mb-2">آنالیز: در دمای <span class="ltr-text">105°</span> برای <span class="ltr-text">2</span> ساعت خشک کنید.</p>
-                <p class="mb-2">معیارهای پذیرش: حداکثر <span class="ltr-text">4%</span></p>
-
-                <div class="card interactive-card">
-                    <h3 class="text-xl font-semibold text-gray-700 mb-2">خشک شدن</h3>
-                    <div class="formula-display">
-                        $$ \text{Loss on drying} = \frac{(W_1 - W_2)}{W_1} \times 100 $$
-                    </div>
-                    <p class="mb-2"><strong>$W_1$</strong>: وزن اولیه نمونه (g)</p>
-                    <p class="mb-2"><strong>$W_2$</strong>: وزن نمونه پس از خشک شدن (g)</p>
-                    <p class="mb-2"><strong>محدودیت:</strong> حداکثر <span class="ltr-text">4%</span></p>
-
-                    <div>
-                        <label for="lod_w1" class="block text-sm font-medium text-gray-700">وزن اولیه نمونه ($W_1$) (g)</label>
-                        <input type="text" id="lod_w1" name="lod_w1" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="lod_w2" class="block text-sm font-medium text-gray-700">وزن نمونه پس از خشک شدن ($W_2$) (g)</label>
-                        <input type="text" id="lod_w2" name="lod_w2" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-
-                    <button class="calculation-button" onclick="calculateLossOnDrying()">محاسبه</button>
-                    <div class="mt-4">
-                        <span class="font-bold">نتیجه:</span> <span id="lodResult" class="inline-block"></span>
-                    </div>
-                    <div class="mt-2">
-                        <span class="font-bold">وضعیت:</span> <span id="lodStatus" class="inline-block"></span>
-                    </div>
-                    <textarea id="lodAdditionalSpec" name="lodAdditionalSpec" rows="3" placeholder="توضیحات اضافه / Additional Specifications" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
-        </div>
-
-        <div id="additional-requirements" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
-                <h3 class="text-xl font-semibold text-gray-700 mb-2">بسته بندی و نگهداری</h3>
-                <p class="mb-2">در ظروف محکم بسته نگهداری شود. هیچ الزامات نگهداری مشخص نشده است.</p>
-                <h3 class="text-xl font-semibold text-gray-700 mb-2 mt-6">استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h3>
-                <p class="mb-2">USP سدیم فلوراید RS</p>
-            </div>
-        </div>
-
     </div>
 
     <script>
-        function showTab(event, tabId) {
+        function showTab(event, tabName) {
             var i, tabcontent, tablinks;
+
             tabcontent = document.getElementsByClassName("tab-content");
             for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.add("hidden");
             }
+
             tablinks = document.getElementsByClassName("tab-button");
             for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" tab-active", "").replace(" tab-inactive", "");
-                tablinks[i].className += " tab-inactive";
+                tablinks[i].classList.remove("tab-active");
+                tablinks[i].classList.add("tab-inactive");
             }
-            document.getElementById(tabId).style.display = "block";
-            event.currentTarget.className = event.currentTarget.className.replace(" tab-inactive", "");
-            event.currentTarget.className += " tab-active";
+
+            document.getElementById(tabName).classList.remove("hidden");
+            event.currentTarget.classList.remove("tab-inactive");
+            event.currentTarget.classList.add("tab-active");
         }
 
-        // Initialize the first tab
+        // Show the first tab by default
         document.addEventListener("DOMContentLoaded", function() {
-            document.getElementsByClassName("tab-button")[0].click();
+            document.querySelector(".tab-button").click();
         });
-
-        function calculateAssay() {
-            const vs_volume = parseFloat(document.getElementById('vs_volume').value);
-            const sample_weight_mg = parseFloat(document.getElementById('sample_weight').value);
-            const assayResultSpan = document.getElementById('assayResult');
-            const assayStatusSpan = document.getElementById('assayStatus');
-
-            if (isNaN(vs_volume) || isNaN(sample_weight_mg)) {
-                assayResultSpan.textContent = "لطفاً مقادیر معتبر وارد کنید.";
-                assayStatusSpan.textContent = "";
-                return;
-            }
-
-            // Using the direct conversion factor for simplicity as per the text
-            const assay = vs_volume * 9.311; // mg of calcium propionate
-
-            const percentageAssay = (assay / sample_weight_mg) * 100;
-            
-            assayResultSpan.textContent = `${percentageAssay.toFixed(2)}%`;
-
-            const lowerLimit = 98.0;
-            const upperLimit = 100.5;
-
-            if (percentageAssay >= lowerLimit && percentageAssay <= upperLimit) {
-                assayStatusSpan.textContent = "Pass";
-                assayStatusSpan.className = "inline-block pass-text";
-            } else {
-                assayStatusSpan.textContent = "Fail";
-                assayStatusSpan.className = "inline-block fail-text";
-            }
-        }
-
-        function calculateFluorideLimit() {
-            const fluoride_ug_sample = parseFloat(document.getElementById('fluoride_ug_sample').value);
-            const fluoride_sample_volume = parseFloat(document.getElementById('fluoride_sample_volume').value);
-            const fluoride_sample_weight_g = parseFloat(document.getElementById('fluoride_sample_weight_g').value);
-            const resultSpan = document.getElementById('fluorideLimitResult');
-            const statusSpan = document.getElementById('fluorideLimitStatus');
-
-            if (isNaN(fluoride_ug_sample) || isNaN(fluoride_sample_volume) || isNaN(fluoride_sample_weight_g) || fluoride_sample_weight_g === 0) {
-                resultSpan.textContent = "لطفاً مقادیر معتبر وارد کنید.";
-                statusSpan.textContent = "";
-                return;
-            }
-            
-            const total_ug_fluoride = fluoride_ug_sample * fluoride_sample_volume;
-            const ug_per_g = total_ug_fluoride / fluoride_sample_weight_g;
-            const limit_ug_g = 30;
-
-            resultSpan.textContent = `${ug_per_g.toFixed(2)} µg/g`;
-
-            if (ug_per_g <= limit_ug_g) {
-                statusSpan.textContent = "Pass";
-                statusSpan.className = "inline-block pass-text";
-            } else {
-                statusSpan.textContent = "Fail";
-                statusSpan.className = "inline-block fail-text";
-            }
-        }
-
-        function calculateLeadLimit() {
-            const lead_cs = parseFloat(document.getElementById('lead_cs').value);
-            const lead_v = parseFloat(document.getElementById('lead_v').value);
-            const lead_w = parseFloat(document.getElementById('lead_w').value);
-            const resultSpan = document.getElementById('leadLimitResult');
-            const statusSpan = document.getElementById('leadLimitStatus');
-
-            if (isNaN(lead_cs) || isNaN(lead_v) || isNaN(lead_w) || lead_w === 0) {
-                resultSpan.textContent = "لطفاً مقادیر معتبر وارد کنید.";
-                statusSpan.textContent = "";
-                return;
-            }
-
-            const lead_content = (lead_cs * lead_v) / lead_w;
-            const limit_ug_g = 2;
-
-            resultSpan.textContent = `${lead_content.toFixed(2)} µg/g`;
-
-            if (lead_content <= limit_ug_g) {
-                statusSpan.textContent = "Pass";
-                statusSpan.className = "inline-block pass-text";
-            } else {
-                statusSpan.textContent = "Fail";
-                statusSpan.className = "inline-block fail-text";
-            }
-        }
-
-        function calculateWaterInsoluble() {
-            const wi_w1 = parseFloat(document.getElementById('wi_w1').value);
-            const wi_w2 = parseFloat(document.getElementById('wi_w2').value);
-            const wi_sample_weight_g = parseFloat(document.getElementById('wi_sample_weight_g').value);
-            const resultSpan = document.getElementById('wiResult');
-            const statusSpan = document.getElementById('wiStatus');
-
-            if (isNaN(wi_w1) || isNaN(wi_w2) || isNaN(wi_sample_weight_g) || wi_sample_weight_g === 0) {
-                resultSpan.textContent = "لطفاً مقادیر معتبر وارد کنید.";
-                statusSpan.textContent = "";
-                return;
-            }
-
-            const insoluble_weight = wi_w2 - wi_w1;
-            const percentage = (insoluble_weight / wi_sample_weight_g) * 100;
-            const limit = 0.2;
-
-            resultSpan.textContent = `${percentage.toFixed(3)}%`;
-
-            if (percentage <= limit) {
-                statusSpan.textContent = "Pass";
-                statusSpan.className = "inline-block pass-text";
-            } else {
-                statusSpan.textContent = "Fail";
-                statusSpan.className = "inline-block fail-text";
-            }
-        }
-
-        function calculatePh() {
-            const ph_value = parseFloat(document.getElementById('ph_value').value);
-            const statusSpan = document.getElementById('phStatus');
-            const lowerLimit = 7.5;
-            const upperLimit = 10.5;
-
-            if (isNaN(ph_value)) {
-                statusSpan.textContent = "لطفاً مقدار معتبر وارد کنید.";
-                statusSpan.className = "inline-block";
-                return;
-            }
-
-            if (ph_value >= lowerLimit && ph_value <= upperLimit) {
-                statusSpan.textContent = "Pass";
-                statusSpan.className = "inline-block pass-text";
-            } else {
-                statusSpan.textContent = "Fail";
-                statusSpan.className = "inline-block fail-text";
-            }
-        }
-
-        function calculateWaterDetermination() {
-            const water_w1 = parseFloat(document.getElementById('water_w1').value);
-            const water_wsa = parseFloat(document.getElementById('water_wsa').value);
-            const water_w2 = parseFloat(document.getElementById('water_w2').value);
-            const resultSpan = document.getElementById('waterDeterminationResult');
-            const statusSpan = document.getElementById('waterDeterminationStatus');
-
-            if (isNaN(water_w1) || isNaN(water_wsa) || isNaN(water_w2) || water_wsa === 0) {
-                resultSpan.textContent = "لطفاً مقادیر معتبر وارد کنید.";
-                statusSpan.textContent = "";
-                return;
-            }
-
-            const percentage = ((water_w1 + water_wsa) - water_w2) / water_wsa * 100;
-            const limit = 5.0;
-
-            resultSpan.textContent = `${percentage.toFixed(2)}%`;
-
-            if (percentage <= limit) {
-                statusSpan.textContent = "Pass";
-                statusSpan.className = "inline-block pass-text";
-            } else {
-                statusSpan.textContent = "Fail";
-                statusSpan.className = "inline-block fail-text";
-            }
-        }
-
-        function calculateLossOnDrying() {
-            const lod_w1 = parseFloat(document.getElementById('lod_w1').value);
-            const lod_w2 = parseFloat(document.getElementById('lod_w2').value);
-            const resultSpan = document.getElementById('lodResult');
-            const statusSpan = document.getElementById('lodStatus');
-
-            if (isNaN(lod_w1) || isNaN(lod_w2) || lod_w1 === 0) {
-                resultSpan.textContent = "لطفاً مقادیر معتبر وارد کنید.";
-                statusSpan.textContent = "";
-                return;
-            }
-
-            const percentage = ((lod_w1 - lod_w2) / lod_w1) * 100;
-            const limit = 4.0;
-
-            resultSpan.textContent = `${percentage.toFixed(2)}%`;
-
-            if (percentage <= limit) {
-                statusSpan.textContent = "Pass";
-                statusSpan.className = "inline-block pass-text";
-            } else {
-                statusSpan.textContent = "Fail";
-                statusSpan.className = "inline-block fail-text";
-            }
-        }
     </script>
-
 </body>
 </html>

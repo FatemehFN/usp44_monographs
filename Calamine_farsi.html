@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مونوگراف کالامین (USP)</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Vazirmatn Font -->
+    <title>مونوگراف تالک (USP)</title>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
-    <!-- MathJax -->
-    <script type="text/javascript" id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
     <style>
         body {
@@ -70,460 +67,119 @@
         .fail-text {
             color: #ef4444;
         }
-        .interactive-card {
-            background-color: #e0f2fe;
-            border: 1px solid #90cdf4;
-            padding: 1rem;
-            margin-top: 1rem;
-            border-radius: 0.5rem;
-        }
-        .calculation-button {
-            background-color: #2563eb;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
+<body>
     <div class="container mx-auto p-4 max-w-4xl">
-        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">کالامین</h1>
+
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">تالک (USP)</h1>
 
         <div class="flex justify-center mb-6 border-b border-gray-200">
-            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab(event, 'definition')">تعریف</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'identification')">شناسایی</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'assay')">سنجش</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'impurities')">ناخالصی‌ها</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'specific_tests')">آزمایشات خاص</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'additional_requirements')">الزامات اضافی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab('definition')">تعریف</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('identification')">شناسایی</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('assay')">سنجش</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('impurities')">ناخالصی‌ها</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('specific_tests')">آزمایشات خاص</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('additional_requirements')">الزامات اضافی</button>
         </div>
 
-        <div id="definition" class="tab-content">
+        <div id="definition" class="tab-content card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
-            <div class="card">
-                <p>کالامین اکسید آهن با نسبت کمی از اکسید فریک است و پس از اشتعال، حاوی <span class="ltr-text">98.0%</span> تا <span class="ltr-text">100.5%</span> اکسید روی (<span class="ltr-text">ZnO</span>) می‌باشد.</p>
-            </div>
+            <p>تالک اکسید روی با نسبت کوچکی از اکسید فریک است و حاوی، پس از احتراق، حداقل 98.0% و حداکثر 100.5% اکسید روی (ZnO) می‌باشد.</p>
         </div>
 
-        <div id="identification" class="tab-content hidden">
+        <div id="identification" class="tab-content hidden card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
-            <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایش‌های شناسایی – عمومی، روی <span class="ltr-text"><a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a></span></h3>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه</h4>
-                <p>1 گرم</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
-                <p>نمونه را با <span class="ltr-text">10 mL</span> اسید هیدروکلریک <span class="ltr-text">3 N</span> تیمار کرده و سپس صاف کنید.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
-                <p>فیلتر باید شرایط لازم را برآورده کند.</p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمون‌های شناسایی - عمومی، روی (Zinc <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a>)</h3>
+            <p>نمونه: 1 گرم</p>
+            <p>تجزیه و تحلیل: نمونه را با 10 میلی‌لیتر اسید هیدروکلریک 3 نرمال تیمار کرده و سپس صاف کنید.</p>
+            <p>معیارهای پذیرش: صاف شده الزامات را برآورده می‌کند.</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایش دوم</h3>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه</h4>
-                <p>1 گرم</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
-                <p>به نمونه <span class="ltr-text">10 mL</span> اسید هیدروکلریک <span class="ltr-text">3 N</span> اضافه کنید، تا حد جوش حرارت دهید و سپس صاف کنید.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
-                <p>فیلتر پس از افزودن تیوسولفات آمونیوم <span class="ltr-text">TS</span> رنگ قرمز به خود می‌گیرد.</p>
-            </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">B.</h3>
+            <p>نمونه: 1 گرم</p>
+            <p>تجزیه و تحلیل: 10 میلی‌لیتر اسید هیدروکلریک 3 نرمال به نمونه اضافه کنید، تا حد جوش حرارت دهید و سپس صاف کنید.</p>
+            <p>معیارهای پذیرش: صاف شده پس از افزودن آمونیوم تیوسیانات TS، رنگ قرمز به خود می‌گیرد.</p>
         </div>
 
-        <div id="assay" class="tab-content hidden">
+        <div id="assay" class="tab-content hidden card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
-            <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">روش انجام</h3>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه</h4>
-                <p>1.5 گرم کالامین تازه اشتعال‌داده شده را در <span class="ltr-text">50.0 mL</span> اسید سولفوریک <span class="ltr-text">1 N VS</span> هضم کنید، با اعمال حرارت ملایم تا زمانی که دیگر حلالیت رخ ندهد. مخلوط را صاف کرده و باقی‌مانده روی فیلتر را با آب گرم بشویید تا آخرین شستشو نسبت به کاغذ لیتموس خنثی باشد. به محلول صاف شده و شستشوهای ترکیبی، <span class="ltr-text">2.5 g</span> کلرید آمونیوم اضافه کنید. سرد کرده و متیل اورنج <span class="ltr-text">TS</span> را اضافه کنید.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم تیتراسیون</h4>
-                <p>حالت: تیتراسیون برگشتی</p>
-                <p>تیترانت: سدیم هیدروکسید <span class="ltr-text">1 N VS</span></p>
-                <p>تشخیص نقطه پایانی: بصری</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
-                <p>اسید سولفوریک اضافی در محلول نمونه را با تیترانت تیتراسیون کنید. هر <span class="ltr-text">mL</span> اسید سولفوریک <span class="ltr-text">1 N</span> مصرفی معادل <span class="ltr-text">40.69 mg</span> اکسید روی (<span class="ltr-text">ZnO</span>) است.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
-                <p><span class="ltr-text">98.0%–100.5%</span> بر اساس پایه اشتعال</p>
-
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mb-2">ماشین حساب سنجش</h4>
-                    <p class="text-gray-700 mb-4">هر <span class="ltr-text">mL</span> اسید سولفوریک <span class="ltr-text">1 N</span> مصرفی معادل <span class="ltr-text">40.69 mg</span> اکسید روی (<span class="ltr-text">ZnO</span>) است.</p>
-                    <p class="text-gray-700 mb-4">$$Result (mg) = V_{H_2SO_4} \times N_{H_2SO_4} \times 40.69$$</p>
-                    <p class="text-gray-700 mb-4">$$Result (%) = \frac{Result (mg)}{W_{sample\_ignited}} \times 100$$</p>
-
-                    <div>
-                        <label for="v_h2so4_assay" class="block text-sm font-medium text-gray-700">حجم اسید سولفوریک مصرفی (mL)</label>
-                        <input type="text" id="v_h2so4_assay" name="v_h2so4_assay" class="input-field">
-                    </div>
-                    <div>
-                        <label for="w_sample_ignited_assay" class="block text-sm font-medium text-gray-700">وزن نمونه اشتعال‌داده شده (mg)</label>
-                        <input type="text" id="w_sample_ignited_assay" name="w_sample_ignited_assay" class="input-field">
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateAssay()">محاسبه</button>
-                    <div class="mt-4">
-                        <span class="font-semibold">نتیجه: </span>
-                        <span id="assay_result" class="font-medium"></span>
-                        <span id="assay_status" class="font-medium"></span>
-                    </div>
-                </div>
-            </div>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش</h4>
+            <p>محلول نمونه: 1.5 گرم تالک تازه احتراق یافته را در 50.0 میلی‌لیتر اسید سولفوریک 1 نرمال VS هضم کنید، با حرارت ملایم تا زمانی که دیگر حلالیت رخ ندهد. مخلوط را صاف کرده و باقیمانده روی صافی را با آب داغ شستشو دهید تا آخرین شستشو نسبت به کاغذ لیتموس خنثی باشد. به صاف شده و آب‌های شستشو، 2.5 گرم آمونیوم کلراید اضافه کنید. خنک کرده و متیل اورنج TS را اضافه کنید.</p>
+            <p>سیستم تیتراسیون</p>
+            <p>حالت: تیتراسیون برگشتی</p>
+            <p>تیترانت: سدیم هیدروکسید 1 نرمال VS</p>
+            <p>تشخیص نقطه پایانی: بصری</p>
+            <p>تجزیه و تحلیل: اسید سولفوریک اضافی در محلول نمونه را با تیترانت تیتراسیون کنید. هر میلی‌لیتر اسید سولفوریک 1 نرمال مصرفی معادل 40.69 میلی‌گرم اکسید روی (ZnO) است.</p>
+            <p>معیارهای پذیرش: 98.0%–100.5% بر اساس ماده احتراق یافته</p>
         </div>
 
-        <div id="impurities" class="tab-content hidden">
+        <div id="impurities" class="tab-content hidden card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
-            <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">آرسنیک، روش I <span class="ltr-text"><a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a></span></h3>
-                <p>NMT <span class="ltr-text">8 ppm</span></p>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mb-2">ماشین حساب آرسنیک</h4>
-                    <p class="text-gray-700 mb-4">حداکثر <span class="ltr-text">8 ppm</span></p>
-                    <div>
-                        <label for="arsenic_ppm" class="block text-sm font-medium text-gray-700">غلظت آرسنیک (ppm)</label>
-                        <input type="text" id="arsenic_ppm" name="arsenic_ppm" class="input-field">
-                    </div>
-                    <button class="calculation-button mt-4" onclick="checkArsenic()">بررسی</button>
-                    <div class="mt-4">
-                        <span class="font-semibold">وضعیت: </span>
-                        <span id="arsenic_status" class="font-medium"></span>
-                    </div>
-                </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آرسنیک، روش I <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a></h3>
+            <p>حداکثر 8 ppm</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلسیم</h3>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه</h4>
-                <p>1 گرم</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
-                <p>نمونه را در <span class="ltr-text">25 mL</span> اسید هیدروکلریک <span class="ltr-text">3 N</span> به مدت 30 دقیقه هضم کنید، فیلتر کنید تا اکسید فریک نامحلول خارج شود، و به فیلتر آمونیاک هیدروکسید <span class="ltr-text">6 N</span> اضافه کنید تا رسوب تشکیل شده دوباره حل شود، سپس <span class="ltr-text">5 mL</span> دیگر آمونیاک هیدروکسید اضافه کنید. به 10 میلی لیتر از این محلول <span class="ltr-text">2 mL</span> اگزالات آمونیوم <span class="ltr-text">TS</span> اضافه کنید.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
-                <p>حداکثر کدورت کمی ایجاد می‌شود.</p>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mb-2">وضعیت کلسیم</h4>
-                    <div>
-                        <label for="calcium_status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                        <select id="calcium_status" name="calcium_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                            <option value=""></option>
-                            <option value="Pass">Pass</option>
-                            <option value="Fail">Fail</option>
-                        </select>
-                    </div>
-                    <label for="calcium_additional_specs" class="block text-sm font-medium text-gray-700 mt-4">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="calcium_additional_specs" name="calcium_additional_specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">کلسیم</h3>
+            <p>نمونه: 1 گرم</p>
+            <p>تجزیه و تحلیل: نمونه را در 25 میلی‌لیتر اسید هیدروکلریک 3 نرمال به مدت 30 دقیقه هضم کنید، برای حذف اکسید فریک نامحلول صاف کنید، و آمونیوم هیدروکسید 6 نرمال به صاف شده اضافه کنید تا رسوب تشکیل شده ابتدا حل شود، سپس 5 میلی‌لیتر دیگر آمونیوم هیدروکسید 6 نرمال اضافه کنید. به 10 میلی‌لیتر از این محلول، 2 میلی‌لیتر آمونیوم اکسالات TS اضافه کنید.</p>
+            <p>معیارهای پذیرش: حداکثر کدورت جزئی تولید می‌شود.</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">کلسیم یا منیزیم</h3>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
-                <p>به یک قسمت دیگر 10 میلی‌لیتری از محلول تهیه شده در تست کلسیم، <span class="ltr-text">2 mL</span> فسفات سدیم دی‌بازیک <span class="ltr-text">TS</span> اضافه کنید.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
-                <p>حداکثر کدورت کمی ایجاد می‌شود.</p>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mb-2">وضعیت کلسیم یا منیزیم</h4>
-                    <div>
-                        <label for="calcium_magnesium_status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                        <select id="calcium_magnesium_status" name="calcium_magnesium_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                            <option value=""></option>
-                            <option value="Pass">Pass</option>
-                            <option value="Fail">Fail</option>
-                        </select>
-                    </div>
-                    <label for="calcium_magnesium_additional_specs" class="block text-sm font-medium text-gray-700 mt-4">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="calcium_magnesium_additional_specs" name="calcium_magnesium_additional_specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">کلسیم یا منیزیم</h3>
+            <p>تجزیه و تحلیل: به قسمت 10 میلی‌لیتری دیگر از محلول تهیه شده در آزمون کلسیم، 2 میلی‌لیتر دی‌بازیک سدیم فسفات TS اضافه کنید.</p>
+            <p>معیارهای پذیرش: حداکثر کدورت جزئی تولید می‌شود.</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">سرب</h3>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه</h4>
-                <p>1 گرم</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
-                <p><span class="ltr-text">15 mL</span> آب به نمونه اضافه کنید، هم بزنید، سپس <span class="ltr-text">3 mL</span> اسید استیک گلاسیال اضافه کنید و روی حمام بخار گرم کنید تا حل شود. صاف کنید و <span class="ltr-text">5</span> قطره کرومات پتاسیم <span class="ltr-text">TS</span> اضافه کنید.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
-                <p>هیچ کدورت نباید ایجاد شود.</p>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mb-2">وضعیت سرب</h4>
-                    <div>
-                        <label for="lead_status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                        <select id="lead_status" name="lead_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                            <option value=""></option>
-                            <option value="Pass">Pass</option>
-                            <option value="Fail">Fail</option>
-                        </select>
-                    </div>
-                    <label for="lead_additional_specs" class="block text-sm font-medium text-gray-700 mt-4">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="lead_additional_specs" name="lead_additional_specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">سرب</h3>
+            <p>نمونه: 1 گرم</p>
+            <p>تجزیه و تحلیل: 15 میلی‌لیتر آب به نمونه اضافه کرده، هم بزنید، سپس 3 میلی‌لیتر اسید استیک گلاسیال اضافه کرده و روی حمام بخار گرم کنید تا حل شود. صاف کرده و 5 قطره پتاسیم کرومات TS اضافه کنید.</p>
+            <p>معیارهای پذیرش: کدورتی تولید نمی‌شود.</p>
         </div>
 
-        <div id="specific_tests" class="tab-content hidden">
+        <div id="specific_tests" class="tab-content hidden card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
-            <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">مواد نامحلول در اسید</h3>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه</h4>
-                <p><span class="ltr-text">2.0 g</span></p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
-                <p>نمونه را در <span class="ltr-text">50 mL</span> اسید هیدروکلریک <span class="ltr-text">3 N</span> حل کنید. اگر باقی‌مانده نامحلول وجود داشت، آن را روی یک فیلتر وزن شده جمع آوری کرده، با آب بشویید و در <span class="ltr-text">105°</span> به مدت 1 ساعت خشک کنید. سرد کرده و وزن کنید.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
-                <p>حداکثر <span class="ltr-text">40 mg</span> (<span class="ltr-text">2.0%</span>)</p>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mb-2">ماشین حساب مواد نامحلول در اسید</h4>
-                    <p class="text-gray-700 mb-4">$$Result = (W_{2}-W_{1})*1000$$</p>
-                    <div>
-                        <label for="w1_acid_insoluble" class="block text-sm font-medium text-gray-700">وزن اولیه فیلتر + باقی‌مانده (g)</label>
-                        <input type="text" id="w1_acid_insoluble" name="w1_acid_insoluble" class="input-field">
-                    </div>
-                    <div>
-                        <label for="w2_acid_insoluble" class="block text-sm font-medium text-gray-700">وزن نهایی فیلتر + باقی‌مانده (g)</label>
-                        <input type="text" id="w2_acid_insoluble" name="w2_acid_insoluble" class="input-field">
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateAcidInsoluble()">محاسبه</button>
-                    <div class="mt-4">
-                        <span class="font-semibold">نتیجه: </span>
-                        <span id="acid_insoluble_result" class="font-medium"></span>
-                        <span id="acid_insoluble_status" class="font-medium"></span>
-                    </div>
-                     <p class="mt-2">تبدیل به درصد:</p>
-                     <span id="acid_insoluble_percent" class="font-medium"></span>
-                </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">مواد نامحلول در اسید</h3>
+            <p>نمونه: 2.0 گرم</p>
+            <p>تجزیه و تحلیل: نمونه را در 50 میلی‌لیتر اسید هیدروکلریک 3 نرمال حل کنید. اگر باقیمانده نامحلول وجود داشت، آن را روی یک فیلتر وزن شده جمع‌آوری کرده، با آب شستشو دهید و در دمای 105 درجه سانتی‌گراد به مدت 1 ساعت خشک کنید. خنک کرده و وزن کنید.</p>
+            <p>معیارهای پذیرش: حداکثر 40 میلی‌گرم (2.0%)</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">مواد قلیایی</h3>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه</h4>
-                <p><span class="ltr-text">1.0 g</span></p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
-                <p>نمونه را با <span class="ltr-text">20 mL</span> آب در حمام بخار به مدت 15 دقیقه هضم کنید، صاف کرده و <span class="ltr-text">2</span> قطره فنل فتالئین <span class="ltr-text">TS</span> اضافه کنید.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
-                <p>اگر رنگ قرمز تولید شد، حداکثر <span class="ltr-text">0.20 mL</span> اسید سولفوریک <span class="ltr-text">0.10 N</span> برای از بین بردن آن لازم است.</p>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mb-2">ماشین حساب مواد قلیایی</h4>
-                    <p class="text-gray-700 mb-4">حداکثر <span class="ltr-text">0.20 mL</span> اسید سولفوریک <span class="ltr-text">0.10 N</span>.</p>
-                    <div>
-                        <label for="v_h2so4_alkali" class="block text-sm font-medium text-gray-700">حجم اسید سولفوریک مصرفی (mL)</label>
-                        <input type="text" id="v_h2so4_alkali" name="v_h2so4_alkali" class="input-field">
-                    </div>
-                     <div>
-                        <label for="n_h2so4_alkali" class="block text-sm font-medium text-gray-700">نرمالیته اسید سولفوریک</label>
-                        <input type="text" id="n_h2so4_alkali" name="n_h2so4_alkali" class="input-field">
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateAlkaline()">بررسی</button>
-                    <div class="mt-4">
-                        <span class="font-semibold">وضعیت: </span>
-                        <span id="alkaline_status" class="font-medium"></span>
-                    </div>
-                </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">مواد قلیایی</h3>
+            <p>نمونه: 1.0 گرم</p>
+            <p>تجزیه و تحلیل: نمونه را با 20 میلی‌لیتر آب روی حمام بخار به مدت 15 دقیقه هضم کرده، صاف کنید و 2 قطره فنل فتالئین TS اضافه کنید.</p>
+            <p>معیارهای پذیرش: اگر رنگ قرمز تولید شد، حداکثر 0.20 میلی‌لیتر اسید سولفوریک 0.10 نرمال برای بی‌رنگ کردن آن لازم است.</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">از دست دادن وزن هنگام اشتعال <span class="ltr-text"><a href="General chapters/733.html" class="text-blue-600 hover:underline" target="_blank">733</a></span></h3>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه</h4>
-                <p><span class="ltr-text">2 g</span></p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
-                <p>نمونه را در <span class="ltr-text">500°</span> تا رسیدن به وزن ثابت اشتعال دهید.</p>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش</h4>
-                <p>حداکثر <span class="ltr-text">2.0%</span></p>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mb-2">ماشین حساب از دست دادن وزن هنگام اشتعال</h4>
-                    <p class="text-gray-700 mb-4">$$LOD = \frac{(W_{1}+W_{sa})-W_2}{W_{sa}} \times 100$$</p>
-                    <div>
-                        <label for="w1_loss_ignition" class="block text-sm font-medium text-gray-700">وزن اولیه بوته (g)</label>
-                        <input type="text" id="w1_loss_ignition" name="w1_loss_ignition" class="input-field">
-                    </div>
-                     <div>
-                        <label for="wsa_loss_ignition" class="block text-sm font-medium text-gray-700">وزن نمونه (g)</label>
-                        <input type="text" id="wsa_loss_ignition" name="wsa_loss_ignition" class="input-field">
-                    </div>
-                    <div>
-                        <label for="w2_loss_ignition" class="block text-sm font-medium text-gray-700">وزن نهایی بوته + نمونه اشتعال‌داده شده (g)</label>
-                        <input type="text" id="w2_loss_ignition" name="w2_loss_ignition" class="input-field">
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateLossOnIgnition()">محاسبه</button>
-                    <div class="mt-4">
-                        <span class="font-semibold">نتیجه: </span>
-                        <span id="loss_ignition_result" class="font-medium"></span>
-                        <span id="loss_ignition_status" class="font-medium"></span>
-                    </div>
-                </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">کاهش وزن در اثر احتراق <a href="General chapters/733.html" class="text-blue-600 hover:underline" target="_blank">733</a></h3>
+            <p>نمونه: 2 گرم</p>
+            <p>تجزیه و تحلیل: نمونه را در دمای 500 درجه سانتی‌گراد تا رسیدن به وزن ثابت، احتراق دهید.</p>
+            <p>معیارهای پذیرش: حداکثر 2.0%</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایشات شمارش میکروبی <span class="ltr-text"><a href="General chapters/61.html" class="text-blue-600 hover:underline" target="_blank">61</a></span> و آزمایشات میکروب‌های مشخص <span class="ltr-text"><a href="General chapters/62.html" class="text-blue-600 hover:underline" target="_blank">62</a></span></h3>
-                <p>شرایط آزمایش برای عدم وجود استافیلوکوکوس اورئوس و سودوموناس آئروژینوزا را برآورده می‌کند.</p>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mb-2">وضعیت میکروبی</h4>
-                    <div>
-                        <label for="microbial_status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                        <select id="microbial_status" name="microbial_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                            <option value=""></option>
-                            <option value="Pass">Pass</option>
-                            <option value="Fail">Fail</option>
-                        </select>
-                    </div>
-                    <label for="microbial_additional_specs" class="block text-sm font-medium text-gray-700 mt-4">توضیحات اضافه / Additional Specifications:</label>
-                    <textarea id="microbial_additional_specs" name="microbial_additional_specs" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمون‌های شمارش میکروبی <a href="General chapters/61.html" class="text-blue-600 hover:underline" target="_blank">61</a> و آزمون‌های میکروارگانیسم‌های مشخص <a href="General chapters/62.html" class="text-blue-600 hover:underline" target="_blank">62</a></h3>
+            <p>الزامات آزمون‌های عدم وجود استافیلوکوکوس اورئوس و سودوموناس آئروژینوزا را برآورده می‌کند.</p>
         </div>
 
-        <div id="additional_requirements" class="tab-content hidden">
+        <div id="additional_requirements" class="tab-content hidden card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
-            <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری</h3>
-                <p>در ظروف کاملاً بسته نگهداری شود.</p>
-            </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته بندی و نگهداری</h3>
+            <p>در ظروف کاملاً بسته نگهداری شود.</p>
         </div>
 
     </div>
 
     <script>
-        function showTab(event, tabId) {
-            var tabcontent = document.getElementsByClassName("tab-content");
-            for (var i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].classList.add("hidden");
-            }
-            var tabbuttons = document.getElementsByClassName("tab-button");
-            for (var i = 0; i < tabbuttons.length; i++) {
-                tabbuttons[i].classList.remove("tab-active");
-                tabbuttons[i].classList.add("tab-inactive");
-            }
-            document.getElementById(tabId).classList.remove("hidden");
-            event.currentTarget.classList.remove("tab-inactive");
-            event.currentTarget.classList.add("tab-active");
+        function showTab(tabId) {
+            // Hide all tab content
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.add('hidden');
+            });
+
+            // Remove active class from all buttons
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('tab-active');
+                button.classList.add('tab-inactive');
+            });
+
+            // Show the selected tab content
+            document.getElementById(tabId).classList.remove('hidden');
+
+            // Add active class to the clicked button
+            event.currentTarget.classList.remove('tab-inactive');
+            event.currentTarget.classList.add('tab-active');
         }
 
-        // --- Calculation Functions ---
-
-        function calculateAssay() {
-            const v_h2so4 = parseFloat(document.getElementById('v_h2so4_assay').value);
-            const w_sample_ignited = parseFloat(document.getElementById('w_sample_ignited_assay').value);
-
-            if (isNaN(v_h2so4) || isNaN(w_sample_ignited) || w_sample_ignited === 0) {
-                document.getElementById('assay_result').textContent = "لطفاً مقادیر معتبر وارد کنید.";
-                document.getElementById('assay_status').textContent = "";
-                return;
-            }
-
-            const result_mg = v_h2so4 * 1 * 40.69; // 1 N sulfuric acid
-            const result_percent = (result_mg / w_sample_ignited) * 100;
-
-            let status = "";
-            let statusClass = "";
-            if (result_percent >= 98.0 && result_percent <= 100.5) {
-                status = "Pass";
-                statusClass = "pass-text";
-            } else {
-                status = "Fail";
-                statusClass = "fail-text";
-            }
-
-            document.getElementById('assay_result').textContent = `${result_percent.toFixed(2)}%`;
-            document.getElementById('assay_status').innerHTML = `<span class="${statusClass}">${status}</span>`;
-        }
-
-        function checkArsenic() {
-            const arsenic_ppm = parseFloat(document.getElementById('arsenic_ppm').value);
-            const limit = 8;
-
-            let status = "";
-            let statusClass = "";
-            if (isNaN(arsenic_ppm)) {
-                status = "نامعتبر";
-                statusClass = "";
-            } else if (arsenic_ppm <= limit) {
-                status = "Pass";
-                statusClass = "pass-text";
-            } else {
-                status = "Fail";
-                statusClass = "fail-text";
-            }
-            document.getElementById('arsenic_status').innerHTML = `<span class="${statusClass}">${status}</span>`;
-        }
-
-
-        function calculateAcidInsoluble() {
-            const w1 = parseFloat(document.getElementById('w1_acid_insoluble').value);
-            const w2 = parseFloat(document.getElementById('w2_acid_insoluble').value);
-            const sample_weight = 2.0; // Sample weight from the monograph
-
-            if (isNaN(w1) || isNaN(w2) || w1 >= w2) {
-                document.getElementById('acid_insoluble_result').textContent = "لطفاً مقادیر معتبر وارد کنید.";
-                document.getElementById('acid_insoluble_status').textContent = "";
-                document.getElementById('acid_insoluble_percent').textContent = "";
-                return;
-            }
-
-            const result_mg = (w2 - w1) * 1000;
-            const result_percent = (result_mg / (sample_weight * 1000)) * 100; // Convert sample_weight to mg
-
-            let status = "";
-            let statusClass = "";
-            if (result_percent <= 2.0) {
-                status = "Pass";
-                statusClass = "pass-text";
-            } else {
-                status = "Fail";
-                statusClass = "fail-text";
-            }
-
-            document.getElementById('acid_insoluble_result').textContent = `${result_mg.toFixed(2)} mg`;
-            document.getElementById('acid_insoluble_status').innerHTML = `<span class="${statusClass}">${status}</span>`;
-            document.getElementById('acid_insoluble_percent').textContent = `${result_percent.toFixed(2)}%`;
-        }
-
-
-        function calculateAlkaline() {
-            const v_h2so4 = parseFloat(document.getElementById('v_h2so4_alkali').value);
-            const n_h2so4 = parseFloat(document.getElementById('n_h2so4_alkali').value);
-            const limit_v = 0.20; // mL of 0.10 N sulfuric acid
-            const limit_n = 0.10; // N
-
-            if (isNaN(v_h2so4) || isNaN(n_h2so4)) {
-                document.getElementById('alkaline_status').textContent = "لطفاً مقادیر معتبر وارد کنید.";
-                return;
-            }
-
-            // For simplicity, we check if the volume of the provided acid is within the limit.
-            // A more precise calculation would convert to moles or equivalents based on the specified limit.
-            // Here, we assume the user is titrating with the specified 0.10 N acid.
-            let status = "";
-            let statusClass = "";
-            if (v_h2so4 <= limit_v) {
-                status = "Pass";
-                statusClass = "pass-text";
-            } else {
-                status = "Fail";
-                statusClass = "fail-text";
-            }
-            document.getElementById('alkaline_status').innerHTML = `<span class="${statusClass}">${status}</span>`;
-        }
-
-        function calculateLossOnIgnition() {
-            const w1 = parseFloat(document.getElementById('w1_loss_ignition').value); // Initial crucible weight
-            const wsa = parseFloat(document.getElementById('wsa_loss_ignition').value); // Sample weight
-            const w2 = parseFloat(document.getElementById('w2_loss_ignition').value); // Final crucible + ignited sample weight
-
-            if (isNaN(w1) || isNaN(wsa) || isNaN(w2) || wsa === 0) {
-                document.getElementById('loss_ignition_result').textContent = "لطفاً مقادیر معتبر وارد کنید.";
-                document.getElementById('loss_ignition_status').textContent = "";
-                return;
-            }
-
-            const lod = ((w1 + wsa) - w2) / wsa * 100;
-            const limit = 2.0; // %
-
-            let status = "";
-            let statusClass = "";
-            if (lod <= limit) {
-                status = "Pass";
-                statusClass = "pass-text";
-            } else {
-                status = "Fail";
-                statusClass = "fail-text";
-            }
-
-            document.getElementById('loss_ignition_result').textContent = `${lod.toFixed(2)}%`;
-            document.getElementById('loss_ignition_status').innerHTML = `<span class="${statusClass}">${status}</span>`;
-        }
-
-        // --- Initial Setup ---
-        document.addEventListener('DOMContentLoaded', (event) => {
-            // Simulate clicking the first tab to show content by default
-            const firstTab = document.querySelector('.tab-button');
-            if (firstTab) {
-                firstTab.click();
-            }
-        });
+        // Initialize the first tab to be active
+        document.querySelector('.tab-button').click();
     </script>
-
 </body>
 </html>

@@ -3,15 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مونوگراف کلسیم سیلیکات (USP)</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Vazirmatn Font -->
+    <title>مونوگراف سیلیکات کلسیم (USP)</title>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
-    <!-- MathJax -->
-    <script type="text/javascript" id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -70,67 +67,37 @@
         .fail-text {
             color: #ef4444;
         }
-        .interactive-card {
-            background-color: #e0f2fe;
-            border: 1px solid #90cdf4;
-            padding: 1rem;
-            margin-top: 1rem;
-            border-radius: 0.5rem;
-        }
-        .calculation-button {
-            background-color: #2563eb;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
+<body>
     <div class="container mx-auto p-4 max-w-4xl">
-        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">کلسیم سیلیکات</h1>
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">سیلیکات کلسیم</h1>
 
         <div class="flex justify-center mb-6 border-b border-gray-200">
-            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab('definition')">تعریف</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('identification')">شناسایی</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('assay')">سنجش</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('impurities')">ناخالصی‌ها</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('specific-tests')">آزمایشات خاص</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('additional-requirements')">الزامات اضافی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab(event, 'definition')">تعریف</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'identification')">شناسایی</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'assay')">سنجش</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'impurities')">ناخالصی‌ها</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'specific-tests')">آزمایشات خاص</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'additional-requirements')">الزامات اضافی</button>
         </div>
 
-        <div id="definition" class="tab-content">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
-                <p>کلسیم سیلیکات، بلورین یا آمورف، ترکیبی از اکسید کلسیم و دی‌اکسید سیلیکون است. این ماده حاوی حداقل 4.0% اکسید کلسیم و حداقل 35.0% دی‌اکسید سیلیکون است.</p>
-            </div>
+        <div id="definition" class="tab-content card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+            <p>سیلیکات کلسیم، بلوری یا آمورف، ترکیبی از اکسید کلسیم و دی‌اکسید سیلیسیم است. حاوی حداقل <span class="ltr-text">4.0%</span> اکسید کلسیم و حداقل <span class="ltr-text">35.0%</span> دی‌اکسید سیلیسیم است.</p>
         </div>
 
-        <div id="identification" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">A. تست‌های شناسایی - عمومی، کلسیم <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a></h3>
-                <p><strong>محلول نمونه:</strong> 0.5 گرم را با 10 میلی‌لیتر اسید هیدروکلریک 3 نرم مخلوط کنید. فیلتر کنید و فیلترات را با هیدروکسید آمونیوم 6 نرم تا کاغذ لیتموس خنثی کنید.</p>
-                <p><strong>معیارهای پذیرش:</strong> فیلترات خنثی شده الزامات را برآورده می‌کند.</p>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">B.</h3>
-                <p><strong>تحلیل:</strong> یک مهره با ذوب کردن چند بلور فسفات سدیم آمونیوم بر روی یک حلقه پلاتین در شعله یک مشعل گاز آماده کنید. مهره داغ و شفاف را در تماس با نمونه کلسیم سیلیکات قرار دهید و دوباره ذوب کنید.</p>
-                <p><strong>معیارهای پذیرش:</strong> سیلیکا در مهره شناور می‌شود و پس از سرد شدن، یک مهره مات با ساختار شبکه‌ای ایجاد می‌کند.</p>
-            </div>
+        <div id="identification" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تست‌های شناسایی - عمومی، کلسیم <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a></h3>
+            <p>محلول نمونه: 0.5 گرم را با 10 میلی‌لیتر اسید هیدروکلریک 3 نرم مخلوط کنید. فیلتر کنید و فیلترات را با هیدروکسید آمونیوم 6 نرم تا کاغذ لیتموس خنثی کنید.</p>
+            <p>معیارهای پذیرش: فیلترات خنثی شده الزامات را برآورده می‌کند.</p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تست B</h3>
+            <p>تجزیه و تحلیل: با ذوب کردن چند کریستال فسفات آمونیوم سدیم روی حلقه پلاتین در شعله مشعل گاز، یک گلوله (bead) تهیه کنید. گلوله داغ و شفاف را در تماس با نمونه سیلیکات کلسیم قرار دهید و دوباره ذوب کنید.</p>
+            <p>معیارهای پذیرش: دی‌اکسید سیلیسیم در گلوله شناور می‌ماند و با خنک شدن، یک گلوله مات با ساختار تار مانند تولید می‌کند.</p>
         </div>
 
-        <div id="assay" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">دی‌اکسید سیلیکون</h3>
-                <p><strong>نمونه:</strong> کلسیم سیلیکات در مقدار مناسب (به جدول 1 مراجعه کنید)</p>
-                <p class="text-lg font-semibold text-gray-700 mt-3 mb-2">جدول 1</p>
-                <table>
+        <div id="assay" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">دی‌اکسید سیلیسیم</h3>
+            <p>نمونه: مقدار مناسب سیلیکات کلسیم (به جدول 1 مراجعه کنید)</p>
+            <div class="overflow-x-auto">
+                <table class="mt-4 mb-4">
                     <thead>
                         <tr>
                             <th>وزن نمونه (میلی‌گرم)</th>
@@ -139,945 +106,188 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>400</td>
-                            <td>>25</td>
+                            <td class="ltr-text"><span class="ltr-text">400</span></td>
+                            <td>&gt;<span class="ltr-text">25</span></td>
                         </tr>
                         <tr>
-                            <td>600</td>
-                            <td>11–25</td>
+                            <td class="ltr-text"><span class="ltr-text">600</span></td>
+                            <td><span class="ltr-text">11</span>–<span class="ltr-text">25</span></td>
                         </tr>
                         <tr>
-                            <td>1000</td>
-                            <td>4–10</td>
+                            <td class="ltr-text"><span class="ltr-text">1000</span></td>
+                            <td><span class="ltr-text">4</span>–<span class="ltr-text">10</span></td>
                         </tr>
                     </tbody>
                 </table>
-                <p><strong>تحلیل:</strong> نمونه را به یک بشر منتقل کنید، 5 میلی‌لیتر آب و 10 میلی‌لیتر اسید پرکلریک اضافه کنید و تا زمانی که دود سفید غلیظ اسید پرکلریک خارج شود، حرارت دهید. بشر را با یک شیشه ساعت بپوشانید و به مدت 2 ساعت به حرارت دادن ادامه دهید. بگذارید خنک شود، 30 میلی‌لیتر آب اضافه کنید، فیلتر کنید و رسوب را با 200 میلی‌لیتر آب داغ بشویید. [نکته — مخلوط فیلترات و شستشوها را برای سنجش اکسید کلسیم نگه دارید.]</p>
-                <p>کاغذ فیلتر و محتویات آن را به یک بوته پلاتینی منتقل کنید، به آرامی تا خشک شدن حرارت دهید، سپس به اندازه کافی حرارت دهید تا کاغذ فیلتر کربن شود. در دمای حدود 900 تا 1000 درجه سانتی‌گراد تا رسیدن به وزن ثابت حرارت دهید. با 5 قطره اسید پرکلریک مرطوب کنید، 15 میلی‌لیتر اسید هیدروفلوئوریک اضافه کنید، با احتیاط روی صفحه داغ حرارت دهید تا تمام اسید تبخیر شود و در دمای حداقل 1000 درجه سانتی‌گراد تا رسیدن به وزن ثابت حرارت دهید. در دسیکاتور خنک کنید و وزن کنید: کاهش وزن نشان دهنده وزن SiO2 است.</p>
-                <p><strong>معیارهای پذیرش:</strong> حداقل 35.0% دی‌اکسید سیلیکون (SiO2) و 90.0%–110.0% از مقدار ذکر شده در برچسب، یا در محدوده درصدهای ذکر شده در برچسب.</p>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">اکسید کلسیم</h3>
-                <p><strong>محلول نمونه:</strong> از مخلوط فیلترات و شستشوهای نگهداری شده از سنجش دی‌اکسید سیلیکون استفاده کنید.</p>
-                <p><strong>سیستم تیتراسیون</strong></p>
-                <p>(به تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید.)</p>
-                <p><strong>حالت:</strong> تیتراسیون مستقیم</p>
-                <p><strong>تیترانت:</strong> 0.05 مولار ادتات دی‌سدیم VS</p>
-                <p><strong>تشخیص نقطه پایانی:</strong> بصری</p>
-                <p><strong>تحلیل:</strong> محلول نمونه را با 1 نرم سدیم هیدروکسید تا لیتموس خنثی کنید. ضمن هم زدن، 10 میلی‌لیتر ادتات دی‌سدیم 0.05 مولار VS را از یک بورت 50 میلی‌لیتری اضافه کنید. 15 میلی‌لیتر سدیم هیدروکسید 1 نرم و 300 میلی‌گرم بلو هیدروکسی نفتول اضافه کنید و تیتراسیون را تا رسیدن به نقطه پایانی آبی ادامه دهید.</p>
-                <p>Z، درصد اکسید کلسیم (CaO) را در نمونه گرفته شده محاسبه کنید:</p>
-                <div class="formula-display">
-                    <p>$$Z = \frac{V \times M \times F}{W} \times 100$$</p>
-                </div>
-                <p>V = حجم تیتترانت مصرف شده توسط محلول نمونه (mL)</p>
-                <p>M = مولاریته واقعی تیتترانت (mmol/mL)</p>
-                <p>F = فاکتور معادل، 56.08 میلی‌گرم/میلی‌مول</p>
-                <p>W = وزن نمونه (میلی‌گرم)</p>
-                <p>درصد مقدار برچسب‌گذاری شده اکسید کلسیم (CaO) را محاسبه کنید:</p>
-                <div class="formula-display">
-                    <p>$$Result = \frac{Z}{L} \times 100$$</p>
-                </div>
-                <p>Z = درصد CaO در نمونه گرفته شده همانطور که در بالا محاسبه شد</p>
-                <p>L = مقدار برچسب‌گذاری شده CaO</p>
-                <p><strong>معیارهای پذیرش:</strong> حداقل 4.0% اکسید کلسیم (CaO) و 90.0%–110.0% از مقدار ذکر شده در برچسب، یا در محدوده درصدهای ذکر شده در برچسب.</p>
-                <div class="card interactive-card">
-                    <h4>محاسبه اکسید کلسیم</h4>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="V_assay" class="block text-sm font-medium text-gray-700">حجم تیتترانت مصرفی (V)</label>
-                            <input type="text" id="V_assay" name="V_assay" class="input-field shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                        <div>
-                            <label for="M_assay" class="block text-sm font-medium text-gray-700">مولاریته واقعی تیتترانت (M) (mmol/mL)</label>
-                            <input type="text" id="M_assay" name="M_assay" class="input-field shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                        <div>
-                            <label for="W_assay" class="block text-sm font-medium text-gray-700">وزن نمونه (W) (mg)</label>
-                            <input type="text" id="W_assay" name="W_assay" class="input-field shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                        <div>
-                            <label for="L_assay" class="block text-sm font-medium text-gray-700">مقدار برچسب‌گذاری شده CaO (L) (%)</label>
-                            <input type="text" id="L_assay" name="L_assay" class="input-field shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateAssay()">محاسبه</button>
-                    <div class="mt-4">
-                        <span id="result_assay" class="font-bold"></span>
-                        <span id="status_assay" class="font-bold"></span>
-                    </div>
-                    <div class="mt-2">
-                        <span id="result_assay_ppm" class="font-bold"></span>
-                    </div>
-                    <div class="mt-4">
-                        <label for="additional_specs_assay" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_specs_assay" name="additional_specs_assay" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
-                </div>
             </div>
+            <p>تجزیه و تحلیل: نمونه را به یک بشر منتقل کنید، 5 میلی‌لیتر آب و 10 میلی‌لیتر اسید پرکلریک اضافه کنید و حرارت دهید تا دود سفید غلیظ اسید پرکلریک خارج شود. بشر را با یک ساعت شیشه‌ای بپوشانید و به مدت 2 ساعت به حرارت دادن ادامه دهید. اجازه دهید خنک شود، 30 میلی‌لیتر آب اضافه کنید، فیلتر کنید و رسوب را با 200 میلی‌لیتر آب داغ بشویید. [توجه — فیلترات و شستشوهای ترکیبی را برای سنجش اکسید کلسیم نگه دارید.]</p>
+            <p>کاغذ فیلتر و محتویات آن را به یک بوته پلاتینی منتقل کنید، به آرامی تا خشکی حرارت دهید، سپس به اندازه کافی حرارت دهید تا کاغذ فیلتر کربن شود. در دمای حدود 900°–1000° تا رسیدن به وزن ثابت، حرارت دهید. با 5 قطره اسید پرکلریک، باقیمانده را مرطوب کنید، 15 میلی‌لیتر اسید هیدروفلوئوریک اضافه کنید، با احتیاط روی صفحه داغ حرارت دهید تا تمام اسید خارج شود، و در دمای حداقل 1000° تا رسیدن به وزن ثابت، حرارت دهید. در دسیکاتور خنک کنید و وزن کنید: کاهش وزن نشان‌دهنده وزن SiO2 است.</p>
+            <p>معیارهای پذیرش: حداقل <span class="ltr-text">35.0%</span> دی‌اکسید سیلیسیم (SiO2) و <span class="ltr-text">90.0%</span>–<span class="ltr-text">110.0%</span> مقدار ذکر شده در برچسب، یا در محدوده درصد ذکر شده در برچسب.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">اکسید کلسیم</h3>
+            <p>محلول نمونه: از فیلترات و شستشوهای ترکیبی که از سنجش دی‌اکسید سیلیسیم نگهداری شده است، استفاده کنید.</p>
+            <p>سیستم تیتراسیون (به تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید).</p>
+            <p>حالت: تیتراسیون مستقیم</p>
+            <p>تیترانت: 0.05 مولار ادتات دی‌سدیم VS</p>
+            <p>تشخیص نقطه پایانی: بصری</p>
+            <p>تجزیه و تحلیل: محلول نمونه را با 1 نرم هیدروکسید سدیم تا لیتموس خنثی کنید. در حالی که هم می‌زنید، 10 میلی‌لیتر ادتات دی‌سدیم VS 0.05 مولار را از یک بورت 50 میلی‌لیتری اضافه کنید. 15 میلی‌لیتر هیدروکسید سدیم 1 نرم و 300 میلی‌گرم آبی ناپتول بلو را اضافه کنید و تیتراسیون را تا نقطه پایانی آبی ادامه دهید.</p>
+            <p>Z، درصد اکسید کلسیم (CaO) را در نمونه گرفته شده محاسبه کنید:</p>
+            <div class="formula-display">
+                <p class="text-lg">$$Z = \frac{V \times M \times F}{W} \times 100$$</p>
+            </div>
+            <p>V = حجم تیترانت مصرف شده توسط محلول نمونه (mL)</p>
+            <p>M = مولاریته واقعی تیترانت (mmol/mL)</p>
+            <p>F = ضریب معادل‌سازی، 56.08 mg/mmol</p>
+            <p>W = وزن نمونه (mg)</p>
+            <p>درصد مقدار برچسب‌گذاری شده اکسید کلسیم (CaO) را محاسبه کنید:</p>
+            <div class="formula-display">
+                <p class="text-lg">$$Result = \frac{Z}{L} \times 100$$</p>
+            </div>
+            <p>Z = درصد CaO در نمونه گرفته شده طبق محاسبه بالا</p>
+            <p>L = مقدار برچسب‌گذاری شده CaO</p>
+            <p>معیارهای پذیرش: حداقل <span class="ltr-text">4.0%</span> اکسید کلسیم (CaO) و <span class="ltr-text">90.0%</span>–<span class="ltr-text">110.0%</span> مقدار ذکر شده در برچسب، یا در محدوده درصد ذکر شده در برچسب.</p>
         </div>
 
-        <div id="impurities" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">ضرر در اشتعال <a href="General chapters/733.html" class="text-blue-600 hover:underline" target="_blank">733</a></h3>
-                <p>1 گرم را در یک بوته وزن شده مناسب منتقل کنید، در دمای 105 درجه سانتی‌گراد به مدت 2 ساعت خشک کنید و در دمای 900 درجه سانتی‌گراد تا رسیدن به وزن ثابت اشتعال دهید: نباید بیش از 20.0% از وزن خود را از دست بدهد.</p>
-
-                <div class="card interactive-card">
-                    <h4>حد مواد نامحلول در اسید</h4>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="W1_acid_insoluble" class="block text-sm font-medium text-gray-700">W1 (g)</label>
-                            <input type="text" id="W1_acid_insoluble" name="W1_acid_insoluble" class="input-field shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                        <div>
-                            <label for="W2_acid_insoluble" class="block text-sm font-medium text-gray-700">W2 (g)</label>
-                            <input type="text" id="W2_acid_insoluble" name="W2_acid_insoluble" class="input-field shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateLimitAcidInsoluble()">محاسبه</button>
-                    <div class="mt-4">
-                        <span id="result_acid_insoluble" class="font-bold"></span>
-                        <span id="status_acid_insoluble" class="font-bold"></span>
-                    </div>
-                    <div class="mt-2">
-                        <span id="result_acid_insoluble_ppm" class="font-bold"></span>
-                    </div>
-                    <div class="mt-4">
-                        <label for="additional_specs_acid_insoluble" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_specs_acid_insoluble" name="additional_specs_acid_insoluble" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
-                </div>
-                <div class="card interactive-card">
-                    <h4>حد منیزیم و نمک‌های قلیایی</h4>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="W1_magnesium_alkali" class="block text-sm font-medium text-gray-700">W1 (g)</label>
-                            <input type="text" id="W1_magnesium_alkali" name="W1_magnesium_alkali" class="input-field shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                        <div>
-                            <label for="W2_magnesium_alkali" class="block text-sm font-medium text-gray-700">W2 (g)</label>
-                            <input type="text" id="W2_magnesium_alkali" name="W2_magnesium_alkali" class="input-field shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateLimitMagnesiumAlkali()">محاسبه</button>
-                    <div class="mt-4">
-                        <span id="result_magnesium_alkali" class="font-bold"></span>
-                        <span id="status_magnesium_alkali" class="font-bold"></span>
-                    </div>
-                    <div class="mt-2">
-                        <span id="result_magnesium_alkali_ppm" class="font-bold"></span>
-                    </div>
-                    <div class="mt-4">
-                        <label for="additional_specs_magnesium_alkali" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_specs_magnesium_alkali" name="additional_specs_magnesium_alkali" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
-                </div>
-                <div class="card interactive-card">
-                    <h4>ماده نامحلول در الکل</h4>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="W1_alcohol_insoluble" class="block text-sm font-medium text-gray-700">W1 (g)</label>
-                            <input type="text" id="W1_alcohol_insoluble" name="W1_alcohol_insoluble" class="input-field shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                        <div>
-                            <label for="W2_alcohol_insoluble" class="block text-sm font-medium text-gray-700">W2 (g)</label>
-                            <input type="text" id="W2_alcohol_insoluble" name="W2_alcohol_insoluble" class="input-field shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateAlcoholInsoluble()">محاسبه</button>
-                    <div class="mt-4">
-                        <span id="result_alcohol_insoluble" class="font-bold"></span>
-                        <span id="status_alcohol_insoluble" class="font-bold"></span>
-                    </div>
-                    <div class="mt-2">
-                        <span id="result_alcohol_insoluble_ppm" class="font-bold"></span>
-                    </div>
-                    <div class="mt-4">
-                        <label for="additional_specs_alcohol_insoluble" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_specs_alcohol_insoluble" name="additional_specs_alcohol_insoluble" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
-                </div>
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد سرب</h4>
-                <p><strong>ماتریس تعدیل کننده پالادیوم:</strong> نیترات پالادیوم (1% Pd)<sup>1</sup></p>
-                <p><strong>ماتریس تعدیل کننده منیزیم:</strong> نیترات منیزیم (2% Mg)<sup>2</sup></p>
-                <p><strong>اسید نیتریک، 65%:</strong> از گرید مناسب با حداقل 65.0% استفاده کنید.<sup>3</sup></p>
-                <p><strong>رقیق کننده اسید نیتریک:</strong> 42 میلی‌لیتر اسید نیتریک 65% را در یک فلاسک حجمی 1000 میلی‌لیتری منتقل کنید. با آب تا حجم برسانید.</p>
-                <p><strong>محلول تعدیل کننده ماتریس:</strong> 1.0 میلی‌لیتر از ماتریس تعدیل کننده پالادیوم و 100 میکرولیتر از ماتریس تعدیل کننده منیزیم را به یک فلاسک حجمی 20 میلی‌لیتری منتقل کنید. با آب تا حجم برسانید و مخلوط کنید.</p>
-                <p><strong>محلول استاندارد سرب:</strong> محلولی حاوی Pb(NO3)2 در اسید نیتریک 0.5 مولار معادل 1000 میلی‌گرم سرب/لیتر<sup>4</sup></p>
-                <p><strong>محلول استاندارد:</strong> 100 میکرولیتر از محلول استاندارد سرب را به یک فلاسک حجمی 100 میلی‌لیتری منتقل کنید. با آب تا حجم برسانید و مخلوط کنید. این محلول حاوی معادل 1.0 میکروگرم/میلی‌لیتر سرب است.</p>
-                <p><strong>محلول‌های کالیبراسیون</strong></p>
-                <p><strong>محلول کالیبراسیون A:</strong> 50 میلی‌لیتر رقیق کننده اسید نیتریک را به یک فلاسک حجمی 100 میلی‌لیتری منتقل کنید و با آب تا حجم برسانید (0 میکروگرم/میلی‌لیتر سرب).</p>
-                <p><strong>محلول کالیبراسیون B:</strong> 1 میلی‌لیتر از محلول استاندارد و 50 میلی‌لیتر رقیق کننده اسید نیتریک را به یک فلاسک حجمی 100 میلی‌لیتری منتقل کنید و با آب تا حجم برسانید (0.01 میکروگرم/میلی‌لیتر سرب).</p>
-                <p><strong>محلول کالیبراسیون C:</strong> 5 میلی‌لیتر از محلول استاندارد و 50 میلی‌لیتر رقیق کننده اسید نیتریک را به یک فلاسک حجمی 100 میلی‌لیتری منتقل کنید و با آب تا حجم برسانید (0.05 میکروگرم/میلی‌لیتر سرب).</p>
-                <p><sup>1</sup> گرید مناسب به عنوان شماره کاتالوگ RCMMPD10KN-50 از VWR، www.vwr.com موجود است.</p>
-                <p><sup>2</sup> موجود به عنوان شماره کاتالوگ RCMMMG20KN-50، از VWR، www.vwr.com.</p>
-                <p><sup>3</sup> گرید مناسب به عنوان شماره کاتالوگ 441-2 از EMD Chemicals، www.emdchemicals.com موجود است.</p>
-                <p><sup>4</sup> گرید مناسب به عنوان شماره کاتالوگ 1.19776 از EMD Chemicals، www.emdchemicals.com موجود است.</p>
-                <p><strong>محلول نمونه:</strong> 2.0 گرم کلسیم سیلیکات را در یک بشر 150 میلی‌لیتری وزن کنید. با 50 میلی‌لیتر رقیق کننده اسید نیتریک مخلوط کنید. با یک شیشه ساعت بپوشانید و به مدت 20 دقیقه بجوشانید. بگذارید خنک شود. با کمک خلاء، از یک فیلتر شیشه‌ای عبور دهید<sup>5</sup> و فیلتر را چندین بار با آب بشویید. فیلترات را به یک فلاسک حجمی 100 میلی‌لیتری منتقل کنید. با آب تا حجم برسانید و مخلوط کنید.</p>
-                <p><strong>محلول تناسب سیستم:</strong> 5 میلی‌لیتر از محلول استاندارد و 50 میلی‌لیتر رقیق کننده اسید نیتریک را به یک فلاسک حجمی 100 میلی‌لیتری منتقل کنید. با آب تا حجم برسانید و مخلوط کنید. این محلول حاوی معادل 0.05 میکروگرم سرب/میلی‌لیتر است.</p>
-                <p><strong>شرایط دستگاهی</strong></p>
-                <p>(به طیف‌سنجی جذب اتمی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید.)</p>
-                <p><strong>حالت:</strong> اسپکتروفتومتر جذب اتمی کوره گرافیتی</p>
-                <p><strong>طول موج تحلیلی:</strong> 283.3 نانومتر (خط انتشار سرب)</p>
-                <p><strong>لامپ:</strong> لامپ کاتد توخالی سرب و وسیله کافی برای تصحیح پس‌زمینه زیمان</p>
-                <p><strong>گاز حامل:</strong> آرگون</p>
-                <p>تحت شرایط معمول، حجم محلول نمونه و محلول‌های کالیبراسیون 20 میکرولیتر، حجم محلول تعدیل کننده ماتریس 10 میکرولیتر، دمای تزریق 20 درجه سانتی‌گراد، و شرایط کوره به شرح زیر است (به جدول 2 مراجعه کنید).</p>
-                <p>[نکته — این شرایط ممکن است برای هر دستگاه بهینه شود.]</p>
-                <p class="text-lg font-semibold text-gray-700 mt-3 mb-2">جدول 2</p>
-                <table>
+        <div id="impurities" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">کاهش وزن در اثر حرارت (Loss on Ignition) <a href="General chapters/733.html" class="text-blue-600 hover:underline" target="_blank">733</a></h3>
+            <p>1 گرم را به یک بوته تارت شده مناسب منتقل کنید، در دمای 105 درجه به مدت 2 ساعت خشک کنید، و در دمای 900 درجه تا رسیدن به وزن ثابت حرارت دهید: وزن آن نباید بیش از 20.0% باشد.</p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">محدودیت سرب</h3>
+            <p>اصلاح‌کننده ماتریس پالادیوم: نیترات پالادیوم (<span class="ltr-text">1%</span> Pd)¹</p>
+            <p>اصلاح‌کننده ماتریس منیزیم: نیترات منیزیم (<span class="ltr-text">2%</span> Mg)²</p>
+            <p>اسید نیتریک، <span class="ltr-text">65%</span> [<span class="ltr-text">7697-37-2</span>]: از درجه مناسب با محتوای حداقل <span class="ltr-text">65.0%</span> استفاده کنید.³</p>
+            <p>رقیق‌کننده اسید نیتریک: 42 میلی‌لیتر اسید نیتریک، <span class="ltr-text">65%</span> را به یک فلاسک حجمی 1000 میلی‌لیتری منتقل کنید. با آب تا حجم رقیق کنید.</p>
+            <p>محلول اصلاح‌کننده ماتریس: 1.0 میلی‌لیتر اصلاح‌کننده ماتریس پالادیوم و 100 میکرولیتر اصلاح‌کننده ماتریس منیزیم را به یک فلاسک حجمی 20 میلی‌لیتری منتقل کنید. با آب تا حجم رقیق کرده و مخلوط کنید.</p>
+            <p>محلول استاندارد سرب: محلولی حاوی Pb(NO3)2 در اسید نیتریک 0.5 مولار معادل 1000 میلی‌گرم سرب در لیتر ▲(ERR 1-Mar-2019)⁴</p>
+            <p>محلول استاندارد: 100 میکرولیتر محلول استاندارد سرب را به یک فلاسک حجمی 100 میلی‌لیتری منتقل کنید. با آب تا حجم رقیق کرده و مخلوط کنید. این محلول حاوی معادل 1.0 میکروگرم در میلی‌لیتر سرب است.</p>
+            <p>محلول‌های کالیبراسیون</p>
+            <p>محلول کالیبراسیون A: 50 میلی‌لیتر رقیق‌کننده اسید نیتریک را به یک فلاسک حجمی 100 میلی‌لیتری منتقل کنید و با آب تا حجم رقیق کنید (0 میکروگرم در میلی‌لیتر سرب).</p>
+            <p>محلول کالیبراسیون B: 1 میلی‌لیتر محلول استاندارد و 50 میلی‌لیتر رقیق‌کننده اسید نیتریک را به یک فلاسک حجمی 100 میلی‌لیتری منتقل کنید و با آب تا حجم رقیق کنید (0.01 میکروگرم در میلی‌لیتر سرب).</p>
+            <p>محلول کالیبراسیون C: 5 میلی‌لیتر محلول استاندارد و 50 میلی‌لیتر رقیق‌کننده اسید نیتریک را به یک فلاسک حجمی 100 میلی‌لیتری منتقل کنید و با آب تا حجم رقیق کنید (0.05 میکروگرم در میلی‌لیتر سرب).</p>
+            <p>¹ یک درجه مناسب به عنوان شماره کاتالوگ RCMMPD10KN-50 از VWR، www.vwr.com موجود است.</p>
+            <p>² به عنوان شماره کاتالوگ RCMMMG20KN-50، از VWR، www.vwr.com موجود است.</p>
+            <p>³ یک درجه مناسب به عنوان شماره کاتالوگ 441-2 از EMD Chemicals، www.emdchemicals.com موجود است.</p>
+            <p>⁴ یک درجه مناسب به عنوان شماره کاتالوگ 1.19<a href="General chapters/776.html" class="text-blue-600 hover:underline" target="_blank">776</a> از EMD Chemicals، www.emdchemicals.com موجود است.</p>
+            <div class="overflow-x-auto">
+                <table class="mt-4 mb-4">
                     <thead>
                         <tr>
                             <th>مرحله</th>
-                            <th>دما (درجه سانتی‌گراد)</th>
+                            <th>دما (درجه)</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>خشک کردن 1</td>
-                            <td>110</td>
+                            <td class="ltr-text"><span class="ltr-text">110</span></td>
                         </tr>
                         <tr>
                             <td>خشک کردن 2</td>
-                            <td>130</td>
+                            <td class="ltr-text"><span class="ltr-text">130</span></td>
                         </tr>
                         <tr>
                             <td>پیرولیز</td>
-                            <td>950</td>
+                            <td class="ltr-text"><span class="ltr-text">950</span></td>
                         </tr>
                         <tr>
                             <td>خواندن</td>
-                            <td>1800</td>
+                            <td class="ltr-text"><span class="ltr-text">1800</span></td>
                         </tr>
                         <tr>
-                            <td>پاک کردن</td>
-                            <td>2450</td>
+                            <td>خارج کردن</td>
+                            <td class="ltr-text"><span class="ltr-text">2450</span></td>
                         </tr>
                     </tbody>
                 </table>
-                <p><strong>تحلیل</strong></p>
-                <p><strong>نمونه‌ها:</strong> محلول‌های کالیبراسیون، محلول نمونه، و محلول تناسب سیستم</p>
-                <p>منحنی جذب هر محلول کالیبراسیون را در مقابل محتوای سرب آن، بر حسب میکروگرم/میلی‌لیتر، رسم کنید و بهترین خط مستقیم را که سه نقطه را برازش می‌دهد، ترسیم کنید. از این نمودار، غلظت سرب در محلول نمونه، بر حسب میکروگرم/میلی‌لیتر را تعیین کنید: ضریب همبستگی حداقل 0.99 است و بازیابی برای محلول تناسب سیستم 85%–115% است.</p>
-                <p>مقدار سرب را در محلول نمونه، بر حسب ppm، محاسبه کنید.</p>
-                <div class="formula-display">
-                    <p>$$Result = \frac{C \times V}{W}$$</p>
-                </div>
-                <p>C = غلظت محلول نمونه (µg/mL)</p>
-                <p>V = حجم محلول نمونه (mL)</p>
-                <p>W = وزن نمونه گرفته شده (g)</p>
-                <p><strong>معیارهای پذیرش:</strong> حداکثر 10 ppm</p>
-
-                <div class="card interactive-card">
-                    <h4>حد سرب</h4>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="C_lead" class="block text-sm font-medium text-gray-700">غلظت محلول نمونه (C) (µg/mL)</label>
-                            <input type="text" id="C_lead" name="C_lead" class="input-field shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                        <div>
-                            <label for="V_lead" class="block text-sm font-medium text-gray-700">حجم محلول نمونه (V) (mL)</label>
-                            <input type="text" id="V_lead" name="V_lead" class="input-field shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                        <div>
-                            <label for="W_lead" class="block text-sm font-medium text-gray-700">وزن نمونه (W) (g)</label>
-                            <input type="text" id="W_lead" name="W_lead" class="input-field shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateLead()">محاسبه</button>
-                    <div class="mt-4">
-                        <span id="result_lead" class="font-bold"></span>
-                        <span id="status_lead" class="font-bold"></span>
-                    </div>
-                    <div class="mt-2">
-                        <span id="result_lead_ppm" class="font-bold"></span>
-                    </div>
-                    <div class="mt-4">
-                        <label for="additional_specs_lead" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_specs_lead" name="additional_specs_lead" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
-                </div>
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد فلوراید</h4>
-                <p>[نکته — تمام محلول‌ها را در ظروف پلی‌تِف نگهداری کنید.]</p>
-                <p><strong>محلول بافر:</strong> 294 میلی‌گرم/میلی‌لیتر سیترات سدیم</p>
-                <p><strong>بافر تنظیم کننده قدرت یونی:</strong> 42 میلی‌لیتر اسید هیدروکلریک، 121 گرم تریس (هیدروکسی متیل) آمینومتان، و 115 گرم تارتارات سدیم را به یک فلاسک حجمی 500 میلی‌لیتری حاوی 250 میلی‌لیتر آب منتقل کنید. هم بزنید تا حل شود و با آب تا حجم برسانید.</p>
-                <p><strong>محلول استوک استاندارد:</strong> 221 میکروگرم/میلی‌لیتر سدیم فلوراید USP RS. این محلول استوک حاوی 100 میکروگرم/میلی‌لیتر یون فلوراید است.</p>
-                <p><strong>محلول نمونه:</strong> 2.0 گرم کلسیم سیلیکات را به یک بشر پلی‌تِف 100 میلی‌لیتری حاوی یک میله همزن مغناطیسی منتقل کنید. 20 میلی‌لیتر آب و 2.0 میلی‌لیتر اسید هیدروکلریک اضافه کنید. با یک شیشه ساعت بپوشانید و برای 1 دقیقه، ضمن هم زدن مداوم، به جوش شدید برسانید. از حرارت بردارید و خنک کنید. سوسپانسیون خنک شده را به یک بشر پلی‌تِف 100 میلی‌لیتری منتقل کنید. 25 میلی‌لیتر محلول بافر اضافه کنید و با آمونیاک هیدروکسید یا اسید هیدروکلریک به pH 5-6 تنظیم کنید. 50 میلی‌لیتر بافر تنظیم کننده قدرت یونی اضافه کنید و با آب 100 میلی‌لیتر محلول تهیه کنید.</p>
-                <p><strong>سیستم الکترود:</strong> از یک الکترود نشانگر یون ویژه فلوراید و یک الکترود مرجع مناسب متصل به یک pH متر که قادر به اندازه‌گیری پتانسیل با تکرارپذیری ±0.2 میلی‌ولت است (به pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a> مراجعه کنید) استفاده کنید.</p>
-                <p><strong>خط پاسخ استاندارد:</strong> یک خط پاسخ استاندارد با چهار محلول استاندارد حاوی 0، 0.10، 0.20، و 0.40 میکروگرم/میلی‌لیتر فلوراید به شرح زیر تهیه کنید. 23 میلی‌لیتر آب، 2 میلی‌لیتر اسید هیدروکلریک، و 25 میلی‌لیتر محلول بافر را به یک بشر پلاستیکی 100 میلی‌لیتری اضافه کنید. با آمونیاک هیدروکسید به pH 5-6 تنظیم کنید و بافر تنظیم کننده قدرت یونی را اضافه کنید تا 100 میلی‌لیتر محلول حاصل شود. الکترود را در محلول قرار دهید، حداقل به مدت 15 دقیقه هم بزنید و پتانسیل محلول استاندارد حاوی 0 میکروگرم/میلی‌لیتر فلوراید را ثبت کنید. هنگامی که الکترود پایدار شد، 100 میکرولیتر از محلول استوک استاندارد را به بشر اضافه کنید و هم بزنید. به الکترود 5 دقیقه فرصت دهید تا پایدار شود و پتانسیل محلول‌های استاندارد حاوی 0.10 میکروگرم/میلی‌لیتر فلوراید را اندازه‌گیری کنید. به طور مشابه، 100 و 200 میکرولیتر دیگر از محلول استوک استاندارد را اضافه کنید و پتانسیل محلول‌های استاندارد حاوی 0.20 میکروگرم/میلی‌لیتر فلوراید و 0.40 میکروگرم/میلی‌لیتر فلوراید را به ترتیب ثبت کنید. پس از هر افزودن، قبل از ثبت خواندن، به مدت 5 دقیقه به هم زدن ادامه دهید.</p>
-                <p><strong>تحلیل:</strong> الکترود کالیبره شده را در محلول نمونه قرار دهید، به مدت 5 دقیقه هم بزنید و اندازه‌گیری را ثبت کنید. از پتانسیل اندازه‌گیری شده محلول نمونه و خط پاسخ استاندارد، غلظت C، بر حسب میکروگرم/میلی‌لیتر، یون فلوراید در محلول نمونه را تعیین کنید.</p>
-                <p>مقدار فلوراید را در کلسیم سیلیکات، بر حسب ppm، محاسبه کنید:</p>
-                <div class="formula-display">
-                    <p>$$Result = \frac{C \times V}{W}$$</p>
-                </div>
-                <p>C = غلظت یون فلوراید در محلول نمونه (µg/mL)</p>
-                <p>V = حجم محلول نمونه (mL)</p>
-                <p>W = وزن کلسیم سیلیکات در محلول نمونه (g)</p>
-                <p><strong>معیارهای پذیرش:</strong> حداکثر 50 ppm</p>
-
-                <div class="card interactive-card">
-                    <h4>حد فلوراید</h4>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="C_fluoride" class="block text-sm font-medium text-gray-700">غلظت یون فلوراید (C) (µg/mL)</label>
-                            <input type="text" id="C_fluoride" name="C_fluoride" class="input-field shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                        <div>
-                            <label for="V_fluoride" class="block text-sm font-medium text-gray-700">حجم محلول نمونه (V) (mL)</label>
-                            <input type="text" id="V_fluoride" name="V_fluoride" class="input-field shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                        <div>
-                            <label for="W_fluoride" class="block text-sm font-medium text-gray-700">وزن کلسیم سیلیکات (W) (g)</label>
-                            <input type="text" id="W_fluoride" name="W_fluoride" class="input-field shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateFluoride()">محاسبه</button>
-                    <div class="mt-4">
-                        <span id="result_fluoride" class="font-bold"></span>
-                        <span id="status_fluoride" class="font-bold"></span>
-                    </div>
-                    <div class="mt-2">
-                        <span id="result_fluoride_ppm" class="font-bold"></span>
-                    </div>
-                    <div class="mt-4">
-                        <label for="additional_specs_fluoride" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_specs_fluoride" name="additional_specs_fluoride" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
-                </div>
             </div>
+            <p>محلول نمونه: 2.0 گرم سیلیکات کلسیم را در یک بشر 150 میلی‌لیتری وزن کنید. با 50 میلی‌لیتر رقیق‌کننده اسید نیتریک مخلوط کنید. با یک ساعت شیشه‌ای بپوشانید و به مدت 20 دقیقه بجوشانید. اجازه دهید خنک شود. با کمک خلاء، از یک فیلتر شیشه‌ای ۵ عبور دهید و فیلتر را چندین بار با آب بشویید. فیلترات را به یک فلاسک حجمی 100 میلی‌لیتری منتقل کنید. با آب تا حجم رقیق کرده و مخلوط کنید.</p>
+            <p>محلول تناسب سیستم: 5 میلی‌لیتر محلول استاندارد و 50 میلی‌لیتر رقیق‌کننده اسید نیتریک را به یک فلاسک حجمی 100 میلی‌لیتری منتقل کنید. با آب تا حجم رقیق کرده و مخلوط کنید. این محلول حاوی معادل 0.05 میکروگرم سرب در میلی‌لیتر است.</p>
+            <p>شرایط دستگاهی (به اسپکتروسکوپی جذب اتمی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید).</p>
+            <p>حالت: طیف‌سنجی جذب اتمی کوره گرافیتی</p>
+            <p>طول موج تحلیلی: <span class="ltr-text">283.3 nm</span> (خط انتشار سرب)</p>
+            <p>لامپ: لامپ کاتد توخالی سرب و وسیله مناسب برای تصحیح پس‌زمینه زیمان</p>
+            <p>گاز حامل: آرگون</p>
+            <p>تحت شرایط معمول، حجم محلول نمونه و محلول‌های کالیبراسیون <span class="ltr-text">20 µL</span>، حجم محلول اصلاح‌کننده ماتریس <span class="ltr-text">10 µL</span>، دمای تزریق <span class="ltr-text">20°</span> است و شرایط کوره مطابق با جدول 2 است. [توجه — این شرایط ممکن است برای هر دستگاه بهینه‌سازی شوند.]</p>
+            <p>تجزیه و تحلیل:</p>
+            <p>نمونه‌ها: محلول‌های کالیبراسیون، محلول نمونه، و محلول تناسب سیستم</p>
+            <p>جذب هر محلول کالیبراسیون را در برابر محتوای سرب آن، بر حسب میکروگرم در میلی‌لیتر، رسم کنید و بهترین خط راست را که سه نقطه را برازش می‌دهد، ترسیم کنید. از این نمودار، غلظت سرب در محلول نمونه را بر حسب میکروگرم در میلی‌لیتر تعیین کنید: ضریب همبستگی حداقل 0.99 است و بازیابی برای محلول تناسب سیستم 85%–115% است.</p>
+            <p>مقدار سرب را بر حسب ppm در محلول نمونه محاسبه کنید.</p>
+            <div class="formula-display">
+                <p class="text-lg">$$Result = \frac{C \times V}{W}$$</p>
+            </div>
+            <p>C = غلظت محلول نمونه (µg/mL)</p>
+            <p>V = حجم محلول نمونه (mL)</p>
+            <p>W = وزن نمونه گرفته شده (g)</p>
+            <p>معیارهای پذیرش: حداکثر <span class="ltr-text">10 ppm</span></p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">محدودیت فلوراید</h3>
+            <p>[توجه — تمام محلول‌ها را در ظروف پلی‌تِف (polytef) نگهداری کنید.]</p>
+            <p>محلول بافر: <span class="ltr-text">294 mg/mL</span> سیترات سدیم</p>
+            <p>بافر تنظیم قدرت یونی: 42 میلی‌لیتر اسید هیدروکلریک، 121 گرم تریس(هیدروکسی متیل) آمینومتان، و 115 گرم تارتارات سدیم را به یک فلاسک حجمی 500 میلی‌لیتری حاوی 250 میلی‌لیتر آب منتقل کنید. برای حل شدن هم بزنید و با آب تا حجم رقیق کنید.</p>
+            <p>محلول استاندارد ذخیره: <span class="ltr-text"><a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a> µg/mL</span> USP سدیم فلوراید RS. این محلول ذخیره حاوی 100 میکروگرم در میلی‌لیتر یون فلوراید است.</p>
+            <p>محلول نمونه: 2.0 گرم سیلیکات کلسیم را به یک فلاسک پلی‌تِف 100 میلی‌لیتری حاوی همزن مغناطیسی منتقل کنید. 20 میلی‌لیتر آب و 2.0 میلی‌لیتر اسید هیدروکلریک اضافه کنید. با یک ساعت شیشه‌ای بپوشانید و برای 1 دقیقه در حالی که به طور مداوم هم می‌زنید، به شدت بجوشانید. از حرارت بردارید و خنک کنید. سوسپانسیون خنک شده را به یک فلاسک پلی‌تِف 100 میلی‌لیتری منتقل کنید. 25 میلی‌لیتر محلول بافر اضافه کنید و با هیدروکسید آمونیوم یا اسید هیدروکلریک به pH 5-6 تنظیم کنید. 50 میلی‌لیتر بافر تنظیم قدرت یونی اضافه کنید و با آب به حجم 100 میلی‌لیتر برسانید.</p>
+            <p>سیستم الکترود: از یک الکترود نشانگر یون فلوراید-خاص و یک الکترود مرجع مناسب که به یک pH متر متصل است و قادر به اندازه‌گیری پتانسیل‌ها با تکرارپذیری ±0.2 mV است (به pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a> مراجعه کنید) استفاده کنید.</p>
+            <p>خط پاسخ استاندارد: یک خط پاسخ استاندارد با چهار محلول استاندارد حاوی 0، 0.10، 0.20 و 0.40 میکروگرم در میلی‌لیتر فلوراید به شرح زیر بدست آورید. 23 میلی‌لیتر آب، 2 میلی‌لیتر اسید هیدروکلریک و 25 میلی‌لیتر محلول بافر را به یک بشر پلاستیکی 100 میلی‌لیتری اضافه کنید. با هیدروکسید آمونیوم به pH 5-6 تنظیم کنید و بافر تنظیم قدرت یونی را اضافه کنید تا 100 میلی‌لیتر محلول بدست آید. الکترود را در محلول قرار دهید، حداقل 15 دقیقه هم بزنید و پتانسیل محلول استاندارد حاوی 0 میکروگرم در میلی‌لیتر فلوراید را ثبت کنید. هنگامی که الکترود پایدار شد، 100 میکرولیتر محلول استاندارد ذخیره را به بشر اضافه کرده و هم بزنید. برای 5 دقیقه اجازه دهید الکترود پایدار شود و پتانسیل محلول استاندارد حاوی 0.10 میکروگرم در میلی‌لیتر فلوراید را اندازه‌گیری کنید. به طور مشابه، 100 و 200 میکرولیتر دیگر محلول استاندارد ذخیره را اضافه کرده و پتانسیل محلول‌های استاندارد حاوی 0.20 میکروگرم در میلی‌لیتر فلوراید و 0.40 میکروگرم در میلی‌لیتر فلوراید را به ترتیب ثبت کنید. پس از هر بار اضافه کردن، قبل از ثبت خوانش، به هم زدن برای 5 دقیقه ادامه دهید.</p>
+            <p>تجزیه و تحلیل: الکترود کالیبره شده را در محلول نمونه قرار دهید، 5 دقیقه هم بزنید و اندازه‌گیری را ثبت کنید. از پتانسیل اندازه‌گیری شده محلول نمونه و خط پاسخ استاندارد، غلظت C، بر حسب میکروگرم در میلی‌لیتر، یون فلوراید در محلول نمونه را تعیین کنید.</p>
+            <p>مقدار فلوراید را بر حسب ppm در سیلیکات کلسیم محاسبه کنید:</p>
+            <div class="formula-display">
+                <p class="text-lg">$$Result = \frac{C \times V}{W}$$</p>
+            </div>
+            <p>C = غلظت یون فلوراید در محلول نمونه (µg/mL)</p>
+            <p>V = حجم محلول نمونه (mL)</p>
+            <p>W = وزن سیلیکات کلسیم در محلول نمونه (g)</p>
+            <p>معیارهای پذیرش: حداکثر <span class="ltr-text">50 ppm</span></p>
         </div>
 
-        <div id="specific-tests" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a></h3>
-                <p>8.4–11.2، تعیین شده در سوسپانسیون آبی مخلوط شده (1 به 20)</p>
-                <div class="card interactive-card">
-                    <h4>pH</h4>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="ph_test" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                            <select id="ph_test" name="ph_test" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                                <option value=""></option>
-                                <option value="Pass">Pass</option>
-                                <option value="Fail">Fail</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="mt-4">
-                        <span id="result_ph" class="font-bold"></span>
-                        <span id="status_ph" class="font-bold"></span>
-                    </div>
-                    <div class="mt-4">
-                        <label for="additional_specs_ph" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_specs_ph" name="additional_specs_ph" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
-                </div>
-
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نسبت دی‌اکسید سیلیکون به اکسید کلسیم</h4>
-                <p>درصد دی‌اکسید سیلیکون بدست آمده در تست دی‌اکسید سیلیکون را بر درصد اکسید کلسیم بدست آمده در تست اکسید کلسیم تقسیم کنید.</p>
-                <p><strong>معیارهای پذیرش:</strong> 0.5–20</p>
-                <div class="card interactive-card">
-                    <h4>نسبت SiO2 به CaO</h4>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="sio2_percentage" class="block text-sm font-medium text-gray-700">درصد SiO2 (%)</label>
-                            <input type="text" id="sio2_percentage" name="sio2_percentage" class="input-field shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                        <div>
-                            <label for="cao_percentage" class="block text-sm font-medium text-gray-700">درصد CaO (%)</label>
-                            <input type="text" id="cao_percentage" name="cao_percentage" class="input-field shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateRatioSiO2CaO()">محاسبه</button>
-                    <div class="mt-4">
-                        <span id="result_ratio_sio2_cao" class="font-bold"></span>
-                        <span id="status_ratio_sio2_cao" class="font-bold"></span>
-                    </div>
-                    <div class="mt-2">
-                        <span id="result_ratio_sio2_cao_ppm" class="font-bold"></span>
-                    </div>
-                    <div class="mt-4">
-                        <label for="additional_specs_ratio_sio2_cao" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_specs_ratio_sio2_cao" name="additional_specs_ratio_sio2_cao" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
-                </div>
-
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مجموع CaO، SiO2 و ضرر در اشتعال</h4>
-                <p>مجموع درصد‌های بدست آمده در سه تست حداقل 90.0% است.</p>
-                <div class="card interactive-card">
-                    <h4>مجموع CaO, SiO2, و ضرر در اشتعال</h4>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="cao_sum" class="block text-sm font-medium text-gray-700">درصد CaO (%)</label>
-                            <input type="text" id="cao_sum" name="cao_sum" class="input-field shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                        <div>
-                            <label for="sio2_sum" class="block text-sm font-medium text-gray-700">درصد SiO2 (%)</label>
-                            <input type="text" id="sio2_sum" name="sio2_sum" class="input-field shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                        <div>
-                            <label for="loi_sum" class="block text-sm font-medium text-gray-700">درصد ضرر در اشتعال (%)</label>
-                            <input type="text" id="loi_sum" name="loi_sum" class="input-field shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateSumCaO_SiO2_LOI()">محاسبه</button>
-                    <div class="mt-4">
-                        <span id="result_sum_cao_sio2_loi" class="font-bold"></span>
-                        <span id="status_sum_cao_sio2_loi" class="font-bold"></span>
-                    </div>
-                    <div class="mt-2">
-                        <span id="result_sum_cao_sio2_loi_ppm" class="font-bold"></span>
-                    </div>
-                    <div class="mt-4">
-                        <label for="additional_specs_sum_cao_sio2_loi" class="block text-sm font-medium text-gray-700">توضیحات اضافه / Additional Specifications:</label>
-                        <textarea id="additional_specs_sum_cao_sio2_loi" name="additional_specs_sum_cao_sio2_loi" rows="3" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                    </div>
-                </div>
-            </div>
+        <div id="specific-tests" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a></h3>
+            <p><span class="ltr-text">8.4</span>–<span class="ltr-text">11.2</span>، تعیین شده در یک سوسپانسیون آبی کاملاً مخلوط (<span class="ltr-text">1</span> در <span class="ltr-text">20</span>)</p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">نسبت دی‌اکسید سیلیسیم به اکسید کلسیم</h3>
+            <p>درصد دی‌اکسید سیلیسیم بدست آمده در تست دی‌اکسید سیلیسیم را بر درصد اکسید کلسیم بدست آمده در تست اکسید کلسیم تقسیم کنید.</p>
+            <p>معیارهای پذیرش: <span class="ltr-text">0.5</span>–<span class="ltr-text">20</span></p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">مجموع CaO، SiO2 و کاهش وزن در اثر حرارت</h3>
+            <p>مجموع درصد‌های بدست آمده در سه تست حداقل <span class="ltr-text">90.0%</span> است.</p>
         </div>
 
-        <div id="additional-requirements" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته بندی و نگهداری</h3>
-                <p>در ظروف کاملاً بسته نگهداری شود.</p>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">برچسب گذاری</h3>
-                <p>برچسب گذاری، درصد یا محدوده درصدهای ادعا شده برای محتوای اکسید کلسیم و محتوای دی‌اکسید سیلیکون را نشان می‌دهد.</p>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h3>
-                <p>سدیم فلوراید USP RS</p>
-            </div>
+        <div id="additional-requirements" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری</h3>
+            <p>در ظروف کاملاً بسته نگهداری شود.</p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">برچسب‌گذاری</h3>
+            <p>برچسب‌گذاری، درصد یا محدوده درصد ادعاشده برای محتوای اکسید کلسیم و برای محتوای دی‌اکسید سیلیسیم را بیان می‌کند.</p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP 11</h3>
+            <p>USP سدیم فلوراید RS</p>
         </div>
-
     </div>
 
     <script>
-        function showTab(tabId) {
-            const tabContents = document.getElementsByClassName('tab-content');
-            for (let i = 0; i < tabContents.length; i++) {
-                tabContents[i].classList.add('hidden');
-            }
+        function showTab(event, tabId) {
+            // Hide all tab content
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => {
+                content.classList.add('hidden');
+            });
 
-            const tabButtons = document.getElementsByClassName('tab-button');
-            for (let i = 0; i < tabButtons.length; i++) {
-                tabButtons[i].classList.remove('tab-active');
-                tabButtons[i].classList.add('tab-inactive');
-            }
+            // Remove 'tab-active' and add 'tab-inactive' to all buttons
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => {
+                button.classList.remove('tab-active');
+                button.classList.add('tab-inactive');
+            });
 
+            // Show the specific tab content
             document.getElementById(tabId).classList.remove('hidden');
+
+            // Mark the clicked button as active
             event.currentTarget.classList.remove('tab-inactive');
             event.currentTarget.classList.add('tab-active');
         }
 
-        function calculateAssay() {
-            const V = parseFloat(document.getElementById('V_assay').value);
-            const M = parseFloat(document.getElementById('M_assay').value);
-            const W = parseFloat(document.getElementById('W_assay').value);
-            const L = parseFloat(document.getElementById('L_assay').value);
-
-            const resultSpan = document.getElementById('result_assay');
-            const statusSpan = document.getElementById('status_assay');
-            const resultPpmSpan = document.getElementById('result_assay_ppm');
-
-            resultSpan.textContent = '';
-            statusSpan.textContent = '';
-            resultPpmSpan.textContent = '';
-
-            if (isNaN(V) || isNaN(M) || isNaN(W) || isNaN(L)) {
-                resultSpan.textContent = 'لطفا تمام فیلدها را با اعداد معتبر پر کنید.';
-                resultSpan.className = 'text-red-500 font-bold';
-                return;
-            }
-
-            const Z = (V * M * 56.08) / W;
-            const percentageCaO = (Z / L) * 100;
-
-            resultSpan.textContent = `نتیجه: ${percentageCaO.toFixed(2)}% CaO`;
-            resultSpan.className = 'font-bold';
-
-            const lowerLimit = 4.0;
-            const upperLimitLower = 90.0;
-            const upperLimitUpper = 110.0;
-
-            let status = '';
-            let statusClass = '';
-
-            if (percentageCaO >= lowerLimit) {
-                if (percentageCaO >= upperLimitLower && percentageCaO <= upperLimitUpper) {
-                    status = 'وضعیت: Pass';
-                    statusClass = 'pass-text font-bold';
-                } else {
-                    status = 'وضعیت: Fail (Outside labeling range)';
-                    statusClass = 'fail-text font-bold';
-                }
-            } else {
-                status = 'وضعیت: Fail (Below minimum limit)';
-                statusClass = 'fail-text font-bold';
-            }
-
-            statusSpan.textContent = status;
-            statusSpan.className = statusClass;
-
-            // For Assay, the result is already in %, no need to convert to ppm in the same way as others.
-            // If ppm conversion is strictly required, clarify the context.
-            resultPpmSpan.textContent = '';
-        }
-
-        function calculateLimitAcidInsoluble() {
-            const W1 = parseFloat(document.getElementById('W1_acid_insoluble').value);
-            const W2 = parseFloat(document.getElementById('W2_acid_insoluble').value);
-
-            const resultSpan = document.getElementById('result_acid_insoluble');
-            const statusSpan = document.getElementById('status_acid_insoluble');
-            const resultPpmSpan = document.getElementById('result_acid_insoluble_ppm');
-
-            resultSpan.textContent = '';
-            statusSpan.textContent = '';
-            resultPpmSpan.textContent = '';
-
-            if (isNaN(W1) || isNaN(W2)) {
-                resultSpan.textContent = 'لطفا تمام فیلدها را با اعداد معتبر پر کنید.';
-                resultSpan.className = 'text-red-500 font-bold';
-                return;
-            }
-
-            if (W2 <= W1) {
-                 resultSpan.textContent = 'W2 باید بزرگتر از W1 باشد.';
-                resultSpan.className = 'text-red-500 font-bold';
-                return;
-            }
-
-            const percentage = ((W2 - W1) / W1) * 100; // Assuming W1 is the initial sample weight and W2 is the weight after filtration
-            const ppm = (percentage / 100) * 1000000; // Convert percentage to ppm
-
-            resultSpan.textContent = `نتیجه: ${percentage.toFixed(2)}%`;
-            resultSpan.className = 'font-bold';
-
-            const limit = 20.0; // Assuming the limit is 20.0% from Loss on Ignition text, but this is for Acid-Insoluble substances.
-                              // The original PDF states "NMT 20.0% of its weight" for Loss on Ignition, not directly for Acid-Insoluble.
-                              // If a specific limit for Acid-Insoluble is provided, it should be used here.
-                              // For this example, I will assume it means "Limit of Acid-Insoluble substances" should be NMT some value.
-                              // Based on the formula (W2-W1)*1000, it seems like it is directly calculating the amount.
-                              // Let's re-evaluate the formula and context.
-                              // The prompt mentioned "(W2-W1)*1000". This formula doesn't typically result in a percentage directly.
-                              // It usually represents a quantity in milligrams if W1 and W2 are in grams.
-                              // Let's assume the formula in the prompt is correct for calculation, and we'll adapt the output.
-
-            const calculatedValue = (W2 - W1) * 1000; // Assuming W1 and W2 are in grams, result is in mg.
-
-            // Re-interpreting the prompt's formula: $$Result = (W_{2}-W_{1})*1000$$
-            // This formula, as provided, doesn't directly yield a percentage. It seems to calculate a weight difference multiplied by 1000.
-            // If W1 and W2 are in grams, the result is in milligrams. The typical USP limits are percentages.
-            // Let's assume W1 is the weight of the residue and W2 is the initial sample weight, or vice versa.
-            // Without a clear percentage conversion or context for the *1000, this formula is ambiguous for standard USP reporting.
-            // Given the context of "Limit of Acid-Insoluble substances", it should be a percentage.
-            // If W1 is the initial sample weight, and W2 is the weight of the residue, then:
-            // Percentage = (W2 / W1) * 100
-            // If the formula in the prompt is strictly to be followed, and it outputs a value that needs to be compared to a limit:
-            // Let's assume W1 is the sample weight and W2 is the weight of the residue. Then the calculation would be:
-            // Amount of insoluble substance = W2.
-            // Percentage of insoluble substance = (W2 / W1) * 100.
-            // The formula provided (W2 - W1) * 1000 does not fit common patterns.
-
-            // Let's assume the prompt meant to say the formula is for calculating "mg of substance", and the limit is "NMT X mg/g" or similar.
-            // However, the prompt also asks for result in percentage and ppm.
-
-            // Re-attempting based on common USP impurity calculations:
-            // Limit of Acid-Insoluble substances:
-            // Assume W1 = initial sample weight (g)
-            // Assume W2 = weight of residue after ignition (g)
-            // Result (%) = (W2 / W1) * 100
-            // The prompt's formula (W2-W1)*1000 seems incorrect for typical percentage calculations.
-            // If W1 and W2 are in grams, and it's (W2-W1)*1000, this might be calculating some specific component.
-            // Given the ambiguity and the strict requirement to use the provided formula, I will proceed with the formula as given,
-            // and acknowledge that the interpretation of percentage/ppm output might be strained.
-
-            // Let's assume W1 and W2 are weights in grams. The formula gives a result in mg.
-            // To convert mg to ppm in a 1g sample: mg/g -> ppm.
-            // Result in mg = (W2 - W1) * 1000.
-            // If the sample weight was W_sample (g), then ppm = (Result in mg / W_sample) * 1000.
-            // This is still complex without a defined sample weight for this specific calculation.
-
-            // Let's follow the prompt's formula and try to output percentage.
-            // Assuming W1 and W2 are weights in grams. The formula (W2 - W1) * 1000 gives a result.
-            // If W1 is the weight of the filtered substance and W2 is the weight of the initial sample, and the result is supposed to be a percentage.
-            // Percentage = (W1 / W2) * 100. The formula provided is still not fitting.
-
-            // Given the strict instructions, I will use the formula and attempt to output a percentage,
-            // even if the formula itself is unconventional for this purpose.
-            // Let's assume W1 is the initial sample weight and W2 is the weight of insoluble matter.
-            // If the formula is (W2 - W1) * 1000, and we need percentage. This is highly unusual.
-            // If W1 and W2 are in grams, the result is in mg.
-            // If the test is "Limit of Acid-Insoluble substances" and the limit is e.g., 0.1%.
-            // This means 0.1 mg insoluble per 100 mg sample, or 1 mg insoluble per 1g sample.
-            // If the formula is (W2 - W1) * 1000 and W1, W2 are in grams, the output is in mg.
-            // If the sample weight used was 1g, then the output in mg is directly the ppm equivalent for that specific substance.
-            // For now, I will output the direct result of the formula and note the potential ambiguity.
-
-            const formulaResult = (W2 - W1) * 1000; // Assuming W1, W2 in grams, output in mg
-
-            // To output percentage, we need a sample weight. If we assume the formula implies W1 is the weight of insoluble, and we compare it to the sample weight.
-            // Let's assume W1 is sample weight, and W2 is weight of insoluble residue.
-            // Then percentage = (W2/W1)*100. Still does not match the provided formula.
-
-            // **Forced interpretation based on prompt's formula and output requirements:**
-            // Let's assume W1 is initial sample weight, W2 is filtered residue weight.
-            // The formula (W2 - W1) * 1000. If W1 and W2 are in grams, the result is in mg.
-            // To get percentage: (mg insoluble / total sample mg) * 100.
-            // If W1 and W2 are in grams, and the formula is (W2 - W1) * 1000, it's likely calculating the amount of insoluble.
-            // Let's assume the prompt expects the direct output of this formula, and then a conversion to ppm.
-            // If the result from (W2 - W1) * 1000 is in mg, and we want ppm, we need the sample weight.
-            // Let's assume the sample weight for W1 and W2 taken was 1 g (1000 mg).
-            // Then result in mg is X. The percentage is (X / 1000) * 100 = X / 10.
-            // The ppm would be X (since 1g sample).
-
-            // Given the extreme ambiguity of the prompt's formula for "Limit of Acid-Insoluble substances":
-            // $$Result = (W_{2}-W_{1})*1000$$
-            // And the requirement for percentage and ppm:
-            // Let's assume W1 is the weight of the initial sample (grams) and W2 is the weight of the residue (grams).
-            // The formula (W2 - W1) * 1000 does not make sense in this context.
-            // A common calculation for acid-insoluble residue is:
-            // % Acid-Insoluble = (Weight of residue / Weight of sample) * 100
-            // Since I MUST use the given formula, and it yields a value, let's assume the value itself needs to be compared.
-            // If the formula result is X, and the limit is Y (e.g., NMT 0.1%).
-            // This implies X needs to be converted to percentage.
-
-            // **Revised approach based on direct interpretation of formula and prompt's output format:**
-            // Calculate the raw value from the formula.
-            const rawFormulaValue = (W2 - W1) * 1000;
-
-            // Let's assume W1 is the initial sample weight in grams and W2 is the final residue weight in grams.
-            // The formula (W2 - W1) * 1000 would then be (residue_g - sample_g) * 1000. This is nonsensical as residue cannot be larger than sample.
-            // Let's assume the formula is for a specific calculation where W1 is the weight of the crucible + sample, and W2 is the weight of crucible + insoluble residue. This doesn't fit.
-            // A very common formula is: % = ((weight of residue) / (weight of sample)) * 100.
-
-            // **Due to the highly unusual and likely incorrect formula provided for "Limit of Acid-Insoluble substances", I cannot reliably calculate percentage and ppm.**
-            // I will output the direct result of the formula and try to infer a status if a limit were provided.
-            // For now, I will set result to be the formula output and leave status blank if no comparison can be made.
-            // The formula seems to imply W1 and W2 are weights that when subtracted and multiplied by 1000 give a result.
-            // Let's assume W1 = weight of insoluble residue in grams, W2 = weight of initial sample in grams.
-            // Then (W2-W1) is the soluble part. This does not help.
-
-            // **Final attempt to reconcile the prompt's formula:**
-            // Formula: $$Result = (W_{2}-W_{1})*1000$$
-            // Test: "Limit of Acid-Insoluble substances"
-            // Let's assume W1 is the weight of the filter paper + insoluble residue, and W2 is the weight of the filter paper.
-            // Then W1-W2 is the weight of the insoluble residue.
-            // The formula provided is (W2-W1)*1000. This is negative if W2 is filter paper and W1 is paper+residue.
-            // Let's assume W1 = sample weight (g), W2 = residue weight (g).
-            // Then % = (W2/W1)*100.
-            // The prompt explicitly states to use (W2-W1)*1000.
-            // If W1 and W2 are weights in grams, the result is in mg.
-            // Let's assume the context is that for every gram of sample, there should be NMT X mg of insoluble substance.
-            // If the result from formula is X mg, and the sample weight used was 1g (1000mg), then X mg is X ppm for that 1g sample.
-            // The percentage would be (X mg / 1000 mg) * 100 = X/10 %.
-
-            // I will use the formula as given and output the result of the formula, then convert to ppm assuming a 1g sample.
-            // Then I will attempt a percentage conversion.
-            // Given the prompt: "If the result is within the acceptance limit, make it green, if not, make it red."
-            // I need an acceptance criteria to do this. The prompt mentions "Limit of Acid-Insoluble substances" but not the limit value.
-            // I'll proceed with calculation and display, but status will be conditional on a limit.
-
-            const resultValue = (W2 - W1) * 1000; // Assuming W1, W2 in grams, output is in mg.
-            resultSpan.textContent = `Formula Result (mg, assuming W1, W2 in grams): ${resultValue.toFixed(2)}`;
-            resultSpan.className = 'font-bold';
-
-            // ppm calculation: Assuming W1 and W2 are grams, and the formula gives result in mg.
-            // If the sample weight taken was 1g (1000mg), then result_mg is the ppm.
-            const ppmResult = resultValue; // Assuming sample weight of 1g, so mg result is ppm.
-            resultPpmSpan.textContent = `Result (ppm, assuming 1g sample): ${ppmResult.toFixed(2)}`;
-
-            // Percentage calculation: Assuming sample weight of 1g (1000mg).
-            const percentageResult = (resultValue / 1000) * 100; // (mg / mg_sample) * 100
-            // This assumes W1 and W2 were taken from a specific sample weight. If W1 and W2 *are* the sample weights, it's different.
-            // The ambiguity is too high. I will set the resultSpan to show the direct formula output and the ppm.
-
-            // For status, I will assume a hypothetical limit for demonstration.
-            // Let's assume the limit is NMT 200 ppm (equivalent to 0.02% if the formula was meant for percentage).
-            // If the limit for Acid-Insoluble substances is NMT 0.1%, this is 1 mg/g or 1000 ppm for a 1g sample.
-            // If the formula result is in mg, and limit is %:
-            // Let's say limit is 0.1%. This is 0.001 g insoluble per 1 g sample.
-            // This is 1 mg insoluble per 1 g sample.
-            // So, if resultValue (in mg) <= 1, it passes.
-            const hypotheticalLimit_mg_per_gram = 1.0; // e.g., 0.1% limit is 1 mg per gram.
-
-            if (resultValue <= hypotheticalLimit_mg_per_gram) {
-                status = 'وضعیت: Pass';
-                statusClass = 'pass-text font-bold';
-            } else {
-                status = 'وضعیت: Fail';
-                statusClass = 'fail-text font-bold';
-            }
-            statusSpan.textContent = status;
-            statusSpan.className = statusClass;
-        }
-
-
-        function calculateLimitMagnesiumAlkali() {
-            const W1 = parseFloat(document.getElementById('W1_magnesium_alkali').value);
-            const W2 = parseFloat(document.getElementById('W2_magnesium_alkali').value);
-
-            const resultSpan = document.getElementById('result_magnesium_alkali');
-            const statusSpan = document.getElementById('status_magnesium_alkali');
-            const resultPpmSpan = document.getElementById('result_magnesium_alkali_ppm');
-
-            resultSpan.textContent = '';
-            statusSpan.textContent = '';
-            resultPpmSpan.textContent = '';
-
-            if (isNaN(W1) || isNaN(W2)) {
-                resultSpan.textContent = 'لطفا تمام فیلدها را با اعداد معتبر پر کنید.';
-                resultSpan.className = 'text-red-500 font-bold';
-                return;
-            }
-            if (W2 <= W1) {
-                 resultSpan.textContent = 'W2 باید بزرگتر از W1 باشد.';
-                resultSpan.className = 'text-red-500 font-bold';
-                return;
-            }
-
-            // Formula: $$Result = (W_{2}-W_{1})*1000$$
-            // Assuming W1, W2 in grams, output is in mg.
-            const resultValue = (W2 - W1) * 1000;
-            resultSpan.textContent = `Formula Result (mg, assuming W1, W2 in grams): ${resultValue.toFixed(2)}`;
-            resultSpan.className = 'font-bold';
-
-            // ppm calculation: Assuming sample weight of 1g.
-            const ppmResult = resultValue;
-            resultPpmSpan.textContent = `Result (ppm, assuming 1g sample): ${ppmResult.toFixed(2)}`;
-
-            // Status check (hypothetical limit)
-            // Assuming limit is NMT 100 ppm for Magnesium and Alkali Salts.
-            const hypotheticalLimit_mg_per_gram = 0.1; // 0.1 mg per gram = 100 ppm for 1g sample.
-            if (resultValue <= hypotheticalLimit_mg_per_gram * 1000) { // Convert to mg for comparison if sample weight is assumed 1g
-                 status = 'وضعیت: Pass';
-                 statusClass = 'pass-text font-bold';
-             } else {
-                 status = 'وضعیت: Fail';
-                 statusClass = 'fail-text font-bold';
-             }
-             statusSpan.textContent = status;
-             statusSpan.className = statusClass;
-        }
-
-
-        function calculateAlcoholInsoluble() {
-            const W1 = parseFloat(document.getElementById('W1_alcohol_insoluble').value);
-            const W2 = parseFloat(document.getElementById('W2_alcohol_insoluble').value);
-
-            const resultSpan = document.getElementById('result_alcohol_insoluble');
-            const statusSpan = document.getElementById('status_alcohol_insoluble');
-            const resultPpmSpan = document.getElementById('result_alcohol_insoluble_ppm');
-
-            resultSpan.textContent = '';
-            statusSpan.textContent = '';
-            resultPpmSpan.textContent = '';
-
-            if (isNaN(W1) || isNaN(W2)) {
-                resultSpan.textContent = 'لطفا تمام فیلدها را با اعداد معتبر پر کنید.';
-                resultSpan.className = 'text-red-500 font-bold';
-                return;
-            }
-            if (W2 <= W1) {
-                 resultSpan.textContent = 'W2 باید بزرگتر از W1 باشد.';
-                resultSpan.className = 'text-red-500 font-bold';
-                return;
-            }
-
-            // Formula: $$Result = (W_{2}-W_{1})*1000$$
-            // Assuming W1, W2 in grams, output is in mg.
-            const resultValue = (W2 - W1) * 1000;
-            resultSpan.textContent = `Formula Result (mg, assuming W1, W2 in grams): ${resultValue.toFixed(2)}`;
-            resultSpan.className = 'font-bold';
-
-            // ppm calculation: Assuming sample weight of 1g.
-            const ppmResult = resultValue;
-            resultPpmSpan.textContent = `Result (ppm, assuming 1g sample): ${ppmResult.toFixed(2)}`;
-
-             // Status check (hypothetical limit)
-             // Assuming limit is NMT 100 ppm.
-             const hypotheticalLimit_mg_per_gram = 0.1; // 0.1 mg per gram = 100 ppm for 1g sample.
-             if (resultValue <= hypotheticalLimit_mg_per_gram * 1000) {
-                 status = 'وضعیت: Pass';
-                 statusClass = 'pass-text font-bold';
-             } else {
-                 status = 'وضعیت: Fail';
-                 statusClass = 'fail-text font-bold';
-             }
-             statusSpan.textContent = status;
-             statusSpan.className = statusClass;
-        }
-
-
-        function calculateLead() {
-            const C = parseFloat(document.getElementById('C_lead').value);
-            const V = parseFloat(document.getElementById('V_lead').value);
-            const W = parseFloat(document.getElementById('W_lead').value);
-
-            const resultSpan = document.getElementById('result_lead');
-            const statusSpan = document.getElementById('status_lead');
-            const resultPpmSpan = document.getElementById('result_lead_ppm');
-
-            resultSpan.textContent = '';
-            statusSpan.textContent = '';
-            resultPpmSpan.textContent = '';
-
-            if (isNaN(C) || isNaN(V) || isNaN(W)) {
-                resultSpan.textContent = 'لطفا تمام فیلدها را با اعداد معتبر پر کنید.';
-                resultSpan.className = 'text-red-500 font-bold';
-                return;
-            }
-            if (W === 0) {
-                resultSpan.textContent = 'وزن نمونه (W) نمی تواند صفر باشد.';
-                resultSpan.className = 'text-red-500 font-bold';
-                return;
-            }
-
-            const result = (C * V) / W;
-            const ppmResult = result; // C is in µg/mL, V is in mL, W is in g. (µg/mL * mL) / g = µg/g = ppm.
-
-            resultSpan.textContent = `نتیجه: ${result.toFixed(2)} ppm`;
-            resultSpan.className = 'font-bold';
-            resultPpmSpan.textContent = ''; // ppmResult is already the main result
-
-            const limit = 10.0; // NMT 10 ppm
-
-            if (result <= limit) {
-                statusSpan.textContent = 'وضعیت: Pass';
-                statusSpan.className = 'pass-text font-bold';
-            } else {
-                statusSpan.textContent = 'وضعیت: Fail';
-                statusSpan.className = 'fail-text font-bold';
-            }
-        }
-
-        function calculateFluoride() {
-            const C = parseFloat(document.getElementById('C_fluoride').value);
-            const V = parseFloat(document.getElementById('V_fluoride').value);
-            const W = parseFloat(document.getElementById('W_fluoride').value);
-
-            const resultSpan = document.getElementById('result_fluoride');
-            const statusSpan = document.getElementById('status_fluoride');
-            const resultPpmSpan = document.getElementById('result_fluoride_ppm');
-
-            resultSpan.textContent = '';
-            statusSpan.textContent = '';
-            resultPpmSpan.textContent = '';
-
-            if (isNaN(C) || isNaN(V) || isNaN(W)) {
-                resultSpan.textContent = 'لطفا تمام فیلدها را با اعداد معتبر پر کنید.';
-                resultSpan.className = 'text-red-500 font-bold';
-                return;
-            }
-            if (W === 0) {
-                resultSpan.textContent = 'وزن نمونه (W) نمی تواند صفر باشد.';
-                resultSpan.className = 'text-red-500 font-bold';
-                return;
-            }
-
-            const result = (C * V) / W; // C is in µg/mL, V is in mL, W is in g. (µg/mL * mL) / g = µg/g = ppm.
-            const ppmResult = result;
-
-            resultSpan.textContent = `نتیجه: ${result.toFixed(2)} ppm`;
-            resultSpan.className = 'font-bold';
-            resultPpmSpan.textContent = ''; // ppmResult is already the main result
-
-            const limit = 50.0; // NMT 50 ppm
-
-            if (result <= limit) {
-                statusSpan.textContent = 'وضعیت: Pass';
-                statusSpan.className = 'pass-text font-bold';
-            } else {
-                statusSpan.textContent = 'وضعیت: Fail';
-                statusSpan.className = 'fail-text font-bold';
-            }
-        }
-
-        function calculateRatioSiO2CaO() {
-            const SIO2 = parseFloat(document.getElementById('sio2_percentage').value);
-            const CaO = parseFloat(document.getElementById('cao_percentage').value);
-
-            const resultSpan = document.getElementById('result_ratio_sio2_cao');
-            const statusSpan = document.getElementById('status_ratio_sio2_cao');
-            const resultPpmSpan = document.getElementById('result_ratio_sio2_cao_ppm'); // Not applicable for ratio
-
-            resultSpan.textContent = '';
-            statusSpan.textContent = '';
-            resultPpmSpan.textContent = '';
-
-            if (isNaN(SIO2) || isNaN(CaO)) {
-                resultSpan.textContent = 'لطفا تمام فیلدها را با اعداد معتبر پر کنید.';
-                resultSpan.className = 'text-red-500 font-bold';
-                return;
-            }
-            if (CaO === 0) {
-                resultSpan.textContent = 'درصد CaO نمی تواند صفر باشد.';
-                resultSpan.className = 'text-red-500 font-bold';
-                return;
-            }
-
-            const ratio = SIO2 / CaO;
-
-            resultSpan.textContent = `نسبت: ${ratio.toFixed(2)}`;
-            resultSpan.className = 'font-bold';
-            resultPpmSpan.textContent = ''; // Ratio does not have ppm
-
-            const minLimit = 0.5;
-            const maxLimit = 20.0;
-
-            if (ratio >= minLimit && ratio <= maxLimit) {
-                statusSpan.textContent = 'وضعیت: Pass';
-                statusSpan.className = 'pass-text font-bold';
-            } else {
-                statusSpan.textContent = 'وضعیت: Fail';
-                statusSpan.className = 'fail-text font-bold';
-            }
-        }
-
-        function calculateSumCaO_SiO2_LOI() {
-            const CaO = parseFloat(document.getElementById('cao_sum').value);
-            const SiO2 = parseFloat(document.getElementById('sio2_sum').value);
-            const LOI = parseFloat(document.getElementById('loi_sum').value);
-
-            const resultSpan = document.getElementById('result_sum_cao_sio2_loi');
-            const statusSpan = document.getElementById('status_sum_cao_sio2_loi');
-            const resultPpmSpan = document.getElementById('result_sum_cao_sio2_loi_ppm'); // Not applicable for sum
-
-            resultSpan.textContent = '';
-            statusSpan.textContent = '';
-            resultPpmSpan.textContent = '';
-
-            if (isNaN(CaO) || isNaN(SiO2) || isNaN(LOI)) {
-                resultSpan.textContent = 'لطفا تمام فیلدها را با اعداد معتبر پر کنید.';
-                resultSpan.className = 'text-red-500 font-bold';
-                return;
-            }
-
-            const sum = CaO + SiO2 + LOI;
-
-            resultSpan.textContent = `مجموع: ${sum.toFixed(2)}%`;
-            resultSpan.className = 'font-bold';
-            resultPpmSpan.textContent = ''; // Sum does not have ppm
-
-            const limit = 90.0;
-
-            if (sum >= limit) {
-                statusSpan.textContent = 'وضعیت: Pass';
-                statusSpan.className = 'pass-text font-bold';
-            } else {
-                statusSpan.textContent = 'وضعیت: Fail';
-                statusSpan.className = 'fail-text font-bold';
-            }
-        }
-
-        // Initial display of the first tab
-        document.addEventListener('DOMContentLoaded', () => {
+        // Show the default tab (Definition) on page load
+        document.addEventListener('DOMContentLoaded', (event) => {
             document.querySelector('.tab-button').click();
         });
     </script>
-
 </body>
 </html>

@@ -4,14 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف سیلیسیم دی‌اکسید (USP)</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Vazirmatn Font -->
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
-    <!-- MathJax -->
-    <script type="text/javascript" id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -70,367 +66,109 @@
         .fail-text {
             color: #ef4444;
         }
-        .interactive-card {
-            background-color: #e0f2fe;
-            border: 1px solid #90cdf4;
-            padding: 1rem;
-            margin-top: 1rem;
-            border-radius: 0.5rem;
-        }
-        .calculation-button {
-            background-color: #2563eb;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
-
+<body>
     <div class="container mx-auto p-4 max-w-4xl">
-
-        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">سیلیسیم دی‌اکسید (USP)</h1>
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">سیلیسیم دی‌اکسید</h1>
 
         <div class="flex justify-center mb-6 border-b border-gray-200">
-            <button class="tab-button py-2 px-4 border-b-2 tab-active" data-tab="definition">تعریف</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="identification">شناسایی</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="assay">سنجش</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="impurities">ناخالصی‌ها</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="specific-tests">آزمایشات خاص</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="additional-requirements">الزامات اضافی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab(event, 'definition')">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'identification')">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'assay')">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'impurities')">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'specific-tests')">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'additional-requirements')">الزامات اضافی</button>
         </div>
 
-        <!-- Definition Tab -->
-        <div id="definition" class="tab-content">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
-                <p class="mb-4">سیلیسیم دی‌اکسید با نام شیمیایی <span class="ltr-text">SiO₂ · xH₂O</span>، یک ترکیب انیدروس است که از طریق نامحلول کردن سیلیسیم محلول در محلول سدیم سیلیکات به دست می‌آید. هنگامی که محصول از طریق افزودن سدیم سیلیکات به یک اسید معدنی به دست می‌آید، به آن سیلیکا ژل گفته می‌شود. هنگامی که از طریق بی‌ثبات کردن یک محلول سدیم سیلیکات به گونه‌ای که ذرات بسیار ریز تولید شود، به دست می‌آید، به آن سیلیکای رسوبی (precipitated silica) گفته می‌شود. پس از احتراق در دمای 1000 درجه سانتی‌گراد به مدت حداقل 1 ساعت، حاوی حداقل 99.0% <span class="ltr-text">SiO₂</span> است.</p>
-            </div>
+        <div id="definition" class="card tab-content">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+            <p class="mb-4">سیلیسیم دی‌اکسید از نامحلول کردن سیلیس در محلول سدیم سیلیکات به دست می‌آید. هنگامی که از طریق افزودن سدیم سیلیکات به یک اسید معدنی به دست می‌آید، محصول را ژل سیلیس می‌نامند. هنگامی که از طریق ناپایدارسازی محلول سدیم سیلیکات به گونه‌ای که ذرات بسیار ریز تولید شوند، به دست می‌آید، محصول را سیلیس رسوبی می‌نامند. پس از احتراق در دمای 1000 درجه سانتی‌گراد برای حداقل 1 ساعت، حاوی حداقل 99.0% SiO<sub>2</sub> است.</p>
+            <p>SiO<sub>2</sub> · xH<sub>2</sub>O</p>
+            <p>انیدروس</p>
+            <p><span class="ltr-text">60.08</span></p>
         </div>
 
-        <!-- Identification Tab -->
-        <div id="identification" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">روش اجرایی</h3>
-                <p class="mb-4"><strong>نمونه:</strong> 5 میلی‌گرم</p>
-                <p class="mb-4"><strong>آنالیز:</strong> نمونه را در یک کروزه پلاتینی منتقل کنید، با 200 میلی‌گرم پتاسیم کربنات انیدروس مخلوط کنید، به مدت 10 دقیقه در حرارت قرمز بالای مشعل احتراق کنید و بگذارید سرد شود. مذاب را در 2 میلی‌لیتر آب مقطر تازه تقطیر شده حل کنید، در صورت نیاز گرم کنید، و به آرامی 2 میلی‌لیتر مولیبدات آمونیوم TS اضافه کنید.</p>
-                <p><strong>معیارهای پذیرش:</strong> رنگ زرد پررنگ تولید می‌شود.</p>
-            </div>
+        <div id="identification" class="card tab-content hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش انجام</h4>
+            <p class="mb-4">نمونه: <span class="ltr-text">5 mg</span></p>
+            <p class="mb-4">تحلیل: نمونه را در یک بوته پلاتینی منتقل کنید، با <span class="ltr-text">200 mg</span> کربنات پتاسیم انیدروس مخلوط کرده، در حرارت قرمز با شعله به مدت <span class="ltr-text">10 min</span> احتراق کنید و سپس خنک کنید. مذاب را در <span class="ltr-text">2 mL</span> آب مقطر تازه تقطیر شده حل کنید، در صورت لزوم گرم کنید، و به آرامی <span class="ltr-text">2 mL</span> محلول مولیبدات آمونیوم TS اضافه کنید.</p>
+            <p class="mb-4">معیارهای پذیرش: رنگ زرد تیره تولید می‌شود.</p>
         </div>
 
-        <!-- Assay Tab -->
-        <div id="assay" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">روش اجرایی</h3>
-                <p class="mb-4"><strong>نمونه:</strong> 1 گرم</p>
-                <p class="mb-4"><strong>آنالیز:</strong> نمونه را در یک بشقاب پلاتینی وزن شده در دمای 1000 درجه سانتی‌گراد به مدت 1 ساعت احتراق کنید، در دسکاتور سرد کنید و وزن کنید. با آب به دقت مرطوب کنید و 10 میلی‌لیتر اسید هیدروفلوئوریک را به صورت مقدار کم کم اضافه کنید. روی حمام بخار تا خشک شدن تبخیر کنید و بگذارید سرد شود. 10 میلی‌لیتر اسید هیدروفلوئوریک و 0.5 میلی‌لیتر اسید سولفوریک اضافه کنید و تا خشک شدن تبخیر کنید. دما را به آرامی افزایش دهید تا تمام اسیدها تبخیر شوند و در دمای 1000 درجه سانتی‌گراد احتراق کنید. در دسکاتور سرد کنید و وزن کنید. اختلاف بین وزن نهایی و وزن قسمت اولیه احتراق شده، وزن <span class="ltr-text">SiO₂</span> را نشان می‌دهد.</p>
-                <p><strong>معیارهای پذیرش:</strong> حداقل 99.0% بر اساس وزن اولیه احتراق شده.</p>
-            </div>
-
-            <div class="card interactive-card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">محاسبه سنجش</h3>
-                <div class="formula-display">
-                    $$ \text{Result} = \frac{\text{Weight of } SiO_2}{\text{Initially Ignited Sample Weight}} \times 100 $$
-                </div>
-                <div class="mb-4">
-                    <label for="assay-initial-ignited-weight" class="block text-sm font-medium text-gray-700">وزن اولیه احتراق شده:</label>
-                    <input type="text" id="assay-initial-ignited-weight" name="assay-initial-ignited-weight" class="input-field-style">
-                </div>
-                <div class="mb-4">
-                    <label for="assay-final-weight" class="block text-sm font-medium text-gray-700">وزن نهایی:</label>
-                    <input type="text" id="assay-final-weight" name="assay-final-weight" class="input-field-style">
-                </div>
-                <button onclick="calculateAssay()" class="calculation-button">محاسبه</button>
-                <div class="mt-4">
-                    <span class="font-semibold">نتیجه:</span> <span id="assay-result"></span>
-                </div>
-                <div class="mt-2">
-                    <span class="font-semibold">وضعیت:</span> <span id="assay-status"></span>
-                </div>
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea id="assay-additional-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-            </div>
+        <div id="assay" class="card tab-content hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش انجام</h4>
+            <p class="mb-4">نمونه: <span class="ltr-text">1 g</span></p>
+            <p class="mb-4">تحلیل: نمونه را در یک بشقاب پلاتینی وزن شده در دمای <span class="ltr-text">1000°</span> به مدت <span class="ltr-text">1 h</span> احتراق کنید، در دسیکاتور خنک کرده و وزن کنید. با آب به دقت مرطوب کنید، و <span class="ltr-text">10 mL</span> اسید هیدروفلوئوریک را در مقادیر کم اضافه کنید. روی حمام بخار تا خشکی تبخیر کنید و خنک کنید. <span class="ltr-text">10 mL</span> اسید هیدروفلوئوریک و <span class="ltr-text">0.5 mL</span> اسید سولفوریک اضافه کنید، و تا خشکی تبخیر کنید. دما را به آرامی افزایش دهید تا تمام اسیدها تبخیر شوند، و در دمای <span class="ltr-text">1000°</span> احتراق کنید. در دسیکاتور خنک کرده و وزن کنید. اختلاف بین وزن نهایی و وزن بخش اولیه احتراق شده، وزن SiO<sub>2</sub> را نشان می‌دهد.</p>
+            <p class="mb-4">معیارهای پذیرش: حداقل <span class="ltr-text">99.0%</span> بر اساس ماده قبلاً احتراق شده.</p>
         </div>
 
-        <!-- Impurities Tab -->
-        <div id="impurities" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+        <div id="impurities" class="card tab-content hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">ناخالصی‌های معدنی</h3>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">ناخالصی‌های معدنی</h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کاهش وزن هنگام احتراق <a href="General chapters/733.html" class="text-blue-600 hover:underline" target="_blank">733</a></h4>
+            <p class="mb-4">نمونه: <span class="ltr-text">1 g</span></p>
+            <p class="mb-4">تحلیل: نمونه، که قبلاً خشک و وزن شده است، را در دمای <span class="ltr-text">1000°</span> به مدت حداقل <span class="ltr-text">1 h</span> احتراق کنید.</p>
+            <p class="mb-4">معیارهای پذیرش: وزن آن بیش از <span class="ltr-text">8.5%</span> کاهش نمی‌یابد.</p>
 
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آتش‌گیری (Loss on Ignition) <a href="#general-chapters/733" class="text-blue-600 hover:underline" target="_blank">733</a></h4>
-                <p class="mb-4"><strong>نمونه:</strong> 1 گرم</p>
-                <p class="mb-4"><strong>آنالیز:</strong> نمونه را که قبلاً خشک و وزن شده است، در دمای 1000 درجه سانتی‌گراد به مدت حداقل 1 ساعت احتراق کنید.</p>
-                <p><strong>معیارهای پذیرش:</strong> حداکثر 8.5% از وزن خود را از دست می‌دهد.</p>
-            </div>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کلر و سولفات، کلر <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a></h4>
+            <p class="mb-4">در <span class="ltr-text">5 g</span> آب زیر کندانسور رفلاکس به مدت <span class="ltr-text">2 h</span> بجوشانید، خنک کنید و فیلتر کنید. بخشی <span class="ltr-text">7-mL</span> از فیلترات نباید کلر بیشتری نسبت به معادل <span class="ltr-text">1.0 mL</span> اسید هیدروکلریک <span class="ltr-text">0.020 N</span> (<span class="ltr-text">0.1%</span>) نشان دهد.</p>
 
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محاسبه آتش‌گیری (Loss on Ignition)</h4>
-                <div class="formula-display">
-                    $$ LOD = \frac{(W_1 + W_{sa}) - W_2}{W_{sa}} \times 100 $$
-                </div>
-                <div class="mb-4">
-                    <label for="loi-w1" class="block text-sm font-medium text-gray-700">W1 (وزن نمونه اولیه):</label>
-                    <input type="text" id="loi-w1" name="loi-w1" class="input-field-style">
-                </div>
-                <div class="mb-4">
-                    <label for="loi-wsa" class="block text-sm font-medium text-gray-700">Wsa (وزن نمونه خشک شده):</label>
-                    <input type="text" id="loi-wsa" name="loi-wsa" class="input-field-style">
-                </div>
-                <div class="mb-4">
-                    <label for="loi-w2" class="block text-sm font-medium text-gray-700">W2 (وزن نمونه پس از احتراق):</label>
-                    <input type="text" id="loi-w2" name="loi-w2" class="input-field-style">
-                </div>
-                <button onclick="calculateLOI()" class="calculation-button">محاسبه</button>
-                <div class="mt-4">
-                    <span class="font-semibold">نتیجه (درصد):</span> <span id="loi-result-percent"></span>
-                </div>
-                 <div class="mt-2">
-                    <span class="font-semibold">نتیجه (ppm):</span> <span id="loi-result-ppm"></span>
-                </div>
-                <div class="mt-2">
-                    <span class="font-semibold">وضعیت:</span> <span id="loi-status"></span>
-                </div>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کلر و سولفات، سولفات <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a></h4>
+            <p class="mb-4">بخشی <span class="ltr-text">10-mL</span> از فیلترات آزمایش کلر نباید سولفات بیشتری نسبت به معادل <span class="ltr-text">5.0 mL</span> اسید سولفوریک <span class="ltr-text">0.020 N</span> (<span class="ltr-text">0.5%</span>) نشان دهد.</p>
 
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea id="loi-additional-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-            </div>
-
-            <div class="card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کلرید و سولفات، کلرید <a href="#general-chapters/221" class="text-blue-600 hover:underline" target="_blank">221</a></h4>
-                <p class="mb-4">5 گرم را در 50 میلی‌لیتر آب زیر کندانسور برگشتی به مدت 2 ساعت بجوشانید، سرد کنید و فیلتر کنید. یک قسمت 7 میلی‌لیتری از فیلترات نباید کلرید بیشتری از معادل 1.0 میلی‌لیتر اسید هیدروکلریک 0.020 نرمال (0.1%) نشان دهد.</p>
-            </div>
-
-            <div class="card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کلرید و سولفات، سولفات <a href="#general-chapters/221" class="text-blue-600 hover:underline" target="_blank">221</a></h4>
-                <p>یک قسمت 10 میلی‌لیتری از فیلترات آزمایش کلرید نباید سولفات بیشتری از معادل 5.0 میلی‌لیتر اسید سولفوریک 0.020 نرمال (0.5%) نشان دهد.</p>
-            </div>
-
-            <div class="card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آرسنیک، روش I <a href="#general-chapters/211" class="text-blue-600 hover:underline" target="_blank">211</a></h4>
-                <p class="mb-4"><strong>محلول نمونه:</strong> 4.0 گرم را در یک بشقاب پلاتینی منتقل کنید. 5 میلی‌لیتر اسید نیتریک و 35 میلی‌لیتر اسید هیدروفلوئوریک اضافه کنید و روی حمام بخار تبخیر کنید. سرد کنید. 5 میلی‌لیتر اسید پرکلریک، 10 میلی‌لیتر اسید هیدروفلوئوریک و 10 میلی‌لیتر اسید سولفوریک اضافه کنید و روی صفحه داغ تا تولید بخارات سنگین تبخیر کنید. سرد کنید. با کمک چند میلی‌لیتر اسید هیدروکلریک با احتیاط به یک بشر 100 میلی‌لیتری منتقل کنید و تا خشک شدن تبخیر کنید. سرد کنید. 5 میلی‌لیتر اسید هیدروکلریک اضافه کنید، با آب به حجم 40 میلی‌لیتر برسانید و گرم کنید تا هرگونه باقی‌مانده حل شود. سرد کنید. به یک فلاسک حجمی 100 میلی‌لیتری منتقل کنید و با آب به حجم برسانید.</p>
-                <p class="mb-4"><strong>آنالیز:</strong> از یک قسمت 25.0 میلی‌لیتری از محلول نمونه استفاده کنید.</p>
-                <p><strong>معیارهای پذیرش:</strong> الزامات آزمایش را برآورده می‌کند (حداکثر 3 ppm)</p>
-            </div>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آرسنیک، روش I <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a></h4>
+            <p class="mb-4">محلول نمونه: <span class="ltr-text">4.0 g</span> را در یک بشقاب پلاتینی منتقل کنید. <span class="ltr-text">5 mL</span> اسید نیتریک و <span class="ltr-text">35 mL</span> اسید هیدروفلوئوریک اضافه کنید، و روی حمام بخار تبخیر کنید. خنک کنید. <span class="ltr-text">5 mL</span> اسید پرکلریک، <span class="ltr-text">10 mL</span> اسید هیدروفلوئوریک، و <span class="ltr-text">10 mL</span> اسید سولفوریک اضافه کنید، و روی صفحه داغ تا تولید دود غلیظ تبخیر کنید. خنک کنید. با کمک چند میلی‌لیتر اسید هیدروکلریک با احتیاط به یک بشر <span class="ltr-text">100-mL</span> منتقل کنید، و تا خشکی تبخیر کنید. خنک کنید. <span class="ltr-text">5 mL</span> اسید هیدروکلریک اضافه کنید، با آب تا <span class="ltr-text">40 mL</span> رقیق کنید، و گرم کنید تا هرگونه باقیمانده حل شود. خنک کنید. به یک فلاسک حجمی <span class="ltr-text">100-mL</span> منتقل کنید، و با آب تا حجم برسانید.</p>
+            <p class="mb-4">تحلیل: از بخشی <span class="ltr-text">25.0-mL</span> از محلول نمونه استفاده کنید.</p>
+            <p class="mb-4">معیارهای پذیرش: الزامات آزمایش را برآورده می‌کند (حداکثر <span class="ltr-text">3 ppm</span>)</p>
         </div>
 
-        <!-- Specific Tests Tab -->
-        <div id="specific-tests" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">pH <a href="#general-chapters/791" class="text-blue-600 hover:underline" target="_blank">791</a></h4>
-                <p>4-8 در یک سوسپانسیون (1 در 20)</p>
-            </div>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محاسبه pH</h4>
-                <div class="mb-4">
-                    <label for="ph-value" class="block text-sm font-medium text-gray-700">مقدار pH:</label>
-                    <input type="text" id="ph-value" name="ph-value" class="input-field-style">
-                </div>
-                <div class="mb-4">
-                    <label for="ph-status" class="block text-sm font-medium text-gray-700">وضعیت:</label>
-                    <select id="ph-status" name="ph-status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                </div>
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea id="ph-additional-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-            </div>
-
-
-            <div class="card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">از دست دادن در اثر خشک شدن <a href="#general-chapters/731" class="text-blue-600 hover:underline" target="_blank">731</a></h4>
-                <p>نمونه را در دمای 145 درجه سانتی‌گراد به مدت 4 ساعت خشک کنید؛ حداکثر 5.0% از وزن خود را از دست می‌دهد.</p>
-            </div>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محاسبه از دست دادن در اثر خشک شدن (Loss on Drying)</h4>
-                <div class="formula-display">
-                    $$ LOD = \frac{(W_1 + W_{sa}) - W_2}{W_{sa}} \times 100 $$
-                </div>
-                <div class="mb-4">
-                    <label for="lod-w1" class="block text-sm font-medium text-gray-700">W1 (وزن نمونه اولیه):</label>
-                    <input type="text" id="lod-w1" name="lod-w1" class="input-field-style">
-                </div>
-                <div class="mb-4">
-                    <label for="lod-wsa" class="block text-sm font-medium text-gray-700">Wsa (وزن نمونه خشک شده):</label>
-                    <input type="text" id="lod-wsa" name="lod-wsa" class="input-field-style">
-                </div>
-                <div class="mb-4">
-                    <label for="lod-w2" class="block text-sm font-medium text-gray-700">W2 (وزن نمونه پس از خشک شدن):</label>
-                    <input type="text" id="lod-w2" name="lod-w2" class="input-field-style">
-                </div>
-                <button onclick="calculateLOD()" class="calculation-button">محاسبه</button>
-                <div class="mt-4">
-                    <span class="font-semibold">نتیجه (درصد):</span> <span id="lod-result-percent"></span>
-                </div>
-                <div class="mt-2">
-                    <span class="font-semibold">نتیجه (ppm):</span> <span id="lod-result-ppm"></span>
-                </div>
-                <div class="mt-2">
-                    <span class="font-semibold">وضعیت:</span> <span id="lod-status"></span>
-                </div>
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea id="lod-additional-spec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-            </div>
+        <div id="specific-tests" class="card tab-content hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a></h4>
+            <p class="mb-4"><span class="ltr-text">4–8</span> در سوسپانسیون (<span class="ltr-text">1 in 20</span>)</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کاهش وزن هنگام خشک شدن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h4>
+            <p class="mb-4">نمونه را در دمای <span class="ltr-text">145°</span> به مدت <span class="ltr-text">4 h</span> خشک کنید؛ وزن آن بیش از <span class="ltr-text">5.0%</span> کاهش نمی‌یابد.</p>
         </div>
 
-        <!-- Additional Requirements Tab -->
-        <div id="additional-requirements" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته بندی و نگهداری</h3>
-                <p class="mb-4">در ظروف دربسته، دور از رطوبت نگهداری شود.</p>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">برچسب گذاری</h3>
-                <p>مشخص کنید که آیا سیلیکا ژل است یا سیلیکای رسوبی.</p>
-            </div>
+        <div id="additional-requirements" class="card tab-content hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">بسته‌بندی و نگهداری</h4>
+            <p class="mb-4">در ظروف دربسته، محافظت شده در برابر رطوبت نگهداری شود.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">برچسب‌گذاری</h4>
+            <p>برچسب‌گذاری شود تا مشخص شود آیا ژل سیلیس است یا سیلیس رسوبی.</p>
         </div>
 
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const tabButtons = document.querySelectorAll('.tab-button');
-            const tabContents = document.querySelectorAll('.tab-content');
-
-            tabButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    tabButtons.forEach(btn => btn.classList.add('tab-inactive'));
-                    tabButtons.forEach(btn => btn.classList.remove('tab-active'));
-                    button.classList.add('tab-active');
-                    button.classList.remove('tab-inactive');
-
-                    const targetTab = button.getAttribute('data-tab');
-
-                    tabContents.forEach(content => {
-                        content.classList.add('hidden');
-                    });
-
-                    document.getElementById(targetTab).classList.remove('hidden');
-                });
+        function showTab(event, tabId) {
+            // Hide all tab content
+            document.querySelectorAll('.tab-content').forEach(card => {
+                card.classList.add('hidden');
             });
+
+            // Remove 'tab-active' from all buttons and add 'tab-inactive'
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('tab-active');
+                button.classList.add('tab-inactive');
+            });
+
+            // Show the current tab content
+            document.getElementById(tabId).classList.remove('hidden');
+
+            // Add 'tab-active' to the clicked button and remove 'tab-inactive'
+            event.currentTarget.classList.add('tab-active');
+            event.currentTarget.classList.remove('tab-inactive');
+        }
+
+        // Default to showing the first tab on load
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.tab-button').click();
         });
-
-        // Calculation functions
-        function calculateAssay() {
-            const ignitedWeight = parseFloat(document.getElementById('assay-initial-ignited-weight').value);
-            const finalWeight = parseFloat(document.getElementById('assay-final-weight').value);
-            const resultSpan = document.getElementById('assay-result');
-            const statusSpan = document.getElementById('assay-status');
-
-            if (isNaN(ignitedWeight) || isNaN(finalWeight)) {
-                resultSpan.textContent = "لطفاً مقادیر معتبر وارد کنید.";
-                statusSpan.textContent = "";
-                return;
-            }
-
-            if (ignitedWeight === 0) {
-                resultSpan.textContent = "وزن اولیه احتراق شده نمی‌تواند صفر باشد.";
-                statusSpan.textContent = "";
-                return;
-            }
-
-            const sio2Weight = finalWeight; // In this specific assay, the final weight is the SiO2 weight
-            const assayPercentage = (sio2Weight / ignitedWeight) * 100;
-            const assayPpm = (assayPercentage / 100) * 1000000; // This conversion doesn't make sense for assay percentage, but following the general ppm rule.
-
-            resultSpan.innerHTML = `${assayPercentage.toFixed(2)}% <br> ${assayPpm.toFixed(2)} ppm`;
-
-            if (assayPercentage >= 99.0) {
-                statusSpan.innerHTML = `<span class="pass-text">Pass</span>`;
-            } else {
-                statusSpan.innerHTML = `<span class="fail-text">Fail</span>`;
-            }
-        }
-
-        function calculateLOI() {
-            const w1 = parseFloat(document.getElementById('loi-w1').value);
-            const wsa = parseFloat(document.getElementById('loi-wsa').value);
-            const w2 = parseFloat(document.getElementById('loi-w2').value);
-
-            const resultPercentSpan = document.getElementById('loi-result-percent');
-            const resultPpmSpan = document.getElementById('loi-result-ppm');
-            const statusSpan = document.getElementById('loi-status');
-
-            if (isNaN(w1) || isNaN(wsa) || isNaN(w2)) {
-                resultPercentSpan.textContent = "لطفاً مقادیر معتبر وارد کنید.";
-                resultPpmSpan.textContent = "";
-                statusSpan.textContent = "";
-                return;
-            }
-
-            if (wsa === 0) {
-                resultPercentSpan.textContent = "Wsa نمی‌تواند صفر باشد.";
-                resultPpmSpan.textContent = "";
-                statusSpan.textContent = "";
-                return;
-            }
-
-            const loiPercentage = ((w1 + wsa) - w2) / wsa * 100;
-            const loiPpm = (loiPercentage / 100) * 1000000;
-
-
-            resultPercentSpan.textContent = `${loiPercentage.toFixed(2)}%`;
-            resultPpmSpan.textContent = `${loiPpm.toFixed(2)} ppm`;
-
-            if (loiPercentage <= 8.5) {
-                statusSpan.innerHTML = `<span class="pass-text">Pass</span>`;
-            } else {
-                statusSpan.innerHTML = `<span class="fail-text">Fail</span>`;
-            }
-        }
-
-        function calculateLOD() {
-            const w1 = parseFloat(document.getElementById('lod-w1').value);
-            const wsa = parseFloat(document.getElementById('lod-wsa').value);
-            const w2 = parseFloat(document.getElementById('lod-w2').value);
-
-            const resultPercentSpan = document.getElementById('lod-result-percent');
-            const resultPpmSpan = document.getElementById('lod-result-ppm');
-            const statusSpan = document.getElementById('lod-status');
-
-            if (isNaN(w1) || isNaN(wsa) || isNaN(w2)) {
-                resultPercentSpan.textContent = "لطفاً مقادیر معتبر وارد کنید.";
-                resultPpmSpan.textContent = "";
-                statusSpan.textContent = "";
-                return;
-            }
-
-            if (wsa === 0) {
-                resultPercentSpan.textContent = "Wsa نمی‌تواند صفر باشد.";
-                resultPpmSpan.textContent = "";
-                statusSpan.textContent = "";
-                return;
-            }
-
-            const lodPercentage = ((w1 + wsa) - w2) / wsa * 100;
-            const lodPpm = (lodPercentage / 100) * 1000000;
-
-            resultPercentSpan.textContent = `${lodPercentage.toFixed(2)}%`;
-            resultPpmSpan.textContent = `${lodPpm.toFixed(2)} ppm`;
-
-            if (lodPercentage <= 5.0) {
-                statusSpan.innerHTML = `<span class="pass-text">Pass</span>`;
-            } else {
-                statusSpan.innerHTML = `<span class="fail-text">Fail</span>`;
-            }
-        }
-
     </script>
-
 </body>
 </html>

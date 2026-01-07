@@ -4,14 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف سدیم بیکربنات (USP)</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Vazirmatn Font -->
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
-    <!-- MathJax -->
-    <script type="text/javascript" id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -70,937 +65,311 @@
         .fail-text {
             color: #ef4444;
         }
-        .interactive-card {
-            background-color: #e0f2fe;
-            border: 1px solid #90cdf4;
-            padding: 1rem;
-            margin-top: 1rem;
-            border-radius: 0.5rem;
-        }
-        .calculation-button {
-            background-color: #2563eb;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
-
+<body>
     <div class="container mx-auto p-4 max-w-4xl">
 
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">سدیم بیکربنات</h1>
 
         <div class="flex justify-center mb-6 border-b border-gray-200">
-            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab('definition')">تعریف</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('identification')">شناسایی</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('assay')">سنجش</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('impurities')">ناخالصی‌ها</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('specific-tests')">آزمایشات خاص</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('additional-requirements')">الزامات اضافی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab(event, 'definition')">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'identification')">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'assay')">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'impurities')">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'specific_tests')">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'additional_requirements')">الزامات اضافی</button>
         </div>
 
-        <!-- Definition Tab -->
-        <div id="definition" class="tab-content">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
-                <p class="mb-4">سدیم بیکربنات باید حاوی 99.0% تا 100.5% سدیم بیکربنات (NaHCO3) باشد، که بر اساس وزن خشک محاسبه شده است.</p>
-            </div>
+        <div id="definition" class="tab-content card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+            <p>سدیم بیکربنات حاوی 99.0% تا 100.5% سدیم بیکربنات (<span class="ltr-text">NaHCO<sub>3</sub></span>)، محاسبه شده بر اساس ماده خشک، می‌باشد.</p>
         </div>
 
-        <!-- Identification Tab -->
-        <div id="identification" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">A. آزمون‌های شناسایی - عمومی <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a>، سدیم:</h3>
-                <p class="mb-4">الزامات را برآورده می‌کند.</p>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">B. آزمون‌های شناسایی - عمومی <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a>، بیکربنات:</h3>
-                <p class="mb-4">الزامات را برآورده می‌کند.</p>
-            </div>
+        <div id="identification" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تست‌های شناسایی</h3>
+            <p>•  تست‌های شناسایی - عمومی <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a>، سدیم: الزامات را برآورده می‌کند.</p>
+            <p>•  تست‌های شناسایی - عمومی <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a>، بیکربنات: الزامات را برآورده می‌کند.</p>
         </div>
 
-        <!-- Assay Tab -->
-        <div id="assay" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">روش کار</h3>
-                <p><span class="font-bold">نمونه:</span> 3 گرم</p>
-                <p><span class="font-bold">تحلیل:</span> نمونه را با 100 میلی‌لیتر آب مخلوط کنید، شناساگر متیل رد TS را اضافه کنید و با 1 نیوتنی اسید هیدروکلریک تیتر کنید. اسید را به آرامی و با هم زدن مداوم اضافه کنید تا محلول صورتی کمرنگ شود. محلول را به جوش بیاورید، خنک کنید و تیتر را تا زمانی که رنگ صورتی کمرنگ پس از جوشیدن دیگر محو نشود، ادامه دهید. هر میلی‌لیتر از 1 نیوتنی اسید هیدروکلریک معادل 84.01 میلی‌گرم سدیم بیکربنات است.</p>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">معیارهای پذیرش:</h3>
-                <p>99.0%–100.5% بر اساس وزن خشک</p>
-
-                <div class="interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محاسبه سنجش</h4>
-                    <div class="formula-display">
-                        <span>$$Result = (V_{acid} \times N_{acid} \times 84.01) / W_{sample} \times 100$$</span>
-                    </div>
-                    <div class="grid grid-cols-1 gap-2">
-                        <div>
-                            <label for="v_acid" class="block text-sm font-medium text-gray-700">حجم اسید (mL):</label>
-                            <input type="text" id="v_acid" name="v_acid" class="input-field-class">
-                        </div>
-                        <div>
-                            <label for="n_acid" class="block text-sm font-medium text-gray-700">نرمالیته اسید (N):</label>
-                            <input type="text" id="n_acid" name="n_acid" class="input-field-class">
-                        </div>
-                        <div>
-                            <label for="w_sample" class="block text-sm font-medium text-gray-700">وزن نمونه (mg):</label>
-                            <input type="text" id="w_sample" name="w_sample" class="input-field-class">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateAssay()">محاسبه</button>
-                    <div class="mt-2">
-                        <span class="font-bold">نتیجه:</span> <span id="assay-result" class="inline-block"></span>
-                    </div>
-                    <div class="mt-1">
-                        <span class="font-bold">وضعیت:</span> <span id="assay-status" class="inline-block"></span>
-                    </div>
-                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
-                </div>
-            </div>
+        <div id="assay" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش انجام</h4>
+            <p>نمونه: 3 گرم</p>
+            <p>آنالیز: 3 گرم از نمونه را با 100 میلی‌لیتر آب مخلوط کنید، متیل رد TS را اضافه کرده و با 1 نیوتون اسید کلریدریک تیتر کنید. اسید را به آرامی و با هم زدن مداوم اضافه کنید تا محلول صورتی کم‌رنگ شود. محلول را به جوش بیاورید، خنک کنید و تیتر کردن را ادامه دهید تا زمانی که رنگ صورتی کم‌رنگ پس از جوشیدن دیگر محو نشود. هر میلی‌لیتر از 1 نیوتون اسید کلریدریک معادل 84.01 میلی‌گرم سدیم بیکربنات است.</p>
+            <p>معیارهای پذیرش: 99.0%–100.5% بر اساس ماده خشک</p>
         </div>
 
-        <!-- Impurities Tab -->
-        <div id="impurities" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+        <div id="impurities" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">مواد نامحلول</h3>
-                <p><span class="font-bold">محلول نمونه:</span> 1 گرم را در 20 میلی‌لیتر آب حل کنید.</p>
-                <p><span class="font-bold">معیارهای پذیرش:</span> محلول حاصل کامل و شفاف است.</p>
-                <div class="interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت</h4>
-                    <select id="insoluble-substances-status" name="insoluble-substances-status" class="dropdown-class">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
-                </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">مواد نامحلول</h3>
+            <p>محلول نمونه: 1 گرم را در 20 میلی‌لیتر آب حل کنید.</p>
+            <p>معیارهای پذیرش: محلول حاصل کامل و شفاف است.</p>
 
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">کربنات (در صورت برچسب‌گذاری برای همودیالیز)</h3>
-                <p>
-                    <span class="font-bold">دستگاه:</span> دستگاه (شکل 1 را ببینید) شامل یک فلاسک 50 میلی‌لیتری با بازوی جانبی متصل به منبع دی‌اکسید کربن است که با عبور از محلول اشباع سدیم بیکربنات مرطوب شده است. فلاسک مجهز به درپوش نصب شده در بالا است که دارای یک لوله خروجی است. لوله خروجی از طریق یک تی-تیوب به دریچه سیستم و یک بورت و مخزن تراز کننده متصل است.
-                </p>
-                <p><span class="font-bold">معرف‌ها</span></p>
-                <p><span class="font-bold">محلول اشباع سدیم بیکربنات:</span> 20 گرم سدیم بیکربنات را در 100 میلی‌لیتر آب مخلوط کنید و اجازه دهید بلورهای حل نشده ته‌نشین شوند. از مایع رویی شفاف استفاده کنید.</p>
-                <p><span class="font-bold">محلول جابجایی:</span> 100 گرم سدیم کلرید را در 350 میلی‌لیتر آب حل کنید، 1 گرم سدیم بیکربنات و 1 میلی‌لیتر متیل اورنج TS را اضافه کنید. پس از حل شدن سدیم بیکربنات، اسید سولفوریک 6 نیوتنی را اضافه کنید تا محلول صورتی شود. از این محلول برای پر کردن مخزن دستگاه استفاده کنید.</p>
-                <p><span class="font-bold">تحلیل:</span> 25 میلی‌لیتر از محلول اشباع سدیم بیکربنات را به فلاسک 50 میلی‌لیتری اضافه کنید و سیستم را با اجازه دادن به ورود دی‌اکسید کربن مرطوب شده از طریق بازوی جانبی، شستشو دهید. ورودی دی‌اکسید کربن و دریچه سیستم را ببندید و محلول اشباع سدیم بیکربنات را هم بزنید تا زمانی که جذب بیشتر دی‌اکسید کربن از خوانش‌های متوالی بورت مشاهده نشود. فشار اتمسفریک را در دستگاه با تراز کردن محلول جابجایی در مخزن و بورت حفظ کنید و خوانش بورت را یادداشت کنید. دریچه سیستم را باز کنید و دی‌اکسید کربن مرطوب شده را از طریق بازوی جانبی فلاسک دوباره وارد کنید. ورودی دی‌اکسید کربن و دریچه سیستم را ببندید و محلول اشباع سدیم بیکربنات را به شدت هم بزنید تا زمانی که جذب بیشتر دی‌اکسید کربن مشاهده نشود. رویه جذب دی‌اکسید کربن را از “دریچه سیستم را باز کنید” تکرار کنید تا زمانی که تغییر در خوانش بورت حداکثر 0.2 میلی‌لیتر باشد. هم زدن را قطع کنید، دی‌اکسید کربن مرطوب شده را از طریق بازوی جانبی فلاسک دوباره وارد کنید، درپوش فلاسک را به طور موقت خارج کنید و بلافاصله 10 گرم سدیم بیکربنات را به فلاسک اضافه کنید. درپوش را دوباره قرار دهید، جریان دی‌اکسید کربن مرطوب شده را برای حدود 30 ثانیه ادامه دهید، سپس ورودی دی‌اکسید کربن و دریچه سیستم را ببندید. محلول در فلاسک را به شدت هم بزنید تا جذب دی‌اکسید کربن متوقف شود و حجم جذب شده از خوانش بورت را یادداشت کنید. فشار اتمسفریک را در دستگاه با تراز کردن محلول جابجایی در مخزن و بورت بازیابی کنید و هم زدن را قطع کنید. دریچه سیستم را باز کنید و دی‌اکسید کربن مرطوب شده را از طریق سیستم شستشو دهید. ورودی دی‌اکسید کربن و دریچه سیستم را ببندید و محلول در فلاسک را به شدت هم بزنید تا جذب دی‌اکسید کربن متوقف شود. حجم کل V، بر حسب میلی‌لیتر، دی‌اکسید کربن جذب شده پس از افزودن نمونه به فلاسک را تعیین کنید و درصد کربنات را در قسمت مورد آزمایش نمونه محاسبه کنید:</p>
-                <div class="formula-display">
-                    <span>$$Result = \frac{273V \times P}{22400 \times (273 + T) \times W} \times \frac{6001}{760}$$</span>
-                </div>
-                <p><span class="ltr-text">V</span> = حجم کل دی‌اکسید کربن جذب شده (mL)</p>
-                <p><span class="ltr-text">P</span> = فشار اتمسفریک محیط (mm of mercury)</p>
-                <p><span class="ltr-text">T</span> = دمای محیط</p>
-                <p><span class="ltr-text">W</span> = وزن سدیم بیکربنات گرفته شده (g)</p>
-                <p>[نکته—دما را در طول اندازه‌گیری حجم دی‌اکسید کربن جذب شده ثابت نگه دارید.]</p>
-                <p><span class="font-bold">معیارهای پذیرش:</span> حداکثر 0.23%</p>
-                <div class="interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محاسبه کربنات</h4>
-                    <div class="formula-display">
-                        <span>$$Result = \frac{273V \times P}{22400 \times (273 + T) \times W} \times \frac{6001}{760}$$</span>
-                    </div>
-                     <div class="grid grid-cols-1 gap-2">
-                        <div>
-                            <label for="carbonate-v" class="block text-sm font-medium text-gray-700">حجم CO2 جذب شده (V) (mL):</label>
-                            <input type="text" id="carbonate-v" name="carbonate-v" class="input-field-class">
-                        </div>
-                        <div>
-                            <label for="carbonate-p" class="block text-sm font-medium text-gray-700">فشار اتمسفریک (P) (mm Hg):</label>
-                            <input type="text" id="carbonate-p" name="carbonate-p" class="input-field-class">
-                        </div>
-                        <div>
-                            <label for="carbonate-t" class="block text-sm font-medium text-gray-700">دمای محیط (T) (°C):</label>
-                            <input type="text" id="carbonate-t" name="carbonate-t" class="input-field-class">
-                        </div>
-                         <div>
-                            <label for="carbonate-w" class="block text-sm font-medium text-gray-700">وزن نمونه (W) (g):</label>
-                            <input type="text" id="carbonate-w" name="carbonate-w" class="input-field-class">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateCarbonate()">محاسبه</button>
-                    <div class="mt-2">
-                        <span class="font-bold">نتیجه:</span> <span id="carbonate-result" class="inline-block"></span>
-                    </div>
-                    <div class="mt-1">
-                        <span class="font-bold">وضعیت:</span> <span id="carbonate-status" class="inline-block"></span>
-                    </div>
-                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">کربنات معمولی</h3>
-                <p><span class="font-bold">نمونه:</span> 1 گرم</p>
-                <p><span class="font-bold">تحلیل:</span> نمونه را در 20 میلی‌لیتر آب با چرخاندن بسیار ملایم در دمایی که از 15 درجه سانتی‌گراد تجاوز نکند، حل کنید. 2.0 میلی‌لیتر اسید هیدروکلریک 0.10 نیوتنی و 2 قطره شناساگر فنول فتالئین TS اضافه کنید.</p>
-                <p><span class="font-bold">معیارهای پذیرش:</span> محلول بلافاصله بیش از رنگ صورتی کمرنگ به خود نمی‌گیرد.</p>
-                <div class="interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت</h4>
-                    <select id="normal-carbonate-status" name="normal-carbonate-status" class="dropdown-class">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">کلراید و سولفات <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a>، کلراید</h3>
-                <p><span class="font-bold">نمونه:</span> 0.35 گرم</p>
-                <p><span class="font-bold">معیارهای پذیرش:</span> کلراید بیش از معادل 1.5 میلی‌لیتر اسید هیدروکلریک 0.0010 نیوتنی (حداکثر 0.015%) نباشد.</p>
-                <div class="interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت</h4>
-                    <select id="chloride-status" name="chloride-status" class="dropdown-class">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">حد ترکیبات گوگردی</h3>
-                <p><span class="font-bold">نمونه:</span> 2.0 گرم</p>
-                <p><span class="font-bold">محلول استاندارد:</span> به 0.30 میلی‌لیتر اسید سولفوریک 0.02 نیوتنی، 1 میلی‌لیتر اسید هیدروکلریک 0.06 نیوتنی اضافه کنید و با آب تا 20 میلی‌لیتر رقیق کنید.</p>
-                <p><span class="font-bold">محلول نمونه:</span> نمونه را در 20 میلی‌لیتر آب حل کنید و با جوشاندن به 5 میلی‌لیتر برسانید. 1 میلی‌لیتر بروم TS را اضافه کنید، تا خشکی تبخیر کنید و خنک کنید. باقیمانده را در 10 میلی‌لیتر اسید هیدروکلریک 3 نیوتنی حل کنید، تا خشکی تبخیر کنید و خنک کنید. باقیمانده را در 5 میلی‌لیتر اسید هیدروکلریک 3 نیوتنی حل کنید، تا خشکی تبخیر کنید و خنک کنید. باقیمانده را در 10 میلی‌لیتر آب حل کنید و با اسید هیدروکلریک 3 نیوتنی یا آمونیاک 6 نیوتنی به pH 2 تنظیم کنید. در صورت لزوم برای بدست آوردن محلول شفاف، محلول را فیلتر کنید و فیلتر را با دو قسمت 2 میلی‌لیتری آب شستشو دهید. تا 20 میلی‌لیتر رقیق کنید.</p>
-                <p><span class="font-bold">تحلیل:</span> 1 میلی‌لیتر باریم کلراید TS را به هر یک از محلول استاندارد و محلول نمونه اضافه کنید. مخلوط کنید و به مدت 30 دقیقه قرار دهید.</p>
-                <p><span class="font-bold">معیارهای پذیرش:</span> هرگونه کدورت تولید شده در محلول نمونه، شدیدتر از کدورت تولید شده در محلول استاندارد (حداکثر 0.015%) نباشد.</p>
-                <div class="interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت</h4>
-                    <select id="sulfur-compounds-status" name="sulfur-compounds-status" class="dropdown-class">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">آلومینیوم <a href="General chapters/206.html" class="text-blue-600 hover:underline" target="_blank">206</a> (در صورت برچسب‌گذاری برای همودیالیز)</h3>
-                <p><span class="font-bold">آماده‌سازی تست:</span> 1.0 گرم سدیم بیکربنات را در یک فلاسک حجمی 100 میلی‌لیتری بریزید. با احتیاط 4 میلی‌لیتر اسید نیتریک اضافه کنید. به مدت 30 دقیقه سونوگرافی کنید و با آب تا حجم برسانید.</p>
-                <p><span class="font-bold">معیارهای پذیرش:</span> حداکثر 2 میکروگرم بر گرم</p>
-                 <div class="interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت</h4>
-                    <select id="aluminum-status" name="aluminum-status" class="dropdown-class">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">آرسنیک <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a>، روش I</h3>
-                <p><span class="font-bold">آماده‌سازی تست:</span> 1.5 گرم سدیم بیکربنات را در 20 میلی‌لیتر اسید سولفوریک 7 نیوتنی حل کنید و 35 میلی‌لیتر آب اضافه کنید.</p>
-                <p><span class="font-bold">تحلیل:</span> همانطور که در بخش مربوطه ذکر شده عمل کنید، با حذف افزودن 20 میلی‌لیتر اسید سولفوریک 7 نیوتنی.</p>
-                <p><span class="font-bold">معیارهای پذیرش:</span> حداکثر 2 ppm</p>
-                 <div class="interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت</h4>
-                    <select id="arsenic-status" name="arsenic-status" class="dropdown-class">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">کلسیم (در صورت برچسب‌گذاری برای همودیالیز)</h3>
-                <p>[نکته—محلول‌های استاندارد و محلول نمونه، در صورت لزوم، برای بدست آوردن محلول‌های با غلظت مناسب، قابل انطباق با محدوده خطی یا کاری دستگاه، ممکن است اصلاح شوند.]</p>
-                <p><span class="font-bold">محلول پتاسیم کلراید:</span> 10 میلی‌گرم بر میلی‌لیتر پتاسیم کلراید در اسید هیدروکلریک 0.36 نیوتنی</p>
-                <p><span class="font-bold">محلول‌های استاندارد:</span> 249.7 میلی‌گرم کربنات کلسیم، که قبلاً در دمای 300 درجه سانتی‌گراد به مدت 3 ساعت خشک شده و در دسیکاتور به مدت 2 ساعت خنک شده است، را در یک فلاسک حجمی 100 میلی‌لیتری بریزید. در 6 میلی‌لیتر اسید هیدروکلریک 6 نیوتنی حل کنید، 1 گرم پتاسیم کلراید اضافه کنید و با آب تا حجم برسانید. 10.0 میلی‌لیتر از این محلول را در یک فلاسک حجمی 100 میلی‌لیتری دوم بریزید و با محلول پتاسیم کلراید تا حجم برسانید. این محلول حاوی 100 میکروگرم بر میلی‌لیتر کلسیم است. 2.0، 3.0، 4.0 و 5.0 میلی‌لیتر از این محلول را در فلاسک‌های حجمی 100 میلی‌لیتری جداگانه (هر کدام حاوی 6 میلی‌لیتر اسید هیدروکلریک 6 نیوتنی) بریزید و با محلول پتاسیم کلراید تا حجم برسانید. این محلول‌های استاندارد به ترتیب حاوی 2.0، 3.0، 4.0 و 5.0 میکروگرم بر میلی‌لیتر کلسیم هستند.</p>
-                <p><span class="font-bold">محلول نمونه:</span> 3.0 گرم سدیم بیکربنات را در یک فلاسک حجمی 100 میلی‌لیتری بریزید. 6 میلی‌لیتر اسید هیدروکلریک 6 نیوتنی و 1 گرم پتاسیم کلراید اضافه کنید و با آب تا حجم برسانید.</p>
-                <p><span class="font-bold">بلنک:</span> محلول پتاسیم کلراید</p>
-                <p><span class="font-bold">شرایط دستگاهی</span></p>
-                <p>(به اسپکتروسکوپی جذب اتمی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید.)</p>
-                <p><span class="font-bold">حالت:</span> اسپکتروفتومتری جذب اتمی</p>
-                <p><span class="font-bold">طول موج تحلیلی:</span> خط انتشار کلسیم در 422.7 نانومتر</p>
-                <p><span class="font-bold">لامپ:</span> کاتد توخالی کلسیم</p>
-                <p><span class="font-bold">شعله:</span> اکسید نیتروژن–استیلن</p>
-                <p><span class="font-bold">تحلیل</span></p>
-                <p><span class="font-bold">نمونه‌ها:</span> محلول‌های استاندارد و محلول نمونه</p>
-                <p>جذب محلول‌های استاندارد را در مقابل محتوای کلسیم آنها، بر حسب میکروگرم بر میلی‌لیتر، با رسم یک خط مستقیم که بهترین انطباق را با چهار نقطه رسم شده دارد، رسم کنید. از نمودار به دست آمده، غلظت C، بر حسب میکروگرم بر میلی‌لیتر، کلسیم در محلول نمونه را تعیین کنید.</p>
-                <p>درصد کلسیم را در قسمت سدیم بیکربنات گرفته شده محاسبه کنید:</p>
-                <div class="formula-display">
-                    <span>$$Result = \frac{C}{C_U} \times 100$$</span>
-                </div>
-                <p><span class="ltr-text">C</span> = غلظت کلسیم در محلول نمونه (µg/mL)</p>
-                <p><span class="ltr-text">C<sub>U</sub></span> = غلظت سدیم بیکربنات در محلول نمونه (µg/mL)</p>
-                <p><span class="font-bold">معیارهای پذیرش:</span> حداکثر 0.01%</p>
-                 <div class="interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محاسبه کلسیم</h4>
-                    <div class="formula-display">
-                        <span>$$Result = \frac{C}{C_U} \times 100$$</span>
-                    </div>
-                     <div class="grid grid-cols-1 gap-2">
-                        <div>
-                            <label for="calcium-c" class="block text-sm font-medium text-gray-700">غلظت کلسیم (C) (µg/mL):</label>
-                            <input type="text" id="calcium-c" name="calcium-c" class="input-field-class">
-                        </div>
-                        <div>
-                            <label for="calcium-cu" class="block text-sm font-medium text-gray-700">غلظت سدیم بیکربنات (C<sub>U</sub>) (µg/mL):</label>
-                            <input type="text" id="calcium-cu" name="calcium-cu" class="input-field-class">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateCalcium()">محاسبه</button>
-                    <div class="mt-2">
-                        <span class="font-bold">نتیجه (%):</span> <span id="calcium-result-percent" class="inline-block"></span>
-                    </div>
-                    <div class="mt-1">
-                        <span class="font-bold">نتیجه (ppm):</span> <span id="calcium-result-ppm" class="inline-block"></span>
-                    </div>
-                    <div class="mt-1">
-                        <span class="font-bold">وضعیت:</span> <span id="calcium-status" class="inline-block"></span>
-                    </div>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">منیزیم (در صورت برچسب‌گذاری برای همودیالیز)</h3>
-                <p>[نکته—محلول‌های استاندارد و محلول نمونه، در صورت لزوم، برای بدست آوردن محلول‌های با غلظت مناسب، قابل انطباق با محدوده خطی یا کاری دستگاه، ممکن است اصلاح شوند.]</p>
-                <p><span class="font-bold">محلول پتاسیم کلراید، محلول نمونه و بلنک:</span> همانطور که در آزمون کلسیم آمده عمل کنید.</p>
-                <p><span class="font-bold">محلول‌های استاندارد:</span> به 1.000 گرم منیزیم در یک بشر 250 میلی‌لیتری حاوی 20 میلی‌لیتر آب، با احتیاط 20 میلی‌لیتر اسید هیدروکلریک اضافه کنید، در صورت لزوم برای تکمیل واکنش گرم کنید. این محلول را در یک فلاسک حجمی 1000 میلی‌لیتری حاوی 10 گرم پتاسیم کلراید بریزید و با آب تا حجم برسانید. 10.0 میلی‌لیتر از این محلول را در یک فلاسک حجمی 100 میلی‌لیتری حاوی 1 گرم پتاسیم کلراید بریزید و با آب تا حجم برسانید. 10.0 میلی‌لیتر از این محلول را در یک فلاسک حجمی 100 میلی‌لیتری دوم بریزید و با محلول پتاسیم کلراید تا حجم برسانید. این محلول حاوی 10.0 میکروگرم بر میلی‌لیتر منیزیم است. 2.0، 3.0، 4.0 و 5.0 میلی‌لیتر از این محلول را در فلاسک‌های حجمی 100 میلی‌لیتری جداگانه (هر کدام حاوی 6 میلی‌لیتر اسید هیدروکلریک 6 نیوتنی) بریزید و با محلول پتاسیم کلراید تا حجم برسانید. این محلول‌های استاندارد به ترتیب حاوی 0.2، 0.3، 0.4 و 0.5 میکروگرم بر میلی‌لیتر منیزیم هستند.</p>
-                <p><span class="font-bold">شرایط دستگاهی</span></p>
-                <p>(به اسپکتروسکوپی جذب اتمی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید.)</p>
-                <p><span class="font-bold">حالت:</span> اسپکتروفتومتری جذب اتمی</p>
-                <p><span class="font-bold">طول موج تحلیلی:</span> خط انتشار منیزیم در 285.2 نانومتر</p>
-                <p><span class="font-bold">لامپ:</span> کاتد توخالی منیزیم</p>
-                <p><span class="font-bold">شعله:</span> کاهنده هوا–استیلن</p>
-                <p><span class="font-bold">تحلیل</span></p>
-                <p><span class="font-bold">نمونه‌ها:</span> محلول نمونه و محلول‌های استاندارد</p>
-                <p>جذب محلول‌های استاندارد را در مقابل محتوای منیزیم آنها، بر حسب میکروگرم بر میلی‌لیتر، با رسم یک خط مستقیم که بهترین انطباق را با چهار نقطه رسم شده دارد، رسم کنید. از نمودار به دست آمده، غلظت C، بر حسب میکروگرم بر میلی‌لیتر، منیزیم در محلول نمونه را تعیین کنید.</p>
-                <p>درصد منیزیم را در قسمت سدیم بیکربنات گرفته شده محاسبه کنید:</p>
-                <div class="formula-display">
-                    <span>$$Result = \frac{C}{C_U} \times 100$$</span>
-                </div>
-                <p><span class="ltr-text">C</span> = غلظت منیزیم در محلول نمونه (µg/mL)</p>
-                <p><span class="ltr-text">C<sub>U</sub></span> = غلظت سدیم بیکربنات در محلول نمونه (µg/mL)</p>
-                <p><span class="font-bold">معیارهای پذیرش:</span> حداکثر 0.004%</p>
-                 <div class="interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محاسبه منیزیم</h4>
-                    <div class="formula-display">
-                        <span>$$Result = \frac{C}{C_U} \times 100$$</span>
-                    </div>
-                     <div class="grid grid-cols-1 gap-2">
-                        <div>
-                            <label for="magnesium-c" class="block text-sm font-medium text-gray-700">غلظت منیزیم (C) (µg/mL):</label>
-                            <input type="text" id="magnesium-c" name="magnesium-c" class="input-field-class">
-                        </div>
-                        <div>
-                            <label for="magnesium-cu" class="block text-sm font-medium text-gray-700">غلظت سدیم بیکربنات (C<sub>U</sub>) (µg/mL):</label>
-                            <input type="text" id="magnesium-cu" name="magnesium-cu" class="input-field-class">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateMagnesium()">محاسبه</button>
-                    <div class="mt-2">
-                        <span class="font-bold">نتیجه (%):</span> <span id="magnesium-result-percent" class="inline-block"></span>
-                    </div>
-                    <div class="mt-1">
-                        <span class="font-bold">نتیجه (ppm):</span> <span id="magnesium-result-ppm" class="inline-block"></span>
-                    </div>
-                    <div class="mt-1">
-                        <span class="font-bold">وضعیت:</span> <span id="magnesium-status" class="inline-block"></span>
-                    </div>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">مس (در صورت برچسب‌گذاری برای همودیالیز)</h3>
-                <p>[نکته—محلول استاندارد و محلول نمونه، در صورت لزوم، برای بدست آوردن محلول‌های با غلظت مناسب، قابل انطباق با محدوده خطی یا کاری دستگاه، ممکن است اصلاح شوند.]</p>
-                <p><span class="font-bold">رقیق کننده:</span> 40 میلی‌لیتر اسید نیتریک را با آب تا 1000 میلی‌لیتر رقیق کنید.</p>
-                <p><span class="font-bold">محلول استاندارد:</span> 10.0 میکروگرم بر میلی‌لیتر مس، که به شرح زیر تهیه شده است. 1.000 گرم مس را در یک فلاسک حجمی 1000 میلی‌لیتری بریزید. در 20 میلی‌لیتر اسید نیتریک حل کنید و با اسید نیتریک 0.2 نیوتنی تا حجم برسانید. 10.0 میلی‌لیتر از این محلول را در یک فلاسک حجمی 1000 میلی‌لیتری دوم بریزید و با اسید نیتریک 0.2 نیوتنی تا حجم برسانید. در یک بطری پلی‌اتیلنی نگهداری کنید.</p>
-                <p><span class="font-bold">محلول نمونه:</span> 5.0 گرم سدیم بیکربنات را در یک فلاسک حجمی 100 میلی‌لیتری بریزید و با احتیاط 4 میلی‌لیتر اسید نیتریک اضافه کنید. به مدت 30 دقیقه سونوگرافی کنید و با آب تا حجم برسانید.</p>
-                <p><span class="font-bold">محلول نمونه اسپایک شده:</span> به 10.0 میلی‌لیتر محلول نمونه، 20 میکروگرم محلول استاندارد اضافه کنید. این محلول حاوی 0.02 میکروگرم بر میلی‌لیتر مس اضافه شده است.</p>
-                <p><span class="font-bold">بلنک:</span> رقیق کننده</p>
-                <p><span class="font-bold">شرایط دستگاهی</span></p>
-                <p>(به اسپکتروسکوپی جذب اتمی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید.)</p>
-                <p><span class="font-bold">حالت:</span> اسپکتروفتومتری جذب اتمی</p>
-                <p><span class="font-bold">طول موج تحلیلی:</span> خط انتشار مس در 324.7 نانومتر</p>
-                <p><span class="font-bold">لامپ:</span> کاتد توخالی مس</p>
-                <p><span class="font-bold">شعله:</span> کوره گرم شونده الکتریکی بدون شعله</p>
-                <p><span class="font-bold">تحلیل</span></p>
-                <p><span class="font-bold">نمونه‌ها:</span> محلول نمونه و محلول نمونه اسپایک شده</p>
-                <p>جذب محلول نمونه و محلول نمونه اسپایک شده را در مقابل محتوای مس اضافه شده آنها، بر حسب میکروگرم بر میلی‌لیتر، رسم کنید. خطی بین دو نقطه رسم کنید و خط را تا زمانی که محور غلظت را قطع کند، اکسترپول کنید. از نقطه تقاطع، غلظت C، بر حسب میکروگرم بر میلی‌لیتر، مس در محلول نمونه را تعیین کنید.</p>
-                <p>مقدار مس را بر حسب ppm در قسمت سدیم بیکربنات گرفته شده محاسبه کنید:</p>
-                <div class="formula-display">
-                    <span>$$Result = \frac{C}{C_U} \times 10^6$$</span>
-                </div>
-                <p><span class="ltr-text">C</span> = غلظت مس در محلول نمونه (µg/mL)</p>
-                <p><span class="ltr-text">C<sub>U</sub></span> = غلظت سدیم بیکربنات در محلول نمونه (µg/mL)</p>
-                <p><span class="font-bold">معیارهای پذیرش:</span> حداکثر 1 ppm</p>
-                 <div class="interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محاسبه مس</h4>
-                    <div class="formula-display">
-                        <span>$$Result = \frac{C}{C_U} \times 10^6$$</span>
-                    </div>
-                     <div class="grid grid-cols-1 gap-2">
-                        <div>
-                            <label for="copper-c" class="block text-sm font-medium text-gray-700">غلظت مس (C) (µg/mL):</label>
-                            <input type="text" id="copper-c" name="copper-c" class="input-field-class">
-                        </div>
-                        <div>
-                            <label for="copper-cu" class="block text-sm font-medium text-gray-700">غلظت سدیم بیکربنات (C<sub>U</sub>) (µg/mL):</label>
-                            <input type="text" id="copper-cu" name="copper-cu" class="input-field-class">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateCopper()">محاسبه</button>
-                    <div class="mt-2">
-                        <span class="font-bold">نتیجه (ppm):</span> <span id="copper-result-ppm" class="inline-block"></span>
-                    </div>
-                    <div class="mt-1">
-                        <span class="font-bold">وضعیت:</span> <span id="copper-status" class="inline-block"></span>
-                    </div>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">آهن <a href="General chapters/241.html" class="text-blue-600 hover:underline" target="_blank">241</a> (در صورت برچسب‌گذاری برای همودیالیز)</h3>
-                <p><span class="font-bold">محلول نمونه:</span> 2.0 گرم سدیم بیکربنات را در یک بشر بریزید و با اسید هیدروکلریک خنثی کنید و حجم اسید مصرفی را یادداشت کنید. این محلول را با کمک آب در یک فلاسک حجمی 25 میلی‌لیتری منتقل کنید.</p>
-                <p><span class="font-bold">محلول استاندارد:</span> 1.0 میلی‌لیتر از محلول استاندارد آهن را در یک فلاسک حجمی 25 میلی‌لیتری بریزید. همان حجم اسید هیدروکلریک را که برای تهیه محلول نمونه استفاده شد، اضافه کنید.</p>
-                <p><span class="font-bold">بلنک:</span> از همان حجم اسید هیدروکلریک در یک فلاسک حجمی 25 میلی‌لیتری که برای تهیه محلول نمونه استفاده شد، استفاده کنید.</p>
-                <p><span class="font-bold">شرایط دستگاهی</span></p>
-                <p>(به اسپکتروسکوپی فرابنفش-مرئی <a href="General chapters/857.html" class="text-blue-600 hover:underline" target="_blank">857</a> مراجعه کنید.)</p>
-                <p><span class="font-bold">حالت:</span> UV-Vis</p>
-                <p><span class="font-bold">طول موج تحلیلی:</span> 480 نانومتر</p>
-                <p><span class="font-bold">تحلیل</span></p>
-                <p><span class="font-bold">نمونه‌ها:</span> محلول نمونه، محلول استاندارد و بلنک</p>
-                <p>به هر یک از فلاسک‌های حاوی محلول استاندارد، محلول نمونه و بلنک، 50 میلی‌گرم کریستال آمونیوم پروسولفات و 2 میلی‌لیتر محلول آمونیوم تیوسیانات اضافه کنید. با آب تا حجم برسانید.</p>
-                <p>به طور همزمان، جذب محلول‌های استاندارد و محلول نمونه را تعیین کنید.</p>
-                <p><span class="font-bold">معیارهای پذیرش:</span> جذب محلول نمونه حداکثر جذب محلول استاندارد (حداکثر 5 ppm) باشد.</p>
-                 <div class="interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت</h4>
-                    <select id="iron-status" name="iron-status" class="dropdown-class">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">حد آمونیاک</h3>
-                <p>برای تهیه تمام محلول‌ها از آب با مقاومت الکتریکی حداقل 18 مگااهم-سانتی‌متر استفاده کنید.</p>
-                <p><span class="font-bold">محلول A:</span> 100 میلی‌مولار متان‌سولفونیک اسید در آب</p>
-                <p><span class="font-bold">محلول B:</span> آب</p>
-                <p><span class="font-bold">فاز متحرک:</span> جدول 1 را ببینید. به شرایط اولیه برگردید و سیستم را دوباره کالیبره کنید.</p>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>زمان (min)</th>
-                            <th>محلول A (%)</th>
-                            <th>محلول B (%)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>0</td>
-                            <td>7</td>
-                            <td>93</td>
-                        </tr>
-                        <tr>
-                            <td>26</td>
-                            <td>7</td>
-                            <td>93</td>
-                        </tr>
-                        <tr>
-                            <td>26.1</td>
-                            <td>70</td>
-                            <td>30</td>
-                        </tr>
-                        <tr>
-                            <td>34</td>
-                            <td>70</td>
-                            <td>30</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p>به طور جایگزین، فاز متحرک را می‌توان با استفاده از یک تولید کننده خودکار الون با الکترولیت تولید کرد.</p>
-                <p><span class="font-bold">محلول استاک سیستم مناسبت A:</span> 10 میلی‌گرم بر میلی‌لیتر سدیم بیکربنات در آب</p>
-                <p><span class="font-bold">محلول استاک سیستم مناسبت B:</span> 3 میکروگرم بر میلی‌لیتر آمونیوم کلراید (معادل 1 میکروگرم بر میلی‌لیتر یون‌های آمونیوم) در آب. [نکته—این محلول همچنین می‌تواند به عنوان حاوی 1 میکروگرم بر میلی‌لیتر یون‌های آمونیوم از محلول استاندارد یون کروماتوگرافی آمونیوم قابل ردیابی NIST که به صورت تجاری در دسترس است، تهیه شود.]</p>
-                <p><span class="font-bold">محلول سیستم مناسبت:</span> 1 میلی‌گرم بر میلی‌لیتر سدیم بیکربنات و 0.02 میکروگرم بر میلی‌لیتر یون‌های آمونیوم از حجم‌های مناسب محلول استاک سیستم مناسبت A و محلول استاک سیستم مناسبت B در آب</p>
-                <p><span class="font-bold">محلول استاندارد:</span> 0.02 میکروگرم بر میلی‌لیتر یون‌های آمونیوم از محلول استاندارد یون کروماتوگرافی آمونیوم قابل ردیابی NIST که به صورت تجاری در دسترس است</p>
-                <p><span class="font-bold">محلول نمونه:</span> 1 میلی‌گرم بر میلی‌لیتر سدیم بیکربنات در آب</p>
-                <p><span class="font-bold">سیستم کروماتوگرافی</span></p>
-                <p>(به کروماتوگرافی <a href="General chapters/621.html" class="text-blue-600 hover:underline" target="_blank">621</a>، سیستم مناسبت مراجعه کنید.)</p>
-                <p><span class="font-bold">حالت:</span> LC</p>
-                <p><span class="font-bold">دشکننده:</span> هدایت با سرکوب. [نکته—برای عملکرد بهتر، سرکوب کننده 2 میلی‌متری توصیه می‌شود.]</p>
-                <p><span class="font-bold">ستون‌ها</span></p>
-                <p>گارد: 3 میلی‌متر × 5 سانتی‌متر؛ بسته‌بندی 5 میکرومتر L84</p>
-                <p>تحلیلی: 3 میلی‌متر × 25 سانتی‌متر؛ بسته‌بندی 5 میکرومتر L84</p>
-                <p><span class="font-bold">دماها</span></p>
-                <p>دشکننده: 30 درجه</p>
-                <p>ستون: 40 درجه</p>
-                <p><span class="font-bold">نرخ جریان:</span> 0.43 میلی‌لیتر بر دقیقه</p>
-                <p><span class="font-bold">حجم تزریق:</span> 25 میکرولیتر</p>
-                <p><span class="font-bold">سیستم مناسبت</span></p>
-                <p><span class="font-bold">نمونه:</span> محلول سیستم مناسبت</p>
-                <p>[نکته—نسبت زمان ماند نسبی برای یون‌های سدیم و آمونیوم به ترتیب 1.0 و 1.3 است.]</p>
-                <p><span class="font-bold">الزامات مناسبت</span></p>
-                <p>وضوح: حداقل 4.0 بین یون‌های سدیم و آمونیوم</p>
-                <p>فاکتور تیلینگ: حداکثر 1.5 برای یون آمونیوم</p>
-                <p>نسبت سیگنال به نویز: حداقل 20 برای یون آمونیوم</p>
-                <p><span class="font-bold">تحلیل</span></p>
-                <p><span class="font-bold">نمونه‌ها:</span> محلول استاندارد و محلول نمونه</p>
-                <p><span class="font-bold">معیارهای پذیرش:</span> پاسخ ناشی از یون آمونیوم در محلول نمونه، حداکثر پاسخ ناشی از یون آمونیوم در محلول استاندارد (حداکثر 20 ppm) باشد.</p>
-                 <div class="interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت</h4>
-                    <select id="ammonia-status" name="ammonia-status" class="dropdown-class">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">حد مواد آلی (در صورت برچسب‌گذاری برای همودیالیز)</h3>
-                <p><span class="font-bold">محلول نقره سولفات:</span> 11 گرم بر لیتر نقره سولفات در اسید سولفوریک</p>
-                <p><span class="font-bold">محلول شناساگر:</span> 14.85 میلی‌گرم بر میلی‌لیتر 1،10-فنانترولین و 6.95 میلی‌گرم بر میلی‌لیتر فروس سولفات در آب</p>
-                <p><span class="font-bold">محلول استاندارد:</span> 850.3 میلی‌گرم پتاسیم بیکربنات، که قبلاً به آرامی خرد شده و در دمای 120 درجه سانتی‌گراد به مدت 2 ساعت خشک شده است، را در یک فلاسک حجمی 1000 میلی‌لیتری بریزید. با آب تا حجم برسانید. 6.0 میلی‌لیتر از این محلول را در یک فلاسک حجمی 100 میلی‌لیتری بریزید و با آب تا حجم برسانید. این محلول معادل 0.06 میلی‌گرم بر میلی‌لیتر معادل‌های آلی است. 40.0 میلی‌لیتر از این محلول را در یک فلاسک رفلاکس 500 میلی‌لیتری بریزید.</p>
-                <p><span class="font-bold">محلول نمونه:</span> 20 گرم سدیم بیکربنات را در یک فلاسک رفلاکس 500 میلی‌لیتری بریزید. 20 میلی‌لیتر آب اضافه کنید و بچرخانید. با احتیاط 20 میلی‌لیتر اسید سولفوریک اضافه کنید و بچرخانید.</p>
-                <p>[احتیاط—این عملیات را زیر هود انجام دهید.]</p>
-                <p><span class="font-bold">بلنک:</span> 40 میلی‌لیتر آب را به یک فلاسک رفلاکس 500 میلی‌لیتری اضافه کنید.</p>
-                <p><span class="font-bold">تحلیل</span></p>
-                <p><span class="font-bold">نمونه‌ها:</span> محلول استاندارد، محلول نمونه و بلنک</p>
-                <p>به طور همزمان نمونه‌ها را به شرح زیر عمل کنید. به هر فلاسک 1 گرم سولفات جیوه و حدود پنج دانه شیشه اضافه کنید. فلاسک را در حمام یخ خنک کنید و 5 میلی‌لیتر محلول نقره سولفات اضافه کنید. در حالی که فلاسک را در حمام یخ به آرامی می‌چرخانید، 25.0 میلی‌لیتر پتاسیم دی‌کرومات 0.025 نرمال VS و به آرامی، 70 میلی‌لیتر محلول نقره سولفات اضافه کنید. یک کندانسور آب سرد را روی فلاسک رفلاکس قرار دهید و به مدت 2 ساعت رفلاکس کنید. اجازه دهید محتویات فلاسک به مدت 10 دقیقه خنک شوند و کندانسور را با 50 میلی‌لیتر آب بشویید و شیرابه‌ها را در فلاسک جمع کنید. آب به فلاسک اضافه کنید تا حجمی حدود 350 میلی‌لیتر بدست آید. 3 قطره محلول شناساگر اضافه کنید و در دمای اتاق با سولفات فروس آمونیوم 0.07 نرمال VS تیتر کنید تا محلول از آبی سبز به قهوه‌ای مایل به قرمز تغییر کند.</p>
-                <p>برای تأیید مناسبت سیستم، مقدار، بر حسب میلی‌گرم، معادل‌های آلی را در محلول استاندارد محاسبه کنید:</p>
-                <div class="formula-display">
-                    <span>$$Result = (V_B - V_S) \times 8N$$</span>
-                </div>
-                <p><span class="ltr-text">V<sub>B</sub></span> = حجم سولفات فروس آمونیوم 0.07 نرمال VS مصرف شده توسط بلنک (mL)</p>
-                <p><span class="ltr-text">V<sub>S</sub></span> = حجم سولفات فروس آمونیوم 0.07 نرمال VS مصرف شده توسط محلول استاندارد (mL)</p>
-                <p><span class="ltr-text">N</span> = نرمالیته سولفات فروس آمونیوم VS</p>
-                <p><span class="font-bold">معیارهای مناسبت:</span> 2.328–2.424 میلی‌گرم</p>
-                <p>مقدار، بر حسب میلی‌گرم، معادل‌های آلی را در قسمت سدیم بیکربنات گرفته شده محاسبه کنید:</p>
-                <div class="formula-display">
-                    <span>$$Result = (V_B - V_U) \times 8N$$</span>
-                </div>
-                <p><span class="ltr-text">V<sub>B</sub></span> = حجم سولفات فروس آمونیوم 0.07 نرمال VS مصرف شده توسط بلنک (mL)</p>
-                <p><span class="ltr-text">V<sub>U</sub></span> = حجم سولفات فروس آمونیوم 0.07 نرمال VS مصرف شده توسط محلول نمونه (mL)</p>
-                <p><span class="ltr-text">N</span> = نرمالیته سولفات فروس آمونیوم VS</p>
-                <p><span class="font-bold">معیارهای پذیرش:</span> حداکثر 0.01%</p>
-                 <div class="interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محاسبه مواد آلی</h4>
-                    <div class="formula-display">
-                        <span>$$Result = (V_B - V_U) \times 8N$$</span>
-                    </div>
-                     <div class="grid grid-cols-1 gap-2">
-                        <div>
-                            <label for="organics-vb" class="block text-sm font-medium text-gray-700">حجم بلنک (V<sub>B</sub>) (mL):</label>
-                            <input type="text" id="organics-vb" name="organics-vb" class="input-field-class">
-                        </div>
-                        <div>
-                            <label for="organics-vu" class="block text-sm font-medium text-gray-700">حجم نمونه (V<sub>U</sub>) (mL):</label>
-                            <input type="text" id="organics-vu" name="organics-vu" class="input-field-class">
-                        </div>
-                         <div>
-                            <label for="organics-n" class="block text-sm font-medium text-gray-700">نرمالیته (N):</label>
-                            <input type="text" id="organics-n" name="organics-n" class="input-field-class">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateOrganics()">محاسبه</button>
-                    <div class="mt-2">
-                        <span class="font-bold">نتیجه (mg):</span> <span id="organics-result-mg" class="inline-block"></span>
-                    </div>
-                    <div class="mt-1">
-                        <span class="font-bold">نتیجه (%):</span> <span id="organics-result-percent" class="inline-block"></span>
-                    </div>
-                    <div class="mt-1">
-                        <span class="font-bold">وضعیت:</span> <span id="organics-status" class="inline-block"></span>
-                    </div>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
-                </div>
-
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">کربنات (هنگامی که برای استفاده در همودیالیز برچسب‌گذاری شده است)</h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">دستگاه</h4>
+            <p>دستگاه (شکل 1 را ببینید) شامل یک فلاسک 50 میلی‌لیتری با بازوی جانبی متصل به منبع دی‌اکسید کربن است که با عبور دادن از محلول اشباع سدیم بیکربنات مرطوب شده است. فلاسک مجهز به درپوش بالایی است که با یک لوله خروجی نصب شده است. لوله خروجی از طریق یک لوله T شکل به سیستم تهویه و یک بورت و مخزن جابجایی متصل است.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معرف‌ها</h4>
+            <p>محلول اشباع سدیم بیکربنات: 20 گرم سدیم بیکربنات را در 100 میلی‌لیتر آب مخلوط کرده و اجازه دهید بلورهای حل نشده ته‌نشین شوند. از مایع رویی شفاف استفاده کنید.</p>
+            <p>محلول جابجایی: 100 گرم سدیم کلرید را در 350 میلی‌لیتر آب حل کنید، 1 گرم سدیم بیکربنات و 1 میلی‌لیتر متیل اورنج TS اضافه کنید. پس از حل شدن سدیم بیکربنات، اسید سولفوریک 6 مولار را تا زمانی که محلول صورتی شود، اضافه کنید. از این محلول برای پر کردن مخزن دستگاه استفاده کنید.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز</h4>
+            <p>25 میلی‌لیتر از محلول اشباع سدیم بیکربنات را به فلاسک 50 میلی‌لیتری اضافه کرده و سیستم را با اجازه دادن به ورود دی‌اکسید کربن مرطوب شده از طریق بازوی جانبی، پاکسازی کنید. ورودی دی‌اکسید کربن و تهویه سیستم را ببندید و محلول اشباع سدیم بیکربنات را هم بزنید تا زمانی که جذب دی‌اکسید کربن بیشتری از خوانش‌های متوالی بورت مشاهده نشود. با تنظیم محلول جابجایی در سطح یکسان در مخزن و بورت، فشار اتمسفر را در دستگاه حفظ کنید و خوانش بورت را ثبت کنید. تهویه سیستم را باز کرده و دی‌اکسید کربن مرطوب شده را از طریق بازوی جانبی فلاسک دوباره وارد کنید. ورودی دی‌اکسید کربن و تهویه سیستم را ببندید و محلول اشباع سدیم بیکربنات را به شدت هم بزنید تا زمانی که جذب دی‌اکسید کربن بیشتری مشاهده نشود. رویه جذب دی‌اکسید کربن را با شروع "تهویه سیستم را باز کنید" تکرار کنید تا زمانی که تغییر نهایی بورت نهایتاً 0.2 میلی‌لیتر باشد. هم زدن را قطع کنید، دی‌اکسید کربن مرطوب شده را از طریق بازوی جانبی فلاسک دوباره وارد کنید، درپوش بالایی فلاسک را به طور مختصر بردارید و بلافاصله 10 گرم سدیم بیکربنات (ERR 1-Dec-2019) را به فلاسک اضافه کنید. درپوش را دوباره بگذارید، جریان دی‌اکسید کربن مرطوب شده را برای حدود 30 ثانیه ادامه دهید، سپس ورودی دی‌اکسید کربن و تهویه سیستم را ببندید. محلول را در فلاسک به شدت هم بزنید تا زمانی که جذب دی‌اکسید کربن متوقف شود، و حجم جذب شده را از خوانش بورت ثبت کنید. با تراز کردن محلول جابجایی در مخزن و بورت، فشار اتمسفر را در دستگاه بازیابی کرده و هم زدن را قطع کنید. تهویه سیستم را باز کرده و دی‌اکسید کربن مرطوب شده را از طریق سیستم عبور دهید. ورودی دی‌اکسید کربن و تهویه سیستم را ببندید و محلول را در فلاسک به شدت هم بزنید تا زمانی که جذب دی‌اکسید کربن متوقف شود.</p>
+            <p>حجم کل، V، بر حسب میلی‌لیتر، دی‌اکسید کربن جذب شده را پس از افزودن نمونه به فلاسک تعیین کنید و درصد کربنات را در بخش مورد آزمایش محاسبه کنید:</p>
+            <div class="formula-display">
+                \[Result = 273V × (6001P)/[22,400 × (273 + T) × (760W)]\]
             </div>
+            <p>V = حجم کل دی‌اکسید کربن جذب شده (mL)</p>
+            <p>P = فشار اتمسفر محیط (mm of mercury)</p>
+            <p>T = دمای محیط</p>
+            <p>W = وزن سدیم بیکربنات گرفته شده (g)</p>
+            <p>[نکته — دمای ثابت را در طول اندازه‌گیری حجم دی‌اکسید کربن جذب شده حفظ کنید.]</p>
+            <p>معیارهای پذیرش: نهایتاً 0.23%</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">کربنات معمولی</h3>
+            <p>نمونه: 1 گرم</p>
+            <p>آنالیز: نمونه را در 20 میلی‌لیتر آب با هم زدن بسیار ملایم در دمایی که از 15 درجه سانتی‌گراد تجاوز نکند، حل کنید. 2.0 میلی‌لیتر اسید کلریدریک 0.10 مولار و 2 قطره فنل فتالئین TS اضافه کنید.</p>
+            <p>معیارهای پذیرش: محلول بلافاصله بیشتر از یک رنگ صورتی کم‌رنگ به خود نمی‌گیرد.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">کلراید و سولفات <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a>، کلراید</h3>
+            <p>نمونه: 0.35 گرم</p>
+            <p>معیارهای پذیرش: کلراید نباید بیشتر از مقدار معادل 1.5 میلی‌لیتر اسید کلریدریک 0.0010 مولار باشد (نهایتاً 0.015%)</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">محدودیت ترکیبات گوگرد</h3>
+            <p>نمونه: 2.0 گرم</p>
+            <p>محلول استاندارد: به 0.30 میلی‌لیتر اسید سولفوریک 0.02 مولار، 1 میلی‌لیتر اسید کلریدریک 0.06 مولار اضافه کرده و با آب تا 20 میلی‌لیتر رقیق کنید.</p>
+            <p>محلول نمونه: نمونه را در 20 میلی‌لیتر آب حل کرده و با جوشاندن تا 5 میلی‌لیتر تبخیر کنید. 1 میلی‌لیتر برم TS را اضافه کرده، تا خشکی تبخیر کرده و خنک کنید. باقیمانده را در 10 میلی‌لیتر اسید کلریدریک 3 مولار حل کرده، تا خشکی تبخیر کرده و خنک کنید. باقیمانده را در 5 میلی‌لیتر اسید کلریدریک 3 مولار حل کرده، تا خشکی تبخیر کرده و خنک کنید. باقیمانده را در 10 میلی‌لیتر آب حل کرده و با اسید کلریدریک 3 مولار یا آمونیوم هیدروکسید 6 مولار تا pH 2 تنظیم کنید. در صورت نیاز به دستیابی به محلول شفاف، محلول را فیلتر کرده و فیلتر را با دو قسمت 2 میلی‌لیتری آب بشویید. با آب تا 20 میلی‌لیتر رقیق کنید.</p>
+            <p>آنالیز: 1 میلی‌لیتر باریم کلرید TS را به هر یک از محلول استاندارد و محلول نمونه اضافه کنید. مخلوط کرده و به مدت 30 دقیقه بگذارید بماند.</p>
+            <p>معیارهای پذیرش: هر کدورت تولید شده در محلول نمونه نباید شدیدتر از کدورت تولید شده در محلول استاندارد باشد (نهایتاً 0.015%).</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آلومینیوم <a href="General chapters/206.html" class="text-blue-600 hover:underline" target="_blank">206</a> (هنگامی که برای استفاده در همودیالیز برچسب‌گذاری شده است)</h3>
+            <p>آماده‌سازی تست: 1.0 گرم سدیم بیکربنات را در یک فلاسک حجمی پلاستیکی 100 میلی‌لیتری بریزید. به دقت 4 میلی‌لیتر اسید نیتریک اضافه کنید. به مدت 30 دقیقه سونوگرافی کنید و با آب تا حجم رقیق کنید.</p>
+            <p>معیارهای پذیرش: نهایتاً 2 میکروگرم بر گرم</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آرسنیک <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a>، روش I</h3>
+            <p>آماده‌سازی تست: 1.5 گرم سدیم بیکربنات را در 20 میلی‌لیتر اسید سولفوریک 7 مولار حل کرده و 35 میلی‌لیتر آب اضافه کنید.</p>
+            <p>آنالیز: طبق فصل انجام دهید، با حذف افزودن 20 میلی‌لیتر اسید سولفوریک 7 مولار.</p>
+            <p>معیارهای پذیرش: نهایتاً 2 ppm</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">کلسیم (هنگامی که برای استفاده در همودیالیز برچسب‌گذاری شده است)</h3>
+            <p>[نکته — محلول‌های استاندارد و محلول نمونه ممکن است در صورت لزوم برای دستیابی به محلول‌های با غلظت مناسب، سازگار با دامنه خطی یا کاری دستگاه، اصلاح شوند.]</p>
+            <p>محلول پتاسیم کلرید: 10 میلی‌گرم بر میلی‌لیتر پتاسیم کلرید در اسید کلریدریک 0.36 مولار</p>
+            <p>محلول‌های استاندارد: 249.7 میلی‌گرم کلسیم کربنات، قبلاً در دمای 300 درجه سانتی‌گراد به مدت 3 ساعت خشک شده و به مدت 2 ساعت در دسیکاتور خنک شده، را در یک فلاسک حجمی 100 میلی‌لیتری بریزید. در 6 میلی‌لیتر اسید کلریدریک 6 مولار حل کنید، 1 گرم پتاسیم کلرید اضافه کرده و با آب تا حجم رقیق کنید. 10.0 میلی‌لیتر از این محلول را در یک فلاسک حجمی 100 میلی‌لیتری دیگر ریخته و با محلول پتاسیم کلرید تا حجم رقیق کنید. این محلول حاوی 100 میکروگرم بر میلی‌لیتر کلسیم است. 2.0، 3.0، 4.0 و 5.0 میلی‌لیتر از این محلول را در فلاسک‌های حجمی 100 میلی‌لیتری جداگانه (هر کدام حاوی 6 میلی‌لیتر اسید کلریدریک 6 مولار) بریزید و با محلول پتاسیم کلرید تا حجم رقیق کنید. این محلول‌های استاندارد به ترتیب حاوی 2.0، 3.0، 4.0 و 5.0 میکروگرم بر میلی‌لیتر کلسیم هستند.</p>
+            <p>محلول نمونه: 3.0 گرم سدیم بیکربنات را در یک فلاسک حجمی 100 میلی‌لیتری بریزید. 6 میلی‌لیتر اسید کلریدریک 6 مولار و 1 گرم پتاسیم کلرید اضافه کرده و با آب تا حجم رقیق کنید.</p>
+            <p>شاهد: محلول پتاسیم کلرید</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط دستگاه</h4>
+            <p>(طیف‌سنجی جذب اتمی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> را ببینید.)</p>
+            <p>حالت: طیف‌سنجی جذب اتمی</p>
+            <p>طول موج تحلیلی: خط انتشار کلسیم در 422.7 نانومتر</p>
+            <p>لامپ: کاتد توخالی کلسیم</p>
+            <p>شعله: اکسید نیتروژن–استیلن</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز</h4>
+            <p>نمونه‌ها: محلول‌های استاندارد و محلول نمونه</p>
+            <p>جذب محلول‌های استاندارد را در مقابل محتوای کلسیم آن‌ها، بر حسب میکروگرم بر میلی‌لیتر، با رسم خط مستقیمی که بهترین انطباق را با چهار نقطه رسم شده داشته باشد، ترسیم کنید. از نمودار حاصل، غلظت C، بر حسب میکروگرم بر میلی‌لیتر، کلسیم در محلول نمونه را تعیین کنید.</p>
+            <p>درصد کلسیم را در بخش سدیم بیکربنات گرفته شده محاسبه کنید:</p>
+            <div class="formula-display">
+                \[Result = (C/C U) × 100\]
+            </div>
+            <p>C = غلظت کلسیم در محلول نمونه (µg/mL)</p>
+            <p>C U = غلظت سدیم بیکربنات در محلول نمونه (µg/mL)</p>
+            <p>معیارهای پذیرش: نهایتاً 0.01%</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">منیزیم (هنگامی که برای استفاده در همودیالیز برچسب‌گذاری شده است)</h3>
+            <p>[نکته — محلول‌های استاندارد و محلول نمونه ممکن است در صورت لزوم برای دستیابی به محلول‌های با غلظت مناسب، سازگار با دامنه خطی یا کاری دستگاه، اصلاح شوند.]</p>
+            <p>محلول پتاسیم کلرید، محلول نمونه و شاهد: طبق دستورالعمل در تست کلسیم عمل کنید.</p>
+            <p>محلول‌های استاندارد: 1.000 گرم منیزیم را در یک بشر 250 میلی‌لیتری حاوی 20 میلی‌لیتر آب بریزید، به دقت 20 میلی‌لیتر اسید کلریدریک اضافه کنید و در صورت لزوم برای تکمیل واکنش گرم کنید. این محلول را در یک فلاسک حجمی 1000 میلی‌لیتری حاوی 10 گرم پتاسیم کلرید بریزید و با آب تا حجم رقیق کنید. 10.0 میلی‌لیتر از این محلول را در یک فلاسک حجمی 100 میلی‌لیتری حاوی 1 گرم پتاسیم کلرید بریزید و با آب تا حجم رقیق کنید. 10.0 میلی‌لیتر از این محلول را در یک فلاسک حجمی 100 میلی‌لیتری دیگر بریزید و با محلول پتاسیم کلرید تا حجم رقیق کنید. این محلول حاوی 10.0 میکروگرم بر میلی‌لیتر منیزیم است. 2.0، 3.0، 4.0 و 5.0 میلی‌لیتر از این محلول را در فلاسک‌های حجمی 100 میلی‌لیتری جداگانه (هر کدام حاوی 6 میلی‌لیتر اسید کلریدریک 6 مولار) بریزید و با محلول پتاسیم کلرید تا حجم رقیق کنید. این محلول‌های استاندارد به ترتیب حاوی 0.2، 0.3، 0.4 و 0.5 میکروگرم بر میلی‌لیتر منیزیم هستند.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط دستگاه</h4>
+            <p>(طیف‌سنجی جذب اتمی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> را ببینید.)</p>
+            <p>حالت: طیف‌سنجی جذب اتمی</p>
+            <p>طول موج تحلیلی: خط انتشار منیزیم در 285.2 نانومتر</p>
+            <p>لامپ: کاتد توخالی منیزیم</p>
+            <p>شعله: کاهش‌یافته هوا–استیلن</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز</h4>
+            <p>نمونه‌ها: محلول نمونه و محلول‌های استاندارد</p>
+            <p>جذب محلول‌های استاندارد را در مقابل محتوای منیزیم آن‌ها، بر حسب میکروگرم بر میلی‌لیتر، با رسم خط مستقیمی که بهترین انطباق را با چهار نقطه رسم شده داشته باشد، ترسیم کنید. از نمودار حاصل، غلظت C، بر حسب میکروگرم بر میلی‌لیتر، منیزیم در محلول نمونه را تعیین کنید.</p>
+            <p>درصد منیزیم را در بخش سدیم بیکربنات گرفته شده محاسبه کنید:</p>
+            <div class="formula-display">
+                \[Result = (C/C U) × 100\]
+            </div>
+            <p>C = غلظت منیزیم در محلول نمونه (µg/mL)</p>
+            <p>C U = غلظت سدیم بیکربنات در محلول نمونه (µg/mL)</p>
+            <p>معیارهای پذیرش: نهایتاً 0.004%</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">مس (هنگامی که برای استفاده در همودیالیز برچسب‌گذاری شده است)</h3>
+            <p>[نکته — محلول استاندارد و محلول نمونه ممکن است در صورت لزوم برای دستیابی به محلول‌های با غلظت مناسب، سازگار با دامنه خطی یا کاری دستگاه، اصلاح شوند.]</p>
+            <p>رقیق‌کننده: 40 میلی‌لیتر اسید نیتریک را با آب تا 1000 میلی‌لیتر رقیق کنید.</p>
+            <p>محلول استاندارد: 10.0 میکروگرم بر میلی‌لیتر مس، آماده شده به شرح زیر. 1.000 گرم مس را در یک فلاسک حجمی 1000 میلی‌لیتری بریزید. در 20 میلی‌لیتر اسید نیتریک حل کرده و با اسید نیتریک 0.2 مولار تا حجم رقیق کنید. 10.0 میلی‌لیتر از این محلول را در یک فلاسک حجمی 1000 میلی‌لیتری دیگر ریخته و با اسید نیتریک 0.2 مولار تا حجم رقیق کنید. در یک بطری پلی‌اتیلنی نگهداری کنید.</p>
+            <p>محلول نمونه: 5.0 گرم سدیم بیکربنات را در یک فلاسک حجمی پلاستیکی 100 میلی‌لیتری بریزید و به دقت 4 میلی‌لیتر اسید نیتریک اضافه کنید. به مدت 30 دقیقه سونوگرافی کنید و با آب تا حجم رقیق کنید.</p>
+            <p>محلول اسپایک شده نمونه: به 10.0 میلی‌لیتر از محلول نمونه، 20 میکروگرم از محلول استاندارد اضافه کنید. این محلول حاوی 0.02 میکروگرم بر میلی‌لیتر مس اضافه شده است.</p>
+            <p>شاهد: رقیق‌کننده</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط دستگاه</h4>
+            <p>(طیف‌سنجی جذب اتمی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> را ببینید.)</p>
+            <p>حالت: طیف‌سنجی جذب اتمی</p>
+            <p>طول موج تحلیلی: خط انتشار مس در 324.7 نانومتر</p>
+            <p>لامپ: کاتد توخالی مس</p>
+            <p>شعله: کوره گرم شده الکتریکی بدون شعله</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز</h4>
+            <p>نمونه‌ها: محلول نمونه و محلول اسپایک شده نمونه</p>
+            <p>جذب محلول نمونه و محلول اسپایک شده نمونه را در مقابل محتوای مس اضافه شده آن‌ها، بر حسب میکروگرم بر میلی‌لیتر، ترسیم کنید. خطی بین دو نقطه رسم کرده و خط را تا زمانی که محور غلظت را قطع کند، امتداد دهید. از نقطه تقاطع، غلظت C، بر حسب میکروگرم بر میلی‌لیتر، مس در محلول نمونه را تعیین کنید.</p>
+            <p>مقدار مس، بر حسب ppm، در بخش سدیم بیکربنات گرفته شده را محاسبه کنید:</p>
+            <div class="formula-display">
+                \[Result = (C/C U) × 10<sup>6</sup>\]
+            </div>
+            <p>C = غلظت مس در محلول نمونه (µg/mL)</p>
+            <p>C U = غلظت سدیم بیکربنات در محلول نمونه (µg/mL)</p>
+            <p>معیارهای پذیرش: نهایتاً 1 ppm</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آهن <a href="General chapters/241.html" class="text-blue-600 hover:underline" target="_blank">241</a> (هنگامی که برای استفاده در همودیالیز برچسب‌گذاری شده است)</h3>
+            <p>محلول نمونه: 2.0 گرم سدیم بیکربنات را در یک بشر بریزید و با اسید کلریدریک خنثی کنید، حجم اسید مصرفی را یادداشت کنید. این محلول را با کمک آب در یک فلاسک حجمی 25 میلی‌لیتری منتقل کنید.</p>
+            <p>محلول استاندارد: 1.0 میلی‌لیتر از محلول استاندارد آهن را در یک فلاسک حجمی 25 میلی‌لیتری بریزید. همان حجم اسید کلریدریک مورد استفاده برای تهیه محلول نمونه را اضافه کنید.</p>
+            <p>شاهد: همان حجم اسید کلریدریک را در یک فلاسک حجمی 25 میلی‌لیتری که برای تهیه محلول نمونه استفاده شده است، به کار ببرید.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط دستگاه</h4>
+            <p>(طیف‌سنجی فرابنفش-مرئی <a href="General chapters/857.html" class="text-blue-600 hover:underline" target="_blank">857</a> را ببینید.)</p>
+            <p>حالت: UV-Vis</p>
+            <p>طول موج تحلیلی: 480 نانومتر</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز</h4>
+            <p>نمونه‌ها: محلول نمونه، محلول استاندارد و شاهد</p>
+            <p>به هر یک از فلاسک‌های حاوی محلول استاندارد، محلول نمونه و شاهد، 50 میلی‌گرم بلورهای آمونیوم پروسولفات و 2 میلی‌لیتر محلول آمونیوم تیوسیانات اضافه کنید. با آب تا حجم رقیق کنید.</p>
+            <p>به طور همزمان، جذب محلول‌های محلول استاندارد و محلول نمونه را تعیین کنید.</p>
+            <p>معیارهای پذیرش: جذب محلول نمونه نهایتاً برابر با جذب محلول استاندارد است (نهایتاً 5 ppm).</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">محدودیت آمونیاک</h3>
+            <p>برای تهیه تمام محلول‌ها از آب با مقاومت حداقل 18 مگا اهم-سانتی‌متر استفاده کنید.</p>
+            <p>محلول A: 100 میلی‌مولار متیل سولفونیک اسید در آب</p>
+            <p>محلول B: آب</p>
+            <p>فاز متحرک: جدول 1 را ببینید. به شرایط اولیه بازگشته و سیستم را دوباره متعادل کنید.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">جدول 1</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>زمان (دقیقه)</th>
+                        <th>محلول A (%)</th>
+                        <th>محلول B (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td>7</td>
+                        <td>93</td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>7</td>
+                        <td>93</td>
+                    </tr>
+                    <tr>
+                        <td>26.1</td>
+                        <td>70</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>34</td>
+                        <td>70</td>
+                        <td>30</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>در غیر این صورت، فاز متحرک را می‌توان با استفاده از یک مولد الکترولیتی خودکار تولید کرد.</p>
+            <p>محلول استوک سیستمیتیک A: 10 میلی‌گرم بر میلی‌لیتر سدیم بیکربنات در آب</p>
+            <p>محلول استوک سیستمیتیک B: 3 میکروگرم بر میلی‌لیتر آمونیوم کلرید (معادل 1 میکروگرم بر میلی‌لیتر یون‌های آمونیوم) در آب. [نکته — این محلول ممکن است به صورت حاوی 1 میکروگرم بر میلی‌لیتر یون‌های آمونیوم از محلول استاندارد یون آمونیوم کروماتوگرافی یونی موجود تجاری قابل ردیابی NIST نیز تهیه شود.]</p>
+            <p>محلول سیستمیتی: 1 میلی‌گرم بر میلی‌لیتر سدیم بیکربنات و 0.02 میکروگرم بر میلی‌لیتر یون‌های آمونیوم از حجم‌های مناسب محلول استوک سیستمیتی A و محلول استوک سیستمیتی B در آب</p>
+            <p>محلول استاندارد: 0.02 میکروگرم بر میلی‌لیتر یون‌های آمونیوم از محلول استاندارد یون آمونیوم کروماتوگرافی یونی موجود تجاری قابل ردیابی NIST</p>
+            <p>محلول نمونه: 1 میلی‌گرم بر میلی‌لیتر سدیم بیکربنات در آب</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم کروماتوگرافی</h4>
+            <p>(<a href="General chapters/621.html" class="text-blue-600 hover:underline" target="_blank">621</a>، سیستمیتی را ببینید.)</p>
+            <p>حالت: LC</p>
+            <p>آشکارساز: هدایت‌سنجی با سرکوب. [نکته — برای عملکرد بهتر، سرکوب‌کننده 2 میلی‌متری توصیه می‌شود.]</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ستون‌ها</h4>
+            <p>محافظ: 3 میلی‌متر × 5 سانتی‌متر؛ بسته‌بندی 5 میکرومتری L84</p>
+            <p>تحلیلی: 3 میلی‌متر × 25 سانتی‌متر؛ بسته‌بندی 5 میکرومتری L84</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">دماها</h4>
+            <p>آشکارساز: 30 درجه سانتی‌گراد</p>
+            <p>ستون: 40 درجه سانتی‌گراد</p>
+            <p>نرخ جریان: 0.43 میلی‌لیتر بر دقیقه</p>
+            <p>حجم تزریق: 25 میکرولیتر</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستمیتی</h4>
+            <p>نمونه: محلول سیستمیتی</p>
+            <p>[نکته — زمان‌های نسبی بازگشت یون‌های سدیم و آمونیوم به ترتیب 1.0 و 1.3 هستند.]</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">الزامات سیستمیتی</h4>
+            <p>تفکیک: نهایتاً 4.0 بین یون‌های سدیم و آمونیوم</p>
+            <p>ضریب دمی: نهایتاً 1.5 برای یون آمونیوم</p>
+            <p>نسبت سیگنال به نویز: نهایتاً 20 برای یون آمونیوم</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز</h4>
+            <p>نمونه‌ها: محلول استاندارد و محلول نمونه</p>
+            <p>پاسخ ناشی از یون آمونیوم در محلول نمونه نهایتاً برابر با پاسخ ناشی از یون آمونیوم در محلول استاندارد است (نهایتاً 20 ppm).</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">محدودیت مواد آلی (هنگامی که برای استفاده در همودیالیز برچسب‌گذاری شده است)</h3>
+            <p>محلول نقره سولفات: 11 گرم بر لیتر نقره سولفات در اسید سولفوریک</p>
+            <p>محلول شناساگر: 14.85 میلی‌گرم بر میلی‌لیتر 1،10-فنولینانترولین و 6.95 میلی‌گرم بر میلی‌لیتر سولفات آهن در آب</p>
+            <p>محلول استاندارد: 850.3 میلی‌گرم پتاسیم بایفتالات، که قبلاً به آرامی خرد شده و به مدت 2 ساعت در دمای 120 درجه سانتی‌گراد خشک شده است، را در یک فلاسک حجمی 1000 میلی‌لیتری بریزید. با آب تا حجم رقیق کنید. 6.0 میلی‌لیتر از این محلول را در یک فلاسک حجمی 100 میلی‌لیتری بریزید و با آب تا حجم رقیق کنید. این محلول معادل 0.06 میلی‌گرم بر میلی‌لیتر معادل‌های آلی را شامل می‌شود. 40.0 میلی‌لیتر از این محلول را در یک فلاسک رفلاکس 500 میلی‌لیتری بریزید.</p>
+            <p>محلول نمونه: 20 گرم سدیم بیکربنات را در یک فلاسک رفلاکس 500 میلی‌لیتری بریزید. 20 میلی‌لیتر آب اضافه کرده و بچرخانید. با احتیاط 20 میلی‌لیتر اسید سولفوریک اضافه کرده و بچرخانید.</p>
+            <p>[احتیاط — این عملیات را زیر هود انجام دهید.]</p>
+            <p>شاهد: 40 میلی‌لیتر آب را به یک فلاسک رفلاکس 500 میلی‌لیتری اضافه کنید.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز</h4>
+            <p>نمونه‌ها: محلول استاندارد، محلول نمونه و شاهد</p>
+            <p>به طور همزمان نمونه‌ها را به شرح زیر پردازش کنید. به هر فلاسک 1 گرم جیوه سولفات و حدود پنج مهره شیشه‌ای اضافه کنید. فلاسک را در حمام یخ خنک کرده و 5 میلی‌لیتر محلول نقره سولفات اضافه کنید. در حالی که فلاسک را در حمام یخ به آرامی می‌چرخانید، 25.0 میلی‌لیتر پتاسیم دی‌کرومات VS 0.025 مولار و به آرامی، 70 میلی‌لیتر محلول نقره سولفات اضافه کنید. یک کندانسور آب سرد را روی فلاسک رفلاکس نصب کرده و به مدت 2 ساعت رفلاکس کنید. اجازه دهید محتویات فلاسک به مدت 10 دقیقه خنک شوند و کندانسور را با 50 میلی‌لیتر آب بشویید و شستشوها را در فلاسک جمع‌آوری کنید. آب را به فلاسک اضافه کنید تا حجمی حدود 350 میلی‌لیتر به دست آید. 3 قطره محلول شناساگر اضافه کرده و در دمای اتاق با سولفات آهن آمونیوم VS 0.07 مولار تا زمانی که محلول از آبی سبز به قهوه‌ای مایل به قرمز تغییر کند، تیتر کنید.</p>
+            <p>برای تأیید مناسب بودن سیستم، مقدار، بر حسب میلی‌گرم، معادل‌های آلی را در محلول استاندارد محاسبه کنید:</p>
+            <div class="formula-display">
+                \[Result = (V<sub>B</sub> − V<sub>S</sub>) × 8N\]
+            </div>
+            <p>V<sub>B</sub> = حجم سولفات آهن آمونیوم VS 0.07 مولار مصرف شده توسط شاهد (mL)</p>
+            <p>V<sub>S</sub> = حجم سولفات آهن آمونیوم VS 0.07 مولار مصرف شده توسط محلول استاندارد (mL)</p>
+            <p>N = نرمالیته سولفات آهن آمونیوم VS</p>
+            <p>معیارهای مناسبت: 2.328–2.424 میلی‌گرم</p>
+            <p>مقدار، بر حسب میلی‌گرم، معادل‌های آلی را در بخش سدیم بیکربنات گرفته شده محاسبه کنید:</p>
+            <div class="formula-display">
+                \[Result = (V<sub>B</sub> − V<sub>U</sub>) × 8N\]
+            </div>
+            <p>V<sub>B</sub> = حجم سولفات آهن آمونیوم VS 0.07 مولار مصرف شده توسط شاهد (mL)</p>
+            <p>V<sub>U</sub> = حجم سولفات آهن آمونیوم VS 0.07 مولار مصرف شده توسط محلول نمونه (mL)</p>
+            <p>N = نرمالیته سولفات آهن آمونیوم VS</p>
+            <p>معیارهای پذیرش: نهایتاً 0.01%</p>
         </div>
 
-        <!-- Specific Tests Tab -->
-        <div id="specific-tests" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">از دست دادن در هنگام خشک شدن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h3>
-                <p><span class="font-bold">نمونه:</span> 4 گرم</p>
-                <p><span class="font-bold">تحلیل:</span> نمونه را به مدت 4 ساعت روی سیلیکاژل خشک کنید.</p>
-                <p><span class="font-bold">معیارهای پذیرش:</span> حداکثر 0.25%</p>
-                <div class="interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محاسبه از دست دادن در هنگام خشک شدن</h4>
-                    <div class="formula-display">
-                        <span>$$LOD = \frac{(W_1 + W_{sa}) - W_2}{W_{sa}} \times 100$$</span>
-                    </div>
-                    <div class="grid grid-cols-1 gap-2">
-                        <div>
-                            <label for="lod-w1" class="block text-sm font-medium text-gray-700">وزن اولیه (mg):</label>
-                            <input type="text" id="lod-w1" name="lod-w1" class="input-field-class">
-                        </div>
-                        <div>
-                            <label for="lod-wsa" class="block text-sm font-medium text-gray-700">وزن نمونه خشک شده (mg):</label>
-                            <input type="text" id="lod-wsa" name="lod-wsa" class="input-field-class">
-                        </div>
-                        <div>
-                            <label for="lod-w2" class="block text-sm font-medium text-gray-700">وزن نهایی (mg):</label>
-                            <input type="text" id="lod-w2" name="lod-w2" class="input-field-class">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateLOD()">محاسبه</button>
-                    <div class="mt-2">
-                        <span class="font-bold">نتیجه (%):</span> <span id="lod-result-percent" class="inline-block"></span>
-                    </div>
-                    <div class="mt-1">
-                        <span class="font-bold">وضعیت:</span> <span id="lod-status" class="inline-block"></span>
-                    </div>
-                    <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">باقیمانده پس از اشتعال</h3>
-                <p><span class="font-bold">معیارهای پذیرش:</span> حداکثر 0.1%</p>
-                <div class="interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محاسبه باقیمانده پس از اشتعال</h4>
-                     <div class="formula-display">
-                        <span>$$ROI = \frac{W_3 - W_1}{W_2} \times 100$$</span>
-                    </div>
-                    <div class="grid grid-cols-1 gap-2">
-                        <div>
-                            <label for="roi-w1" class="block text-sm font-medium text-gray-700">وزن ظرف تمیز (g):</label>
-                            <input type="text" id="roi-w1" name="roi-w1" class="input-field-class">
-                        </div>
-                        <div>
-                            <label for="roi-w2" class="block text-sm font-medium text-gray-700">وزن نمونه (g):</label>
-                            <input type="text" id="roi-w2" name="roi-w2" class="input-field-class">
-                        </div>
-                        <div>
-                            <label for="roi-w3" class="block text-sm font-medium text-gray-700">وزن ظرف + باقیمانده (g):</label>
-                            <input type="text" id="roi-w3" name="roi-w3" class="input-field-class">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateROI()">محاسبه</button>
-                    <div class="mt-2">
-                        <span class="font-bold">نتیجه (%):</span> <span id="roi-result-percent" class="inline-block"></span>
-                    </div>
-                    <div class="mt-1">
-                        <span class="font-bold">وضعیت:</span> <span id="roi-status" class="inline-block"></span>
-                    </div>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">مواد قلیایی و نمک‌های اسیدی (حد)</h3>
-                <p>حداکثر 0.1%</p>
-                <div class="interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت</h4>
-                    <select id="magnesium-alkali-salts-status" name="magnesium-alkali-salts-status" class="dropdown-class">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
-                </div>
-
-                <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">مواد نامحلول در الکل</h3>
-                <p>حداکثر 0.1%</p>
-                <div class="interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت</h4>
-                    <select id="alcohol-insoluble-status" name="alcohol-insoluble-status" class="dropdown-class">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
-                </div>
-
-                 <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">مواد کاهنده</h3>
-                <p>حداکثر 0.25%</p>
-                <div class="interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محاسبه مواد کاهنده</h4>
-                    <div class="formula-display">
-                        <span>$$Result = \left[ \frac{(V_B - V_S) \times N \times 27 \times F}{W} \right] \times 100$$</span>
-                    </div>
-                    <div class="grid grid-cols-1 gap-2">
-                        <div>
-                            <label for="reducing-vb" class="block text-sm font-medium text-gray-700">حجم بلنک (V<sub>B</sub>) (mL):</label>
-                            <input type="text" id="reducing-vb" name="reducing-vb" class="input-field-class">
-                        </div>
-                        <div>
-                            <label for="reducing-vs" class="block text-sm font-medium text-gray-700">حجم نمونه (V<sub>S</sub>) (mL):</label>
-                            <input type="text" id="reducing-vs" name="reducing-vs" class="input-field-class">
-                        </div>
-                        <div>
-                            <label for="reducing-n" class="block text-sm font-medium text-gray-700">نرمالیته (N):</label>
-                            <input type="text" id="reducing-n" name="reducing-n" class="input-field-class">
-                        </div>
-                        <div>
-                            <label for="reducing-f" class="block text-sm font-medium text-gray-700">فاکتور (F):</label>
-                            <input type="text" id="reducing-f" name="reducing-f" class="input-field-class">
-                        </div>
-                         <div>
-                            <label for="reducing-w" class="block text-sm font-medium text-gray-700">وزن نمونه (W) (g):</label>
-                            <input type="text" id="reducing-w" name="reducing-w" class="input-field-class">
-                        </div>
-                    </div>
-                    <button class="calculation-button mt-4" onclick="calculateReducingSubstances()">محاسبه</button>
-                    <div class="mt-2">
-                        <span class="font-bold">نتیجه (%):</span> <span id="reducing-result-percent" class="inline-block"></span>
-                    </div>
-                    <div class="mt-1">
-                        <span class="font-bold">نتیجه (ppm):</span> <span id="reducing-result-ppm" class="inline-block"></span>
-                    </div>
-                    <div class="mt-1">
-                        <span class="font-bold">وضعیت:</span> <span id="reducing-status" class="inline-block"></span>
-                    </div>
-                     <textarea class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="توضیحات اضافه / Additional Specifications:"></textarea>
-                </div>
-            </div>
+        <div id="specific_tests" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">از دست دادن در خشک کردن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h3>
+            <p>نمونه: 4 گرم</p>
+            <p>آنالیز: نمونه را به مدت 4 ساعت روی سیلیکا ژل خشک کنید.</p>
+            <p>معیارهای پذیرش: نهایتاً 0.25%</p>
         </div>
 
-        <!-- Additional Requirements Tab -->
-        <div id="additional-requirements" class="tab-content hidden">
-            <div class="card">
-                <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
-                <h3 class="text-xl font-semibold text-gray-700 mb-2">بسته‌بندی و نگهداری:</h3>
-                <p class="mb-4">در ظروف خوب بسته شده نگهداری شود.</p>
-                <h3 class="text-xl font-semibold text-gray-700 mb-2">برچسب‌گذاری:</h3>
-                <p>جایی که سدیم بیکربنات برای همودیالیز در نظر گرفته شده است، این مورد برچسب‌گذاری می‌شود.</p>
-            </div>
+        <div id="additional_requirements" class="tab-content card hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته بندی و نگهداری</h3>
+            <p>در ظروف کاملاً بسته نگهداری شود.</p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">برچسب‌گذاری</h3>
+            <p>هنگامی که سدیم بیکربنات برای استفاده در همودیالیز در نظر گرفته شده است، این موضوع برچسب‌گذاری می‌شود.</p>
         </div>
 
     </div>
 
     <script>
-        function showTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(tab => {
-                tab.classList.add('hidden');
-            });
-            document.querySelectorAll('.tab-button').forEach(button => {
-                button.classList.remove('tab-active');
-                button.classList.add('tab-inactive');
-            });
-            document.getElementById(tabId).classList.remove('hidden');
-            document.querySelector(`.tab-button[onclick="showTab('${tabId}')"]`).classList.remove('tab-inactive');
-            document.querySelector(`.tab-button[onclick="showTab('${tabId}')"]`).classList.add('tab-active');
+        function showTab(event, tabId) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.add("hidden");
+            }
+
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("tab-active");
+                tablinks[i].classList.add("tab-inactive");
+            }
+
+            document.getElementById(tabId).classList.remove("hidden");
+            event.currentTarget.classList.add("tab-active");
+            event.currentTarget.classList.remove("tab-inactive");
         }
 
-        function calculateAssay() {
-            const vAcid = parseFloat(document.getElementById('v_acid').value);
-            const nAcid = parseFloat(document.getElementById('n_acid').value);
-            const wSample = parseFloat(document.getElementById('w_sample').value); // Assuming input is in mg
-
-            const resultSpan = document.getElementById('assay-result');
-            const statusSpan = document.getElementById('assay-status');
-
-            if (isNaN(vAcid) || isNaN(nAcid) || isNaN(wSample) || wSample === 0) {
-                resultSpan.textContent = "لطفاً مقادیر معتبر وارد کنید.";
-                statusSpan.textContent = "";
-                return;
-            }
-
-            const result = (vAcid * nAcid * 84.01) / wSample * 100;
-            resultSpan.textContent = `${result.toFixed(2)}%`;
-
-            if (result >= 99.0 && result <= 100.5) {
-                statusSpan.textContent = "پاس";
-                statusSpan.className = 'inline-block pass-text';
-            } else {
-                statusSpan.textContent = "رد";
-                statusSpan.className = 'inline-block fail-text';
-            }
-        }
-
-        function calculateCarbonate() {
-            const v = parseFloat(document.getElementById('carbonate-v').value);
-            const p = parseFloat(document.getElementById('carbonate-p').value);
-            const t = parseFloat(document.getElementById('carbonate-t').value);
-            const w = parseFloat(document.getElementById('carbonate-w').value);
-
-            const resultSpan = document.getElementById('carbonate-result');
-            const statusSpan = document.getElementById('carbonate-status');
-
-            if (isNaN(v) || isNaN(p) || isNaN(t) || isNaN(w) || w === 0) {
-                resultSpan.textContent = "لطفاً مقادیر معتبر وارد کنید.";
-                statusSpan.textContent = "";
-                return;
-            }
-
-            const result = (273 * v * p) / (22400 * (273 + t) * w) * (6001 / 760);
-            resultSpan.textContent = `${result.toFixed(3)}%`;
-
-            if (result <= 0.23) {
-                statusSpan.textContent = "پاس";
-                statusSpan.className = 'inline-block pass-text';
-            } else {
-                statusSpan.textContent = "رد";
-                statusSpan.className = 'inline-block fail-text';
-            }
-        }
-
-        function calculateCalcium() {
-            const c = parseFloat(document.getElementById('calcium-c').value);
-            const cu = parseFloat(document.getElementById('calcium-cu').value);
-
-            const resultPercentSpan = document.getElementById('calcium-result-percent');
-            const resultPpmSpan = document.getElementById('calcium-result-ppm');
-            const statusSpan = document.getElementById('calcium-status');
-
-            if (isNaN(c) || isNaN(cu) || cu === 0) {
-                resultPercentSpan.textContent = "لطفاً مقادیر معتبر وارد کنید.";
-                resultPpmSpan.textContent = "";
-                statusSpan.textContent = "";
-                return;
-            }
-
-            const resultPercent = (c / cu) * 100;
-            const resultPpm = (resultPercent / 100) * 1000000; // Convert percentage to ppm
-
-            resultPercentSpan.textContent = `${resultPercent.toFixed(4)}%`;
-            resultPpmSpan.textContent = `${resultPpm.toFixed(2)} ppm`;
-
-            if (resultPercent <= 0.01) {
-                statusSpan.textContent = "پاس";
-                statusSpan.className = 'inline-block pass-text';
-            } else {
-                statusSpan.textContent = "رد";
-                statusSpan.className = 'inline-block fail-text';
-            }
-        }
-
-        function calculateMagnesium() {
-            const c = parseFloat(document.getElementById('magnesium-c').value);
-            const cu = parseFloat(document.getElementById('magnesium-cu').value);
-
-            const resultPercentSpan = document.getElementById('magnesium-result-percent');
-            const resultPpmSpan = document.getElementById('magnesium-result-ppm');
-            const statusSpan = document.getElementById('magnesium-status');
-
-            if (isNaN(c) || isNaN(cu) || cu === 0) {
-                resultPercentSpan.textContent = "لطفاً مقادیر معتبر وارد کنید.";
-                resultPpmSpan.textContent = "";
-                statusSpan.textContent = "";
-                return;
-            }
-
-            const resultPercent = (c / cu) * 100;
-            const resultPpm = (resultPercent / 100) * 1000000; // Convert percentage to ppm
-
-            resultPercentSpan.textContent = `${resultPercent.toFixed(4)}%`;
-            resultPpmSpan.textContent = `${resultPpm.toFixed(2)} ppm`;
-
-            if (resultPercent <= 0.004) {
-                statusSpan.textContent = "پاس";
-                statusSpan.className = 'inline-block pass-text';
-            } else {
-                statusSpan.textContent = "رد";
-                statusSpan.className = 'inline-block fail-text';
-            }
-        }
-
-        function calculateCopper() {
-            const c = parseFloat(document.getElementById('copper-c').value);
-            const cu = parseFloat(document.getElementById('copper-cu').value);
-
-            const resultPpmSpan = document.getElementById('copper-result-ppm');
-            const statusSpan = document.getElementById('copper-status');
-
-            if (isNaN(c) || isNaN(cu) || cu === 0) {
-                resultPpmSpan.textContent = "لطفاً مقادیر معتبر وارد کنید.";
-                statusSpan.textContent = "";
-                return;
-            }
-
-            const resultPpm = (c / cu) * 1000000;
-
-            resultPpmSpan.textContent = `${resultPpm.toFixed(2)} ppm`;
-
-            if (resultPpm <= 1) {
-                statusSpan.textContent = "پاس";
-                statusSpan.className = 'inline-block pass-text';
-            } else {
-                statusSpan.textContent = "رد";
-                statusSpan.className = 'inline-block fail-text';
-            }
-        }
-
-        function calculateLOD() {
-            const w1 = parseFloat(document.getElementById('lod-w1').value);
-            const wsa = parseFloat(document.getElementById('lod-wsa').value);
-            const w2 = parseFloat(document.getElementById('lod-w2').value);
-
-            const resultSpan = document.getElementById('lod-result-percent');
-            const statusSpan = document.getElementById('lod-status');
-
-            if (isNaN(w1) || isNaN(wsa) || isNaN(w2) || wsa === 0) {
-                resultSpan.textContent = "لطفاً مقادیر معتبر وارد کنید.";
-                statusSpan.textContent = "";
-                return;
-            }
-
-            const result = ((w1 + wsa) - w2) / wsa * 100;
-            resultSpan.textContent = `${result.toFixed(2)}%`;
-
-            if (result <= 0.25) {
-                statusSpan.textContent = "پاس";
-                statusSpan.className = 'inline-block pass-text';
-            } else {
-                statusSpan.textContent = "رد";
-                statusSpan.className = 'inline-block fail-text';
-            }
-        }
-
-        function calculateROI() {
-            const w1 = parseFloat(document.getElementById('roi-w1').value);
-            const w2 = parseFloat(document.getElementById('roi-w2').value);
-            const w3 = parseFloat(document.getElementById('roi-w3').value);
-
-            const resultPercentSpan = document.getElementById('roi-result-percent');
-            const statusSpan = document.getElementById('roi-status');
-
-            if (isNaN(w1) || isNaN(w2) || isNaN(w3) || w2 === 0) {
-                resultPercentSpan.textContent = "لطفاً مقادیر معتبر وارد کنید.";
-                statusSpan.textContent = "";
-                return;
-            }
-
-            const resultPercent = ((w3 - w1) / w2) * 100;
-
-            resultPercentSpan.textContent = `${resultPercent.toFixed(2)}%`;
-
-            if (resultPercent <= 0.1) {
-                statusSpan.textContent = "پاس";
-                statusSpan.className = 'inline-block pass-text';
-            } else {
-                statusSpan.textContent = "رد";
-                statusSpan.className = 'inline-block fail-text';
-            }
-        }
-        
-        function calculateReducingSubstances() {
-            const vb = parseFloat(document.getElementById('reducing-vb').value);
-            const vs = parseFloat(document.getElementById('reducing-vs').value);
-            const n = parseFloat(document.getElementById('reducing-n').value);
-            const f = parseFloat(document.getElementById('reducing-f').value);
-            const w = parseFloat(document.getElementById('reducing-w').value);
-
-            const resultPercentSpan = document.getElementById('reducing-result-percent');
-            const resultPpmSpan = document.getElementById('reducing-result-ppm');
-            const statusSpan = document.getElementById('reducing-status');
-
-            if (isNaN(vb) || isNaN(vs) || isNaN(n) || isNaN(f) || isNaN(w) || w === 0) {
-                resultPercentSpan.textContent = "لطفاً مقادیر معتبر وارد کنید.";
-                resultPpmSpan.textContent = "";
-                statusSpan.textContent = "";
-                return;
-            }
-
-            const resultPercent = ((vb - vs) * n * 27 * f) / w * 100;
-            const resultPpm = (resultPercent / 100) * 1000000;
-
-            resultPercentSpan.textContent = `${resultPercent.toFixed(2)}%`;
-            resultPpmSpan.textContent = `${resultPpm.toFixed(2)} ppm`;
-
-            if (resultPercent <= 0.25) {
-                statusSpan.textContent = "پاس";
-                statusSpan.className = 'inline-block pass-text';
-            } else {
-                statusSpan.textContent = "رد";
-                statusSpan.className = 'inline-block fail-text';
-            }
-        }
-
-        // Initialize the first tab on load
-        document.addEventListener('DOMContentLoaded', () => {
-            showTab('definition');
+        // Display the first tab by default
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelector('.tab-button').click();
         });
     </script>
-
-
 </body>
 </html>

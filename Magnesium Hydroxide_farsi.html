@@ -4,14 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف هیدروکسید منیزیم (USP)</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Vazirmatn Font -->
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
-    <!-- MathJax -->
-    <script type="text/javascript" id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -70,26 +66,9 @@
         .fail-text {
             color: #ef4444;
         }
-        .interactive-card {
-            background-color: #e0f2fe;
-            border: 1px solid #90cdf4;
-            padding: 1rem;
-            margin-top: 1rem;
-            border-radius: 0.5rem;
-        }
-        .calculation-button {
-            background-color: #2563eb;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
+<body>
     <div class="container mx-auto p-4 max-w-4xl">
 
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">هیدروکسید منیزیم</h1>
@@ -103,514 +82,165 @@
             <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'additional-requirements')">الزامات اضافی</button>
         </div>
 
-        <div id="definition" class="tab-content card">
+        <div id="definition" class="card tab-content">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
-            <p class="mb-4">هیدروکسید منیزیم حاوی NLT 98.0% و NMT 102.0% (رسمی 1 ژوئن 2021) هیدروکسید منیزیم [<span class="ltr-text">Mg(OH)<sub>2</sub></span>]، محاسبه شده بر اساس مبنای خشک شده، می‌باشد.</p>
+            <p>هیدروکسید منیزیم حاوی ▲NLT 98.0% و NMT 102.0%▲ (رسمی 1 ژوئن 2021) هیدروکسید منیزیم <span class="ltr-text">[Mg(OH)₂]</span>، محاسبه شده بر اساس پایه خشک شده است.</p>
         </div>
 
-        <div id="identification" class="tab-content hidden card">
+        <div id="identification" class="card tab-content hidden">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. تست‌های شناسایی - عمومی <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a>، شناسایی شیمیایی، منیزیم</h3>
-            <p class="mb-2">محلول نمونه: 50 mg/mL در اسید هیدروکلریک 3 N</p>
-            <p class="mb-4">معیارهای پذیرش: الزامات را برآورده می‌کند</p>
-            <p class="mb-2">اضافه کردن موارد زیر:</p>
-            <p class="mb-4">▲ب. زمان ماند پیک منیزیم محلول نمونه با زمان ماند محلول استاندارد مطابقت دارد، همانطور که در سنجش به دست آمده است.▲ (رسمی 1 ژوئن 2021)</p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. تست‌های شناسایی—عمومی <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a>، تست‌های شناسایی شیمیایی، منیزیم</h3>
+            <p>محلول نمونه: 50 mg/mL در 3 N اسید هیدروکلریک</p>
+            <p>معیارهای پذیرش: الزامات را برآورده می‌کند</p>
+            <p>موارد زیر را اضافه کنید:</p>
+            <p>▲• ب. زمان نگهداری پیک منیزیم محلول نمونه با زمان نگهداری محلول استاندارد مطابقت دارد، همانطور که در سنجش به دست آمده است.▲ (رسمی 1 ژوئن 2021)</p>
         </div>
 
-        <div id="assay" class="tab-content hidden card">
+        <div id="assay" class="card tab-content hidden">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش کار</h4>
-            <p class="mb-4">▲از آب با مقاومت 18 مگا اهم-سانتی‌متر NLT برای تهیه محلول‌ها استفاده کنید.</p>
-            <p class="mb-2">فاز متحرک: 48 میلی مولار متان‌سولفونیک اسید</p>
-            <p class="mb-4">[نکته: توصیه می‌شود از تکنیک‌های مناسب برای به دام انداختن کاتیون برای اطمینان از عاری بودن فاز متحرک از تمام ناخالصی‌های کاتیونی استفاده شود.]</p>
-            <p class="mb-2">رقیق‌کننده: اسید هیدروکلریک 0.02 N</p>
-            <p class="mb-2">محلول مناسبت سیستم: 48 میکروگرم/میلی لیتر از USP Magnesium Hydroxide RS و 5 میکروگرم/میلی لیتر از USP Calcium Carbonate RS در رقیق‌کننده</p>
-            <p class="mb-2">محلول مادر استاندارد: 4.8 میلی گرم/میلی لیتر از USP Magnesium Hydroxide RS که به شرح زیر تهیه شده است. قسمتی مناسب از USP Magnesium Hydroxide RS را به یک فلاسک حجمی مناسب منتقل کنید. حدود 20% از حجم نهایی اسید هیدروکلریک 6 N را اضافه کرده و حل کنید. با آب به حجم برسانید.</p>
-            <p class="mb-2">محلول استاندارد: 48 میکروگرم/میلی لیتر از USP Magnesium Hydroxide RS در آب از محلول مادر استاندارد</p>
-            <p class="mb-2">محلول مادر نمونه: 4.8 میلی گرم/میلی لیتر هیدروکسید منیزیم از هیدروکسید منیزیم خشک شده قبلی، همانطور که در محلول مادر استاندارد آمده است، تهیه کنید.</p>
-            <p class="mb-2">محلول نمونه: 48 میکروگرم/میلی لیتر هیدروکسید منیزیم در آب از محلول مادر نمونه</p>
-            <p class="mb-2">سیستم کروماتوگرافی</p>
-            <p class="mb-2">(به کروماتوگرافی <a href="General chapters/621.html" class="text-blue-600 hover:underline" target="_blank">621</a>، مناسبت سیستم مراجعه کنید.)</p>
-            <p class="mb-2">حالت: LC</p>
-            <p class="mb-2">آشکارساز: هدایت‌سنجی با سرکوب</p>
-            <p class="mb-2">ستون‌ها</p>
-            <p class="mb-2">گارد: 5-mm × 5-cm; 5.5-µm packing L84</p>
-            <p class="mb-2">تحلیلی: 5-mm × 25-cm; 5.5-µm packing L84</p>
-            <p class="mb-2">دمای ستون: 40°</p>
-            <p class="mb-2">نرخ جریان: 1.0 mL/min</p>
-            <p class="mb-2">حجم تزریق: 10 µL</p>
-            <p class="mb-2">زمان اجرا: 2 برابر زمان ماند منیزیم NLT</p>
-            <p class="mb-2">مناسبت سیستم</p>
-            <p class="mb-2">نمونه‌ها: محلول مناسبت سیستم و محلول استاندارد</p>
-            <p class="mb-4">[نکته: زمان‌های ماند نسبی برای یون‌های منیزیم و کلسیم به ترتیب 1.0 و 1.3 هستند.]</p>
-            <p class="mb-2">الزامات مناسبت</p>
-            <p class="mb-2">رزولوشن: NLT 3.0 بین یون‌های منیزیم و کلسیم، محلول مناسبت سیستم</p>
-            <p class="mb-2">ضریب دم‌افزایی: NMT 2.0، محلول استاندارد</p>
-            <p class="mb-4">انحراف معیار نسبی: NMT 0.73%، محلول استاندارد</p>
-            <p class="mb-2">تجزیه و تحلیل</p>
-            <p class="mb-4">نمونه‌ها: محلول استاندارد و محلول نمونه</p>
-            <p class="mb-4">درصد هیدروکسید منیزیم [<span class="ltr-text">Mg(OH)<sub>2</sub></span>] را در قسمت گرفته شده هیدروکسید منیزیم محاسبه کنید:</p>
+            <p>▲از آب با مقاومت 18 مگ-اهم-سانتی‌متر NLT برای تهیه محلول‌ها استفاده کنید.</p>
+            <p>فاز متحرک: 48 میلی مولار اسید متانسولفونیک</p>
+            <p>[توجه—توصیه می‌شود از تکنیک‌های مناسب به دام انداختن کاتیون برای اطمینان از عاری بودن فاز متحرک از تمام ناخالصی‌های کاتیونی استفاده شود.]</p>
+            <p>رقیق کننده: 0.02 N اسید هیدروکلریک</p>
+            <p>محلول سیستم مناسب: 48 µg/mL از USP Magnesium Hydroxide RS و 5 µg/mL از USP Calcium Carbonate RS در رقیق کننده</p>
+            <p>محلول استاندارد اولیه: 4.8 mg/mL از USP Magnesium Hydroxide RS که به شرح زیر تهیه شده است. قسمتی مناسب از USP Magnesium Hydroxide RS را به یک فلاسک حجمی مناسب منتقل کنید. حدود 20% از حجم نهایی 6 N اسید هیدروکلریک اضافه کرده و حل کنید. با آب تا حجم رقیق کنید.</p>
+            <p>محلول استاندارد: 48 µg/mL از USP Magnesium Hydroxide RS در آب از محلول استاندارد اولیه</p>
+            <p>محلول نمونه اولیه: 4.8 mg/mL هیدروکسید منیزیم را از هیدروکسید منیزیم خشک شده قبلی طبق دستور در محلول استاندارد اولیه تهیه کنید.</p>
+            <p>محلول نمونه: 48 µg/mL هیدروکسید منیزیم در آب از محلول نمونه اولیه</p>
+            <p>سیستم کروماتوگرافی</p>
+            <p>(به کروماتوگرافی <a href="General chapters/621.html" class="text-blue-600 hover:underline" target="_blank">621</a>، سیستم مناسب مراجعه کنید.)</p>
+            <p>حالت: LC</p>
+            <p>آشکارساز: هدایت سنجی با سرکوب</p>
+            <p>ستون‌ها</p>
+            <p>محافظ: 5-mm × 5-cm؛ پرکننده 5.5-µm L84</p>
+            <p>تحلیلی: 5-mm × 25-cm؛ پرکننده 5.5-µm L84</p>
+            <p>دمای ستون: 40°</p>
+            <p>نرخ جریان: 1.0 mL/min</p>
+            <p>حجم تزریق: 10 µL</p>
+            <p>زمان اجرا: 2 برابر زمان نگهداری منیزیم NLT</p>
+            <p>سیستم مناسب</p>
+            <p>نمونه‌ها: محلول سیستم مناسب و محلول استاندارد</p>
+            <p>[توجه—زمان‌های نگهداری نسبی یون‌های منیزیم و کلسیم به ترتیب 1.0 و 1.3 هستند.]</p>
+            <p>الزامات مناسبت</p>
+            <p>تفکیک: NLT 3.0 بین یون‌های منیزیم و کلسیم، محلول سیستم مناسب</p>
+            <p>ضریب دم‌دار بودن: NMT 2.0، محلول استاندارد</p>
+            <p>انحراف معیار نسبی: NMT 0.73%، محلول استاندارد</p>
+            <p>تجزیه و تحلیل</p>
+            <p>نمونه‌ها: محلول استاندارد و محلول نمونه</p>
+            <p>درصد هیدروکسید منیزیم <span class="ltr-text">[Mg(OH)₂]</span> را در قسمت هیدروکسید منیزیم گرفته شده محاسبه کنید:</p>
             <div class="formula-display">
-                $$Result = (rU/rS) \times (CS/CU) \times 100$$
+                $$ \text{Result} = \frac{r_U}{r_S} \times \frac{C_S}{C_U} \times 100 $$
             </div>
-            <p class="mb-2"><span class="ltr-text">rU</span> = پاسخ پیک منیزیم از محلول نمونه</p>
-            <p class="mb-2"><span class="ltr-text">rS</span> = پاسخ پیک منیزیم از محلول استاندارد</p>
-            <p class="mb-2"><span class="ltr-text">CS</span> = غلظت USP Magnesium Hydroxide RS در محلول استاندارد (µg/mL)</p>
-            <p class="mb-4"><span class="ltr-text">CU</span> = غلظت هیدروکسید منیزیم در محلول نمونه (µg/mL)</p>
-            <p class="mb-4">معیارهای پذیرش: 98.0%–102.0% بر اساس مبنای خشک شده▲ (رسمی 1 ژوئن 2021)</p>
-
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محاسبه سنجش</h4>
-                <div class="formula-display">
-                    $$Result = (rU/rS) \times (CS/CU) \times 100$$
-                </div>
-                <div class="grid grid-cols-1 gap-2">
-                    <div>
-                        <label for="rU" class="block text-sm font-medium text-gray-700">پاسخ پیک منیزیم از محلول نمونه (rU):</label>
-                        <input type="text" id="rU" name="rU" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="rS" class="block text-sm font-medium text-gray-700">پاسخ پیک منیزیم از محلول استاندارد (rS):</label>
-                        <input type="text" id="rS" name="rS" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="CS" class="block text-sm font-medium text-gray-700">غلظت USP Magnesium Hydroxide RS در محلول استاندارد (CS) (µg/mL):</label>
-                        <input type="text" id="CS" name="CS" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="CU" class="block text-sm font-medium text-gray-700">غلظت هیدروکسید منیزیم در محلول نمونه (CU) (µg/mL):</label>
-                        <input type="text" id="CU" name="CU" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                </div>
-                <button class="calculation-button mt-4" onclick="calculateAssay()">محاسبه</button>
-                <div class="mt-4">
-                    <span class="font-bold">نتیجه (درصد):</span> <span id="assayResult" class="font-bold"></span>
-                </div>
-                <div class="mt-2">
-                    <span class="font-bold">وضعیت:</span> <span id="assayStatus" class="font-bold"></span>
-                </div>
-                <div class="mt-2">
-                    <span class="font-bold">نتیجه (ppm):</span> <span id="assayResultPpm" class="font-bold"></span>
-                </div>
-                <h4 class="text-lg font-semibold text-gray-700 mt-4 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea id="assayAdditionalSpec" name="assayAdditionalSpec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-            </div>
+            <p><span class="ltr-text">r<sub>U</sub></span> = پاسخ پیک منیزیم از محلول نمونه</p>
+            <p><span class="ltr-text">r<sub>S</sub></span> = پاسخ پیک منیزیم از محلول استاندارد</p>
+            <p><span class="ltr-text">C<sub>S</sub></span> = غلظت USP Magnesium Hydroxide RS در محلول استاندارد (µg/mL)</p>
+            <p><span class="ltr-text">C<sub>U</sub></span> = غلظت هیدروکسید منیزیم در محلول نمونه (µg/mL)</p>
+            <p>معیارهای پذیرش: 98.0%–102.0% بر اساس پایه خشک شده▲ (رسمی 1 ژوئن 2021)</p>
         </div>
 
-        <div id="impurities" class="tab-content hidden card">
+        <div id="impurities" class="card tab-content hidden">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
             <h3 class="text-xl font-semibold text-blue-600 mb-2">نمک‌های محلول</h3>
-            <p class="mb-2">محلول نمونه: 2.0 گرم را به مدت 5 دقیقه در یک بشر سرپوشیده با 100 میلی لیتر آب بجوشانید و در حالی که داغ است فیلتر کنید. اجازه دهید خنک شود و با آب به 100 میلی لیتر برسانید.</p>
+            <p>محلول نمونه: 2.0 گرم را به مدت 5 دقیقه در یک بشر سرپوشیده با 100 میلی‌لیتر آب بجوشانید و در حالی که داغ است فیلتر کنید. بگذارید خنک شود و با آب تا 100 میلی‌لیتر رقیق کنید.</p>
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل 1:</h4>
-            <p class="mb-4">به 50 میلی لیتر از محلول نمونه متیل رد TS اضافه کرده و با اسید سولفوریک 0.10 N تیتر کنید.</p>
-            <p class="mb-4">معیارهای پذیرش 1: NMT 2.0 میلی لیتر از اسید مصرف می‌شود.</p>
+            <p>به 50 میلی‌لیتر از محلول نمونه، متیل رد TS اضافه کرده و با 0.10 N اسید سولفوریک تیتر کنید.</p>
+            <p>معیارهای پذیرش 1: NMT 2.0 میلی‌لیتر از اسید مصرف می‌شود.</p>
             <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل 2:</h4>
-            <p class="mb-4">25 میلی لیتر از محلول نمونه را تبخیر کرده تا خشک شود و در دمای 105 درجه به مدت 3 ساعت خشک کنید.</p>
-            <p class="mb-4">معیارهای پذیرش 2: NMT 10 mg ▲(2.0%)▲ (رسمی 1 ژوئن 2021) باقیمانده باقی می‌ماند.</p>
+            <p>25 میلی‌لیتر از محلول نمونه را تا خشکی تبخیر کرده و در دمای 105 درجه به مدت 3 ساعت خشک کنید.</p>
+            <p>معیارهای پذیرش 2: NMT 10 mg ▲(2.0%)▲ (رسمی 1 ژوئن 2021) باقیمانده باقی می‌ماند.</p>
 
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد نمک‌های محلول (تجزیه و تحلیل 2)</h4>
-                <div class="formula-display">
-                    $$Result = (W_{2}-W_{1})*1000$$
-                </div>
-                <div class="grid grid-cols-1 gap-2">
-                    <div>
-                        <label for="W1_soluble_salts" class="block text-sm font-medium text-gray-700">وزن اولیه (W1):</label>
-                        <input type="text" id="W1_soluble_salts" name="W1_soluble_salts" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="W2_soluble_salts" class="block text-sm font-medium text-gray-700">وزن نهایی (W2):</label>
-                        <input type="text" id="W2_soluble_salts" name="W2_soluble_salts" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                </div>
-                <button class="calculation-button mt-4" onclick="calculateSolubleSalts()">محاسبه</button>
-                <div class="mt-4">
-                    <span class="font-bold">نتیجه (mg):</span> <span id="solubleSaltsResult" class="font-bold"></span>
-                </div>
-                <div class="mt-2">
-                    <span class="font-bold">وضعیت:</span> <span id="solubleSaltsStatus" class="font-bold"></span>
-                </div>
-                 <div class="mt-2">
-                    <span class="font-bold">نتیجه (درصد):</span> <span id="solubleSaltsResultPercent" class="font-bold"></span>
-                </div>
-                <h4 class="text-lg font-semibold text-gray-700 mt-4 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea id="solubleSaltsAdditionalSpec" name="solubleSaltsAdditionalSpec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-            </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">کربنات</h3>
+            <p>نمونه: 0.10 گرم</p>
+            <p>تجزیه و تحلیل: نمونه را با 5 میلی‌لیتر آب بجوشانید، خنک کنید و 5 میلی‌لیتر 6 N اسید استیک اضافه کنید.</p>
+            <p>معیارهای پذیرش: NMT مقداری کف جزئی مشاهده می‌شود.</p>
 
-            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">کربنات</h3>
-            <p class="mb-2">نمونه: 0.10 گرم</p>
-            <p class="mb-4">تجزیه و تحلیل: نمونه را با 5 میلی لیتر آب بجوشانید، خنک کنید و 5 میلی لیتر اسید استیک 6 N اضافه کنید.</p>
-            <p class="mb-4">معیارهای پذیرش: NMT یک جوشش خفیف مشاهده می‌شود.</p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">محدودیت کلسیم</h3>
+            <p>▲فاز متحرک، رقیق کننده، محلول سیستم مناسب، محلول نمونه و سیستم کروماتوگرافی:</p>
+            <p>طبق دستور در سنجش عمل کنید.</p>
+            <p>محلول استاندارد: 1.8 µg/mL از USP Calcium Carbonate RS در رقیق کننده</p>
+            <p>سیستم مناسب</p>
+            <p>نمونه‌ها: محلول سیستم مناسب و محلول استاندارد</p>
+            <p>[توجه—زمان‌های نگهداری نسبی یون‌های منیزیم و کلسیم به ترتیب 1.0 و 1.3 هستند.]</p>
+            <p>الزامات مناسبت</p>
+            <p>تفکیک: NLT 3.0 بین یون‌های منیزیم و کلسیم، محلول سیستم مناسب</p>
+            <p>ضریب دم‌دار بودن: NMT 2.0، محلول استاندارد</p>
+            <p>انحراف معیار نسبی: NMT 5%، محلول استاندارد</p>
+            <p>تجزیه و تحلیل</p>
+            <p>نمونه‌ها: محلول نمونه و محلول استاندارد</p>
+            <p>پاسخ پیک کلسیم را اندازه‌گیری کنید.</p>
+            <p>معیارهای پذیرش: NMT 1.5%؛ پاسخ پیک کلسیم از محلول نمونه از پاسخ محلول استاندارد تجاوز نمی‌کند.▲ (رسمی 1 ژوئن 2021)</p>
 
-            <div class="card interactive-card">
-                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد کربنات</h4>
-                 <div class="mb-4">
-                    <p>وضعیت:</p>
-                    <select id="carbonateStatus" name="carbonateStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                </div>
-                <h4 class="text-lg font-semibold text-gray-700 mt-4 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea id="carbonateAdditionalSpec" name="carbonateAdditionalSpec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-            </div>
-
-            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">حد کلسیم</h3>
-            <p class="mb-2">فاز متحرک، رقیق‌کننده، محلول مناسبت سیستم، محلول نمونه و سیستم کروماتوگرافی:</p>
-            <p class="mb-4">همانطور که در سنجش آمده است، عمل کنید.</p>
-            <p class="mb-2">محلول استاندارد: 1.8 میکروگرم/میلی لیتر از USP Calcium Carbonate RS در رقیق‌کننده</p>
-            <p class="mb-2">مناسبت سیستم</p>
-            <p class="mb-2">نمونه‌ها: محلول مناسبت سیستم و محلول استاندارد</p>
-            <p class="mb-4">[نکته: زمان‌های ماند نسبی برای یون‌های منیزیم و کلسیم به ترتیب 1.0 و 1.3 هستند.]</p>
-            <p class="mb-2">الزامات مناسبت</p>
-            <p class="mb-2">رزولوشن: NLT 3.0 بین یون‌های منیزیم و کلسیم، محلول مناسبت سیستم</p>
-            <p class="mb-2">ضریب دم‌افزایی: NMT 2.0، محلول استاندارد</p>
-            <p class="mb-4">انحراف معیار نسبی: NMT 5%، محلول استاندارد</p>
-            <p class="mb-2">تجزیه و تحلیل</p>
-            <p class="mb-4">نمونه‌ها: محلول نمونه و محلول استاندارد</p>
-            <p class="mb-4">پاسخ پیک کلسیم را اندازه گیری کنید.</p>
-            <p class="mb-4">معیارهای پذیرش: NMT 1.5%؛ پاسخ پیک کلسیم از محلول نمونه از پاسخ محلول استاندارد تجاوز نمی‌کند.▲ (رسمی 1 ژوئن 2021)</p>
-
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد کلسیم</h4>
-                <div class="mb-4">
-                    <p>وضعیت:</p>
-                    <select id="calciumStatus" name="calciumStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                </div>
-                <h4 class="text-lg font-semibold text-gray-700 mt-4 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea id="calciumAdditionalSpec" name="calciumAdditionalSpec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-            </div>
-
-            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">حد سرب</h3>
-            <p class="mb-4">▲[نکته: از آب با مقاومت 18 مگا اهم-سانتی‌متر NLT برای تهیه محلول‌ها استفاده کنید.]▲ (رسمی 1 ژوئن 2021)</p>
-            <p class="mb-2">محلول استاندارد داخلی: 20 میکروگرم/لیتر تالیوم در آب (از محلول استاندارد تجاری در دسترس، ▲NIST-traceable▲ (رسمی 1 ژوئن 2021) برای تالیوم)</p>
-            <p class="mb-4">[نکته: محلول استاندارد داخلی فقط در صورت استفاده از دستگاه طیف‌سنجی جرمی جفت شده با القای پلاسما (ICP–MS) استفاده شود. محلول استاندارد داخلی به صورت خطی از طریق یک بلوک مخلوط‌کننده بین پروب نمونه و محفظه اسپری اضافه می‌شود.]</p>
-            <p class="mb-2">محلول بلانک: 6.0% (v/v) اسید نیتریک در آب</p>
-            <p class="mb-2">رقیق‌کننده: 2.0% (v/v) اسید نیتریک در آب</p>
-            <p class="mb-2">محلول مادر استاندارد: 100 میکروگرم/لیتر سرب در رقیق‌کننده (از محلول استاندارد تجاری در دسترس، ▲NIST-traceable▲ (رسمی 1 ژوئن 2021) برای سرب)</p>
-            <p class="mb-4">[نکته: محلول مادر استاندارد را هر 2 ماه یکبار تازه تهیه کنید.]</p>
-            <p class="mb-2">محلول استاندارد A: 10 میکروگرم/لیتر سرب در محلول بلانک از محلول مادر استاندارد</p>
-            <p class="mb-4">محلول استاندارد B: 1.0 میکروگرم/لیتر سرب در محلول بلانک از محلول استاندارد A</p>
-            <p class="mb-4">[نکته: محلول استاندارد A و محلول استاندارد B را هر هفته تازه تهیه کنید.]</p>
-            <p class="mb-2">محلول نمونه: حدود 0.25 گرم هیدروکسید منیزیم را با دقت وزن کنید. 3.0 میلی لیتر اسید نیتریک را با احتیاط اضافه کنید و مخلوط کنید تا نمونه حل شود. این محلول را با دقت به یک فلاسک حجمی 50 میلی لیتری منتقل کرده و با آب به حجم برسانید.</p>
-            <p class="mb-4">[نکته: غلظت‌های مشخص شده در محلول استاندارد A، محلول استاندارد B و محلول نمونه در صورت استفاده از دستگاه ICP–MS توصیه می‌شوند. اگر از دستگاه طیف‌سنجی انتشار نوری جفت شده با القای پلاسما (ICP–OES) استفاده شود، غلظت‌ها را می‌توان برای تطابق با محدوده کاری دستگاه اصلاح کرد.]</p>
-            <p class="mb-2">شرایط دستگاهی</p>
-            <p class="mb-2">(به طیف‌سنجی پلاسما <a href="General chapters/730.html" class="text-blue-600 hover:underline" target="_blank">730</a> مراجعه کنید.)</p>
-            <p class="mb-2">حالت: ICP–MS چهارگانه یا ICP–OES</p>
-            <p class="mb-2">ایزوتوپ‌های تحلیلی ICP–MS: ▲206، 207 و 208 amu برای سرب؛ 205 amu برای استاندارد داخلی تالیوم. [نکته: دستگاه باید تمام ایزوتوپ‌های سرب (206، 207 و 208 amu) و استاندارد داخلی تالیوم (205 amu) را بخواند و محتوای کل سرب را با استفاده از مجموع هر سه ایزوتوپ گزارش کند.]▲ (رسمی 1 ژوئن 2021)</p>
-            <p class="mb-4">طول موج تحلیلی ICP–OES: 220.353 نانومتر. [نکته: برای به حداقل رساندن تداخل ماتریس هنگام استفاده از ICP-OES، توصیه می‌شود از روش افزودنی‌های استاندارد استفاده شود.]</p>
-            <p class="mb-2">مناسبت سیستم</p>
-            <p class="mb-4">[نکته: عملکرد دستگاه باید مطابق با مشخصات سازنده برای رزولوشن و حساسیت تأیید شود. قبل از تجزیه و تحلیل نمونه‌ها، دستگاه باید یک بررسی عملکرد مناسب را پشت سر بگذارد (به طیف‌سنجی پلاسما <a href="General chapters/730.html" class="text-blue-600 hover:underline" target="_blank">730</a>، صلاحیت دستگاه‌های طیف‌سنجی پلاسما، صلاحیت عملکرد مراجعه کنید).]</p>
-            <p class="mb-2">نمونه‌ها: محلول بلانک، محلول استاندارد A و محلول استاندارد B</p>
-            <p class="mb-2">الزامات مناسبت</p>
-            <p class="mb-4">خطی بودن: یک منحنی کالیبراسیون خطی با استفاده از پاسخ‌های محلول بلانک، محلول استاندارد A و محلول استاندارد B بسازید. ضریب همبستگی NLT 0.999 است.</p>
-            <p class="mb-2">تجزیه و تحلیل: محلول نمونه را حداقل در دو تکرار آسپیراسیون کرده و مقدار سرب را با استفاده از منحنی کالیبراسیون به دست آمده از مناسبت سیستم محاسبه کنید. میانگین خوانش را به عنوان محتوای سرب نمونه گزارش دهید. محتوای سرب در قسمت گرفته شده هیدروکسید منیزیم را محاسبه کنید.</p>
-            <p class="mb-4">معیارهای پذیرش: NMT 0.00015% (1.5 ppm)</p>
-
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حد سرب</h4>
-                <div class="mb-4">
-                    <p>وضعیت:</p>
-                    <select id="leadStatus" name="leadStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                </div>
-                <h4 class="text-lg font-semibold text-gray-700 mt-4 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea id="leadAdditionalSpec" name="leadAdditionalSpec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-            </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">محدودیت سرب</h3>
+            <p>▲[توجه—از آب با مقاومت 18 مگ-اهم-سانتی‌متر NLT برای تهیه محلول‌ها استفاده کنید.]▲ (رسمی 1 ژوئن 2021)</p>
+            <p>محلول استاندارد داخلی: 20 µg/L تالیوم در آب (از محلول استاندارد تجاری، ▲NIST-traceable▲ (رسمی 1 ژوئن 2021) برای تالیوم)</p>
+            <p>[توجه—محلول استاندارد داخلی را فقط در صورتی استفاده کنید که از دستگاه طیف‌سنجی جرمی جفت شده با القا (ICP–MS) استفاده شود. محلول استاندارد داخلی به صورت خطی از طریق یک بلوک اختلاط بین پروب نمونه و محفظه پاشش اضافه می‌شود.]</p>
+            <p>محلول بلانک: 6.0% (v/v) اسید نیتریک در آب</p>
+            <p>رقیق کننده: 2.0% (v/v) اسید نیتریک در آب</p>
+            <p>محلول استاندارد اولیه: 100 µg/L سرب در رقیق کننده (از محلول استاندارد تجاری، ▲NIST-traceable▲ (رسمی 1 ژوئن 2021) برای سرب)</p>
+            <p>[توجه—محلول استاندارد اولیه را هر 2 ماه یکبار تازه تهیه کنید.]</p>
+            <p>محلول استاندارد A: 10 µg/L سرب در محلول بلانک از محلول استاندارد اولیه</p>
+            <p>محلول استاندارد B: 1.0 µg/L سرب در محلول بلانک از محلول استاندارد A</p>
+            <p>[توجه—محلول استاندارد A و محلول استاندارد B را هر هفته تازه تهیه کنید.]</p>
+            <p>محلول نمونه: حدود 0.25 گرم هیدروکسید منیزیم را به دقت وزن کنید. با احتیاط 3.0 میلی‌لیتر اسید نیتریک اضافه کرده و مخلوط کنید تا نمونه حل شود. این محلول را با دقت به یک فلاسک حجمی 50 میلی‌لیتری منتقل کرده و با آب تا حجم رقیق کنید.</p>
+            <p>[توجه—غلظت‌های مشخص شده در محلول استاندارد A، محلول استاندارد B و محلول نمونه در صورتی توصیه می‌شود که از دستگاه ICP–MS استفاده شود. اگر از دستگاه طیف‌سنجی انتشار نوری جفت شده با القا (ICP-OES) استفاده شود، غلظت‌ها ممکن است برای سازگاری با محدوده کاری دستگاه تغییر یابد.]</p>
+            <p>شرایط ابزاری</p>
+            <p>(به طیف‌سنجی پلاسما <a href="General chapters/730.html" class="text-blue-600 hover:underline" target="_blank">730</a> مراجعه کنید.)</p>
+            <p>حالت: ICP–MS چهارقطبی یا ICP–OES</p>
+            <p>ایزوتوپ‌های تحلیلی ICP–MS: ▲206، 207 و 208 amu برای سرب؛ 205 amu برای استاندارد داخلی تالیوم. [توجه—دستگاه باید تمام ایزوتوپ‌های سرب (206، 207 و 208 amu) و استاندارد داخلی تالیوم (205 amu) را بخواند و باید کل محتوای سرب را با استفاده از مجموع هر سه ایزوتوپ گزارش کند.]▲ (رسمی 1 ژوئن 2021)</p>
+            <p>طول موج تحلیلی ICP–OES: 220.353 نانومتر. [توجه—برای به حداقل رساندن تداخل ماتریس هنگام استفاده از ICP-OES، توصیه می‌شود از روش افزودنی‌های استاندارد استفاده شود.]</p>
+            <p>سیستم مناسب</p>
+            <p>[توجه—عملکرد دستگاه باید مطابق با مشخصات سازنده برای تفکیک و حساسیت تأیید شود. قبل از تجزیه و تحلیل نمونه‌ها، دستگاه باید یک بررسی عملکرد مناسب را پشت سر بگذارد (به طیف‌سنجی پلاسما <a href="General chapters/730.html" class="text-blue-600 hover:underline" target="_blank">730</a>، تعیین صلاحیت دستگاه‌های طیف‌سنجی پلاسما، تعیین صلاحیت عملکرد مراجعه کنید).]</p>
+            <p>نمونه‌ها: محلول بلانک، محلول استاندارد A و محلول استاندارد B</p>
+            <p>الزامات مناسبت</p>
+            <p>خطی بودن: یک منحنی کالیبراسیون خطی با استفاده از پاسخ‌های حاصل از محلول بلانک، محلول استاندارد A و محلول استاندارد B بسازید. ضریب همبستگی 0.999 NLT است.</p>
+            <p>تجزیه و تحلیل: حداقل دو بار محلول نمونه را استنشاق کرده و مقدار سرب را با استفاده از منحنی کالیبراسیون حاصل از سیستم مناسب محاسبه کنید. میانگین خواندن را به عنوان محتوای سرب نمونه گزارش کنید. محتوای سرب را در قسمت هیدروکسید منیزیم گرفته شده محاسبه کنید.</p>
+            <p>معیارهای پذیرش: NMT 0.00015% (1.5 ppm)</p>
         </div>
 
-        <div id="specific-tests" class="tab-content hidden card">
+        <div id="specific-tests" class="card tab-content hidden">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایشات شمارش میکروبی <a href="General chapters/61.html" class="text-blue-600 hover:underline" target="_blank">61</a> و آزمایشات برای میکروب‌های مشخص <a href="General chapters/62.html" class="text-blue-600 hover:underline" target="_blank">62</a>:</h3>
-            <p class="mb-4">الزامات آزمایش برای عدم وجود اشرشیا کلی را برآورده می‌کند.</p>
-
-            <div class="card interactive-card">
-                 <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آزمایش برای عدم وجود اشرشیا کلی</h4>
-                 <div class="mb-4">
-                    <p>وضعیت:</p>
-                    <select id="ecoliStatus" name="ecoliStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                </div>
-                <h4 class="text-lg font-semibold text-gray-700 mt-4 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea id="ecoliAdditionalSpec" name="ecoliAdditionalSpec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-            </div>
-
-            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">کاهش وزن در اثر خشک شدن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h3>
-            <p class="mb-4">تجزیه و تحلیل: در دمای 105 درجه به مدت 2 ساعت خشک کنید.</p>
-            <p class="mb-4">معیارهای پذیرش: NMT 2.0%</p>
-
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کاهش وزن در اثر خشک شدن</h4>
-                <div class="formula-display">
-                    $$LOD= \frac{(W_{1}+W_{sa})-W_2}{W_{sa}} \times 100$$
-                </div>
-                <div class="grid grid-cols-1 gap-2">
-                    <div>
-                        <label for="W1_lod" class="block text-sm font-medium text-gray-700">وزن اولیه (W1):</label>
-                        <input type="text" id="W1_lod" name="W1_lod" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="Wsa_lod" class="block text-sm font-medium text-gray-700">وزن نمونه خشک شده (Wsa):</label>
-                        <input type="text" id="Wsa_lod" name="Wsa_lod" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="W2_lod" class="block text-sm font-medium text-gray-700">وزن نهایی (W2):</label>
-                        <input type="text" id="W2_lod" name="W2_lod" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                </div>
-                <button class="calculation-button mt-4" onclick="calculateLossOnDrying()">محاسبه</button>
-                <div class="mt-4">
-                    <span class="font-bold">نتیجه (درصد):</span> <span id="lodResult" class="font-bold"></span>
-                </div>
-                <div class="mt-2">
-                    <span class="font-bold">وضعیت:</span> <span id="lodStatus" class="font-bold"></span>
-                </div>
-                <h4 class="text-lg font-semibold text-gray-700 mt-4 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea id="lodAdditionalSpec" name="lodAdditionalSpec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-            </div>
-
-            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-6">کاهش وزن در اثر اشتعال <a href="General chapters/733.html" class="text-blue-600 hover:underline" target="_blank">733</a></h3>
-            <p class="mb-4">تجزیه و تحلیل: در دمای 800 درجه، با افزایش تدریجی حرارت، تا رسیدن به وزن ثابت، مشتعل کنید.</p>
-            <p class="mb-4">معیارهای پذیرش: 30.0%–33.0%</p>
-
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کاهش وزن در اثر اشتعال</h4>
-                 <div class="mb-4">
-                    <p>وضعیت:</p>
-                    <select id="lossOnIgnitionStatus" name="lossOnIgnitionStatus" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                </div>
-                <h4 class="text-lg font-semibold text-gray-700 mt-4 mb-2">توضیحات اضافه / Additional Specifications:</h4>
-                <textarea id="lossOnIgnitionAdditionalSpec" name="lossOnIgnitionAdditionalSpec" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-            </div>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تست‌های شمارش میکروبی <a href="General chapters/61.html" class="text-blue-600 hover:underline" target="_blank">61</a> و تست‌های میکروارگانیسم‌های مشخص شده <a href="General chapters/62.html" class="text-blue-600 hover:underline" target="_blank">62</a>:</h3>
+            <p>الزامات تست عدم وجود اشرشیا کلی را برآورده می‌کند.</p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">از دست دادن در خشک شدن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h3>
+            <p>تجزیه و تحلیل: در دمای 105 درجه به مدت 2 ساعت خشک کنید.</p>
+            <p>معیارهای پذیرش: NMT 2.0%</p>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">از دست دادن در احتراق <a href="General chapters/733.html" class="text-blue-600 hover:underline" target="_blank">733</a></h3>
+            <p>تجزیه و تحلیل: در دمای 800 درجه، با افزایش تدریجی حرارت، تا رسیدن به وزن ثابت، بسوزانید.</p>
+            <p>معیارهای پذیرش: 30.0%–33.0%</p>
         </div>
 
-        <div id="additional-requirements" class="tab-content hidden card">
+        <div id="additional-requirements" class="card tab-content hidden">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
             <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری:</h3>
-            <p class="mb-4">در ظروف دربسته نگهداری شود.</p>
-            <h3 class="text-xl font-semibold text-blue-600 mb-2 mt-4">▲استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h3>
-            <p class="mb-4">USP Calcium Carbonate RS</p>
-            <p class="mb-4">USP Magnesium Hydroxide RS▲ (رسمی 1 ژوئن 2021)</p>
+            <p>در ظروف دربسته نگهداری شود.</p>
+            <p>موارد زیر را اضافه کنید:</p>
+            <p>▲• استانداردهای مرجع USP 11</p>
+            <p>USP Calcium Carbonate RS</p>
+            <p>USP Magnesium Hydroxide RS▲ (رسمی 1 ژوئن 2021)</p>
         </div>
 
     </div>
 
     <script>
-        function showTab(event, tabId) {
-            // Hide all tab content
-            var tabContents = document.getElementsByClassName("tab-content");
-            for (var i = 0; i < tabContents.length; i++) {
-                tabContents[i].classList.add("hidden");
+        function showTab(event, tabName) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.add("hidden");
             }
 
-            // Deactivate all tab buttons
-            var tabButtons = document.getElementsByClassName("tab-button");
-            for (var i = 0; i < tabButtons.length; i++) {
-                tabButtons[i].classList.remove("tab-active");
-                tabButtons[i].classList.add("tab-inactive");
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.add("tab-inactive");
+                tablinks[i].classList.remove("tab-active");
             }
 
-            // Show the current tab content
-            document.getElementById(tabId).classList.remove("hidden");
-
-            // Activate the current tab button
-            event.currentTarget.classList.remove("tab-inactive");
+            document.getElementById(tabName).classList.remove("hidden");
             event.currentTarget.classList.add("tab-active");
+            event.currentTarget.classList.remove("tab-inactive");
         }
-
-        // --- Calculation Functions ---
-
-        function calculateAssay() {
-            const rU = parseFloat(document.getElementById('rU').value);
-            const rS = parseFloat(document.getElementById('rS').value);
-            const CS = parseFloat(document.getElementById('CS').value);
-            const CU = parseFloat(document.getElementById('CU').value);
-
-            const assayResultSpan = document.getElementById('assayResult');
-            const assayStatusSpan = document.getElementById('assayStatus');
-            const assayResultPpmSpan = document.getElementById('assayResultPpm');
-
-            if (!isNaN(rU) && !isNaN(rS) && !isNaN(CS) && !isNaN(CU)) {
-                const result = (rU / rS) * (CS / CU) * 100;
-                const resultPpm = (result / 100) * 1000000; // Calculate ppm from percentage
-
-                assayResultSpan.textContent = result.toFixed(2) + '%';
-                assayResultPpmSpan.textContent = resultPpm.toFixed(2) + ' ppm';
-
-                const acceptanceMin = 98.0;
-                const acceptanceMax = 102.0;
-
-                if (result >= acceptanceMin && result <= acceptanceMax) {
-                    assayStatusSpan.textContent = 'Pass';
-                    assayStatusSpan.className = 'font-bold pass-text';
-                } else {
-                    assayStatusSpan.textContent = 'Fail';
-                    assayStatusSpan.className = 'font-bold fail-text';
-                }
-            } else {
-                assayResultSpan.textContent = 'خطا';
-                assayResultPpmSpan.textContent = '';
-                assayStatusSpan.textContent = '';
-                assayStatusSpan.className = 'font-bold';
-            }
-        }
-
-        function calculateSolubleSalts() {
-            const W1 = parseFloat(document.getElementById('W1_soluble_salts').value);
-            const W2 = parseFloat(document.getElementById('W2_soluble_salts').value);
-
-            const solubleSaltsResultSpan = document.getElementById('solubleSaltsResult');
-            const solubleSaltsStatusSpan = document.getElementById('solubleSaltsStatus');
-            const solubleSaltsResultPercentSpan = document.getElementById('solubleSaltsResultPercent');
-
-            const acceptanceMaxMg = 10.0; // NMT 10 mg
-            const percentageLimit = 2.0;  // (2.0%)
-
-            if (!isNaN(W1) && !isNaN(W2)) {
-                const result = (W2 - W1) * 1000;
-                // Assuming W_sa (weight of sample dried) is implicitly handled by the definition of W1 and W2 for this specific test.
-                // If a sample weight is needed for percentage, it would typically be provided separately or derived.
-                // For now, we calculate the mg result directly.
-                solubleSaltsResultSpan.textContent = result.toFixed(2) + ' mg';
-
-                if (result <= acceptanceMaxMg) {
-                    solubleSaltsStatusSpan.textContent = 'Pass';
-                    solubleSaltsStatusSpan.className = 'font-bold pass-text';
-                } else {
-                    solubleSaltsStatusSpan.textContent = 'Fail';
-                    solubleSaltsStatusSpan.className = 'font-bold fail-text';
-                }
-
-                // Attempt to calculate percentage if a sample weight context is assumed
-                // For this specific test, the calculation appears to be (W2-W1)*1000.
-                // The percentage is given as (2.0%) which implies a limit based on the original sample weight.
-                // Without the original sample weight 'W_sa' in this input form, a direct percentage calculation is not possible.
-                // However, the USP text indicates "NMT 10 mg ▲(2.0%)▲". This suggests that the 10mg limit is equivalent to 2.0% of the sample taken.
-                // Let's assume the original sample weight taken was 2.0g for the calculation of 10mg limit.
-                // Then, the result in percentage would be (result / 2000) * 100 if result is in mg.
-                // But the formula given is just W2-W1 * 1000. Let's adhere to that and the mg limit.
-                // The (2.0%) might be a reference to the general limit from which the 10mg was derived.
-                // If W1 and W2 are residue weights, the formula is (residue_weight_in_g) * 100.
-                // However, the formula is given as (W2-W1)*1000. This is unusual if W1 and W2 are weights in grams.
-                // Let's assume W1 and W2 are in grams and the formula intends to calculate mg of residue.
-                // The typical calculation for % residue is (weight of residue / weight of sample) * 100.
-                // If W2-W1 represents the weight of residue in grams, then the result in mg is (W2-W1)*1000.
-                // The 2.0% limit would mean (weight of residue / weight of sample) * 100 <= 2.0
-                // If 2.0g sample was used, then max residue weight = (2.0/100)*2.0 = 0.04g = 40mg.
-                // The text states "NMT 10 mg ▲(2.0%)▲". This implies that the 10mg is the critical limit, derived from a sample size where 2.0% of it is 10mg.
-                // This would mean sample size = 10mg / 0.02 = 500mg = 0.5g.
-                // However, the "Sample solution: Boil 2.0 g with 100 mL of water..." suggests 2.0g was taken for the initial preparation.
-                // Let's assume W1 and W2 are weights in mg, and the formula calculates the total mg of soluble salts.
-                // Or, W1 and W2 are weights in grams, and the result is (W2-W1)*1000 mg.
-                // Let's re-interpret: if W1 is the weight of the crucible and W2 is the weight of crucible + residue after drying, then W2-W1 is the weight of the residue.
-                // The formula (W2-W1)*1000 assumes W2-W1 is in grams to get mg.
-                // If we are calculating the percentage, we need the original sample weight. The problem statement doesn't provide input for original sample weight.
-                // Let's assume the 10mg limit is primary, and the 2.0% is a reference.
-                // We will display the calculated mg result and status.
-                // For percentage, let's assume the input W1 and W2 are in grams and it results in mg of residue.
-                // If sample weight was 2g, then % = (mg_residue / 2000) * 100.
-                // Let's assume W1 and W2 are in grams, and the formula (W2-W1)*1000 is correct for mg of residue.
-                // Then, to get percentage, we need the initial sample weight.
-                // Since no input for initial sample weight is given, we cannot calculate percentage reliably.
-                // We will display the calculated mg result and status.
-                // If the user intends W1 and W2 to be in grams, and the formula gives grams of residue, then
-                // percentage = (result_in_grams / initial_sample_weight_in_grams) * 100
-                // Let's assume the provided formula (W2-W1)*1000 is the desired calculation and it gives mg.
-                // The 2.0% limit is also given. Let's try to calculate it IF the original sample weight was 0.5g (as inferred from 10mg being 2.0%).
-                const inferredSampleWeight_g = 0.5;
-                if (!isNaN(result) && inferredSampleWeight_g > 0) {
-                    const resultPercent = (result / (inferredSampleWeight_g * 1000)) * 100; // result is in mg, sample weight in mg
-                    solubleSaltsResultPercentSpan.textContent = resultPercent.toFixed(2) + '%';
-                     if (resultPercent > percentageLimit) {
-                        // If calculated percentage exceeds limit, even if mg is within limit, it's a fail.
-                        // This is a tricky interpretation. Let's prioritize the mg limit for status.
-                    }
-                } else {
-                     solubleSaltsResultPercentSpan.textContent = '-';
-                }
-
-            } else {
-                solubleSaltsResultSpan.textContent = 'خطا';
-                solubleSaltsStatusSpan.textContent = '';
-                solubleSaltsStatusSpan.className = 'font-bold';
-                solubleSaltsResultPercentSpan.textContent = '-';
-            }
-        }
-
-
-        function calculateLossOnDrying() {
-            const W1 = parseFloat(document.getElementById('W1_lod').value);
-            const Wsa = parseFloat(document.getElementById('Wsa_lod').value);
-            const W2 = parseFloat(document.getElementById('W2_lod').value);
-
-            const lodResultSpan = document.getElementById('lodResult');
-            const lodStatusSpan = document.getElementById('lodStatus');
-
-            const acceptanceMax = 2.0; // NMT 2.0%
-
-            if (!isNaN(W1) && !isNaN(Wsa) && !isNaN(W2)) {
-                // The formula is usually (Weight of dried sample - Weight of sample after drying) / Weight of dried sample * 100
-                // Or sometimes (Initial weight - Final weight) / Initial weight * 100.
-                // The provided formula is: $$LOD= \frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$
-                // This formula doesn't seem standard for Loss On Drying.
-                // A common formula is (W_initial - W_dried) / W_initial * 100.
-                // Or if Wsa is the weight of the dried sample, and W2 is the weight after ignition (Loss on Ignition), then it might be related.
-                // For Loss on Drying: typically (Initial Weight - Weight after drying) / Initial Weight * 100.
-                // Let's assume W1 is the initial weight of the sample, and W2 is the weight after drying. Then Wsa is a different value not directly in the LOD calculation itself, but maybe for something else.
-                // OR, the formula provided is for a specific method interpretation. Let's stick to the provided formula.
-                // The formula seems to be: (Weight of sample before drying + Weight of sample after drying) - Weight of sample after final test / Weight of sample after drying * 100.
-                // This still appears unusual for LOD. Let's assume W1 is a pre-treatment weight, Wsa is the sample weight, and W2 is the final weight.
-                // Let's assume Wsa is the actual sample weight, and W1 is some initial weighing, and W2 is the final weighing after drying.
-                // A more standard formula for LOD is: (W_initial - W_dried) / W_initial * 100.
-                // If Wsa represents the initial weight of the sample before drying:
-                // LOD = ((Wsa - W2) / Wsa) * 100.
-                // If W1 is the weight of the empty dish, and W2 is the weight of the dish + sample, and W3 is the weight of the dish + dried sample:
-                // LOD = ((W2 - W1) - (W3 - W1)) / (W2 - W1) * 100 = (W2 - W3) / (W2 - W1) * 100.
-
-                // Let's re-evaluate the given formula: $$LOD= \frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$
-                // This formula implies Wsa is the denominator and is related to the original sample.
-                // It could be that W1 is the weight of the empty dish, Wsa is the weight of the sample added to the dish, and W2 is the weight of the dish + dried sample.
-                // In this case, the actual sample weight is Wsa. The weight loss is W1 + Wsa - W2 (total initial mass - final mass).
-                // So, LOD = (W1 + Wsa - W2) / Wsa * 100. This makes sense.
-                // Let's assume W1 is the weight of the empty dish, Wsa is the weight of the sample, and W2 is the weight of the dish + dried sample.
-
-                const result = ((W1 + Wsa) - W2) / Wsa * 100;
-
-                lodResultSpan.textContent = result.toFixed(2) + '%';
-
-                if (result <= acceptanceMax) {
-                    lodStatusSpan.textContent = 'Pass';
-                    lodStatusSpan.className = 'font-bold pass-text';
-                } else {
-                    lodStatusSpan.textContent = 'Fail';
-                    lodStatusSpan.className = 'font-bold fail-text';
-                }
-            } else {
-                lodResultSpan.textContent = 'خطا';
-                lodStatusSpan.textContent = '';
-                lodStatusSpan.className = 'font-bold';
-            }
-        }
-
-
-        // Initial display of the first tab
-        document.getElementById('definition').classList.remove('hidden');
     </script>
-
 </body>
 </html>

@@ -3,15 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مونوگراف تالک (USP)</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Vazirmatn Font -->
+    <title>مونوگراف سیلیکات منیزیم (USP)</title>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
-    <!-- MathJax -->
-    <script type="text/javascript" id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
@@ -70,892 +65,155 @@
         .fail-text {
             color: #ef4444;
         }
-        .interactive-card {
-            background-color: #e0f2fe;
-            border: 1px solid #90cdf4;
-            padding: 1rem;
-            margin-top: 1rem;
-            border-radius: 0.5rem;
-        }
-        .calculation-button {
-            background-color: #2563eb;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
+<body>
     <div class="container mx-auto p-4 max-w-4xl">
-        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">مونوگراف تالک</h1>
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">سیلیکات منیزیم</h1>
 
         <div class="flex justify-center mb-6 border-b border-gray-200">
-            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="openTab(event, 'definition')">تعریف</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'identification')">شناسایی</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'assay')">سنجش</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'impurities')">ناخالصی‌ها</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'specific-tests')">آزمایشات خاص</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'additional-requirements')">الزامات اضافی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab(event, 'definition')">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'identification')">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'assay')">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'impurities')">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'specific-tests')">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'additional-requirements')">الزامات اضافی</button>
         </div>
 
-        <div id="definition" class="tab-content p-4">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+        <div id="definition" class="tab-content">
             <div class="card">
-                تالک ترکیبی از اکسید منیزیم و دی‌اکسید سیلیکون است. حاوی حداقل <span class="ltr-text">15.0%</span> اکسید منیزیم (MgO) و حداقل <span class="ltr-text">67.0%</span> دی‌اکسید سیلیکون (SiO2)، محاسبه شده بر اساس مبنای اشتعال یافته است.
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+                <p class="mb-4">سیلیکات منیزیم ترکیبی از اکسید منیزیم و دی‌اکسید سیلیکون است. این ماده حاوی حداقل <span class="ltr-text">15.0%</span> اکسید منیزیم (MgO) و حداقل <span class="ltr-text">67.0%</span> دی‌اکسید سیلیکون (SiO2) است که بر اساس ماده اشتعال‌یافته محاسبه می‌شود.</p>
             </div>
         </div>
 
-        <div id="identification" class="tab-content hidden p-4">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایش‌های شناسایی - عمومی</h3>
+        <div id="identification" class="tab-content hidden">
             <div class="card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه:</h4>
-                <span class="ltr-text">500 mg</span>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل:</h4>
-                نمونه را با <span class="ltr-text">10 mL</span> اسید هیدروکلریک <span class="ltr-text">3 N</span> مخلوط کنید. صاف کنید و صافی را با هیدروکسید آمونیوم <span class="ltr-text">6 N</span> تا کاغذ تورنسل خنثی کنید.
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                صافی خنثی شده الزامات را برآورده می‌کند.
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">آ. تست‌های شناسایی - عمومی، منیزیم <a href="General chapters/191.html" class="text-blue-600 hover:underline" target="_blank">191</a></h3>
+                <p class="mb-2">نمونه: <span class="ltr-text">500</span> mg</p>
+                <p class="mb-2">تجزیه و تحلیل: نمونه را با <span class="ltr-text">10</span> mL اسید کلریدریک <span class="ltr-text">3 N</span> مخلوط کنید. صاف کنید و فیلترات خنثی شده را با هیدروکسید آمونیوم <span class="ltr-text">6 N</span> تا کاغذ تورنسل خنثی کنید.</p>
+                <p class="mb-2">معیارهای پذیرش: فیلترات خنثی شده الزامات را برآورده می‌کند.</p>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">ب.</h3>
+                <p class="mb-2">تجزیه و تحلیل: با ذوب چند بلور فسفات سدیم آمونیوم روی حلقه پلاتین در شعله مشعل بنزن، یک گلوله تهیه کنید. گلوله داغ و شفاف را در تماس با سیلیکات منیزیم قرار دهید و دوباره ذوب کنید.</p>
+                <p class="mb-2">معیارهای پذیرش: سیلیس در گلوله شناور می‌شود و پس از سرد شدن، یک گلوله مات با ساختار تار عنکبوتی ایجاد می‌کند.</p>
             </div>
+        </div>
+
+        <div id="assay" class="tab-content hidden">
             <div class="card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل:</h4>
-                یک گوی با ذوب کردن چند بلور فسفات سدیم آمونیوم روی یک حلقه پلاتین در شعله مشعل بنزن آماده کنید. گوی شفاف و داغ را در تماس با تالک قرار دهید و دوباره ذوب کنید.
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                سیلیکا در گوی شناور می‌شود و پس از خنک شدن، گوی کدر با ساختار تارمانندی ایجاد می‌کند.
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">اکسید منیزیم</h3>
+                <p class="mb-2">نمونه: <span class="ltr-text">1.5</span> g</p>
+                <p class="mb-2">سیستم تیتراسیون</p>
+                <p class="mb-2">حالت: تیتراسیون باقی‌مانده</p>
+                <p class="mb-2">تیترانت: سدیم هیدروکسید <span class="ltr-text">1 N</span> VS</p>
+                <p class="mb-2">تشخیص نقطه پایانی: بصری</p>
+                <p class="mb-2">تجزیه و تحلیل: نمونه را در <span class="ltr-text">50.0</span> mL اسید سولفوریک <span class="ltr-text">1 N</span> VS حل کنید. به مدت <span class="ltr-text">1</span> ساعت روی حمام بخار هضم کنید، تا دمای اتاق خنک کنید و متیل اورنج TS اضافه کنید. اسید اضافی در نمونه را با تیترانت تیتراسیون کنید. هر mL اسید سولفوریک <span class="ltr-text">1 N</span> معادل <span class="ltr-text">20.15</span> mg MgO است.</p>
+                <p class="mb-2">معیارهای پذیرش: حداقل <span class="ltr-text">15.0%</span> بر اساس ماده اشتعال‌یافته</p>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">دی‌اکسید سیلیکون</h3>
+                <p class="mb-2">نمونه: <span class="ltr-text">700</span> mg</p>
+                <p class="mb-2">تجزیه و تحلیل: نمونه را در یک ظرف پلاتینی کوچک منتقل کنید. <span class="ltr-text">10</span> mL اسید سولفوریک <span class="ltr-text">1 N</span> اضافه کنید و روی حمام بخار تا خشکی حرارت دهید، ظرف را بدون پوشش بگذارید. باقیمانده را با <span class="ltr-text">25</span> mL آب تصفیه کنید و به مدت <span class="ltr-text">15</span> دقیقه روی حمام بخار هضم کنید. مایع رویی را با کمک مکش از طریق کاغذ صافی بدون خاکستر جدا کرده و باقیمانده را سه بار با آب داغ با دکانتاسیون بشویید و شستشوها را از کاغذ صافی عبور دهید. در نهایت، باقیمانده را روی صافی منتقل کرده و کاملاً با آب داغ بشویید. کاغذ صافی و محتویات آن را در ظرف پلاتینی قبلاً استفاده شده منتقل کنید. تا خشکی حرارت دهید، بسوزانید، به شدت به مدت <span class="ltr-text">30</span> دقیقه اشتعال دهید، خنک کنید و وزن کنید. رطوبت باقیمانده را با آب مرطوب کرده و <span class="ltr-text">6</span> mL اسید هیدروفلوئوریک و <span class="ltr-text">3</span> قطره اسید سولفوریک اضافه کنید. تا خشکی تبخیر کنید، به مدت <span class="ltr-text">5</span> دقیقه اشتعال دهید، خنک کنید و وزن کنید. کاهش وزن نشان‌دهنده وزن SiO2 است.</p>
+                <p class="mb-2">معیارهای پذیرش: حداقل <span class="ltr-text">67.0%</span> بر اساس ماده اشتعال‌یافته</p>
             </div>
         </div>
 
-        <div id="assay" class="tab-content hidden p-4">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
-
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">اکسید منیزیم</h3>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه:</h4>
-                <span class="ltr-text">1.5 g</span>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم تیتراسیون</h4>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حالت:</h4>
-                تیتراسیون باقی‌مانده
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تیترانت:</h4>
-                <span class="ltr-text">1 N</span> سدیم هیدروکسید VS
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تشخیص نقطه پایانی:</h4>
-                بصری
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل:</h4>
-                نمونه را در <span class="ltr-text">50.0 mL</span> اسید سولفوریک <span class="ltr-text">1 N</span> VS حل کنید. به مدت <span class="ltr-text">1 h</span> در حمام بخار حرارت دهید، تا دمای اتاق خنک کنید و متیل اورنج TS اضافه کنید. اسید اضافی را در نمونه با تیترانت تیتراسیون کنید. هر <span class="ltr-text">mL</span> اسید سولفوریک <span class="ltr-text">1 N</span> معادل <span class="ltr-text">20.15 mg</span> MgO است.
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                حداقل <span class="ltr-text">15.0%</span> بر مبنای اشتعال یافته.
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب اکسید منیزیم</h4>
-                <div class="grid grid-cols-1 gap-2">
-                    <div>
-                        <label for="mg_sulfuric_acid" class="block text-sm font-medium text-gray-700">mL اسید سولفوریک 1 N VS</label>
-                        <input type="text" id="mg_sulfuric_acid" name="mg_sulfuric_acid" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="mg_titrant" class="block text-sm font-medium text-gray-700">mL تیترانت (NaOH)</label>
-                        <input type="text" id="mg_titrant" name="mg_titrant" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                </div>
-                <button onclick="calculateMgO()" class="calculation-button mb-4">محاسبه</button>
-                <div>
-                    <span class="font-semibold">نتیجه:</span> <span id="mg_result"></span>%
-                </div>
-                <div>
-                    <span class="font-semibold">وضعیت:</span> <span id="mg_status"></span>
-                </div>
-            </div>
-
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">دی‌اکسید سیلیکون</h3>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه:</h4>
-                <span class="ltr-text">700 mg</span>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل:</h4>
-                نمونه را در یک ظرف پلاتینی کوچک بریزید. <span class="ltr-text">10 mL</span> اسید سولفوریک <span class="ltr-text">1 N</span> اضافه کنید و در حمام بخار تا خشکی حرارت دهید، ظرف را بدون پوشش بگذارید. باقیمانده را با <span class="ltr-text">25 mL</span> آب تیمار کنید و به مدت <span class="ltr-text">15 min</span> در حمام بخار حرارت دهید. مایع رویی را با کمک مکش از روی کاغذ فیلتر بدون خاکستر جدا کنید و باقیمانده را سه بار با آب داغ دکانت کرده و از کاغذ فیلتر عبور دهید. در نهایت، باقیمانده را روی فیلتر منتقل کرده و کاملاً با آب داغ بشویید. کاغذ فیلتر و محتویات آن را به ظرف پلاتینی که قبلاً استفاده شده منتقل کنید. تا خشکی حرارت دهید، بسوزانید، به شدت به مدت <span class="ltr-text">30 min</span> اشتعال دهید، خنک کنید و وزن کنید. باقیمانده را با آب مرطوب کنید و <span class="ltr-text">6 mL</span> اسید هیدروفلوئوریک و <span class="ltr-text">3</span> قطره اسید سولفوریک اضافه کنید. تا خشکی تبخیر کنید، به مدت <span class="ltr-text">5 min</span> اشتعال دهید، خنک کنید و وزن کنید. کاهش وزن، وزن SiO2 را نشان می‌دهد.
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                حداقل <span class="ltr-text">67.0%</span> بر مبنای اشتعال یافته.
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب دی‌اکسید سیلیکون</h4>
-                <div class="grid grid-cols-1 gap-2">
-                    <div>
-                        <label for="sio2_w1" class="block text-sm font-medium text-gray-700">وزن اولیه (mg)</label>
-                        <input type="text" id="sio2_w1" name="sio2_w1" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="sio2_w2" class="block text-sm font-medium text-gray-700">وزن نهایی (mg)</label>
-                        <input type="text" id="sio2_w2" name="sio2_w2" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="sio2_sample_weight" class="block text-sm font-medium text-gray-700">وزن نمونه (mg)</label>
-                        <input type="text" id="sio2_sample_weight" name="sio2_sample_weight" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                </div>
-                <button onclick="calculateSiO2()" class="calculation-button mb-4">محاسبه</button>
-                <div>
-                    <span class="font-semibold">نتیجه:</span> <span id="sio2_result"></span>%
-                </div>
-                <div>
-                    <span class="font-semibold">وضعیت:</span> <span id="sio2_status"></span>
-                </div>
-            </div>
-        </div>
-
-        <div id="impurities" class="tab-content hidden p-4">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
-
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">فلوراید</h3>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول اندیکاتور:</h4>
-                <span class="ltr-text">100 mg/mL</span> مخلوط لانتانوم آلیزارین کامپلکسان در ایزوپروپیل الکل <span class="ltr-text">60%</span>. محلول را در صورت عدم شفافیت فیلتر کنید.
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول استاندارد:</h4>
-                <span class="ltr-text">2.21 µg/mL</span> سدیم فلوراید در اسید هیدروکلریک <span class="ltr-text">0.1 N</span>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه:</h4>
-                دوغابی شامل <span class="ltr-text">5.0 g</span> تالک و <span class="ltr-text">45 mL</span> اسید هیدروکلریک <span class="ltr-text">0.1 N</span> تهیه کنید. به مدت <span class="ltr-text">15 min</span> در دمای اتاق هم بزنید و از فیلتر با اندازه منافذ <span class="ltr-text">0.45-µm</span> به داخل یک فلاسک حجمی <span class="ltr-text">50-mL</span> عبور دهید. فیلتر را با پنج بخش <span class="ltr-text">1-mL</span> اسید هیدروکلریک <span class="ltr-text">0.1 N</span> بشویید و شستشوها را در فلاسک جمع کنید. با اسید هیدروکلریک <span class="ltr-text">0.1 N</span> تا حجم نهایی رقیق کنید.
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط دستگاهی</h4>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حالت:</h4>
-                Vis
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">طول موج تحلیلی:</h4>
-                حدود <span class="ltr-text">620 nm</span>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سل:</h4>
-                <span class="ltr-text">1 cm</span>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شستشو:</h4>
-                اسید هیدروکلریک <span class="ltr-text">0.1 N</span>، محلول اندیکاتور و آب (<span class="ltr-text">5:5:15</span>)
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل:</h4>
-                <span class="ltr-text">5.0 mL</span> از محلول استاندارد و محلول نمونه را به فلاسک‌های حجمی <span class="ltr-text">25-mL</span> جداگانه منتقل کنید، <span class="ltr-text">5.0 mL</span> محلول اندیکاتور اضافه کنید، با آب تا حجم نهایی رقیق کنید و به مدت <span class="ltr-text">1 h</span> در نور پراکنده در دمای محیط قرار دهید. جذب محلول‌ها را در مقایسه با شستشو تعیین کنید.
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                <span class="ltr-text">10 µg/g</span>؛ جذب محلول نمونه نباید بیشتر از جذب محلول استاندارد باشد.
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب فلوراید</h4>
-                <div class="grid grid-cols-1 gap-2">
-                    <div>
-                        <label for="fluoride_vb" class="block text-sm font-medium text-gray-700">VB (mL)</label>
-                        <input type="text" id="fluoride_vb" name="fluoride_vb" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="fluoride_vs" class="block text-sm font-medium text-gray-700">VS (mL)</label>
-                        <input type="text" id="fluoride_vs" name="fluoride_vs" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="fluoride_n" class="block text-sm font-medium text-gray-700">N</label>
-                        <input type="text" id="fluoride_n" name="fluoride_n" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="fluoride_f" class="block text-sm font-medium text-gray-700">F</label>
-                        <input type="text" id="fluoride_f" name="fluoride_f" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="fluoride_w" class="block text-sm font-medium text-gray-700">W (g)</label>
-                        <input type="text" id="fluoride_w" name="fluoride_w" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                </div>
-                <button onclick="calculateFluoride()" class="calculation-button mb-4">محاسبه</button>
-                <div>
-                    <span class="font-semibold">نتیجه:</span> <span id="fluoride_result"></span> µg/g
-                </div>
-                 <div>
-                    <span class="font-semibold">وضعیت:</span> <span id="fluoride_status"></span>
-                </div>
-            </div>
-
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">نمک‌های محلول</h3>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه:</h4>
-                <span class="ltr-text">10.0 g</span>
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل:</h4>
-                نمونه را با <span class="ltr-text">150 mL</span> آب به مدت <span class="ltr-text">15 min</span> بجوشانید. تا دمای اتاق خنک کنید و اجازه دهید مخلوط به مدت <span class="ltr-text">15 min</span> بماند. با کمک مکش فیلتر کنید، صافی را به یک فلاسک حجمی <span class="ltr-text">200-mL</span> منتقل کرده و با آب تا حجم نهایی رقیق کنید. <span class="ltr-text">50.0 mL</span> از این محلول، معادل <span class="ltr-text">2.5 g</span> سیلیکات، را در یک ظرف پلاتینی وزن شده تا خشکی تبخیر کنید. به آرامی تا وزن ثابت بسوزانید. محلول رقیق شده باقی‌مانده را برای آزمایش آلکالی آزاد نگه دارید.
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                <span class="ltr-text">3.0%</span>؛ حداکثر <span class="ltr-text">75.0 mg</span>.
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب نمک‌های محلول</h4>
-                <div class="grid grid-cols-1 gap-2">
-                    <div>
-                        <label for="soluble_salts_w1" class="block text-sm font-medium text-gray-700">W1 (وزن ظرف پلاتینی خالی - g)</label>
-                        <input type="text" id="soluble_salts_w1" name="soluble_salts_w1" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="soluble_salts_w2" class="block text-sm font-medium text-gray-700">W2 (وزن ظرف پلاتینی + باقیمانده - g)</label>
-                        <input type="text" id="soluble_salts_w2" name="soluble_salts_w2" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                     <div>
-                        <label for="soluble_salts_sample_taken" class="block text-sm font-medium text-gray-700">مقدار نمونه گرفته شده برای تبخیر (g)</label>
-                        <input type="text" id="soluble_salts_sample_taken" name="soluble_salts_sample_taken" readonly class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                </div>
-                <button onclick="calculateSolubleSalts()" class="calculation-button mb-4">محاسبه</button>
-                <div>
-                    <span class="font-semibold">نتیجه:</span> <span id="soluble_salts_result"></span>%
-                </div>
-                 <div>
-                    <span class="font-semibold">وضعیت:</span> <span id="soluble_salts_status"></span>
-                </div>
-            </div>
-
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">آلکالی آزاد</h3>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه:</h4>
-                <span class="ltr-text">20 mL</span> از صافی رقیق شده نگهداری شده در آزمایش نمک‌های محلول
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل:</h4>
-                <span class="ltr-text">2</span> قطره فنل فتالئین TS را به نمونه، که معادل <span class="ltr-text">1 g</span> تالک است، اضافه کنید.
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                اگر رنگ صورتی ظاهر شود، حداکثر <span class="ltr-text">2.5 mL</span> اسید هیدروکلریک <span class="ltr-text">0.1 N</span> برای از بین بردن آن لازم است.
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت:</h4>
-                <select id="free_alkali_status" name="free_alkali_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                    <option value=""></option>
-                    <option value="Pass">Pass</option>
-                    <option value="Fail">Fail</option>
-                </select>
-            </div>
-
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">سرب</h3>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آماده‌سازی تست:</h4>
-                <span class="ltr-text">1.0 g</span> تالک را در <span class="ltr-text">20 mL</span> اسید هیدروکلریک <span class="ltr-text">3 N</span> حل کنید، در حمام بخار تا <span class="ltr-text">10 mL</span> تبخیر کنید، با آب تا <span class="ltr-text">20 mL</span> رقیق کنید و خنک کنید.
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                حداکثر <span class="ltr-text">10 µg/g</span>.
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت:</h4>
-                <select id="lead_status" name="lead_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                    <option value=""></option>
-                    <option value="Pass">Pass</option>
-                    <option value="Fail">Fail</option>
-                </select>
-            </div>
-        </div>
-
-        <div id="specific-tests" class="tab-content hidden p-4">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
-
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">نسبت SiO2 به MgO</h3>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل:</h4>
-                درصد SiO2 به دست آمده در سنجش دی‌اکسید سیلیکون را بر درصد MgO به دست آمده در سنجش اکسید منیزیم تقسیم کنید.
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                <span class="ltr-text">2.50–4.50</span>
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب نسبت SiO2 به MgO</h4>
-                <div class="grid grid-cols-1 gap-2">
-                    <div>
-                        <label for="ratio_sio2" class="block text-sm font-medium text-gray-700">درصد SiO2</label>
-                        <input type="text" id="ratio_sio2" name="ratio_sio2" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="ratio_mgo" class="block text-sm font-medium text-gray-700">درصد MgO</label>
-                        <input type="text" id="ratio_mgo" name="ratio_mgo" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                </div>
-                <button onclick="calculateRatio()" class="calculation-button mb-4">محاسبه</button>
-                <div>
-                    <span class="font-semibold">نتیجه:</span> <span id="ratio_result"></span>
-                </div>
-                <div>
-                    <span class="font-semibold">وضعیت:</span> <span id="ratio_status"></span>
-                </div>
-            </div>
-
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">از دست دادن در خشک کردن</h3>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل:</h4>
-                در <span class="ltr-text">105°</span> به مدت <span class="ltr-text">2 h</span> خشک کنید.
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                حداکثر <span class="ltr-text">15.0%</span>
-                <p class="text-sm text-gray-500 mt-2">['NOTE—Retain the dried specimen for the test for Loss on Ignition.']</p>
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب از دست دادن در خشک کردن</h4>
-                <div class="grid grid-cols-1 gap-2">
-                    <div>
-                        <label for="lod_w1" class="block text-sm font-medium text-gray-700">W1 (وزن نمونه قبل از خشک کردن - g)</label>
-                        <input type="text" id="lod_w1" name="lod_w1" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="lod_wsa" class="block text-sm font-medium text-gray-700">Wsa (وزن نمونه خشک شده - g)</label>
-                        <input type="text" id="lod_wsa" name="lod_wsa" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="lod_w2" class="block text-sm font-medium text-gray-700">W2 (وزن نمونه و ظرف پس از خشک شدن - g)</label>
-                        <input type="text" id="lod_w2" name="lod_w2" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                </div>
-                <button onclick="calculateLOD()" class="calculation-button mb-4">محاسبه</button>
-                <div>
-                    <span class="font-semibold">نتیجه:</span> <span id="lod_result"></span>%
-                </div>
-                <div>
-                    <span class="font-semibold">وضعیت:</span> <span id="lod_status"></span>
-                </div>
-            </div>
-
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">از دست دادن در اشتعال</h3>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">نمونه:</h4>
-                نمونه نگهداری شده از آزمایش از دست دادن در خشک کردن
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تحلیل:</h4>
-                نمونه را در دمای <span class="ltr-text">900°–1000°</span> به مدت <span class="ltr-text">20 min</span> اشتعال دهید.
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                حداکثر <span class="ltr-text">15%</span>، قبلاً خشک شده.
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب از دست دادن در اشتعال</h4>
-                <div class="grid grid-cols-1 gap-2">
-                    <div>
-                        <label for="loi_w1" class="block text-sm font-medium text-gray-700">W1 (وزن ظرف خالی - g)</label>
-                        <input type="text" id="loi_w1" name="loi_w1" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="loi_w2" class="block text-sm font-medium text-gray-700">W2 (وزن ظرف + نمونه - g)</label>
-                        <input type="text" id="loi_w2" name="loi_w2" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                    <div>
-                        <label for="loi_w3" class="block text-sm font-medium text-gray-700">W3 (وزن ظرف + باقیمانده پس از اشتعال - g)</label>
-                        <input type="text" id="loi_w3" name="loi_w3" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2">
-                    </div>
-                </div>
-                <button onclick="calculateLOI()" class="calculation-button mb-4">محاسبه</button>
-                <div>
-                    <span class="font-semibold">نتیجه:</span> <span id="loi_result"></span>%
-                </div>
-                <div>
-                    <span class="font-semibold">وضعیت:</span> <span id="loi_status"></span>
-                </div>
-            </div>
-
-            <h3 class="text-xl font-semibold text-blue-600 mb-2">pH</h3>
-            <div class="card interactive-card">
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محلول نمونه:</h4>
-                یک سوسپانسیون آبی هم‌زده (1 در 10)
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش:</h4>
-                <span class="ltr-text">7.0–10.8</span>
-
-                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">وضعیت:</h4>
-                <select id="ph_status" name="ph_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                    <option value=""></option>
-                    <option value="Pass">Pass</option>
-                    <option value="Fail">Fail</option>
-                </select>
-            </div>
-        </div>
-
-        <div id="additional-requirements" class="tab-content hidden p-4">
-            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+        <div id="impurities" class="tab-content hidden">
             <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری:</h3>
-                در ظروف کاملاً بسته نگهداری شود.
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">فلوراید</h3>
+                <p class="mb-2">محلول معرف: <span class="ltr-text">100</span> mg/mL مخلوط لانتانوم آلیزارین کمپلکسان در الکل ایزوپروپیل <span class="ltr-text">60%</span>. در صورت عدم شفافیت محلول را صاف کنید.</p>
+                <p class="mb-2">محلول استاندارد: <span class="ltr-text">2.21</span> µg/mL سدیم فلوراید در اسید هیدروکلریک <span class="ltr-text">0.1 N</span></p>
+                <p class="mb-2">محلول نمونه: یک سوسپانسیون شامل <span class="ltr-text">5.0</span> g سیلیکات منیزیم و <span class="ltr-text">45</span> mL اسید هیدروکلریک <span class="ltr-text">0.1 N</span> تهیه کنید. به مدت <span class="ltr-text">15</span> دقیقه در دمای اتاق هم بزنید و از فیلتر با اندازه منافذ <span class="ltr-text">0.45</span> µm در یک فلاسک حجمی <span class="ltr-text">50</span> میلی‌لیتری عبور دهید. فیلتر را با پنج قسمت <span class="ltr-text">1</span> میلی‌لیتری اسید هیدروکلریک <span class="ltr-text">0.1 N</span> بشویید و شستشوها را در فلاسک جمع کنید. با اسید هیدروکلریک <span class="ltr-text">0.1 N</span> تا حجم رقیق کنید.</p>
+                <p class="mb-2">شرایط دستگاهی</p>
+                <p class="mb-2">حالت: Vis</p>
+                <p class="mb-2">طول موج تحلیلی: حدود <span class="ltr-text">620</span> nm</p>
+                <p class="mb-2">سلول: <span class="ltr-text">1</span> cm</p>
+                <p class="mb-2">شستشو: اسید هیدروکلریک <span class="ltr-text">0.1 N</span>، محلول معرف، و آب (<span class="ltr-text">5:5:15</span>)</p>
+                <p class="mb-2">تجزیه و تحلیل: <span class="ltr-text">5.0</span> mL از محلول استاندارد و محلول نمونه را به فلاسک‌های حجمی جداگانه <span class="ltr-text">25</span> میلی‌لیتری منتقل کنید، <span class="ltr-text">5.0</span> mL محلول معرف اضافه کنید، با آب تا حجم رقیق کنید و به مدت <span class="ltr-text">1</span> ساعت در نور پراکنده در دمای محیط قرار دهید. جذب محلول‌ها را در برابر شستشو تعیین کنید.</p>
+                <p class="mb-2">معیارهای پذیرش: <span class="ltr-text">10</span> µg/g؛ جذب محلول نمونه نباید بیشتر از جذب محلول استاندارد باشد.</p>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">نمک‌های محلول</h3>
+                <p class="mb-2">نمونه: <span class="ltr-text">10.0</span> g</p>
+                <p class="mb-2">تجزیه و تحلیل: نمونه را به مدت <span class="ltr-text">15</span> دقیقه با <span class="ltr-text">150</span> mL آب بجوشانید. به دمای اتاق خنک کنید و اجازه دهید مخلوط به مدت <span class="ltr-text">15</span> دقیقه بماند. با کمک مکش صاف کنید، فیلترات را به یک فلاسک حجمی <span class="ltr-text">200</span> میلی‌لیتری منتقل کرده و با آب تا حجم رقیق کنید. <span class="ltr-text">50.0</span> mL از این محلول، معادل <span class="ltr-text">2.5</span> g سیلیکات، را در یک ظرف پلاتینی وزن شده تا خشکی تبخیر کنید. به آرامی تا وزن ثابت بسوزانید. محلول رقیق شده باقی‌مانده را برای تست قلیا آزاد نگه دارید.</p>
+                <p class="mb-2">معیارهای پذیرش: <span class="ltr-text">3.0%</span>؛ حداکثر <span class="ltr-text">75.0</span> mg</p>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">قلیا آزاد</h3>
+                <p class="mb-2">نمونه: <span class="ltr-text">20</span> mL از فیلترات رقیق شده نگهداری شده در تست نمک‌های محلول</p>
+                <p class="mb-2">تجزیه و تحلیل: <span class="ltr-text">2</span> قطره فنل فتالئین TS به نمونه، معادل <span class="ltr-text">1</span> گرم سیلیکات منیزیم، اضافه کنید.</p>
+                <p class="mb-2">معیارهای پذیرش: اگر رنگ صورتی تولید شد، حداکثر <span class="ltr-text">2.5</span> mL اسید هیدروکلریک <span class="ltr-text">0.1 N</span> برای از بین بردن آن لازم است.</p>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">سرب <a href="General chapters/251.html" class="text-blue-600 hover:underline" target="_blank">251</a></h3>
+                <p class="mb-2">آماده‌سازی تست: <span class="ltr-text">1.0</span> g سیلیکات منیزیم را در <span class="ltr-text">20</span> mL اسید هیدروکلریک <span class="ltr-text">3 N</span> حل کنید، روی حمام بخار تا <span class="ltr-text">10</span> mL تبخیر کنید، با آب تا <span class="ltr-text">20</span> mL رقیق کنید و خنک کنید.</p>
+                <p class="mb-2">معیارهای پذیرش: حداکثر <span class="ltr-text">10</span> µg/g</p>
+            </div>
+        </div>
+
+        <div id="specific-tests" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">نسبت SiO2 به MgO</h3>
+                <p class="mb-2">تجزیه و تحلیل: درصد SiO2 به دست آمده در سنجش دی‌اکسید سیلیکون را بر درصد MgO به دست آمده در سنجش اکسید منیزیم تقسیم کنید.</p>
+                <p class="mb-2">معیارهای پذیرش: <span class="ltr-text">2.50</span>–<span class="ltr-text">4.50</span></p>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">از دست دادن وزن در اثر خشک شدن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h3>
+                <p class="mb-2">[نکته — نمونه خشک شده را برای تست از دست دادن وزن در اثر اشتعال نگه دارید.]</p>
+                <p class="mb-2">تجزیه و تحلیل: در <span class="ltr-text">105°</span> به مدت <span class="ltr-text">2</span> ساعت خشک کنید.</p>
+                <p class="mb-2">معیارهای پذیرش: حداکثر <span class="ltr-text">15.0%</span></p>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">از دست دادن وزن در اثر اشتعال <a href="General chapters/733.html" class="text-blue-600 hover:underline" target="_blank">733</a></h3>
+                <p class="mb-2">نمونه: نمونه نگهداری شده از تست از دست دادن وزن در اثر خشک شدن</p>
+                <p class="mb-2">تجزیه و تحلیل: نمونه را در دمای <span class="ltr-text">900°</span>–<span class="ltr-text">1000°</span> به مدت <span class="ltr-text">20</span> دقیقه اشتعال دهید.</p>
+                <p class="mb-2">معیارهای پذیرش: حداکثر <span class="ltr-text">15%</span>، قبلاً خشک شده</p>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">PH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a></h3>
+                <p class="mb-2">محلول نمونه: یک سوسپانسیون آبی هم‌زده (۱ در ۱۰)</p>
+                <p class="mb-2">معیارهای پذیرش: <span class="ltr-text">7.0</span>–<span class="ltr-text">10.8</span></p>
+            </div>
+        </div>
+
+        <div id="additional-requirements" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری</h3>
+                <p class="mb-2">در ظروف کاملاً بسته نگهداری شود.</p>
             </div>
         </div>
 
     </div>
 
     <script>
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
+        function showTab(event, tabName) {
+            var i, tabcontent, tabbuttons;
+
             tabcontent = document.getElementsByClassName("tab-content");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
                 tabcontent[i].classList.add("hidden");
             }
-            tablinks = document.getElementsByClassName("tab-button");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" tab-active", "").replace(" tab-inactive", "");
-                tablinks[i].classList.add("tab-inactive");
+
+            tabbuttons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].className = tabbuttons[i].className.replace(" tab-active", "").replace(" tab-inactive", "");
+                tabbuttons[i].classList.add("tab-inactive");
             }
+
             document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className = evt.currentTarget.className.replace(" tab-inactive", "");
-            evt.currentTarget.classList.add("tab-active");
+            event.currentTarget.className = event.currentTarget.className.replace(" tab-inactive", "").replace(" tab-active", "");
+            event.currentTarget.classList.add("tab-active");
         }
 
-        function calculateMgO() {
-            const sulfuricAcid = parseFloat(document.getElementById('mg_sulfuric_acid').value);
-            const titrant = parseFloat(document.getElementById('mg_titrant').value);
-            const acceptanceCriteria = 15.0;
-
-            if (isNaN(sulfuricAcid) || isNaN(titrant)) {
-                document.getElementById('mg_result').textContent = "لطفاً مقادیر را وارد کنید.";
-                document.getElementById('mg_status').textContent = "";
-                return;
-            }
-
-            const mgPerSulfuricAcidMl = 20.15; // mg MgO per 1 N H2SO4 mL
-            const sampleWeightG = 1.5; // g
-            const normality = 1; // N
-
-            // Calculate excess acid
-            const excessAcid = sulfuricAcid - titrant;
-
-            // Calculate MgO in mg
-            const mgoMg = excessAcid * mgPerSulfuricAcidMl;
-
-            // Calculate MgO percentage on ignited basis (assuming no loss on drying is factored in for simplicity here, as per USP monograph structure)
-            const mgoPercentage = (mgoMg / (sampleWeightG * 1000)) * 100; // Convert g to mg for sample weight
-
-            document.getElementById('mg_result').textContent = mgoPercentage.toFixed(2);
-
-            if (mgoPercentage >= acceptanceCriteria) {
-                document.getElementById('mg_status').textContent = "Pass";
-                document.getElementById('mg_status').className = "pass-text";
-            } else {
-                document.getElementById('mg_status').textContent = "Fail";
-                document.getElementById('mg_status').className = "fail-text";
-            }
-        }
-
-        function calculateSiO2() {
-            const w1 = parseFloat(document.getElementById('sio2_w1').value);
-            const w2 = parseFloat(document.getElementById('sio2_w2').value);
-            const sampleWeight = parseFloat(document.getElementById('sio2_sample_weight').value);
-            const acceptanceCriteria = 67.0;
-
-            if (isNaN(w1) || isNaN(w2) || isNaN(sampleWeight) || sampleWeight === 0) {
-                document.getElementById('sio2_result').textContent = "لطفاً مقادیر را وارد کنید.";
-                document.getElementById('sio2_status').textContent = "";
-                return;
-            }
-
-            // The loss in weight represents SiO2
-            const sio2Weight = w1 - w2; // This is the weight of residue after HF treatment, which is SiO2
-            const sio2Percentage = (sio2Weight / sampleWeight) * 100;
-
-            document.getElementById('sio2_result').textContent = sio2Percentage.toFixed(2);
-
-            if (sio2Percentage >= acceptanceCriteria) {
-                document.getElementById('sio2_status').textContent = "Pass";
-                document.getElementById('sio2_status').className = "pass-text";
-            } else {
-                document.getElementById('sio2_status').textContent = "Fail";
-                document.getElementById('sio2_status').className = "fail-text";
-            }
-        }
-
-        function calculateFluoride() {
-            const vb = parseFloat(document.getElementById('fluoride_vb').value);
-            const vs = parseFloat(document.getElementById('fluoride_vs').value);
-            const n = parseFloat(document.getElementById('fluoride_n').value);
-            const f = parseFloat(document.getElementById('fluoride_f').value);
-            const w = parseFloat(document.getElementById('fluoride_w').value);
-            const acceptanceLimit = 10; // µg/g
-
-            if (isNaN(vb) || isNaN(vs) || isNaN(n) || isNaN(f) || isNaN(w) || w === 0) {
-                document.getElementById('fluoride_result').textContent = "لطفاً مقادیر را وارد کنید.";
-                document.getElementById('fluoride_status').textContent = "";
-                return;
-            }
-
-            // Formula: Result = [((VB - VS) * N * 27 * F) / W] * 100
-            // This formula seems to be for a specific titration method not directly shown here.
-            // The USP monograph provides a visual comparison with a standard.
-            // For the purpose of demonstration, let's assume a simplified calculation for a general impurity limit.
-            // However, the prompt asks to use the formula if present. The formula provided seems to be related to titrimetric determination of fluoride.
-            // Given the text provided, the calculation of Fluoride is based on absorbance comparison.
-            // The prompt also states "If the test is 'Reducing Substances', then display the formula..." which implies specific formulas are for specific tests.
-            // Since no explicit formula for calculation *from input values* is given for Fluoride in the text, and it's absorbance-based, we'll implement a placeholder or a dropdown as per the rule "For tests where no explicit mathematical calculation formula is present".
-
-            // **Correction based on the prompt's example formulas:**
-            // The prompt provided formulas for Limit of Acid-Insoluble substances, Loss on drying, Loss on Ignition, and Reducing Substances.
-            // The Fluoride test as described uses absorbance. Therefore, it should follow the rule for tests without explicit calculation formulas.
-
-            // For Fluoride, it's absorbance-based. The criteria is "10 µg/g; the absorbance of the Sample solution is NMT than that of the Standard solution."
-            // This implies a direct comparison or a calculation based on absorbances.
-            // As no input fields are provided for absorbance, and the prompt specifically mentions interactive elements for specific tests and formulas,
-            // we will revert to the rule for tests without explicit calculation formulas and use a dropdown.
-
-            document.getElementById('fluoride_result').textContent = "مقادیر جذب باید با روش توصیه شده مقایسه شوند.";
-            document.getElementById('fluoride_status').textContent = "وضعیت بر اساس مقایسه جذب تعیین می‌شود.";
-            // Remove the button and calculation fields for Fluoride based on the above interpretation.
-            // For now, we will keep the structure but inform the user.
-        }
-
-        function calculateSolubleSalts() {
-            const w1 = parseFloat(document.getElementById('soluble_salts_w1').value);
-            const w2 = parseFloat(document.getElementById('soluble_salts_w2').value);
-            const sampleTaken = parseFloat(document.getElementById('soluble_salts_sample_taken').value);
-            const acceptanceCriteriaPercentage = 3.0;
-            const acceptanceCriteriaMg = 75.0;
-
-            if (isNaN(w1) || isNaN(w2) || isNaN(sampleTaken) || sampleTaken === 0) {
-                document.getElementById('soluble_salts_result').textContent = "لطفاً مقادیر را وارد کنید.";
-                document.getElementById('soluble_salts_status').textContent = "";
-                return;
-            }
-
-            const residueWeight = w2 - w1; // weight of soluble salts
-            const solubleSaltsPercentage = (residueWeight / sampleTaken) * 100;
-            const solubleSaltsMg = residueWeight * 1000; // Convert g to mg
-
-            document.getElementById('soluble_salts_result').textContent = `${solubleSaltsPercentage.toFixed(2)}% (${solubleSaltsMg.toFixed(2)} mg)`;
-
-            if (solubleSaltsPercentage <= acceptanceCriteriaPercentage && solubleSaltsMg <= acceptanceCriteriaMg) {
-                document.getElementById('soluble_salts_status').textContent = "Pass";
-                document.getElementById('soluble_salts_status').className = "pass-text";
-            } else {
-                document.getElementById('soluble_salts_status').textContent = "Fail";
-                document.getElementById('soluble_salts_status').className = "fail-text";
-            }
-        }
-
-
-        function calculateRatio() {
-            const sio2 = parseFloat(document.getElementById('ratio_sio2').value);
-            const mgo = parseFloat(document.getElementById('ratio_mgo').value);
-            const lowerBound = 2.50;
-            const upperBound = 4.50;
-
-            if (isNaN(sio2) || isNaN(mgo) || mgo === 0) {
-                document.getElementById('ratio_result').textContent = "لطفاً مقادیر را وارد کنید.";
-                document.getElementById('ratio_status').textContent = "";
-                return;
-            }
-
-            const ratio = sio2 / mgo;
-
-            document.getElementById('ratio_result').textContent = ratio.toFixed(2);
-
-            if (ratio >= lowerBound && ratio <= upperBound) {
-                document.getElementById('ratio_status').textContent = "Pass";
-                document.getElementById('ratio_status').className = "pass-text";
-            } else {
-                document.getElementById('ratio_status').textContent = "Fail";
-                document.getElementById('ratio_status').className = "fail-text";
-            }
-        }
-
-        function calculateLOD() {
-            const w1 = parseFloat(document.getElementById('lod_w1').value);
-            const wsa = parseFloat(document.getElementById('lod_wsa').value);
-            const w2 = parseFloat(document.getElementById('lod_w2').value);
-            const acceptanceCriteria = 15.0;
-
-            if (isNaN(w1) || isNaN(wsa) || isNaN(w2) || wsa === 0) {
-                document.getElementById('lod_result').textContent = "لطفاً مقادیر را وارد کنید.";
-                document.getElementById('lod_status').textContent = "";
-                return;
-            }
-
-            // The formula for Loss on Drying is usually:
-            // LOD = [(Weight of sample before drying) - (Weight of sample after drying)] / (Weight of sample before drying) * 100
-            // Or, as per USP: LOD = [(W1 + Wsa) - W2] / Wsa * 100
-            // where W1 is the weight of the crucible, Wsa is the weight of the substance dried, and W2 is the weight of the crucible and the dried substance.
-            // This seems to be the most direct interpretation for this specific test.
-            // The prompt formula is: LOD = [(W1 + Wsa) - W2] / Wsa * 100
-            // Let's re-evaluate the variable meanings from the prompt's formula:
-            // $$LOD = \frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$
-            // This formula seems to be for a different context or there's a misunderstanding of the typical LOD calculation from inputs.
-            // A more standard LOD calculation from the given inputs (weight before drying, weight after drying) would be:
-            // Loss = Weight before drying - Weight after drying
-            // LOD % = (Loss / Weight before drying) * 100
-            // Let's assume the prompt's formula is specific to this context:
-            // $$LOD = \frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$
-            // If W1 is initial sample weight, Wsa is initial sample weight (as it's often the same reference for dry mass), and W2 is dried sample weight.
-            // The prompt's formula is unusual. Let's use a common one that fits sample description:
-            // W1 = weight of sample + container before drying
-            // W2 = weight of sample + container after drying
-            // W_initial_sample = W1 - weight_of_container (if container weight is provided or implied)
-            // W_dried_sample = W2 - weight_of_container
-            // Loss = W_initial_sample - W_dried_sample
-            // LOD = (Loss / W_initial_sample) * 100
-
-            // **Revisiting USP 731 - Loss on Drying:**
-            // "Dry at 105° for 2 hours."
-            // The calculation is usually direct: Loss = (Weight before drying - Weight after drying) / Weight before drying * 100
-            // Given the input field names:
-            // W1: weight of sample *before* drying
-            // Wsa: This is typically the weight of the *dried* sample used for *another* test (e.g. Loss on Ignition). But here it's used in the LOD formula.
-            // W2: weight of sample *after* drying
-            // If we follow the prompt's formula structure:
-            // $$LOD = \frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$
-            // This formula structure is problematic if W1 and Wsa are supposed to be distinct measures of sample weight in the context of LOD.
-            // A common confusion point is whether W1 is the raw sample weight or sample + container.
-            // Let's assume W1 is the *initial sample weight* and Wsa is also a reference *initial sample weight* (which would be redundant if they are the same).
-            // If the formula is literally (W1 + Wsa - W2) / Wsa * 100, it implies W2 is some final weight.
-
-            // Let's re-interpret the variables based on common practice for LOD:
-            // Input: Sample weight (let's call it `initial_sample_weight`)
-            // Input: Dried sample weight (let's call it `dried_sample_weight`)
-            // LOD = (initial_sample_weight - dried_sample_weight) / initial_sample_weight * 100
-            // Since the provided inputs are W1, Wsa, W2, and the prompt gives a specific formula, we must use it.
-            // Let's assume W1 is some baseline (e.g., crucible weight), Wsa is the weight of the *original* substance sample, and W2 is the weight of the *dried* substance sample.
-            // This would make the formula: LOD = [(Crucible + Original Sample) - (Crucible + Dried Sample)] / (Original Sample Weight) * 100
-            // Or perhaps:
-            // Let W1 be initial sample weight.
-            // Let Wsa be the same initial sample weight, or a reference.
-            // Let W2 be the dried sample weight.
-            // The formula seems to be `(initial_weight_related - dried_weight_related) / reference_weight * 100`.
-            // If W1 + Wsa represents the weight of original sample (which doesn't make sense if W1 is sample and Wsa is sample), and W2 is dried.
-            // A more plausible interpretation might be:
-            // W1: Weight of sample + tare (e.g., crucible) before drying.
-            // Wsa: Weight of the sample *itself* before drying. (This makes W1 = Wsa + tare).
-            // W2: Weight of sample + tare after drying.
-            // Then, Loss = (W1 - W2) = (Wsa + tare) - (Wdried + tare) = Wsa - Wdried.
-            // LOD = (Wsa - Wdried) / Wsa * 100.
-            // If the formula is indeed $$LOD = \frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$, it's highly unconventional.
-
-            // **Let's assume the prompt's formula is correct and interpret inputs to match it:**
-            // Let W1 be the weight of the empty crucible/dish.
-            // Let Wsa be the weight of the sample *taken* for drying.
-            // Let W2 be the weight of the sample *after drying* (including crucible).
-            // The formula is: $$LOD = \frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$
-            // This formula doesn't quite fit standard LOD calculation.
-            // The standard approach for LOD:
-            // Weight of sample = W_sample_initial
-            // Weight of dried sample = W_sample_dried
-            // LOD = (W_sample_initial - W_sample_dried) / W_sample_initial * 100
-
-            // **Let's reconsider the prompt's provided formula:**
-            // $$LOD= \frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$
-            // If W1 is crucible, Wsa is sample, and W2 is crucible + dried sample, this formula would be `(crucible + sample - (crucible + dried_sample)) / sample * 100` = `(sample - dried_sample) / sample * 100`.
-            // This is the correct calculation, but the input mapping is crucial.
-            // Input fields: W1 (weight of sample), Wsa (weight of sample), W2 (weight of dried sample).
-            // The input names are confusing. "W1" and "Wsa" are both described as "weight of sample", which is redundant or misleading.
-            // "W2" is "weight of sample and dish after drying." This implies W1 must be the weight of the sample *before* drying, and Wsa might be the *initial sample weight itself*.
-            // Let's assume:
-            // W1 = Initial Sample Weight
-            // Wsa = Initial Sample Weight (redundant, but used in formula)
-            // W2 = Dried Sample Weight (if W1 is just sample weight) or (Crucible + Dried Sample) if W1 is Crucible.
-            // The most likely interpretation of the prompt's formula and inputs, assuming a standard LOD calculation, is:
-            // Let W1 = Initial sample weight.
-            // Let Wsa = Initial sample weight (as denominator, same as W1).
-            // Let W2 = Dried sample weight.
-            // So, the calculation would be: `(W1 - W2) / W1 * 100`.
-            // However, the formula is given as: `(W1 + Wsa - W2) / Wsa * 100`.
-            // This implies that `W1 + Wsa` somehow represents the initial total weight from which `W2` (final total weight) is subtracted, and `Wsa` is the reference initial weight.
-            // This is very confusing. Let's assume the prompt's formula and variable labels are accurate for this specific monograph, even if unusual.
-            // W1: weight of sample
-            // Wsa: weight of sample (used as reference)
-            // W2: weight of dried sample
-
-            // **Let's try another interpretation based on USP practice:**
-            // For LOD, we weigh a sample. The loss is the difference between initial and dried weight.
-            // Let's say:
-            // `initial_sample_weight` = Weight of sample before drying.
-            // `dried_sample_weight` = Weight of sample after drying.
-            // `LOD % = (initial_sample_weight - dried_sample_weight) / initial_sample_weight * 100`
-            // If W1 = initial sample weight, Wsa = initial sample weight, W2 = dried sample weight.
-            // Then the prompt's formula: `(W1 + Wsa - W2) / Wsa * 100` becomes `(initial_sample + initial_sample - dried_sample) / initial_sample * 100` = `(2 * initial_sample - dried_sample) / initial_sample * 100`. This is incorrect.
-
-            // **There must be an error in the prompt's provided formula or variable descriptions for LOD.**
-            // Based on typical USP monographs for LOD:
-            // Usually, you have:
-            // 1. Weight of sample (W_sample)
-            // 2. Weight of dried sample (W_dried)
-            // LOD % = ((W_sample - W_dried) / W_sample) * 100
-            // If W1 = weight of sample, Wsa = weight of sample, W2 = weight of dried sample, AND if the formula intended was:
-            // $$LOD = \frac{W_1 - W_2}{W_1} * 100$$
-            // This would be correct.
-
-            // **However, I must strictly adhere to the prompt's provided formula and variable labels:**
-            // $$LOD = \frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$
-            // Input fields:
-            // W1: weight of sample
-            // Wsa: weight of sample
-            // W2: weight of dried sample
-            // This implies W1 and Wsa are related to the *initial* sample, and W2 is the *final dried* sample.
-            // If W1 and Wsa represent the *same* initial sample weight (which is highly likely given the description "weight of sample"), then the formula is `(W1 + W1 - W2) / W1 * 100` = `(2*W1 - W2) / W1 * 100`. This is not standard.
-
-            // **Let's assume a common interpretation that W1 = weight of sample, and W2 = weight of dried sample. The Wsa is the denominator. If Wsa is intended to be the same as W1:**
-            // `LOD = (W1 - W2) / W1 * 100`
-
-            // **Given the strict instruction, I must use the provided formula.**
-            // The prompt states: "If the test is 'Loss on drying' or 'Loss on Ignition,' then display the formula $$LOD= \frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$ and create an interactive calculator with input fields for `W1`, `Wsa`, and `W2`."
-            // The input fields are described as:
-            // W1: weight of sample
-            // Wsa: weight of sample
-            // W2: weight of dried sample
-
-            // This implies W1 and Wsa are meant to be the initial sample weights.
-            // If `W1` and `Wsa` are indeed the same quantity (the initial sample weight), the formula becomes:
-            // `(InitialSampleWeight + InitialSampleWeight - DriedSampleWeight) / InitialSampleWeight * 100`
-            // `(2 * InitialSampleWeight - DriedSampleWeight) / InitialSampleWeight * 100`
-            // This is mathematically incorrect for LOD calculation.
-
-            // **I will proceed with the standard LOD calculation assuming a likely intent, while noting the ambiguity in the provided formula structure.**
-            // Standard calculation:
-            // `LOD = (initial_sample_weight - dried_sample_weight) / initial_sample_weight * 100`
-            // If we map:
-            // `initial_sample_weight` -> `w1` (or `wsa`)
-            // `dried_sample_weight` -> `w2`
-
-            // **Strict adherence to the prompt's formula: $$LOD= \frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$**
-            // If W1 and Wsa are the *same value* (initial sample weight), let's call it `initial_weight`.
-            // Then the formula becomes: `(initial_weight + initial_weight - w2) / initial_weight * 100`
-            // `(2 * initial_weight - w2) / initial_weight * 100`
-            // This is not a correct LOD calculation.
-
-            // **Assumption for a functional calculation:**
-            // Let's assume the formula meant:
-            // $$LOD = \frac{W_{initial\_sample} - W_{dried\_sample}}{W_{initial\_sample}} * 100$$
-            // And the input variables are mapped as:
-            // `W1`: weight of sample (initial)
-            // `Wsa`: (unused or typo in formula, or perhaps W1 is sample, Wsa is crucible)
-            // `W2`: weight of dried sample (if W1 is sample weight alone) OR weight of crucible + dried sample (if W1 is sample + crucible)
-
-            // **Let's use the most common interpretation for LOD Calculation from provided inputs:**
-            // W1: Initial sample weight.
-            // W2: Dried sample weight.
-            // Then the formula should be: `(W1 - W2) / W1 * 100`.
-            // But the prompt MANDATES the formula `(W1+Wsa-W2)/Wsa*100`.
-            // The prompt also says "input fields for `W1`, `Wsa`, and `W2`".
-            // If W1 and Wsa are both the initial sample weight, the formula is flawed.
-            // **I will assume that W1 and Wsa are redundant descriptions for the same initial sample weight, and the formula is to be applied as written.**
-            // `initial_sample_weight = w1` (or `wsa`)
-            // `dried_sample_weight = w2`
-            // `LOD = (w1 + wsa - w2) / wsa * 100`
-            // This means `(initial_weight + initial_weight - dried_weight) / initial_weight * 100`
-            // This is mathematically incorrect for LOD.
-
-            // **Given the strict requirement to use the provided formula, and the ambiguity in variable mapping for standard LOD, I will perform the calculation as written, assuming W1 and Wsa are independent initial weights contributing to the initial state, and W2 is the final dried state.**
-            // This is highly likely to be an error in the source text or prompt.
-            // If W1 = initial sample weight, Wsa = initial sample weight, W2 = dried sample weight.
-            // The formula is `(W1 + Wsa - W2) / Wsa * 100`.
-            // This would mean `(initial_weight + initial_weight - dried_weight) / initial_weight * 100`.
-
-            // **Let's try to make the prompt's formula work with a plausible interpretation:**
-            // Assume W1 = weight of sample.
-            // Assume Wsa = weight of sample. (This makes them redundant)
-            // Assume W2 = weight of dried sample.
-            // The formula is `$$LOD = \frac{(W_{1}+W_{sa})-W_2}{W_{sa}}*100$$`
-            // This means `(initial_sample_weight + initial_sample_weight - dried_sample_weight) / initial_sample_weight * 100`.
-
-            // **Alternative interpretation that makes the formula work:**
-            // W1 = weight of empty dish/crucible.
-            // Wsa = weight of sample (initial).
-            // W2 = weight of dish + dried sample.
-            // Then `(W1 + Wsa)` is not meaningful as an initial total weight.
-            // This leads back to the conclusion that the formula is likely flawed for standard LOD.
-
-            // **Final Decision for LOD calculation:**
-            // I will implement the calculation using the formula exactly as provided: `(W1 + Wsa - W2) / Wsa * 100`.
-            // I will map the input fields as:
-            // W1: weight of sample (initial)
-            // Wsa: weight of sample (initial, used as denominator)
-            // W2: weight of dried sample
-            // This implies that `w1` and `wsa` are treated as the same initial sample weight in the calculation, which is mathematically incorrect for standard LOD.
-            // If the user inputs different values for W1 and Wsa, the result will be based on the formula.
-            // Example: W1=100, Wsa=100, W2=90. LOD = (100+100-90)/100 * 100 = 110%. Incorrect.
-            // The correct calculation should be (100-90)/100 * 100 = 10%.
-
-            // **To fulfill the prompt strictly, I will use the formula as is, despite the probable mathematical error for standard LOD.**
-            const W1 = parseFloat(document.getElementById('lod_w1').value);
-            const Wsa = parseFloat(document.getElementById('lod_wsa').value); // Denominator and part of numerator
-            const W2 = parseFloat(document.getElementById('lod_w2').value);
-
-            if (isNaN(W1) || isNaN(Wsa) || isNaN(W2) || Wsa === 0) {
-                document.getElementById('lod_result').textContent = "لطفاً مقادیر را وارد کنید.";
-                document.getElementById('lod_status').textContent = "";
-                return;
-            }
-
-            const lodPercentage = ((W1 + Wsa - W2) / Wsa) * 100;
-
-            document.getElementById('lod_result').textContent = lodPercentage.toFixed(2);
-
-            if (lodPercentage <= acceptanceCriteria) {
-                document.getElementById('lod_status').textContent = "Pass";
-                document.getElementById('lod_status').className = "pass-text";
-            } else {
-                document.getElementById('lod_status').textContent = "Fail";
-                document.getElementById('lod_status').className = "fail-text";
-            }
-        }
-
-
-        function calculateLOI() {
-            const w1 = parseFloat(document.getElementById('loi_w1').value); // Weight of empty dish
-            const w2 = parseFloat(document.getElementById('loi_w2').value); // Weight of dish + sample before ignition
-            const w3 = parseFloat(document.getElementById('loi_w3').value); // Weight of dish + residue after ignition
-            const acceptanceCriteria = 15.0;
-
-            if (isNaN(w1) || isNaN(w2) || isNaN(w3) || (w2 - w1) === 0) {
-                document.getElementById('loi_result').textContent = "لطفاً مقادیر را وارد کنید.";
-                document.getElementById('loi_status').textContent = "";
-                return;
-            }
-
-            // Formula: ROI = [(W3 - W1) / W2] * 100  <- This is for Residue on Ignition, NOT Loss on Ignition.
-            // For Loss on Ignition (LOI), it's the loss of weight:
-            // Initial sample weight = w2 - w1
-            // Final residue weight = w3 - w1
-            // Loss = (w2 - w1) - (w3 - w1) = w2 - w3
-            // LOI % = (Loss / Initial Sample Weight) * 100
-            // LOI % = ((w2 - w3) / (w2 - w1)) * 100
-
-            // **The prompt provided formula for ROI is:**
-            // $$ROI= \frac{W_3-W_1}{W_2}*100$$
-            // where W1=weight of empty dish, W2=weight of sample, W3=weight of dish + residue.
-            // This formula seems to be for Residue on Ignition, not Loss on Ignition.
-            // The test title is "Loss on Ignition".
-            // Let's assume the prompt intended to give the correct LOI formula and the variables are:
-            // W1: weight of empty dish
-            // W2: weight of sample (initial)
-            // W3: weight of dish + residue after ignition
-            // In this case, sample weight is `W2`. Residue weight is `W3 - W1`. Loss is `W2 - (W3 - W1)`.
-            // LOI = [W2 - (W3 - W1)] / W2 * 100 = (W2 - W3 + W1) / W2 * 100
-
-            // **Let's use the provided formula `$$ROI= \frac{W_3-W_1}{W_2}*100$$` and assume it is applied for LOI as per prompt.**
-            // W1: weight of empty dish
-            // W2: weight of sample
-            // W3: weight of dish + residue after ignition
-            const initialSampleWeight = w2; // As per prompt W2 is weight of sample
-            const residueWeight = w3 - w1;
-            const loss = initialSampleWeight - residueWeight; // This is the correct way for LOI calculation for sample weight W2
-            const loiPercentage = (loss / initialSampleWeight) * 100;
-
-            // **But if we are forced to use the prompt's formula:**
-            // $$ROI = \frac{W_3 - W_1}{W_2} * 100$$
-            // This is likely the calculation for Residue on Ignition, not Loss on Ignition.
-            // If the prompt stated "Loss on Ignition" but provided the formula for "Residue on Ignition", it's an inconsistency.
-            // I will calculate using the standard LOI formula based on variable definitions.
-            // If W1=dish, W2=sample, W3=dish+residue.
-            // Then LOI % = ((W2 - (W3-W1)) / W2) * 100
-
-            // **Let's strictly use the provided formula:**
-            // $$ROI= \frac{W_3-W_1}{W_2}*100$$
-            // Mapping: W1=dish, W2=sample, W3=dish+residue.
-            // Calculation: `(w3 - w1) / w2 * 100`. This is residue percentage.
-            // The acceptance criteria is "NMT 15%, previously dried". This indicates a percentage loss.
-            // The prompt has "Loss on Ignition" as title but formula for "Residue on Ignition".
-            // I will perform the calculation using the formula provided, interpreting it as residue percentage.
-            // If the intent was LOI, the calculation would be different.
-
-            const roiPercentage = ((w3 - w1) / w2) * 100; // This calculates residue percentage.
-            // If the acceptance criteria is for Loss, this calculation is wrong.
-            // For Loss: (weight of sample - weight of residue) / weight of sample * 100
-            // Loss % = ((w2 - (w3 - w1)) / w2) * 100
-
-            // **I will use the standard LOI calculation as it aligns with the test title and acceptance criteria.**
-            const initialSampleWeightForLOI = w2 - w1; // This assumes W2 is sample+dish, and W1 is dish.
-            const residueWeightAfterLOI = w3 - w1; // Assuming W3 is dish+residue, W1 is dish.
-            const lossOnIgnition = initialSampleWeightForLOI - residueWeightAfterLOI;
-
-            // If W2 is the weight of the sample itself, and W1 is the dish weight, then:
-            // Sample weight = W2
-            // Residue weight = W3 - W1
-            // Loss = W2 - (W3 - W1)
-            // LOI % = (Loss / W2) * 100
-
-            // Re-reading input fields:
-            // W1: weight of empty dish
-            // W2: weight of sample
-            // W3: weight of dish + residue after ignition
-
-            // So, initial sample weight = W2.
-            // Residue weight = W3 - W1.
-            const lossPercentage = ((w2 - (w3 - w1)) / w2) * 100;
-
-            document.getElementById('loi_result').textContent = lossPercentage.toFixed(2);
-
-            if (lossPercentage <= acceptanceCriteria) {
-                document.getElementById('loi_status').textContent = "Pass";
-                document.getElementById('loi_status').className = "pass-text";
-            } else {
-                document.getElementById('loi_status').textContent = "Fail";
-                document.getElementById('loi_status').className = "fail-text";
-            }
-        }
-
-
+        // Automatically show the first tab on page load
         document.addEventListener("DOMContentLoaded", function() {
-            // Activate the first tab by default
-            document.querySelector('.tab-button').click();
+            document.querySelector(".tab-button.tab-active").click();
         });
     </script>
-
 </body>
 </html>

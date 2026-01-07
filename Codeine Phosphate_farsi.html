@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مونوگراف کدئین فسفات (USP)</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Vazirmatn Font -->
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
-    <!-- MathJax -->
-    <script type="text/javascript" id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
     <style>
         body {
@@ -70,541 +67,288 @@
         .fail-text {
             color: #ef4444;
         }
-        .interactive-card {
-            background-color: #e0f2fe;
-            border: 1px solid #90cdf4;
-            padding: 1rem;
-            margin-top: 1rem;
-            border-radius: 0.5rem;
-        }
-        .calculation-button {
-            background-color: #2563eb;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
+<body>
     <div class="container mx-auto p-4 max-w-4xl">
+
         <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">کدئین فسفات</h1>
 
         <div class="flex justify-center mb-6 border-b border-gray-200">
-            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab('definition')">تعریف</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('identification')">شناسایی</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('assay')">سنجش</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('impurities')">ناخالصی‌ها</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('specific-tests')">آزمایشات خاص</button>
-            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('additional-requirements')">الزامات اضافی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab(event, 'definition')">تعریف</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'identification')">شناسایی</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'assay')">سنجش</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'impurities')">ناخالصی‌ها</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'specific-tests')">آزمایشات خاص</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'additional-requirements')">الزامات اضافی</button>
         </div>
 
-        <div id="definition" class="tab-content">
+        <div id="definition" class="tab-content card">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
-            <div class="card">
-                <p class="mb-4">کدئین فسفات حاوی ▲حداقل 98.0% و حداکثر 102.0%▲ (USP 1-May-2021) کدئین فسفات (C<sub>18</sub>H<sub>21</sub>NO<sub>3</sub> · H<sub>3</sub>PO<sub>4</sub>) است که بر اساس پایه انیدروس محاسبه می‌شود.</p>
-                <p class="mb-4">C<sub>18</sub>H<sub>21</sub>NO<sub>3</sub> · H<sub>3</sub>PO<sub>4</sub> · ½H<sub>2</sub>O</p>
-                <p class="mb-4"><span class="ltr-text">406.37</span></p>
-                <p class="mb-4">مورفینان-6-اول، 7،8-دیدهیدرو-4،5-اپوکسی-3-متوکسی-17-متیل-، (5α،6α)-، فسفات (1:1) (نمک)، نیمه هیدرات؛ 7،8-دیدهیدرو-4،5α-اپوکسی-3-متوکسی-17-متیل‌مورفینان-6α-اول فسفات (1:1) (نمک) نیمه هیدرات [<span class="ltr-text">41444-62-6</span>].</p>
-                <p class="mb-4">انیدروس [<span class="ltr-text">52-28-8</span>].</p>
-            </div>
+            <p>کدئین فسفات باید حاوی <span class="ltr-text">98.0%</span> تا <span class="ltr-text">102.0%</span> کدئین فسفات (<span class="ltr-text">C18H21NO3 · H3PO4</span>) باشد، که بر اساس پایه انیدروس محاسبه شده است.</p>
         </div>
 
-        <div id="identification" class="tab-content hidden">
+        <div id="identification" class="tab-content card" style="display: none;">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
-            <div class="card">
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. تست‌های شناسایی طیفی <a href="General chapters/197.html" class="text-blue-600 hover:underline" target="_blank">197</a>ñ ، طیف‌سنجی مادون قرمز: <a href="General chapters/197.html" class="text-blue-600 hover:underline" target="_blank">197</a>K یا ▲197A▲ (USP 1-May-2021)</h3>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">▲ب. زمان بازداری پیک کدئین محلول نمونه با زمان بازداری محلول استاندارد مطابقت دارد، همانطور که در سنجش به دست آمده است.▲ (USP 1-May-2021)</h3>
-                <h3 class="text-xl font-semibold text-blue-600 mb-2">▲ج.▲ (USP 1-May-2021)</h3>
-                <h4>تحلیل</h4>
-                <p class="mb-4">20 میلی‌گرم بر میلی‌لیتر کدئین فسفات را در آب با هیدروکسید آمونیوم 6 نرمال خنثی کنید و معرف نیترات نقره را اضافه کنید.</p>
-                <h4>معیارهای پذیرش</h4>
-                <p class="mb-4">یک رسوب زرد رنگ فسفات نقره تشکیل می‌شود که در اسید نیتریک 2 نرمال و هیدروکسید آمونیوم 6 نرمال محلول است.</p>
-            </div>
+            <p>• A. آزمون‌های شناسایی طیف‌سنجی <span class="ltr-text">á 197ñ</span>، طیف‌سنجی مادون قرمز: <span class="ltr-text">197K</span> یا <span class="ltr-text">▲197A▲</span></p>
+            <p>▲• B. زمان ماند پیک کدئین در محلول نمونه با زمان ماند محلول استاندارد مطابقت دارد، همانطور که در سنجش به دست آمده است.▲</p>
+            <p>• ▲C.▲</p>
+            <p>آنالیز: <span class="ltr-text">20 mg/mL</span> کدئین فسفات در آب را با هیدروکسید آمونیوم <span class="ltr-text">6 N</span> خنثی کرده و چند قطره معرف نیترات نقره اضافه کنید.</p>
+            <p>معیارهای پذیرش: رسوب زردرنگ فسفات نقره تشکیل می‌شود و در اسید نیتریک <span class="ltr-text">2 N</span> و هیدروکسید آمونیوم <span class="ltr-text">6 N</span> محلول است.</p>
         </div>
 
-        <div id="assay" class="tab-content hidden">
+        <div id="assay" class="tab-content card" style="display: none;">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
-            <div class="card">
-                <h4>رویه</h4>
-                <p class="mb-4">محلول A: 2% اسید استیک در آب. با محلول سدیم هیدروکسید 50% (w/v) به pH 4.5 تنظیم کنید.</p>
-                <p class="mb-4">محلول B: استونیتریل</p>
-                <p class="mb-4">فاز متحرک: به جدول 1 مراجعه کنید.</p>
-                
-                <div class="overflow-x-auto">
-                    <table class="mb-4">
-                        <thead>
-                            <tr>
-                                <th rowspan="2">زمان (دقیقه)</th>
-                                <th colspan="2">درصد</th>
-                            </tr>
-                            <tr>
-                                <th>محلول A</th>
-                                <th>محلول B</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><span class="ltr-text">0</span></td>
-                                <td><span class="ltr-text">96</span></td>
-                                <td><span class="ltr-text">4</span></td>
-                            </tr>
-                            <tr>
-                                <td><span class="ltr-text">15</span></td>
-                                <td><span class="ltr-text">96</span></td>
-                                <td><span class="ltr-text">4</span></td>
-                            </tr>
-                            <tr>
-                                <td><span class="ltr-text">22</span></td>
-                                <td><span class="ltr-text">89</span></td>
-                                <td><span class="ltr-text">11</span></td>
-                            </tr>
-                            <tr>
-                                <td><span class="ltr-text">31</span></td>
-                                <td><span class="ltr-text">63</span></td>
-                                <td><span class="ltr-text">37</span></td>
-                            </tr>
-                            <tr>
-                                <td><span class="ltr-text">31.1</span></td>
-                                <td><span class="ltr-text">96</span></td>
-                                <td><span class="ltr-text">4</span></td>
-                            </tr>
-                            <tr>
-                                <td><span class="ltr-text">36</span></td>
-                                <td><span class="ltr-text">96</span></td>
-                                <td><span class="ltr-text">4</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <p class="mb-4">رقیق کننده: 0.5% (v/v) اسید فسفریک در آب</p>
-                <p class="mb-4">محلول استاندارد: 4 میلی‌گرم بر میلی‌لیتر از USP Codeine Phosphate RS در رقیق کننده</p>
-                <p class="mb-4">محلول نمونه: 4 میلی‌گرم بر میلی‌لیتر از Codeine Phosphate در رقیق کننده</p>
-                <h4>سیستم کروماتوگرافی</h4>
-                <p>(به کروماتوگرافی <a href="General chapters/621.html" class="text-blue-600 hover:underline" target="_blank">621</a>ñ ، سازگاری سیستم مراجعه کنید)</p>
-                <p>حالت: LC</p>
-                <p>آشکارساز: UV 280 nm</p>
-                <p>ستون: 4.6-mm × 15-cm؛ بسته‌بندی 3.0-µm L1</p>
-                <p>دمای ستون: 37°</p>
-                <p>نرخ جریان: 1.88 mL/min</p>
-                <p>حجم تزریق: 10 µL</p>
-                <h4>سازگاری سیستم</h4>
-                <p>نمونه: محلول استاندارد</p>
-                <h4>الزامات سازگاری</h4>
-                <p>فاکتور تیلینگ: 0.8–3.0</p>
-                <p>انحراف معیار نسبی: حداکثر 0.73%</p>
-                <h4>تحلیل</h4>
-                <p>نمونه‌ها: محلول استاندارد و محلول نمونه</p>
-                <p>درصد کدئین فسفات (C<sub>18</sub>H<sub>21</sub>NO<sub>3</sub> · H<sub>3</sub>PO<sub>4</sub>) را در بخش کدئین فسفات گرفته شده محاسبه کنید:</p>
-                <div class="formula-display">
-                    $$Result = (r_U/r_S) \times (C_S/C_U) \times 100$$
-                </div>
-                <p>rU = پاسخ پیک کدئین از محلول نمونه</p>
-                <p>rS = پاسخ پیک کدئین از محلول استاندارد</p>
-                <p>CS = غلظت USP Codeine Phosphate RS در محلول استاندارد (mg/mL)</p>
-                <p>CU = غلظت Codeine Phosphate در محلول نمونه (mg/mL)</p>
-                <h4>معیارهای پذیرش: 98.0%–102.0% بر اساس پایه انیدروس▲ (USP 1-May-2021)</h4>
-
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب سنجش</h4>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="rU" class="block text-sm font-bold text-gray-700">پاسخ پیک نمونه (rU):</label>
-                            <input type="text" id="rU" name="rU" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 calculation-input">
-                        </div>
-                        <div>
-                            <label for="rS" class="block text-sm font-bold text-gray-700">پاسخ پیک استاندارد (rS):</label>
-                            <input type="text" id="rS" name="rS" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 calculation-input">
-                        </div>
-                        <div>
-                            <label for="CS" class="block text-sm font-bold text-gray-700">غلظت استاندارد (CS) (mg/mL):</label>
-                            <input type="text" id="CS" name="CS" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 calculation-input">
-                        </div>
-                        <div>
-                            <label for="CU" class="block text-sm font-bold text-gray-700">غلظت نمونه (CU) (mg/mL):</label>
-                            <input type="text" id="CU" name="CU" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 calculation-input">
-                        </div>
-                    </div>
-                    <button onclick="calculateAssay()" class="calculation-button mt-4">محاسبه</button>
-                    <div class="mt-4">
-                        <p>نتیجه: <span id="assayResult" class="font-bold"></span></p>
-                        <p>وضعیت: <span id="assayStatus" class="font-bold"></span></p>
-                    </div>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش کار</h4>
+            <p>محلول A: <span class="ltr-text">2%</span> اسید استیک در آب. با محلول سدیم هیدروکسید <span class="ltr-text">50% (w/v)</span> تا pH <span class="ltr-text">4.5</span> تنظیم شود.</p>
+            <p>محلول B: استونیتریل</p>
+            <p>فاز متحرک: به جدول <span class="ltr-text">1</span> مراجعه کنید.</p>
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th>زمان (دقیقه)</th>
+                        <th>محلول A (%)</th>
+                        <th>محلول B (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">0</span></td>
+                        <td><span class="ltr-text">96</span></td>
+                        <td><span class="ltr-text">4</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">15</span></td>
+                        <td><span class="ltr-text">96</span></td>
+                        <td><span class="ltr-text">4</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">22</span></td>
+                        <td><span class="ltr-text">89</span></td>
+                        <td><span class="ltr-text">11</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">31</span></td>
+                        <td><span class="ltr-text">63</span></td>
+                        <td><span class="ltr-text">37</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>جدول <span class="ltr-text">1</span> (ادامه)</p>
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th>زمان (دقیقه)</th>
+                        <th>محلول A (%)</th>
+                        <th>محلول B (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">31.1</span></td>
+                        <td><span class="ltr-text">96</span></td>
+                        <td><span class="ltr-text">4</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">36</span></td>
+                        <td><span class="ltr-text">96</span></td>
+                        <td><span class="ltr-text">4</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>رقیق‌کننده: <span class="ltr-text">0.5% (v/v)</span> اسید فسفریک در آب</p>
+            <p>محلول استاندارد: <span class="ltr-text">4 mg/mL</span> USP Codeine Phosphate RS در رقیق‌کننده</p>
+            <p>محلول نمونه: <span class="ltr-text">4 mg/mL</span> Codeine Phosphate در رقیق‌کننده</p>
+            <p>سیستم کروماتوگرافی</p>
+            <p>(به کروماتوگرافی <span class="ltr-text">á <a href="General chapters/621.html" class="text-blue-600 hover:underline" target="_blank">621</a>ñ</span>، مناسبت سیستم مراجعه کنید.)</p>
+            <p>حالت: LC</p>
+            <p>آشکارساز: UV <span class="ltr-text">280 nm</span></p>
+            <p>ستون: <span class="ltr-text">4.6-mm × 15-cm</span>؛ لایه <span class="ltr-text">3.0-µm</span> L1</p>
+            <p>دمای ستون: <span class="ltr-text">37°</span></p>
+            <p>نرخ جریان: <span class="ltr-text">1.88 mL/min</span></p>
+            <p>حجم تزریق: <span class="ltr-text">10 µL</span></p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مناسبت سیستم</h4>
+            <p>نمونه: محلول استاندارد</p>
+            <p>الزامات مناسبت:</p>
+            <p>ضریب فلاونینگ: <span class="ltr-text">0.8–3.0</span></p>
+            <p>انحراف معیار نسبی: NMT <span class="ltr-text">0.73%</span></p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز</h4>
+            <p>نمونه‌ها: محلول استاندارد و محلول نمونه</p>
+            <p>درصد کدئین فسفات (<span class="ltr-text">C18H21NO3 · H3PO4</span>) را در بخشی از کدئین فسفات گرفته شده محاسبه کنید:</p>
+            <div class="formula-display">
+                <span>Result = (rU/rS) × (CS/CU) × 100</span>
             </div>
+            <p><span class="ltr-text">rU</span> = پاسخ پیک کدئین از محلول نمونه</p>
+            <p><span class="ltr-text">rS</span> = پاسخ پیک کدئین از محلول استاندارد</p>
+            <p><span class="ltr-text">CS</span> = غلظت USP Codeine Phosphate RS در محلول استاندارد (mg/mL)</p>
+            <p><span class="ltr-text">CU</span> = غلظت Codeine Phosphate در محلول نمونه (mg/mL)</p>
+            <p>معیارهای پذیرش: <span class="ltr-text">98.0%–102.0%</span> بر اساس پایه انیدروس</p>
         </div>
 
-        <div id="impurities" class="tab-content hidden">
+        <div id="impurities" class="tab-content card" style="display: none;">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
-            <div class="card">
-                <h4>ناخالصی‌های آلی</h4>
-                <p class="mb-4">محلول A، محلول B، فاز متحرک، رقیق کننده، محلول استاندارد، محلول نمونه و سیستم کروماتوگرافی: مطابق آنچه در سنجش آمده است، ادامه دهید.</p>
-                <p class="mb-4">محلول حساسیت: 0.002 میلی‌گرم بر میلی‌لیتر USP Codeine Phosphate RS در رقیق کننده</p>
-                <p class="mb-4">محلول سازگاری سیستم: 4 میلی‌گرم بر میلی‌لیتر USP Codeine System Suitability Mixture RS در رقیق کننده</p>
-                <h4>سازگاری سیستم</h4>
-                <p>نمونه‌ها: محلول استاندارد، محلول حساسیت، و محلول سازگاری سیستم</p>
-                <h4>الزامات سازگاری</h4>
-                <p>تفکیک: حداقل 1.5 بین نورکدئین و کدئین، محلول سازگاری سیستم</p>
-                <p>انحراف معیار نسبی: حداکثر 0.73%، محلول استاندارد</p>
-                <p>نسبت سیگنال به نویز: حداقل 10، محلول حساسیت</p>
-                <h4>تحلیل</h4>
-                <p>نمونه: محلول نمونه</p>
-                <p>درصد هر ناخالصی را در بخش کدئین فسفات گرفته شده محاسبه کنید:</p>
-                <div class="formula-display">
-                    $$Result = (r_U/r_T) \times (1/F) \times 100$$
-                </div>
-                <p>rU = پاسخ پیک هر ناخالصی از محلول نمونه</p>
-                <p>rT = پاسخ پیک کدئین از محلول نمونه</p>
-                <p>F = فاکتور پاسخ نسبی (به جدول 2 مراجعه کنید)</p>
-                <h4>معیارهای پذیرش: به جدول 2 مراجعه کنید. آستانه گزارش 0.05% است.</h4>
-
-                <div class="overflow-x-auto">
-                    <table class="mb-4">
-                        <thead>
-                            <tr>
-                                <th>نام</th>
-                                <th>زمان بازداری نسبی</th>
-                                <th>فاکتور پاسخ نسبی</th>
-                                <th>معیار پذیرش، حداکثر (%)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>مورفین</td>
-                                <td><span class="ltr-text">0.25</span></td>
-                                <td><span class="ltr-text">0.97</span></td>
-                                <td><span class="ltr-text">0.15</span></td>
-                            </tr>
-                            <tr>
-                                <td>10-هیدروکسی‌کدئینª</td>
-                                <td><span class="ltr-text">0.40</span></td>
-                                <td><span class="ltr-text">1.13</span></td>
-                                <td><span class="ltr-text">0.15</span></td>
-                            </tr>
-                            <tr>
-                                <td>14-هیدروکسی‌کدئینᵇ</td>
-                                <td><span class="ltr-text">0.78</span></td>
-                                <td><span class="ltr-text">0.88</span></td>
-                                <td><span class="ltr-text">0.15</span></td>
-                            </tr>
-                            <tr>
-                                <td>نورکدئین</td>
-                                <td><span class="ltr-text">0.88</span></td>
-                                <td><span class="ltr-text">0.97</span></td>
-                                <td><span class="ltr-text">0.15</span></td>
-                            </tr>
-                            <tr>
-                                <td>کدئین</td>
-                                <td><span class="ltr-text">1.00</span></td>
-                                <td><span class="ltr-text">1.00</span></td>
-                                <td>—</td>
-                            </tr>
-                            <tr>
-                                <td>کدئین ان-اکسید</td>
-                                <td><span class="ltr-text">1.12</span></td>
-                                <td><span class="ltr-text">1.14</span></td>
-                                <td><span class="ltr-text">0.15</span></td>
-                            </tr>
-                            <tr>
-                                <td>2,2′-بیس‌کدئینᶜ</td>
-                                <td><span class="ltr-text">1.15</span></td>
-                                <td><span class="ltr-text">1.42</span></td>
-                                <td><span class="ltr-text">0.15</span></td>
-                            </tr>
-                            <tr>
-                                <td>کدئینونᵈ</td>
-                                <td><span class="ltr-text">1.37</span></td>
-                                <td><span class="ltr-text">0.66</span></td>
-                                <td><span class="ltr-text">0.15</span></td>
-                            </tr>
-                            <tr>
-                                <td>کدئین متیل اتر</td>
-                                <td><span class="ltr-text">1.46</span></td>
-                                <td><span class="ltr-text">0.96</span></td>
-                                <td>▲<span class="ltr-text">0.45</span>▲ (RB 1-May-2021)</td>
-                            </tr>
-                            <tr>
-                                <td>تبائینᵉ</td>
-                                <td><span class="ltr-text">1.60</span></td>
-                                <td><span class="ltr-text">4.83</span></td>
-                                <td><span class="ltr-text">0.15</span></td>
-                            </tr>
-                            <tr>
-                                <td>هر ناخالصی نامشخص</td>
-                                <td>—</td>
-                                <td><span class="ltr-text">1.00</span></td>
-                                <td><span class="ltr-text">0.10</span></td>
-                            </tr>
-                            <tr>
-                                <td>کل ناخالصی‌ها</td>
-                                <td>—</td>
-                                <td>—</td>
-                                <td><span class="ltr-text">1.0</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="text-xs mb-2">ª 7,8-Didehydro-4,5α-epoxy-3-methoxy-17-methylmorphinan-6α,10-diol.</p>
-                <p class="text-xs mb-2">ᵇ 7,8-Didehydro-4,5α-epoxy-3-methoxy-17-methylmorphinan-6α,14-diol.</p>
-                <p class="text-xs mb-2">ᶜ 7,7′,8,8′-Tetradehydro-4,5α:4′,5′α-diepoxy-3,3′-dimethoxy-17,17′-dimethyl-2,2′-bimorphinanyl-6α,6′α-diol.</p>
-                <p class="text-xs mb-2">ᵈ 7,8-Didehydro-4,5α-epoxy-3-methoxy-17-methylmorphinan-6α-one.</p>
-                <p class="text-xs mb-4">ᵉ 6,7,8,14-Tetradehydro-4,5α-epoxy-3,6-dimethoxy-17-methylmorphinan.</p>
-
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماشین حساب ناخالصی</h4>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="rU_impurity" class="block text-sm font-bold text-gray-700">پاسخ پیک ناخالصی (rU):</label>
-                            <input type="text" id="rU_impurity" name="rU_impurity" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 calculation-input">
-                        </div>
-                        <div>
-                            <label for="rT_impurity" class="block text-sm font-bold text-gray-700">پاسخ پیک کدئین (rT):</label>
-                            <input type="text" id="rT_impurity" name="rT_impurity" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 calculation-input">
-                        </div>
-                        <div>
-                            <label for="F_impurity" class="block text-sm font-bold text-gray-700">فاکتور پاسخ نسبی (F):</label>
-                            <input type="text" id="F_impurity" name="F_impurity" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 calculation-input">
-                        </div>
-                    </div>
-                    <button onclick="calculateImpurities()" class="calculation-button mt-4">محاسبه</button>
-                    <div class="mt-4">
-                        <p>نتیجه: <span id="impuritiesResult" class="font-bold"></span> %</p>
-                        <p>وضعیت: <span id="impuritiesStatus" class="font-bold"></span></p>
-                    </div>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محدودیت مورفین</h4>
+            <p>آنالیز: حدود <span class="ltr-text">50 mg</span> پتاسیم فروسیاینید را در <span class="ltr-text">10 mL</span> آب حل کنید، <span class="ltr-text">1</span> قطره معرف کلرید فریک و <span class="ltr-text">1 mL</span> محلول کدئین فسفات <span class="ltr-text">10 mg/mL</span> اضافه کنید.</p>
+            <p>معیارهای پذیرش: بلافاصله رنگ آبی تولید نمی‌شود.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ناخالصی‌های آلی</h4>
+            <p>محلول A، محلول B، فاز متحرک، رقیق‌کننده، محلول استاندارد، محلول نمونه، و سیستم کروماتوگرافی: مطابق آنچه در سنجش آمده است، ادامه دهید.</p>
+            <p>محلول حساسیت: <span class="ltr-text">0.002 mg/mL</span> USP Codeine Phosphate RS در رقیق‌کننده</p>
+            <p>محلول مناسبت سیستم: <span class="ltr-text">4 mg/mL</span> USP Codeine System Suitability Mixture RS در رقیق‌کننده</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مناسبت سیستم</h4>
+            <p>نمونه‌ها: محلول استاندارد، محلول حساسیت، و محلول مناسبت سیستم</p>
+            <p>الزامات مناسبت:</p>
+            <p>تفکیک: NLT <span class="ltr-text">1.5</span> بین نورکدئین و کدئین، محلول مناسبت سیستم</p>
+            <p>انحراف معیار نسبی: NMT <span class="ltr-text">0.73%</span>، محلول استاندارد</p>
+            <p>نسبت سیگنال به نویز: NLT <span class="ltr-text">10</span>، محلول حساسیت</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز</h4>
+            <p>نمونه: محلول نمونه</p>
+            <p>درصد هر ناخالصی را در بخشی از کدئین فسفات گرفته شده محاسبه کنید:</p>
+            <div class="formula-display">
+                <span>Result = (rU/rT) × (1/F) × 100</span>
             </div>
+            <p><span class="ltr-text">rU</span> = پاسخ پیک هر ناخالصی از محلول نمونه</p>
+            <p><span class="ltr-text">rT</span> = پاسخ پیک کدئین از محلول نمونه</p>
+            <p><span class="ltr-text">F</span> = ضریب پاسخ نسبی (به جدول <span class="ltr-text">2</span> مراجعه کنید)</p>
+            <p>معیارهای پذیرش: به جدول <span class="ltr-text">2</span> مراجعه کنید. آستانه گزارش <span class="ltr-text">0.05%</span> است.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>نام</th>
+                        <th>زمان نسبی ماند</th>
+                        <th>ضریب پاسخ نسبی</th>
+                        <th>معیار پذیرش، NMT (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>مورفین</td>
+                        <td><span class="ltr-text">0.25</span></td>
+                        <td><span class="ltr-text">0.97</span></td>
+                        <td><span class="ltr-text">0.15</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">10</span>-هیدروکسی‌کدئین<span class="ltr-text">a</span></td>
+                        <td><span class="ltr-text">0.40</span></td>
+                        <td><span class="ltr-text">1.13</span></td>
+                        <td><span class="ltr-text">0.15</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">14</span>-هیدروکسی‌کدئین<span class="ltr-text">b</span></td>
+                        <td><span class="ltr-text">0.78</span></td>
+                        <td><span class="ltr-text">0.88</span></td>
+                        <td><span class="ltr-text">0.15</span></td>
+                    </tr>
+                    <tr>
+                        <td>نورکدئین</td>
+                        <td><span class="ltr-text">0.88</span></td>
+                        <td><span class="ltr-text">0.97</span></td>
+                        <td><span class="ltr-text">0.15</span></td>
+                    </tr>
+                    <tr>
+                        <td>کدئین</td>
+                        <td><span class="ltr-text">1.00</span></td>
+                        <td><span class="ltr-text">1.00</span></td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>کدئین ان-اکسید</td>
+                        <td><span class="ltr-text">1.12</span></td>
+                        <td><span class="ltr-text">1.14</span></td>
+                        <td><span class="ltr-text">0.15</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">2,2′-</span>بیس‌کدئین<span class="ltr-text">c</span></td>
+                        <td><span class="ltr-text">1.15</span></td>
+                        <td><span class="ltr-text">1.42</span></td>
+                        <td><span class="ltr-text">0.15</span></td>
+                    </tr>
+                    <tr>
+                        <td>کدئینون<span class="ltr-text">d</span></td>
+                        <td><span class="ltr-text">1.37</span></td>
+                        <td><span class="ltr-text">0.66</span></td>
+                        <td><span class="ltr-text">0.15</span></td>
+                    </tr>
+                    <tr>
+                        <td>کدئین متیل اتر</td>
+                        <td><span class="ltr-text">1.46</span></td>
+                        <td><span class="ltr-text">0.96</span></td>
+                        <td><span class="ltr-text">▲0.45▲ </span>(<span class="ltr-text">RB 1-May-2021</span>)</td>
+                    </tr>
+                    <tr>
+                        <td>تبائین<span class="ltr-text">e</span></td>
+                        <td><span class="ltr-text">1.60</span></td>
+                        <td><span class="ltr-text">4.83</span></td>
+                        <td><span class="ltr-text">0.15</span></td>
+                    </tr>
+                    <tr>
+                        <td>هر ناخالصی نامشخص</td>
+                        <td>—</td>
+                        <td><span class="ltr-text">1.00</span></td>
+                        <td><span class="ltr-text">0.10</span></td>
+                    </tr>
+                    <tr>
+                        <td>کل ناخالصی‌ها</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td><span class="ltr-text">1.0</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><span class="ltr-text">a</span> <span class="ltr-text">7,8-Didehydro-4,5α-epoxy-3-methoxy-17-methylmorphinan-6α, 10-diol.</span></p>
+            <p><span class="ltr-text">b</span> <span class="ltr-text">7,8-Didehydro-4,5α-epoxy-3-methoxy-17-methylmorphinan-6α, 14-diol.</span></p>
+            <p><span class="ltr-text">c</span> <span class="ltr-text">7,7′,8,8′-Tetradehydro-4,5α:4′,5′α-diepoxy-3,3′-dimethoxy-17,17′-dimethyl-2,2′-bimorphinanyl-6α,6′α-diol.</span></p>
+            <p><span class="ltr-text">d</span> <span class="ltr-text">7,8-Didehydro-4,5α-epoxy-3-methoxy-17-methylmorphinan-6α-one.</span></p>
+            <p><span class="ltr-text">e</span> <span class="ltr-text">6,7,8,14-Tetradehydro-4,5α-epoxy-3,6-dimethoxy-17-methylmorphinan.</span></p>
         </div>
 
-        <div id="specific-tests" class="tab-content hidden">
+        <div id="specific-tests" class="tab-content card" style="display: none;">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
-            <div class="card">
-                <h4>اسیدیته</h4>
-                <p>نمونه: 100 میلی‌گرم کدئین فسفات</p>
-                <p>تیترانت: سدیم هیدروکسید 0.010 نرمال</p>
-                <h4>تحلیل</h4>
-                <p>نمونه را در 20 میلی‌لیتر آب حل کرده و با تیتراژ به pH 5.4 برسانید، با استفاده از pH متر.</p>
-                <h4>معیارهای پذیرش: حداکثر 1.0 میلی‌لیتر تیتراژ لازم است.</h4>
-
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تست اسیدیته</h4>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="titrant_volume" class="block text-sm font-bold text-gray-700">حجم تیتراژ (mL):</label>
-                            <input type="text" id="titrant_volume" name="titrant_volume" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 calculation-input">
-                        </div>
-                    </div>
-                    <button onclick="calculateAcidity()" class="calculation-button mt-4">بررسی</button>
-                    <div class="mt-4">
-                        <p>وضعیت: <span id="acidityStatus" class="font-bold"></span></p>
-                    </div>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-
-                <h4>تعیین آب <a href="General chapters/921.html" class="text-blue-600 hover:underline" target="_blank">921</a>ñ ، روش I: حداکثر 3.0%</h4>
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تعیین آب</h4>
-                    <p class="mb-4">فرمول: $$LOD= \frac{(W_{1}+W_{sa})-W_2}{W_{sa}} \times 100$$</p>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div>
-                            <label for="W1_water" class="block text-sm font-bold text-gray-700">وزن اولیه (W1):</label>
-                            <input type="text" id="W1_water" name="W1_water" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 calculation-input">
-                        </div>
-                        <div>
-                            <label for="Wsa_water" class="block text-sm font-bold text-gray-700">وزن نمونه خشک شده (Wsa):</label>
-                            <input type="text" id="Wsa_water" name="Wsa_water" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 calculation-input">
-                        </div>
-                        <div>
-                            <label for="W2_water" class="block text-sm font-bold text-gray-700">وزن نمونه پس از خشک شدن (W2):</label>
-                            <input type="text" id="W2_water" name="W2_water" class="ltr-text shadow appearance-none border border-gray-300 bg-white rounded w-64 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline my-2 calculation-input">
-                        </div>
-                    </div>
-                    <button onclick="calculateLossOnDrying()" class="calculation-button mt-4">محاسبه</button>
-                    <div class="mt-4">
-                        <p>نتیجه: <span id="waterResult" class="font-bold"></span> %</p>
-                        <p>وضعیت: <span id="waterStatus" class="font-bold"></span></p>
-                    </div>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-
-                <h4>کلراید</h4>
-                <p>محلول نمونه: 10 میلی‌گرم بر میلی‌لیتر کدئین فسفات در آب</p>
-                <h4>تحلیل</h4>
-                <p>10 میلی‌لیتر از محلول نمونه را با اسید نیتریک اسیدی کرده و چند قطره معرف نیترات نقره اضافه کنید.</p>
-                <h4>معیارهای پذیرش: بلافاصله هیچ کدورت سفیدی تولید نمی‌شود.</h4>
-
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تست کلراید</h4>
-                    <label for="chloride_status" class="block text-sm font-bold text-gray-700">وضعیت:</label>
-                    <select id="chloride_status" name="chloride_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-
-                <h4>سولفات</h4>
-                <p>محلول نمونه: 10 میلی‌گرم بر میلی‌لیتر کدئین فسفات در آب</p>
-                <h4>تحلیل</h4>
-                <p>به 10 میلی‌لیتر از محلول نمونه، چند قطره معرف کلرید باریم اضافه کنید.</p>
-                <h4>معیارهای پذیرش: بلافاصله هیچ کدورتی تولید نمی‌شود.</h4>
-
-                <div class="card interactive-card">
-                    <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تست سولفات</h4>
-                    <label for="sulfate_status" class="block text-sm font-bold text-gray-700">وضعیت:</label>
-                    <select id="sulfate_status" name="sulfate_status" class="status-dropdown shadow appearance-none border border-gray-300 bg-white rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline w-48">
-                        <option value=""></option>
-                        <option value="Pass">Pass</option>
-                        <option value="Fail">Fail</option>
-                    </select>
-                    <textarea placeholder="توضیحات اضافه / Additional Specifications:" class="additional-spec-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
-                </div>
-            </div>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">اسیدیته</h4>
+            <p>نمونه: <span class="ltr-text">100 mg</span> کدئین فسفات</p>
+            <p>تیترانت: سدیم هیدروکسید <span class="ltr-text">0.010 N</span></p>
+            <p>آنالیز: نمونه را در <span class="ltr-text">20 mL</span> آب حل کرده و با استفاده از pH متر، با تیترانت تا pH <span class="ltr-text">5.4</span> تیتر کنید.</p>
+            <p>معیارهای پذیرش: حداکثر <span class="ltr-text">1.0 mL</span> تیترانت مورد نیاز است.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تعیین آب <span class="ltr-text">á <a href="General chapters/921.html" class="text-blue-600 hover:underline" target="_blank">921</a>ñ</span>، روش I: NMT <span class="ltr-text">3.0%</span></h4>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کلراید</h4>
+            <p>محلول نمونه: کدئین فسفات <span class="ltr-text">10 mg/mL</span> در آب</p>
+            <p>آنالیز: <span class="ltr-text">10 mL</span> محلول نمونه را با اسید نیتریک اسیدی کرده و چند قطره معرف نیترات نقره اضافه کنید.</p>
+            <p>معیارهای پذیرش: بلافاصله کدورت تولید نمی‌شود.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سولفات</h4>
+            <p>محلول نمونه: کدئین فسفات <span class="ltr-text">10 mg/mL</span> در آب</p>
+            <p>آنالیز: به <span class="ltr-text">10 mL</span> از محلول نمونه، چند قطره معرف کلرید باریم اضافه کنید.</p>
+            <p>معیارهای پذیرش: بلافاصله کدورت تولید نمی‌شود.</p>
         </div>
 
-        <div id="additional-requirements" class="tab-content hidden">
+        <div id="additional-requirements" class="tab-content card" style="display: none;">
             <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
-            <div class="card">
-                <h4>بسته‌بندی و نگهداری: در ظروف در بسته و مقاوم در برابر نور نگهداری کنید. در دمای حداکثر 40 درجه سانتی‌گراد، طبق مجوز سازنده، نگهداری کنید.</h4>
-                <h4>استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a>ñ</h4>
-                <p>USP Codeine Phosphate RS</p>
-                <p>▲USP Codeine System Suitability Mixture RS</p>
-                <p>این مخلوط حاوی نیمه هیدرات کدئین فسفات، مورفین، کدئین ان-اکسید، نورکدئین و کدئین متیل اتر است.</p>
-                <p>مورفین: 7،8-Didehydro-4,5α-epoxy-17-methylmorphinan-3,6α-diol.</p>
-                <p class="mb-4">C<sub>17</sub>H<sub>19</sub>NO<sub>3</sub> <span class="ltr-text">285.34</span></p>
-                <p>کدئین ان-اکسید: 7،8-Didehydro-4,5α-epoxy-3-methoxy-17-methylmorphinan-6α-ol N-oxide.</p>
-                <p class="mb-4">C<sub>18</sub>H<sub>21</sub>NO<sub>4</sub> <span class="ltr-text">315.36</span></p>
-                <p>نورکدئین: 7،8-Didehydro-4,5α-epoxy-3-methoxymorphinan-6α-ol.</p>
-                <p class="mb-4">C<sub>17</sub>H<sub>19</sub>NO<sub>3</sub> <span class="ltr-text">285.34</span></p>
-                <p>کدئین متیل اتر: 7،8-Didehydro-4,5α-epoxy-3,6α-dimethoxy-17-methylmorphinan.</p>
-                <p class="mb-4">C<sub>19</sub>H<sub>23</sub>NO<sub>3</sub> <span class="ltr-text">313.39</span>▲ (USP 1-May-2021)</p>
-            </div>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">بسته‌بندی و نگهداری</h4>
+            <p>در ظروف دربسته و مقاوم در برابر نور نگهداری شود. در دمای حداکثر <span class="ltr-text">40°</span> طبق مجوز سازنده نگهداری شود.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">استانداردهای مرجع USP <span class="ltr-text">á 11ñ </span></h4>
+            <p>USP Codeine Phosphate RS</p>
+            <p>▲USP Codeine System Suitability Mixture RS</p>
+            <p>حاوی کدئین فسفات همی‌هیدرات، مورفین، کدئین ان-اکسید، نورکدئین، و کدئین متیل اتر است.</p>
+            <p>مورفین: <span class="ltr-text">7,8-Didehydro-4,5α-epoxy-17-methylmorphinan-3,6α-diol.</span> <span class="ltr-text">C17H19NO3</span> <span class="ltr-text">285.34</span></p>
+            <p>کدئین ان-اکسید: <span class="ltr-text">7,8-Didehydro-4,5α-epoxy-3-methoxy-17-methylmorphinan-6α-ol N-oxide.</span> <span class="ltr-text">C18H21NO4</span> <span class="ltr-text">315.36</span></p>
+            <p>نورکدئین: <span class="ltr-text">7,8-Didehydro-4,5α-epoxy-3-methoxymorphinan-6α-ol.</span> <span class="ltr-text">C17H19NO3</span> <span class="ltr-text">285.34</span></p>
+            <p>کدئین متیل اتر: <span class="ltr-text">7,8-Didehydro-4,5α-epoxy-3,6α-dimethoxy-17-methylmorphinan.</span> <span class="ltr-text">C19H23NO3</span> <span class="ltr-text">313.39▲</span></p>
         </div>
+
     </div>
 
     <script>
-        function showTab(tabId) {
-            // Hide all tab contents
-            document.querySelectorAll('.tab-content').forEach(tab => {
-                tab.classList.add('hidden');
-            });
+        function showTab(event, tabName) {
+            var i, tabcontent, tabbuttons;
 
-            // Remove 'tab-active' from all buttons
-            document.querySelectorAll('.tab-button').forEach(button => {
-                button.classList.remove('tab-active');
-                button.classList.add('tab-inactive');
-            });
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
 
-            // Show the selected tab content
-            document.getElementById(tabId).classList.remove('hidden');
+            tabbuttons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].className = tabbuttons[i].className.replace(" tab-active", " tab-inactive");
+            }
 
-            // Add 'tab-active' to the clicked button
-            event.currentTarget.classList.remove('tab-inactive');
-            event.currentTarget.classList.add('tab-active');
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.className += " tab-active";
         }
 
-        function calculateAssay() {
-            const rU = parseFloat(document.getElementById('rU').value);
-            const rS = parseFloat(document.getElementById('rS').value);
-            const CS = parseFloat(document.getElementById('CS').value);
-            const CU = parseFloat(document.getElementById('CU').value);
-
-            if (isNaN(rU) || isNaN(rS) || isNaN(CS) || isNaN(CU) || rS === 0) {
-                document.getElementById('assayResult').textContent = "لطفاً مقادیر معتبر را وارد کنید.";
-                document.getElementById('assayStatus').textContent = "";
-                return;
-            }
-
-            const result = (rU / rS) * (CS / CU) * 100;
-            const formattedResult = result.toFixed(2);
-
-            document.getElementById('assayResult').textContent = `${formattedResult}%`;
-
-            if (result >= 98.0 && result <= 102.0) {
-                document.getElementById('assayStatus').textContent = "قبول";
-                document.getElementById('assayStatus').className = "font-bold pass-text";
-            } else {
-                document.getElementById('assayStatus').textContent = "رد";
-                document.getElementById('assayStatus').className = "font-bold fail-text";
-            }
-        }
-
-        function calculateImpurities() {
-            const rU = parseFloat(document.getElementById('rU_impurity').value);
-            const rT = parseFloat(document.getElementById('rT_impurity').value);
-            const F = parseFloat(document.getElementById('F_impurity').value);
-
-            if (isNaN(rU) || isNaN(rT) || isNaN(F) || rT === 0) {
-                document.getElementById('impuritiesResult').textContent = "لطفاً مقادیر معتبر را وارد کنید.";
-                document.getElementById('impuritiesStatus').textContent = "";
-                return;
-            }
-
-            const result = (rU / rT) * (1 / F) * 100;
-            const formattedResult = result.toFixed(3);
-
-            document.getElementById('impuritiesResult').textContent = formattedResult;
-
-            // Check against acceptance criteria (example for Morphine, assumes this is for a specific impurity check)
-            // For a general impurity calculation, the logic would be more complex, checking against Table 2.
-            // This simplified check assumes we are checking against a single limit.
-            const acceptanceLimit = 0.15; // Example limit for most impurities in Table 2
-            if (result <= acceptanceLimit) {
-                document.getElementById('impuritiesStatus').textContent = "قبول";
-                document.getElementById('impuritiesStatus').className = "font-bold pass-text";
-            } else {
-                document.getElementById('impuritiesStatus').textContent = "رد";
-                document.getElementById('impuritiesStatus').className = "font-bold fail-text";
-            }
-        }
-
-        function calculateAcidity() {
-            const titrantVolume = parseFloat(document.getElementById('titrant_volume').value);
-            if (isNaN(titrantVolume)) {
-                document.getElementById('acidityStatus').textContent = "لطفاً حجم معتبر را وارد کنید.";
-                return;
-            }
-
-            if (titrantVolume <= 1.0) {
-                document.getElementById('acidityStatus').textContent = "قبول";
-                document.getElementById('acidityStatus').className = "font-bold pass-text";
-            } else {
-                document.getElementById('acidityStatus').textContent = "رد";
-                document.getElementById('acidityStatus').className = "font-bold fail-text";
-            }
-        }
-
-        function calculateLossOnDrying() {
-            const W1 = parseFloat(document.getElementById('W1_water').value);
-            const Wsa = parseFloat(document.getElementById('Wsa_water').value);
-            const W2 = parseFloat(document.getElementById('W2_water').value);
-
-            if (isNaN(W1) || isNaN(Wsa) || isNaN(W2) || Wsa === 0) {
-                document.getElementById('waterResult').textContent = "لطفاً مقادیر معتبر را وارد کنید.";
-                document.getElementById('waterStatus').textContent = "";
-                return;
-            }
-
-            const result = ((W1 + Wsa) - W2) / Wsa * 100;
-            const formattedResult = result.toFixed(2);
-
-            document.getElementById('waterResult').textContent = `${formattedResult}%`;
-
-            if (result <= 3.0) {
-                document.getElementById('waterStatus').textContent = "قبول";
-                document.getElementById('waterStatus').className = "font-bold pass-text";
-            } else {
-                document.getElementById('waterStatus').textContent = "رد";
-                document.getElementById('waterStatus').className = "font-bold fail-text";
-            }
-        }
+        document.getElementsByClassName("tab-button")[0].click();
     </script>
-
 </body>
 </html>
