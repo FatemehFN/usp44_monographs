@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مونوگراف اسید آدیپیک (USP)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .tab-active {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        .tab-inactive {
+            border-color: transparent;
+            color: #6b7280;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+        .pass-text {
+            color: #22c55e;
+        }
+        .fail-text {
+            color: #ef4444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">اسید آدیپیک</h1>
+
+        <div class="flex justify-center mb-6 border-b border-gray-200">
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab(event, 'definition')">تعریف</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'identification')">شناسایی</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'assay')">سنجش</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'impurities')">ناخالصی‌ها</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'specific_tests')">آزمایشات خاص</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab(event, 'additional_requirements')">الزامات اضافی</button>
+        </div>
+
+        <div id="definition" class="card tab-content">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+            <p>اسید آدیپیک باید حاوی حداقل 99.0% و حداکثر 101.0% <span class="ltr-text">C6H10O4</span>، محاسبه شده بر اساس ماده خشک باشد.</p>
+        </div>
+
+        <div id="identification" class="card tab-content hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تغییر برای خواندن:</h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آزمایش‌های شناسایی طیفی، طیف‌سنجی مادون قرمز</h4>
+            <p>▲SPECTROSCOPIC IDENTIFICATION TESTS <a href="General chapters/197.html" class="text-blue-600 hover:underline" target="_blank">197</a>, Infrared Spectroscopy: 197K▲ (CN 1-May-2020)</p>
+        </div>
+
+        <div id="assay" class="card tab-content hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش انجام</h4>
+            <p>نمونه: 60 mg</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم تیتراسیون</h4>
+            <p>(به تیتراسیون <a href="General chapters/541.html" class="text-blue-600 hover:underline" target="_blank">541</a> مراجعه کنید.)</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">حالت: تیتراسیون مستقیم</h4>
+            <p>تیترانت: 0.1 N سدیم هیدروکسید VS</p>
+            <p>شاهد: 50.0 mL آب</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تشخیص نقطه پایانی: رنگ‌سنجی</h4>
+            <p>تجزیه و تحلیل: نمونه را در 50 میلی‌لیتر آب حل کنید. 0.2 میلی‌لیتر از فنل فتالئین TS اضافه کنید و با 0.1 نرمال سدیم هیدروکسید VS تا رسیدن به یک نقطه پایانی صورتی کم‌رنگ دائمی، تیتراسیون کنید. یک تعیین شاهد انجام دهید. درصد اسید آدیپیک (<span class="ltr-text">C6H10O4</span>) را در نمونه گرفته شده محاسبه کنید:</p>
+            <div class="formula-display">
+                $$ \text{Result} = \frac{(V - B) \times N \times F \times 100}{W} $$
+            </div>
+            <p><span class="ltr-text">V</span> = حجم تیتراسیون مصرف شده توسط نمونه (mL)</p>
+            <p><span class="ltr-text">B</span> = حجم تیتراسیون مصرف شده توسط شاهد (mL)</p>
+            <p><span class="ltr-text">N</span> = نرمالیته واقعی تیتراسیون (mEq/mL)</p>
+            <p><span class="ltr-text">F</span> = ضریب هم‌ارزی، 73.1 mg/mEq</p>
+            <p><span class="ltr-text">W</span> = وزن نمونه (mg)</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش: 99.0%–101.0% بر اساس ماده خشک</h4>
+        </div>
+
+        <div id="impurities" class="card tab-content hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">باقیمانده پس از احتراق <a href="General chapters/281.html" class="text-blue-600 hover:underline" target="_blank">281</a></h4>
+            <p>حداکثر 0.1%</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محدودیت نیترات‌ها</h4>
+            <p>محلول استاندارد مادر: 1.63 mg/mL نیترات پتاسیم</p>
+            <p>محلول استاندارد: 1 میلی‌لیتر از محلول استاندارد مادر را با آب تا 10 میلی‌لیتر رقیق کنید. 1 میلی‌لیتر از این محلول را با آب تا 50 میلی‌لیتر رقیق کنید تا محلولی با غلظت 2 میکروگرم بر میلی‌لیتر نیترات بدست آید.</p>
+            <p>محلول نمونه: 5 گرم اسید آدیپیک را در یک فلاسک حجمی 50 میلی‌لیتری منتقل کنید. با حرارت دادن در آب حل کرده و تا حجم برسانید. اجازه دهید تا سرد و متبلور شود، سپس از فیلتر شیشه‌ای متخلخل عبور دهید. فیلتر را با آب شستشو دهید و فیلترات و شستشوها را تا رسیدن به حجم 50 میلی‌لیتر جمع‌آوری کنید. [توجه - این محلول همچنین برای کلرید، سولفات و آهن استفاده خواهد شد.]</p>
+            <p>کنترل: 2 mg/L پرمنگنات پتاسیم</p>
+            <p>تجزیه و تحلیل: 1.0 میلی‌لیتر از محلول نمونه، 1.5 میلی‌لیتر از محلول استاندارد و 1 میلی‌لیتر آب (شاهد) را به سه فلاسک جداگانه منتقل کنید. به هر فلاسک 2 میلی‌لیتر آمونیاک غلیظ، 0.5 میلی‌لیتر سولفات منگنز 10 mg/mL و 1 میلی‌لیتر سولفانیل آمید 10 mg/mL اضافه کنید و هر محلول را با آب تا 20 میلی‌لیتر رقیق کنید. 100 میلی‌گرم پودر روی به هر یک از سه فلاسک اضافه کنید و در حمام یخ برای 30 دقیقه خنک کنید و محلول‌ها را به صورت دوره‌ای تکان دهید. 10 میلی‌لیتر از هر محلول را به صورت جداگانه فیلتر کنید، در حمام یخ خنک کنید و سپس 2.5 میلی‌لیتر اسید هیدروکلریک و 1 میلی‌لیتر نافتیل اتیلن دی آمین دی هیدروکلراید 10 mg/mL اضافه کنید. اجازه دهید محلول‌ها به مدت 15 دقیقه در دمای اتاق بایستند.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مناسبت سیستم: اگر محلول شاهد آماده شده همزمان، تیره‌تر از کنترل باشد، آزمایش نامعتبر است.</h4>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش: رنگ محلول حاوی محلول نمونه، تیره‌تر از محلول آماده شده همزمان حاوی محلول استاندارد نباشد (حداکثر 30 ppm).</h4>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کلرید و سولفات، کلرید <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a></h4>
+            <p>نمونه: یک قسمت 5 میلی‌لیتری از محلول نمونه از محدودیت نیترات‌ها</p>
+            <p>تجزیه و تحلیل: طبق دستورالعمل فصل عمل کنید.</p>
+            <p>معیارهای پذیرش: نمونه نباید کلرید بیشتری نسبت به یک قسمت متناظر 0.14 میلی‌لیتری از اسید هیدروکلریک 0.020 N نشان دهد (حداکثر 0.02%).</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">کلرید و سولفات، سولفات <a href="General chapters/221.html" class="text-blue-600 hover:underline" target="_blank">221</a></h4>
+            <p>نمونه: یک قسمت 5 میلی‌لیتری از محلول نمونه از محدودیت نیترات‌ها</p>
+            <p>تجزیه و تحلیل: طبق دستورالعمل فصل عمل کنید.</p>
+            <p>معیارهای پذیرش: نمونه نباید سولفات بیشتری نسبت به یک قسمت متناظر 0.26 میلی‌لیتری از اسید سولفوریک 0.020 N نشان دهد (حداکثر 0.05%).</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آهن <a href="General chapters/241.html" class="text-blue-600 hover:underline" target="_blank">241</a></h4>
+            <p>نمونه: یک قسمت 10 میلی‌لیتری از محلول نمونه از محدودیت نیترات‌ها</p>
+            <p>تجزیه و تحلیل: طبق دستورالعمل فصل عمل کنید.</p>
+            <p>معیارهای پذیرش: حداکثر 10 ppm</p>
+        </div>
+
+        <div id="specific_tests" class="card tab-content hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">محدوده یا دمای ذوب <a href="General chapters/741.html" class="text-blue-600 hover:underline" target="_blank">741</a></h4>
+            <p>151°–154°</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">مقدار رطوبت <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h4>
+            <p>یک نمونه را در دمای 105 درجه تا وزن ثابت خشک کنید؛ حداکثر 0.2% از وزن خود را از دست می‌دهد.</p>
+        </div>
+
+        <div id="additional_requirements" class="card tab-content hidden">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">بسته بندی و نگهداری</h4>
+            <p>در ظروف دربسته نگهداری شود.</p>
+            <p>الزامات نگهداری مشخص نشده است.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h4>
+            <p>USP Adipic Acid RS</p>
+        </div>
+    </div>
+
+    <script>
+        function showTab(event, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.add("hidden");
+            }
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("tab-active");
+                tablinks[i].classList.add("tab-inactive");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.remove("hidden");
+            event.currentTarget.classList.remove("tab-inactive");
+            event.currentTarget.classList.add("tab-active");
+        }
+
+        // Set the default tab to 'definition'
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelector('.tab-button[onclick="showTab(event, \'definition\')"]').click();
+        });
+    </script>
+</body>
+</html>

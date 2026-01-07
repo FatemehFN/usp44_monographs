@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مونوگراف اوره (USP)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .tab-active {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        .tab-inactive {
+            border-color: transparent;
+            color: #6b7280;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+        .pass-text {
+            color: #22c55e;
+        }
+        .fail-text {
+            color: #ef4444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">مونوگراف اوره (USP)</h1>
+
+        <div class="flex justify-center mb-6 border-b border-gray-200">
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="showTab('definition')">تعریف</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('identification')">شناسایی</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('assay')">سنجش</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('impurities')">ناخالصی‌ها</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('specific-tests')">آزمایشات خاص</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="showTab('additional-requirements')">الزامات اضافی</button>
+        </div>
+
+        <div id="definition" class="tab-content card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+            <p>اوره حاوی <span class="ltr-text">NLT 98.0%</span> و <span class="ltr-text">NMT 102.0%</span> اوره (<span class="ltr-text">CH4N2O</span>) است.</p>
+        </div>
+
+        <div id="identification" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">تغییر به شرح زیر:</h3>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">الف. آزمون‌های شناسایی طیفی</h4>
+            <p class="mb-2">▲SPECTROSCOPIC IDENTIFICATION TESTS <a href="General chapters/197.html" class="text-blue-600 hover:underline" target="_blank">197</a>, طیف‌سنجی مادون قرمز: 197K▲ (<span class="ltr-text">CN 1-May-2020</span>)</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ب.</h4>
+            <p>زمان ماند بزرگترین پیک محلول نمونه با محلول استاندارد مطابقت دارد، همانطور که در سنجش بدست آمده است.</p>
+        </div>
+
+        <div id="assay" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش کار</h4>
+            <p>محلول A: <span class="ltr-text">1 mL</span> اسید فرمیک را به یک فلاسک حجمی <span class="ltr-text">1-L</span> منتقل کرده و با آب به حجم برسانید.</p>
+            <p>محلول B: <span class="ltr-text">100%</span> استونیتریل، از فیلتر غشایی با اندازه منافذ <span class="ltr-text">0.2-µm</span> عبور داده شده است.</p>
+            <p>فاز متحرک: به جدول 1 مراجعه کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">جدول 1</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>زمان (min)</th>
+                        <th>محلول A (%)</th>
+                        <th>محلول B (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="ltr-text">0.0</span></td>
+                        <td><span class="ltr-text">2.5</span></td>
+                        <td><span class="ltr-text">97.5</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">7.0</span></td>
+                        <td><span class="ltr-text">10.0</span></td>
+                        <td><span class="ltr-text">90.0</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">7.01</span></td>
+                        <td><span class="ltr-text">2.5</span></td>
+                        <td><span class="ltr-text">97.5</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="ltr-text">15.0</span></td>
+                        <td><span class="ltr-text">2.5</span></td>
+                        <td><span class="ltr-text">97.5</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>رقیق‌کننده: استونیتریل و آب (<span class="ltr-text">90:10</span>)</p>
+            <p>محلول تناسب سیستم: <span class="ltr-text">0.01 mg/mL</span> از USP Urea Related Compound A RS و <span class="ltr-text">10 mg/mL</span> از USP Urea RS در رقیق‌کننده.</p>
+            <p>محلول استاندارد: <span class="ltr-text">5 mg/mL</span> از USP Urea RS در رقیق‌کننده.</p>
+            <p>محلول نمونه: <span class="ltr-text">5 mg/mL</span> از اوره در رقیق‌کننده.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">سیستم کروماتوگرافی</h4>
+            <p>(به کروماتوگرافی <a href="General chapters/621.html" class="text-blue-600 hover:underline" target="_blank">621</a>، تناسب سیستم مراجعه کنید.)</p>
+            <p>حالت: LC</p>
+            <p>آشکارساز: UV <span class="ltr-text">195 nm</span></p>
+            <p>ستون: <span class="ltr-text">15-cm × 4.6-mm</span>؛ پرکننده <span class="ltr-text">2.7-µm</span> L86</p>
+            <p>دمای ستون: <span class="ltr-text">30°</span></p>
+            <p>نرخ جریان: <span class="ltr-text">1 mL/min</span></p>
+            <p>حجم تزریق: <span class="ltr-text">2 µL</span></p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تناسب سیستم</h4>
+            <p>نمونه: محلول تناسب سیستم</p>
+            <p>[نکته — زمان‌های ماند نسبی برای ترکیب A مرتبط با اوره و اوره به ترتیب 0.9 و 1.0 هستند.]</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">الزامات تناسب</h4>
+            <p>رزولوشن: <span class="ltr-text">NLT 1.5</span> بین ترکیب A مرتبط با اوره و اوره.</p>
+            <p>انحراف استاندارد نسبی: <span class="ltr-text">NMT 1.0%</span> برای اوره.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
+            <p>نمونه‌ها: محلول استاندارد و محلول نمونه.</p>
+            <p>درصد اوره (<span class="ltr-text">CH4N2O</span>) را در قسمت گرفته شده از اوره محاسبه کنید:</p>
+            <div class="formula-display">
+                $$ \text{Result} = \frac{r_U}{r_S} \times \frac{C_S}{C_U} \times 100 $$
+            </div>
+            <p>r<sub>U</sub> = پاسخ پیک از محلول نمونه</p>
+            <p>r<sub>S</sub> = پاسخ پیک از محلول استاندارد</p>
+            <p>C<sub>S</sub> = غلظت USP Urea RS در محلول استاندارد (mg/mL)</p>
+            <p>C<sub>U</sub> = غلظت اوره در محلول نمونه (mg/mL)</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش: <span class="ltr-text">98.0%–102.0%</span></h4>
+        </div>
+
+        <div id="impurities" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">باقیمانده پس از احتراق <a href="General chapters/281.html" class="text-blue-600 hover:underline" target="_blank">281</a>: <span class="ltr-text">NMT 0.1%</span></h4>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ناخالصی‌های آلی</h4>
+            <p>محلول A، محلول B، فاز متحرک، رقیق‌کننده و سیستم کروماتوگرافی: همانطور که در سنجش آمده است، ادامه دهید.</p>
+            <p>محلول تناسب سیستم: <span class="ltr-text">0.01 mg/mL</span> از USP Urea Related Compound A RS و <span class="ltr-text">10 mg/mL</span> از USP Urea RS در رقیق‌کننده.</p>
+            <p>محلول استاندارد: <span class="ltr-text">0.01 mg/mL</span> از USP Urea RS و <span class="ltr-text">0.01 mg/mL</span> از USP Urea Related Compound A RS در رقیق‌کننده.</p>
+            <p>محلول نمونه: <span class="ltr-text">10 mg/mL</span> از اوره در رقیق‌کننده.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تناسب سیستم</h4>
+            <p>نمونه: محلول تناسب سیستم</p>
+            <p>[نکته — برای زمان‌های ماند نسبی، به جدول 2 مراجعه کنید.]</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">الزامات تناسب</h4>
+            <p>رزولوشن: <span class="ltr-text">NLT 1.5</span> بین اوره و ترکیب A مرتبط با اوره.</p>
+            <p>انحراف استاندارد نسبی: <span class="ltr-text">NMT 1.0%</span> برای اوره.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">تجزیه و تحلیل</h4>
+            <p>نمونه‌ها: محلول استاندارد و محلول نمونه.</p>
+            <p>درصد ترکیب A مرتبط با اوره را در قسمت گرفته شده از اوره محاسبه کنید:</p>
+            <div class="formula-display">
+                $$ \text{Result} = \frac{r_U}{r_S} \times \frac{C_S}{C_U} \times 100 $$
+            </div>
+            <p>r<sub>U</sub> = پاسخ پیک ترکیب A مرتبط با اوره از محلول نمونه</p>
+            <p>r<sub>S</sub> = پاسخ پیک ترکیب A مرتبط با اوره از محلول استاندارد</p>
+            <p>C<sub>S</sub> = غلظت USP Urea Related Compound A RS در محلول استاندارد (mg/mL)</p>
+            <p>C<sub>U</sub> = غلظت اوره در محلول نمونه (mg/mL)</p>
+
+            <p>درصد هر ناخالصی مشخص نشده را در قسمت گرفته شده از اوره محاسبه کنید:</p>
+            <div class="formula-display">
+                $$ \text{Result} = \frac{r_U}{r_S} \times \frac{C_S}{C_U} \times 100 $$
+            </div>
+            <p>r<sub>U</sub> = پاسخ پیک هر ناخالصی از محلول نمونه</p>
+            <p>r<sub>S</sub> = پاسخ پیک اوره از محلول استاندارد</p>
+            <p>C<sub>S</sub> = غلظت USP Urea RS در محلول استاندارد</p>
+            <p>C<sub>U</sub> = غلظت اوره در محلول نمونه</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش: به جدول 2 مراجعه کنید. از هرگونه پیک ناخالصی کمتر از 0.05% صرف نظر کنید.</h4>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">جدول 2</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>نام</th>
+                        <th>زمان ماند نسبی</th>
+                        <th>معیار پذیرش، NMT (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ترکیب A مرتبط با اوره</td>
+                        <td><span class="ltr-text">0.9</span></td>
+                        <td><span class="ltr-text">0.1</span></td>
+                    </tr>
+                    <tr>
+                        <td>اوره</td>
+                        <td><span class="ltr-text">1.0</span></td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>هر ناخالصی مشخص نشده فردی</td>
+                        <td>—</td>
+                        <td><span class="ltr-text">0.1</span></td>
+                    </tr>
+                    <tr>
+                        <td>کل ناخالصی‌ها</td>
+                        <td>—</td>
+                        <td><span class="ltr-text">2.0</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="specific-tests" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">ماده نامحلول در الکل</h4>
+            <p>محلول نمونه: <span class="ltr-text">100 mg/mL</span> اوره حل شده در الکل گرم.</p>
+            <p>تجزیه و تحلیل: اگر باقیمانده نامحلولی باقی ماند، محلول نمونه را از یک فیلتر وزن شده عبور دهید، باقیمانده و فیلتر را با <span class="ltr-text">20 mL</span> الکل گرم به ازای هر <span class="ltr-text">50 mL</span> محلول نمونه بشویید و در دمای <span class="ltr-text">105°</span> به مدت 1 ساعت خشک کنید.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">معیارهای پذیرش: <span class="ltr-text">NMT 2 mg (0.04%)</span></h4>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آزمایش عقیم‌سازی <a href="General chapters/71.html" class="text-blue-600 hover:underline" target="_blank">71</a>:</h4>
+            <p>در صورتی که برچسب بیان کند که اوره عقیم است، الزامات را برآورده می‌کند.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آزمایش اندوتوکسین باکتریایی <a href="General chapters/85.html" class="text-blue-600 hover:underline" target="_blank">85</a>:</h4>
+            <p>در صورتی که برچسب بیان کند که اوره باید تحت پردازش بیشتر در طول آماده‌سازی اشکال دارویی تزریقی قرار گیرد، حاوی <span class="ltr-text">NMT 0.003</span> واحد اندوتوکسین USP/mg اوره است.</p>
+        </div>
+
+        <div id="additional-requirements" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">بسته‌بندی و نگهداری:</h4>
+            <p>در ظروف کاملاً بسته نگهداری شود. در دمای 25 درجه سانتیگراد نگهداری شود، با انحرافات مجاز بین 15 تا 30 درجه سانتیگراد.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">برچسب‌گذاری:</h4>
+            <p>هنگامی که برای استفاده در آماده‌سازی اشکال دارویی تزریقی در نظر گرفته شده است، برچسب باید بیان کند که عقیم است یا باید تحت پردازش بیشتر در طول آماده‌سازی اشکال دارویی تزریقی قرار گیرد.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h4>
+            <p>USP Urea RS</p>
+            <p>USP Urea Related Compound A RS</p>
+            <p>دی‌کربن‌امید دی‌آمید.</p>
+            <p><span class="ltr-text">C2H5N3O2</span> <span class="ltr-text">103.08</span></p>
+        </div>
+
+        <script>
+            function showTab(tabId) {
+                // Hide all tab content
+                document.querySelectorAll('.tab-content').forEach(tab => {
+                    tab.classList.add('hidden');
+                });
+
+                // Remove active class from all tab buttons
+                document.querySelectorAll('.tab-button').forEach(button => {
+                    button.classList.remove('tab-active');
+                    button.classList.add('tab-inactive');
+                });
+
+                // Show the selected tab content
+                document.getElementById(tabId).classList.remove('hidden');
+
+                // Add active class to the clicked tab button
+                event.currentTarget.classList.remove('tab-inactive');
+                event.currentTarget.classList.add('tab-active');
+            }
+        </script>
+    </div>
+</body>
+</html>

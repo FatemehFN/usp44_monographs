@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مونوگراف سیترات کلسیم (USP)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .tab-active {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        .tab-inactive {
+            border-color: transparent;
+            color: #6b7280;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+        .pass-text {
+            color: #22c55e;
+        }
+        .fail-text {
+            color: #ef4444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">سیترات کلسیم</h1>
+
+        <div class="flex justify-center mb-6 border-b border-gray-200">
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" onclick="openTab(event, 'definition')">تعریف</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'identification')">شناسایی</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'assay')">سنجش</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'impurities')">ناخالصی‌ها</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'specific-tests')">آزمایشات خاص</button><button class="tab-button py-2 px-4 border-b-2 tab-inactive" onclick="openTab(event, 'additional-requirements')">الزامات اضافی</button>
+        </div>
+
+        <div id="definition" class="tab-content">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+                <p>سیترات کلسیم حاوی چهار مولکول آب هیدراتاسیون است.</p>
+                <p>هنگامی که در دمای 150 درجه تا رسیدن به وزن ثابت خشک شود، حاوی نه NLT 97.5% و نه NMT 100.5% از <span class="ltr-text">Ca3(C6H5O7)2</span> است.</p>
+            </div>
+        </div>
+
+        <div id="identification" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">الف</h3>
+                <p><strong>تجزیه و تحلیل:</strong> 0.5 گرم را در مخلوطی از 10 میلی‌لیتر آب و 2.5 میلی‌لیتر اسید نیتریک 2 نرم حل کنید. 1 میلی‌لیتر سولفات جیوه TS اضافه کرده، به جوش بیاورید و 1 میلی‌لیتر پرمنگنات پتاسیم TS اضافه کنید.</p>
+                <p><strong>معیارهای پذیرش:</strong> رسوب سفید تشکیل می‌شود.</p>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">ب</h3>
+                <p><strong>نمونه:</strong> 0.5 گرم سیترات کلسیم</p>
+                <p><strong>تجزیه و تحلیل:</strong> نمونه را در پایین‌ترین دمای ممکن کاملاً بسوزانید، سرد کرده و باقیمانده را در اسید استیک گلاسیال رقیق (1:10) حل کنید. صاف کرده و 10 میلی‌لیتر اگزالات آمونیوم TS را به صافی اضافه کنید.</p>
+                <p><strong>معیارهای پذیرش:</strong> رسوب حجیم سفیدی که در اسید هیدروکلریک محلول است، تشکیل می‌شود.</p>
+            </div>
+        </div>
+
+        <div id="assay" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+                <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش انجام</h4>
+                <p><strong>محلول نمونه:</strong> 350 میلی‌گرم سیترات کلسیم، قبلاً در دمای 150 درجه تا وزن ثابت خشک شده، را در 12 میلی‌لیتر اسید هیدروکلریک 0.5 مولار حل کرده و با آب تا حدود 100 میلی‌لیتر رقیق کنید.</p>
+                <p><strong>تجزیه و تحلیل:</strong> در حین هم زدن محلول نمونه، 30 میلی‌لیتر ادتات دی‌سدیم 0.05 مولار VS را از یک بورت 50 میلی‌لیتری اضافه کنید. 15 میلی‌لیتر هیدروکسید سدیم 1 نرمال و 300 میلی‌گرم آبی هیدروکسی نفتول اضافه کرده و تیتر کردن را تا رسیدن به نقطه پایانی آبی ادامه دهید. هر میلی‌لیتر ادتات دی‌سدیم 0.05 مولار معادل 8.307 میلی‌گرم سیترات کلسیم (<span class="ltr-text">Ca3(C6H5O7)2</span>) است.</p>
+                <p><strong>معیارهای پذیرش:</strong> 97.5%–100.5% بر اساس وزن خشک</p>
+            </div>
+        </div>
+
+        <div id="impurities" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">آرسنیک، روش I <a href="General chapters/211.html" class="text-blue-600 hover:underline" target="_blank">211</a></h3>
+                <p><strong>آماده‌سازی آزمون:</strong> 1 گرم سیترات کلسیم را در 5 میلی‌لیتر اسید هیدروکلریک 3 نرمال حل کرده و با آب تا 35 میلی‌لیتر رقیق کنید.</p>
+                <p><strong>معیارهای پذیرش:</strong> NMT 3 ppm</p>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">سرب <a href="General chapters/251.html" class="text-blue-600 hover:underline" target="_blank">251</a></h3>
+                <p><strong>آماده‌سازی آزمون:</strong> 0.5 گرم سیترات کلسیم را در 20 میلی‌لیتر اسید هیدروکلریک 3 نرمال حل کنید. این محلول را روی حمام بخار تا 10 میلی‌لیتر تبخیر کرده، با آب تا 20 میلی‌لیتر رقیق و سرد کنید. از 5 میلی‌لیتر محلول استاندارد سربی رقیق شده (5 میکروگرم سرب) برای آزمایش استفاده کنید.</p>
+                <p><strong>معیارهای پذیرش:</strong> NMT 10 ppm</p>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">حد فلوراید</h3>
+                <p>[<strong>نکته:</strong> تمام محلول‌ها را در ظروف پلاستیکی تهیه و نگهداری کنید.]</p>
+                <p><strong>محلول استاندارد پایه:</strong> 1000 میکروگرم در میلی‌لیتر یون فلوراید از USP Sodium Fluoride RS در آب</p>
+                <p><strong>محلول استاندارد:</strong> 5 میکروگرم در میلی‌لیتر یون فلوراید از محلول استاندارد پایه. [<strong>نکته:</strong> در روز استفاده تهیه شود.]</p>
+                <p><strong>محلول خطی A:</strong> 1.0 میلی‌لیتر از محلول استاندارد را به یک بشر پلاستیکی 250 میلی‌لیتری منتقل کنید. 50 میلی‌لیتر آب، 5 میلی‌لیتر اسید هیدروکلریک 1 نرمال، 10 میلی‌لیتر سیترات سدیم 1.0 مولار و 10 میلی‌لیتر ادتات دی‌سدیم 0.2 مولار اضافه کنید. در صورت لزوم، با هیدروکسید سدیم 1 نرمال یا اسید هیدروکلریک 1 نرمال به pH 5.5 تنظیم کنید. محلول را به یک فلاسک حجمی 100 میلی‌لیتری منتقل کرده و با آب تا حجم برسانید. این محلول حاوی 0.05 میکروگرم در میلی‌لیتر فلوراید است.</p>
+                <p><strong>محلول خطی B:</strong> 5.0 میلی‌لیتر از محلول استاندارد را به یک بشر پلاستیکی 250 میلی‌لیتری منتقل کرده و طبق دستورالعمل محلول خطی A از "50 میلی‌لیتر آب اضافه کنید" ادامه دهید. این محلول حاوی 0.25 میکروگرم در میلی‌لیتر فلوراید است.</p>
+                <p><strong>محلول خطی C:</strong> 10.0 میلی‌لیتر از محلول استاندارد را به یک بشر پلاستیکی 250 میلی‌لیتری منتقل کرده و طبق دستورالعمل محلول خطی A از "50 میلی‌لیتر آب اضافه کنید" ادامه دهید. این محلول حاوی 0.50 میکروگرم در میلی‌لیتر فلوراید است.</p>
+                <p><strong>محلول نمونه:</strong> 1.0 گرم سیترات کلسیم را به یک بشر 100 میلی‌لیتری منتقل کنید. 10 میلی‌لیتر آب اضافه کرده و ضمن هم زدن، 10 میلی‌لیتر اسید هیدروکلریک 1 نرمال اضافه کنید. پس از حل شدن، به مدت 1 دقیقه به سرعت بجوشانید، محلول را به یک بشر پلاستیکی 250 میلی‌لیتری منتقل کرده و در آب یخ سرد کنید. 15 میلی‌لیتر سیترات سدیم 1.0 مولار و 10 میلی‌لیتر ادتات دی‌سدیم 0.2 مولار اضافه کرده و با هیدروکسید سدیم 1 نرمال یا اسید هیدروکلریک 1 نرمال به pH 5.5 تنظیم کنید. این محلول را به یک فلاسک حجمی 100 میلی‌لیتری منتقل کرده و با آب تا حجم برسانید.</p>
+                <p><strong>سیستم الکترود:</strong> از یک الکترود نشانگر یون فلوراید-اختصاصی و یک الکترود مرجع نقره-کلرید نقره متصل به یک pH متر که قادر به اندازه‌گیری پتانسیل‌ها با حداقل تکرارپذیری ±0.2 میلی‌ولت است، استفاده کنید (به pH <a href="General chapters/791.html" class="text-blue-600 hover:underline" target="_blank">791</a> مراجعه کنید).</p>
+                <p><strong>تجزیه و تحلیل</strong></p>
+                <p><strong>نمونه‌ها:</strong> محلول خطی A، محلول خطی B، محلول خطی C و محلول نمونه</p>
+                <p>50 میلی‌لیتر از هر یک از محلول‌های خطی A، خطی B و خطی C را به بشر پلاستیکی 250 میلی‌لیتری جداگانه منتقل کرده و پتانسیل هر محلول را با سیستم الکترود اندازه‌گیری کنید. بین هر اندازه‌گیری، الکترودها را با آب بشویید و آب باقیمانده را با خشک کردن الکترودها جذب کنید. لگاریتم غلظت‌های فلوراید (0.05، 0.25 و 0.50 میکروگرم در میلی‌لیتر) را در مقابل پتانسیل رسم کنید تا خط پاسخ استاندارد بدست آید.</p>
+                <p>50 میلی‌لیتر از محلول نمونه را به یک بشر پلاستیکی 250 میلی‌لیتری منتقل کرده و پتانسیل را با سیستم الکترود اندازه‌گیری کنید. از پتانسیل اندازه‌گیری شده و خط پاسخ استاندارد، غلظت C در میکروگرم در میلی‌لیتر یون فلوراید در محلول نمونه را تعیین کنید. درصد فلوراید در نمونه گرفته شده را با ضرب C در 0.01 محاسبه کنید.</p>
+                <p><strong>معیارهای پذیرش:</strong> NMT 0.003%</p>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">حد مواد نامحلول در اسید</h3>
+                <p><strong>محلول نمونه:</strong> 5 گرم سیترات کلسیم را با گرم کردن با مخلوطی از اسید هیدروکلریک و آب (10:50) به مدت 30 دقیقه حل کنید.</p>
+                <p><strong>تجزیه و تحلیل:</strong> باقیمانده حاصل را صاف کرده، شسته و در دمای 105 درجه به مدت 2 ساعت خشک کنید.</p>
+                <p><strong>معیارهای پذیرش:</strong> وزن باقیمانده NMT 10 میلی‌گرم (0.2%) است.</p>
+            </div>
+        </div>
+
+        <div id="specific-tests" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">ضرر در هنگام خشک شدن <a href="General chapters/731.html" class="text-blue-600 hover:underline" target="_blank">731</a></h3>
+                <p>نمونه را در دمای 150 درجه به مدت 4 ساعت خشک کنید: از 10.0% تا 13.3% وزن خود را از دست می‌دهد.</p>
+            </div>
+        </div>
+
+        <div id="additional-requirements" class="tab-content hidden">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری</h3>
+                <p>در ظروف کاملاً بسته نگهداری شود.</p>
+                <h3 class="text-xl font-semibold text-blue-600 mb-2">استانداردهای مرجع USP <a href="General chapters/11.html" class="text-blue-600 hover:underline" target="_blank">11</a></h3>
+                <p>USP Sodium Fluoride RS</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tabbuttons;
+
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tabbuttons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].className = tabbuttons[i].className.replace(" tab-active", "").replace(" tab-inactive", "");
+                tabbuttons[i].className += " tab-inactive";
+            }
+
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className = evt.currentTarget.className.replace(" tab-inactive", "");
+            evt.currentTarget.className += " tab-active";
+        }
+
+        // Default to showing the first tab
+        document.getElementsByClassName("tab-button")[0].click();
+    </script>
+</body>
+</html>

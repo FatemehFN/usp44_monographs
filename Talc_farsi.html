@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مونوگراف تالک (USP)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f8fafc;
+            color: #333;
+        }
+        .tab-active {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        .tab-inactive {
+            border-color: transparent;
+            color: #6b7280;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .ltr-text {
+            direction: ltr;
+            text-align: left;
+            display: inline-block;
+        }
+        table {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            direction: rtl;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        table th {
+            background-color: #f1f5f9;
+            font-weight: bold;
+        }
+        .formula-display {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            direction: ltr;
+        }
+        .pass-text {
+            color: #22c55e;
+        }
+        .fail-text {
+            color: #ef4444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-4 max-w-4xl">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-6">مونوگراف تالک (USP)</h1>
+
+        <div class="flex justify-center mb-6 border-b border-gray-200">
+            <button class="tab-button py-2 px-4 border-b-2 tab-active" data-tab="definition">تعریف</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="identification">شناسایی</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="assay">سنجش</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="impurities">ناخالصی‌ها</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="specific-tests">آزمایشات خاص</button>
+            <button class="tab-button py-2 px-4 border-b-2 tab-inactive" data-tab="additional-requirements">الزامات اضافی</button>
+        </div>
+
+        <div id="definition" class="tab-content card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">تعریف</h2>
+            <p>تالک پودر شده، انتخابی، طبیعی، هیدراته منیزیم سیلیکات است. فرمول تالک خالص Mg₃Si₄O₁₀(OH)₂ است. ممکن است حاوی مقادیر متغیری از مواد معدنی همراه باشد که در میان آنها کلریت‌ها (آلومینیوم و منیزیم سیلیکات‌های هیدراته)، ماگنزیتیت (کربنات منیزیم)، کلسیت (کربنات کلسیم) و دولومیت (کربنات کلسیم و منیزیم) غالب هستند.</p>
+        </div>
+
+        <div id="identification" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">شناسایی</h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">الف. جذب فروسرخ</h3>
+            <p>طیف جذب فروسرخ پخشینه در پتاسیم بروماید، ماکسیمم‌هایی را در حدود <span class="ltr-text">3677 ± 2 cm⁻¹</span>، <span class="ltr-text">1018 ± 2 cm⁻¹</span> و <span class="ltr-text">669 ± 2 cm⁻¹</span> نشان می‌دهد.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">ب. روش کار</h3>
+            <p>نمونه: <span class="ltr-text">100 mg</span></p>
+            <p>آنالیز: حدود <span class="ltr-text">200 mg</span> سدیم کربنات انیدروس و <span class="ltr-text">2 g</span> پتاسیم کربنات انیدروس را مخلوط کرده و در بوته پلاتینی ذوب کنید. به مذاب نمونه را اضافه کرده و تا زمانی که همجوشی کامل شود، حرارت دادن را ادامه دهید. خنک کرده و مخلوط همجوشی شده را با کمک حدود <span class="ltr-text">50 mL</span> آب داغ به یک ظرف یا بشر منتقل کنید. اسید کلریدریک را به مایع اضافه کنید تا جوشش متوقف شود، سپس <span class="ltr-text">10 mL</span> دیگر اسید اضافه کرده و مخلوط را در حمام بخار تا خشکی تبخیر کنید. خنک کرده، <span class="ltr-text">20 mL</span> آب اضافه کرده، بجوشانید و مخلوط را فیلتر کنید. برای استفاده در تست شناسایی C، بقایای نامحلول را نگه دارید.</p>
+            <p>به <span class="ltr-text">5 mL</span> از فیلترات، <span class="ltr-text">1 mL</span> آمونیوم هیدروکسید 6 نرمال و <span class="ltr-text">1 mL</span> محلول آمونیوم کلراید TS اضافه کنید. در صورت لزوم، فیلتر کرده و <span class="ltr-text">1 mL</span> محلول دی‌بازیک سدیم فسفات TS را به فیلترات اضافه کنید.</p>
+            <p>معیارهای پذیرش: یک رسوب سفید و بلورین از آمونیوم فسفات منیزیم تشکیل می‌شود.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">ج. روش کار</h3>
+            <p>نمونه: <span class="ltr-text">100 mg</span> از بقایای نامحلول از تست شناسایی B</p>
+            <p>آنالیز: در یک بوته سربی یا پلاتینی و با استفاده از سیم مسی، نمونه را با حدود <span class="ltr-text">10 mg</span> سدیم فلوراید و چند قطره اسید سولفوریک مخلوط کنید تا یک سوسپانسیون نازک به دست آید. بوته را با یک صفحه پلاستیکی نازک و شفاف بپوشانید که زیر آن یک قطره آب معلق است، و به آرامی گرم کنید.</p>
+            <p>معیارهای پذیرش: در مدت زمان کوتاهی، یک حلقه سفید به سرعت اطراف قطره آب تشکیل می‌شود.</p>
+        </div>
+
+        <div id="assay" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">سنجش</h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">محتوای منیزیم</h3>
+            <p>محلول کلرید لانthanum: به <span class="ltr-text">5.9 g</span> اکسید لانthanum، به آرامی <span class="ltr-text">10 mL</span> اسید کلریدریک اضافه کرده و تا حد جوش حرارت دهید. اجازه دهید خنک شود و با آب تا <span class="ltr-text">100 mL</span> رقیق کنید.</p>
+            <p>محلول مادر استاندارد منیزیم: <span class="ltr-text">10 µg/mL</span> منیزیم، تهیه شده با رقیق کردن محلول <span class="ltr-text">8.365 mg/mL</span> کلرید منیزیم در اسید کلریدریک رقیق شده با آب (1 در 100).</p>
+            <p>محلول‌های استاندارد منیزیم: در چهار فلاسک حجمی <span class="ltr-text">100-mL</span> یکسان، که هر کدام حاوی <span class="ltr-text">10.0 mL</span> اسید کلریدریک و <span class="ltr-text">10 mL</span> محلول کلرید لانthanum هستند، به ترتیب <span class="ltr-text">2.5</span>، <span class="ltr-text">3.0</span>، <span class="ltr-text">4.0</span> و <span class="ltr-text">5.0 mL</span> محلول مادر استاندارد منیزیم را منتقل کرده و با آب تا حجم مورد نظر رقیق کنید.</p>
+            <p>محلول مادر نمونه: [احتیاط - پرکلرات‌های مخلوط با فلزات سنگین به عنوان مواد منفجره شناخته شده‌اند. در هنگام انجام این آنالیز، اقدامات احتیاطی لازم را انجام دهید.]</p>
+            <p><span class="ltr-text">500 mg</span> تالک را در یک ظرف تفلون <span class="ltr-text">100-mL</span> وزن کنید. <span class="ltr-text">5 mL</span> اسید کلریدریک، <span class="ltr-text">5 mL</span> اسید نیتریک بدون سرب و <span class="ltr-text">5 mL</span> اسید پرکلریک اضافه کنید. به آرامی هم بزنید، سپس <span class="ltr-text">35 mL</span> اسید هیدروفلوریک اضافه کرده و روی صفحه داغ به آرامی تا رطوبت خشکی (تا زمانی که حدود <span class="ltr-text">0.5 mL</span> باقی بماند) تبخیر کنید. به بقایا، <span class="ltr-text">5 mL</span> اسید کلریدریک اضافه کرده، با یک بشر پوشانده، تا حد جوش حرارت دهید و اجازه دهید خنک شود. بشر و ظرف را با آب بشویید، به یک فلاسک حجمی <span class="ltr-text">50-mL</span> منتقل کرده و با آب تا حجم مورد نظر رقیق کنید.</p>
+            <p>محلول نمونه: محلول مادر نمونه را با آب (<span class="ltr-text">1</span> در <span class="ltr-text">200</span>) رقیق کنید. <span class="ltr-text">4.0 mL</span> از این محلول را به یک فلاسک حجمی <span class="ltr-text">100-mL</span> منتقل کرده، <span class="ltr-text">10.0 mL</span> اسید کلریدریک و <span class="ltr-text">10 mL</span> محلول کلرید لانthanum اضافه کرده و با آب تا حجم مورد نظر رقیق کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط دستگاهی</h4>
+            <p>(به طیف‌سنجی جذب اتمی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید.)</p>
+            <p>حالت: طیف‌سنجی جذب اتمی</p>
+            <p>طول موج تحلیلی: خط انتشار منیزیم در <span class="ltr-text">285.2 nm</span></p>
+            <p>لامپ: کاتد توخالی منیزیم</p>
+            <p>شعله: هوا-استیلن</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز</h4>
+            <p>نمونه‌ها: محلول‌های استاندارد منیزیم و محلول نمونه</p>
+            <p>به طور همزمان جذب محلول‌ها را تعیین کنید.</p>
+            <p>معیارهای پذیرش: <span class="ltr-text">17.0%–19.5%</span></p>
+        </div>
+
+        <div id="impurities" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">ناخالصی‌ها</h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">مواد محلول در آب</h3>
+            <p>نمونه: <span class="ltr-text">10.0 g</span></p>
+            <p>آنالیز: به نمونه <span class="ltr-text">50 mL</span> آب عاری از دی‌اکسید کربن اضافه کرده، حرارت داده تا بجوشد و به مدت <span class="ltr-text">30 min</span> زیر کندانسور رفلاکس بجوشانید. اجازه دهید خنک شود، فیلتر کرده و با آب عاری از دی‌اکسید کربن تا <span class="ltr-text">50.0 mL</span> رقیق کنید. با کاغذ تورنسل تست کنید.</p>
+            <p><span class="ltr-text">25.0 mL</span> از فیلترات را تا خشکی تبخیر کرده، در دمای <span class="ltr-text">105°</span> به مدت <span class="ltr-text">1 h</span> خشک کرده و وزن بقایا را اندازه‌گیری کنید.</p>
+            <p>معیارهای پذیرش: فیلترات نسبت به کاغذ تورنسل خنثی است و وزن بقایا حداکثر <span class="ltr-text">5 mg</span> (<span class="ltr-text">0.1%</span>) است.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">حد مجاز آهن</h3>
+            <p>محلول مادر استاندارد آهن: <span class="ltr-text">250 µg/mL</span> آهن از <span class="ltr-text">4.840 g</span> کلرید فریک در محلول <span class="ltr-text">150 g/L</span> اسید کلریدریک در آب. بلافاصله قبل از استفاده تهیه شود.</p>
+            <p>محلول‌های استاندارد آهن: در چهار فلاسک حجمی <span class="ltr-text">100-mL</span>، که هر کدام حاوی <span class="ltr-text">50.0 mL</span> اسید کلریدریک 0.5 نرمال هستند، به ترتیب <span class="ltr-text">2.0</span>، <span class="ltr-text">2.5</span>، <span class="ltr-text">3.0</span> و <span class="ltr-text">4.0 mL</span> محلول مادر استاندارد آهن را منتقل کرده و هر فلاسک را با آب تا حجم مورد نظر رقیق کنید.</p>
+            <p>محلول مادر نمونه: <span class="ltr-text">10.0 g</span> تالک را به یک فلاسک مخروطی مجهز به کندانسور رفلاکس منتقل کنید. به تدریج <span class="ltr-text">50 mL</span> اسید کلریدریک 0.5 نرمال را با هم زدن اضافه کرده و در حمام آب به مدت <span class="ltr-text">30 min</span> حرارت دهید. اجازه دهید خنک شود. مخلوط را به یک بشر منتقل کرده و اجازه دهید مواد نامحلول ته‌نشین شوند. مایع رویی را فیلتر کرده و به یک فلاسک حجمی <span class="ltr-text">100-mL</span> منتقل کنید، در حالی که تا حد امکان مواد نامحلول در بشر باقی بمانند. بقایا و بشر را با سه قسمت <span class="ltr-text">10-mL</span> آب داغ بشویید. فیلتر را با <span class="ltr-text">15 mL</span> آب داغ بشویید، اجازه دهید فیلترات خنک شود و با آب تا <span class="ltr-text">100.0 mL</span> رقیق کنید.</p>
+            <p>محلول نمونه: <span class="ltr-text">2.5 mL</span> از محلول مادر نمونه را به یک فلاسک حجمی <span class="ltr-text">100-mL</span> منتقل کرده، <span class="ltr-text">50.0 mL</span> اسید کلریدریک 0.5 نرمال اضافه کرده و با آب تا حجم مورد نظر رقیق کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط دستگاهی</h4>
+            <p>(به طیف‌سنجی جذب اتمی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید.)</p>
+            <p>حالت: طیف‌سنجی جذب اتمی</p>
+            <p>طول موج تحلیلی: خط انتشار آهن در <span class="ltr-text">248.3 nm</span></p>
+            <p>لامپ: کاتد توخالی آهن</p>
+            <p>شعله: هوا-استیلن</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز</h4>
+            <p>نمونه‌ها: محلول‌های استاندارد آهن و محلول نمونه</p>
+            <p>به طور همزمان جذب محلول‌ها را تعیین کنید. هرگونه تصحیح را با استفاده از لامپ دوتریوم انجام دهید.</p>
+            <p>معیارهای پذیرش: حداکثر <span class="ltr-text">0.25%</span></p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">حد مجاز سرب</h3>
+            <p>محلول نمونه: از محلول مادر نمونه طبق دستورالعمل در تست حد مجاز آهن استفاده کنید.</p>
+            <p>رقیق‌کننده: اسید نیتریک در آب (<span class="ltr-text">1</span> در <span class="ltr-text">100</span>)</p>
+            <p>محلول مادر استاندارد سرب: <span class="ltr-text">10 µg/mL</span> سرب تهیه شده به شرح زیر. <span class="ltr-text">160 mg</span> نیترات سرب را در <span class="ltr-text">100 mL</span> رقیق‌کننده حل کرده و با آب تا <span class="ltr-text">1000 mL</span> رقیق کنید. این محلول را با آب (<span class="ltr-text">1</span> در <span class="ltr-text">10</span>) رقیق کنید.</p>
+            <p>محلول‌های استاندارد سرب: در چهار فلاسک حجمی <span class="ltr-text">100-mL</span> یکسان، که هر کدام حاوی <span class="ltr-text">50.0 mL</span> اسید کلریدریک 0.5 نرمال هستند، به ترتیب <span class="ltr-text">5.0</span>، <span class="ltr-text">7.5</span>، <span class="ltr-text">10.0</span> و <span class="ltr-text">12.5 mL</span> محلول مادر استاندارد سرب را منتقل کرده و با آب تا حجم مورد نظر رقیق کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط دستگاهی</h4>
+            <p>(به طیف‌سنجی جذب اتمی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید.)</p>
+            <p>حالت: طیف‌سنجی جذب اتمی</p>
+            <p>طول موج تحلیلی: خط انتشار سرب در <span class="ltr-text">217.0 nm</span></p>
+            <p>لامپ: کاتد توخالی سرب</p>
+            <p>شعله: هوا-استیلن</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز</h4>
+            <p>نمونه‌ها: محلول‌های استاندارد سرب و محلول نمونه</p>
+            <p>به طور همزمان جذب محلول‌ها را تعیین کنید.</p>
+            <p>معیارهای پذیرش: حداکثر <span class="ltr-text">10 ppm</span></p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">حد مجاز کلسیم</h3>
+            <p>محلول کلرید لانthanum: طبق دستورالعمل در سنجش تهیه شود.</p>
+            <p>محلول مادر استاندارد کلسیم: <span class="ltr-text">100 µg/mL</span> کلسیم، تهیه شده بلافاصله قبل از استفاده با رقیق کردن محلول <span class="ltr-text">3.67 mg/mL</span> کلرید کلسیم دی‌هیدراته در اسید کلریدریک رقیق شده با آب (<span class="ltr-text">1</span> در <span class="ltr-text">10</span>).</p>
+            <p>محلول‌های استاندارد کلسیم: در چهار فلاسک حجمی <span class="ltr-text">100-mL</span> یکسان، که هر کدام حاوی <span class="ltr-text">10.0 mL</span> اسید کلریدریک و <span class="ltr-text">10 mL</span> محلول کلرید لانthanum هستند، به ترتیب <span class="ltr-text">1.0</span>، <span class="ltr-text">2.0</span>، <span class="ltr-text">3.0</span> و <span class="ltr-text">4.0 mL</span> محلول مادر استاندارد کلسیم را منتقل کرده و هر محلول را با آب تا حجم مورد نظر رقیق کنید.</p>
+            <p>محلول مادر نمونه: طبق دستورالعمل در سنجش تهیه شود.</p>
+            <p>محلول نمونه: <span class="ltr-text">5.0 mL</span> از محلول مادر نمونه را به یک فلاسک حجمی <span class="ltr-text">100-mL</span> منتقل کرده، <span class="ltr-text">10.0 mL</span> اسید کلریدریک و <span class="ltr-text">10 mL</span> محلول کلرید لانthanum اضافه کرده و با آب تا حجم مورد نظر رقیق کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط دستگاهی</h4>
+            <p>(به طیف‌سنجی جذب اتمی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید.)</p>
+            <p>حالت: طیف‌سنجی جذب اتمی</p>
+            <p>طول موج تحلیلی: خط انتشار کلسیم در <span class="ltr-text">422.7 nm</span></p>
+            <p>لامپ: کاتد توخالی کلسیم</p>
+            <p>شعله: اکسید نیتروژن-استیلن</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز</h4>
+            <p>نمونه‌ها: محلول‌های استاندارد کلسیم و محلول نمونه</p>
+            <p>به طور همزمان جذب محلول‌ها را تعیین کنید.</p>
+            <p>معیارهای پذیرش: حداکثر <span class="ltr-text">0.9%</span></p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">حد مجاز آلومینیوم</h3>
+            <p>محلول کلرید سزیم: <span class="ltr-text">25.3 mg/mL</span> کلرید سزیم در آب.</p>
+            <p>محلول مادر استاندارد آلومینیوم: <span class="ltr-text">100 µg/mL</span> آلومینیوم، تهیه شده بلافاصله قبل از استفاده با رقیق کردن محلول <span class="ltr-text">8.947 mg/mL</span> کلرید آلومینیوم در آب با آب (<span class="ltr-text">1</span> در <span class="ltr-text">10</span>).</p>
+            <p>محلول‌های استاندارد آلومینیوم: در چهار فلاسک حجمی <span class="ltr-text">100-mL</span> یکسان، که هر کدام حاوی <span class="ltr-text">10.0 mL</span> اسید کلریدریک و <span class="ltr-text">10 mL</span> محلول کلرید سزیم هستند، به ترتیب <span class="ltr-text">5.0</span>، <span class="ltr-text">10.0</span>، <span class="ltr-text">15.0</span> و <span class="ltr-text">20.0 mL</span> محلول مادر استاندارد آلومینیوم را منتقل کرده و با آب تا حجم مورد نظر رقیق کنید.</p>
+            <p>محلول مادر نمونه: طبق دستورالعمل در سنجش عمل کنید. <span class="ltr-text">5 mL</span> از محلول کلرید سزیم را قبل از انتقال بقایا به فلاسک <span class="ltr-text">50-mL</span> منتقل کرده و با آب تا حجم مورد نظر رقیق کنید.</p>
+            <p>محلول نمونه: <span class="ltr-text">5.0 mL</span> از محلول مادر نمونه را به یک فلاسک حجمی <span class="ltr-text">100-mL</span> منتقل کرده، <span class="ltr-text">10 mL</span> محلول کلرید سزیم و <span class="ltr-text">10.0 mL</span> اسید کلریدریک اضافه کرده و با آب تا حجم مورد نظر رقیق کنید.</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">شرایط دستگاهی</h4>
+            <p>(به طیف‌سنجی جذب اتمی <a href="General chapters/852.html" class="text-blue-600 hover:underline" target="_blank">852</a> مراجعه کنید.)</p>
+            <p>حالت: طیف‌سنجی جذب اتمی</p>
+            <p>طول موج تحلیلی: خط انتشار آلومینیوم در <span class="ltr-text">309.3 nm</span></p>
+            <p>لامپ: کاتد توخالی آلومینیوم</p>
+            <p>شعله: اکسید نیتروژن-استیلن</p>
+
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">آنالیز</h4>
+            <p>نمونه‌ها: محلول‌های استاندارد آلومینیوم و محلول نمونه</p>
+            <p>به طور همزمان جذب محلول‌ها را تعیین کنید.</p>
+            <p>معیارهای پذیرش: حداکثر <span class="ltr-text">2.0%</span></p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">عدم وجود آزبست</h3>
+            <p>[نکته - تامین‌کنندگان تالک ممکن است از یکی از روش‌های زیر برای تعیین عدم وجود آزبست استفاده کنند.]</p>
+            <p>طبق دستورالعمل برای روش کار 1 یا روش کار 2 عمل کنید. اگر هر کدام از تست‌ها مثبت باشد، روش کار 3 را انجام دهید.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش کار 1: جذب فروسرخ</h4>
+            <p>طیف جذب فروسرخ پخشینه در پتاسیم بروماید تالک در باند جذبی در <span class="ltr-text">758 ± 1 cm⁻¹</span>، با استفاده از بسط مقیاس، ممکن است وجود ترمولیت یا کلریت را نشان دهد. اگر باند جذبی پس از احتراق ماده در دمای <span class="ltr-text">850°</span> به مدت حداقل <span class="ltr-text">30 min</span> باقی بماند، وجود ترمولیت را نشان می‌دهد. در محدوده <span class="ltr-text">600 cm⁻¹</span> تا <span class="ltr-text">650 cm⁻¹</span> با استفاده از بسط مقیاس، هرگونه باند جذبی یا شانه ممکن است نشان‌دهنده حضور سریپانتین‌ها باشد.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش کار 2: از شرایط زیر استفاده کنید (به پراش اشعه ایکس <a href="General chapters/941.html" class="text-blue-600 hover:underline" target="_blank">941</a> مراجعه کنید):</h4>
+            <p>تابش مونوکروماتیک Cu Kα 40 kV، 24–30 mA؛ شکاف ورودی در <span class="ltr-text">1°</span> تنظیم شده است؛ شکاف تشخیص در <span class="ltr-text">0.2°</span> تنظیم شده است؛ سرعت گونیومتر <span class="ltr-text">1/10° 2Θ/min</span> است؛ محدوده اسکن <span class="ltr-text">10°–13° 2Θ</span> و <span class="ltr-text">24°–26° 2Θ</span> است؛ نمونه جهت‌دار نیست.</p>
+            <p>یک نمونه تصادفی تهیه کرده و روی نگهدارنده نمونه قرار دهید. سطح آن را با یک میکروسکوپ اسلاید شیشه‌ای صیقلی بسته‌بندی و صاف کنید. پراش‌نگاره‌ها را ثبت کنید: وجود آمفیبول‌ها با یک پیک پراش در <span class="ltr-text">10.5 ± 0.1° 2Θ</span> و وجود سریپانتین‌ها با پیک‌های پراش در <span class="ltr-text">24.3 ± 0.1° 2Θ</span> تا <span class="ltr-text">12.1 ± 0.1° 2Θ</span> تشخیص داده می‌شود.</p>
+            <h4 class="text-lg font-semibold text-gray-700 mt-3 mb-2">روش کار 3:</h4>
+            <p>وجود آزبست (به میکروسکوپ نوری <a href="General chapters/776.html" class="text-blue-600 hover:underline" target="_blank">776</a> مراجعه کنید) زمانی نشان داده می‌شود که نسبت طول به عرض در محدوده <span class="ltr-text">20:1</span> تا <span class="ltr-text">100:1</span>، یا بالاتر برای الیاف بلندتر از <span class="ltr-text">5 µm</span> وجود داشته باشد؛ اگر قابلیت تقسیم به فیبریل‌های بسیار نازک وجود داشته باشد؛ و اگر دو یا بیشتر از چهار معیار زیر وجود داشته باشد: (1) الیاف موازی که به صورت دسته‌ای رخ می‌دهند، (2) دسته‌های الیاف که انتهای ساییده شده را نشان می‌دهند، (3) الیاف به شکل سوزن‌های نازک، و (4) توده‌های درهم تنیده از الیاف منفرد و/یا الیاف خمیده.</p>
+        </div>
+
+        <div id="specific-tests" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">آزمایشات خاص</h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">آزمایشات شمارش میکروبی <a href="General chapters/61.html" class="text-blue-600 hover:underline" target="_blank">61</a> و آزمایشات میکروارگانیسم‌های مشخص <a href="General chapters/62.html" class="text-blue-600 hover:underline" target="_blank">62</a></h3>
+            <p>مناسب برای تجویز موضعی</p>
+            <p>تعداد کل میکروبی هوازی: حداکثر <span class="ltr-text">100 cfu/g</span></p>
+            <p>تعداد کل کپک و مخمر: حداکثر <span class="ltr-text">50 cfu/g</span></p>
+            <p>مناسب برای تجویز دهانی</p>
+            <p>تعداد کل میکروبی هوازی: حداکثر <span class="ltr-text">1000 cfu/g</span></p>
+            <p>تعداد کل کپک و مخمر: حداکثر <span class="ltr-text">100 cfu/g</span></p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">اسیدیته و قلیائیت:</h3>
+            <p><span class="ltr-text">2.5 g</span> تالک را با <span class="ltr-text">50 mL</span> آب عاری از دی‌اکسید کربن زیر کندانسور رفلاکس بجوشانید. زیر خلاء فیلتر کنید. به <span class="ltr-text">10 mL</span> از فیلترات، <span class="ltr-text">0.1 mL</span> شناساگر بروموتیمول بلو TS اضافه کنید. <span class="ltr-text">0.01 N</span> اسید کلریدریک اضافه کنید تا شناساگر رنگ خود را تغییر دهد. به یک <span class="ltr-text">10 mL</span> دوم از فیلترات، <span class="ltr-text">0.1 mL</span> شناساگر فنل فتالئین TS اضافه کنید. <span class="ltr-text">0.01 N</span> سدیم هیدروکسید اضافه کنید تا شناساگر صورتی شود.</p>
+            <p>معیارهای پذیرش: برای تغییر رنگ شناساگر بروموتیمول بلو حداکثر <span class="ltr-text">0.4 mL</span> از <span class="ltr-text">0.01 N</span> اسید کلریدریک مورد نیاز است. برای تغییر رنگ شناساگر فنل فتالئین به صورتی حداکثر <span class="ltr-text">0.3 mL</span> از <span class="ltr-text">0.01 N</span> سدیم هیدروکسید مورد نیاز است.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">کاهش وزن در اثر اشتعال <a href="General chapters/733.html" class="text-blue-600 hover:underline" target="_blank">733</a></h3>
+            <p>نمونه: <span class="ltr-text">1 g</span></p>
+            <p>آنالیز: در دمای <span class="ltr-text">1075 ± 25°</span> تا رسیدن به وزن ثابت اشتعال دهید.</p>
+            <p>معیارهای پذیرش: حداکثر <span class="ltr-text">7.0%</span> از وزن خود را از دست می‌دهد.</p>
+        </div>
+
+        <div id="additional-requirements" class="tab-content hidden card">
+            <h2 class="text-2xl font-semibold text-blue-600 mb-4">الزامات اضافی</h2>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">بسته‌بندی و نگهداری:</h3>
+            <p>در ظروف کاملاً بسته نگهداری شود. هیچ الزامات نگهداری مشخصی ذکر نشده است.</p>
+
+            <h3 class="text-xl font-semibold text-blue-600 mb-2">برچسب‌گذاری:</h3>
+            <p>برچسب، در صورت لزوم، بیان می‌کند که ماده برای تجویز دهانی یا موضعی مناسب است. گواهی تجزیه و تحلیل، عدم وجود آزبست را بیان می‌کند. همچنین نشان می‌دهد که کدام روش مشخص شده در تست عدم وجود آزبست برای تجزیه و تحلیل استفاده شده است.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetTab = button.getAttribute('data-tab');
+
+                    tabButtons.forEach(btn => btn.classList.remove('tab-active', 'tab-inactive'));
+                    tabContents.forEach(content => content.classList.add('hidden'));
+
+                    button.classList.add('tab-active');
+                    document.getElementById(targetTab).classList.remove('hidden');
+                });
+            });
+
+            // Set initial tab to active
+            document.querySelector('.tab-button[data-tab="definition"]').click();
+        });
+    </script>
+</body>
+</html>
